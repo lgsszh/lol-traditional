@@ -1,586 +1,656 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import {
+  CLASSIC_PATCH,
+  championIcon,
+  championSplash,
+  classicBuildPresets,
+  classicChampions,
+  classicItemCategories,
+  classicMasteries,
+  classicRuneGroups,
+  classicSpells,
+  defaultSpellsFor,
+  initialMasteryRanks,
+  masteryBackgrounds,
+  masteryPresets,
+  runeBoardBackground,
+  runePresetIds,
+  skillPlanFor,
+  type ClassicChampion,
+  type ClassicMastery,
+  type ClassicRuneGroup,
+} from "./classic-data";
+import { classicItems } from "./classic-items.generated";
 
-type Champion = {
-  id: string;
-  name: string;
-  title: string;
-  role: string;
-  lane: string;
-  difficulty: string;
-  image: string;
-  accent: string;
-  spellOrder: string[];
-  build: string[];
-};
+type WorkbenchView = "runes" | "masteries" | "build" | "ai";
+type RuneCounts = Record<string, number>;
+type MasteryRanks = Record<string, number>;
 
-type RuneOption = {
-  id: string;
-  name: string;
-  short: string;
-  value: string;
-  stat: string;
-  per: number;
-  count: number;
-};
+const runeSlotPositions = [
+  [29, 408, 52, 52], [102, 408, 52, 52], [175, 408, 52, 52],
+  [149, 344, 52, 52], [123, 282, 52, 52], [41, 273, 52, 52],
+  [93, 230, 52, 52], [139, 186, 52, 52], [50, 186, 52, 52],
+  [93, 142, 52, 52], [155, 122, 52, 52], [186, 73, 52, 52],
+  [236, 44, 52, 52], [290, 21, 52, 52], [648, 42, 52, 52],
+  [537, 42, 52, 52], [459, 70, 52, 52], [524, 99, 52, 52],
+  [387, 70, 52, 52], [602, 90, 52, 52], [591, 13, 52, 52],
+  [485, 13, 52, 52], [420, 13, 52, 52], [355, 12, 52, 52],
+  [635, 148, 52, 52], [15, 344, 52, 52], [80, 344, 52, 52],
+  [207, 244, 100, 100], [446, 182, 100, 100], [36, 42, 100, 100],
+] as const;
 
-type RuneGroup = {
-  id: string;
-  name: string;
-  cap: number;
-  color: string;
-  options: RuneOption[];
-};
+const percentStats = new Set([
+  "暴击几率", "暴击伤害", "攻击速度", "冷却缩减", "18级冷却缩减",
+  "百分比生命值", "法术吸血", "经验获取", "生命偷取", "移动速度",
+]);
 
-type Mastery = {
-  id: string;
-  name: string;
-  desc: string;
-  max: number;
-  points: number;
-  tier: number;
-};
+const itemById = new Map(classicItems.map((item) => [item.id, item]));
+// OP.GG exposes two internal rune-replacement records in its item payload.
+// Keep them in the 152-entry source snapshot, but hide them from the equipment picker.
+const mainItemPool = classicItems.filter((item) => !["772139", "772140"].includes(item.id));
 
-const champions: Champion[] = [
-  {
-    id: "Ahri",
-    name: "阿狸",
-    title: "九尾妖狐",
-    role: "法师",
-    lane: "中路",
-    difficulty: "中等",
-    image: "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_0.jpg",
-    accent: "#ef7c76",
-    spellOrder: ["Q", "W", "E"],
-    build: ["1056", "3020", "3165", "3089", "3135", "3157"],
-  },
-  {
-    id: "Jax",
-    name: "贾克斯",
-    title: "武器大师",
-    role: "战士",
-    lane: "上路",
-    difficulty: "中等",
-    image: "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jax_0.jpg",
-    accent: "#d1a14d",
-    spellOrder: ["W", "Q", "E"],
-    build: ["1055", "3078", "3047", "3153", "3053", "3065"],
-  },
-  {
-    id: "LeeSin",
-    name: "李青",
-    title: "盲僧",
-    role: "战士",
-    lane: "打野",
-    difficulty: "困难",
-    image: "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/LeeSin_0.jpg",
-    accent: "#d46a4b",
-    spellOrder: ["Q", "W", "E"],
-    build: ["1039", "3071", "3047", "3053", "6333", "3065"],
-  },
-  {
-    id: "Ashe",
-    name: "艾希",
-    title: "寒冰射手",
-    role: "射手",
-    lane: "下路",
-    difficulty: "简单",
-    image: "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ashe_0.jpg",
-    accent: "#74b8d6",
-    spellOrder: ["W", "Q", "E"],
-    build: ["1055", "3006", "3031", "3085", "3094", "3036"],
-  },
-  {
-    id: "Janna",
-    name: "迦娜",
-    title: "风暴之怒",
-    role: "辅助",
-    lane: "辅助",
-    difficulty: "中等",
-    image: "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Janna_0.jpg",
-    accent: "#86d8cd",
-    spellOrder: ["E", "W", "Q"],
-    build: ["3850", "3158", "6617", "3107", "3222", "6616"],
-  },
-];
-
-const initialRunes: RuneGroup[] = [
-  {
-    id: "mark",
-    name: "印记",
-    cap: 9,
-    color: "#d96857",
-    options: [
-      { id: "magic-pen", name: "法术穿透印记", short: "穿", value: "+0.87 法术穿透", stat: "法术穿透", per: 0.87, count: 9 },
-      { id: "attack", name: "攻击力印记", short: "攻", value: "+0.95 攻击力", stat: "攻击力", per: 0.95, count: 0 },
-      { id: "as-mark", name: "攻击速度印记", short: "速", value: "+1.7% 攻击速度", stat: "攻击速度", per: 1.7, count: 0 },
-    ],
-  },
-  {
-    id: "seal",
-    name: "符印",
-    cap: 9,
-    color: "#d6a64b",
-    options: [
-      { id: "armor", name: "护甲符印", short: "甲", value: "+1 护甲", stat: "护甲", per: 1, count: 9 },
-      { id: "hp", name: "成长生命符印", short: "生", value: "每级 +1.33 生命值", stat: "18级生命值", per: 23.94, count: 0 },
-      { id: "mana", name: "法力回复符印", short: "蓝", value: "+0.41 法力回复/5秒", stat: "法力回复/5秒", per: 0.41, count: 0 },
-    ],
-  },
-  {
-    id: "glyph",
-    name: "雕纹",
-    cap: 9,
-    color: "#5da5cf",
-    options: [
-      { id: "mr", name: "魔法抗性雕纹", short: "抗", value: "+1.34 魔法抗性", stat: "魔法抗性", per: 1.34, count: 9 },
-      { id: "cdr", name: "成长冷却雕纹", short: "冷", value: "18级 +1.67% 冷却缩减", stat: "18级冷却缩减", per: 1.67, count: 0 },
-      { id: "ap-glyph", name: "法术强度雕纹", short: "法", value: "+1.19 法术强度", stat: "法术强度", per: 1.19, count: 0 },
-    ],
-  },
-  {
-    id: "quint",
-    name: "精华",
-    cap: 3,
-    color: "#9c71de",
-    options: [
-      { id: "ap-quint", name: "法术强度精华", short: "法", value: "+4.95 法术强度", stat: "法术强度", per: 4.95, count: 3 },
-      { id: "move", name: "移动速度精华", short: "移", value: "+1.5% 移动速度", stat: "移动速度", per: 1.5, count: 0 },
-      { id: "hp-quint", name: "生命值精华", short: "生", value: "+26 生命值", stat: "生命值", per: 26, count: 0 },
-    ],
-  },
-];
-
-const initialMasteries: Record<string, Mastery[]> = {
-  进攻: [
-    { id: "sorcery", name: "巫术", desc: "技能伤害提高 0.5%/点", max: 4, points: 4, tier: 1 },
-    { id: "fury", name: "狂怒", desc: "攻击速度提高 1.25%/点", max: 4, points: 4, tier: 1 },
-    { id: "mental-force", name: "精神之力", desc: "法术强度提高 1.33/点", max: 3, points: 3, tier: 2 },
-    { id: "arcane", name: "奥术精通", desc: "法术强度提高 5%", max: 1, points: 1, tier: 3 },
-    { id: "havoc", name: "浩劫", desc: "造成的伤害提高 1.5%/点", max: 3, points: 3, tier: 4 },
-    { id: "executioner", name: "死神", desc: "对低生命值目标伤害提高", max: 1, points: 1, tier: 5 },
-  ],
-  防御: [
-    { id: "resistance", name: "抵抗", desc: "魔法抗性提高 2/点", max: 3, points: 0, tier: 1 },
-    { id: "hardiness", name: "坚硬", desc: "护甲提高 2/点", max: 3, points: 0, tier: 1 },
-    { id: "durability", name: "耐久", desc: "每级提高 1.5 生命值/点", max: 4, points: 0, tier: 2 },
-    { id: "veteran", name: "老兵伤痕", desc: "生命值提高 30", max: 1, points: 0, tier: 3 },
-    { id: "juggernaut", name: "主宰", desc: "最大生命值提高 3%", max: 1, points: 0, tier: 4 },
-    { id: "tenacious", name: "顽强", desc: "控制时间减少 15%", max: 1, points: 0, tier: 5 },
-  ],
-  通用: [
-    { id: "summoner", name: "召唤师的洞悉", desc: "召唤师技能冷却缩减", max: 1, points: 1, tier: 1 },
-    { id: "meditation", name: "冥想", desc: "法力回复提高 1/点", max: 3, points: 3, tier: 1 },
-    { id: "swiftness", name: "迅捷", desc: "移动速度提高 0.5%/点", max: 4, points: 4, tier: 2 },
-    { id: "runic", name: "符文亲和", desc: "增益持续时间延长 20%", max: 1, points: 1, tier: 3 },
-    { id: "awareness", name: "领悟", desc: "获得的经验提高 1.25%/点", max: 4, points: 4, tier: 3 },
-    { id: "mastermind", name: "智谋", desc: "主动装备冷却缩减 10%", max: 1, points: 1, tier: 5 },
-  ],
-};
-
-const spells = [
-  { id: "Flash", name: "闪现", icon: "https://ddragon.leagueoflegends.com/cdn/14.24.1/img/spell/SummonerFlash.png" },
-  { id: "Ignite", name: "引燃", icon: "https://ddragon.leagueoflegends.com/cdn/14.24.1/img/spell/SummonerDot.png" },
-  { id: "Teleport", name: "传送", icon: "https://ddragon.leagueoflegends.com/cdn/14.24.1/img/spell/SummonerTeleport.png" },
-  { id: "Smite", name: "惩戒", icon: "https://ddragon.leagueoflegends.com/cdn/14.24.1/img/spell/SummonerSmite.png" },
-  { id: "Ghost", name: "幽灵疾步", icon: "https://ddragon.leagueoflegends.com/cdn/14.24.1/img/spell/SummonerHaste.png" },
-  { id: "Exhaust", name: "虚弱", icon: "https://ddragon.leagueoflegends.com/cdn/14.24.1/img/spell/SummonerExhaust.png" },
-];
-
-const itemPool = [
-  ["1056", "多兰之戒"], ["3020", "法师之靴"], ["3165", "莫雷洛秘典"], ["3089", "灭世者的死亡之帽"],
-  ["3135", "虚空之杖"], ["3157", "中娅沙漏"], ["3078", "三相之力"], ["3047", "铁板靴"],
-  ["3153", "破败王者之刃"], ["3053", "斯特拉克的挑战护手"], ["3065", "振奋盔甲"], ["3031", "无尽之刃"],
-  ["3006", "狂战士胫甲"], ["3085", "卢安娜的飓风"], ["3094", "疾射火炮"], ["3036", "多米尼克领主的致意"],
-];
-
-const defaultSkillPlan = ["Q", "W", "E", "Q", "Q", "R", "Q", "W", "Q", "W", "R", "W", "W", "E", "E", "R", "E", "E"];
-
-function itemIcon(id: string) {
-  return `https://ddragon.leagueoflegends.com/cdn/14.24.1/img/item/${id}.png`;
+function createRunePreset(champion: ClassicChampion): RuneCounts {
+  const counts: RuneCounts = {};
+  classicRuneGroups.forEach((group) => {
+    group.runes.forEach((rune) => { counts[rune.id] = 0; });
+    counts[runePresetIds[champion.archetype][group.id]] = group.cap;
+  });
+  return counts;
 }
 
-function championIcon(id: string) {
-  return `https://ddragon.leagueoflegends.com/cdn/14.24.1/img/champion/${id}.png`;
+function groupUsed(counts: RuneCounts, group: ClassicRuneGroup) {
+  return group.runes.reduce((sum, rune) => sum + (counts[rune.id] || 0), 0);
+}
+
+function treeTotal(ranks: MasteryRanks, tree: ClassicMastery["tree"]) {
+  return classicMasteries
+    .filter((mastery) => mastery.tree === tree)
+    .reduce((sum, mastery) => sum + (ranks[mastery.id] || 0), 0);
+}
+
+function earlierTreePoints(ranks: MasteryRanks, mastery: ClassicMastery) {
+  return classicMasteries
+    .filter((node) => node.tree === mastery.tree && node.tier < mastery.tier)
+    .reduce((sum, node) => sum + (ranks[node.id] || 0), 0);
+}
+
+function masteryUnlocked(ranks: MasteryRanks, mastery: ClassicMastery) {
+  return earlierTreePoints(ranks, mastery) >= (mastery.tier - 1) * 4;
+}
+
+function normalizeNumber(value: number) {
+  const rounded = Math.round(value * 100) / 100;
+  return Number.isInteger(rounded) ? String(rounded) : rounded.toFixed(rounded * 10 % 1 === 0 ? 1 : 2);
+}
+
+function encodeBuildState(value: unknown) {
+  const bytes = new TextEncoder().encode(JSON.stringify(value));
+  let binary = "";
+  bytes.forEach((byte) => { binary += String.fromCharCode(byte); });
+  return btoa(binary);
+}
+
+function decodeBuildState(value: string) {
+  const binary = atob(value);
+  const bytes = Uint8Array.from(binary, (character) => character.charCodeAt(0));
+  return JSON.parse(new TextDecoder().decode(bytes));
 }
 
 export default function Home() {
-  const [selectedChampion, setSelectedChampion] = useState(champions[0]);
-  const [mode, setMode] = useState<"manual" | "ai">("manual");
-  const [runes, setRunes] = useState(initialRunes);
-  const [masteries, setMasteries] = useState(initialMasteries);
-  const [selectedSpells, setSelectedSpells] = useState(["Flash", "Ignite"]);
-  const [items, setItems] = useState(champions[0].build);
-  const [skillPlan, setSkillPlan] = useState(defaultSkillPlan);
-  const [activeItemSlot, setActiveItemSlot] = useState(0);
-  const [prompt, setPrompt] = useState("对线压制优先，兼顾中期小规模团战；需要标注替代出装。");
-  const [aiState, setAiState] = useState<"idle" | "researching" | "ready">("idle");
-  const [toast, setToast] = useState("");
+  const [view, setView] = useState<WorkbenchView>("runes");
+  const [selectedChampion, setSelectedChampion] = useState(classicChampions[0]);
   const [search, setSearch] = useState("");
+  const [laneFilter, setLaneFilter] = useState("全部");
+  const [runeCounts, setRuneCounts] = useState<RuneCounts>(() => createRunePreset(classicChampions[0]));
+  const [activeRuneGroup, setActiveRuneGroup] = useState<ClassicRuneGroup["id"]>("mark");
+  const [masteryRanks, setMasteryRanks] = useState<MasteryRanks>({ ...initialMasteryRanks });
+  const [selectedSpells, setSelectedSpells] = useState<string[]>(defaultSpellsFor(classicChampions[0]));
+  const [items, setItems] = useState<string[]>(classicBuildPresets[classicChampions[0].archetype]);
+  const [activeItemSlot, setActiveItemSlot] = useState(0);
+  const [itemCategory, setItemCategory] = useState<(typeof classicItemCategories)[number]>("核心推荐");
+  const [itemSearch, setItemSearch] = useState("");
+  const [inspectedItem, setInspectedItem] = useState(classicBuildPresets[classicChampions[0].archetype][0]);
+  const [skillPlan, setSkillPlan] = useState<string[]>(skillPlanFor(classicChampions[0].spellOrder));
+  const [prompt, setPrompt] = useState("对线稳定，使用完整经典符文与 30 点天赋；给出两件备选装备。");
+  const [aiState, setAiState] = useState<"idle" | "working" | "ready">("idle");
+  const [toast, setToast] = useState("");
+  const [hydrated, setHydrated] = useState(false);
 
   const totalMasteries = useMemo(
-    () => Object.values(masteries).flat().reduce((sum, item) => sum + item.points, 0),
-    [masteries],
+    () => Object.values(masteryRanks).reduce((sum, points) => sum + points, 0),
+    [masteryRanks],
   );
 
   const runeTotals = useMemo(() => {
     const totals: Record<string, number> = {};
-    runes.forEach((group) =>
-      group.options.forEach((option) => {
-        if (option.count) totals[option.stat] = (totals[option.stat] || 0) + option.per * option.count;
-      }),
-    );
+    classicRuneGroups.forEach((group) => group.runes.forEach((rune) => {
+      const count = runeCounts[rune.id] || 0;
+      if (count) totals[rune.stat] = (totals[rune.stat] || 0) + rune.per * count;
+    }));
     return totals;
-  }, [runes]);
+  }, [runeCounts]);
 
-  const filteredChampions = champions.filter((champion) =>
-    `${champion.name}${champion.title}${champion.lane}`.includes(search.trim()),
-  );
+  const runeAssignments = useMemo(() => {
+    const assignments: Array<{ runeId: string; groupId: ClassicRuneGroup["id"] } | null> = [];
+    classicRuneGroups.forEach((group) => {
+      const groupSlots: Array<{ runeId: string; groupId: ClassicRuneGroup["id"] }> = [];
+      group.runes.forEach((rune) => {
+        for (let index = 0; index < (runeCounts[rune.id] || 0); index += 1) {
+          groupSlots.push({ runeId: rune.id, groupId: group.id });
+        }
+      });
+      while (groupSlots.length < group.cap) groupSlots.push({ runeId: "", groupId: group.id });
+      assignments.push(...groupSlots.slice(0, group.cap).map((slot) => slot.runeId ? slot : null));
+    });
+    return assignments;
+  }, [runeCounts]);
+
+  const filteredChampions = useMemo(() => classicChampions.filter((champion) => {
+    const laneMatches = laneFilter === "全部" || champion.lane.startsWith(laneFilter);
+    const query = search.trim().toLowerCase();
+    return laneMatches && (!query || `${champion.name}${champion.title}${champion.key}${champion.role}`.toLowerCase().includes(query));
+  }), [laneFilter, search]);
+
+  const displayedItems = useMemo(() => mainItemPool.filter((item) => {
+    const query = itemSearch.trim();
+    const categoryMatches = itemCategory === "核心推荐"
+      ? item.category === "鞋子" || item.category === "传说装备"
+      : item.category === itemCategory;
+    return categoryMatches && (!query || `${item.name}${item.description}${item.tags.join("")}`.includes(query));
+  }), [itemCategory, itemSearch]);
+
+  const selectedRuneGroup = classicRuneGroups.find((group) => group.id === activeRuneGroup) || classicRuneGroups[0];
+  const inspectedItemData = itemById.get(inspectedItem);
 
   const showToast = (message: string) => {
     setToast(message);
-    window.setTimeout(() => setToast(""), 2400);
+    window.setTimeout(() => setToast(""), 2600);
   };
 
-  const chooseChampion = (champion: Champion) => {
-    setSelectedChampion(champion);
-    setItems(champion.build);
-    setSelectedSpells(champion.lane === "打野" ? ["Flash", "Smite"] : champion.lane === "上路" ? ["Flash", "Teleport"] : ["Flash", "Ignite"]);
-    setAiState("idle");
-  };
+  useEffect(() => {
+    try {
+      const hash = window.location.hash.match(/build=([^&]+)/)?.[1];
+      const saved = hash ? decodeBuildState(hash) : JSON.parse(localStorage.getItem("rift-lab-classic-build") || "null");
+      if (saved) {
+        const champion = classicChampions.find((entry) => entry.classicId === saved.championId);
+        if (champion) setSelectedChampion(champion);
+        if (saved.runeCounts) setRuneCounts(saved.runeCounts);
+        if (saved.masteryRanks) setMasteryRanks(saved.masteryRanks);
+        if (Array.isArray(saved.spells)) setSelectedSpells(saved.spells);
+        if (Array.isArray(saved.items)) setItems(saved.items);
+        if (Array.isArray(saved.skillPlan)) setSkillPlan(saved.skillPlan);
+      }
+    } catch {
+      // Invalid local/share data is ignored so the simulator always remains usable.
+    }
+    setHydrated(true);
+  }, []);
 
-  const adjustRune = (groupId: string, optionId: string, delta: number) => {
-    setRunes((current) =>
-      current.map((group) => {
-        if (group.id !== groupId) return group;
-        const used = group.options.reduce((sum, option) => sum + option.count, 0);
-        return {
-          ...group,
-          options: group.options.map((option) => {
-            if (option.id !== optionId) return option;
-            if (delta > 0 && used >= group.cap) return option;
-            return { ...option, count: Math.max(0, option.count + delta) };
-          }),
-        };
-      }),
-    );
-  };
-
-  const adjustMastery = (tree: string, id: string, delta: number) => {
-    setMasteries((current) => ({
-      ...current,
-      [tree]: current[tree].map((mastery) => {
-        if (mastery.id !== id) return mastery;
-        if (delta > 0 && totalMasteries >= 30) return mastery;
-        return { ...mastery, points: Math.min(mastery.max, Math.max(0, mastery.points + delta)) };
-      }),
+  useEffect(() => {
+    if (!hydrated) return;
+    localStorage.setItem("rift-lab-classic-build", JSON.stringify({
+      championId: selectedChampion.classicId,
+      runeCounts,
+      masteryRanks,
+      spells: selectedSpells,
+      items,
+      skillPlan,
     }));
+  }, [hydrated, items, masteryRanks, runeCounts, selectedChampion.classicId, selectedSpells, skillPlan]);
+
+  const chooseChampion = (champion: ClassicChampion) => {
+    setSelectedChampion(champion);
+    setRuneCounts(createRunePreset(champion));
+    setMasteryRanks({ ...initialMasteryRanks });
+    setSelectedSpells(defaultSpellsFor(champion));
+    setItems(classicBuildPresets[champion.archetype]);
+    setInspectedItem(classicBuildPresets[champion.archetype][0]);
+    setSkillPlan(skillPlanFor(champion.spellOrder));
+    setAiState("idle");
+    showToast(`已切换为 ${champion.name} 的经典构筑`);
   };
 
-  const toggleSpell = (id: string) => {
-    setSelectedSpells((current) => {
-      if (current.includes(id)) return current.filter((spell) => spell !== id);
-      if (current.length < 2) return [...current, id];
-      return [current[1], id];
+  const adjustRune = (group: ClassicRuneGroup, runeId: string, delta: number) => {
+    setRuneCounts((current) => {
+      const used = groupUsed(current, group);
+      const value = current[runeId] || 0;
+      if (delta > 0 && used >= group.cap) return current;
+      return { ...current, [runeId]: Math.max(0, Math.min(group.cap, value + delta)) };
     });
   };
 
-  const generateBuild = () => {
-    setAiState("researching");
-    window.setTimeout(() => {
-      const aggressive = prompt.includes("压制") || prompt.includes("爆发");
-      setSelectedSpells(selectedChampion.lane === "打野" ? ["Flash", "Smite"] : aggressive ? ["Flash", "Ignite"] : ["Flash", "Teleport"]);
-      setRunes((current) =>
-        current.map((group) => ({
-          ...group,
-          options: group.options.map((option, index) => ({
-            ...option,
-            count: index === (aggressive && group.id === "glyph" ? 2 : 0) ? group.cap : 0,
-          })),
-        })),
-      );
-      setSkillPlan(selectedChampion.spellOrder[0] === "Q" ? defaultSkillPlan : defaultSkillPlan.map((skill) => skill === "Q" ? selectedChampion.spellOrder[0] : skill === selectedChampion.spellOrder[0] ? "Q" : skill));
-      setAiState("ready");
-      showToast("AI 方案已生成，已写入当前配置");
-    }, 1450);
+  const fillRune = (group: ClassicRuneGroup, runeId: string) => {
+    setRuneCounts((current) => {
+      const next = { ...current };
+      group.runes.forEach((rune) => { next[rune.id] = 0; });
+      next[runeId] = group.cap;
+      return next;
+    });
   };
 
-  const changeSkill = (level: number, skill: string) => {
-    setSkillPlan((current) => current.map((value, index) => index === level ? skill : value));
+  const applyRunePreset = (kind: "ad" | "ap") => {
+    const archetype = kind === "ap" ? "mage" : "marksman";
+    const pseudoChampion = { ...selectedChampion, archetype } as ClassicChampion;
+    setRuneCounts(createRunePreset(pseudoChampion));
+    showToast(`已应用 OP.GG Classic ${kind.toUpperCase()} 预设`);
+  };
+
+  const adjustMastery = (mastery: ClassicMastery, delta: number) => {
+    setMasteryRanks((current) => {
+      const currentRank = current[mastery.id] || 0;
+      if (delta > 0) {
+        if (totalMasteries >= 30 || currentRank >= mastery.max || !masteryUnlocked(current, mastery)) {
+          showToast(!masteryUnlocked(current, mastery) ? `本行需要先在 ${mastery.tree} 前排投入 ${(mastery.tier - 1) * 4} 点` : "已达到点数或等级上限");
+          return current;
+        }
+        return { ...current, [mastery.id]: currentRank + 1 };
+      }
+      if (!currentRank) return current;
+      const next = { ...current, [mastery.id]: currentRank - 1 };
+      const invalid = classicMasteries.some((node) => (next[node.id] || 0) > 0 && !masteryUnlocked(next, node));
+      if (invalid) {
+        showToast("请先撤回后排天赋，再移除前排点数");
+        return current;
+      }
+      return next;
+    });
+  };
+
+  const toggleSpell = (spellId: string) => {
+    setSelectedSpells((current) => {
+      if (current.includes(spellId)) return current.filter((id) => id !== spellId);
+      if (current.length < 2) return [...current, spellId];
+      return [current[1], spellId];
+    });
+  };
+
+  const changeSkill = (levelIndex: number, skill: string) => {
+    const level = levelIndex + 1;
+    if (skill === "R" && ![6, 11, 16].includes(level)) {
+      showToast("经典规则：终极技能只能在 6、11、16 级学习");
+      return;
+    }
+    setSkillPlan((current) => {
+      const next = current.map((entry, index) => index === levelIndex ? skill : entry);
+      const counts = { Q: 0, W: 0, E: 0, R: 0 };
+      for (let index = 0; index < next.length; index += 1) {
+        const selected = next[index] as keyof typeof counts;
+        counts[selected] += 1;
+        if (selected === "R" && ![6, 11, 16].includes(index + 1)) return current;
+        if (selected !== "R" && counts[selected] > Math.ceil((index + 1) / 2)) {
+          showToast(`${index + 1} 级时不能学习该技能的下一等级`);
+          return current;
+        }
+        if (counts[selected] > (selected === "R" ? 3 : 5)) return current;
+      }
+      return next;
+    });
+  };
+
+  const shareBuild = async () => {
+    const payload = encodeBuildState({
+      championId: selectedChampion.classicId,
+      runeCounts,
+      masteryRanks,
+      spells: selectedSpells,
+      items,
+      skillPlan,
+    });
+    const url = `${window.location.origin}${window.location.pathname}#build=${payload}`;
+    window.history.replaceState(null, "", url);
+    await navigator.clipboard?.writeText(url);
+    showToast("无需登录的构筑链接已复制");
+  };
+
+  const generateBuild = () => {
+    setAiState("working");
+    window.setTimeout(() => {
+      const defensive = prompt.includes("稳") || prompt.includes("防御") || prompt.includes("新手");
+      setRuneCounts(createRunePreset({
+        ...selectedChampion,
+        archetype: defensive ? "tank" : selectedChampion.archetype,
+      }));
+      setMasteryRanks({ ...(defensive ? masteryPresets["防御 21 / 通用 9"] : initialMasteryRanks) });
+      setSelectedSpells(defaultSpellsFor(selectedChampion));
+      setItems(classicBuildPresets[selectedChampion.archetype]);
+      setAiState("ready");
+      showToast("经典数据构筑草案已写入当前方案");
+    }, 1100);
   };
 
   return (
     <main className="app-shell" style={{ "--champion-accent": selectedChampion.accent } as React.CSSProperties}>
       <header className="topbar">
-        <div className="brand">
+        <button className="brand" onClick={() => setView("runes")} aria-label="返回符文模拟器">
           <span className="brand-mark">R</span>
-          <div><strong>RIFT<span>//</span>LAB</strong><small>怀旧服构筑工作台</small></div>
-        </div>
-        <nav aria-label="主导航">
-          <button className="active">构筑实验室</button>
-          <button>英雄资料</button>
-          <button>版本档案</button>
+          <span><strong>RIFT<span>//</span>LAB</strong><small>怀旧服构筑工作台</small></span>
+        </button>
+        <nav className="main-nav" aria-label="构筑功能">
+          {([
+            ["runes", "符文模拟器", "50"],
+            ["masteries", "天赋模拟器", "56"],
+            ["build", "技能与出装", "152"],
+            ["ai", "AI 助手", "✦"],
+          ] as const).map(([id, label, badge]) => (
+            <button key={id} className={view === id ? "active" : ""} onClick={() => setView(id)} aria-current={view === id ? "page" : undefined}>
+              {label}<span>{badge}</span>
+            </button>
+          ))}
         </nav>
         <div className="sync-status">
           <span className="live-dot" />
-          <div><strong>Classic 16.15</strong><small>OP.GG · 12 分钟前同步</small></div>
-          <button aria-label="检查数据更新" onClick={() => showToast("已是最新数据版本")}>↻</button>
+          <span><strong>Classic {CLASSIC_PATCH}</strong><small>OP.GG · 2026.07.24 快照</small></span>
+          <button onClick={shareBuild}>分享</button>
         </div>
       </header>
 
       <div className="workspace">
         <aside className="champion-rail">
-          <div className="rail-heading">
-            <span>英雄池</span>
-            <b>{champions.length}</b>
-          </div>
+          <div className="rail-heading"><span>经典英雄</span><b>{classicChampions.length} / 60</b></div>
           <label className="champion-search">
-            <span>⌕</span>
-            <input value={search} onChange={(event) => setSearch(event.target.value)} placeholder="搜索英雄" />
+            <span aria-hidden="true">⌕</span>
+            <input value={search} onChange={(event) => setSearch(event.target.value)} placeholder="搜索英雄、称号或定位" />
           </label>
           <div className="role-filters" aria-label="位置筛选">
-            {["全部", "上", "野", "中", "下", "辅"].map((role, index) => <button key={role} className={index === 0 ? "active" : ""}>{role}</button>)}
+            {["全部", "上", "野", "中", "下", "辅"].map((lane) => (
+              <button key={lane} className={laneFilter === lane ? "active" : ""} onClick={() => setLaneFilter(lane)} aria-pressed={laneFilter === lane}>{lane}</button>
+            ))}
           </div>
           <div className="champion-list">
             {filteredChampions.map((champion) => (
-              <button key={champion.id} className={champion.id === selectedChampion.id ? "champion-row active" : "champion-row"} onClick={() => chooseChampion(champion)}>
-                <img src={championIcon(champion.id)} alt="" />
-                <span><strong>{champion.name}</strong><small>{champion.lane} · {champion.role}</small></span>
-                <i>{champion.id === selectedChampion.id ? "●" : "›"}</i>
+              <button key={champion.classicId} className={champion.classicId === selectedChampion.classicId ? "champion-row active" : "champion-row"} onClick={() => chooseChampion(champion)}>
+                <img src={championIcon(champion)} alt="" />
+                <span><strong>{champion.name}</strong><small>{champion.title} · {champion.lane}</small></span>
+                <i>{champion.classicId === selectedChampion.classicId ? "●" : "›"}</i>
               </button>
             ))}
           </div>
-          <div className="rail-footnote">
-            <span>数据覆盖</span><strong>5 / 40</strong>
-            <small>首版先接入上一任务已校验的 5 位英雄</small>
-          </div>
+          <div className="rail-footnote"><span>目录覆盖</span><strong>60 英雄 · 16 技能</strong><small>所有选择项统一来自 OP.GG Classic 16.15。</small></div>
         </aside>
 
         <section className="builder">
-          <div className="champion-hero">
-            <img src={selectedChampion.image} alt={`${selectedChampion.name}原画`} />
+          <section className="champion-hero">
+            <img src={championSplash(selectedChampion)} alt={`${selectedChampion.name}原画`} />
             <div className="hero-shade" />
             <div className="hero-content">
-              <span className="eyebrow">经典服 · {selectedChampion.lane}方案</span>
+              <span className="eyebrow">CLASSIC · {selectedChampion.lane} · {selectedChampion.role}</span>
               <h1>{selectedChampion.name}<small>{selectedChampion.title}</small></h1>
-              <div className="hero-meta">
-                <span>{selectedChampion.role}</span><span>{selectedChampion.lane}</span><span>难度 {selectedChampion.difficulty}</span>
-              </div>
+              <p>完整经典目录已载入：符文 50 · 天赋 56 · 召唤师技能 16 · 装备 152</p>
             </div>
-            <div className="hero-stats">
-              <div><span>推荐指数</span><strong>92</strong><small>/ 100</small></div>
-              <div><span>样本可信度</span><strong>高</strong><small>4 个来源</small></div>
+            <div className="hero-actions">
+              <button onClick={() => { setRuneCounts(createRunePreset(selectedChampion)); setMasteryRanks({ ...initialMasteryRanks }); showToast("已恢复当前英雄默认经典方案"); }}>恢复推荐</button>
+              <button className="primary" onClick={shareBuild}>复制方案链接</button>
             </div>
+          </section>
+
+          <div className="mobile-view-tabs">
+            {([
+              ["runes", "符文"],
+              ["masteries", "天赋"],
+              ["build", "构筑"],
+              ["ai", "AI"],
+            ] as const).map(([id, label]) => <button key={id} className={view === id ? "active" : ""} onClick={() => setView(id)}>{label}</button>)}
           </div>
 
-          <div className="builder-toolbar">
-            <div className="mode-switch" role="tablist" aria-label="配置模式">
-              <button className={mode === "manual" ? "active" : ""} onClick={() => setMode("manual")}><span>⌁</span>手动配置</button>
-              <button className={mode === "ai" ? "active ai" : "ai"} onClick={() => setMode("ai")}><span>✦</span>AI 生成</button>
-            </div>
-            <div className="toolbar-actions">
-              <span className="save-state">● 本地已保存</span>
-              <button onClick={() => navigator.clipboard?.writeText(window.location.href).then(() => showToast("方案链接已复制"))}>分享方案</button>
-              <button className="primary" onClick={() => showToast("构筑已保存到本地方案库")}>保存构筑</button>
-            </div>
-          </div>
-
-          {mode === "ai" && (
-            <section className="ai-panel">
-              <div className="ai-orb"><span>✦</span></div>
-              <div className="ai-copy">
-                <div className="section-label">RIFT INTELLIGENCE</div>
-                <h2>让 AI 从公开攻略中生成构筑</h2>
-                <p>根据版本、分路和你的打法偏好，交叉核对 OP.GG、官方版本信息与社区高质量攻略。</p>
-                <div className="prompt-box">
-                  <textarea value={prompt} onChange={(event) => setPrompt(event.target.value)} aria-label="AI 构筑要求" />
-                  <button onClick={generateBuild} disabled={aiState === "researching"}>
-                    {aiState === "researching" ? "检索与比对中…" : "生成完整方案"} <span>→</span>
-                  </button>
-                </div>
-                <div className="prompt-chips">
-                  {["对线压制", "稳健发育", "团战优先", "新手友好"].map((chip) => <button key={chip} onClick={() => setPrompt(`${chip}；提供符文数值、技能加点与两套替代出装。`)}>＋ {chip}</button>)}
+          {view === "runes" && (
+            <section className="simulator-page">
+              <div className="simulator-heading">
+                <div><span>01</span><div><h2>经典符文模拟器</h2><p>9 印记 + 9 符印 + 9 雕纹 + 3 精华；名称、数值与属性汇总实时计算。</p></div></div>
+                <div className="simulator-actions">
+                  <button onClick={() => applyRunePreset("ad")}>AD 预设</button>
+                  <button onClick={() => applyRunePreset("ap")}>AP 预设</button>
+                  <button onClick={() => setRuneCounts(Object.fromEntries(Object.keys(runeCounts).map((id) => [id, 0])))}>重置</button>
+                  <b>{Object.values(runeCounts).reduce((sum, count) => sum + count, 0)} / 30</b>
                 </div>
               </div>
-              <div className={aiState === "researching" ? "research-card loading" : "research-card"}>
-                <div className="research-head"><span>资源核验</span><b>{aiState === "ready" ? "已完成" : aiState === "researching" ? "进行中" : "待开始"}</b></div>
-                {[
-                  ["OP.GG Classic", "主数据"],
-                  ["版本更新记录", "数值校验"],
-                  ["社区高分攻略", "打法交叉"],
-                ].map(([name, tag]) => <div className="source-row" key={name}><i>✓</i><span><strong>{name}</strong><small>{tag}</small></span></div>)}
-                <div className="confidence"><span>综合置信度</span><strong>{aiState === "ready" ? "91%" : "—"}</strong></div>
+
+              <div className="rune-workspace">
+                <div className="rune-board-wrap">
+                  <div className="rune-board" style={{ backgroundImage: `url(${runeBoardBackground})` }}>
+                    {runeSlotPositions.map(([left, top, width, height], index) => {
+                      const assignment = runeAssignments[index];
+                      const rune = assignment
+                        ? classicRuneGroups.flatMap((group) => group.runes).find((entry) => entry.id === assignment.runeId)
+                        : null;
+                      const group = index < 9 ? classicRuneGroups[0] : index < 18 ? classicRuneGroups[1] : index < 27 ? classicRuneGroups[2] : classicRuneGroups[3];
+                      return (
+                        <button
+                          key={index}
+                          className={`rune-slot ${rune ? "filled" : ""}`}
+                          style={{
+                            left: `${left / 716 * 100}%`,
+                            top: `${top / 475.878 * 100}%`,
+                            width: `${width / 716 * 100}%`,
+                            height: `${height / 475.878 * 100}%`,
+                            "--slot-color": group.color,
+                          } as React.CSSProperties}
+                          onClick={() => setActiveRuneGroup(group.id)}
+                          aria-label={`${index + 1}号${group.name}槽位${rune ? `：${rune.name}` : "：空"}`}
+                        >
+                          {rune ? <img src={rune.icon} alt="" /> : <span>＋</span>}
+                        </button>
+                      );
+                    })}
+                  </div>
+                  <div className="rune-board-legend">
+                    {classicRuneGroups.map((group) => <button key={group.id} className={activeRuneGroup === group.id ? "active" : ""} onClick={() => setActiveRuneGroup(group.id)} style={{ "--group-color": group.color } as React.CSSProperties}><i />{group.name}<b>{groupUsed(runeCounts, group)}/{group.cap}</b></button>)}
+                  </div>
+                </div>
+
+                <div className="rune-selector">
+                  <div className="selector-tabs">
+                    {classicRuneGroups.map((group) => <button key={group.id} className={activeRuneGroup === group.id ? "active" : ""} onClick={() => setActiveRuneGroup(group.id)}>{group.name}<b>{group.runes.length}</b></button>)}
+                  </div>
+                  <div className="rune-catalog">
+                    {selectedRuneGroup.runes.map((rune) => {
+                      const count = runeCounts[rune.id] || 0;
+                      const used = groupUsed(runeCounts, selectedRuneGroup);
+                      return (
+                        <article className={count ? "rune-card active" : "rune-card"} key={rune.id}>
+                          <button className="rune-main" onClick={() => fillRune(selectedRuneGroup, rune.id)}>
+                            <img src={rune.icon} alt="" />
+                            <span><strong>{rune.name}</strong><small>{rune.value}</small></span>
+                          </button>
+                          <div className="rune-stepper">
+                            <button onClick={() => adjustRune(selectedRuneGroup, rune.id, -1)} disabled={!count}>−</button>
+                            <b>{count}</b>
+                            <button onClick={() => adjustRune(selectedRuneGroup, rune.id, 1)} disabled={used >= selectedRuneGroup.cap}>＋</button>
+                          </div>
+                        </article>
+                      );
+                    })}
+                  </div>
+                  <p className="selector-hint">点击符文名称可填满当前类别；也可用 ＋/− 混搭。成长属性按 18 级汇总。</p>
+                </div>
+              </div>
+
+              <div className="summary-panel">
+                <div className="summary-title"><h3>属性总计</h3><span>{Object.keys(runeTotals).length} 项属性 · 18 级口径</span></div>
+                <div className="stat-grid">
+                  {Object.entries(runeTotals).length ? Object.entries(runeTotals).map(([stat, value]) => (
+                    <div key={stat}><span>{stat}</span><strong>+{normalizeNumber(value)}{percentStats.has(stat) ? "%" : ""}</strong></div>
+                  )) : <p className="empty-message">尚未放入符文。</p>}
+                </div>
+                <div className="rune-recap">
+                  {classicRuneGroups.flatMap((group) => group.runes.filter((rune) => runeCounts[rune.id]).map((rune) => (
+                    <span key={rune.id} style={{ "--recap-color": group.color } as React.CSSProperties}><img src={rune.icon} alt="" />{rune.name}<b>×{runeCounts[rune.id]}</b></span>
+                  )))}
+                </div>
               </div>
             </section>
           )}
 
-          <section className="loadout-grid">
-            <div className="panel runes-panel">
-              <div className="panel-title">
-                <div><span className="section-index">01</span><div><h2>符文配置</h2><p>每类槽位可混搭，属性实时累计</p></div></div>
-                <span className="slot-count">{runes.reduce((sum, group) => sum + group.options.reduce((total, option) => total + option.count, 0), 0)} / 30 槽</span>
-              </div>
-              <div className="rune-groups">
-                {runes.map((group) => {
-                  const used = group.options.reduce((sum, option) => sum + option.count, 0);
-                  return (
-                    <div className="rune-group" key={group.id} style={{ "--rune-color": group.color } as React.CSSProperties}>
-                      <div className="rune-group-head"><span><i />{group.name}</span><b>{used}/{group.cap}</b></div>
-                      <div className="rune-options">
-                        {group.options.map((option) => (
-                          <div className={option.count ? "rune-option selected" : "rune-option"} key={option.id}>
-                            <div className="rune-gem">{option.short}<span>{option.count || ""}</span></div>
-                            <div className="rune-info"><strong>{option.name}</strong><small>{option.value}</small></div>
-                            <div className="stepper">
-                              <button onClick={() => adjustRune(group.id, option.id, -1)} disabled={!option.count}>−</button>
-                              <span>{option.count}</span>
-                              <button onClick={() => adjustRune(group.id, option.id, 1)} disabled={used >= group.cap}>＋</button>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-              <div className="rune-summary">
-                <div className="summary-heading"><span>属性总计</span><small>基于当前 {Object.keys(runeTotals).length} 项属性</small></div>
-                <div className="stat-chips">
-                  {Object.entries(runeTotals).map(([stat, value]) => <div key={stat}><span>{stat}</span><strong>+{Number.isInteger(value) ? value : value.toFixed(2)}</strong></div>)}
-                </div>
-                <div className="rune-recap">
-                  {runes.flatMap((group) => group.options.filter((option) => option.count).map((option) => <span key={option.id}><i style={{ background: group.color }} />{option.name} <b>×{option.count}</b></span>))}
+          {view === "masteries" && (
+            <section className="simulator-page">
+              <div className="simulator-heading">
+                <div><span>02</span><div><h2>经典天赋模拟器</h2><p>三棵完整天赋树；每投入 4 点解锁下一行，总计最多 30 点。</p></div></div>
+                <div className="simulator-actions mastery-presets">
+                  {Object.keys(masteryPresets).map((preset) => <button key={preset} onClick={() => setMasteryRanks({ ...masteryPresets[preset] })}>{preset}</button>)}
+                  <button onClick={() => setMasteryRanks({})}>重置</button>
+                  <b>{totalMasteries} / 30</b>
                 </div>
               </div>
-            </div>
 
-            <div className="panel masteries-panel">
-              <div className="panel-title">
-                <div><span className="section-index">02</span><div><h2>天赋页</h2><p>左键加点，按钮可撤回</p></div></div>
-                <span className={totalMasteries === 30 ? "slot-count complete" : "slot-count"}>{totalMasteries} / 30 点</span>
-              </div>
-              <div className="mastery-trees">
-                {Object.entries(masteries).map(([tree, list], treeIndex) => {
-                  const treeTotal = list.reduce((sum, mastery) => sum + mastery.points, 0);
-                  return (
-                    <div className={`mastery-tree tree-${treeIndex}`} key={tree}>
-                      <div className="tree-head"><span>{tree}</span><b>{treeTotal} 点</b></div>
-                      <div className="mastery-list">
-                        {list.map((mastery) => (
-                          <button
-                            className={mastery.points ? "mastery-node active" : "mastery-node"}
+              <div className="mastery-workspace">
+                {(["进攻", "防御", "通用"] as const).map((tree) => (
+                  <section className={`mastery-tree mastery-${tree}`} key={tree}>
+                    <header><span>{tree}</span><b>{treeTotal(masteryRanks, tree)} 点</b></header>
+                    <div className="mastery-canvas" style={{ backgroundImage: `linear-gradient(rgba(5,8,12,.18), rgba(5,8,12,.5)), url(${masteryBackgrounds[tree]})` }}>
+                      {[1, 2, 3, 4, 5, 6].map((tier) => <span className="tier-rule" key={tier} style={{ gridRow: tier }}>{tier === 1 ? "起始" : `${(tier - 1) * 4}点`}</span>)}
+                      {classicMasteries.filter((mastery) => mastery.tree === tree).map((mastery) => {
+                        const rank = masteryRanks[mastery.id] || 0;
+                        const unlocked = masteryUnlocked(masteryRanks, mastery);
+                        return (
+                          <article
+                            className={`mastery-node ${rank ? "active" : ""} ${unlocked ? "" : "locked"}`}
                             key={mastery.id}
-                            onClick={() => adjustMastery(tree, mastery.id, 1)}
-                            onContextMenu={(event) => { event.preventDefault(); adjustMastery(tree, mastery.id, -1); }}
-                            title={`${mastery.desc}（右键撤回）`}
+                            style={{ gridColumn: mastery.column + 1, gridRow: mastery.tier }}
+                            title={`${mastery.name}：${mastery.description}`}
                           >
-                            <span className="node-icon">{mastery.name.slice(0, 1)}</span>
-                            <span><strong>{mastery.name}</strong><small>{mastery.desc}</small></span>
-                            <i>{mastery.points}/{mastery.max}</i>
-                            {mastery.points > 0 && <em onClick={(event) => { event.stopPropagation(); adjustMastery(tree, mastery.id, -1); }}>−</em>}
-                          </button>
-                        ))}
-                      </div>
+                            <button className="mastery-icon" onClick={() => adjustMastery(mastery, 1)} disabled={!unlocked && !rank}>
+                              <img src={mastery.icon.replace("_on.png", rank ? "_on.png" : "_off.png")} alt="" />
+                              <b>{rank}/{mastery.max}</b>
+                            </button>
+                            <div className="mastery-controls">
+                              <button onClick={() => adjustMastery(mastery, -1)} disabled={!rank}>−</button>
+                              <button onClick={() => adjustMastery(mastery, 1)} disabled={!unlocked || rank >= mastery.max || totalMasteries >= 30}>＋</button>
+                            </div>
+                            <span className="mastery-tooltip"><strong>{mastery.name}</strong><small>{mastery.description}</small></span>
+                          </article>
+                        );
+                      })}
                     </div>
-                  );
-                })}
+                  </section>
+                ))}
               </div>
-            </div>
+              <div className="mastery-summary">
+                <div><span>进攻</span><strong>{treeTotal(masteryRanks, "进攻")}</strong></div>
+                <div><span>防御</span><strong>{treeTotal(masteryRanks, "防御")}</strong></div>
+                <div><span>通用</span><strong>{treeTotal(masteryRanks, "通用")}</strong></div>
+                <p>{totalMasteries === 30 ? "天赋页已完成，可复制链接分享。" : `还可分配 ${30 - totalMasteries} 点。`}</p>
+              </div>
+            </section>
+          )}
 
-            <div className="panel skills-panel">
-              <div className="panel-title">
-                <div><span className="section-index">03</span><div><h2>技能加点</h2><p>点击等级格切换技能</p></div></div>
-                <span className="recommendation">主 {selectedChampion.spellOrder[0]} · 副 {selectedChampion.spellOrder[1]}</span>
+          {view === "build" && (
+            <section className="simulator-page build-page">
+              <div className="simulator-heading">
+                <div><span>03</span><div><h2>技能、召唤师技能与经典出装</h2><p>完整 18 级技能表、16 个召唤师技能和 152 件 Classic 装备。</p></div></div>
+                <div className="simulator-actions"><b>{selectedChampion.name} · 主 {selectedChampion.spellOrder[0]} 副 {selectedChampion.spellOrder[1]}</b></div>
               </div>
-              <div className="skill-priority">
-                {selectedChampion.spellOrder.map((skill, index) => <div key={skill}><span>{index + 1}</span><b>{skill}</b><small>{index === 0 ? "优先升满" : index === 1 ? "次升" : "最后"}</small></div>)}
-              </div>
-              <div className="skill-table">
-                <div className="level-row"><span>等级</span>{Array.from({ length: 18 }, (_, index) => <i key={index}>{index + 1}</i>)}</div>
-                {["Q", "W", "E", "R"].map((skill) => (
-                  <div className={`skill-row skill-${skill.toLowerCase()}`} key={skill}>
-                    <b>{skill}</b>
-                    {skillPlan.map((selected, index) => (
-                      <button key={index} className={selected === skill ? "selected" : ""} onClick={() => changeSkill(index, skill)} aria-label={`${index + 1}级选择${skill}`}>
-                        {selected === skill ? "●" : ""}
+
+              <section className="build-section skill-section">
+                <div className="subsection-title"><div><h3>技能加点</h3><p>系统会校验终极技能等级和普通技能等级上限。</p></div><span>18 / 18 级</span></div>
+                <div className="skill-table">
+                  <div className="level-row"><b>等级</b>{Array.from({ length: 18 }, (_, index) => <span key={index}>{index + 1}</span>)}</div>
+                  {(["Q", "W", "E", "R"] as const).map((skill) => (
+                    <div className={`skill-row skill-${skill.toLowerCase()}`} key={skill}>
+                      <b>{skill}</b>
+                      {skillPlan.map((selected, index) => <button key={index} className={selected === skill ? "selected" : ""} onClick={() => changeSkill(index, skill)} aria-label={`${index + 1}级选择${skill}`}>{selected === skill ? "●" : ""}</button>)}
+                    </div>
+                  ))}
+                </div>
+              </section>
+
+              <section className="build-section">
+                <div className="subsection-title"><div><h3>召唤师技能</h3><p>OP.GG Classic 完整目录；点击选择两个技能。</p></div><span>{selectedSpells.length} / 2</span></div>
+                <div className="spell-grid">
+                  {classicSpells.map((spell) => (
+                    <button className={selectedSpells.includes(spell.id) ? "spell-card active" : "spell-card"} key={spell.id} onClick={() => toggleSpell(spell.id)} aria-pressed={selectedSpells.includes(spell.id)}>
+                      <img src={spell.icon} alt="" />
+                      <span><strong>{spell.name}</strong><small>冷却 {spell.cooldown} 秒</small><em>{spell.description}</em></span>
+                      {selectedSpells.includes(spell.id) && <i>✓</i>}
+                    </button>
+                  ))}
+                </div>
+              </section>
+
+              <section className="build-section item-section">
+                <div className="subsection-title"><div><h3>核心出装</h3><p>先选择上方槽位，再从 Classic 目录替换；152 条源目录记录中已隐藏 2 个内部符文占位项。</p></div><span>150 件可选</span></div>
+                <div className="build-slots">
+                  {items.map((id, index) => {
+                    const item = itemById.get(id);
+                    return (
+                      <button className={activeItemSlot === index ? "item-slot active" : "item-slot"} key={`${id}-${index}`} onClick={() => { setActiveItemSlot(index); setInspectedItem(id); }}>
+                        <span>{index + 1}</span>
+                        {item ? <img src={item.icon} alt="" /> : <div className="empty-item">＋</div>}
+                        <strong>{item?.name || "空装备槽"}</strong>
+                        <small>{item ? `${item.price} 金币` : "点击后选择装备"}</small>
+                      </button>
+                    );
+                  })}
+                </div>
+                <div className="item-browser">
+                  <div className="item-toolbar">
+                    <div className="item-categories">
+                      {classicItemCategories.map((category) => <button key={category} className={itemCategory === category ? "active" : ""} onClick={() => setItemCategory(category)}>{category}</button>)}
+                    </div>
+                    <label><span>⌕</span><input value={itemSearch} onChange={(event) => setItemSearch(event.target.value)} placeholder="搜索装备、属性或被动" /></label>
+                  </div>
+                  <div className="item-grid">
+                    {displayedItems.map((item) => (
+                      <button key={item.id} className={items.includes(item.id) ? "item-card equipped" : "item-card"} onMouseEnter={() => setInspectedItem(item.id)} onFocus={() => setInspectedItem(item.id)} onClick={() => {
+                        setItems((current) => current.map((entry, index) => index === activeItemSlot ? item.id : entry));
+                        setInspectedItem(item.id);
+                      }}>
+                        <img src={item.icon} alt="" />
+                        <span><strong>{item.name}</strong><small>{item.price} 金币</small></span>
+                        {items.includes(item.id) && <i>已装备</i>}
                       </button>
                     ))}
                   </div>
-                ))}
-              </div>
-            </div>
+                  <aside className="item-detail">
+                    {inspectedItemData ? <>
+                      <img src={inspectedItemData.icon} alt="" />
+                      <div><span>{inspectedItemData.category}</span><h4>{inspectedItemData.name}</h4><b>{inspectedItemData.price} 金币</b><p>{inspectedItemData.description}</p></div>
+                    </> : <p>将鼠标移到装备上查看完整属性。</p>}
+                  </aside>
+                </div>
+              </section>
+            </section>
+          )}
 
-            <div className="panel compact-panel">
-              <div className="panel-title">
-                <div><span className="section-index">04</span><div><h2>召唤师技能</h2><p>选择 2 个技能</p></div></div>
+          {view === "ai" && (
+            <section className="simulator-page ai-page">
+              <div className="simulator-heading">
+                <div><span>04</span><div><h2>AI 构筑助手</h2><p>当前检查版使用已核验的 Classic 目录与本地规则生成草案；联网检索后端将在下一阶段接入。</p></div></div>
+                <div className="simulator-actions"><b className="honesty-badge">数据目录已核验 · 建议逻辑为演示</b></div>
               </div>
-              <div className="spell-grid">
-                {spells.map((spell) => (
-                  <button className={selectedSpells.includes(spell.id) ? "spell active" : "spell"} key={spell.id} onClick={() => toggleSpell(spell.id)}>
-                    <img src={spell.icon} alt="" /><span>{spell.name}</span>{selectedSpells.includes(spell.id) && <i>✓</i>}
-                  </button>
-                ))}
+              <div className="ai-composer">
+                <div className="ai-orb">✦</div>
+                <div className="ai-copy">
+                  <span>RIFT INTELLIGENCE</span>
+                  <h3>为 {selectedChampion.name} 生成经典构筑草案</h3>
+                  <p>会统一写入符文、30 点天赋、召唤师技能、18 级加点和六格 Classic 出装，不会混入正式服装备。</p>
+                  <textarea value={prompt} onChange={(event) => setPrompt(event.target.value)} aria-label="AI 构筑偏好" />
+                  <div className="prompt-chips">
+                    {["对线压制", "稳健防御", "团战优先", "新手友好"].map((chip) => <button key={chip} onClick={() => setPrompt(`${chip}；只使用 OP.GG Classic 16.15 目录。`)}>＋ {chip}</button>)}
+                  </div>
+                  <button className="generate-button" onClick={generateBuild} disabled={aiState === "working"}>{aiState === "working" ? "正在组合经典数据…" : aiState === "ready" ? "重新生成方案" : "生成完整方案"}<span>→</span></button>
+                </div>
+                <aside className={`ai-status ${aiState}`}>
+                  <h4>生成清单</h4>
+                  {["英雄与位置", "50 个符文目录", "56 节点天赋树", "16 个召唤师技能", "152 件经典装备"].map((label, index) => <div key={label}><i>{aiState === "ready" || (aiState === "working" && index < 3) ? "✓" : "○"}</i><span>{label}</span></div>)}
+                  <p>{aiState === "ready" ? "草案已写入，可到各模拟器继续手动微调。" : "生成过程只使用已载入的 Classic 数据快照。"}</p>
+                </aside>
               </div>
-            </div>
+              <div className="source-strip">
+                <a href="https://op.gg/zh-cn/lol/classic/runes" target="_blank" rel="noreferrer"><b>OP</b><span>经典符文模拟器<small>50 个符文 · 9/9/9/3</small></span></a>
+                <a href="https://op.gg/zh-cn/lol/classic/masteries" target="_blank" rel="noreferrer"><b>OP</b><span>经典天赋模拟器<small>56 个节点 · 30 点</small></span></a>
+                <a href="https://op.gg/zh-cn/lol/classic/items" target="_blank" rel="noreferrer"><b>OP</b><span>经典装备目录<small>152 件 · 6 个分类</small></span></a>
+              </div>
+            </section>
+          )}
 
-            <div className="panel compact-panel items-panel">
-              <div className="panel-title">
-                <div><span className="section-index">05</span><div><h2>核心出装</h2><p>点击槽位后从下方替换</p></div></div>
-                <span className="recommendation">成装顺序</span>
-              </div>
-              <div className="build-slots">
-                {items.map((id, index) => {
-                  const name = itemPool.find(([itemId]) => itemId === id)?.[1] || "推荐装备";
-                  return <button className={activeItemSlot === index ? "item-slot active" : "item-slot"} key={`${id}-${index}`} onClick={() => setActiveItemSlot(index)}><span>{index + 1}</span><img src={itemIcon(id)} alt="" /><strong>{name}</strong></button>;
-                })}
-              </div>
-              <div className="item-pool">
-                <span>替换为</span>
-                {itemPool.map(([id, name]) => <button key={id} title={name} onClick={() => setItems((current) => current.map((item, index) => index === activeItemSlot ? id : item))}><img src={itemIcon(id)} alt={name} /></button>)}
-              </div>
-            </div>
-          </section>
+          <footer className="site-footer">
+            <span>RIFT//LAB 是非官方玩家工具，与 Riot Games 或 OP.GG 无隶属关系。</span>
+            <span>数据快照：OP.GG Classic {CLASSIC_PATCH} · 无需账号即可使用与保存</span>
+          </footer>
         </section>
-
-        <aside className="insights">
-          <div className="insight-tabs"><button className="active">情报</button><button>历史</button></div>
-          <section className="insight-section">
-            <div className="insight-title"><span>版本状态</span><i>LIVE</i></div>
-            <div className="patch-card">
-              <span>CLASSIC</span><strong>16.15</strong><small>2026.07.23 数据快照</small>
-              <div><i /><b>核心数据无变更</b></div>
-            </div>
-          </section>
-          <section className="insight-section">
-            <div className="insight-title"><span>AI 结论</span><small>基于当前方案</small></div>
-            <div className="ai-note">
-              <span className="note-icon">✦</span>
-              <p><strong>{selectedChampion.name} · {selectedChampion.lane}方案</strong>当前符文提供主属性与双抗，适合{selectedChampion.lane}常规对局。遇到高爆发阵容时，可把 3 个进攻雕纹换成成长防御属性。</p>
-            </div>
-            <div className="metrics">
-              <div><span>对线</span><b>88</b><i style={{ width: "88%" }} /></div>
-              <div><span>团战</span><b>84</b><i style={{ width: "84%" }} /></div>
-              <div><span>容错</span><b>76</b><i style={{ width: "76%" }} /></div>
-            </div>
-          </section>
-          <section className="insight-section">
-            <div className="insight-title"><span>数据来源</span><small>可追溯</small></div>
-            <a className="source-link" href="https://op.gg/zh-cn/lol/classic" target="_blank" rel="noreferrer"><i className="op">OP</i><span><strong>OP.GG Classic</strong><small>符文 · 天赋 · 英雄数据</small></span><b>↗</b></a>
-            <a className="source-link" href="https://github.com/LeagueAkari/LeagueAkari" target="_blank" rel="noreferrer"><i className="gh">GH</i><span><strong>LeagueAkari</strong><small>交互结构参考 · MIT</small></span><b>↗</b></a>
-            <a className="source-link" href="https://ddragon.leagueoflegends.com/" target="_blank" rel="noreferrer"><i className="dd">DD</i><span><strong>Data Dragon</strong><small>英雄与装备图标</small></span><b>↗</b></a>
-          </section>
-          <section className="insight-section history">
-            <div className="insight-title"><span>上一任务成果</span><small>本地校验图</small></div>
-            <a href={`/legacy/classic-${selectedChampion.id === "LeeSin" ? "lee" : selectedChampion.id.toLowerCase()}-build.png`} target="_blank">
-              <img src={`/legacy/classic-${selectedChampion.id === "LeeSin" ? "lee" : selectedChampion.id.toLowerCase()}-build.png`} alt={`${selectedChampion.name}历史配置图`} />
-              <span>查看 1600 × 1200 完整配置卡 <b>↗</b></span>
-            </a>
-          </section>
-          <div className="disclaimer">本工具为非官方玩家项目，与 Riot Games 或 OP.GG 无隶属关系。</div>
-        </aside>
       </div>
-      {toast && <div className="toast"><span>✓</span>{toast}</div>}
+      {toast && <div className="toast" role="status" aria-live="polite"><span>✓</span>{toast}</div>}
     </main>
   );
 }

@@ -10,14 +10,18 @@ async function render() {
   }, { waitUntil() {}, passThroughOnException() {} });
 }
 
-test("server renders the RIFT LAB builder", async () => {
+test("server renders the complete Classic builder", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   const html = await response.text();
-  assert.match(html, /RIFT/);
+  assert.match(html, /RIFT\/\/LAB/);
   assert.match(html, /怀旧服构筑工作台/);
-  assert.match(html, /手动配置/);
-  assert.match(html, /符文配置/);
-  assert.match(html, /AI 生成/);
+  assert.match(html, /经典符文模拟器/);
+  assert.match(html, /天赋模拟器/);
+  assert.match(html, /60 英雄 · 16 技能/);
+  assert.match(html, /符文 50 · 天赋 56 · 召唤师技能 16 · 装备 152/);
+  assert.match(html, /AI 助手/);
+  assert.match(html, /无需账号即可使用与保存/);
+  assert.doesNotMatch(html, /14\.24\.1/);
   assert.doesNotMatch(html, /codex-preview/);
 });
