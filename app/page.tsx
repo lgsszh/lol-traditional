@@ -83,8 +83,8 @@ function masteryUnlocked(ranks: MasteryRanks, mastery: ClassicMastery) {
 }
 
 function normalizeNumber(value: number) {
-  const rounded = Math.round(value * 100) / 100;
-  return Number.isInteger(rounded) ? String(rounded) : rounded.toFixed(rounded * 10 % 1 === 0 ? 1 : 2);
+  const rounded = Math.round(value * 10) / 10;
+  return Number.isInteger(rounded) ? String(rounded) : rounded.toFixed(1);
 }
 
 function encodeBuildState(value: unknown) {
