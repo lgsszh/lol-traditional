@@ -50,6 +50,8 @@ const itemById = new Map(classicItems.map((item) => [item.id, item]));
 // OP.GG exposes two internal rune-replacement records in its item payload.
 // Keep them in the 152-entry source snapshot, but hide them from the equipment picker.
 const mainItemPool = classicItems.filter((item) => !["772139", "772140"].includes(item.id));
+const selectableItemIds = new Set(mainItemPool.map((item) => item.id));
+const spellIds = new Set(classicSpells.map((spell) => spell.id));
 
 function createRunePreset(champion: ClassicChampion): RuneCounts {
   const counts: RuneCounts = {};
@@ -93,9 +95,53 @@ function encodeBuildState(value: unknown) {
 }
 
 function decodeBuildState(value: string) {
+  if (value.length > 50_000) throw new Error("Build payload is too large");
   const binary = atob(value);
   const bytes = Uint8Array.from(binary, (character) => character.charCodeAt(0));
   return JSON.parse(new TextDecoder().decode(bytes));
+}
+
+function asRecord(value: unknown): Record<string, unknown> {
+  return value && typeof value === "object" && !Array.isArray(value)
+    ? value as Record<string, unknown>
+    : {};
+}
+
+function sanitizeRuneCounts(value: unknown): RuneCounts {
+  const source = asRecord(value);
+  const next: RuneCounts = {};
+  classicRuneGroups.forEach((group) => {
+    let remaining = group.cap;
+    group.runes.forEach((rune) => {
+      const requested = Math.max(0, Math.floor(Number(source[rune.id]) || 0));
+      next[rune.id] = Math.min(requested, remaining);
+      remaining -= next[rune.id];
+    });
+  });
+  return next;
+}
+
+function sanitizeMasteryRanks(value: unknown): MasteryRanks {
+  const source = asRecord(value);
+  const next: MasteryRanks = {};
+  let remaining = 30;
+  classicMasteries.forEach((mastery) => {
+    const requested = Math.max(0, Math.floor(Number(source[mastery.id]) || 0));
+    const allowed = masteryUnlocked(next, mastery) ? Math.min(requested, mastery.max, remaining) : 0;
+    next[mastery.id] = allowed;
+    remaining -= allowed;
+  });
+  return next;
+}
+
+function isValidSkillPlan(value: unknown): value is string[] {
+  if (!Array.isArray(value) || value.length !== 18 || value.some((skill) => !["Q", "W", "E", "R"].includes(skill))) return false;
+  const counts: Record<string, number> = { Q: 0, W: 0, E: 0, R: 0 };
+  return value.every((skill, index) => {
+    counts[skill] += 1;
+    if (skill === "R") return [6, 11, 16].includes(index + 1) && counts.R <= 3;
+    return counts[skill] <= 5 && counts[skill] <= Math.ceil((index + 1) / 2);
+  });
 }
 
 export default function Home() {
@@ -174,13 +220,23 @@ export default function Home() {
       const hash = window.location.hash.match(/build=([^&]+)/)?.[1];
       const saved = hash ? decodeBuildState(hash) : JSON.parse(localStorage.getItem("rift-lab-classic-build") || "null");
       if (saved) {
-        const champion = classicChampions.find((entry) => entry.classicId === saved.championId);
-        if (champion) setSelectedChampion(champion);
-        if (saved.runeCounts) setRuneCounts(saved.runeCounts);
-        if (saved.masteryRanks) setMasteryRanks(saved.masteryRanks);
-        if (Array.isArray(saved.spells)) setSelectedSpells(saved.spells);
-        if (Array.isArray(saved.items)) setItems(saved.items);
-        if (Array.isArray(saved.skillPlan)) setSkillPlan(saved.skillPlan);
+        const record = asRecord(saved);
+        const champion = classicChampions.find((entry) => entry.classicId === record.championId) || classicChampions[0];
+        const fallbackItems = classicBuildPresets[champion.archetype];
+        const safeItems = Array.isArray(record.items)
+          ? record.items.filter((id): id is string => typeof id === "string" && selectableItemIds.has(id)).slice(0, 6)
+          : [];
+        while (safeItems.length < 6) safeItems.push(fallbackItems[safeItems.length]);
+
+        setSelectedChampion(champion);
+        setRuneCounts(record.runeCounts ? sanitizeRuneCounts(record.runeCounts) : createRunePreset(champion));
+        setMasteryRanks(record.masteryRanks ? sanitizeMasteryRanks(record.masteryRanks) : { ...initialMasteryRanks });
+        setSelectedSpells(Array.isArray(record.spells)
+          ? [...new Set(record.spells.filter((id): id is string => typeof id === "string" && spellIds.has(id)))].slice(0, 2)
+          : defaultSpellsFor(champion));
+        setItems(safeItems);
+        setInspectedItem(safeItems[0]);
+        setSkillPlan(isValidSkillPlan(record.skillPlan) ? record.skillPlan : skillPlanFor(champion.spellOrder));
       }
     } catch {
       // Invalid local/share data is ignored so the simulator always remains usable.
@@ -210,6 +266,19 @@ export default function Home() {
     setSkillPlan(skillPlanFor(champion.spellOrder));
     setAiState("idle");
     showToast(`已切换为 ${champion.name} 的经典构筑`);
+  };
+
+  const restoreRecommended = () => {
+    const recommendedItems = classicBuildPresets[selectedChampion.archetype];
+    setRuneCounts(createRunePreset(selectedChampion));
+    setMasteryRanks({ ...initialMasteryRanks });
+    setSelectedSpells(defaultSpellsFor(selectedChampion));
+    setItems(recommendedItems);
+    setInspectedItem(recommendedItems[0]);
+    setSkillPlan(skillPlanFor(selectedChampion.spellOrder));
+    setActiveItemSlot(0);
+    setAiState("idle");
+    showToast("已恢复当前英雄的完整推荐方案");
   };
 
   const adjustRune = (group: ClassicRuneGroup, runeId: string, delta: number) => {
@@ -314,7 +383,10 @@ export default function Home() {
       }));
       setMasteryRanks({ ...(defensive ? masteryPresets["防御 21 / 通用 9"] : initialMasteryRanks) });
       setSelectedSpells(defaultSpellsFor(selectedChampion));
-      setItems(classicBuildPresets[selectedChampion.archetype]);
+      const generatedItems = classicBuildPresets[defensive ? "tank" : selectedChampion.archetype];
+      setItems(generatedItems);
+      setInspectedItem(generatedItems[0]);
+      setSkillPlan(skillPlanFor(selectedChampion.spellOrder));
       setAiState("ready");
       showToast("经典数据构筑草案已写入当前方案");
     }, 1100);
@@ -380,7 +452,7 @@ export default function Home() {
               <p>完整经典目录已载入：符文 50 · 天赋 56 · 召唤师技能 16 · 装备 152</p>
             </div>
             <div className="hero-actions">
-              <button onClick={() => { setRuneCounts(createRunePreset(selectedChampion)); setMasteryRanks({ ...initialMasteryRanks }); showToast("已恢复当前英雄默认经典方案"); }}>恢复推荐</button>
+              <button onClick={restoreRecommended}>恢复推荐</button>
               <button className="primary" onClick={shareBuild}>复制方案链接</button>
             </div>
           </section>
@@ -504,7 +576,7 @@ export default function Home() {
                         const unlocked = masteryUnlocked(masteryRanks, mastery);
                         return (
                           <article
-                            className={`mastery-node ${rank ? "active" : ""} ${unlocked ? "" : "locked"}`}
+                            className={`mastery-node tier-${mastery.tier} column-${mastery.column} ${rank ? "active" : ""} ${unlocked ? "" : "locked"}`}
                             key={mastery.id}
                             style={{ gridColumn: mastery.column + 1, gridRow: mastery.tier }}
                             title={`${mastery.name}：${mastery.description}`}

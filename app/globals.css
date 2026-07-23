@@ -478,8 +478,8 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, a:focus-visib
 
 .mastery-presets { max-width: 660px; }
 .mastery-workspace { display: grid; grid-template-columns: repeat(3, minmax(292px, 1fr)); gap: 14px; }
-.mastery-tree { min-width: 0; border: 1px solid var(--line); border-radius: 7px; overflow: hidden; background: #10161e; }
-.mastery-tree > header { height: 48px; display: flex; align-items: center; justify-content: space-between; padding: 0 15px; border-bottom: 1px solid rgba(255,255,255,.14); background: rgba(6,9,13,.82); }
+.mastery-tree { min-width: 0; border: 1px solid var(--line); border-radius: 7px; overflow: visible; background: #10161e; }
+.mastery-tree > header { height: 48px; display: flex; align-items: center; justify-content: space-between; padding: 0 15px; border-bottom: 1px solid rgba(255,255,255,.14); border-radius: 7px 7px 0 0; background: rgba(6,9,13,.82); }
 .mastery-tree > header span { font-size: 16px; font-weight: 900; }
 .mastery-tree > header b { font-size: 13px; }
 .mastery-进攻 > header span, .mastery-进攻 > header b { color: #ed8371; }
@@ -495,6 +495,7 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, a:focus-visib
   align-items: center;
   background-size: cover;
   background-position: center;
+  border-radius: 0 0 7px 7px;
   position: relative;
 }
 .tier-rule { grid-column: 1; align-self: start; color: rgba(255,255,255,.55); font: 11px/1 Georgia, serif; padding-top: 3px; }
@@ -543,6 +544,10 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, a:focus-visib
   pointer-events: none;
 }
 .mastery-node:hover .mastery-tooltip, .mastery-node:focus-within .mastery-tooltip { display: flex; flex-direction: column; }
+.mastery-node.tier-1 .mastery-tooltip,
+.mastery-node.tier-2 .mastery-tooltip { top: 82px; bottom: auto; }
+.mastery-node.column-1 .mastery-tooltip { left: 0; transform: translateY(4px); }
+.mastery-node.column-4 .mastery-tooltip { right: 0; left: auto; transform: translateY(4px); }
 .mastery-tooltip strong { color: #f1d58d; font-size: 13px; }
 .mastery-tooltip small { color: #a0acb9; font-size: 12px; line-height: 1.55; margin-top: 3px; }
 .mastery-summary {
@@ -749,7 +754,7 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, a:focus-visib
   .mastery-canvas { grid-template-columns: 30px repeat(4, minmax(45px, 64px)); }
 }
 
-@media (max-width: 1180px) {
+@media (max-width: 1280px) {
   .topbar { grid-template-columns: 230px 1fr auto; }
   .workspace { grid-template-columns: 230px minmax(0, 1fr); }
   .sync-status > span:nth-child(2), .sync-status .live-dot { display: none; }
