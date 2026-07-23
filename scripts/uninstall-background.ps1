@@ -1,16 +1,20 @@
 $ErrorActionPreference = "Stop"
 
-$taskName = "RIFT-LAB Local Server"
-$existingTask = Get-ScheduledTask -TaskName $taskName -ErrorAction SilentlyContinue
+$taskNames = @(
+  "RIFT-LAB Local Server Watchdog",
+  "RIFT-LAB Local Server"
+)
 
-if ($null -eq $existingTask) {
-  Write-Host "The RIFT//LAB background task is not installed."
-  exit 0
+foreach ($taskName in $taskNames) {
+  $existingTask = Get-ScheduledTask -TaskName $taskName -ErrorAction SilentlyContinue
+  if ($null -eq $existingTask) {
+    continue
+  }
+
+  if ($existingTask.State -eq "Running") {
+    Stop-ScheduledTask -TaskName $taskName
+  }
+
+  Unregister-ScheduledTask -TaskName $taskName -Confirm:$false
+  Write-Host "Removed background task: $taskName"
 }
-
-if ($existingTask.State -eq "Running") {
-  Stop-ScheduledTask -TaskName $taskName
-}
-
-Unregister-ScheduledTask -TaskName $taskName -Confirm:$false
-Write-Host "Removed background task: $taskName"
