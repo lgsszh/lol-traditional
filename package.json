@@ -8,10 +8,11 @@
   "scripts": {
     "dev": "vinext dev",
     "build": "vinext build",
+    "build:pages": "next build",
     "postinstall": "node scripts/fix-vinext-windows-static.mjs",
     "prestart": "node scripts/fix-vinext-windows-static.mjs",
     "start": "vinext start",
-    "test": "npm run build && node --test tests/rendered-html.test.mjs",
+    "test": "node --test tests/champion-search.test.mjs && npm run build && node --test tests/rendered-html.test.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "drizzle-kit generate"
   },

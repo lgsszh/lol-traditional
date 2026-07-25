@@ -1,98 +1,62 @@
-# vinext-starter
+# RIFT//LAB 怀旧服构筑工作台
 
-A clean full-stack starter running on
-[vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and
-Drizzle support.
+面向英雄联盟怀旧服的网页构筑工具，包含 60 位经典英雄、50 个符文、
+56 个天赋、16 个召唤师技能和 152 件经典装备。无需登录，打开公开网址
+即可使用。
 
-## Prerequisites
+## 直接使用
 
-- Node.js `>=22.13.0`
+公开网站：
 
-## Quick Start
+<https://lgsszh.github.io/rift-lab-classic/>
+
+普通用户不需要安装 Node.js，也不需要打开命令行窗口。首次进入网站会
+显示新手指引；之后可点击右上角“使用帮助”重新查看。
+
+## 主要功能
+
+- 按位置、中文名、称号、英文名和职业搜索经典英雄；
+- 手动配置完整的 30 枚经典符文，并实时计算属性总计；
+- 分配 30 点经典天赋；
+- 编辑 18 级技能加点、召唤师技能和六格出装；
+- 在浏览器本地保存构筑并生成可分享链接；
+- 使用内置规则生成 AI 构筑草案。
+
+## 本地开发
+
+需要 Node.js `>=22.13.0`。
 
 ```bash
 npm install
 npm run dev
-npm run build
 ```
 
-This starter does not use `wrangler.jsonc`.
+开发服务器只应在开发期间运行。请勿将本地服务器设置成开机启动或每
+分钟自动重启。
 
-## Included Shape
+常用命令：
 
-- edit site code under `app/`
-- `.openai/hosting.json` declares optional Sites D1 and R2 bindings
-- `vite.config.ts` simulates declared bindings for local development
-- `db/schema.ts` starts intentionally empty
-- `examples/d1/` contains an optional D1 example surface
-- `drizzle.config.ts` supports local migration generation when needed
+- `npm test`：运行搜索筛选测试、Vinext 构建和服务端渲染测试；
+- `npm run lint`：运行 ESLint；
+- `npm run build`：生成 Vinext 生产构建；
+- `npm run build:pages`：生成 GitHub Pages 静态站点（由工作流设置环境变量）。
 
-## Workspace Auth Headers
+## 清理旧版后台任务
 
-OpenAI workspace sites can read the current user's email from
-`oai-authenticated-user-email`.
+早期本地版本曾安装 `RIFT-LAB Local Server` 和
+`RIFT-LAB Local Server Watchdog` 两个 Windows 计划任务，可能造成
+开机或每分钟弹出黑色命令行窗口。
 
-SIWC-authenticated workspace sites may also receive
-`oai-authenticated-user-full-name` when the user's SIWC profile has a non-empty
-`name` claim. The full-name value is percent-encoded UTF-8 and is accompanied by
-`oai-authenticated-user-full-name-encoding: percent-encoded-utf-8`.
+如仍受影响，以管理员身份运行：
 
-Treat the full name as optional and fall back to email when it is absent:
-
-```tsx
-import { headers } from "next/headers";
-
-export default async function Home() {
-  const requestHeaders = await headers();
-  const email = requestHeaders.get("oai-authenticated-user-email");
-  const encodedFullName = requestHeaders.get("oai-authenticated-user-full-name");
-  const fullName =
-    encodedFullName &&
-    requestHeaders.get("oai-authenticated-user-full-name-encoding") ===
-      "percent-encoded-utf-8"
-      ? decodeURIComponent(encodedFullName)
-      : null;
-
-  const displayName = fullName ?? email;
-  // ...
-}
+```powershell
+.\uninstall-background.cmd
 ```
 
-## Optional Dispatch-Owned ChatGPT Sign-In
+清理后普通用户应始终使用上面的公开网址。
 
-Import the ready-to-use helpers from `app/chatgpt-auth.ts` when the site needs
-optional or required ChatGPT sign-in:
+## 数据与免责声明
 
-- Use `getChatGPTUser()` for optional signed-in UI.
-- Use `requireChatGPTUser(returnTo)` for server-rendered pages that should send
-  anonymous visitors through Sign in with ChatGPT.
-- Use `chatGPTSignInPath(returnTo)` and `chatGPTSignOutPath(returnTo)` for
-  browser links or actions.
-- Pass a same-origin relative `returnTo` path for the destination after sign-in
-  or sign-out. The helper validates and safely encodes it.
-- Mark protected pages with `export const dynamic = "force-dynamic"` because
-  they depend on per-request identity headers.
-
-Dispatch owns `/signin-with-chatgpt`, `/signout-with-chatgpt`, `/callback`, the
-OAuth cookies, and identity header injection. Do not implement app routes for
-those reserved paths. Routes that do not import and call the helper remain
-anonymous-compatible.
-
-SIWC establishes identity only; it does not prove workspace membership. Use the
-Sites hosting platform's access policy controls for workspace-wide restrictions,
-or enforce explicit server-side membership or allowlist checks.
-
-Use SIWC for account pages, user-specific dashboards, saved records, and write
-actions tied to the current ChatGPT user. Leave public content anonymous.
-
-## Useful Commands
-
-- `npm run dev`: start local development
-- `npm run build`: verify the vinext build output
-- `npm test`: build the starter and verify its rendered loading skeleton
-- `npm run db:generate`: generate Drizzle migrations after schema changes
-
-## Learn More
-
-- [vinext Documentation](https://github.com/cloudflare/vinext)
-- [Drizzle D1 Guide](https://orm.drizzle.team/docs/get-started/d1-new)
+当前目录以 OP.GG Classic 16.15 快照为基础。RIFT//LAB 是非官方工具，
+与 Riot Games、OP.GG 无隶属或授权关系；游戏上线后的最终数值应以正式
+客户端和官方更新为准。

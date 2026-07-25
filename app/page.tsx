@@ -1,6 +1,13 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import HelpDrawer from "./components/HelpDrawer";
+import OnboardingGuide from "./components/OnboardingGuide";
+import {
+  championMatchesFilters,
+  laneFilterOptions,
+  type LaneFilterId,
+} from "./champion-search";
 import {
   CLASSIC_PATCH,
   championIcon,
@@ -27,6 +34,8 @@ import { classicItems } from "./classic-items.generated";
 type WorkbenchView = "runes" | "masteries" | "build" | "ai";
 type RuneCounts = Record<string, number>;
 type MasteryRanks = Record<string, number>;
+
+const GUIDE_STORAGE_KEY = "rift-lab-classic-onboarding-v1";
 
 const runeSlotPositions = [
   [29, 408, 52, 52], [102, 408, 52, 52], [175, 408, 52, 52],
@@ -148,7 +157,7 @@ export default function Home() {
   const [view, setView] = useState<WorkbenchView>("runes");
   const [selectedChampion, setSelectedChampion] = useState(classicChampions[0]);
   const [search, setSearch] = useState("");
-  const [laneFilter, setLaneFilter] = useState("全部");
+  const [laneFilter, setLaneFilter] = useState<LaneFilterId>("全部");
   const [runeCounts, setRuneCounts] = useState<RuneCounts>(() => createRunePreset(classicChampions[0]));
   const [activeRuneGroup, setActiveRuneGroup] = useState<ClassicRuneGroup["id"]>("mark");
   const [masteryRanks, setMasteryRanks] = useState<MasteryRanks>({ ...initialMasteryRanks });
@@ -163,6 +172,11 @@ export default function Home() {
   const [aiState, setAiState] = useState<"idle" | "working" | "ready">("idle");
   const [toast, setToast] = useState("");
   const [hydrated, setHydrated] = useState(false);
+  const [guideOpen, setGuideOpen] = useState(false);
+  const [guideStep, setGuideStep] = useState(0);
+  const [helpOpen, setHelpOpen] = useState(false);
+  const [sharedBuildLoaded, setSharedBuildLoaded] = useState(false);
+  const championSearchRef = useRef<HTMLInputElement>(null);
 
   const totalMasteries = useMemo(
     () => Object.values(masteryRanks).reduce((sum, points) => sum + points, 0),
@@ -193,11 +207,10 @@ export default function Home() {
     return assignments;
   }, [runeCounts]);
 
-  const filteredChampions = useMemo(() => classicChampions.filter((champion) => {
-    const laneMatches = laneFilter === "全部" || champion.lane.startsWith(laneFilter);
-    const query = search.trim().toLowerCase();
-    return laneMatches && (!query || `${champion.name}${champion.title}${champion.key}${champion.role}`.toLowerCase().includes(query));
-  }), [laneFilter, search]);
+  const filteredChampions = useMemo(
+    () => classicChampions.filter((champion) => championMatchesFilters(champion, laneFilter, search)),
+    [laneFilter, search],
+  );
 
   const displayedItems = useMemo(() => mainItemPool.filter((item) => {
     const query = itemSearch.trim();
@@ -218,6 +231,7 @@ export default function Home() {
   useEffect(() => {
     try {
       const hash = window.location.hash.match(/build=([^&]+)/)?.[1];
+      const hasSharedBuild = Boolean(hash);
       const saved = hash ? decodeBuildState(hash) : JSON.parse(localStorage.getItem("rift-lab-classic-build") || "null");
       if (saved) {
         const record = asRecord(saved);
@@ -228,6 +242,8 @@ export default function Home() {
           : [];
         while (safeItems.length < 6) safeItems.push(fallbackItems[safeItems.length]);
 
+        // Restoring browser-persisted state is intentionally performed after hydration.
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setSelectedChampion(champion);
         setRuneCounts(record.runeCounts ? sanitizeRuneCounts(record.runeCounts) : createRunePreset(champion));
         setMasteryRanks(record.masteryRanks ? sanitizeMasteryRanks(record.masteryRanks) : { ...initialMasteryRanks });
@@ -238,6 +254,8 @@ export default function Home() {
         setInspectedItem(safeItems[0]);
         setSkillPlan(isValidSkillPlan(record.skillPlan) ? record.skillPlan : skillPlanFor(champion.spellOrder));
       }
+      setSharedBuildLoaded(hasSharedBuild);
+      if (!hasSharedBuild && !localStorage.getItem(GUIDE_STORAGE_KEY)) setGuideOpen(true);
     } catch {
       // Invalid local/share data is ignored so the simulator always remains usable.
     }
@@ -255,6 +273,64 @@ export default function Home() {
       skillPlan,
     }));
   }, [hydrated, items, masteryRanks, runeCounts, selectedChampion.classicId, selectedSpells, skillPlan]);
+
+  useEffect(() => {
+    const handleShortcut = (event: KeyboardEvent) => {
+      const target = event.target as HTMLElement | null;
+      const isEditing = target?.matches("input, textarea, select, [contenteditable='true']");
+      if (isEditing) return;
+
+      if (event.key === "?") {
+        event.preventDefault();
+        setHelpOpen(true);
+        return;
+      }
+      if (event.key === "/") {
+        event.preventDefault();
+        championSearchRef.current?.focus();
+        return;
+      }
+      if (event.altKey && ["1", "2", "3", "4"].includes(event.key)) {
+        event.preventDefault();
+        const views: WorkbenchView[] = ["runes", "masteries", "build", "ai"];
+        setView(views[Number(event.key) - 1]);
+      }
+    };
+    window.addEventListener("keydown", handleShortcut);
+    return () => window.removeEventListener("keydown", handleShortcut);
+  }, []);
+
+  const saveGuideState = useCallback((completed: boolean) => {
+    try {
+      localStorage.setItem(GUIDE_STORAGE_KEY, JSON.stringify({
+        version: 1,
+        completed,
+        dismissed: !completed,
+        lastStep: guideStep,
+        updatedAt: new Date().toISOString(),
+      }));
+    } catch {
+      // Private browsing may block localStorage; the guide still remains usable.
+    }
+  }, [guideStep]);
+
+  const dismissGuide = useCallback(() => {
+    saveGuideState(false);
+    setGuideOpen(false);
+  }, [saveGuideState]);
+
+  const completeGuide = useCallback(() => {
+    saveGuideState(true);
+    setGuideOpen(false);
+    setGuideStep(0);
+    setView("runes");
+  }, [saveGuideState]);
+
+  const replayGuide = useCallback(() => {
+    setHelpOpen(false);
+    setGuideStep(0);
+    setGuideOpen(true);
+  }, []);
 
   const chooseChampion = (champion: ClassicChampion) => {
     setSelectedChampion(champion);
@@ -394,12 +470,13 @@ export default function Home() {
 
   return (
     <main className="app-shell" style={{ "--champion-accent": selectedChampion.accent } as React.CSSProperties}>
+      <a className="skip-link" href="#builder-content">跳到构筑内容</a>
       <header className="topbar">
         <button className="brand" onClick={() => setView("runes")} aria-label="返回符文模拟器">
           <span className="brand-mark">R</span>
-          <span><strong>RIFT<span>//</span>LAB</strong><small>怀旧服构筑工作台</small></span>
+          <span><strong>RIFT<span>{"//"}</span>LAB</strong><small>怀旧服构筑工作台</small></span>
         </button>
-        <nav className="main-nav" aria-label="构筑功能">
+        <nav className="main-nav" aria-label="构筑功能" data-guide="module-nav">
           {([
             ["runes", "符文模拟器", "50"],
             ["masteries", "天赋模拟器", "56"],
@@ -414,20 +491,23 @@ export default function Home() {
         <div className="sync-status">
           <span className="live-dot" />
           <span><strong>Classic {CLASSIC_PATCH}</strong><small>OP.GG · 2026.07.24 快照</small></span>
-          <button onClick={shareBuild}>分享</button>
+          <button className="help-trigger" onClick={() => setHelpOpen(true)} aria-label="打开使用帮助">
+            <span aria-hidden="true">?</span><span className="help-label">使用帮助</span>
+          </button>
+          <button onClick={shareBuild} data-guide="share">分享</button>
         </div>
       </header>
 
       <div className="workspace">
-        <aside className="champion-rail">
+        <aside className="champion-rail" data-guide="champion-picker">
           <div className="rail-heading"><span>经典英雄</span><b>{classicChampions.length} / 60</b></div>
           <label className="champion-search">
             <span aria-hidden="true">⌕</span>
-            <input value={search} onChange={(event) => setSearch(event.target.value)} placeholder="搜索英雄、称号或定位" />
+            <input ref={championSearchRef} value={search} onChange={(event) => setSearch(event.target.value)} placeholder="搜索英雄、称号或定位" />
           </label>
           <div className="role-filters" aria-label="位置筛选">
-            {["全部", "上", "野", "中", "下", "辅"].map((lane) => (
-              <button key={lane} className={laneFilter === lane ? "active" : ""} onClick={() => setLaneFilter(lane)} aria-pressed={laneFilter === lane}>{lane}</button>
+            {laneFilterOptions.map(({ id }) => (
+              <button key={id} className={laneFilter === id ? "active" : ""} onClick={() => setLaneFilter(id)} aria-pressed={laneFilter === id}>{id}</button>
             ))}
           </div>
           <div className="champion-list">
@@ -438,11 +518,25 @@ export default function Home() {
                 <i>{champion.classicId === selectedChampion.classicId ? "●" : "›"}</i>
               </button>
             ))}
+            {filteredChampions.length === 0 && (
+              <div className="champion-empty" role="status">
+                <strong>没有找到符合条件的英雄</strong>
+                <small>可尝试英雄名、称号、英文名或“打野／中路”等定位。</small>
+                <button onClick={() => { setSearch(""); setLaneFilter("全部"); }}>清除筛选</button>
+              </div>
+            )}
           </div>
           <div className="rail-footnote"><span>目录覆盖</span><strong>60 英雄 · 16 技能</strong><small>所有选择项统一来自 OP.GG Classic 16.15。</small></div>
         </aside>
 
-        <section className="builder">
+        <section className="builder" id="builder-content" tabIndex={-1}>
+          {sharedBuildLoaded && (
+            <div className="shared-build-notice" role="status">
+              <span aria-hidden="true">✓</span>
+              <p><strong>已载入分享方案</strong><small>你可以继续修改；需要帮助时请打开右上角“使用帮助”。</small></p>
+              <button onClick={() => setHelpOpen(true)}>查看使用方法</button>
+            </div>
+          )}
           <section className="champion-hero">
             <img src={championSplash(selectedChampion)} alt={`${selectedChampion.name}原画`} />
             <div className="hero-shade" />
@@ -457,7 +551,7 @@ export default function Home() {
             </div>
           </section>
 
-          <div className="mobile-view-tabs">
+          <div className="mobile-view-tabs" data-guide="module-nav">
             {([
               ["runes", "符文"],
               ["masteries", "天赋"],
@@ -478,7 +572,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="rune-workspace">
+              <div className="rune-workspace" data-guide="rune-editor">
                 <div className="rune-board-wrap">
                   <div className="rune-board" style={{ backgroundImage: `url(${runeBoardBackground})` }}>
                     {runeSlotPositions.map(([left, top, width, height], index) => {
@@ -565,7 +659,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="mastery-workspace">
+              <div className="mastery-workspace" data-guide="mastery-editor">
                 {(["进攻", "防御", "通用"] as const).map((tree) => (
                   <section className={`mastery-tree mastery-${tree}`} key={tree}>
                     <header><span>{tree}</span><b>{treeTotal(masteryRanks, tree)} 点</b></header>
@@ -607,7 +701,7 @@ export default function Home() {
           )}
 
           {view === "build" && (
-            <section className="simulator-page build-page">
+            <section className="simulator-page build-page" data-guide="build-editor">
               <div className="simulator-heading">
                 <div><span>03</span><div><h2>技能、召唤师技能与经典出装</h2><p>完整 18 级技能表、16 个召唤师技能和 152 件 Classic 装备。</p></div></div>
                 <div className="simulator-actions"><b>{selectedChampion.name} · 主 {selectedChampion.spellOrder[0]} 副 {selectedChampion.spellOrder[1]}</b></div>
@@ -685,7 +779,7 @@ export default function Home() {
           )}
 
           {view === "ai" && (
-            <section className="simulator-page ai-page">
+            <section className="simulator-page ai-page" data-guide="ai-assistant">
               <div className="simulator-heading">
                 <div><span>04</span><div><h2>AI 构筑助手</h2><p>当前检查版使用已核验的 Classic 目录与本地规则生成草案；联网检索后端将在下一阶段接入。</p></div></div>
                 <div className="simulator-actions"><b className="honesty-badge">数据目录已核验 · 建议逻辑为演示</b></div>
@@ -722,6 +816,19 @@ export default function Home() {
           </footer>
         </section>
       </div>
+      <OnboardingGuide
+        open={guideOpen}
+        step={guideStep}
+        onStepChange={setGuideStep}
+        onViewChange={setView}
+        onDismiss={dismissGuide}
+        onComplete={completeGuide}
+      />
+      <HelpDrawer
+        open={helpOpen}
+        onClose={() => setHelpOpen(false)}
+        onReplay={replayGuide}
+      />
       {toast && <div className="toast" role="status" aria-live="polite"><span>✓</span>{toast}</div>}
     </main>
   );

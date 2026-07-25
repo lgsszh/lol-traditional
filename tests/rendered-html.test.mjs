@@ -21,6 +21,10 @@ test("server renders the complete Classic builder", async () => {
   assert.match(html, /60 英雄 · 16 技能/);
   assert.match(html, /符文 50 · 天赋 56 · 召唤师技能 16 · 装备 152/);
   assert.match(html, /AI 助手/);
+  assert.match(html, /使用帮助/);
+  assert.match(html, /data-guide="champion-picker"/);
+  assert.match(html, /data-guide="rune-editor"/);
+  assert.match(html, /aria-label="打开使用帮助"/);
   assert.match(html, /无需账号即可使用与保存/);
   assert.doesNotMatch(html, /空白符文/);
   assert.doesNotMatch(html, /14\.24\.1/);
