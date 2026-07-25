@@ -13,6 +13,11 @@ type Props = {
 
 const valueLabel = (value: string | null, fallback: string) => value || fallback;
 
+function highlightedNumbers(value: string) {
+  return value.split(/((?:\d+(?:\.\d+)?)(?:\s*\/\s*\d+(?:\.\d+)?)*%?)/g).map((part, index) =>
+    /^\d/.test(part) ? <strong key={`${part}-${index}`}>{part}</strong> : part);
+}
+
 export default function ChampionAbilityPanel({ skillSet, activeKey, onSelect }: Props) {
   const ability = skillSet.abilities.find((entry) => entry.key === activeKey) || skillSet.abilities[0];
 
@@ -48,12 +53,27 @@ export default function ChampionAbilityPanel({ skillSet, activeKey, onSelect }: 
           <div><dt>技能消耗</dt><dd>{valueLabel(ability.cost, "无消耗")}</dd></div>
           <div><dt>施法距离</dt><dd>{valueLabel(ability.range, "自身／被动")}</dd></div>
         </dl>
+        {ability.numericDetail && (
+          <section className="ability-numeric">
+            <header>
+              <div><span>完整技能数值</span><b>伤害 · 护盾 · 治疗 · 属性加成</b></div>
+              <small>历史公式 {ability.numericVersion}</small>
+            </header>
+            {ability.numericDetail.split("\n").filter(Boolean).map((line, index) => (
+              <p key={`${line}-${index}`}>{highlightedNumbers(line)}</p>
+            ))}
+          </section>
+        )}
         {(ability.cooldown?.includes("/") || ability.cost?.includes("/")) && (
           <div className="ability-rank-note">
             <b>等级数值说明</b>
-            <span>斜杠分隔的数值按技能等级由低到高排列，数据保持 OP.GG Classic 16.15 原始顺序。</span>
+            <span>斜杠分隔的数值按技能等级由低到高排列；说明、冷却、消耗与距离保持 OP.GG Classic 16.15 原始顺序。</span>
           </div>
         )}
+        <div className="ability-source-note">
+          <span>说明、冷却、消耗、距离与图标：OP.GG Classic 16.15</span>
+          {ability.numericVersion && <span>完整技能公式：Riot Data Dragon {ability.numericVersion}</span>}
+        </div>
       </article>
     </div>
   );

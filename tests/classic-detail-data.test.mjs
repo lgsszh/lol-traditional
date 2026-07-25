@@ -13,12 +13,65 @@ test("60 位经典英雄均包含被动与 Q/W/E/R 详情", () => {
   for (const champion of classicChampions) {
     const skillSet = classicChampionSkills.find((entry) => entry.championId === champion.classicId);
     assert.ok(skillSet, `${champion.name}缺少技能资料`);
+    assert.match(skillSet.portrait, /\/classic\//);
+    assert.match(skillSet.classicSplash, /\/classic\//);
+    assert.ok(skillSet.classicSplashName.trim(), `${champion.name}缺少经典原画名称`);
     assert.deepEqual(skillSet.abilities.map((ability) => ability.key), ["P", "Q", "W", "E", "R"]);
     for (const ability of skillSet.abilities) {
       assert.ok(ability.name.trim(), `${champion.name} ${ability.key} 缺少名称`);
       assert.ok(ability.description.trim(), `${champion.name} ${ability.key} 缺少说明`);
-      assert.match(ability.icon, /^https:\/\/opgg-static\.akamaized\.net\//);
+      assert.match(ability.icon, /^https:\/\/opgg-static\.akamaized\.net\/.*\/classic\//);
+      if (ability.key !== "P") {
+        assert.ok(ability.numericDetail?.trim(), `${champion.name} ${ability.key} 缺少完整技能数值`);
+        assert.equal(ability.numericVersion, "3.15.5");
+        assert.doesNotMatch(ability.numericDetail, /{{|}}|@[a-z0-9_.]+/i);
+      }
     }
+  }
+});
+
+test("经典装备分类与 OP.GG 目录数量一致", () => {
+  const expectedCounts = {
+    出门装备: 5,
+    消耗品: 14,
+    基础装备: 21,
+    鞋子: 8,
+    史诗装备: 33,
+    传说装备: 71,
+  };
+  assert.equal(classicItems.length, 152);
+  for (const [category, expected] of Object.entries(expectedCounts)) {
+    assert.equal(
+      classicItems.filter((item) => item.category === category).length,
+      expected,
+      `${category}数量应与 OP.GG 一致`,
+    );
+  }
+});
+
+test("经典装备属性筛选数量与同步快照一致", () => {
+  const expectedCounts = {
+    damage: 41,
+    "critical-strike": 13,
+    "attack-speed": 21,
+    "on-hit": 23,
+    "armor-penetration": 4,
+    "spell-damage": 42,
+    mana: 36,
+    "magic-penetration": 5,
+    health: 51,
+    armor: 23,
+    "magic-resistance": 21,
+    "cooldown-reduction": 25,
+    movement: 21,
+    "life-steal": 14,
+  };
+  for (const [tag, expected] of Object.entries(expectedCounts)) {
+    assert.equal(
+      classicItems.filter((item) => item.tags.includes(tag)).length,
+      expected,
+      `${tag}筛选数量应与同步快照一致`,
+    );
   }
 });
 
@@ -58,7 +111,10 @@ test("技能与出装页面接入详情面板和显式装备操作", async () =>
 
   assert.match(page, /<ChampionAbilityPanel/);
   assert.match(page, /<ItemDetailPanel/);
+  assert.match(page, /itemStatFilter/);
+  assert.match(page, /itemCategoryCounts/);
   assert.match(abilityPanel, /查看 OP\.GG 源页/);
-  assert.match(itemPanel, /合成路径/);
+  assert.match(abilityPanel, /完整技能数值/);
+  assert.match(itemPanel, /游戏式合成路径/);
   assert.match(itemPanel, /装备到第/);
 });

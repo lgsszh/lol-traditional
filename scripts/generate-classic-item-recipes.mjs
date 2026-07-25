@@ -1,5 +1,5 @@
-import { writeFile } from "node:fs/promises";
 import { classicItems } from "../app/classic-items.generated.ts";
+import { fetchJson, writeOrCheck } from "./classic-generator-utils.mjs";
 
 const outputPath = new URL("../app/classic-item-recipes.generated.ts", import.meta.url);
 const versions = [
@@ -18,12 +18,10 @@ const currentCandidates = (item) => [
 ].filter(Boolean);
 
 const catalogs = await Promise.all(versions.map(async (version) => {
-  const response = await fetch(
+  const payload = await fetchJson(
     `https://ddragon.leagueoflegends.com/cdn/${version}/data/zh_CN/item.json`,
-    { signal: AbortSignal.timeout(20_000) },
+    `Riot Data Dragon items ${version}`,
   );
-  if (!response.ok) throw new Error(`${version}: HTTP ${response.status}`);
-  const payload = await response.json();
   return { version, data: payload.data };
 }));
 
@@ -148,6 +146,6 @@ export type ClassicItemRecipe = {
 export const classicItemRecipes: Record<string, ClassicItemRecipe> = ${JSON.stringify(recipes, null, 2)};
 `;
 
-await writeFile(outputPath, output, "utf8");
+await writeOrCheck(outputPath, output, "经典装备合成配方");
 const craftable = Object.values(recipes).filter((recipe) => recipe.from.length).length;
-console.log(`Generated ${classicItems.length} item recipe records (${craftable} craftable).`);
+console.log(`${process.argv.includes("--check") ? "Checked" : "Generated"} ${classicItems.length} item recipe records (${craftable} craftable).`);

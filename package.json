@@ -9,6 +9,8 @@
     "dev": "vinext dev",
     "build": "vinext build",
     "build:pages": "next build",
+    "data:update": "node scripts/sync-classic-data.mjs",
+    "data:check": "node scripts/sync-classic-data.mjs --check",
     "postinstall": "node scripts/fix-vinext-windows-static.mjs",
     "prestart": "node scripts/fix-vinext-windows-static.mjs",
     "start": "vinext start",

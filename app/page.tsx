@@ -13,7 +13,6 @@ import {
 import {
   CLASSIC_PATCH,
   championIcon,
-  championSplash,
   classicBuildPresets,
   classicChampions,
   classicItemCategories,
@@ -63,12 +62,37 @@ const percentStats = new Set([
 ]);
 
 const itemById = new Map(classicItems.map((item) => [item.id, item]));
-// OP.GG exposes two internal rune-replacement records in its item payload.
-// Keep them in the 152-entry source snapshot, but hide them from the equipment picker.
-const mainItemPool = classicItems.filter((item) => !["772139", "772140"].includes(item.id));
+const mainItemPool = classicItems;
 const craftableItemCount = Object.values(classicItemRecipes).filter((recipe) => recipe.from.length > 0).length;
 const selectableItemIds = new Set(mainItemPool.map((item) => item.id));
 const spellIds = new Set(classicSpells.map((spell) => spell.id));
+const itemStatFilters = [
+  ["all", "全部属性"],
+  ["damage", "攻击力"],
+  ["critical-strike", "暴击"],
+  ["attack-speed", "攻击速度"],
+  ["on-hit", "攻击特效"],
+  ["armor-penetration", "护甲穿透"],
+  ["spell-damage", "法术强度"],
+  ["mana", "法力"],
+  ["magic-penetration", "法术穿透"],
+  ["health", "生命值"],
+  ["armor", "护甲"],
+  ["magic-resistance", "魔法抗性"],
+  ["cooldown-reduction", "冷却缩减"],
+  ["movement", "移动速度"],
+  ["life-steal", "生命偷取"],
+] as const;
+type ItemStatFilterId = (typeof itemStatFilters)[number][0];
+const itemCategoryCounts = Object.fromEntries([
+  ["全部", mainItemPool.length],
+  ...classicItemCategories.filter((category) => category !== "全部")
+    .map((category) => [category, mainItemPool.filter((item) => item.category === category).length]),
+]);
+const itemStatCounts = Object.fromEntries(itemStatFilters.map(([id]) => [
+  id,
+  id === "all" ? mainItemPool.length : mainItemPool.filter((item) => item.tags.includes(id)).length,
+]));
 
 function createRunePreset(champion: ClassicChampion): RuneCounts {
   const counts: RuneCounts = {};
@@ -172,7 +196,8 @@ export default function Home() {
   const [selectedSpells, setSelectedSpells] = useState<string[]>(defaultSpellsFor(classicChampions[0]));
   const [items, setItems] = useState<string[]>(classicBuildPresets[classicChampions[0].archetype]);
   const [activeItemSlot, setActiveItemSlot] = useState(0);
-  const [itemCategory, setItemCategory] = useState<(typeof classicItemCategories)[number]>("核心推荐");
+  const [itemCategory, setItemCategory] = useState<(typeof classicItemCategories)[number]>("全部");
+  const [itemStatFilter, setItemStatFilter] = useState<ItemStatFilterId>("all");
   const [itemSearch, setItemSearch] = useState("");
   const [inspectedItem, setInspectedItem] = useState(classicBuildPresets[classicChampions[0].archetype][0]);
   const [inspectedAbility, setInspectedAbility] = useState<ClassicAbilityKey>("Q");
@@ -223,11 +248,11 @@ export default function Home() {
 
   const displayedItems = useMemo(() => mainItemPool.filter((item) => {
     const query = itemSearch.trim();
-    const categoryMatches = itemCategory === "核心推荐"
-      ? item.category === "鞋子" || item.category === "传说装备"
-      : item.category === itemCategory;
-    return categoryMatches && (!query || `${item.name}${item.description}${item.tags.join("")}`.includes(query));
-  }), [itemCategory, itemSearch]);
+    const categoryMatches = itemCategory === "全部" || item.category === itemCategory;
+    const statMatches = itemStatFilter === "all" || item.tags.includes(itemStatFilter);
+    return categoryMatches && statMatches
+      && (!query || `${item.name}${item.description}${item.tags.join("")}`.toLowerCase().includes(query.toLowerCase()));
+  }), [itemCategory, itemSearch, itemStatFilter]);
 
   const selectedRuneGroup = classicRuneGroups.find((group) => group.id === activeRuneGroup) || classicRuneGroups[0];
   const inspectedItemData = itemById.get(inspectedItem);
@@ -509,7 +534,7 @@ export default function Home() {
         </nav>
         <div className="sync-status">
           <span className="live-dot" />
-          <span><strong>Classic {CLASSIC_PATCH}</strong><small>OP.GG · 2026.07.24 快照</small></span>
+          <span><strong>Classic {CLASSIC_PATCH}</strong><small>OP.GG · 每日自动校验</small></span>
           <button className="help-trigger" onClick={() => setHelpOpen(true)} aria-label="打开使用帮助">
             <span aria-hidden="true">?</span><span className="help-label">使用帮助</span>
           </button>
@@ -545,7 +570,7 @@ export default function Home() {
               </div>
             )}
           </div>
-          <div className="rail-footnote"><span>目录覆盖</span><strong>60 英雄 · 16 技能</strong><small>所有选择项统一来自 OP.GG Classic 16.15。</small></div>
+          <div className="rail-footnote"><span>目录覆盖</span><strong>60 英雄 · 16 技能</strong><small>OP.GG Classic 目录每日自动检测；异常数据不会发布。</small></div>
         </aside>
 
         <section className="builder" id="builder-content" tabIndex={-1}>
@@ -557,7 +582,10 @@ export default function Home() {
             </div>
           )}
           <section className="champion-hero">
-            <img src={championSplash(selectedChampion)} alt={`${selectedChampion.name}原画`} />
+            <img
+              src={selectedSkillSet?.classicSplash || championIcon(selectedChampion)}
+              alt={`${selectedChampion.name}${selectedSkillSet?.classicSplashName || "经典"}原画`}
+            />
             <div className="hero-shade" />
             <div className="hero-content">
               <span className="eyebrow">CLASSIC · {selectedChampion.lane} · {selectedChampion.role}</span>
@@ -727,7 +755,7 @@ export default function Home() {
               </div>
 
               <section className="build-section skill-section">
-                <div className="subsection-title"><div><h3>英雄技能与加点</h3><p>点击被动或 Q/W/E/R 查看说明、冷却、消耗和施法距离；加点仍会校验等级上限。</p></div><span>5 技能 · 18 级</span></div>
+                <div className="subsection-title"><div><h3>英雄技能与加点</h3><p>点击被动或 Q/W/E/R 查看逐级伤害公式、冷却、消耗和施法距离；加点仍会校验等级上限。</p></div><span>5 技能 · 18 级</span></div>
                 {selectedSkillSet ? (
                   <ChampionAbilityPanel
                     skillSet={selectedSkillSet}
@@ -762,7 +790,7 @@ export default function Home() {
               </section>
 
               <section className="build-section item-section">
-                <div className="subsection-title"><div><h3>核心出装与合成树</h3><p>先选择装备槽，再点击任意装备查看属性、价格、直接组件与后续升级，确认后装入该槽位。</p></div><span>150 可选 · {craftableItemCount} 条合成路线</span></div>
+                <div className="subsection-title"><div><h3>经典装备商店与合成树</h3><p>按装备等级、属性和关键词筛选；点击任意装备查看完整游戏式合成路径。</p></div><span>{mainItemPool.length} 件 · {craftableItemCount} 条合成路线</span></div>
                 <div className="build-slots">
                   {items.map((id, index) => {
                     const item = itemById.get(id);
@@ -779,9 +807,25 @@ export default function Home() {
                 <div className="item-browser">
                   <div className="item-toolbar">
                     <div className="item-categories">
-                      {classicItemCategories.map((category) => <button key={category} className={itemCategory === category ? "active" : ""} onClick={() => setItemCategory(category)}>{category}</button>)}
+                      {classicItemCategories.map((category) => (
+                        <button key={category} className={itemCategory === category ? "active" : ""} onClick={() => setItemCategory(category)}>
+                          <span>{category}</span><b>{itemCategoryCounts[category]}</b>
+                        </button>
+                      ))}
                     </div>
-                    <label><span>⌕</span><input value={itemSearch} onChange={(event) => setItemSearch(event.target.value)} placeholder="搜索装备、属性或被动" /></label>
+                    <div className="item-filter-row">
+                      <label className="item-stat-filter">
+                        <span>属性筛选</span>
+                        <select value={itemStatFilter} onChange={(event) => setItemStatFilter(event.target.value as ItemStatFilterId)}>
+                          {itemStatFilters.map(([id, label]) => <option key={id} value={id}>{label}（{itemStatCounts[id]}）</option>)}
+                        </select>
+                      </label>
+                      <label className="item-search">
+                        <span>⌕</span>
+                        <input value={itemSearch} onChange={(event) => setItemSearch(event.target.value)} placeholder="搜索装备、属性或被动" />
+                      </label>
+                      <div className="item-result-count" role="status"><b>{displayedItems.length}</b><span>件符合条件</span></div>
+                    </div>
                   </div>
                   <div className="item-grid">
                     {displayedItems.map((item) => (
@@ -797,6 +841,12 @@ export default function Home() {
                         {items.includes(item.id) && <i>已装备</i>}
                       </button>
                     ))}
+                    {displayedItems.length === 0 && (
+                      <div className="item-empty-result">
+                        <strong>没有符合条件的装备</strong>
+                        <button onClick={() => { setItemCategory("全部"); setItemStatFilter("all"); setItemSearch(""); }}>清除装备筛选</button>
+                      </div>
+                    )}
                   </div>
                   <ItemDetailPanel
                     itemId={inspectedItemData?.id || ""}
@@ -843,7 +893,7 @@ export default function Home() {
 
           <footer className="site-footer">
             <span>RIFT//LAB 是非官方玩家工具，与 Riot Games 或 OP.GG 无隶属关系。</span>
-            <span>数据快照：OP.GG Classic {CLASSIC_PATCH} · 无需账号即可使用与保存</span>
+            <span>数据源：OP.GG Classic {CLASSIC_PATCH} · 每日自动校验 · 无需账号即可使用与保存</span>
           </footer>
         </section>
       </div>

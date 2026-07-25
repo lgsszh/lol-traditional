@@ -8,7 +8,7 @@ export type ClassicItem = {
   tags: string[];
 };
 
-// Generated from the OP.GG Classic 16.15 catalog (152 entries).
+// Generated from the OP.GG Classic 16.15 catalog (152 entries). Do not edit manually.
 export const classicItems: ClassicItem[] = [
   {
     "id": "771001",
@@ -1805,7 +1805,7 @@ export const classicItems: ClassicItem[] = [
     "name": "海克斯核心原型",
     "category": "基础装备",
     "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/items/icons2d/3200_hexcore.project_jade.png",
-    "description": "暂无属性说明",
+    "description": "",
     "price": 750,
     "tags": [
       "damage",
@@ -1818,7 +1818,7 @@ export const classicItems: ClassicItem[] = [
     "name": "海克斯核心mk-1型",
     "category": "史诗装备",
     "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/items/icons2d/3200_hexcore.project_jade.png",
-    "description": "暂无属性说明",
+    "description": "",
     "price": 1500,
     "tags": [
       "damage",
@@ -1831,7 +1831,7 @@ export const classicItems: ClassicItem[] = [
     "name": "海克斯核心mk-2型",
     "category": "史诗装备",
     "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/items/icons2d/3200_hexcore.project_jade.png",
-    "description": "暂无属性说明",
+    "description": "",
     "price": 2250,
     "tags": [
       "damage",
@@ -1844,7 +1844,7 @@ export const classicItems: ClassicItem[] = [
     "name": "完美海克斯核心",
     "category": "传说装备",
     "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/items/icons2d/3200_hexcore.project_jade.png",
-    "description": "暂无属性说明",
+    "description": "",
     "price": 3000,
     "tags": [
       "damage",

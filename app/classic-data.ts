@@ -394,7 +394,7 @@ export const skillPlanFor = (order: ClassicChampion["spellOrder"]) => {
   return template.map((skill) => mapping[skill as keyof typeof mapping]);
 };
 
-export const classicItemCategories = ["核心推荐", "传说装备", "鞋子", "史诗装备", "出门装备", "消耗品", "基础装备"] as const;
+export const classicItemCategories = ["全部", "出门装备", "消耗品", "基础装备", "鞋子", "史诗装备", "传说装备"] as const;
 
 export const masteryBackgrounds: Record<ClassicMastery["tree"], string> = {
   进攻: "https://c-lol-web.op.gg/app-router/assets/images/classic-builds/masteries/mastery_offense_bg.jpg",

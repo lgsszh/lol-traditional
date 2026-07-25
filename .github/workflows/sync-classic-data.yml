@@ -1,0 +1,42 @@
+name: Sync OP.GG Classic data
+
+on:
+  schedule:
+    - cron: "20 4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: classic-data-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Fetch OP.GG Classic and rebuild snapshots
+        run: npm run data:update
+      - name: Validate generated data and website
+        run: npm test
+      - name: Commit verified source changes
+        run: |
+          if git diff --quiet; then
+            echo "OP.GG Classic data is unchanged."
+            exit 0
+          fi
+          git config user.name "rift-lab-data-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add app/classic-items.generated.ts app/classic-skills.generated.ts app/classic-item-recipes.generated.ts
+          git commit -m "data: sync OP.GG Classic snapshot"
+          git push

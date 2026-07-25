@@ -1,7 +1,7 @@
 "use client";
 
 import { classicItemRecipes } from "../classic-item-recipes.generated";
-import { classicItems } from "../classic-items.generated";
+import { classicItems, type ClassicItem } from "../classic-items.generated";
 
 type Props = {
   itemId: string;
@@ -10,7 +10,63 @@ type Props = {
   onEquip: (itemId: string) => void;
 };
 
+type TreeNodeProps = {
+  item: ClassicItem;
+  path: string;
+  depth: number;
+  onInspect: (itemId: string) => void;
+};
+
 const itemById = new Map(classicItems.map((item) => [item.id, item]));
+const itemTagLabels: Record<string, string> = {
+  damage: "攻击力",
+  "critical-strike": "暴击",
+  "attack-speed": "攻击速度",
+  "on-hit": "攻击特效",
+  "armor-penetration": "护甲穿透",
+  "spell-damage": "法术强度",
+  mana: "法力",
+  "magic-penetration": "法术穿透",
+  health: "生命值",
+  armor: "护甲",
+  "magic-resistance": "魔法抗性",
+  "cooldown-reduction": "冷却缩减",
+  movement: "移动速度",
+  "life-steal": "生命偷取",
+};
+
+function RecipeTreeNode({ item, path, depth, onInspect }: TreeNodeProps) {
+  const recipe = classicItemRecipes[item.id];
+  const components = depth < 3
+    ? (recipe?.from || []).map((id) => itemById.get(id)).filter((entry): entry is ClassicItem => Boolean(entry))
+    : [];
+
+  return (
+    <div className={`recipe-tree-node depth-${depth}`}>
+      <button
+        className={depth === 0 ? "root" : ""}
+        onClick={() => onInspect(item.id)}
+        aria-label={`查看${item.name}，${item.price}金币`}
+      >
+        <img src={item.icon} alt="" />
+        <span><strong>{item.name}</strong><small>{item.price} 金币</small></span>
+      </button>
+      {components.length > 0 && (
+        <div className="recipe-tree-children">
+          {components.map((component, index) => (
+            <RecipeTreeNode
+              key={`${path}-${component.id}-${index}`}
+              item={component}
+              path={`${path}-${component.id}-${index}`}
+              depth={depth + 1}
+              onInspect={onInspect}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
 
 export default function ItemDetailPanel({ itemId, activeSlot, onInspect, onEquip }: Props) {
   const item = itemById.get(itemId);
@@ -32,27 +88,21 @@ export default function ItemDetailPanel({ itemId, activeSlot, onInspect, onEquip
       </header>
 
       <div className="item-tag-list" aria-label="装备标签">
-        {item.tags.length ? item.tags.map((tag) => <span key={tag}>{tag}</span>) : <span>特殊装备</span>}
+        {item.tags.length
+          ? item.tags.map((tag) => <span key={tag}>{itemTagLabels[tag] || tag}</span>)
+          : <span>特殊装备</span>}
       </div>
       <p className="item-description">{item.description || "该特殊装备没有额外文字说明。"}</p>
 
       <section className="recipe-section">
         <div className="detail-section-heading">
-          <h5>合成路径</h5>
-          <small>{components.length ? `${components.length} 个组件` : "直接购买／特殊获得"}</small>
+          <h5>游戏式合成路径</h5>
+          <small>{components.length ? `${components.length} 个直接组件` : "直接购买／特殊获得"}</small>
         </div>
         {components.length ? (
           <>
-            <div className="recipe-flow">
-              {components.map((component, index) => component && (
-                <div className="recipe-component" key={`${component.id}-${index}`}>
-                  {index > 0 && <i>＋</i>}
-                  <button onClick={() => onInspect(component.id)} title={`查看${component.name}`}>
-                    <img src={component.icon} alt="" />
-                    <span>{component.name}<small>{component.price} 金币</small></span>
-                  </button>
-                </div>
-              ))}
+            <div className="recipe-tree" aria-label={`${item.name}完整合成树`}>
+              <RecipeTreeNode item={item} path={item.id} depth={0} onInspect={onInspect} />
             </div>
             <div className="recipe-price">
               <span>组件 {recipe.componentTotal} 金币</span>
@@ -62,7 +112,10 @@ export default function ItemDetailPanel({ itemId, activeSlot, onInspect, onEquip
             </div>
           </>
         ) : (
-          <p className="recipe-empty">这件装备没有前置组件，或通过商店直接购买、专属升级及特殊规则获得。</p>
+          <div className="recipe-purchase">
+            <img src={item.icon} alt="" />
+            <p><b>商店直接购买</b><span>无需前置组件，花费 {item.price} 金币。</span></p>
+          </div>
         )}
         {recipe?.note && <p className="recipe-note">{recipe.note}</p>}
       </section>
@@ -85,7 +138,7 @@ export default function ItemDetailPanel({ itemId, activeSlot, onInspect, onEquip
       </section>
 
       <footer>
-        <small>说明与总价：OP.GG Classic 16.15</small>
+        <small>说明、分类、图标与总价：OP.GG Classic 16.15</small>
         <small>配方：{recipe?.source || "OP.GG Classic 16.15"}</small>
         <button onClick={() => onEquip(item.id)}>装备到第 {activeSlot + 1} 格</button>
       </footer>
