@@ -2,6 +2,8 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import HelpDrawer from "./components/HelpDrawer";
+import ChampionAbilityPanel from "./components/ChampionAbilityPanel";
+import ItemDetailPanel from "./components/ItemDetailPanel";
 import OnboardingGuide from "./components/OnboardingGuide";
 import {
   championMatchesFilters,
@@ -30,6 +32,11 @@ import {
   type ClassicRuneGroup,
 } from "./classic-data";
 import { classicItems } from "./classic-items.generated";
+import { classicItemRecipes } from "./classic-item-recipes.generated";
+import {
+  classicSkillsByChampion,
+  type ClassicAbilityKey,
+} from "./classic-skills.generated";
 
 type WorkbenchView = "runes" | "masteries" | "build" | "ai";
 type RuneCounts = Record<string, number>;
@@ -59,6 +66,7 @@ const itemById = new Map(classicItems.map((item) => [item.id, item]));
 // OP.GG exposes two internal rune-replacement records in its item payload.
 // Keep them in the 152-entry source snapshot, but hide them from the equipment picker.
 const mainItemPool = classicItems.filter((item) => !["772139", "772140"].includes(item.id));
+const craftableItemCount = Object.values(classicItemRecipes).filter((recipe) => recipe.from.length > 0).length;
 const selectableItemIds = new Set(mainItemPool.map((item) => item.id));
 const spellIds = new Set(classicSpells.map((spell) => spell.id));
 
@@ -167,6 +175,7 @@ export default function Home() {
   const [itemCategory, setItemCategory] = useState<(typeof classicItemCategories)[number]>("核心推荐");
   const [itemSearch, setItemSearch] = useState("");
   const [inspectedItem, setInspectedItem] = useState(classicBuildPresets[classicChampions[0].archetype][0]);
+  const [inspectedAbility, setInspectedAbility] = useState<ClassicAbilityKey>("Q");
   const [skillPlan, setSkillPlan] = useState<string[]>(skillPlanFor(classicChampions[0].spellOrder));
   const [prompt, setPrompt] = useState("对线稳定，使用完整经典符文与 30 点天赋；给出两件备选装备。");
   const [aiState, setAiState] = useState<"idle" | "working" | "ready">("idle");
@@ -222,6 +231,7 @@ export default function Home() {
 
   const selectedRuneGroup = classicRuneGroups.find((group) => group.id === activeRuneGroup) || classicRuneGroups[0];
   const inspectedItemData = itemById.get(inspectedItem);
+  const selectedSkillSet = classicSkillsByChampion.get(selectedChampion.classicId);
 
   const showToast = (message: string) => {
     setToast(message);
@@ -339,6 +349,7 @@ export default function Home() {
     setSelectedSpells(defaultSpellsFor(champion));
     setItems(classicBuildPresets[champion.archetype]);
     setInspectedItem(classicBuildPresets[champion.archetype][0]);
+    setInspectedAbility("Q");
     setSkillPlan(skillPlanFor(champion.spellOrder));
     setAiState("idle");
     showToast(`已切换为 ${champion.name} 的经典构筑`);
@@ -351,6 +362,7 @@ export default function Home() {
     setSelectedSpells(defaultSpellsFor(selectedChampion));
     setItems(recommendedItems);
     setInspectedItem(recommendedItems[0]);
+    setInspectedAbility("Q");
     setSkillPlan(skillPlanFor(selectedChampion.spellOrder));
     setActiveItemSlot(0);
     setAiState("idle");
@@ -412,6 +424,7 @@ export default function Home() {
   };
 
   const changeSkill = (levelIndex: number, skill: string) => {
+    setInspectedAbility(skill as ClassicAbilityKey);
     const level = levelIndex + 1;
     if (skill === "R" && ![6, 11, 16].includes(level)) {
       showToast("经典规则：终极技能只能在 6、11、16 级学习");
@@ -432,6 +445,12 @@ export default function Home() {
       }
       return next;
     });
+  };
+
+  const equipInspectedItem = (itemId: string) => {
+    setItems((current) => current.map((entry, index) => index === activeItemSlot ? itemId : entry));
+    setInspectedItem(itemId);
+    showToast(`${itemById.get(itemId)?.name || "装备"}已放入第 ${activeItemSlot + 1} 格`);
   };
 
   const shareBuild = async () => {
@@ -708,12 +727,21 @@ export default function Home() {
               </div>
 
               <section className="build-section skill-section">
-                <div className="subsection-title"><div><h3>技能加点</h3><p>系统会校验终极技能等级和普通技能等级上限。</p></div><span>18 / 18 级</span></div>
+                <div className="subsection-title"><div><h3>英雄技能与加点</h3><p>点击被动或 Q/W/E/R 查看说明、冷却、消耗和施法距离；加点仍会校验等级上限。</p></div><span>5 技能 · 18 级</span></div>
+                {selectedSkillSet ? (
+                  <ChampionAbilityPanel
+                    skillSet={selectedSkillSet}
+                    activeKey={inspectedAbility}
+                    onSelect={setInspectedAbility}
+                  />
+                ) : (
+                  <div className="ability-missing" role="status">该英雄的技能资料暂未载入。</div>
+                )}
                 <div className="skill-table">
                   <div className="level-row"><b>等级</b>{Array.from({ length: 18 }, (_, index) => <span key={index}>{index + 1}</span>)}</div>
                   {(["Q", "W", "E", "R"] as const).map((skill) => (
                     <div className={`skill-row skill-${skill.toLowerCase()}`} key={skill}>
-                      <b>{skill}</b>
+                      <button className="skill-key" onClick={() => setInspectedAbility(skill)} aria-label={`查看${skill}技能详情`}>{skill}</button>
                       {skillPlan.map((selected, index) => <button key={index} className={selected === skill ? "selected" : ""} onClick={() => changeSkill(index, skill)} aria-label={`${index + 1}级选择${skill}`}>{selected === skill ? "●" : ""}</button>)}
                     </div>
                   ))}
@@ -734,7 +762,7 @@ export default function Home() {
               </section>
 
               <section className="build-section item-section">
-                <div className="subsection-title"><div><h3>核心出装</h3><p>先选择上方槽位，再从 Classic 目录替换；152 条源目录记录中已隐藏 2 个内部符文占位项。</p></div><span>150 件可选</span></div>
+                <div className="subsection-title"><div><h3>核心出装与合成树</h3><p>先选择装备槽，再点击任意装备查看属性、价格、直接组件与后续升级，确认后装入该槽位。</p></div><span>150 可选 · {craftableItemCount} 条合成路线</span></div>
                 <div className="build-slots">
                   {items.map((id, index) => {
                     const item = itemById.get(id);
@@ -757,22 +785,25 @@ export default function Home() {
                   </div>
                   <div className="item-grid">
                     {displayedItems.map((item) => (
-                      <button key={item.id} className={items.includes(item.id) ? "item-card equipped" : "item-card"} onMouseEnter={() => setInspectedItem(item.id)} onFocus={() => setInspectedItem(item.id)} onClick={() => {
-                        setItems((current) => current.map((entry, index) => index === activeItemSlot ? item.id : entry));
-                        setInspectedItem(item.id);
-                      }}>
+                      <button
+                        key={item.id}
+                        className={`${items.includes(item.id) ? "item-card equipped" : "item-card"} ${inspectedItem === item.id ? "inspected" : ""}`}
+                        onFocus={() => setInspectedItem(item.id)}
+                        onClick={() => setInspectedItem(item.id)}
+                        aria-pressed={inspectedItem === item.id}
+                      >
                         <img src={item.icon} alt="" />
-                        <span><strong>{item.name}</strong><small>{item.price} 金币</small></span>
+                        <span><strong>{item.name}</strong><small>{item.price} 金币</small><em>点击查看详情</em></span>
                         {items.includes(item.id) && <i>已装备</i>}
                       </button>
                     ))}
                   </div>
-                  <aside className="item-detail">
-                    {inspectedItemData ? <>
-                      <img src={inspectedItemData.icon} alt="" />
-                      <div><span>{inspectedItemData.category}</span><h4>{inspectedItemData.name}</h4><b>{inspectedItemData.price} 金币</b><p>{inspectedItemData.description}</p></div>
-                    </> : <p>将鼠标移到装备上查看完整属性。</p>}
-                  </aside>
+                  <ItemDetailPanel
+                    itemId={inspectedItemData?.id || ""}
+                    activeSlot={activeItemSlot}
+                    onInspect={setInspectedItem}
+                    onEquip={equipInspectedItem}
+                  />
                 </div>
               </section>
             </section>
