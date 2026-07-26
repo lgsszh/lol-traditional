@@ -8,11 +8,75 @@ export type ClassicChampion = {
   key: string;
   name: string;
   title: string;
+  aliases: string[];
   lane: "上路" | "打野" | "中路" | "下路" | "辅助";
   role: string;
   archetype: ChampionArchetype;
   accent: string;
   spellOrder: ["Q" | "W" | "E", "Q" | "W" | "E", "Q" | "W" | "E"];
+};
+
+export const championAliases: Record<string, string[]> = {
+  Ahri: ["狐狸"],
+  Jax: ["武器", "灯男"],
+  LeeSin: ["瞎子", "盲僧"],
+  Ashe: ["寒冰"],
+  Janna: ["风女"],
+  Vayne: ["VN"],
+  Taric: ["宝石"],
+  Anivia: ["冰鸟", "凤凰"],
+  Katarina: ["卡特"],
+  Heimerdinger: ["大头"],
+  JarvanIV: ["皇子", "嘉文"],
+  Garen: ["德玛", "大宝剑", "草丛伦"],
+  Morgana: [],
+  Shaco: ["小丑"],
+  Brand: ["火男"],
+  Evelynn: ["寡妇"],
+  Lux: ["光辉"],
+  Gangplank: ["船长"],
+  Annie: ["火女"],
+  Gragas: ["酒桶"],
+  TwistedFate: ["卡牌", "TF"],
+  Nidalee: ["豹女"],
+  Olaf: [],
+  Singed: ["炼金"],
+  Ryze: ["光头", "流浪"],
+  Tristana: ["小炮", "炮娘"],
+  Tryndamere: ["蛮王", "蛮子"],
+  Fiddlesticks: ["稻草人", "末日"],
+  Alistar: ["牛头"],
+  Rammus: ["龙龟", "乌龟"],
+  MonkeyKing: ["猴子"],
+  Sona: ["琴女"],
+  Malphite: ["石头人"],
+  Nasus: ["狗头"],
+  Amumu: ["木木"],
+  MissFortune: ["女枪", "MF", "好运姐", "赏金"],
+  KogMaw: ["大嘴"],
+  Kayle: ["天使"],
+  Zilean: ["时光老头", "时光"],
+  Warwick: ["狼人"],
+  Leona: ["日女"],
+  Skarner: ["蝎子"],
+  Karthus: ["死歌"],
+  Ezreal: ["EZ", "小黄毛"],
+  Sion: ["塞恩"],
+  Twitch: ["老鼠"],
+  MasterYi: ["剑圣", "易大师"],
+  Lulu: ["露露"],
+  Veigar: ["小法"],
+  Chogath: ["大虫子"],
+  Malzahar: ["蚂蚱"],
+  Kassadin: [],
+  Nunu: ["雪人"],
+  Teemo: ["提百万", "蘑菇"],
+  Corki: ["飞机"],
+  Sivir: ["轮子妈"],
+  Pantheon: ["斯巴达"],
+  Blitzcrank: ["机器人"],
+  Soraka: ["奶妈", "星妈"],
+  DrMundo: ["蒙多"],
 };
 
 export type ClassicRune = {
@@ -62,7 +126,18 @@ const champion = (
   archetype: ChampionArchetype,
   accent: string,
   spellOrder: ClassicChampion["spellOrder"],
-): ClassicChampion => ({ classicId, key, name, title, lane, role, archetype, accent, spellOrder });
+): ClassicChampion => ({
+  classicId,
+  key,
+  name,
+  title,
+  aliases: championAliases[key] || [],
+  lane,
+  role,
+  archetype,
+  accent,
+  spellOrder,
+});
 
 export const classicChampions: ClassicChampion[] = [
   champion("60103", "Ahri", "阿狸", "九尾妖狐", "中路", "法师", "mage", "#ec7872", ["Q", "W", "E"]),

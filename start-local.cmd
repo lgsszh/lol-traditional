@@ -1,7 +1,7 @@
 @echo off
 setlocal
 chcp 65001 >nul
-title RIFT//LAB Local Server - keep this window open
+title RIFT//LAB Local Server
 pushd "%~dp0"
 
 where node >nul 2>nul
@@ -30,17 +30,15 @@ if errorlevel 1 (
   exit /b 1
 )
 
-echo.
-echo [RIFT//LAB] Starting http://127.0.0.1:3415
-echo [RIFT//LAB] Keep this window open while using the site.
-echo [RIFT//LAB] Closing this window stops the local site.
-echo.
-
-start "" /min powershell -NoProfile -WindowStyle Hidden -Command "Start-Sleep -Seconds 2; Start-Process 'http://127.0.0.1:3415'"
-call npm run start -- -p 3415 -H 127.0.0.1
-
-echo.
-echo [RIFT//LAB] The local server stopped. Press any key to close this window.
-pause >nul
+echo [RIFT//LAB] Starting the hidden background service...
+call npm run start:hidden
+if errorlevel 1 (
+  echo [RIFT//LAB] Startup failed. See .vinext-server.error.log.
+  pause
+  popd
+  endlocal
+  exit /b 1
+)
+start "" "http://127.0.0.1:3415"
 popd
 endlocal

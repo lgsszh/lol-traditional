@@ -32,14 +32,36 @@ import {
 } from "./classic-data";
 import { classicItems } from "./classic-items.generated";
 import { classicItemRecipes } from "./classic-item-recipes.generated";
+import { localAssetUrl } from "./classic-assets";
+import {
+  classicBuildGuides,
+  classicGuideSources,
+  type ClassicBuildVariant,
+} from "./classic-build-guides";
 import {
   classicSkillsByChampion,
   type ClassicAbilityKey,
+  type ClassicChampionSkillSet,
 } from "./classic-skills.generated";
 
 type WorkbenchView = "runes" | "masteries" | "build" | "ai";
 type RuneCounts = Record<string, number>;
 type MasteryRanks = Record<string, number>;
+type AiProfileId = "balanced" | "aggressive" | "defensive" | "teamfight";
+type AiRecommendation = {
+  profile: AiProfileId;
+  guideId: string;
+  title: string;
+  rationale: string;
+  runeSummary: string;
+  masteryPreset: string;
+  spellIds: [string, string];
+  skillOrder: ClassicChampion["spellOrder"];
+  startingItems: ClassicBuildVariant["startingItems"];
+  recallPlan: ClassicBuildVariant["recallPlan"];
+  coreItems: string[];
+  alternatives: string[];
+};
 
 const GUIDE_STORAGE_KEY = "rift-lab-classic-onboarding-v1";
 
@@ -93,6 +115,117 @@ const itemStatCounts = Object.fromEntries(itemStatFilters.map(([id]) => [
   id,
   id === "all" ? mainItemPool.length : mainItemPool.filter((item) => item.tags.includes(id)).length,
 ]));
+const aiProfiles: ReadonlyArray<{ id: AiProfileId; label: string; detail: string }> = [
+  { id: "balanced", label: "主流完整方案", detail: "优先英雄经典主定位和稳定成型路线" },
+  { id: "aggressive", label: "雪球／爆发", detail: "匹配暴击、穿甲、AP 爆发等进攻流派" },
+  { id: "defensive", label: "续航／抗压", detail: "匹配水晶瓶、回复、抗性与容错路线" },
+  { id: "teamfight", label: "团战／功能", detail: "匹配控制、保护、开团与团队装备路线" },
+];
+const archetypeItemTags: Record<ClassicChampion["archetype"], string[]> = {
+  mage: ["spell-damage", "magic-penetration", "mana"],
+  fighter: ["damage", "health", "life-steal"],
+  jungler: ["damage", "attack-speed", "health"],
+  marksman: ["damage", "critical-strike", "attack-speed"],
+  tank: ["health", "armor", "magic-resistance"],
+  support: ["cooldown-reduction", "mana", "health"],
+};
+
+function championSkillSet(champion: ClassicChampion) {
+  return classicSkillsByChampion.get(champion.classicId);
+}
+
+function championPortrait(champion: ClassicChampion) {
+  return localAssetUrl(championSkillSet(champion)?.portrait || championIcon(champion));
+}
+
+function championHeroArt(champion: ClassicChampion, artworkId?: string) {
+  const skillSet = championSkillSet(champion);
+  const artwork = skillSet?.artworks.find((entry) => entry.id === artworkId) || skillSet?.artworks[0];
+  return localAssetUrl(artwork?.imageUrl || skillSet?.classicSplash || championPortrait(champion));
+}
+
+const championAssetCache = new Map<string, Promise<void>>();
+
+function preloadImage(src: string) {
+  if (typeof window === "undefined") return Promise.resolve();
+  src = localAssetUrl(src);
+  const cached = championAssetCache.get(src);
+  if (cached) return cached;
+  const pending = new Promise<void>((resolve) => {
+    const image = new window.Image();
+    image.decoding = "async";
+    image.onload = () => resolve();
+    image.onerror = () => {
+      championAssetCache.delete(src);
+      resolve();
+    };
+    image.src = src;
+  });
+  championAssetCache.set(src, pending);
+  return pending;
+}
+
+function preloadChampionAssets(champion: ClassicChampion) {
+  const skillSet = championSkillSet(champion);
+  const skillIcons = skillSet?.abilities.map((ability) => ability.icon) || [];
+  const artworkSources = skillSet?.artworks.map((artwork) => artwork.imageUrl) || [];
+  return Promise.all([
+    preloadImage(championPortrait(champion)),
+    ...artworkSources.map(preloadImage),
+    ...skillIcons.map(preloadImage),
+  ]);
+}
+
+function preloadWorkbenchAssets(view: WorkbenchView) {
+  const sources = view === "runes"
+    ? [runeBoardBackground, ...classicRuneGroups.flatMap((group) => group.runes.map((rune) => rune.icon))]
+    : view === "masteries"
+      ? [...Object.values(masteryBackgrounds), ...classicMasteries.map((mastery) => mastery.icon)]
+      : view === "build"
+        ? [...classicSpells.map((spell) => spell.icon), ...mainItemPool.map((item) => item.icon)]
+        : [];
+  return Promise.all([...new Set(sources)].map(preloadImage));
+}
+
+function ChampionHeroImage({
+  champion,
+  artwork,
+}: {
+  champion: ClassicChampion;
+  artwork: ClassicChampionSkillSet["artworks"][number] | undefined;
+}) {
+  const [loaded, setLoaded] = useState(false);
+  const [failed, setFailed] = useState(false);
+  const source = championHeroArt(champion, artwork?.id);
+  const recognizeCachedImage = useCallback((image: HTMLImageElement | null) => {
+    if (image?.complete && image.naturalWidth > 0) setLoaded(true);
+  }, []);
+
+  return (
+    <div className={`hero-media ${loaded ? "loaded" : "loading"} ${failed ? "failed" : ""}`}>
+      <img
+        className="hero-preview"
+        src={championPortrait(champion)}
+        alt=""
+        aria-hidden="true"
+      />
+      <img
+        className="hero-splash"
+        ref={recognizeCachedImage}
+        src={failed ? championPortrait(champion) : source}
+        alt={`${champion.name}${artwork?.name || "经典"}原画`}
+        onLoad={() => setLoaded(true)}
+        onError={() => {
+          if (!failed) {
+            setFailed(true);
+            setLoaded(false);
+          }
+        }}
+      />
+      {!loaded && <span className="hero-image-status" role="status">正在载入 {champion.name} 原画</span>}
+    </div>
+  );
+}
 
 function createRunePreset(champion: ClassicChampion): RuneCounts {
   const counts: RuneCounts = {};
@@ -188,6 +321,12 @@ function isValidSkillPlan(value: unknown): value is string[] {
 export default function Home() {
   const [view, setView] = useState<WorkbenchView>("runes");
   const [selectedChampion, setSelectedChampion] = useState(classicChampions[0]);
+  const [selectedArtworkId, setSelectedArtworkId] = useState(
+    classicSkillsByChampion.get(classicChampions[0].classicId)?.artworks[0]?.id || "",
+  );
+  const [selectedGuideId, setSelectedGuideId] = useState(
+    classicBuildGuides[classicChampions[0].classicId][0].id,
+  );
   const [search, setSearch] = useState("");
   const [laneFilter, setLaneFilter] = useState<LaneFilterId>("全部");
   const [runeCounts, setRuneCounts] = useState<RuneCounts>(() => createRunePreset(classicChampions[0]));
@@ -204,6 +343,8 @@ export default function Home() {
   const [skillPlan, setSkillPlan] = useState<string[]>(skillPlanFor(classicChampions[0].spellOrder));
   const [prompt, setPrompt] = useState("对线稳定，使用完整经典符文与 30 点天赋；给出两件备选装备。");
   const [aiState, setAiState] = useState<"idle" | "working" | "ready">("idle");
+  const [aiProfile, setAiProfile] = useState<AiProfileId>("balanced");
+  const [aiRecommendation, setAiRecommendation] = useState<AiRecommendation | null>(null);
   const [toast, setToast] = useState("");
   const [hydrated, setHydrated] = useState(false);
   const [guideOpen, setGuideOpen] = useState(false);
@@ -211,6 +352,11 @@ export default function Home() {
   const [helpOpen, setHelpOpen] = useState(false);
   const [sharedBuildLoaded, setSharedBuildLoaded] = useState(false);
   const championSearchRef = useRef<HTMLInputElement>(null);
+  const aiRequestId = useRef(0);
+  const changeView = useCallback((nextView: WorkbenchView) => {
+    void preloadWorkbenchAssets(nextView);
+    setView(nextView);
+  }, []);
 
   const totalMasteries = useMemo(
     () => Object.values(masteryRanks).reduce((sum, points) => sum + points, 0),
@@ -257,6 +403,11 @@ export default function Home() {
   const selectedRuneGroup = classicRuneGroups.find((group) => group.id === activeRuneGroup) || classicRuneGroups[0];
   const inspectedItemData = itemById.get(inspectedItem);
   const selectedSkillSet = classicSkillsByChampion.get(selectedChampion.classicId);
+  const selectedArtworks = selectedSkillSet?.artworks || [];
+  const selectedArtwork = selectedArtworks.find((artwork) => artwork.id === selectedArtworkId)
+    || selectedArtworks[0];
+  const selectedGuides = classicBuildGuides[selectedChampion.classicId];
+  const selectedGuide = selectedGuides.find((guide) => guide.id === selectedGuideId) || selectedGuides[0];
 
   const showToast = (message: string) => {
     setToast(message);
@@ -280,6 +431,8 @@ export default function Home() {
         // Restoring browser-persisted state is intentionally performed after hydration.
         // eslint-disable-next-line react-hooks/set-state-in-effect
         setSelectedChampion(champion);
+        setSelectedArtworkId(classicSkillsByChampion.get(champion.classicId)?.artworks[0]?.id || "");
+        setSelectedGuideId(classicBuildGuides[champion.classicId][0].id);
         setRuneCounts(record.runeCounts ? sanitizeRuneCounts(record.runeCounts) : createRunePreset(champion));
         setMasteryRanks(record.masteryRanks ? sanitizeMasteryRanks(record.masteryRanks) : { ...initialMasteryRanks });
         setSelectedSpells(Array.isArray(record.spells)
@@ -328,12 +481,12 @@ export default function Home() {
       if (event.altKey && ["1", "2", "3", "4"].includes(event.key)) {
         event.preventDefault();
         const views: WorkbenchView[] = ["runes", "masteries", "build", "ai"];
-        setView(views[Number(event.key) - 1]);
+        changeView(views[Number(event.key) - 1]);
       }
     };
     window.addEventListener("keydown", handleShortcut);
     return () => window.removeEventListener("keydown", handleShortcut);
-  }, []);
+  }, [changeView]);
 
   const saveGuideState = useCallback((completed: boolean) => {
     try {
@@ -358,8 +511,8 @@ export default function Home() {
     saveGuideState(true);
     setGuideOpen(false);
     setGuideStep(0);
-    setView("runes");
-  }, [saveGuideState]);
+    changeView("runes");
+  }, [changeView, saveGuideState]);
 
   const replayGuide = useCallback(() => {
     setHelpOpen(false);
@@ -368,17 +521,51 @@ export default function Home() {
   }, []);
 
   const chooseChampion = (champion: ClassicChampion) => {
+    if (champion.classicId === selectedChampion.classicId) return;
+    aiRequestId.current += 1;
+    void preloadChampionAssets(champion);
+
+    // React batches this complete selection into one commit, so the hero name,
+    // ability icons and build state can never represent different champions.
+    const recommendedItems = classicBuildPresets[champion.archetype];
     setSelectedChampion(champion);
+    setSelectedArtworkId(classicSkillsByChampion.get(champion.classicId)?.artworks[0]?.id || "");
+    setSelectedGuideId(classicBuildGuides[champion.classicId][0].id);
     setRuneCounts(createRunePreset(champion));
     setMasteryRanks({ ...initialMasteryRanks });
     setSelectedSpells(defaultSpellsFor(champion));
-    setItems(classicBuildPresets[champion.archetype]);
-    setInspectedItem(classicBuildPresets[champion.archetype][0]);
+    setItems(recommendedItems);
+    setInspectedItem(recommendedItems[0]);
     setInspectedAbility("Q");
     setSkillPlan(skillPlanFor(champion.spellOrder));
     setAiState("idle");
-    showToast(`已切换为 ${champion.name} 的经典构筑`);
+    setAiRecommendation(null);
   };
+
+  useEffect(() => {
+    let cancelled = false;
+    let timer = 0;
+    let cursor = 0;
+    const queue = classicChampions;
+    const preloadNextPair = async () => {
+      if (cancelled || cursor >= queue.length) return;
+      const batch = queue.slice(cursor, cursor + 2);
+      cursor += batch.length;
+      await Promise.all(batch.map(preloadChampionAssets));
+      if (!cancelled) timer = window.setTimeout(preloadNextPair, 120);
+    };
+    timer = window.setTimeout(preloadNextPair, 700);
+    const workbenchTimer = window.setTimeout(() => {
+      void preloadWorkbenchAssets("runes");
+      void preloadWorkbenchAssets("masteries");
+      void preloadWorkbenchAssets("build");
+    }, 900);
+    return () => {
+      cancelled = true;
+      window.clearTimeout(timer);
+      window.clearTimeout(workbenchTimer);
+    };
+  }, []);
 
   const restoreRecommended = () => {
     const recommendedItems = classicBuildPresets[selectedChampion.archetype];
@@ -391,7 +578,24 @@ export default function Home() {
     setSkillPlan(skillPlanFor(selectedChampion.spellOrder));
     setActiveItemSlot(0);
     setAiState("idle");
+    setAiRecommendation(null);
     showToast("已恢复当前英雄的完整推荐方案");
+  };
+
+  const applyClassicGuide = (guide: ClassicBuildVariant) => {
+    const pseudoChampion = { ...selectedChampion, archetype: guide.runeArchetype } as ClassicChampion;
+    setSelectedGuideId(guide.id);
+    setRuneCounts(createRunePreset(pseudoChampion));
+    setMasteryRanks({ ...masteryPresets[guide.masteryPreset] });
+    setSelectedSpells([...guide.spellIds]);
+    setItems([...guide.coreItems]);
+    setInspectedItem(guide.coreItems[0]);
+    setInspectedAbility("Q");
+    setSkillPlan(skillPlanFor(guide.skillOrder));
+    setActiveItemSlot(0);
+    setAiState("idle");
+    setAiRecommendation(null);
+    showToast(`已应用「${guide.name}」：符文、天赋、召唤师技能、加点与出装已同步`);
   };
 
   const adjustRune = (group: ClassicRuneGroup, runeId: string, delta: number) => {
@@ -494,29 +698,101 @@ export default function Home() {
   };
 
   const generateBuild = () => {
+    const requestId = ++aiRequestId.current;
+    const champion = selectedChampion;
     setAiState("working");
     window.setTimeout(() => {
-      const defensive = prompt.includes("稳") || prompt.includes("防御") || prompt.includes("新手");
+      if (requestId !== aiRequestId.current) return;
+      const championGuides = classicBuildGuides[champion.classicId];
+      const normalizedPrompt = `${prompt} ${aiProfiles.find((entry) => entry.id === aiProfile)?.detail || ""}`.toLowerCase();
+      const profileKeywords: Record<AiProfileId, string[]> = {
+        balanced: ["标准", "主流", champion.lane, champion.role],
+        aggressive: ["爆发", "暴击", "穿甲", "压制", "收割", "ap", "ad"],
+        defensive: ["续航", "抗压", "稳健", "水晶瓶", "防御", "新手"],
+        teamfight: ["团战", "控制", "保护", "开团", "功能", "辅助"],
+      };
+      const keywordAliases: Array<[RegExp, string[]]> = [
+        [/暴击|无尽|电刃|红叉/, ["暴击", "无尽", "电刃", "幻影之舞"]],
+        [/攻速|特效|破败/, ["攻速", "特效", "破败"]],
+        [/蓝\s*ez|blue\s*ez|冰拳|冰脉|魔宗/, ["蓝ez", "blue ezreal", "冰脉护手", "魔宗", "q消耗"]],
+        [/韩式|破败薇恩|主\s*w/, ["韩式薇恩", "破败", "主w", "攻速"]],
+        [/传统薇恩|饮血薇恩|主\s*q/, ["传统薇恩", "饮血剑", "主q", "高攻击"]],
+        [/ad\s*豹女|上单豹女|三相豹女/, ["ad豹女", "上单豹女", "三相", "分带"]],
+        [/攻速提莫|特效提莫|on.?hit/, ["攻速提莫", "特效提莫", "腐蚀之刃", "智慧末刃"]],
+        [/代理|断线|proxy/, ["代理炼金", "断线", "proxy", "疾跑", "传送"]],
+        [/法强|法师|ap/, ["ap", "法强", "爆发"]],
+        [/水晶瓶|蓝药|续航|抗压/, ["水晶瓶", "蓝药", "续航", "抗压"]],
+        [/打野|刷野|惩戒/, ["打野", "刷野"]],
+        [/上单|上路/, ["上路", "上单"]],
+        [/中单|中路/, ["中路", "中单"]],
+        [/辅助|保护|团队/, ["辅助", "保护", "团队"]],
+      ];
+      const expandedKeywords = [
+        ...profileKeywords[aiProfile],
+        ...keywordAliases.filter(([pattern]) => pattern.test(normalizedPrompt)).flatMap(([, keywords]) => keywords),
+      ];
+      const guide = championGuides
+        .map((entry, index) => {
+          const haystack = `${entry.name} ${entry.lane} ${entry.style} ${entry.summary} ${entry.tags.join(" ")}`.toLowerCase();
+          const directPromptScore = entry.tags.reduce((score, tag) =>
+            score + (normalizedPrompt.includes(tag.toLowerCase()) ? 8 : 0), 0);
+          const keywordScore = expandedKeywords.reduce((score, keyword) =>
+            score + (haystack.includes(keyword.toLowerCase()) ? 3 : 0), 0);
+          return { entry, score: directPromptScore + keywordScore - index * 0.01 };
+        })
+        .sort((left, right) => right.score - left.score)[0]?.entry || championGuides[0];
+      const masteryPreset = masteryPresets[guide.masteryPreset];
+      setSelectedGuideId(guide.id);
       setRuneCounts(createRunePreset({
-        ...selectedChampion,
-        archetype: defensive ? "tank" : selectedChampion.archetype,
+        ...champion,
+        archetype: guide.runeArchetype,
       }));
-      setMasteryRanks({ ...(defensive ? masteryPresets["防御 21 / 通用 9"] : initialMasteryRanks) });
-      setSelectedSpells(defaultSpellsFor(selectedChampion));
-      const generatedItems = classicBuildPresets[defensive ? "tank" : selectedChampion.archetype];
+      setMasteryRanks({ ...masteryPreset });
+      setSelectedSpells([...guide.spellIds]);
+      const generatedItems = [...guide.coreItems];
       setItems(generatedItems);
       setInspectedItem(generatedItems[0]);
-      setSkillPlan(skillPlanFor(selectedChampion.spellOrder));
+      setSkillPlan(skillPlanFor(guide.skillOrder));
+      const preferredTags = aiProfile === "defensive"
+        ? ["health", "armor", "magic-resistance"]
+        : aiProfile === "teamfight"
+          ? ["cooldown-reduction", "health", "mana"]
+          : archetypeItemTags[guide.runeArchetype];
+      const generatedAlternatives = [
+        ...guide.situationalItems,
+        ...mainItemPool
+        .filter((item) => item.category === "传说装备"
+          && !generatedItems.includes(item.id)
+          && preferredTags.some((tag) => item.tags.includes(tag)))
+        .sort((left, right) => right.price - left.price)
+        .map((item) => item.id),
+      ];
+      const alternatives = [...new Set(generatedAlternatives)].filter((id) => !generatedItems.includes(id)).slice(0, 3);
+      const profile = aiProfiles.find((entry) => entry.id === aiProfile) || aiProfiles[0];
+      setAiRecommendation({
+        profile: aiProfile,
+        guideId: guide.id,
+        title: `${champion.name} · ${guide.name} · ${profile.label}方案`,
+        rationale: `已从 ${championGuides.length} 套已核验路线中匹配「${guide.name}」。它对应 ${guide.lane}／${guide.style}，并按你的要求“${prompt}”同步写入出门装、符文、30 点天赋、召唤师技能、18 级加点、分档回城与六格出装。`,
+        runeSummary: guide.runeSummary,
+        masteryPreset: guide.masteryPreset,
+        spellIds: [...guide.spellIds],
+        skillOrder: [...guide.skillOrder],
+        startingItems: guide.startingItems,
+        recallPlan: guide.recallPlan,
+        coreItems: generatedItems,
+        alternatives,
+      });
       setAiState("ready");
-      showToast("经典数据构筑草案已写入当前方案");
-    }, 1100);
+      showToast(`${champion.name} 的 Classic 智能方案已写入`);
+    }, 360);
   };
 
   return (
     <main className="app-shell" style={{ "--champion-accent": selectedChampion.accent } as React.CSSProperties}>
       <a className="skip-link" href="#builder-content">跳到构筑内容</a>
       <header className="topbar">
-        <button className="brand" onClick={() => setView("runes")} aria-label="返回符文模拟器">
+        <button className="brand" onClick={() => changeView("runes")} aria-label="返回符文模拟器">
           <span className="brand-mark">R</span>
           <span><strong>RIFT<span>{"//"}</span>LAB</strong><small>怀旧服构筑工作台</small></span>
         </button>
@@ -527,7 +803,14 @@ export default function Home() {
             ["build", "技能与出装", "152"],
             ["ai", "AI 助手", "✦"],
           ] as const).map(([id, label, badge]) => (
-            <button key={id} className={view === id ? "active" : ""} onClick={() => setView(id)} aria-current={view === id ? "page" : undefined}>
+            <button
+              key={id}
+              className={view === id ? "active" : ""}
+              onClick={() => changeView(id)}
+              onPointerEnter={() => preloadWorkbenchAssets(id)}
+              onFocus={() => preloadWorkbenchAssets(id)}
+              aria-current={view === id ? "page" : undefined}
+            >
               {label}<span>{badge}</span>
             </button>
           ))}
@@ -547,7 +830,7 @@ export default function Home() {
           <div className="rail-heading"><span>经典英雄</span><b>{classicChampions.length} / 60</b></div>
           <label className="champion-search">
             <span aria-hidden="true">⌕</span>
-            <input ref={championSearchRef} value={search} onChange={(event) => setSearch(event.target.value)} placeholder="搜索英雄、称号或定位" />
+            <input ref={championSearchRef} value={search} onChange={(event) => setSearch(event.target.value)} placeholder="搜索英雄、称号、外号或定位" />
           </label>
           <div className="role-filters" aria-label="位置筛选">
             {laneFilterOptions.map(({ id }) => (
@@ -556,16 +839,27 @@ export default function Home() {
           </div>
           <div className="champion-list">
             {filteredChampions.map((champion) => (
-              <button key={champion.classicId} className={champion.classicId === selectedChampion.classicId ? "champion-row active" : "champion-row"} onClick={() => chooseChampion(champion)}>
-                <img src={championIcon(champion)} alt="" />
-                <span><strong>{champion.name}</strong><small>{champion.title} · {champion.lane}</small></span>
+              <button
+                key={champion.classicId}
+                className={champion.classicId === selectedChampion.classicId ? "champion-row active" : "champion-row"}
+                onClick={() => chooseChampion(champion)}
+                onPointerEnter={() => preloadChampionAssets(champion)}
+                onPointerDown={() => preloadChampionAssets(champion)}
+                onFocus={() => preloadChampionAssets(champion)}
+              >
+                <img src={championPortrait(champion)} alt="" />
+                <span>
+                  <strong>{champion.name}</strong>
+                  <small>{champion.title} · {champion.lane}</small>
+                  {champion.aliases.length > 0 && <em>{champion.aliases.join(" / ")}</em>}
+                </span>
                 <i>{champion.classicId === selectedChampion.classicId ? "●" : "›"}</i>
               </button>
             ))}
             {filteredChampions.length === 0 && (
               <div className="champion-empty" role="status">
                 <strong>没有找到符合条件的英雄</strong>
-                <small>可尝试英雄名、称号、英文名或“打野／中路”等定位。</small>
+                <small>可尝试英雄名、外号、称号、英文名或“打野／中路”等定位。</small>
                 <button onClick={() => { setSearch(""); setLaneFilter("全部"); }}>清除筛选</button>
               </div>
             )}
@@ -582,14 +876,36 @@ export default function Home() {
             </div>
           )}
           <section className="champion-hero">
-            <img
-              src={selectedSkillSet?.classicSplash || championIcon(selectedChampion)}
-              alt={`${selectedChampion.name}${selectedSkillSet?.classicSplashName || "经典"}原画`}
+            <ChampionHeroImage
+              key={`${selectedChampion.classicId}-${selectedArtwork?.id || "fallback"}`}
+              champion={selectedChampion}
+              artwork={selectedArtwork}
             />
             <div className="hero-shade" />
             <div className="hero-content">
               <span className="eyebrow">CLASSIC · {selectedChampion.lane} · {selectedChampion.role}</span>
               <h1>{selectedChampion.name}<small>{selectedChampion.title}</small></h1>
+              {selectedChampion.aliases.length > 0 && (
+                <div className="hero-aliases"><span>玩家常用称呼</span>{selectedChampion.aliases.map((alias) => <b key={alias}>{alias}</b>)}</div>
+              )}
+              {selectedArtworks.length > 0 && (
+                <div className="hero-art-switcher" aria-label={`${selectedChampion.name}原画选择`}>
+                  <span>OP.GG 原画</span>
+                  {selectedArtworks.map((artwork) => (
+                    <button
+                      key={artwork.id}
+                      className={selectedArtwork?.id === artwork.id ? "active" : ""}
+                      onClick={() => {
+                        void preloadImage(artwork.imageUrl);
+                        setSelectedArtworkId(artwork.id);
+                      }}
+                      aria-pressed={selectedArtwork?.id === artwork.id}
+                    >
+                      {artwork.kind === "classic" ? "经典" : "默认"} · {artwork.name}
+                    </button>
+                  ))}
+                </div>
+              )}
               <p>完整经典目录已载入：符文 50 · 天赋 56 · 召唤师技能 16 · 装备 152</p>
             </div>
             <div className="hero-actions">
@@ -604,7 +920,16 @@ export default function Home() {
               ["masteries", "天赋"],
               ["build", "构筑"],
               ["ai", "AI"],
-            ] as const).map(([id, label]) => <button key={id} className={view === id ? "active" : ""} onClick={() => setView(id)}>{label}</button>)}
+            ] as const).map(([id, label]) => (
+              <button
+                key={id}
+                className={view === id ? "active" : ""}
+                onClick={() => changeView(id)}
+                onPointerDown={() => preloadWorkbenchAssets(id)}
+              >
+                {label}
+              </button>
+            ))}
           </div>
 
           {view === "runes" && (
@@ -621,7 +946,7 @@ export default function Home() {
 
               <div className="rune-workspace" data-guide="rune-editor">
                 <div className="rune-board-wrap">
-                  <div className="rune-board" style={{ backgroundImage: `url(${runeBoardBackground})` }}>
+                  <div className="rune-board" style={{ backgroundImage: `url(${localAssetUrl(runeBoardBackground)})` }}>
                     {runeSlotPositions.map(([left, top, width, height], index) => {
                       const assignment = runeAssignments[index];
                       const rune = assignment
@@ -642,7 +967,7 @@ export default function Home() {
                           onClick={() => setActiveRuneGroup(group.id)}
                           aria-label={`${index + 1}号${group.name}槽位${rune ? `：${rune.name}` : "：空"}`}
                         >
-                          {rune ? <img src={rune.icon} alt="" /> : <span>＋</span>}
+                          {rune ? <img src={localAssetUrl(rune.icon)} alt="" /> : <span>＋</span>}
                         </button>
                       );
                     })}
@@ -663,7 +988,7 @@ export default function Home() {
                       return (
                         <article className={count ? "rune-card active" : "rune-card"} key={rune.id}>
                           <button className="rune-main" onClick={() => fillRune(selectedRuneGroup, rune.id)}>
-                            <img src={rune.icon} alt="" />
+                            <img src={localAssetUrl(rune.icon)} alt="" />
                             <span><strong>{rune.name}</strong><small>{rune.value}</small></span>
                           </button>
                           <div className="rune-stepper">
@@ -688,7 +1013,7 @@ export default function Home() {
                 </div>
                 <div className="rune-recap">
                   {classicRuneGroups.flatMap((group) => group.runes.filter((rune) => runeCounts[rune.id]).map((rune) => (
-                    <span key={rune.id} style={{ "--recap-color": group.color } as React.CSSProperties}><img src={rune.icon} alt="" />{rune.name}<b>×{runeCounts[rune.id]}</b></span>
+                    <span key={rune.id} style={{ "--recap-color": group.color } as React.CSSProperties}><img src={localAssetUrl(rune.icon)} alt="" />{rune.name}<b>×{runeCounts[rune.id]}</b></span>
                   )))}
                 </div>
               </div>
@@ -710,7 +1035,7 @@ export default function Home() {
                 {(["进攻", "防御", "通用"] as const).map((tree) => (
                   <section className={`mastery-tree mastery-${tree}`} key={tree}>
                     <header><span>{tree}</span><b>{treeTotal(masteryRanks, tree)} 点</b></header>
-                    <div className="mastery-canvas" style={{ backgroundImage: `linear-gradient(rgba(5,8,12,.18), rgba(5,8,12,.5)), url(${masteryBackgrounds[tree]})` }}>
+                    <div className="mastery-canvas" style={{ backgroundImage: `linear-gradient(rgba(5,8,12,.18), rgba(5,8,12,.5)), url(${localAssetUrl(masteryBackgrounds[tree])})` }}>
                       {[1, 2, 3, 4, 5, 6].map((tier) => <span className="tier-rule" key={tier} style={{ gridRow: tier }}>{tier === 1 ? "起始" : `${(tier - 1) * 4}点`}</span>)}
                       {classicMasteries.filter((mastery) => mastery.tree === tree).map((mastery) => {
                         const rank = masteryRanks[mastery.id] || 0;
@@ -723,7 +1048,7 @@ export default function Home() {
                             title={`${mastery.name}：${mastery.description}`}
                           >
                             <button className="mastery-icon" onClick={() => adjustMastery(mastery, 1)} disabled={!unlocked && !rank}>
-                              <img src={mastery.icon.replace("_on.png", rank ? "_on.png" : "_off.png")} alt="" />
+                              <img src={localAssetUrl(mastery.icon.replace("_on.png", rank ? "_on.png" : "_off.png"))} alt="" />
                               <b>{rank}/{mastery.max}</b>
                             </button>
                             <div className="mastery-controls">
@@ -754,10 +1079,167 @@ export default function Home() {
                 <div className="simulator-actions"><b>{selectedChampion.name} · 主 {selectedChampion.spellOrder[0]} 副 {selectedChampion.spellOrder[1]}</b></div>
               </div>
 
+              <section className="build-section strategy-section">
+                <div className="subsection-title">
+                  <div>
+                    <h3>经典玩法攻略</h3>
+                    <p>按分路与流派切换；每套方案包含出门装、分档回城、符文、30 点天赋、召唤师技能、加点和完整成装路线。</p>
+                  </div>
+                  <span>{selectedGuides.length} 套可切换</span>
+                </div>
+                <div className="strategy-tabs" role="tablist" aria-label={`${selectedChampion.name}经典玩法`}>
+                  {selectedGuides.map((guide) => (
+                    <button
+                      key={guide.id}
+                      className={selectedGuide.id === guide.id ? "active" : ""}
+                      onClick={() => setSelectedGuideId(guide.id)}
+                      role="tab"
+                      aria-selected={selectedGuide.id === guide.id}
+                    >
+                      <span>{guide.lane}</span>
+                      <strong>{guide.name}</strong>
+                      <small>{guide.style}</small>
+                    </button>
+                  ))}
+                </div>
+                <div className="strategy-detail">
+                  <div className="strategy-summary">
+                    <span>当前方案</span>
+                    <h4>{selectedGuide.name}<small>{selectedGuide.lane} · {selectedGuide.style}</small></h4>
+                    <p>{selectedGuide.summary}</p>
+                    <div className="strategy-config">
+                      <span><b>符文</b>{selectedGuide.runeSummary}</span>
+                      <span><b>天赋</b>{selectedGuide.masteryPreset}</span>
+                      <span><b>召唤师技能</b>{selectedGuide.spellIds.map((id) => classicSpells.find((spell) => spell.id === id)?.name).join(" + ")}</span>
+                      <span><b>加点</b>主 {selectedGuide.skillOrder[0]} · 副 {selectedGuide.skillOrder[1]}</span>
+                    </div>
+                  </div>
+                  <div className="opening-groups">
+                    {([
+                      ["出门装", selectedGuide.startingItems],
+                      ["首次回城／早期补购", selectedGuide.earlyPurchases],
+                    ] as const).map(([label, guideItems]) => (
+                      <section key={label}>
+                        <header>
+                          <h5>{label}</h5>
+                          {label === "出门装" && (
+                            <b>{guideItems.reduce((sum, entry) => sum + (itemById.get(entry.itemId)?.price || 0) * entry.quantity, 0)} 金币</b>
+                          )}
+                        </header>
+                        <div className="opening-items">
+                          {guideItems.map((entry) => {
+                            const guideItem = itemById.get(entry.itemId);
+                            if (!guideItem) return null;
+                            return (
+                              <button
+                                key={`${label}-${entry.itemId}`}
+                                onClick={() => {
+                                  setInspectedItem(entry.itemId);
+                                  setItemCategory("全部");
+                                }}
+                                title={entry.note || guideItem.description}
+                              >
+                                <span><img src={localAssetUrl(guideItem.icon)} alt="" />{entry.quantity > 1 && <b>×{entry.quantity}</b>}</span>
+                                <strong>{guideItem.name}</strong>
+                                <small>{guideItem.price * entry.quantity} 金币</small>
+                                {entry.note && <em>{entry.note}</em>}
+                              </button>
+                            );
+                          })}
+                        </div>
+                      </section>
+                    ))}
+                  </div>
+                </div>
+                <div className="recall-route">
+                  <header>
+                    <div><span>回城购买路线</span><h4>按你回城时的实际金币选择，不必死等大件</h4></div>
+                    <b>{selectedGuide.recallPlan.length} 个金币档位</b>
+                  </header>
+                  <div className="recall-grid">
+                    {selectedGuide.recallPlan.map((step) => (
+                      <article key={`${selectedGuide.id}-${step.gold}`}>
+                        <div className="recall-budget"><strong>{step.gold}</strong><span>金币</span></div>
+                        <div className="recall-copy">
+                          <h5>{step.title}</h5>
+                          <div>
+                            {step.items.map((entry) => {
+                              const recallItem = itemById.get(entry.itemId);
+                              return recallItem ? (
+                                <button key={`${step.gold}-${entry.itemId}`} onClick={() => setInspectedItem(entry.itemId)} title={recallItem.description}>
+                                  <img src={localAssetUrl(recallItem.icon)} alt="" />
+                                  <span>{recallItem.name}{entry.quantity > 1 ? ` ×${entry.quantity}` : ""}</span>
+                                </button>
+                              ) : null;
+                            })}
+                          </div>
+                          <p>{step.purpose}</p>
+                        </div>
+                      </article>
+                    ))}
+                  </div>
+                </div>
+                <div className="build-route">
+                  <header>
+                    <div><span>完整出装路线</span><h4>前期组件 → 中期强势点 → 后期六格</h4></div>
+                    <b>备选 {selectedGuide.situationalItems.length} 件</b>
+                  </header>
+                  <div className="build-phase-grid">
+                    {selectedGuide.buildPhases.map((phase, phaseIndex) => (
+                      <article key={phase.title}>
+                        <span>{String(phaseIndex + 1).padStart(2, "0")}</span>
+                        <h5>{phase.title}</h5>
+                        <div>
+                          {phase.items.map((id) => {
+                            const phaseItem = itemById.get(id);
+                            return phaseItem ? (
+                              <button key={`${phase.title}-${id}`} onClick={() => setInspectedItem(id)} title={`${phaseItem.name} · ${phaseItem.price} 金币`}>
+                                <img src={localAssetUrl(phaseItem.icon)} alt="" />
+                                <small>{phaseItem.name}</small>
+                              </button>
+                            ) : null;
+                          })}
+                        </div>
+                        <p>{phase.note}</p>
+                      </article>
+                    ))}
+                  </div>
+                  <div className="situational-items">
+                    <span>局势替换</span>
+                    {selectedGuide.situationalItems.map((id) => {
+                      const situationalItem = itemById.get(id);
+                      return situationalItem ? (
+                        <button key={id} onClick={() => setInspectedItem(id)}>
+                          <img src={localAssetUrl(situationalItem.icon)} alt="" />
+                          <span><strong>{situationalItem.name}</strong><small>{situationalItem.price} 金币</small></span>
+                        </button>
+                      ) : null;
+                    })}
+                  </div>
+                </div>
+                <div className="guide-gameplan">
+                  {selectedGuide.gamePlan.map((paragraph, index) => (
+                    <article key={paragraph}><span>{["前期", "中期", "后期"][index]}</span><p>{paragraph}</p></article>
+                  ))}
+                </div>
+                <div className="strategy-footer">
+                  <p>
+                    {selectedGuide.sourceNote} 出门预算按 475 金币校验；多兰叠出只会显示在回城路线。
+                    <span>
+                      {[...classicGuideSources, ...selectedGuide.sourceUrls.map((url) => ({ label: "当前路线原始资料", url }))]
+                        .filter((source, index, all) => all.findIndex((entry) => entry.url === source.url) === index)
+                        .map((source) => <a key={source.url} href={source.url} target="_blank" rel="noreferrer">{source.label}</a>)}
+                    </span>
+                  </p>
+                  <button onClick={() => applyClassicGuide(selectedGuide)}>一键应用完整方案</button>
+                </div>
+              </section>
+
               <section className="build-section skill-section">
                 <div className="subsection-title"><div><h3>英雄技能与加点</h3><p>点击被动或 Q/W/E/R 查看逐级伤害公式、冷却、消耗和施法距离；加点仍会校验等级上限。</p></div><span>5 技能 · 18 级</span></div>
                 {selectedSkillSet ? (
                   <ChampionAbilityPanel
+                    key={selectedSkillSet.championId}
                     skillSet={selectedSkillSet}
                     activeKey={inspectedAbility}
                     onSelect={setInspectedAbility}
@@ -781,7 +1263,7 @@ export default function Home() {
                 <div className="spell-grid">
                   {classicSpells.map((spell) => (
                     <button className={selectedSpells.includes(spell.id) ? "spell-card active" : "spell-card"} key={spell.id} onClick={() => toggleSpell(spell.id)} aria-pressed={selectedSpells.includes(spell.id)}>
-                      <img src={spell.icon} alt="" />
+                      <img src={localAssetUrl(spell.icon)} alt="" />
                       <span><strong>{spell.name}</strong><small>冷却 {spell.cooldown} 秒</small><em>{spell.description}</em></span>
                       {selectedSpells.includes(spell.id) && <i>✓</i>}
                     </button>
@@ -797,7 +1279,7 @@ export default function Home() {
                     return (
                       <button className={activeItemSlot === index ? "item-slot active" : "item-slot"} key={`${id}-${index}`} onClick={() => { setActiveItemSlot(index); setInspectedItem(id); }}>
                         <span>{index + 1}</span>
-                        {item ? <img src={item.icon} alt="" /> : <div className="empty-item">＋</div>}
+                        {item ? <img src={localAssetUrl(item.icon)} alt="" /> : <div className="empty-item">＋</div>}
                         <strong>{item?.name || "空装备槽"}</strong>
                         <small>{item ? `${item.price} 金币` : "点击后选择装备"}</small>
                       </button>
@@ -836,7 +1318,7 @@ export default function Home() {
                         onClick={() => setInspectedItem(item.id)}
                         aria-pressed={inspectedItem === item.id}
                       >
-                        <img src={item.icon} alt="" />
+                        <img src={localAssetUrl(item.icon)} alt="" />
                         <span><strong>{item.name}</strong><small>{item.price} 金币</small><em>点击查看详情</em></span>
                         {items.includes(item.id) && <i>已装备</i>}
                       </button>
@@ -862,27 +1344,121 @@ export default function Home() {
           {view === "ai" && (
             <section className="simulator-page ai-page" data-guide="ai-assistant">
               <div className="simulator-heading">
-                <div><span>04</span><div><h2>AI 构筑助手</h2><p>当前检查版使用已核验的 Classic 目录与本地规则生成草案；联网检索后端将在下一阶段接入。</p></div></div>
-                <div className="simulator-actions"><b className="honesty-badge">数据目录已核验 · 建议逻辑为演示</b></div>
+                <div><span>04</span><div><h2>Classic 智能构筑助手</h2><p>依据当前 OP.GG Classic 数据快照、英雄定位和你的作战偏好生成可继续编辑的完整方案。</p></div></div>
+                <div className="simulator-actions"><b className="honesty-badge">规则透明 · 不混入正式服数据</b></div>
               </div>
               <div className="ai-composer">
                 <div className="ai-orb">✦</div>
                 <div className="ai-copy">
                   <span>RIFT INTELLIGENCE</span>
-                  <h3>为 {selectedChampion.name} 生成经典构筑草案</h3>
-                  <p>会统一写入符文、30 点天赋、召唤师技能、18 级加点和六格 Classic 出装，不会混入正式服装备。</p>
+                  <h3>为 {selectedChampion.name}{selectedChampion.aliases.length > 0 ? `（${selectedChampion.aliases.join("／")}）` : ""}生成经典方案</h3>
+                  <p>AI 会先在当前英雄的已核验流派中匹配，再统一写入出门装、符文、30 点天赋、召唤师技能、18 级加点、回城路线、六格出装与备选装备。</p>
+                  <div className="ai-profile-grid" aria-label="方案策略">
+                    {aiProfiles.map((profile) => (
+                      <button
+                        key={profile.id}
+                        className={aiProfile === profile.id ? "active" : ""}
+                        onClick={() => {
+                          setAiProfile(profile.id);
+                          setAiState("idle");
+                          setAiRecommendation(null);
+                          setPrompt(`${profile.label}；${profile.detail}；只使用 OP.GG Classic ${CLASSIC_PATCH} 目录。`);
+                        }}
+                        aria-pressed={aiProfile === profile.id}
+                      >
+                        <strong>{profile.label}</strong><small>{profile.detail}</small>
+                      </button>
+                    ))}
+                  </div>
                   <textarea value={prompt} onChange={(event) => setPrompt(event.target.value)} aria-label="AI 构筑偏好" />
+                  <div className="ai-route-chips" aria-label={`${selectedChampion.name}可用流派`}>
+                    <span>直接指定流派</span>
+                    {selectedGuides.map((guide) => (
+                      <button
+                        key={guide.id}
+                        onClick={() => {
+                          setPrompt(`${guide.name}；${guide.lane}；${guide.style}；需要完整出门、回城金币节点、符文、天赋、召唤师技能、加点和六格出装。`);
+                          setAiState("idle");
+                          setAiRecommendation(null);
+                        }}
+                      >
+                        {guide.name}
+                      </button>
+                    ))}
+                  </div>
                   <div className="prompt-chips">
-                    {["对线压制", "稳健防御", "团战优先", "新手友好"].map((chip) => <button key={chip} onClick={() => setPrompt(`${chip}；只使用 OP.GG Classic 16.15 目录。`)}>＋ {chip}</button>)}
+                    {["水晶瓶续航", "暴击流", "攻速特效", "AP 爆发", "对线压制", "团战优先", "新手友好"].map((chip) => <button key={chip} onClick={() => setPrompt((current) => `${current.replace(/[；。]\s*$/, "")}；${chip}。`)}>＋ {chip}</button>)}
                   </div>
                   <button className="generate-button" onClick={generateBuild} disabled={aiState === "working"}>{aiState === "working" ? "正在组合经典数据…" : aiState === "ready" ? "重新生成方案" : "生成完整方案"}<span>→</span></button>
                 </div>
                 <aside className={`ai-status ${aiState}`}>
-                  <h4>生成清单</h4>
+                  <h4>数据校验清单</h4>
                   {["英雄与位置", "50 个符文目录", "56 节点天赋树", "16 个召唤师技能", "152 件经典装备"].map((label, index) => <div key={label}><i>{aiState === "ready" || (aiState === "working" && index < 3) ? "✓" : "○"}</i><span>{label}</span></div>)}
-                  <p>{aiState === "ready" ? "草案已写入，可到各模拟器继续手动微调。" : "生成过程只使用已载入的 Classic 数据快照。"}</p>
+                  <p>{aiState === "ready" ? "方案已写入，可到各模拟器继续手动微调。" : "生成过程只读取本站已校验的 Classic 数据快照，不会要求登录。"}</p>
                 </aside>
               </div>
+              {aiRecommendation && (
+                <section className="ai-result" aria-live="polite">
+                  <header>
+                    <div><span>已生成</span><h3>{aiRecommendation.title}</h3></div>
+                    <button onClick={() => changeView("build")}>查看并微调构筑 →</button>
+                  </header>
+                  <p>{aiRecommendation.rationale}</p>
+                  <div className="ai-result-grid">
+                    <div><span>符文方向</span><strong>{aiRecommendation.runeSummary}</strong></div>
+                    <div><span>天赋与加点</span><strong>{aiRecommendation.masteryPreset} · 主 {aiRecommendation.skillOrder[0]} 副 {aiRecommendation.skillOrder[1]}</strong></div>
+                    <div><span>召唤师技能</span><strong>{aiRecommendation.spellIds.map((id) => classicSpells.find((spell) => spell.id === id)?.name).filter(Boolean).join(" + ")}</strong></div>
+                  </div>
+                  <div className="ai-purchase-plan">
+                    <section>
+                      <h4>出门装</h4>
+                      <div>
+                        {aiRecommendation.startingItems.map((entry) => {
+                          const startItem = itemById.get(entry.itemId);
+                          return startItem ? (
+                            <button key={entry.itemId} onClick={() => { setInspectedItem(entry.itemId); changeView("build"); }}>
+                              <img src={localAssetUrl(startItem.icon)} alt="" />
+                              <span><strong>{startItem.name}{entry.quantity > 1 ? ` ×${entry.quantity}` : ""}</strong><small>{startItem.price * entry.quantity} 金币</small></span>
+                            </button>
+                          ) : null;
+                        })}
+                      </div>
+                    </section>
+                    <section>
+                      <h4>回城金币路线</h4>
+                      <div className="ai-recall-list">
+                        {aiRecommendation.recallPlan.map((step) => (
+                          <button key={step.gold} onClick={() => changeView("build")}>
+                            <strong>{step.gold} 金币</strong><span>{step.title}</span><small>{step.purpose}</small>
+                          </button>
+                        ))}
+                      </div>
+                    </section>
+                    <section>
+                      <h4>六格成装</h4>
+                      <div>
+                        {aiRecommendation.coreItems.map((id) => {
+                          const coreItem = itemById.get(id);
+                          return coreItem ? (
+                            <button key={id} onClick={() => { setInspectedItem(id); changeView("build"); }}>
+                              <img src={localAssetUrl(coreItem.icon)} alt="" />
+                              <span><strong>{coreItem.name}</strong><small>{coreItem.price} 金币</small></span>
+                            </button>
+                          ) : null;
+                        })}
+                      </div>
+                    </section>
+                  </div>
+                  <div className="ai-alternatives">
+                    <span>备选传说装备</span>
+                    {aiRecommendation.alternatives.length ? aiRecommendation.alternatives.map((id) => {
+                      const item = itemById.get(id);
+                      return item ? <button key={id} onClick={() => { setInspectedItem(id); changeView("build"); }}><img src={localAssetUrl(item.icon)} alt="" /><span><strong>{item.name}</strong><small>{item.price} 金币 · 点击查看合成树</small></span></button> : null;
+                    }) : <small>当前策略暂无额外备选。</small>}
+                  </div>
+                  <footer>来源：OP.GG Classic {CLASSIC_PATCH} 本地校验快照 · 方案引擎：位置、职业、装备属性标签与用户偏好规则</footer>
+                </section>
+              )}
               <div className="source-strip">
                 <a href="https://op.gg/zh-cn/lol/classic/runes" target="_blank" rel="noreferrer"><b>OP</b><span>经典符文模拟器<small>50 个符文 · 9/9/9/3</small></span></a>
                 <a href="https://op.gg/zh-cn/lol/classic/masteries" target="_blank" rel="noreferrer"><b>OP</b><span>经典天赋模拟器<small>56 个节点 · 30 点</small></span></a>
@@ -901,7 +1477,7 @@ export default function Home() {
         open={guideOpen}
         step={guideStep}
         onStepChange={setGuideStep}
-        onViewChange={setView}
+        onViewChange={changeView}
         onDismiss={dismissGuide}
         onComplete={completeGuide}
       />

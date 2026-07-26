@@ -47,19 +47,34 @@ export function extractBalancedArray(source, marker) {
   return extractBalanced(source, marker, "[", "]");
 }
 
-export async function fetchText(url, label, attempts = 3) {
+export const sleep = (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds));
+
+export async function fetchText(url, label, attempts = 4) {
   let lastError;
   for (let attempt = 1; attempt <= attempts; attempt += 1) {
     try {
       const response = await fetch(url, {
-        headers: { "user-agent": "RIFT-LAB-Classic-Data-Sync/2.0" },
-        signal: AbortSignal.timeout(25_000),
+        headers: {
+          "accept-language": "zh-CN,zh;q=0.9,en;q=0.7",
+          "user-agent": "RIFT-LAB-Classic-Data-Sync/2.1",
+        },
+        signal: AbortSignal.timeout(30_000),
       });
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      if (!response.ok) {
+        const error = new Error(`HTTP ${response.status}`);
+        const retryAfter = Number(response.headers.get("retry-after"));
+        error.retryAfter = Number.isFinite(retryAfter) ? retryAfter * 1000 : 0;
+        throw error;
+      }
       return await response.text();
     } catch (error) {
       lastError = error;
-      if (attempt < attempts) await new Promise((resolve) => setTimeout(resolve, 500 * attempt));
+      if (attempt < attempts) {
+        const backoff = Math.min(8_000, 750 * (2 ** (attempt - 1)));
+        const delay = Math.max(error.retryAfter || 0, backoff + Math.floor(Math.random() * 350));
+        console.warn(`${label}: retry ${attempt + 1}/${attempts} in ${delay}ms (${error.message})`);
+        await sleep(delay);
+      }
     }
   }
   throw new Error(`${label}: ${lastError?.message || lastError}`);

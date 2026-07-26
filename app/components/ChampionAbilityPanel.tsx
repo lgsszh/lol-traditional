@@ -4,6 +4,7 @@ import type {
   ClassicAbilityKey,
   ClassicChampionSkillSet,
 } from "../classic-skills.generated";
+import { localAssetUrl } from "../classic-assets";
 
 type Props = {
   skillSet: ClassicChampionSkillSet;
@@ -32,7 +33,7 @@ export default function ChampionAbilityPanel({ skillSet, activeKey, onSelect }: 
             role="tab"
             aria-selected={entry.key === ability.key}
           >
-            <img src={entry.icon} alt="" />
+            <img key={entry.icon} src={localAssetUrl(entry.icon)} alt="" decoding="sync" />
             <span><b>{entry.key}</b><strong>{entry.name}</strong></span>
           </button>
         ))}
@@ -40,7 +41,7 @@ export default function ChampionAbilityPanel({ skillSet, activeKey, onSelect }: 
 
       <article className="ability-detail" role="tabpanel">
         <div className="ability-heading">
-          <img src={ability.icon} alt="" />
+          <img key={ability.icon} src={localAssetUrl(ability.icon)} alt="" decoding="sync" />
           <div>
             <span>{ability.key === "P" ? "被动技能" : `${ability.key} · 主动技能`}</span>
             <h4>{ability.name}</h4>

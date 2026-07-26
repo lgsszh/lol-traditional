@@ -2,6 +2,7 @@
 
 import { classicItemRecipes } from "../classic-item-recipes.generated";
 import { classicItems, type ClassicItem } from "../classic-items.generated";
+import { localAssetUrl } from "../classic-assets";
 
 type Props = {
   itemId: string;
@@ -48,7 +49,7 @@ function RecipeTreeNode({ item, path, depth, onInspect }: TreeNodeProps) {
         onClick={() => onInspect(item.id)}
         aria-label={`查看${item.name}，${item.price}金币`}
       >
-        <img src={item.icon} alt="" />
+        <img src={localAssetUrl(item.icon)} alt="" />
         <span><strong>{item.name}</strong><small>{item.price} 金币</small></span>
       </button>
       {components.length > 0 && (
@@ -79,7 +80,7 @@ export default function ItemDetailPanel({ itemId, activeSlot, onInspect, onEquip
   return (
     <aside className="item-detail">
       <header>
-        <img src={item.icon} alt="" />
+        <img src={localAssetUrl(item.icon)} alt="" />
         <div>
           <span>{item.category}</span>
           <h4>{item.name}</h4>
@@ -113,7 +114,7 @@ export default function ItemDetailPanel({ itemId, activeSlot, onInspect, onEquip
           </>
         ) : (
           <div className="recipe-purchase">
-            <img src={item.icon} alt="" />
+            <img src={localAssetUrl(item.icon)} alt="" />
             <p><b>商店直接购买</b><span>无需前置组件，花费 {item.price} 金币。</span></p>
           </div>
         )}
@@ -129,7 +130,7 @@ export default function ItemDetailPanel({ itemId, activeSlot, onInspect, onEquip
           <div className="upgrade-list">
             {upgrades.map((upgrade) => upgrade && (
               <button key={upgrade.id} onClick={() => onInspect(upgrade.id)}>
-                <img src={upgrade.icon} alt="" />
+                <img src={localAssetUrl(upgrade.icon)} alt="" />
                 <span>{upgrade.name}<small>{upgrade.price} 金币</small></span>
               </button>
             ))}

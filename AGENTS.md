@@ -13,6 +13,12 @@ status labels:
     retried.
   - Always include the current retry count, for example `重试 2/5`.
   - Briefly identify the failed service or request and the next recovery step.
+  - Only use this status for a required, in-scope request whose failure blocks
+    or degrades the requested project work (for example, an OP.GG data sync).
+  - Do not use this status for optional analytics or telemetry, browser-tool
+    session cleanup, a stale tab, or a wrapper timeout after the target page has
+    already loaded successfully. Report those as `🟡 正在工作` only when they
+    materially affect the current validation; otherwise continue silently.
 - `🟡 正在工作`
   - Use while analyzing, reading files, inspecting data, researching, or doing
     long-running reasoning.
