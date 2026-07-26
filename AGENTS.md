@@ -54,3 +54,86 @@ status labels:
   the user to understand what is happening without reading command output.
 - Final responses must remain self-contained even when progress updates were
   sent earlier.
+
+## 项目现状与工程约定
+
+### 二、项目现状（v0.3.1）
+
+- 站点名：**英雄联盟怀旧服攻略介绍**（原 RIFT//LAB，已全量更名；代码/测试中不允许再出现 RIFT//LAB 字样，rendered-html 测试会拦截）。
+- 线上地址：https://lgsszh.github.io/lol-traditional/ （GitHub Pages，项目页）。
+- 内容规模：60 位英雄、242 套 S3（2012–2013）考据玩法方案、152 件装备、50 符文、56 天赋、16 召唤师技能。
+- 版本：package.json `0.3.1`；Git 标签 v0.1.0 / v0.2.0 / v0.3.0 / v0.3.1 均有对应 GitHub Release。
+- 界面：OP.GG 风格蓝色系（强调色 `#5383e8`），每个英雄保留专属主题色（`--champion-accent`，来自 classic-data 的 accent 字段，不要统一掉）。
+- 英雄直达链接：`#champion=<key小写>`（如 `#champion=ezreal`）直接打开该英雄出装页；`#build=` 是完整构筑分享链接，两者互斥，别破坏。
+
+### 三、部署与 CI（最重要，改坏了网站就挂）
+
+`.github/workflows/` 有两个工作流：
+
+**1. deploy-pages.yml —— 部署（push 到 main 即触发）**
+流程：checkout → Node 22 + npm 缓存 → `npm ci` → **`npm test`（部署门禁，任何测试失败都不会发布）** → `npm run build:pages`（静态导出，env：`RIFT_STATIC_EXPORT=1`、`NEXT_PUBLIC_BASE_PATH=/lol-traditional`、`NEXT_PUBLIC_SITE_URL=https://lgsszh.github.io/lol-traditional/`）→ 冒烟检查（out/index.html 必须包含 `/lol-traditional/_next/` 和 `/lol-traditional/classic-cache/`）→ configure-pages（enablement:true）→ deploy-pages。
+
+铁律：
+- **basePath 必须等于仓库名**。若将来改仓库名，必须同步改：workflow 两个 env、README 全部链接、package.json homepage、layout.tsx 默认 siteUrl。
+- `npm ci` 要求 package.json 与 package-lock.json 的**根版本号一致**。升版本时两处都要改（lock 前 12 行内有两处 `"version"`），否则 CI 直接 EUSAGE 失败。
+
+**2. sync-classic-data.yml —— 每日数据同步（UTC 04:20）**
+流程：`npm run roster:check`（比对 OP.GG Classic 英雄名单，英雄增减/ID 变化即失败）→ `npm run data:update`（重抓数据+镜像图片）→ `npm test` → 只提交 4 个 `*.generated.ts` + `public/classic-cache/`。
+**任何一步失败会自动创建带 `classic-sync` 标签的 GitHub Issue**。设计意图：数值/技能/装备变化自动上线；英雄名单变化必须人工处理（因为 classic-data.ts 的定位/外号、classic-researched-guides.ts 的玩法是手工考据，机器不能瞎编）。
+
+### 四、数据架构（谁生成、谁手写、谁不能碰）
+
+| 文件 | 性质 | 说明 |
+| --- | --- | --- |
+| app/classic-data.ts | 手写 | 60 英雄目录（classicId/key/分路/职业/原型/外号/主题色/默认加点）、符文/天赋/召唤师技能目录、**5 套天赋预设**（攻21防9、攻21通9、防21通9、防21攻9、通21防9，均为合法 30 点）、runePresetIds |
+| app/classic-researched-guides.ts | 生成后手维护 | 113 套 S3 考据玩法（每套含逐格符文页 runePreset、天赋预设、召唤师技能、加点、≤475 金出门装、4 档回城路线、六格出装、前中后期打法、来源 URL）。**装备/符文/技能全部用 ID，不要手改 ID**；新增方案照现有结构写并跑测试验证 |
+| app/classic-build-guides.ts | 手写 | 方案组装逻辑：primary（primaryOverrides）+ researched + specialProfiles（潘森水晶瓶、蓝EZ、韩式/传统薇恩、AD豹女、攻速提莫、代理炼金、剑圣暴击/攻速）+ safeProfile，按 name-lane-style 去重 → 242 套 |
+| app/*.generated.ts（4 个）+ public/classic-cache/ | 机器生成 | **绝不手改**，由 `npm run data:update` / `assets:update` 再生 |
+| app/page.tsx | 手写 | 主页面（约 1600 行，拆分是已知的将来任务）；ChampionAbilityPanel / ItemDetailPanel / HelpDrawer / OnboardingGuide 已拆到 app/components/（后两个懒加载） |
+
+关键不变量：**每套方案的 runeSummary 文字必须与 runePreset 逐格一致、masteryPreset 必须是 30 点合法预设**——「一键应用」和 AI 助手写入面板的就是这些字段，测试逐格校验，文字和面板不同步会直接测挂。
+
+### 五、测试契约（改功能前先看会不会踩线）
+
+`npm test` = assets:check → node --test（champion-search + classic-detail-data）→ vinext build → rendered-html 测试。
+
+- tests/classic-detail-data.test.mjs：每英雄 ≥3 套方案、六格恰好 6 件、出门装 ≤475 金、回城 ≥4 档、总方案数 ≥240、符文预设逐格有效、天赋 30 点、文字与预设同步、每英雄至少 1 套非 op.gg 来源的方案；并钉死了招牌玩法（潘森水晶瓶+双蓝药、剑圣暴击/攻速/AP 三流派、蓝EZ 773004+773025、韩式薇恩主W/传统主Q、AD豹女、攻速提莫、代理炼金鬼步+传送）。**删改这些英雄的方案前先看测试**。
+- tests/champion-search.test.mjs：钉死了部分外号（薇恩 VN、盖伦、贾克斯「武器」、提莫「提百万/提莫队长」、莫甘娜「堕天使」、奥拉夫/卡萨丁留空等）。外号已全量网络核对过，改动需有据。
+- tests/rendered-html.test.mjs：SSR 必须含「英雄联盟怀旧服攻略介绍」，**不得**含 RIFT//LAB。
+- classic-detail-data 里还有对 page.tsx / components / scripts 的**源码正则断言**（如 preloadWorkbenchAssets、localAssetUrl、applyClassicGuide、经典玩法攻略、一键应用完整方案等标识符和文案）——重命名这些东西必须同步改测试。
+
+### 六、本地环境陷阱（Windows，历史踩坑记录）
+
+- npm 直连 registry.npmjs.org 常超时：用 `npm install --registry=https://registry.npmmirror.com`；改动依赖后如 CI 报 `npm ci` 缺 @emnapi/* → 删 node_modules + lock 完整重装（Windows 增量安装会剪掉跨平台可选依赖）。
+- git 推拉 github.com 需借系统代理：`git config --global http.https://github.com.proxy <系统代理>` 已配置过；网络失败重试即可，遇到真 rebase 冲突再处理。
+- **先 commit 再 `git pull --rebase`**（CRLF 漂移会让工作区显示为脏，rebase 拒绝执行）。
+- PowerShell 5.1 写文件默认带 BOM：改 package.json / package-lock.json 必须用无 BOM UTF-8（vitefu 直接 JSON.parse，带 BOM 就炸）。
+- tsconfig 已开 allowImportingTsExtensions（源码里 `import x from "./y.ts"` 是刻意的，别"修"掉后缀）。
+
+### 七、不要动的东西
+
+- `build/`、`worker/`、`.openai/`：看着像杂物，但 vite.config.ts 直接引用（worker/index.ts 是构建入口），删了构建就挂。
+- `public/classic-cache/`：哈希命名的图片镜像，与 classic-assets.generated.ts 的审计一一对应。
+- 已发布的 git 标签和 Release。
+- `#build=` / `#champion=` 两种 hash 语义。
+
+### 八、发版流程（照做即可）
+
+1. 改代码 → 本地 `npm test` 全绿；
+2. 升 package.json 版本 + 同步 package-lock 根版本（两处）+ CHANGELOG.md 加条目；
+3. commit → `git pull --rebase origin main` → push（CI 自动测试并部署）；
+4. Actions 跑绿后：`git tag -a vX.Y.Z -m "..."` → `git push origin vX.Y.Z` → GitHub 上从该标签发 Release（正文抄 CHANGELOG 对应段落）；
+5. 强刷 https://lgsszh.github.io/lol-traditional/ 验证。
+
+### 九、常用命令
+
+```
+npm run dev            # 本地开发（vinext）
+npm test               # 完整测试（部署门禁同款）
+npm run typecheck      # tsc --noEmit
+npm run build:pages    # Pages 静态导出（CI 用）
+npm run data:update    # 重抓 OP.GG/Riot 数据 + 更新图片镜像
+npm run data:check     # 校验数据快照无漂移
+npm run roster:check   # 校验英雄名单与 OP.GG 一致
+npm run assets:update  # 仅更新图片镜像与审计清单
+```
