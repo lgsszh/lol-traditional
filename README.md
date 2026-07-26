@@ -8,7 +8,7 @@
 
 公开网站：
 
-<https://lgsszh.github.io/rift-lab-classic/>
+<https://lgsszh.github.io/lol-traditional/>
 
 普通用户不需要安装 Node.js，也不需要打开命令行窗口。首次进入网站会
 显示新手指引；之后可点击右上角“使用帮助”重新查看。

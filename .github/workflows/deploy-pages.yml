@@ -14,11 +14,6 @@ concurrency:
   group: pages
   cancel-in-progress: true
 
-env:
-  RIFT_STATIC_EXPORT: "1"
-  NEXT_PUBLIC_BASE_PATH: /rift-lab-classic
-  NEXT_PUBLIC_SITE_URL: https://lgsszh.github.io/rift-lab-classic/
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -32,8 +27,20 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci
+      - name: Run tests
+        run: npm test
       - name: Build static website
         run: npm run build:pages
+        env:
+          RIFT_STATIC_EXPORT: "1"
+          # GitHub 项目站点的访问路径必须与仓库名一致。
+          NEXT_PUBLIC_BASE_PATH: /lol-traditional
+          NEXT_PUBLIC_SITE_URL: https://lgsszh.github.io/lol-traditional/
+      - name: Verify static export uses the repository base path
+        run: |
+          test -f out/index.html
+          grep -q "/lol-traditional/_next/" out/index.html
+          grep -q "/lol-traditional/classic-cache/" out/index.html
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload website artifact

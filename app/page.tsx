@@ -353,6 +353,7 @@ export default function Home() {
   const [sharedBuildLoaded, setSharedBuildLoaded] = useState(false);
   const championSearchRef = useRef<HTMLInputElement>(null);
   const aiRequestId = useRef(0);
+  const toastTimer = useRef(0);
   const changeView = useCallback((nextView: WorkbenchView) => {
     void preloadWorkbenchAssets(nextView);
     setView(nextView);
@@ -410,8 +411,9 @@ export default function Home() {
   const selectedGuide = selectedGuides.find((guide) => guide.id === selectedGuideId) || selectedGuides[0];
 
   const showToast = (message: string) => {
+    window.clearTimeout(toastTimer.current);
     setToast(message);
-    window.setTimeout(() => setToast(""), 2600);
+    toastTimer.current = window.setTimeout(() => setToast(""), 2600);
   };
 
   useEffect(() => {
@@ -693,8 +695,13 @@ export default function Home() {
     });
     const url = `${window.location.origin}${window.location.pathname}#build=${payload}`;
     window.history.replaceState(null, "", url);
-    await navigator.clipboard?.writeText(url);
-    showToast("无需登录的构筑链接已复制");
+    try {
+      if (!navigator.clipboard) throw new Error("clipboard unavailable");
+      await navigator.clipboard.writeText(url);
+      showToast("无需登录的构筑链接已复制");
+    } catch {
+      showToast("链接已写入地址栏，请手动复制");
+    }
   };
 
   const generateBuild = () => {

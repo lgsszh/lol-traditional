@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const dynamic = "force-static";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://rift-lab-classic.lgss03-0419.chatgpt.site/";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://lgsszh.github.io/lol-traditional/";
 const metadataBase = new URL(siteUrl.endsWith("/") ? siteUrl : `${siteUrl}/`);
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
