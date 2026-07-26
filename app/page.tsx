@@ -1160,7 +1160,7 @@ export default function Home() {
                 <div className="subsection-title">
                   <div>
                     <h3>经典玩法攻略</h3>
-                    <p>按分路与流派切换；每套方案包含出门装、分档回城、符文、30 点天赋、召唤师技能、加点和完整成装路线。</p>
+                    <p>点击方案卡即整体切换——符文、天赋、召唤师技能、加点与六格出装同步应用该方案；AI 生成的内容切换后即被替换。</p>
                   </div>
                   <span>{selectedGuides.length} 套可切换</span>
                 </div>
@@ -1178,7 +1178,7 @@ export default function Home() {
                             setGuideLaneFilter(lane);
                             const pool = lane === "全部" ? selectedGuides : selectedGuides.filter((guide) => guide.lane === lane);
                             if (!pool.some((guide) => guide.id === selectedGuide.id) && pool[0]) {
-                              setSelectedGuideId(pool[0].id);
+                              applyClassicGuide(pool[0]);
                             }
                           }}
                           aria-pressed={guideLaneFilter === lane}
@@ -1194,7 +1194,7 @@ export default function Home() {
                     <button
                       key={guide.id}
                       className={selectedGuide.id === guide.id ? "active" : ""}
-                      onClick={() => setSelectedGuideId(guide.id)}
+                      onClick={() => applyClassicGuide(guide)}
                       role="tab"
                       aria-selected={selectedGuide.id === guide.id}
                     >
