@@ -300,15 +300,15 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, a:focus-visib
 }
 .champion-row {
   width: 100%;
-  min-height: 62px;
+  min-height: 46px;
   display: grid;
-  grid-template-columns: 42px 1fr 16px;
+  grid-template-columns: 32px 1fr 13px;
   align-items: center;
-  gap: 11px;
+  gap: 9px;
   border: 1px solid transparent;
   border-radius: 5px;
   background: transparent;
-  padding: 7px 9px;
+  padding: 4px 8px;
   cursor: pointer;
   text-align: left;
 }
@@ -318,12 +318,12 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, a:focus-visib
   border-color: color-mix(in srgb, var(--champion-accent) 45%, var(--line));
   box-shadow: inset 3px 0 var(--champion-accent);
 }
-.champion-row img { width: 42px; height: 42px; border-radius: 4px; object-fit: cover; background: #2e2e36; }
-.champion-row > span { min-width: 0; display: flex; flex-direction: column; }
-.champion-row strong { font-size: 14px; }
-.champion-row small { color: #858898; font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.champion-row img { width: 32px; height: 32px; border-radius: 4px; object-fit: cover; background: #2e2e36; }
+.champion-row > span { min-width: 0; display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 6px; }
+.champion-row strong { font-size: 13px; }
+.champion-row small { color: #858898; font-size: 11px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .champion-row em {
-  margin-top: 2px;
+  flex-basis: 100%;
   color: color-mix(in srgb, var(--champion-accent) 72%, #8e909f);
   font-size: 10px;
   font-style: normal;
@@ -331,7 +331,7 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, a:focus-visib
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.champion-row i { color: #6b6d7c; font-style: normal; font-size: 13px; }
+.champion-row i { color: #6b6d7c; font-style: normal; font-size: 12px; }
 .champion-row.active i { color: var(--champion-accent); }
 
 .rail-footnote {
@@ -1091,28 +1091,60 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, a:focus-visib
   padding: 6px 11px;
   font-size: 12px;
 }
-.recall-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+/* 回城购买路线：OP.GG 式左→右时间轴，步骤编号 + 金币档位徽章 + 连接箭头 */
+.recall-grid { counter-reset: recall-step; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px 26px; }
 .recall-grid > article {
+  counter-increment: recall-step;
+  position: relative;
   min-width: 0;
   display: grid;
-  grid-template-columns: 76px minmax(0, 1fr);
-  gap: 13px;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 10px;
   border: 1px solid #373741;
   border-radius: 6px;
   background: #1d1d24;
   padding: 14px;
 }
+.recall-grid > article::before {
+  content: counter(recall-step);
+  position: absolute;
+  top: -11px;
+  left: 12px;
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #46639e;
+  border-radius: 50%;
+  background: #22293c;
+  color: #9bb8f4;
+  font-size: 12px;
+  font-weight: 800;
+}
+.recall-grid > article:not(:last-child)::after {
+  content: "›";
+  position: absolute;
+  top: 50%;
+  right: -22px;
+  transform: translateY(-50%);
+  color: #5383e8;
+  font-size: 22px;
+  font-weight: 700;
+}
 .recall-budget {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  border-right: 1px solid #3a3a44;
-  color: #7297e7;
-  text-align: center;
+  align-items: baseline;
+  gap: 7px;
+  padding: 4px 10px 5px;
+  border: 1px solid #3d5388;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(83, 131, 232, .16), #191c26);
+  color: #8fb0f0;
+  width: fit-content;
+  max-width: 100%;
 }
-.recall-budget strong { font-size: 17px; }
-.recall-budget span { margin-top: 2px; color: #9496a4; font-size: 11px; }
+.recall-budget strong { font-size: 15px; white-space: nowrap; }
+.recall-budget span { color: #9496a4; font-size: 11px; }
 .recall-copy { min-width: 0; }
 .recall-copy h5 { margin: 0 0 8px; font-size: 15px; }
 .recall-copy > div { display: flex; flex-wrap: wrap; gap: 6px; }
@@ -1967,4 +1999,25 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, a:focus-visib
 
 @media (prefers-reduced-motion: reduce) {
   * { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+}
+
+/* ---- v0.3.1 移动端补充与时间轴适配 ---- */
+@media (max-width: 900px) {
+  .recall-grid > article::after { content: none; }
+  .champion-row { flex: 0 0 168px; min-height: 46px; }
+  .active-guide-note { margin: 0 12px 12px; }
+  .strategy-lane-filter { padding: 12px 12px 0; }
+  .strategy-tabs { padding: 12px 12px 0; }
+  .strategy-detail { padding: 14px 12px; }
+}
+@media (max-width: 640px) {
+  .brand small { display: none; }
+  .brand strong { font-size: 15px; }
+  .brand-mark { width: 30px; height: 34px; font-size: 17px; }
+  .sync-status > span:not(.live-dot) small { display: none; }
+  .recall-grid { grid-template-columns: 1fr; gap: 18px; }
+  .active-guide-note b { margin-left: 0; }
+  .active-guide-note button { width: 100%; }
+  .opening-groups { grid-template-columns: 1fr; }
+  .build-phase-grid { grid-template-columns: 1fr; }
 }

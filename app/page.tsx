@@ -1,10 +1,12 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import HelpDrawer from "./components/HelpDrawer";
+import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import ChampionAbilityPanel from "./components/ChampionAbilityPanel";
 import ItemDetailPanel from "./components/ItemDetailPanel";
-import OnboardingGuide from "./components/OnboardingGuide";
+
+// 帮助抽屉与新手指引只在打开时才需要，懒加载让它们不占首屏体积。
+const HelpDrawer = lazy(() => import("./components/HelpDrawer"));
+const OnboardingGuide = lazy(() => import("./components/OnboardingGuide"));
 import {
   championMatchesFilters,
   laneFilterOptions,
@@ -227,6 +229,17 @@ function ChampionHeroImage({
   );
 }
 
+const normalizeGuideQuery = (value: string) =>
+  value.normalize("NFKC").toLocaleLowerCase().replace(/[\s·\-_/／]+/g, "");
+
+// 搜索词命中某英雄的玩法名／流派／标签时返回该玩法（如“韩式”→薇恩韩式破败）。
+function guideMatchFor(champion: ClassicChampion, rawQuery: string) {
+  const query = normalizeGuideQuery(rawQuery.trim());
+  if (query.length < 2) return undefined;
+  return classicBuildGuides[champion.classicId].find((guide) =>
+    normalizeGuideQuery(`${guide.name} ${guide.style} ${guide.tags.join(" ")}`).includes(query));
+}
+
 function runeCountsFromIds(preset: Record<ClassicRuneGroup["id"], string>): RuneCounts {
   const counts: RuneCounts = {};
   classicRuneGroups.forEach((group) => {
@@ -394,7 +407,8 @@ export default function Home() {
   }, [runeCounts]);
 
   const filteredChampions = useMemo(
-    () => classicChampions.filter((champion) => championMatchesFilters(champion, laneFilter, search)),
+    () => classicChampions.filter((champion) =>
+      championMatchesFilters(champion, laneFilter, search) || Boolean(guideMatchFor(champion, search))),
     [laneFilter, search],
   );
 
@@ -429,7 +443,27 @@ export default function Home() {
     try {
       const hash = window.location.hash.match(/build=([^&]+)/)?.[1];
       const hasSharedBuild = Boolean(hash);
-      const saved = hash ? decodeBuildState(hash) : JSON.parse(localStorage.getItem("rift-lab-classic-build") || "null");
+      const championHash = window.location.hash.match(/champion=([a-z0-9-]+)/i)?.[1]?.toLowerCase();
+      const linkedChampion = !hash && championHash
+        ? classicChampions.find((entry) => entry.key.toLowerCase() === championHash || entry.classicId === championHash)
+        : undefined;
+      if (linkedChampion) {
+        // 英雄直达链接：#champion=ezreal 直接打开该英雄的技能与出装页。
+        const recommendedItems = classicBuildPresets[linkedChampion.archetype];
+        // eslint-disable-next-line react-hooks/set-state-in-effect
+        setSelectedChampion(linkedChampion);
+        setSelectedArtworkId(classicSkillsByChampion.get(linkedChampion.classicId)?.artworks[0]?.id || "");
+        setSelectedGuideId(classicBuildGuides[linkedChampion.classicId][0].id);
+        setRuneCounts(createRunePreset(linkedChampion));
+        setMasteryRanks({ ...initialMasteryRanks });
+        setSelectedSpells(defaultSpellsFor(linkedChampion));
+        setItems(recommendedItems);
+        setInspectedItem(recommendedItems[0]);
+        setSkillPlan(skillPlanFor(linkedChampion.spellOrder));
+        setView("build");
+      }
+      const saved = linkedChampion ? null
+        : hash ? decodeBuildState(hash) : JSON.parse(localStorage.getItem("rift-lab-classic-build") || "null");
       if (saved) {
         const record = asRecord(saved);
         const champion = classicChampions.find((entry) => entry.classicId === record.championId) || classicChampions[0];
@@ -454,7 +488,7 @@ export default function Home() {
         setSkillPlan(isValidSkillPlan(record.skillPlan) ? record.skillPlan : skillPlanFor(champion.spellOrder));
       }
       setSharedBuildLoaded(hasSharedBuild);
-      if (!hasSharedBuild && !localStorage.getItem(GUIDE_STORAGE_KEY)) setGuideOpen(true);
+      if (!hasSharedBuild && !linkedChampion && !localStorage.getItem(GUIDE_STORAGE_KEY)) setGuideOpen(true);
     } catch {
       // Invalid local/share data is ignored so the simulator always remains usable.
     }
@@ -539,10 +573,12 @@ export default function Home() {
     // React batches this complete selection into one commit, so the hero name,
     // ability icons and build state can never represent different champions.
     const recommendedItems = classicBuildPresets[champion.archetype];
+    const matchedGuide = guideMatchFor(champion, search);
     setSelectedChampion(champion);
     setSelectedArtworkId(classicSkillsByChampion.get(champion.classicId)?.artworks[0]?.id || "");
-    setSelectedGuideId(classicBuildGuides[champion.classicId][0].id);
+    setSelectedGuideId((matchedGuide || classicBuildGuides[champion.classicId][0]).id);
     setGuideLaneFilter("全部");
+    window.history.replaceState(null, "", `#champion=${champion.key.toLowerCase()}`);
     setRuneCounts(createRunePreset(champion));
     setMasteryRanks({ ...initialMasteryRanks });
     setSelectedSpells(defaultSpellsFor(champion));
@@ -1563,19 +1599,27 @@ export default function Home() {
           </footer>
         </section>
       </div>
-      <OnboardingGuide
-        open={guideOpen}
-        step={guideStep}
-        onStepChange={setGuideStep}
-        onViewChange={changeView}
-        onDismiss={dismissGuide}
-        onComplete={completeGuide}
-      />
-      <HelpDrawer
-        open={helpOpen}
-        onClose={() => setHelpOpen(false)}
-        onReplay={replayGuide}
-      />
+      {guideOpen && (
+        <Suspense fallback={null}>
+          <OnboardingGuide
+            open={guideOpen}
+            step={guideStep}
+            onStepChange={setGuideStep}
+            onViewChange={changeView}
+            onDismiss={dismissGuide}
+            onComplete={completeGuide}
+          />
+        </Suspense>
+      )}
+      {helpOpen && (
+        <Suspense fallback={null}>
+          <HelpDrawer
+            open={helpOpen}
+            onClose={() => setHelpOpen(false)}
+            onReplay={replayGuide}
+          />
+        </Suspense>
+      )}
       {toast && <div className="toast" role="status" aria-live="polite"><span>✓</span>{toast}</div>}
     </main>
   );
