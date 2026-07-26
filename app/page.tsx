@@ -616,18 +616,12 @@ export default function Home() {
   }, []);
 
   const restoreRecommended = () => {
-    const recommendedItems = classicBuildPresets[selectedChampion.archetype];
-    setRuneCounts(createRunePreset(selectedChampion));
-    setMasteryRanks({ ...initialMasteryRanks });
-    setSelectedSpells(defaultSpellsFor(selectedChampion));
-    setItems(recommendedItems);
-    setInspectedItem(recommendedItems[0]);
-    setInspectedAbility("Q");
-    setSkillPlan(skillPlanFor(selectedChampion.spellOrder));
-    setActiveItemSlot(0);
-    setAiState("idle");
-    setAiRecommendation(null);
-    showToast("已恢复当前英雄的完整推荐方案");
+    // 「恢复推荐」＝回到该英雄的原始方案（攻略区第一套），并把符文、天赋、
+    // 召唤师技能、加点与六格出装整体重置为该方案的内容，保持面板与攻略同步。
+    const primaryGuide = classicBuildGuides[selectedChampion.classicId][0];
+    setGuideLaneFilter("全部");
+    applyClassicGuide(primaryGuide);
+    showToast(`已恢复 ${selectedChampion.name} 的原始推荐方案「${primaryGuide.name}」`);
   };
 
   const applyClassicGuide = (guide: ClassicBuildVariant) => {
