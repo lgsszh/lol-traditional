@@ -829,8 +829,8 @@ export default function Home() {
       <a className="skip-link" href="#builder-content">跳到构筑内容</a>
       <header className="topbar">
         <button className="brand" onClick={() => changeView("runes")} aria-label="返回符文模拟器">
-          <span className="brand-mark">R</span>
-          <span><strong>RIFT<span>{"//"}</span>LAB</strong><small>怀旧服构筑工作台</small></span>
+          <span className="brand-mark">怀</span>
+          <span><strong>英雄联盟怀旧服攻略介绍</strong><small>玩法 · 出装 · 符文 · 天赋 全同步工作台</small></span>
         </button>
         <nav className="main-nav" aria-label="构筑功能" data-guide="module-nav">
           {([
@@ -1340,6 +1340,29 @@ export default function Home() {
 
               <section className="build-section item-section">
                 <div className="subsection-title"><div><h3>经典装备商店与合成树</h3><p>按装备等级、属性和关键词筛选；点击任意装备查看完整游戏式合成路径。</p></div><span>{mainItemPool.length} 件 · {craftableItemCount} 条合成路线</span></div>
+                <div className="active-guide-note" role="status">
+                  <span>当前方案</span>
+                  <strong>{selectedGuide.name}</strong>
+                  <em>{selectedGuide.lane} · {selectedGuide.style}</em>
+                  {items.length === selectedGuide.coreItems.length
+                    && selectedGuide.coreItems.every((id, index) => items[index] === id)
+                    ? <b className="synced">六格与方案一致</b>
+                    : (
+                      <>
+                        <b className="custom">六格已自定义</b>
+                        <button
+                          onClick={() => {
+                            setItems([...selectedGuide.coreItems]);
+                            setInspectedItem(selectedGuide.coreItems[0]);
+                            setActiveItemSlot(0);
+                            showToast(`已按「${selectedGuide.name}」重置六格出装`);
+                          }}
+                        >
+                          按方案重置六格
+                        </button>
+                      </>
+                    )}
+                </div>
                 <div className="build-slots">
                   {items.map((id, index) => {
                     const item = itemById.get(id);
@@ -1417,7 +1440,7 @@ export default function Home() {
               <div className="ai-composer">
                 <div className="ai-orb">✦</div>
                 <div className="ai-copy">
-                  <span>RIFT INTELLIGENCE</span>
+                  <span>AI 构筑助手</span>
                   <h3>为 {selectedChampion.name}{selectedChampion.aliases.length > 0 ? `（${selectedChampion.aliases.join("／")}）` : ""}生成经典方案</h3>
                   <p>AI 会先在当前英雄的已核验流派中匹配，再统一写入出门装、符文、30 点天赋、召唤师技能、18 级加点、回城路线、六格出装与备选装备。</p>
                   <div className="ai-profile-grid" aria-label="方案策略">
@@ -1535,7 +1558,7 @@ export default function Home() {
           )}
 
           <footer className="site-footer">
-            <span>RIFT//LAB 是非官方玩家工具，与 Riot Games 或 OP.GG 无隶属关系。</span>
+            <span>「英雄联盟怀旧服攻略介绍」是非官方玩家工具，与 Riot Games 或 OP.GG 无隶属关系。</span>
             <span>数据源：OP.GG Classic {CLASSIC_PATCH} · 每日自动校验 · 无需账号即可使用与保存</span>
           </footer>
         </section>

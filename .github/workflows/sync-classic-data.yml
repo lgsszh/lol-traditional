@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 concurrency:
   group: classic-data-sync
@@ -25,13 +26,17 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci
+      - name: Check champion roster drift
+        # 英雄新增/移除/ID 变化无法自动改写手工维护的定位、外号与玩法数据，
+        # 检测到漂移时这里会失败，并由最后一步自动开 Issue 提醒。
+        run: npm run roster:check
       - name: Fetch OP.GG Classic and rebuild snapshots
         run: npm run data:update
       - name: Validate generated data and website
         run: npm test
       - name: Commit verified source changes
         run: |
-          git config user.name "rift-lab-data-bot"
+          git config user.name "classic-data-bot"
           git config user.email "actions@users.noreply.github.com"
           # 数据、镜像清单和新下载的图片必须一起提交，否则部署会缺图。
           git add app/classic-items.generated.ts app/classic-skills.generated.ts \
@@ -43,3 +48,41 @@ jobs:
           fi
           git commit -m "data: sync OP.GG Classic snapshot"
           git push
+      - name: File an issue when sync needs a human
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const runUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            const { data: issues } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: "open",
+              labels: "classic-sync",
+            });
+            if (issues.length > 0) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issues[0].number,
+                body: `同步再次失败：${runUrl}`,
+              });
+            } else {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: "OP.GG Classic 数据同步失败：需要人工处理",
+                labels: ["classic-sync"],
+                body: [
+                  "每日数据同步失败。常见原因：",
+                  "",
+                  "1. **英雄名单漂移**（roster:check 失败）：OP.GG 新增/移除了英雄，需人工更新 `app/classic-data.ts`（定位、外号）与 `app/classic-researched-guides.ts`（玩法方案）；",
+                  "2. **数值/技能/装备变化过大**（npm test 失败）：OP.GG 或 Data Dragon 的数据结构、数量断言变化，需同步调整测试或数据管线；",
+                  "3. **页面结构变化**（退出码 2）：OP.GG 改版导致解析失败，需更新 `scripts/` 下的解析逻辑。",
+                  "",
+                  `失败运行：${runUrl}`,
+                  "",
+                  "普通的数值微调、技能描述更新不会走到这里——它们会在校验通过后自动提交上线。",
+                ].join("\n"),
+              });
+            }

@@ -1,9 +1,9 @@
 {
   "name": "rift-lab-classic-builder",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "type": "module",
-  "description": "RIFT//LAB — 英雄联盟怀旧服（Classic）构筑工作台：60 位英雄、245 套 S3 考据玩法、符文天赋召唤师技能出装全同步。",
+  "description": "英雄联盟怀旧服攻略介绍：60 位英雄、242 套 S3 考据玩法，出门装、回城路线、符文、天赋、召唤师技能与出装全同步。",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -22,6 +22,7 @@
     "build:pages": "next build",
     "data:update": "node scripts/sync-classic-data.mjs && npm run assets:update",
     "data:check": "node scripts/sync-classic-data.mjs --check && npm run assets:check",
+    "roster:check": "node scripts/check-classic-roster.mjs",
     "assets:update": "node --experimental-strip-types scripts/cache-classic-assets.mjs",
     "assets:check": "node --experimental-strip-types scripts/cache-classic-assets.mjs --check",
     "postinstall": "node scripts/fix-vinext-windows-static.mjs",

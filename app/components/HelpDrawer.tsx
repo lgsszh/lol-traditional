@@ -59,7 +59,7 @@ export default function HelpDrawer({ open, onClose, onReplay }: HelpDrawerProps)
       <aside className="help-drawer" ref={panelRef} role="dialog" aria-modal="true" aria-labelledby="help-title">
         <header>
           <div>
-            <span>RIFT//LAB 使用指南</span>
+            <span>英雄联盟怀旧服攻略介绍 · 使用指南</span>
             <h2 id="help-title" ref={titleRef} tabIndex={-1}>从第一套构筑开始</h2>
           </div>
           <button onClick={onClose} aria-label="关闭使用帮助">×</button>

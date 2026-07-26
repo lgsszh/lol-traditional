@@ -1,12 +1,12 @@
-# RIFT//LAB 怀旧服构筑工作台
+# 英雄联盟怀旧服攻略介绍
 
 [![Deploy](https://github.com/lgsszh/lol-traditional/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/lgsszh/lol-traditional/actions/workflows/deploy-pages.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-面向英雄联盟怀旧服（Classic）的网页构筑工具：60 位经典英雄、
-245 套按 S3（2012–2013）社区攻略考据的完整玩法方案、152 件经典
-装备、50 枚符文、56 点天赋和 16 个召唤师技能。无需登录，打开公开
-网址即可使用。
+面向英雄联盟怀旧服（Classic）的玩法攻略与构筑工作台：60 位经典
+英雄、242 套按 S3（2012–2013）社区攻略考据的完整玩法方案、152 件
+经典装备、50 枚符文、56 点天赋和 16 个召唤师技能。无需登录，打开
+公开网址即可使用。
 
 **在线使用：<https://lgsszh.github.io/lol-traditional/>**
 
@@ -15,7 +15,7 @@
 
 ## 功能特性
 
-- **245 套完整玩法方案**：每位英雄至少 4 套（主流派、S3 考据研究
+- **242 套完整玩法方案**：每位英雄至少 3 套（主流派、S3 考据研究
   流派、特色流派与稳健路线）。每套方案包含出门装（≤475 金校验）、
   按金币分档的回城购买路线、六格成装与备选、召唤师技能、逐格符文
   页、30 点天赋预设、18 级技能加点和前中后期打法说明，并标注原始
@@ -50,6 +50,7 @@ npm run dev
 | `npm run build:pages` | GitHub Pages 静态导出（CI 设置环境变量） |
 | `npm run data:update` | 重新抓取 OP.GG Classic 与 Riot 历史数据并更新快照 |
 | `npm run data:check` | 在线重新生成并确认仓库快照没有漂移 |
+| `npm run roster:check` | 校验 OP.GG Classic 英雄名单是否与本站一致 |
 
 开发服务器只应在开发期间运行，请勿设置为开机启动或定时重启。
 
@@ -62,8 +63,11 @@ npm run dev
 - 所有图片均镜像到 `public/classic-cache/` 并做哈希审计；测试校验
   装备 ID、召唤师技能 ID、符文预设逐格有效性、天赋 30 点、出门装
   预算与方案完整性。
-- GitHub Actions 每日自动重新读取数据源，校验与测试全部通过才会
-  提交更新；部署工作流在 `npm test` 通过后构建并发布 Pages。
+- GitHub Actions 每日自动重新读取数据源：数值、技能与装备变化在
+  校验与测试通过后自动提交上线；英雄名单增减、ID 变化或页面结构
+  变化会让同步失败并**自动开 Issue** 提醒人工处理（手工维护的定位、
+  外号与玩法数据无法自动改写）。部署工作流在 `npm test` 通过后构建
+  并发布 Pages。
 
 ## 目录结构
 
@@ -71,7 +75,7 @@ npm run dev
 app/                        页面、组件与数据模块
   classic-data.ts           英雄／符文／天赋／召唤师技能目录
   classic-build-guides.ts   玩法方案组装与校验逻辑
-  classic-researched-guides.ts  116 套 S3 考据玩法数据（带来源）
+  classic-researched-guides.ts  113 套 S3 考据玩法数据（带来源）
   *.generated.ts            OP.GG / Data Dragon 同步生成的数据快照
 scripts/                    数据同步、资产镜像与本地启动脚本
 tests/                      数据完整性、搜索与渲染测试
@@ -92,5 +96,5 @@ public/classic-cache/       图像资产本地镜像（哈希命名）
 的原画、技能与装备图标等图像资产版权归 Riot Games 所有，不在 MIT
 授权范围内（详见 LICENSE 附加说明）。
 
-RIFT//LAB 是非官方粉丝工具，与 Riot Games、OP.GG 无隶属或授权
-关系；怀旧服上线后的最终数值以正式客户端与官方公告为准。
+「英雄联盟怀旧服攻略介绍」是非官方粉丝工具，与 Riot Games、OP.GG
+无隶属或授权关系；怀旧服的最终数值以正式客户端与官方公告为准。
