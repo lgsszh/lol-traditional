@@ -62,6 +62,7 @@ type AiRecommendation = {
   recallPlan: ClassicBuildVariant["recallPlan"];
   coreItems: string[];
   alternatives: string[];
+  adjustments: string[];
 };
 
 const GUIDE_STORAGE_KEY = "rift-lab-classic-onboarding-v1";
@@ -237,6 +238,97 @@ function guideMatchFor(champion: ClassicChampion, rawQuery: string) {
   if (query.length < 2) return undefined;
   return classicBuildGuides[champion.classicId].find((guide) =>
     normalizeGuideQuery(`${guide.name} ${guide.style} ${guide.tags.join(" ")}`).includes(query));
+}
+
+// ---- AI 自适应引擎：在已核验方案的骨架上，按用户需求真实调整出装/天赋/召唤师技能 ----
+type AiIntent = {
+  wantTags: string[];
+  defensiveBias: number;
+  spellSwap?: { id: string; name: string };
+};
+
+const AI_BOOTS = new Set(["771001", "773006", "773020", "773047", "773111", "773158"]);
+
+function analyzeAiIntent(normalizedPrompt: string, profileId: AiProfileId): AiIntent {
+  const wantTags: string[] = [];
+  let defensiveBias = 0;
+  const add = (tag: string) => { if (!wantTags.includes(tag)) wantTags.push(tag); };
+  if (/全\s*ad|物理|对面.{0,4}ad|出护甲|叠甲/.test(normalizedPrompt)) { add("armor"); defensiveBias += 1; }
+  if (/全\s*ap|魔法|法师多|魔抗/.test(normalizedPrompt)) { add("magic-resistance"); defensiveBias += 1; }
+  if (/更肉|出肉|坦一|半肉|生存|保命|不死|前排/.test(normalizedPrompt)) { add("health"); defensiveBias += 1; }
+  if (/暴击/.test(normalizedPrompt)) add("critical-strike");
+  if (/攻速|特效/.test(normalizedPrompt)) add("attack-speed");
+  if (/穿甲|破甲/.test(normalizedPrompt)) add("armor-penetration");
+  if (/法穿/.test(normalizedPrompt)) add("magic-penetration");
+  if (/吸血|续航/.test(normalizedPrompt)) add("life-steal");
+  if (/冷却|\bcd\b/.test(normalizedPrompt)) add("cooldown-reduction");
+  if (/输出|爆发|伤害|秒人|滚雪球|压制/.test(normalizedPrompt)) defensiveBias -= 1;
+  if (profileId === "aggressive") defensiveBias -= 1;
+  if (profileId === "defensive") { defensiveBias += 1; add("health"); }
+  if (profileId === "teamfight") add("cooldown-reduction");
+  const spellCatalog: Array<[string, string]> = [["传送", "712"], ["点燃", "714"], ["治疗", "77"], ["虚弱", "73"], ["净化", "71"], ["屏障", "721"], ["疾跑", "76"], ["鬼步", "76"]];
+  const spellHit = spellCatalog.find(([name]) => normalizedPrompt.includes(name));
+  return {
+    wantTags,
+    defensiveBias,
+    ...(spellHit ? { spellSwap: { name: spellHit[0], id: spellHit[1] } } : {}),
+  };
+}
+
+// 保留鞋子与方案的核心成型件，按需求替换 1–3 个灵活格；候选先取该方案
+// 手工整理的备选装（考据可靠），不足时再按属性标签从传说装备目录补充。
+function adaptAiItems(guide: ClassicBuildVariant, intent: AiIntent) {
+  const result = [...guide.coreItems];
+  const inBuild = new Set(result);
+  const protectedSlots = new Set<number>();
+  result.forEach((id, index) => { if (AI_BOOTS.has(id)) protectedSlots.add(index); });
+  const identityIndex = result.findIndex((id) => !AI_BOOTS.has(id));
+  if (identityIndex >= 0) protectedSlots.add(identityIndex);
+
+  const matchesWant = (id: string) => {
+    const item = itemById.get(id);
+    return Boolean(item && intent.wantTags.some((tag) => item.tags.includes(tag)));
+  };
+  const situational = guide.situationalItems.filter((id) => !inBuild.has(id));
+  const tagPool = intent.wantTags.length
+    ? mainItemPool
+      .filter((item) => item.category === "传说装备" && !inBuild.has(item.id)
+        && intent.wantTags.some((tag) => item.tags.includes(tag)))
+      .sort((left, right) => right.price - left.price)
+      .map((item) => item.id)
+    : [];
+  const candidates = [...new Set([
+    ...situational.filter(matchesWant),
+    ...tagPool,
+    ...situational,
+  ])].filter((id) => !inBuild.has(id));
+
+  const signal = intent.wantTags.length + Math.abs(intent.defensiveBias);
+  const swapBudget = signal >= 3 ? 3 : signal >= 1 ? 2 : 1;
+  const swaps: string[] = [];
+  let cursor = 0;
+  for (let slot = result.length - 1; slot >= 0 && swaps.length < swapBudget && cursor < candidates.length; slot -= 1) {
+    if (protectedSlots.has(slot)) continue;
+    // 该格现有装备已符合需求方向时保留，优先替换不相关的格子。
+    if (intent.wantTags.length && matchesWant(result[slot])) continue;
+    const incoming = candidates[cursor];
+    cursor += 1;
+    swaps.push(`第 ${slot + 1} 格 ${itemById.get(result[slot])?.name || result[slot]} → ${itemById.get(incoming)?.name || incoming}`);
+    inBuild.delete(result[slot]);
+    inBuild.add(incoming);
+    result[slot] = incoming;
+  }
+  return { items: result, swaps };
+}
+
+function adaptAiMasteryPreset(guide: ClassicBuildVariant, intent: AiIntent): ClassicBuildVariant["masteryPreset"] {
+  if (intent.defensiveBias >= 1 && guide.masteryPreset.startsWith("攻击")) {
+    return guide.runeArchetype === "mage" || guide.runeArchetype === "support" ? "防御 21 / 通用 9" : "防御 21 / 攻击 9";
+  }
+  if (intent.defensiveBias <= -1 && !guide.masteryPreset.startsWith("攻击")) {
+    return guide.runeArchetype === "mage" ? "攻击 21 / 通用 9" : "攻击 21 / 防御 9";
+  }
+  return guide.masteryPreset;
 }
 
 function runeCountsFromIds(preset: Record<ClassicRuneGroup["id"], string>): RuneCounts {
@@ -821,20 +913,34 @@ export default function Home() {
           return { entry, score: directPromptScore + keywordScore - index * 0.01 };
         })
         .sort((left, right) => right.score - left.score)[0]?.entry || championGuides[0];
-      const masteryPreset = masteryPresets[guide.masteryPreset];
+      // ---- 在方案骨架上做真实的个性化调整 ----
+      const intent = analyzeAiIntent(normalizedPrompt, aiProfile);
+      const { items: generatedItems, swaps } = adaptAiItems(guide, intent);
+      const finalMasteryPreset = adaptAiMasteryPreset(guide, intent);
+      const adjustments = [...swaps];
+      if (finalMasteryPreset !== guide.masteryPreset) {
+        adjustments.push(`天赋由「${guide.masteryPreset}」切换为「${finalMasteryPreset}」`);
+      }
+      const finalSpells: [string, string] = [...guide.spellIds] as [string, string];
+      if (intent.spellSwap && !finalSpells.includes(intent.spellSwap.id) && finalSpells[1] !== "711") {
+        adjustments.push(`召唤师技能换上 ${intent.spellSwap.name}`);
+        finalSpells[1] = intent.spellSwap.id;
+      }
+
       setSelectedGuideId(guide.id);
       setRuneCounts(runeCountsFromIds(guide.runePreset));
-      setMasteryRanks({ ...masteryPreset });
-      setSelectedSpells([...guide.spellIds]);
-      const generatedItems = [...guide.coreItems];
-      setItems(generatedItems);
+      setMasteryRanks({ ...masteryPresets[finalMasteryPreset] });
+      setSelectedSpells([...finalSpells]);
+      setItems([...generatedItems]);
       setInspectedItem(generatedItems[0]);
       setSkillPlan(skillPlanFor(guide.skillOrder));
-      const preferredTags = aiProfile === "defensive"
-        ? ["health", "armor", "magic-resistance"]
-        : aiProfile === "teamfight"
-          ? ["cooldown-reduction", "health", "mana"]
-          : archetypeItemTags[guide.runeArchetype];
+      const preferredTags = intent.wantTags.length
+        ? intent.wantTags
+        : aiProfile === "defensive"
+          ? ["health", "armor", "magic-resistance"]
+          : aiProfile === "teamfight"
+            ? ["cooldown-reduction", "health", "mana"]
+            : archetypeItemTags[guide.runeArchetype];
       const generatedAlternatives = [
         ...guide.situationalItems,
         ...mainItemPool
@@ -850,18 +956,21 @@ export default function Home() {
         profile: aiProfile,
         guideId: guide.id,
         title: `${champion.name} · ${guide.name} · ${profile.label}方案`,
-        rationale: `已从 ${championGuides.length} 套已核验路线中匹配「${guide.name}」。它对应 ${guide.lane}／${guide.style}，并按你的要求“${prompt}”同步写入出门装、符文、30 点天赋、召唤师技能、18 级加点、分档回城与六格出装。`,
+        rationale: `已从 ${championGuides.length} 套已核验路线中匹配「${guide.name}」（${guide.lane}／${guide.style}）为骨架，${adjustments.length
+          ? `并按你的需求做出 ${adjustments.length} 处调整：${adjustments.join("；")}。`
+          : "本次未检测到需要偏移的需求，六格与该方案一致。"}符文、天赋、召唤师技能、加点、分档回城与六格出装已同步写入面板。`,
         runeSummary: guide.runeSummary,
-        masteryPreset: guide.masteryPreset,
-        spellIds: [...guide.spellIds],
+        masteryPreset: finalMasteryPreset,
+        spellIds: [...finalSpells],
         skillOrder: [...guide.skillOrder],
         startingItems: guide.startingItems,
         recallPlan: guide.recallPlan,
-        coreItems: generatedItems,
+        coreItems: [...generatedItems],
         alternatives,
+        adjustments,
       });
       setAiState("ready");
-      showToast(`${champion.name} 的 Classic 智能方案已写入`);
+      showToast(`${champion.name} 的 AI 个性化方案已写入（调整 ${adjustments.length} 处）`);
     }, 360);
   };
 
@@ -1213,7 +1322,7 @@ export default function Home() {
                     {aiRecommendation && aiRecommendation.guideId === selectedGuide.id && (
                       <div className="ai-applied-note">
                         <b>AI</b>
-                        <span>AI 助手已基于此方案生成「{aiRecommendation.title}」，符文、天赋、召唤师技能、加点与六格出装均已写入面板。</span>
+                        <span>AI 助手已基于此方案生成「{aiRecommendation.title}」{aiRecommendation.adjustments.length ? `（个性化调整 ${aiRecommendation.adjustments.length} 处）` : ""}，符文、天赋、召唤师技能、加点与六格出装均已写入面板。</span>
                       </div>
                     )}
                     <div className="strategy-tags" aria-label="玩法标签">
@@ -1393,7 +1502,10 @@ export default function Home() {
                   <strong>{selectedGuide.name}</strong>
                   <em>{selectedGuide.lane} · {selectedGuide.style}</em>
                   {aiRecommendation && <b className="ai-flag">AI 方案已写入</b>}
-                  {items.length === selectedGuide.coreItems.length
+                  {aiRecommendation && items.length === aiRecommendation.coreItems.length
+                    && aiRecommendation.coreItems.every((id, index) => items[index] === id)
+                    ? <b className="synced">六格与 AI 方案一致</b>
+                    : items.length === selectedGuide.coreItems.length
                     && selectedGuide.coreItems.every((id, index) => items[index] === id)
                     ? <b className="synced">六格与方案一致</b>
                     : (
@@ -1552,7 +1664,9 @@ export default function Home() {
                         >
                           {selectedGuides.find((guide) => guide.id === aiRecommendation.guideId)?.name || selectedGuide.name} →
                         </button>
-                        <span>六格出装与该方案一致 · 备选装按你的偏好扩展</span>
+                        <span>{aiRecommendation.adjustments.length
+                          ? `在方案基础上调整 ${aiRecommendation.adjustments.length} 处 · 其余与方案一致`
+                          : "六格出装与该方案一致 · 备选装按你的偏好扩展"}</span>
                       </div>
                     </div>
                     <button onClick={() => changeView("build")}>查看并微调构筑 →</button>
