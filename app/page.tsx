@@ -830,7 +830,7 @@ export default function Home() {
       <header className="topbar">
         <button className="brand" onClick={() => changeView("runes")} aria-label="返回符文模拟器">
           <span className="brand-mark">怀</span>
-          <span><strong>英雄联盟怀旧服攻略介绍</strong><small>玩法 · 出装 · 符文 · 天赋 全同步工作台</small></span>
+          <span><strong>英雄联盟怀旧服攻略介绍</strong><small>S3 考据 · 全同步工作台</small></span>
         </button>
         <nav className="main-nav" aria-label="构筑功能" data-guide="module-nav">
           {([
