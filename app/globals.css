@@ -845,6 +845,48 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, a:focus-visib
 .item-section .subsection-title p { margin-top: 6px; font-size: 15px; line-height: 1.55; }
 .strategy-section .subsection-title > span,
 .item-section .subsection-title > span { padding: 7px 11px; font-size: 13px; }
+.strategy-lane-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 16px 20px 0;
+}
+.strategy-lane-filter > button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid #2d3a48;
+  border-radius: 999px;
+  background: #0b1219;
+  color: #b7c1cc;
+  padding: 7px 14px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.strategy-lane-filter > button:hover { border-color: #617187; background: #121c27; }
+.strategy-lane-filter > button.active {
+  border-color: #d3b266;
+  background: linear-gradient(135deg, rgba(216, 182, 111, .16), #121b25);
+  color: #ecdcb2;
+}
+.strategy-lane-filter b {
+  border: 1px solid #39485a;
+  border-radius: 999px;
+  color: #8fa2b7;
+  padding: 1px 7px;
+  font-size: 12px;
+}
+.strategy-lane-filter > button.active b { border-color: #7a6a44; color: #d8bf85; }
+.strategy-tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 14px; }
+.strategy-tags i {
+  border: 1px solid #34435565;
+  border-radius: 4px;
+  background: #0d1520;
+  color: #9fb0c3;
+  padding: 3px 8px;
+  font-size: 12.5px;
+  font-style: normal;
+}
 .strategy-tabs {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));

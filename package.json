@@ -1,45 +1,55 @@
 {
-    "name":  "rift-lab-classic-builder",
-    "version":  "0.1.0",
-    "private":  true,
-    "engines":  {
-                    "node":  ">=22.18.0"
-                },
-    "scripts":  {
-                    "dev":  "vinext dev",
-                    "build":  "vinext build",
-                    "build:pages":  "next build",
-                    "data:update":  "node scripts/sync-classic-data.mjs && npm run assets:update",
-                    "data:check":  "node scripts/sync-classic-data.mjs --check && npm run assets:check",
-                    "assets:update":  "node --experimental-strip-types scripts/cache-classic-assets.mjs",
-                    "assets:check":  "node --experimental-strip-types scripts/cache-classic-assets.mjs --check",
-                    "postinstall":  "node scripts/fix-vinext-windows-static.mjs",
-                    "prestart":  "node scripts/fix-vinext-windows-static.mjs",
-                    "start":  "vinext start",
-                    "start:hidden":  "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/start-local-hidden.ps1",
-                    "test":  "npm run assets:check && node --test tests/champion-search.test.mjs tests/classic-detail-data.test.mjs && npm run build && node --test tests/rendered-html.test.mjs",
-                    "lint":  "eslint . --ignore-pattern dist --ignore-pattern .next",
-                    "typecheck":  "tsc --noEmit"
-                },
-    "dependencies":  {
-                         "next":  "16.2.6",
-                         "react":  "19.2.6",
-                         "react-dom":  "19.2.6"
-                     },
-    "devDependencies":  {
-                            "@cloudflare/vite-plugin":  "1.37.1",
-                            "@types/node":  "22.19.19",
-                            "@types/react":  "19.2.14",
-                            "@types/react-dom":  "19.2.3",
-                            "@vitejs/plugin-react":  "6.0.2",
-                            "@vitejs/plugin-rsc":  "0.5.26",
-                            "eslint":  "9.39.4",
-                            "eslint-config-next":  "16.2.6",
-                            "react-server-dom-webpack":  "19.2.6",
-                            "typescript":  "5.9.3",
-                            "vinext":  "0.0.50",
-                            "vite":  "8.0.13",
-                            "wrangler":  "4.92.0"
-                        },
-    "type":  "module"
+  "name": "rift-lab-classic-builder",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "RIFT//LAB — 英雄联盟怀旧服（Classic）构筑工作台：60 位英雄、245 套 S3 考据玩法、符文天赋召唤师技能出装全同步。",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lgsszh/lol-traditional.git"
+  },
+  "homepage": "https://lgsszh.github.io/lol-traditional/",
+  "bugs": {
+    "url": "https://github.com/lgsszh/lol-traditional/issues"
+  },
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "scripts": {
+    "dev": "vinext dev",
+    "build": "vinext build",
+    "build:pages": "next build",
+    "data:update": "node scripts/sync-classic-data.mjs && npm run assets:update",
+    "data:check": "node scripts/sync-classic-data.mjs --check && npm run assets:check",
+    "assets:update": "node --experimental-strip-types scripts/cache-classic-assets.mjs",
+    "assets:check": "node --experimental-strip-types scripts/cache-classic-assets.mjs --check",
+    "postinstall": "node scripts/fix-vinext-windows-static.mjs",
+    "prestart": "node scripts/fix-vinext-windows-static.mjs",
+    "start": "vinext start",
+    "start:hidden": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/start-local-hidden.ps1",
+    "test": "npm run assets:check && node --test tests/champion-search.test.mjs tests/classic-detail-data.test.mjs && npm run build && node --test tests/rendered-html.test.mjs",
+    "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "next": "16.2.6",
+    "react": "19.2.6",
+    "react-dom": "19.2.6"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "1.37.1",
+    "@types/node": "22.19.19",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.0.2",
+    "@vitejs/plugin-rsc": "0.5.26",
+    "eslint": "9.39.4",
+    "eslint-config-next": "16.2.6",
+    "react-server-dom-webpack": "19.2.6",
+    "typescript": "5.9.3",
+    "vinext": "0.0.50",
+    "vite": "8.0.13",
+    "wrangler": "4.92.0"
+  }
 }

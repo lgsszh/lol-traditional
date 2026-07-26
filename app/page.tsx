@@ -227,13 +227,17 @@ function ChampionHeroImage({
   );
 }
 
-function createRunePreset(champion: ClassicChampion): RuneCounts {
+function runeCountsFromIds(preset: Record<ClassicRuneGroup["id"], string>): RuneCounts {
   const counts: RuneCounts = {};
   classicRuneGroups.forEach((group) => {
     group.runes.forEach((rune) => { counts[rune.id] = 0; });
-    counts[runePresetIds[champion.archetype][group.id]] = group.cap;
+    counts[preset[group.id]] = group.cap;
   });
   return counts;
+}
+
+function createRunePreset(champion: ClassicChampion): RuneCounts {
+  return runeCountsFromIds(runePresetIds[champion.archetype]);
 }
 
 function groupUsed(counts: RuneCounts, group: ClassicRuneGroup) {
@@ -327,6 +331,7 @@ export default function Home() {
   const [selectedGuideId, setSelectedGuideId] = useState(
     classicBuildGuides[classicChampions[0].classicId][0].id,
   );
+  const [guideLaneFilter, setGuideLaneFilter] = useState<"全部" | ClassicChampion["lane"]>("全部");
   const [search, setSearch] = useState("");
   const [laneFilter, setLaneFilter] = useState<LaneFilterId>("全部");
   const [runeCounts, setRuneCounts] = useState<RuneCounts>(() => createRunePreset(classicChampions[0]));
@@ -409,6 +414,10 @@ export default function Home() {
     || selectedArtworks[0];
   const selectedGuides = classicBuildGuides[selectedChampion.classicId];
   const selectedGuide = selectedGuides.find((guide) => guide.id === selectedGuideId) || selectedGuides[0];
+  const guideLanes: Array<"全部" | ClassicChampion["lane"]> = ["全部", ...new Set(selectedGuides.map((guide) => guide.lane))];
+  const visibleGuides = guideLaneFilter === "全部"
+    ? selectedGuides
+    : selectedGuides.filter((guide) => guide.lane === guideLaneFilter);
 
   const showToast = (message: string) => {
     window.clearTimeout(toastTimer.current);
@@ -533,6 +542,7 @@ export default function Home() {
     setSelectedChampion(champion);
     setSelectedArtworkId(classicSkillsByChampion.get(champion.classicId)?.artworks[0]?.id || "");
     setSelectedGuideId(classicBuildGuides[champion.classicId][0].id);
+    setGuideLaneFilter("全部");
     setRuneCounts(createRunePreset(champion));
     setMasteryRanks({ ...initialMasteryRanks });
     setSelectedSpells(defaultSpellsFor(champion));
@@ -585,9 +595,8 @@ export default function Home() {
   };
 
   const applyClassicGuide = (guide: ClassicBuildVariant) => {
-    const pseudoChampion = { ...selectedChampion, archetype: guide.runeArchetype } as ClassicChampion;
     setSelectedGuideId(guide.id);
-    setRuneCounts(createRunePreset(pseudoChampion));
+    setRuneCounts(runeCountsFromIds(guide.runePreset));
     setMasteryRanks({ ...masteryPresets[guide.masteryPreset] });
     setSelectedSpells([...guide.spellIds]);
     setItems([...guide.coreItems]);
@@ -732,7 +741,30 @@ export default function Home() {
         [/打野|刷野|惩戒/, ["打野", "刷野"]],
         [/上单|上路/, ["上路", "上单"]],
         [/中单|中路/, ["中路", "中单"]],
-        [/辅助|保护|团队/, ["辅助", "保护", "团队"]],
+        [/下路|adc|射手|双人路/, ["下路", "射手", "标准"]],
+        [/辅助|保护|团队|保排|peel/, ["辅助", "保护", "团队", "保排"]],
+        [/冥火|dfg|秒\s*c|点名/, ["冥火", "爆发", "秒C"]],
+        [/魔像|golem/, ["魔像", "半肉", "打野"]],
+        [/瑞格|麦瑞德|剃刀|wriggle/, ["瑞格之灯", "打野", "半肉"]],
+        [/舒瑞娅|shurelya/, ["舒瑞娅", "游走", "视野"]],
+        [/工资|gp10|金币/, ["工资", "金币", "视野"]],
+        [/眼石|插眼|视野/, ["眼石", "视野"]],
+        [/时光|roa|催化/, ["时光", "坦度", "续航"]],
+        [/魔切|魔宗|大天使|女神泪|蓝量/, ["魔宗", "大天使", "女神泪", "蓝量"]],
+        [/电刃|静电|shiv/, ["电刃", "暴击", "清线"]],
+        [/分推|分带|单带|单挑|split/, ["分推", "分带", "单挑"]],
+        [/三相|trinity/, ["三相"]],
+        [/黑切|破甲|轻语/, ["黑切", "破甲", "轻语"]],
+        [/巫妖|lich|混伤/, ["巫妖", "混合", "特效"]],
+        [/半肉|出肉|坦克|坦度/, ["半肉", "坦克", "抗压"]],
+        [/风筝|poke|消耗/, ["消耗", "风筝", "poke"]],
+        [/开团|先手|engage/, ["开团", "先手", "控制"]],
+        [/蘑菇|种菇/, ["蘑菇", "控图"]],
+        [/炮台|守塔|守线/, ["炮台", "守线", "推进"]],
+        [/光环|aura/, ["光环", "团队"]],
+        [/双蓝|回蓝|耗蓝/, ["双蓝", "续航", "回蓝"]],
+        [/收割|重置|reset/, ["收割", "重置"]],
+        [/一波|推进|抱团/, ["推进", "抱团", "一波流"]],
       ];
       const expandedKeywords = [
         ...profileKeywords[aiProfile],
@@ -750,10 +782,7 @@ export default function Home() {
         .sort((left, right) => right.score - left.score)[0]?.entry || championGuides[0];
       const masteryPreset = masteryPresets[guide.masteryPreset];
       setSelectedGuideId(guide.id);
-      setRuneCounts(createRunePreset({
-        ...champion,
-        archetype: guide.runeArchetype,
-      }));
+      setRuneCounts(runeCountsFromIds(guide.runePreset));
       setMasteryRanks({ ...masteryPreset });
       setSelectedSpells([...guide.spellIds]);
       const generatedItems = [...guide.coreItems];
@@ -1094,8 +1123,33 @@ export default function Home() {
                   </div>
                   <span>{selectedGuides.length} 套可切换</span>
                 </div>
+                {guideLanes.length > 2 && (
+                  <div className="strategy-lane-filter" role="group" aria-label="按分路筛选玩法">
+                    {guideLanes.map((lane) => {
+                      const count = lane === "全部"
+                        ? selectedGuides.length
+                        : selectedGuides.filter((guide) => guide.lane === lane).length;
+                      return (
+                        <button
+                          key={lane}
+                          className={guideLaneFilter === lane ? "active" : ""}
+                          onClick={() => {
+                            setGuideLaneFilter(lane);
+                            const pool = lane === "全部" ? selectedGuides : selectedGuides.filter((guide) => guide.lane === lane);
+                            if (!pool.some((guide) => guide.id === selectedGuide.id) && pool[0]) {
+                              setSelectedGuideId(pool[0].id);
+                            }
+                          }}
+                          aria-pressed={guideLaneFilter === lane}
+                        >
+                          {lane}<b>{count}</b>
+                        </button>
+                      );
+                    })}
+                  </div>
+                )}
                 <div className="strategy-tabs" role="tablist" aria-label={`${selectedChampion.name}经典玩法`}>
-                  {selectedGuides.map((guide) => (
+                  {visibleGuides.map((guide) => (
                     <button
                       key={guide.id}
                       className={selectedGuide.id === guide.id ? "active" : ""}
@@ -1114,11 +1168,17 @@ export default function Home() {
                     <span>当前方案</span>
                     <h4>{selectedGuide.name}<small>{selectedGuide.lane} · {selectedGuide.style}</small></h4>
                     <p>{selectedGuide.summary}</p>
+                    <div className="strategy-tags" aria-label="玩法标签">
+                      {selectedGuide.tags
+                        .filter((tag) => tag !== selectedGuide.lane && tag !== selectedGuide.style && !/^[a-z]+$/.test(tag))
+                        .slice(0, 8)
+                        .map((tag) => <i key={tag}>{tag}</i>)}
+                    </div>
                     <div className="strategy-config">
                       <span><b>符文</b>{selectedGuide.runeSummary}</span>
                       <span><b>天赋</b>{selectedGuide.masteryPreset}</span>
                       <span><b>召唤师技能</b>{selectedGuide.spellIds.map((id) => classicSpells.find((spell) => spell.id === id)?.name).join(" + ")}</span>
-                      <span><b>加点</b>主 {selectedGuide.skillOrder[0]} · 副 {selectedGuide.skillOrder[1]}</span>
+                      <span><b>加点</b>{selectedGuide.skillOrder[0]} → {selectedGuide.skillOrder[1]} → {selectedGuide.skillOrder[2]}（R 优先）</span>
                     </div>
                   </div>
                   <div className="opening-groups">

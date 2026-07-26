@@ -1,9 +1,15 @@
 import {
   classicBuildPresets,
   classicChampions,
+  runePresetIds,
   type ChampionArchetype,
   type ClassicChampion,
 } from "./classic-data.ts";
+import {
+  researchedProfiles,
+  type ResearchedMasteryPreset,
+  type ResearchedRunePreset,
+} from "./classic-researched-guides.ts";
 
 export type ClassicGuideItem = {
   itemId: string;
@@ -32,7 +38,8 @@ export type ClassicBuildVariant = {
   summary: string;
   runeArchetype: ChampionArchetype;
   runeSummary: string;
-  masteryPreset: "攻击 21 / 防御 9" | "攻击 21 / 通用 9" | "防御 21 / 通用 9";
+  runePreset: ResearchedRunePreset;
+  masteryPreset: ResearchedMasteryPreset;
   spellIds: [string, string];
   skillOrder: ClassicChampion["spellOrder"];
   startingItems: ClassicGuideItem[];
@@ -61,13 +68,15 @@ const laneSpells: Record<ClassicChampion["lane"], [string, string]> = {
   辅助: ["74", "73"],
 };
 
+// 文案与 classic-data.ts 的 runePresetIds 逐格对应（名称×数量），保证“说明文字”和
+// “一键写入的符文页”完全同步；研究型玩法则携带自己的 runeSummary + runePreset。
 const runeSummaries: Record<ChampionArchetype, string> = {
-  mage: "法术穿透印记／护甲符印／魔抗雕纹／法强精华",
-  fighter: "攻击力或穿甲印记／护甲符印／魔抗雕纹／攻击力精华",
-  jungler: "攻击速度或攻击力印记／护甲符印／成长魔抗雕纹／攻击力精华",
-  marksman: "攻击力印记／护甲符印／魔抗雕纹／攻击力或生命偷取精华",
-  tank: "穿甲或法穿印记／护甲符印／魔抗雕纹／生命值精华",
-  support: "法穿印记／护甲符印／魔抗雕纹／移速或法强精华",
+  mage: "法术穿透印记×9／护甲符印×9／魔法抗性雕纹×9／法术强度精华×3",
+  fighter: "攻击力印记×9／护甲符印×9／魔法抗性雕纹×9／攻击力精华×3",
+  jungler: "攻击力印记×9／护甲符印×9／魔法抗性雕纹×9／攻击力精华×3",
+  marksman: "攻击力印记×9／护甲符印×9／魔法抗性雕纹×9／攻击力精华×3",
+  tank: "穿甲印记×9／护甲符印×9／魔法抗性雕纹×9／生命值精华×3",
+  support: "法术穿透印记×9／护甲符印×9／魔法抗性雕纹×9／法术强度精华×3",
 };
 
 const openingByArchetype: Record<ChampionArchetype, ClassicGuideItem[]> = {
@@ -162,6 +171,9 @@ type GuideProfile = {
   style: string;
   summary: string;
   tags?: string[];
+  masteryPreset?: ResearchedMasteryPreset;
+  runeSummary?: string;
+  runePreset?: ResearchedRunePreset;
   opening?: ClassicGuideItem[];
   early?: ClassicGuideItem[];
   spells?: [string, string];
@@ -174,46 +186,8 @@ type GuideProfile = {
   sourceNote?: string;
 };
 
-const alternateProfiles: Partial<Record<ClassicChampion["key"], GuideProfile>> = {
-  Ahri: { name: "游走爆发", lane: "中路", archetype: "mage", style: "AP 游走", summary: "鞋子与爆发优先，利用魅惑配合边路建立节奏。" },
-  Jax: { name: "打野攻速", lane: "打野", archetype: "jungler", style: "AD／混伤打野", summary: "猎人宽刃刀开局，围绕反击风暴完成近身留人。" },
-  LeeSin: { name: "上单战士", lane: "上路", archetype: "fighter", style: "AD 对线", summary: "放弃惩戒改带传送，长剑或多兰之刃强化换血。" },
-  Ashe: { name: "功能消耗", lane: "下路", archetype: "marksman", style: "减速／开团", summary: "仍以 AD 为主，但更重视冷却、蓝量和先手能力。" },
-  Janna: { name: "AP 中单", lane: "中路", archetype: "mage", style: "AP 消耗", summary: "法术穿透与法强符文，利用蓄力飓风清线和游走。" },
-  Taric: { name: "上单坦克", lane: "上路", archetype: "tank", style: "护甲反打", summary: "多兰盾抗压，以护甲收益和近身控制反打物理英雄。" },
-  Katarina: { name: "稳健发育", lane: "中路", archetype: "mage", style: "AP 收割", summary: "水晶瓶续航，等待关键技能真空期再进场收割。" },
-  Morgana: { name: "AP 中单", lane: "中路", archetype: "mage", style: "推线控制", summary: "多兰戒与法穿符文，利用痛苦腐蚀清线并保护自己。" },
-  Shaco: { name: "AP 盒子流", lane: "打野", archetype: "mage", style: "AP 控图", summary: "法穿与法强路线，围绕盒子埋伏和分身爆炸输出。" },
-  Evelynn: { name: "AP 刺客", lane: "中路", archetype: "mage", style: "AP 游走", summary: "中路发育后利用隐身机制寻找侧翼与落单目标。" },
-  Gangplank: { name: "暴击发育", lane: "上路", archetype: "marksman", style: "AD 暴击", summary: "长剑起手加快成装，以枪火谈判补刀和消耗。" },
-  Gragas: { name: "AP 中单", lane: "中路", archetype: "mage", style: "AP 爆发", summary: "多兰戒起手，强化酒桶消耗、清线与大招爆发。" },
-  Nidalee: { name: "AP 中单", lane: "中路", archetype: "mage", style: "AP 标枪", summary: "法穿与法强方案，远程标枪消耗后切换豹形态收割。" },
-  Olaf: { name: "打野战士", lane: "打野", archetype: "jungler", style: "AD 打野", summary: "标准打野刀续航，用逆流投掷追击并快速清野。" },
-  Tristana: { name: "AP 爆发", lane: "中路", archetype: "mage", style: "AP 跳脸", summary: "旧版法强加成玩法，围绕爆炸射击与火箭跳跃重置。" },
-  Tryndamere: { name: "打野暴击", lane: "打野", archetype: "jungler", style: "暴击打野", summary: "以怒气和暴击提高清野，六级后强化越塔与边线压力。" },
-  Fiddlesticks: { name: "辅助控制", lane: "辅助", archetype: "support", style: "控制辅助", summary: "视野与冷却优先，用恐惧和沉默保护下路并寻找跳大角度。" },
-  Malphite: { name: "AP 爆发", lane: "中路", archetype: "mage", style: "AP 先手", summary: "法穿与法强路线，六级后以势不可挡配合队友爆发。" },
-  Nasus: { name: "打野发育", lane: "打野", archetype: "tank", style: "坦克打野", summary: "清野叠加汲魂痛击，优先耐久和减速留人。" },
-  Amumu: { name: "AP 坦克", lane: "打野", archetype: "mage", style: "AP 团战", summary: "保留惩戒，法穿提高群体伤害，依靠控制链开团。" },
-  MissFortune: { name: "AP 消耗", lane: "下路", archetype: "mage", style: "AP 消耗", summary: "法强路线强化枪林弹雨与弹幕时间，适合远程消耗阵容。" },
-  KogMaw: { name: "AP 炮台", lane: "中路", archetype: "mage", style: "AP 远程消耗", summary: "蓝量与法强优先，利用远距离活体大炮压低血线。" },
-  Kayle: { name: "AP 法强", lane: "上路", archetype: "mage", style: "AP 持续输出", summary: "法穿与法强兼顾治疗、爆发和后期远程输出。" },
-  Zilean: { name: "AP 中单", lane: "中路", archetype: "mage", style: "AP 炸弹", summary: "法强和蓝量优先，双炸弹推线并用时光倒流制造节奏。" },
-  Warwick: { name: "上单续航", lane: "上路", archetype: "fighter", style: "对线回复", summary: "利用嗜血攻击回复抗压，持续黏住残血目标。" },
-  Karthus: { name: "打野发育", lane: "打野", archetype: "mage", style: "AP 刷野", summary: "打野刀起手快速清野，依靠全图安魂曲支援战斗。" },
-  Ezreal: { name: "AP 中单", lane: "中路", archetype: "mage", style: "AP 爆发", summary: "法穿与法强路线，利用精华跃动和奥术跃迁完成爆发。" },
-  Sion: { name: "AD 亡灵", lane: "上路", archetype: "fighter", style: "AD 暴击／吸血", summary: "多兰之刃换血，以攻击、暴击和生命偷取发挥旧版被动。" },
-  MasterYi: { name: "AP 剑圣", lane: "中路", archetype: "mage", style: "AP 收割", summary: "经典法强玩法，依靠阿尔法突袭与冥想完成消耗和重置。" },
-  Lulu: { name: "AP 中单", lane: "中路", archetype: "mage", style: "AP 控制", summary: "法穿法强提升闪耀长枪消耗，同时保留变形与护盾功能。" },
-  Chogath: { name: "AP 中单", lane: "中路", archetype: "mage", style: "AP 控场", summary: "多兰戒清线，以破裂和野性尖叫形成远程控制链。" },
-  Nunu: { name: "AP 辅助", lane: "辅助", archetype: "support", style: "增益／爆发", summary: "以视野和冷却支援射手，血之沸腾强化队友输出。" },
-  Teemo: { name: "AP 蘑菇", lane: "上路", archetype: "mage", style: "AP 控图", summary: "法穿与法强强化毒性射击和蘑菇，持续压制边线。" },
-  Corki: { name: "AP 混伤", lane: "中路", archetype: "mage", style: "AP 消耗", summary: "法强与蓝量路线，利用导弹持续消耗并保持安全距离。" },
-  Pantheon: { name: "打野游走", lane: "打野", archetype: "jungler", style: "AD 打野", summary: "打野刀开局，利用点控与大招快速影响边线。" },
-  Blitzcrank: { name: "AP 中单", lane: "中路", archetype: "mage", style: "AP 爆发", summary: "法强路线提高机械飞爪与静电力场的单次爆发。" },
-  Soraka: { name: "AP 中单", lane: "中路", archetype: "mage", style: "AP 消耗／治疗", summary: "法强提升星之灌注与治疗，兼顾清线和全图支援。" },
-  DrMundo: { name: "打野坦克", lane: "打野", archetype: "tank", style: "坦克打野", summary: "猎人宽刃刀和惩戒开局，依靠生命回复持续刷野。" },
-};
+// 各英雄的替代玩法此前为占位式 alternateProfiles，现已由
+// classic-researched-guides.ts 中按 S3 攻略逐英雄核实的研究方案取代。
 
 const specialProfiles: Partial<Record<ClassicChampion["key"], GuideProfile[]>> = {
   Pantheon: [
@@ -499,63 +473,6 @@ function safeProfile(champion: ClassicChampion): GuideProfile {
   };
 }
 
-function pressureProfile(champion: ClassicChampion): GuideProfile {
-  const metadata: Record<ChampionArchetype, {
-    name: string;
-    style: string;
-    summary: string;
-    tags: string[];
-  }> = {
-    mage: {
-      name: "法穿压制",
-      style: "法强／爆发",
-      summary: `以法强和法术穿透抢到 ${champion.name} 的推线或消耗主动权；空技能后应及时后撤，不能只看面板伤害。`,
-      tags: ["法穿", "爆发", "压线"],
-    },
-    fighter: {
-      name: "进攻换血",
-      style: "换血／滚雪球",
-      summary: `用攻击组件强化 ${champion.name} 的技能与普攻换血；优势加速进攻装，劣势按伤害类型补抗性。`,
-      tags: ["换血", "进攻", "滚雪球"],
-    },
-    jungler: {
-      name: "入侵节奏",
-      style: "入侵／抓人",
-      summary: `保留标准打野开局，用 ${champion.name} 的清野或控制优势争夺河道；入侵前必须确认线权和敌方打野位置。`,
-      tags: ["入侵", "抓人", "控图"],
-    },
-    marksman: {
-      name: "对线压制",
-      style: "攻击／暴击",
-      summary: `长剑或多兰之刃强化 ${champion.name} 的补刀与换血，优先建立吸血和鞋，不为等待暴风之剑长期空装。`,
-      tags: ["对线", "攻击", "暴击"],
-    },
-    tank: {
-      name: "先手游走",
-      style: "开团／控制",
-      summary: `用水晶瓶和针对抗性支撑 ${champion.name} 频繁换血，成型后围绕控制链与支援制造人数差。`,
-      tags: ["先手", "控制", "游走"],
-    },
-    support: {
-      name: "游走保护",
-      style: "视野／保护",
-      summary: `${champion.name} 以鞋、工资装和视野建立下路主动权；游走必须先保证射手兵线安全与河道视野。`,
-      tags: ["视野", "游走", "保护"],
-    },
-  };
-  const selected = metadata[champion.archetype];
-  return {
-    id: "pressure",
-    name: champion.lane === "打野" ? "入侵节奏" : selected.name,
-    lane: champion.lane,
-    archetype: champion.archetype,
-    style: champion.lane === "打野" ? "入侵／抓人" : selected.style,
-    summary: selected.summary,
-    tags: selected.tags,
-    opening: pressureOpeningByArchetype[champion.archetype],
-  };
-}
-
 function finalBuild(archetype: ChampionArchetype) {
   const starts = new Set(["771054", "771055", "771056", "771039", "772049"]);
   const boots = new Set(["771001", "773006", "773020", "773047", "773111", "773158"]);
@@ -584,11 +501,12 @@ function createVariant(
   profile: GuideProfile,
   index: number,
 ): ClassicBuildVariant {
-  const masteryPreset = profile.archetype === "tank" || profile.archetype === "support"
-    ? "防御 21 / 通用 9"
-    : profile.archetype === "mage"
-      ? "攻击 21 / 通用 9"
-      : "攻击 21 / 防御 9";
+  const masteryPreset = profile.masteryPreset || (
+    profile.archetype === "tank" || profile.archetype === "support"
+      ? "防御 21 / 通用 9"
+      : profile.archetype === "mage"
+        ? "攻击 21 / 通用 9"
+        : "攻击 21 / 防御 9");
   const coreItems = profile.coreItems || finalBuild(profile.archetype);
   const standardPlan = phaseNotes[profile.archetype];
   return {
@@ -598,7 +516,8 @@ function createVariant(
     style: profile.style,
     summary: profile.summary,
     runeArchetype: profile.archetype,
-    runeSummary: runeSummaries[profile.archetype],
+    runeSummary: profile.runeSummary || runeSummaries[profile.archetype],
+    runePreset: profile.runePreset || runePresetIds[profile.archetype],
     masteryPreset,
     spellIds: profile.spells || laneSpells[profile.lane],
     skillOrder: profile.skillOrder || champion.spellOrder,
@@ -660,7 +579,7 @@ export const classicBuildGuides = Object.fromEntries(classicChampions.map((champ
   };
   const candidates = [
     primary,
-    alternateProfiles[champion.key] || pressureProfile(champion),
+    ...(researchedProfiles[champion.key] || []),
     ...(specialProfiles[champion.key] || []),
     safeProfile(champion),
   ];

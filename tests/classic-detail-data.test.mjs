@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
-import { classicChampions } from "../app/classic-data.ts";
+import { classicChampions, classicRuneGroups, masteryPresets } from "../app/classic-data.ts";
 import { classicItems } from "../app/classic-items.generated.ts";
 import { classicItemRecipes } from "../app/classic-item-recipes.generated.ts";
 import { classicChampionSkills } from "../app/classic-skills.generated.ts";
@@ -96,6 +96,21 @@ test("60 位英雄均提供至少三套完整经典玩法、回城路线和合�
       assert.equal(guide.buildPhases.length, 3, `${champion.name} ${guide.name}缺少前中后期出装阶段`);
       assert.equal(guide.gamePlan.length, 3, `${champion.name} ${guide.name}缺少前中后期玩法说明`);
       assert.ok(guide.runeSummary.trim(), `${champion.name} ${guide.name}缺少具体符文说明`);
+      const masteryRanks = masteryPresets[guide.masteryPreset];
+      assert.ok(masteryRanks, `${champion.name} ${guide.name}引用未知天赋预设 ${guide.masteryPreset}`);
+      assert.equal(
+        Object.values(masteryRanks).reduce((sum, rank) => sum + rank, 0),
+        30,
+        `${champion.name} ${guide.name}天赋预设点数不是 30`,
+      );
+      for (const group of classicRuneGroups) {
+        const rune = group.runes.find((entry) => entry.id === guide.runePreset[group.id]);
+        assert.ok(rune, `${champion.name} ${guide.name}的${group.name}符文预设无效`);
+        assert.ok(
+          guide.runeSummary.includes(`${rune.name}×${group.cap}`),
+          `${champion.name} ${guide.name}符文文字与符文预设不同步（${group.name}）`,
+        );
+      }
       assert.ok(guide.spellIds.every((id) => spellIds.has(id)), `${champion.name} ${guide.name}包含未知召唤师技能`);
       for (const entry of [
         ...guide.startingItems,
@@ -114,7 +129,12 @@ test("60 位英雄均提供至少三套完整经典玩法、回城路线和合�
       assert.ok(startingGold <= 475, `${champion.name} ${guide.name}出门装超过 475 金币：${startingGold}`);
     }
   }
-  assert.ok(variantCount >= 180);
+  assert.ok(variantCount >= 240, `研究型玩法合入后应有至少 240 套方案，当前 ${variantCount}`);
+  for (const champion of classicChampions) {
+    const researched = classicBuildGuides[champion.classicId].filter((guide) =>
+      guide.sourceUrls.some((url) => !url.includes("op.gg")));
+    assert.ok(researched.length >= 1, `${champion.name}缺少标注原始攻略来源的研究型玩法`);
+  }
   const pantheon = classicBuildGuides["60080"];
   const masterYi = classicBuildGuides["60011"];
   const ezreal = classicBuildGuides["60081"];

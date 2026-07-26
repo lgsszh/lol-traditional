@@ -37,11 +37,11 @@ test("常用外号采用玩家称呼且允许没有独立外号的英雄留空",
   const aliases = Object.fromEntries(classicChampions.map((entry) => [entry.key, entry.aliases]));
   assert.deepEqual(aliases.Vayne, ["VN"]);
   assert.deepEqual(aliases.Garen, ["德玛", "大宝剑", "草丛伦"]);
-  assert.deepEqual(aliases.Jax, ["武器", "灯男"]);
+  assert.deepEqual(aliases.Jax, ["武器"]);
   assert.deepEqual(aliases.Anivia, ["冰鸟", "凤凰"]);
   assert.deepEqual(aliases.MissFortune, ["女枪", "MF", "好运姐", "赏金"]);
-  assert.deepEqual(aliases.Teemo, ["提百万", "蘑菇"]);
+  assert.deepEqual(aliases.Teemo, ["提百万", "提莫队长"]);
   assert.deepEqual(aliases.Olaf, []);
   assert.deepEqual(aliases.Kassadin, []);
-  assert.deepEqual(aliases.Morgana, []);
+  assert.deepEqual(aliases.Morgana, ["堕天使"]);
 });
