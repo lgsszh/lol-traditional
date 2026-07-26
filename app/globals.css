@@ -520,6 +520,7 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, a:focus-visib
   position: relative;
   width: 100%;
   aspect-ratio: 716 / 475.878;
+  background-color: #1d2333;
   background-size: cover;
   background-position: center;
   box-shadow: inset 0 0 50px rgba(15, 32, 70, .3), 0 16px 40px rgba(0, 0, 0, .28);
@@ -659,6 +660,7 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, a:focus-visib
 .mastery-通用 > header span, .mastery-通用 > header b { color: #7fc692; }
 .mastery-canvas {
   min-height: 570px;
+  background-color: #1d1d24;
   padding: 22px 12px;
   display: grid;
   grid-template-columns: 34px repeat(4, minmax(50px, 72px));

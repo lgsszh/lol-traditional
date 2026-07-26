@@ -1,6 +1,6 @@
 "use client";
 
-import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState, useTransition } from "react";
 import ChampionAbilityPanel from "./components/ChampionAbilityPanel";
 import ItemDetailPanel from "./components/ItemDetailPanel";
 
@@ -22,7 +22,6 @@ import {
   classicRuneGroups,
   classicSpells,
   defaultSpellsFor,
-  initialMasteryRanks,
   masteryBackgrounds,
   masteryPresets,
   runeBoardBackground,
@@ -349,14 +348,18 @@ export default function Home() {
   const [laneFilter, setLaneFilter] = useState<LaneFilterId>("全部");
   const [runeCounts, setRuneCounts] = useState<RuneCounts>(() => createRunePreset(classicChampions[0]));
   const [activeRuneGroup, setActiveRuneGroup] = useState<ClassicRuneGroup["id"]>("mark");
-  const [masteryRanks, setMasteryRanks] = useState<MasteryRanks>({ ...initialMasteryRanks });
+  const [masteryRanks, setMasteryRanks] = useState<MasteryRanks>(
+    () => ({ ...masteryPresets[classicBuildGuides[classicChampions[0].classicId][0].masteryPreset] }),
+  );
+  const [pendingChampionId, setPendingChampionId] = useState<string | null>(null);
+  const [, startChampionSwitch] = useTransition();
   const [selectedSpells, setSelectedSpells] = useState<string[]>(defaultSpellsFor(classicChampions[0]));
-  const [items, setItems] = useState<string[]>(classicBuildPresets[classicChampions[0].archetype]);
+  const [items, setItems] = useState<string[]>(() => [...classicBuildGuides[classicChampions[0].classicId][0].coreItems]);
   const [activeItemSlot, setActiveItemSlot] = useState(0);
   const [itemCategory, setItemCategory] = useState<(typeof classicItemCategories)[number]>("全部");
   const [itemStatFilter, setItemStatFilter] = useState<ItemStatFilterId>("all");
   const [itemSearch, setItemSearch] = useState("");
-  const [inspectedItem, setInspectedItem] = useState(classicBuildPresets[classicChampions[0].archetype][0]);
+  const [inspectedItem, setInspectedItem] = useState(classicBuildGuides[classicChampions[0].classicId][0].coreItems[0]);
   const [inspectedAbility, setInspectedAbility] = useState<ClassicAbilityKey>("Q");
   const [skillPlan, setSkillPlan] = useState<string[]>(skillPlanFor(classicChampions[0].spellOrder));
   const [prompt, setPrompt] = useState("对线稳定，使用完整经典符文与 30 点天赋；给出两件备选装备。");
@@ -448,18 +451,19 @@ export default function Home() {
         ? classicChampions.find((entry) => entry.key.toLowerCase() === championHash || entry.classicId === championHash)
         : undefined;
       if (linkedChampion) {
-        // 英雄直达链接：#champion=ezreal 直接打开该英雄的技能与出装页。
-        const recommendedItems = classicBuildPresets[linkedChampion.archetype];
+        // 英雄直达链接：#champion=ezreal 直接打开该英雄的技能与出装页，
+        // 并应用其原始方案（与手动选择英雄的行为一致）。
+        const linkedGuide = classicBuildGuides[linkedChampion.classicId][0];
         // eslint-disable-next-line react-hooks/set-state-in-effect
         setSelectedChampion(linkedChampion);
         setSelectedArtworkId(classicSkillsByChampion.get(linkedChampion.classicId)?.artworks[0]?.id || "");
-        setSelectedGuideId(classicBuildGuides[linkedChampion.classicId][0].id);
-        setRuneCounts(createRunePreset(linkedChampion));
-        setMasteryRanks({ ...initialMasteryRanks });
-        setSelectedSpells(defaultSpellsFor(linkedChampion));
-        setItems(recommendedItems);
-        setInspectedItem(recommendedItems[0]);
-        setSkillPlan(skillPlanFor(linkedChampion.spellOrder));
+        setSelectedGuideId(linkedGuide.id);
+        setRuneCounts(runeCountsFromIds(linkedGuide.runePreset));
+        setMasteryRanks({ ...masteryPresets[linkedGuide.masteryPreset] });
+        setSelectedSpells([...linkedGuide.spellIds]);
+        setItems([...linkedGuide.coreItems]);
+        setInspectedItem(linkedGuide.coreItems[0]);
+        setSkillPlan(skillPlanFor(linkedGuide.skillOrder));
         setView("build");
       }
       const saved = linkedChampion ? null
@@ -479,7 +483,9 @@ export default function Home() {
         setSelectedArtworkId(classicSkillsByChampion.get(champion.classicId)?.artworks[0]?.id || "");
         setSelectedGuideId(classicBuildGuides[champion.classicId][0].id);
         setRuneCounts(record.runeCounts ? sanitizeRuneCounts(record.runeCounts) : createRunePreset(champion));
-        setMasteryRanks(record.masteryRanks ? sanitizeMasteryRanks(record.masteryRanks) : { ...initialMasteryRanks });
+        setMasteryRanks(record.masteryRanks
+          ? sanitizeMasteryRanks(record.masteryRanks)
+          : { ...masteryPresets[classicBuildGuides[champion.classicId][0].masteryPreset] });
         setSelectedSpells(Array.isArray(record.spells)
           ? [...new Set(record.spells.filter((id): id is string => typeof id === "string" && spellIds.has(id)))].slice(0, 2)
           : defaultSpellsFor(champion));
@@ -569,25 +575,30 @@ export default function Home() {
     if (champion.classicId === selectedChampion.classicId) return;
     aiRequestId.current += 1;
     void preloadChampionAssets(champion);
-
-    // React batches this complete selection into one commit, so the hero name,
-    // ability icons and build state can never represent different champions.
-    const recommendedItems = classicBuildPresets[champion.archetype];
-    const matchedGuide = guideMatchFor(champion, search);
-    setSelectedChampion(champion);
-    setSelectedArtworkId(classicSkillsByChampion.get(champion.classicId)?.artworks[0]?.id || "");
-    setSelectedGuideId((matchedGuide || classicBuildGuides[champion.classicId][0]).id);
-    setGuideLaneFilter("全部");
     window.history.replaceState(null, "", `#champion=${champion.key.toLowerCase()}`);
-    setRuneCounts(createRunePreset(champion));
-    setMasteryRanks({ ...initialMasteryRanks });
-    setSelectedSpells(defaultSpellsFor(champion));
-    setItems(recommendedItems);
-    setInspectedItem(recommendedItems[0]);
-    setInspectedAbility("Q");
-    setSkillPlan(skillPlanFor(champion.spellOrder));
-    setAiState("idle");
-    setAiRecommendation(null);
+
+    // 立即高亮被点中的英雄行，重量级渲染放进 transition：
+    // 快速连点时 React 会丢弃过期的中间渲染，只呈现最后一次选择。
+    setPendingChampionId(champion.classicId);
+    startChampionSwitch(() => {
+      // 选中英雄即应用其原始方案（搜索命中特定玩法时应用该玩法），
+      // 符文、天赋、召唤师技能、加点与六格出装与攻略区完全同步。
+      const targetGuide = guideMatchFor(champion, search) || classicBuildGuides[champion.classicId][0];
+      setSelectedChampion(champion);
+      setSelectedArtworkId(classicSkillsByChampion.get(champion.classicId)?.artworks[0]?.id || "");
+      setSelectedGuideId(targetGuide.id);
+      setGuideLaneFilter("全部");
+      setRuneCounts(runeCountsFromIds(targetGuide.runePreset));
+      setMasteryRanks({ ...masteryPresets[targetGuide.masteryPreset] });
+      setSelectedSpells([...targetGuide.spellIds]);
+      setItems([...targetGuide.coreItems]);
+      setInspectedItem(targetGuide.coreItems[0]);
+      setInspectedAbility("Q");
+      setSkillPlan(skillPlanFor(targetGuide.skillOrder));
+      setAiState("idle");
+      setAiRecommendation(null);
+      setPendingChampionId(null);
+    });
   };
 
   useEffect(() => {
@@ -907,7 +918,7 @@ export default function Home() {
             {filteredChampions.map((champion) => (
               <button
                 key={champion.classicId}
-                className={champion.classicId === selectedChampion.classicId ? "champion-row active" : "champion-row"}
+                className={champion.classicId === (pendingChampionId ?? selectedChampion.classicId) ? "champion-row active" : "champion-row"}
                 onClick={() => chooseChampion(champion)}
                 onPointerEnter={() => preloadChampionAssets(champion)}
                 onPointerDown={() => preloadChampionAssets(champion)}
