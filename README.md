@@ -25,7 +25,7 @@
 
 ## 本地开发
 
-需要 Node.js `>=22.13.0`。
+需要 Node.js `>=22.18.0`。
 
 ```bash
 npm install

@@ -16,13 +16,13 @@ export const metadata: Metadata = {
     title: "RIFT//LAB — 英雄联盟怀旧服构筑工作台",
     description: "完整 Classic 16.15 数据，一站式配置符文、天赋、技能、召唤师技能与出装。",
     type: "website",
-    images: [{ url: "og-public.png", width: 1731, height: 909, alt: "RIFT//LAB 构筑工作台" }],
+    images: [{ url: "og-public.jpg", width: 1200, height: 630, alt: "RIFT//LAB 构筑工作台" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "RIFT//LAB — 英雄联盟怀旧服构筑工作台",
     description: "无需登录 · 符文 · 天赋 · 技能 · 出装 · AI 草案",
-    images: ["og-public.png"],
+    images: ["og-public.jpg"],
   },
 };
 

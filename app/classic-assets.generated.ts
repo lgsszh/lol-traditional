@@ -3004,7 +3004,7 @@ export const classicAssetAudit = {
     "bytes": 5662,
     "sha256": "1b91bb784b16fdf63999df6cc77c7ad94f82ca52b3d4b21213c7e5724b24e4ea",
     "labels": [
-      "致命未点亮"
+      "致命一击未点亮"
     ]
   },
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jademasteries/541_on.png": {
@@ -3012,7 +3012,7 @@ export const classicAssetAudit = {
     "bytes": 9663,
     "sha256": "d86abf6a537007e0422830769ca89d54593ade86abbe8b90c572a605dfcb274b",
     "labels": [
-      "致命"
+      "致命一击"
     ]
   },
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jademasteries/542_off.png": {

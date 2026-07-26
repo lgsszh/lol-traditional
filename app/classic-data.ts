@@ -205,9 +205,6 @@ export const classicChampions: ClassicChampion[] = [
 export const championIcon = (champion: ClassicChampion) =>
   `${CLASSIC_ASSET_BASE}/v1/champion-icons/${champion.classicId}.png`;
 
-export const championSplash = (champion: ClassicChampion) =>
-  `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion.key}_0.jpg`;
-
 const runeIcon = (asset: string) => `${CLASSIC_ASSET_BASE}/assets/loadouts/jaderunes/${asset}.project_jade.png`;
 const masteryIcon = (id: string) => `${CLASSIC_ASSET_BASE}/assets/loadouts/jademasteries/${id}_on.png`;
 const spellIcon = (asset: string) => `${CLASSIC_ASSET_BASE}/assets/ux/jade/s3icons/samesized/${asset}.project_jade.png`;
@@ -335,7 +332,7 @@ export const classicMasteries: ClassicMastery[] = [
   mastery("531", "浩劫", "进攻", 3, "造成的伤害提高 0.67%/1.33%/2%。"),
   mastery("532", "武器专家", "进攻", 1, "+8% 护甲穿透。"),
   mastery("533", "奥术知识", "进攻", 1, "+8% 法术穿透。"),
-  mastery("541", "致命", "进攻", 2, "+2.5%/5% 暴击伤害（近战翻倍）。"),
+  mastery("541", "致命一击", "进攻", 2, "+2.5%/5% 暴击伤害（近战翻倍）。"),
   mastery("542", "蛮横之力", "进攻", 2, "+1.5/3 攻击力。"),
   mastery("543", "思想之力", "进攻", 3, "+2/4/6 法术强度。"),
   mastery("544", "咒剑", "进攻", 1, "普通攻击造成相当于 5% 法术强度的魔法伤害。"),

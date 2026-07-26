@@ -553,7 +553,7 @@ export default function Home() {
       if (cancelled || cursor >= queue.length) return;
       const batch = queue.slice(cursor, cursor + 2);
       cursor += batch.length;
-      await Promise.all(batch.map(preloadChampionAssets));
+      await Promise.all(batch.map((entry) => preloadImage(championPortrait(entry))));
       if (!cancelled) timer = window.setTimeout(preloadNextPair, 120);
     };
     timer = window.setTimeout(preloadNextPair, 700);
@@ -854,7 +854,7 @@ export default function Home() {
                 onPointerDown={() => preloadChampionAssets(champion)}
                 onFocus={() => preloadChampionAssets(champion)}
               >
-                <img src={championPortrait(champion)} alt="" />
+                <img src={championPortrait(champion)} alt="" loading="lazy" />
                 <span>
                   <strong>{champion.name}</strong>
                   <small>{champion.title} · {champion.lane}</small>
@@ -1270,7 +1270,7 @@ export default function Home() {
                 <div className="spell-grid">
                   {classicSpells.map((spell) => (
                     <button className={selectedSpells.includes(spell.id) ? "spell-card active" : "spell-card"} key={spell.id} onClick={() => toggleSpell(spell.id)} aria-pressed={selectedSpells.includes(spell.id)}>
-                      <img src={localAssetUrl(spell.icon)} alt="" />
+                      <img src={localAssetUrl(spell.icon)} alt="" loading="lazy" />
                       <span><strong>{spell.name}</strong><small>冷却 {spell.cooldown} 秒</small><em>{spell.description}</em></span>
                       {selectedSpells.includes(spell.id) && <i>✓</i>}
                     </button>
