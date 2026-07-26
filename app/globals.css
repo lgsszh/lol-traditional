@@ -1488,7 +1488,18 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, a:focus-visib
   padding: 20px;
 }
 .ai-result > header { display: flex; justify-content: space-between; align-items: center; gap: 18px; }
-.ai-result > header span { color: #72d49d; font-size: 11px; font-weight: 900; letter-spacing: 1.2px; }
+.ai-result > header span {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #2f5d43;
+  border-radius: 999px;
+  background: #12211a;
+  color: #72d49d;
+  padding: 2px 11px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
 .ai-result > header h3 { margin: 4px 0 0; font-size: 19px; line-height: 1.35; }
 .ai-result > header button {
   min-height: 40px;
@@ -1500,7 +1511,7 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, a:focus-visib
   cursor: pointer;
   font-weight: 800;
 }
-.ai-result > p { margin: 14px 0; color: #aeb2c0; font-size: 14px; line-height: 1.7; }
+.ai-result > p { margin: 13px 0 16px; color: #9b9fae; font-size: 13.5px; line-height: 1.75; }
 .ai-result-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
 .ai-result-grid > div { min-height: 66px; display: flex; flex-direction: column; justify-content: center; gap: 5px; border: 1px solid #353540; border-radius: 5px; background: #17171c; padding: 10px 12px; }
 .ai-result-grid span, .ai-alternatives > span { color: #797c8e; font-size: 11px; }
@@ -2025,14 +2036,35 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, a:focus-visib
 }
 
 /* ---- AI 方案与原生方案的区分标识 ---- */
-.ai-result > header em.ai-base {
-  display: block;
-  margin-top: 7px;
-  color: #7d9ee8;
-  font-size: 12.5px;
-  font-style: normal;
-  line-height: 1.6;
+.ai-result > header .ai-base {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 11px;
 }
+.ai-base > b {
+  border: 1px solid #3a3a46;
+  border-radius: 4px;
+  background: #17171c;
+  color: #8b8e9f;
+  padding: 3px 9px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .5px;
+}
+.ai-base-guide {
+  border: 1px solid #46639e;
+  border-radius: 4px;
+  background: #22293c;
+  color: #b7cbf6;
+  padding: 3px 11px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.ai-base-guide:hover { border-color: #5383e8; background: #283354; color: #d9e4fb; }
+.ai-base > span { color: #8b8e9f; font-size: 12px; }
 .strategy-tabs > button { position: relative; }
 .tab-ai-flag {
   position: absolute;

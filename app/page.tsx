@@ -1542,10 +1542,18 @@ export default function Home() {
                     <div>
                       <span>AI 生成方案</span>
                       <h3>{aiRecommendation.title}</h3>
-                      <em className="ai-base">
-                        基于已核验方案「{selectedGuides.find((guide) => guide.id === aiRecommendation.guideId)?.name || selectedGuide.name}」生成
-                        · 六格出装与该方案一致，备选装按你的偏好扩展
-                      </em>
+                      <div className="ai-base">
+                        <b>基于已核验方案</b>
+                        <button
+                          type="button"
+                          className="ai-base-guide"
+                          onClick={() => changeView("build")}
+                          title="到技能与出装页查看这套方案的完整攻略"
+                        >
+                          {selectedGuides.find((guide) => guide.id === aiRecommendation.guideId)?.name || selectedGuide.name} →
+                        </button>
+                        <span>六格出装与该方案一致 · 备选装按你的偏好扩展</span>
+                      </div>
                     </div>
                     <button onClick={() => changeView("build")}>查看并微调构筑 →</button>
                   </header>
