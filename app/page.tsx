@@ -1190,6 +1190,7 @@ export default function Home() {
                       <span>{guide.lane}</span>
                       <strong>{guide.name}</strong>
                       <small>{guide.style}</small>
+                      {aiRecommendation?.guideId === guide.id && <b className="tab-ai-flag">AI</b>}
                     </button>
                   ))}
                 </div>
@@ -1198,6 +1199,12 @@ export default function Home() {
                     <span>当前方案</span>
                     <h4>{selectedGuide.name}<small>{selectedGuide.lane} · {selectedGuide.style}</small></h4>
                     <p>{selectedGuide.summary}</p>
+                    {aiRecommendation && aiRecommendation.guideId === selectedGuide.id && (
+                      <div className="ai-applied-note">
+                        <b>AI</b>
+                        <span>AI 助手已基于此方案生成「{aiRecommendation.title}」，符文、天赋、召唤师技能、加点与六格出装均已写入面板。</span>
+                      </div>
+                    )}
                     <div className="strategy-tags" aria-label="玩法标签">
                       {selectedGuide.tags
                         .filter((tag) => tag !== selectedGuide.lane && tag !== selectedGuide.style && !/^[a-z]+$/.test(tag))
@@ -1374,6 +1381,7 @@ export default function Home() {
                   <span>当前方案</span>
                   <strong>{selectedGuide.name}</strong>
                   <em>{selectedGuide.lane} · {selectedGuide.style}</em>
+                  {aiRecommendation && <b className="ai-flag">AI 方案已写入</b>}
                   {items.length === selectedGuide.coreItems.length
                     && selectedGuide.coreItems.every((id, index) => items[index] === id)
                     ? <b className="synced">六格与方案一致</b>
@@ -1520,7 +1528,14 @@ export default function Home() {
               {aiRecommendation && (
                 <section className="ai-result" aria-live="polite">
                   <header>
-                    <div><span>已生成</span><h3>{aiRecommendation.title}</h3></div>
+                    <div>
+                      <span>AI 生成方案</span>
+                      <h3>{aiRecommendation.title}</h3>
+                      <em className="ai-base">
+                        基于已核验方案「{selectedGuides.find((guide) => guide.id === aiRecommendation.guideId)?.name || selectedGuide.name}」生成
+                        · 六格出装与该方案一致，备选装按你的偏好扩展
+                      </em>
+                    </div>
                     <button onClick={() => changeView("build")}>查看并微调构筑 →</button>
                   </header>
                   <p>{aiRecommendation.rationale}</p>

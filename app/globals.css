@@ -1426,7 +1426,7 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, a:focus-visib
     #1c1c22;
   padding: 26px;
 }
-.ai-orb { width: 72px; height: 72px; display: grid; place-items: center; border-radius: 50%; background: radial-gradient(circle, #bc8cf1, #6f45a9 54%, #171022 56%); box-shadow: 0 0 32px rgba(164,111,224,.3); font-size: 24px; }
+.ai-orb { width: 72px; height: 72px; display: grid; place-items: center; border-radius: 50%; background: radial-gradient(circle, #7fa7f0, #3c5fa8 54%, #131a2b 56%); box-shadow: 0 0 32px rgba(83,131,232,.32); font-size: 24px; }
 .ai-copy > span { color: #b389e7; font-size: 12px; font-weight: 900; letter-spacing: 1.7px; }
 .ai-copy h3 { margin: 7px 0 4px; font-size: 24px; }
 .ai-copy > p { margin: 0 0 16px; color: #9597a6; font-size: 14px; }
@@ -1447,7 +1447,7 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, a:focus-visib
   cursor: pointer;
 }
 .ai-profile-grid button:hover { border-color: #765ba3; background: #1f1f26; }
-.ai-profile-grid button.active { border-color: #a77bdd; background: rgba(154,103,210,.13); box-shadow: inset 3px 0 #a77bdd; }
+.ai-profile-grid button.active { border-color: #5383e8; background: rgba(83,131,232,.13); box-shadow: inset 3px 0 #5383e8; }
 .ai-profile-grid strong { color: #e7e8ed; font-size: 13px; }
 .ai-profile-grid small { color: #7c7f91; font-size: 11px; line-height: 1.4; }
 .ai-copy textarea { width: 100%; min-height: 120px; resize: vertical; border: 1px solid #4b4b54; border-radius: 6px; background: #131318; color: #ebebf0; padding: 14px; outline: 0; font-size: 14px; line-height: 1.65; }
@@ -1478,16 +1478,16 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, a:focus-visib
 .ai-result {
   margin-top: 16px;
   border: 1px solid #454552;
-  border-top-color: #9b72d2;
+  border-top-color: #5383e8;
   border-radius: 8px;
   background:
-    radial-gradient(circle at 100% 0, rgba(156,105,216,.1), transparent 34%),
+    radial-gradient(circle at 100% 0, rgba(83,131,232,.14), transparent 36%),
     #1c1c22;
   padding: 20px;
 }
 .ai-result > header { display: flex; justify-content: space-between; align-items: center; gap: 18px; }
 .ai-result > header span { color: #72d49d; font-size: 11px; font-weight: 900; letter-spacing: 1.2px; }
-.ai-result > header h3 { margin: 3px 0 0; font-size: 21px; }
+.ai-result > header h3 { margin: 4px 0 0; font-size: 19px; line-height: 1.35; }
 .ai-result > header button {
   min-height: 40px;
   border: 1px solid #a47bd5;
@@ -1498,15 +1498,15 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, a:focus-visib
   cursor: pointer;
   font-weight: 800;
 }
-.ai-result > p { margin: 15px 0; color: #b0b1bd; line-height: 1.65; }
+.ai-result > p { margin: 14px 0; color: #aeb2c0; font-size: 14px; line-height: 1.7; }
 .ai-result-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
 .ai-result-grid > div { min-height: 66px; display: flex; flex-direction: column; justify-content: center; gap: 5px; border: 1px solid #353540; border-radius: 5px; background: #17171c; padding: 10px 12px; }
 .ai-result-grid span, .ai-alternatives > span { color: #797c8e; font-size: 11px; }
-.ai-result-grid strong { color: #90ace7; font-size: 13px; }
+.ai-result-grid strong { color: #9bb8f4; font-size: 13.5px; line-height: 1.5; }
 .ai-purchase-plan { display: grid; grid-template-columns: .8fr 1.4fr 1.2fr; gap: 9px; margin-top: 12px; }
 .ai-purchase-plan > section { min-width: 0; border: 1px solid #3b3b45; border-radius: 5px; background: #17171c; padding: 11px; }
-.ai-purchase-plan h4 { margin: 0 0 8px; color: #cfb4ed; font-size: 11px; }
-.ai-purchase-plan section > div:not(.ai-recall-list) { display: grid; grid-template-columns: repeat(auto-fit, minmax(92px, 1fr)); gap: 5px; }
+.ai-purchase-plan h4 { margin: 0 0 9px; color: #8fb0f0; font-size: 12px; font-weight: 800; letter-spacing: .5px; }
+.ai-purchase-plan section > div:not(.ai-recall-list) { display: grid; grid-template-columns: repeat(auto-fit, minmax(106px, 1fr)); gap: 6px; }
 .ai-purchase-plan section > div:not(.ai-recall-list) > button {
   min-width: 0;
   display: flex;
@@ -1522,8 +1522,8 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, a:focus-visib
 }
 .ai-purchase-plan img { width: 34px; height: 34px; border-radius: 3px; }
 .ai-purchase-plan button span { min-width: 0; display: flex; flex-direction: column; }
-.ai-purchase-plan button strong { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 10px; }
-.ai-purchase-plan button small { color: #83729a; font-size: 9px; }
+.ai-purchase-plan button strong { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 12px; }
+.ai-purchase-plan button small { color: #8d93a6; font-size: 10.5px; }
 .ai-recall-list { display: grid; gap: 5px; }
 .ai-recall-list button {
   display: grid;
@@ -1538,9 +1538,9 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, a:focus-visib
   cursor: pointer;
   text-align: left;
 }
-.ai-recall-list button:hover, .ai-purchase-plan section > div:not(.ai-recall-list) > button:hover { border-color: #9c72cf; }
+.ai-recall-list button:hover, .ai-purchase-plan section > div:not(.ai-recall-list) > button:hover { border-color: #5383e8; }
 .ai-recall-list strong { color: #6f94e5; }
-.ai-recall-list span { color: #cbccd4; font-size: 10px; }
+.ai-recall-list span { color: #cbccd4; font-size: 12px; }
 .ai-recall-list small { overflow: hidden; color: #7b7d8e; text-overflow: ellipsis; white-space: nowrap; }
 .ai-alternatives { display: flex; align-items: stretch; gap: 8px; margin-top: 12px; }
 .ai-alternatives > span { width: 86px; align-self: center; }
@@ -1559,7 +1559,7 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, a:focus-visib
   text-align: left;
   cursor: pointer;
 }
-.ai-alternatives > button:hover { border-color: #9b72d2; }
+.ai-alternatives > button:hover { border-color: #5383e8; }
 .ai-alternatives img { width: 38px; height: 38px; border-radius: 4px; }
 .ai-alternatives button span { min-width: 0; display: flex; flex-direction: column; }
 .ai-alternatives button strong { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 12px; }
@@ -2020,4 +2020,55 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, a:focus-visib
   .active-guide-note button { width: 100%; }
   .opening-groups { grid-template-columns: 1fr; }
   .build-phase-grid { grid-template-columns: 1fr; }
+}
+
+/* ---- AI 方案与原生方案的区分标识 ---- */
+.ai-result > header em.ai-base {
+  display: block;
+  margin-top: 7px;
+  color: #7d9ee8;
+  font-size: 12.5px;
+  font-style: normal;
+  line-height: 1.6;
+}
+.strategy-tabs > button { position: relative; }
+.tab-ai-flag {
+  position: absolute;
+  top: -9px;
+  right: 10px;
+  border: 1px solid #46639e;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #2b3c63, #1b2338);
+  color: #9bb8f4;
+  padding: 1px 9px;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.ai-applied-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  margin: 0 0 14px;
+  border: 1px solid #3d5388;
+  border-radius: 5px;
+  background: linear-gradient(135deg, rgba(83, 131, 232, .12), #171b26);
+  padding: 10px 12px;
+}
+.ai-applied-note b {
+  flex: none;
+  border: 1px solid #46639e;
+  border-radius: 4px;
+  background: #22293c;
+  color: #9bb8f4;
+  padding: 1px 7px;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+.ai-applied-note span { color: #aab8d8; font-size: 12.5px; line-height: 1.65; }
+.active-guide-note b.ai-flag {
+  margin-left: 0;
+  border: 1px solid #46639e;
+  background: #1d2334;
+  color: #9bb8f4;
 }
