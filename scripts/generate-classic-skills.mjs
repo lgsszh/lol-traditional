@@ -4,6 +4,7 @@ import {
   extractBalancedObject,
   fetchJson,
   fetchText,
+  sleep,
   writeOrCheck,
 } from "./classic-generator-utils.mjs";
 
@@ -121,10 +122,43 @@ async function fetchChampion(champion) {
   if (!historicalChampion || historicalChampion.spells?.length !== 4) {
     throw new Error(`${champion.key}: missing ${numericVersion} numeric data`);
   }
-  const classicSkin = detail.skins?.find((skin) => /^经典(?:\s|$)/.test(skin.name))
-    || detail.skins?.find((skin) => skin.isBase);
-  if (!classicSkin?.imageUrl?.includes("/classic/")) {
-    throw new Error(`${champion.key}: missing classic splash art`);
+  // OP.GG exposes two distinct historical concepts:
+  // - a skin whose localized name contains "经典";
+  // - exactly one card marked "默认" (`isBase: true`).
+  // Prefer the named Classic art, but retain the default art when it differs so
+  // the workbench can show both without making a runtime network request.
+  const skins = detail.skins || [];
+  const defaultSkins = skins.filter((skin) => skin.isBase === true);
+  if (defaultSkins.length !== 1) {
+    throw new Error(`${champion.key}: expected exactly one OP.GG default skin, received ${defaultSkins.length}`);
+  }
+  const defaultSkin = defaultSkins[0];
+  const namedClassicSkin = skins.find((skin) => skin.name?.includes("经典")) || null;
+  if (!defaultSkin.imageUrl?.includes("/classic/assets/characters/")
+    || !defaultSkin.imageUrl.includes("/skins/base/")) {
+    throw new Error(`${champion.key}: OP.GG default skin is not a Classic base splash`);
+  }
+  if (namedClassicSkin && !namedClassicSkin.imageUrl?.includes("/classic/assets/characters/")) {
+    throw new Error(`${champion.key}: named Classic skin is not a Classic splash`);
+  }
+  const primarySkin = namedClassicSkin || defaultSkin;
+  const artworks = [
+    {
+      id: primarySkin.id,
+      name: primarySkin.name,
+      imageUrl: primarySkin.imageUrl,
+      kind: namedClassicSkin ? "classic" : "default",
+      isDefault: primarySkin.isBase === true,
+    },
+  ];
+  if (namedClassicSkin && namedClassicSkin.id !== defaultSkin.id) {
+    artworks.push({
+      id: defaultSkin.id,
+      name: defaultSkin.name,
+      imageUrl: defaultSkin.imageUrl,
+      kind: "default",
+      isDefault: true,
+    });
   }
 
   return {
@@ -132,8 +166,12 @@ async function fetchChampion(champion) {
     championName: champion.name,
     sourceUrl,
     portrait: detail.imageUrl,
-    classicSplash: classicSkin.imageUrl,
-    classicSplashName: classicSkin.name,
+    classicSplash: primarySkin.imageUrl,
+    classicSplashName: primarySkin.name,
+    classicSplashId: primarySkin.id,
+    classicSplashIsDefault: primarySkin.isBase === true,
+    artworks,
+    availableSkinCount: skins.length,
     abilities: detail.abilities.map((ability, index) => {
       if (!ability.imageUrl?.includes("/classic/")) {
         throw new Error(`${champion.key} ${ability.key}: non-classic icon`);
@@ -160,12 +198,13 @@ async function fetchChampion(champion) {
 
 const records = [];
 const queue = [...classicChampions];
-const workers = Array.from({ length: 6 }, async () => {
+const workers = Array.from({ length: 2 }, async () => {
   while (queue.length) {
     const champion = queue.shift();
     const record = await fetchChampion(champion);
     records.push(record);
     process.stdout.write(`Fetched ${records.length}/${classicChampions.length}: ${champion.key}\n`);
+    await sleep(180 + Math.floor(Math.random() * 120));
   }
 });
 await Promise.all(workers);
@@ -195,6 +234,16 @@ export type ClassicChampionSkillSet = {
   portrait: string;
   classicSplash: string;
   classicSplashName: string;
+  classicSplashId: string;
+  classicSplashIsDefault: boolean;
+  artworks: Array<{
+    id: string;
+    name: string;
+    imageUrl: string;
+    kind: "classic" | "default";
+    isDefault: boolean;
+  }>;
+  availableSkinCount: number;
   abilities: ClassicAbility[];
 };
 

@@ -20,6 +20,7 @@ test("server renders the complete Classic builder", async () => {
   assert.match(html, /天赋模拟器/);
   assert.match(html, /60 英雄 · 16 技能/);
   assert.match(html, /符文 50 · 天赋 56 · 召唤师技能 16 · 装备 152/);
+  assert.match(html, /OP\.GG 原画/);
   assert.match(html, /AI 助手/);
   assert.match(html, /使用帮助/);
   assert.match(html, /data-guide="champion-picker"/);

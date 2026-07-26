@@ -31,12 +31,15 @@ jobs:
         run: npm test
       - name: Commit verified source changes
         run: |
-          if git diff --quiet; then
+          git config user.name "rift-lab-data-bot"
+          git config user.email "actions@users.noreply.github.com"
+          # 数据、镜像清单和新下载的图片必须一起提交，否则部署会缺图。
+          git add app/classic-items.generated.ts app/classic-skills.generated.ts \
+            app/classic-item-recipes.generated.ts app/classic-assets.generated.ts \
+            public/classic-cache
+          if git diff --cached --quiet; then
             echo "OP.GG Classic data is unchanged."
             exit 0
           fi
-          git config user.name "rift-lab-data-bot"
-          git config user.email "actions@users.noreply.github.com"
-          git add app/classic-items.generated.ts app/classic-skills.generated.ts app/classic-item-recipes.generated.ts
           git commit -m "data: sync OP.GG Classic snapshot"
           git push

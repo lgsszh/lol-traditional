@@ -36,6 +36,7 @@ export function championMatchesFilters(
   const searchIndex = normalizeSearch([
     champion.name,
     champion.title,
+    ...champion.aliases,
     champion.key,
     champion.role,
     champion.lane,
