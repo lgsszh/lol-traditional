@@ -42,12 +42,12 @@ jobs:
           grep -q "/lol-traditional/_next/" out/index.html
           grep -q "/lol-traditional/classic-cache/" out/index.html
       - name: Configure Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
         with:
           # 首次运行时自动启用 GitHub Pages（Source=GitHub Actions），无需手动设置。
           enablement: true
       - name: Upload website artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: ./out
 
@@ -60,4 +60,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
