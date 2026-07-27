@@ -4,7 +4,7 @@
 import { classicChampions } from "../app/classic-data.ts";
 import { decodeNextPayload, fetchText } from "./classic-generator-utils.mjs";
 
-const INDEX_URL = "https://op.gg/zh-cn/lol/classic/champions";
+const INDEX_URL = "https://op.gg/zh-cn/lol/classic";
 const specialSlugs = { MonkeyKing: "wukong" };
 const championSlug = (key) => specialSlugs[key] || key.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase();
 
