@@ -57,12 +57,12 @@ status labels:
 
 ## 项目现状与工程约定
 
-### 二、项目现状（v0.6.0）
+### 二、项目现状（v0.6.1）
 
 - 站点名：**英雄联盟怀旧服攻略介绍**（原 RIFT//LAB，已全量更名；代码/测试中不允许再出现 RIFT//LAB 字样，rendered-html 测试会拦截）。
 - 线上地址：https://lgsszh.github.io/lol-traditional/ （GitHub Pages，项目页）。
 - 内容规模：60 位英雄、242 套 S3（2012–2013）考据玩法方案、152 件装备、50 符文、56 天赋、16 召唤师技能；另有 60 英雄 OP.GG 怀旧海斗攻略、2700 条分品质强化推荐、300 套技能加点与 188 个 KIWI_JADE 强化符文。
-- 版本：package.json `0.6.0`；已发布 Git 标签截至 v0.5.1，本次改动发布后应新增 v0.6.0。
+- 版本：package.json `0.6.1`；已发布 Git 标签截至 v0.6.0，本次改动发布后应新增 v0.6.1。
 - 界面：OP.GG 风格蓝色系（强调色 `#5383e8`），每个英雄保留专属主题色（`--champion-accent`，来自 classic-data 的 accent 字段，不要统一掉）。
 - 英雄直达链接：`#champion=<key小写>`（如 `#champion=ezreal`）直接打开该英雄出装页；`#build=` 是完整构筑分享链接，两者互斥，别破坏。
 

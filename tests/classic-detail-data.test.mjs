@@ -272,6 +272,28 @@ test("技能与出装页面接入详情面板和显式装备操作", async () =>
   assert.match(itemPanel, /装备到第/);
 });
 
+test("五项主功能横向排列，切换后回到页面顶部", async () => {
+  const [page, styles] = await Promise.all([
+    readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/globals.css", import.meta.url), "utf8"),
+  ]);
+
+  assert.match(page, /className="main-nav module-tabs"/);
+  assert.match(page, /aria-keyshortcuts=\{`Alt\+\$\{index \+ 1\}`\}/);
+  assert.match(page, /window\.scrollTo\(\{ top: 0, left: 0, behavior: "auto" \}\)/);
+  assert.match(
+    page,
+    /window\.scrollTo\(\{ top: 0, left: 0, behavior: "auto" \}\);[\s\S]*window\.requestAnimationFrame[\s\S]*setView\(nextView\)/,
+  );
+  assert.doesNotMatch(page, /className="module-rail"/);
+  assert.match(
+    styles,
+    /\.main-nav\s*\{[\s\S]*grid-template-columns:\s*repeat\(5,\s*minmax\(0,\s*1fr\)\)/,
+  );
+  assert.match(styles, /\.workspace\s*\{[\s\S]*grid-template-columns:\s*284px\s+minmax\(0,\s*1fr\)/);
+  assert.ok((styles.match(/@media \(max-width: 1099px\)/g) ?? []).length >= 2);
+});
+
 test("OP.GG 同步使用低并发与指数退避，避免单个英雄拖垮整批数据", async () => {
   const [generator, utilities] = await Promise.all([
     readFile(new URL("../scripts/generate-classic-skills.mjs", import.meta.url), "utf8"),

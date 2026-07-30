@@ -486,6 +486,14 @@ export default function Home() {
   const toastTimer = useRef(0);
   const changeView = useCallback((nextView: WorkbenchView) => {
     void preloadWorkbenchAssets(nextView);
+    if (typeof window !== "undefined") {
+      // 先让仍有完整高度的旧视图回顶，再提交新视图。否则从长页面切到
+      // 懒加载页面时，浏览器滚动锚定会在内容挂载后把视口重新推回中段。
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+      window.requestAnimationFrame(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+      });
+    }
     setView(nextView);
   }, []);
 
@@ -990,8 +998,6 @@ export default function Home() {
     }, 360);
   };
 
-  const activeWorkbench = workbenchNavigation.find((entry) => entry.id === view) ?? workbenchNavigation[0];
-
   return (
     <main className="app-shell" style={{ "--champion-accent": selectedChampion.accent } as React.CSSProperties}>
       <a className="skip-link" href="#builder-content">跳到构筑内容</a>
@@ -1000,13 +1006,25 @@ export default function Home() {
           <span className="brand-mark">怀</span>
           <span><strong>英雄联盟怀旧服攻略介绍</strong><small>S3 考据 · 全同步工作台</small></span>
         </button>
-        <div className="topbar-context" aria-live="polite">
-          <span>{String(workbenchNavigation.findIndex((entry) => entry.id === view) + 1).padStart(2, "0")}</span>
-          <div>
-            <strong>{activeWorkbench.label}</strong>
-            <small>{activeWorkbench.description} · 当前英雄 {selectedChampion.name}</small>
-          </div>
-        </div>
+        <nav className="main-nav module-tabs" aria-label="构筑功能" data-guide="module-nav">
+          {workbenchNavigation.map((entry, index) => (
+            <button
+              key={entry.id}
+              className={view === entry.id ? "active" : ""}
+              onClick={() => changeView(entry.id)}
+              onPointerEnter={() => preloadWorkbenchAssets(entry.id)}
+              onFocus={() => preloadWorkbenchAssets(entry.id)}
+              aria-current={view === entry.id ? "page" : undefined}
+              aria-keyshortcuts={`Alt+${index + 1}`}
+              aria-label={`${entry.label}，${entry.description}`}
+              title={`${entry.description}（Alt+${index + 1}）`}
+            >
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <strong>{entry.label}</strong>
+              <small>{entry.badge}</small>
+            </button>
+          ))}
+        </nav>
         <div className="sync-status">
           <span className="live-dot" />
           <span>
@@ -1021,32 +1039,6 @@ export default function Home() {
       </header>
 
       <div className="workspace">
-        <nav className="main-nav module-rail" aria-label="构筑功能" data-guide="module-nav">
-          <div className="module-rail-heading">
-            <span>功能</span>
-            <small>{workbenchNavigation.length} 项</small>
-          </div>
-          {workbenchNavigation.map((entry, index) => (
-            <button
-              key={entry.id}
-              className={view === entry.id ? "active" : ""}
-              onClick={() => changeView(entry.id)}
-              onPointerEnter={() => preloadWorkbenchAssets(entry.id)}
-              onFocus={() => preloadWorkbenchAssets(entry.id)}
-              aria-current={view === entry.id ? "page" : undefined}
-              aria-label={`${entry.label}，${entry.description}`}
-            >
-              <span>{String(index + 1).padStart(2, "0")}</span>
-              <strong>{entry.label}</strong>
-              <small>{entry.badge}</small>
-            </button>
-          ))}
-          <div className="module-rail-note">
-            <span>快捷切换</span>
-            <strong>Alt + 1–5</strong>
-          </div>
-        </nav>
-
         <aside className="champion-rail" data-guide="champion-picker">
           <div className="rail-heading">
             <span>{view === "mayhem" ? "怀旧海斗排名" : "经典英雄"}</span>
@@ -1207,7 +1199,7 @@ export default function Home() {
                 </div>
               )}
             >
-              <ClassicMayhemGuide champion={selectedChampion} />
+              <ClassicMayhemGuide key={selectedChampion.classicId} champion={selectedChampion} />
             </Suspense>
           )}
 

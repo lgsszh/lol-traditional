@@ -25,6 +25,10 @@ const keywordLabels = new Map([
   ["abilityname", "所选技能"],
 ]);
 
+const levelUpLabels = new Map([
+  ["ammorechargetime", "充能时间"],
+]);
+
 function cleanText(value = "") {
   return String(value)
     .replace(/<br\s*\/?>/gi, " ")
@@ -132,15 +136,124 @@ function formatValueSeries(values, multiplier = 1) {
   return scaled.map(formatNumber).filter(Boolean).join("/");
 }
 
+function publicSpellRange(spell, spellObject, maxRank) {
+  const dataDragonRange = String(spell?.rangeBurn ?? "").trim();
+  const dataDragonValues = dataDragonRange
+    .split("/")
+    .map((value) => finiteNumber(value.trim()))
+    .filter((value) => value !== null);
+  if (
+    dataDragonValues.length > 0
+    && dataDragonValues.every((value) => value >= 0 && value <= 100_000)
+  ) {
+    return dataDragonRange;
+  }
+
+  const clientSpell = spellObject?.mSpell ?? spellObject;
+  for (const rawValues of [
+    clientSpell?.castRangeDisplayOverride,
+    clientSpell?.castRange,
+  ]) {
+    if (!Array.isArray(rawValues)) continue;
+    const values = rankValues(rawValues, maxRank);
+    if (values.length === 0 || values.some((value) => value < 0 || value > 100_000)) continue;
+    return formatValueSeries(values);
+  }
+  return null;
+}
+
+function formatCharacterLevelBreakpoints(part, multiplier = 1, suffix = "") {
+  const levelOneValue = finiteNumber(part?.mLevel1Value);
+  if (levelOneValue === null) return null;
+
+  const breakpoints = new Map(
+    (part.mBreakpoints ?? [])
+      .map((entry) => ({
+        level: finiteNumber(entry.mLevel),
+        additional: finiteNumber(entry.mAdditionalBonusAtThisLevel) ?? 0,
+        perLevelAfter: finiteNumber(entry.mBonusPerLevelAtAndAfter) ?? 0,
+      }))
+      // 客户端有时保留 19/21/25/30 级的模式或未来断点；召唤师峡谷与
+      // 怀旧海斗当前英雄等级上限均为 18，只计算玩家实际可达的等级。
+      .filter((entry) => Number.isInteger(entry.level) && entry.level >= 2 && entry.level <= 18)
+      .sort((left, right) => left.level - right.level)
+      .map((entry) => [entry.level, entry]),
+  );
+
+  let current = levelOneValue;
+  let perLevel = finiteNumber(part.mInitialBonusPerLevel) ?? 0;
+  const values = [current];
+  for (let level = 2; level <= 18; level += 1) {
+    const breakpoint = breakpoints.get(level);
+    if (breakpoint) {
+      // Riot 的断点语义：到达断点时加入一次性增量，并从该等级开始
+      // 使用新的每级增量；缺失字段按客户端默认值 0 处理。
+      current += breakpoint.additional + breakpoint.perLevelAfter;
+      perLevel = breakpoint.perLevelAfter;
+    } else {
+      current += perLevel;
+    }
+    values.push(current);
+  }
+
+  const shownValues = [values[0]];
+  const shownLevels = [1];
+  for (let index = 1; index < values.length; index += 1) {
+    if (Math.abs(values[index] - values[index - 1]) <= 1e-9) continue;
+    shownValues.push(values[index]);
+    shownLevels.push(index + 1);
+  }
+
+  const valueText = `${formatValueSeries(shownValues, multiplier)}${suffix}`;
+  return shownLevels.length === 1
+    ? valueText
+    : `${valueText}（英雄等级${shownLevels.join("/")}）`;
+}
+
+function formulaSubparts(part) {
+  if (Array.isArray(part?.mSubparts)) return part.mSubparts;
+  return [part?.mPart1, part?.mPart2].filter(Boolean);
+}
+
 function collectSpellContext(resources, maxRank = 1) {
   const dataValues = new Map();
   const calculations = new Map();
 
-  for (const resource of resources.filter(Boolean)) {
+  for (const [resourceIndex, resource] of resources.filter(Boolean).entries()) {
     const spell = resource.mSpell ?? resource;
+    if (resourceIndex === 0) {
+      for (const [name, rawValues] of [
+        ["AmmoRechargeTime", spell.mAmmoRechargeTime],
+        ["MaxAmmo", spell.mMaxAmmo],
+        ["CastRange", spell.castRangeDisplayOverride ?? spell.castRange],
+      ]) {
+        if (!Array.isArray(rawValues) || dataValues.has(name.toLowerCase())) continue;
+        const values = rankValues(rawValues, maxRank);
+        if (values.length > 0) {
+          dataValues.set(name.toLowerCase(), {
+            name,
+            values,
+          });
+        }
+      }
+    }
+    for (const [effectIndex, effectAmount] of (spell.mEffectAmount ?? []).entries()) {
+      const key = `effect${effectIndex + 1}amount`;
+      if (dataValues.has(key)) continue;
+      const values = rankValues(effectAmount?.value ?? effectAmount, maxRank);
+      if (values.length > 0) {
+        dataValues.set(key, {
+          name: `Effect${effectIndex + 1}Amount`,
+          values,
+        });
+      }
+    }
     for (const entry of spell.DataValues ?? spell.mDataValues ?? []) {
       if (!entry?.name || dataValues.has(entry.name.toLowerCase())) continue;
-      const values = rankValues(entry.values, maxRank);
+      const values = rankValues(
+        Array.isArray(entry.values) ? entry.values : Array(maxRank + 1).fill(0),
+        maxRank,
+      );
       if (values.length > 0) {
         dataValues.set(entry.name.toLowerCase(), {
           name: entry.name,
@@ -173,7 +286,11 @@ function statLabel(part, fieldName = "", issues = null) {
   const baseLabels = new Map([
     [1, "护甲"],
     [2, "攻击力"],
+    [4, "攻击速度"],
     [6, "魔法抗性"],
+    [7, "移动速度"],
+    [8, "暴击率"],
+    [9, "暴击伤害"],
     [12, "最大生命值"],
     [18, "生命偷取"],
   ]);
@@ -215,16 +332,12 @@ function formatFormulaPart(part, context, issues, seen) {
     if (entry) return formatValueSeries(entry.values);
   }
   if (type === "ByCharLevelInterpolationCalculationPart") {
-    const start = formatNumber(part.mStartValue);
+    const start = formatNumber(part.mStartValue ?? 0);
     const end = formatNumber(part.mEndValue);
-    if (start && end) return `${start}–${end}（1–18级）`;
+    if (start !== null && end !== null) return `${start}–${end}（1–18级）`;
   }
   if (type === "ByCharLevelBreakpointsCalculationPart") {
-    const levelOne = formatNumber(part.mLevel1Value);
-    const perLevel = formatNumber(part.mInitialBonusPerLevel);
-    if (levelOne) {
-      return `${levelOne}${perLevel ? `（初始每级 +${perLevel}，按客户端断点变化）` : "（按英雄等级变化）"}`;
-    }
+    return formatCharacterLevelBreakpoints(part);
   }
   if (type === "AbilityResourceByCoefficientCalculationPart") {
     const coefficient = formatNumber(part.mCoefficient);
@@ -239,16 +352,19 @@ function formatFormulaPart(part, context, issues, seen) {
     if (entry) return `${formatValueSeries(entry.values)} × 状态层数`;
   }
   if (type === "SumOfSubPartsCalculationPart") {
-    const sourceParts = part.mSubparts ?? [];
+    const sourceParts = formulaSubparts(part);
     const subparts = sourceParts.map((subpart) => formatFormulaPart(subpart, context, issues, seen));
     if (subparts.some((subpart) => !subpart)) {
       issues.add(`公式部件 ${type} 未完整展开`);
       return null;
     }
-    if (subparts.length > 0) return `(${subparts.join(" + ")})`;
+    const meaningfulParts = subparts.filter((subpart) => subpart !== "0");
+    if (meaningfulParts.length === 1) return meaningfulParts[0];
+    if (meaningfulParts.length > 1) return `(${meaningfulParts.join(" + ")})`;
+    if (subparts.length > 0) return "0";
   }
   if (type === "ProductOfSubPartsCalculationPart") {
-    const sourceParts = part.mSubparts ?? [];
+    const sourceParts = formulaSubparts(part);
     const subparts = sourceParts.map((subpart) => formatFormulaPart(subpart, context, issues, seen));
     if (subparts.some((subpart) => !subpart)) {
       issues.add(`公式部件 ${type} 未完整展开`);
@@ -261,6 +377,7 @@ function formatFormulaPart(part, context, issues, seen) {
     const label = statLabel(part, "", issues);
     if (subpart && label) return `${subpart} × ${label}`;
   }
+  if (type === "CooldownMultiplierCalculationPart") return "技能冷却修正系数";
   if (type === "{f3cbe7b2}" && part.mSpellCalculationKey) {
     return formatCalculation(part.mSpellCalculationKey, context, issues, seen);
   }
@@ -295,6 +412,26 @@ function formatCalculation(name, context, issues, seen = new Set()) {
   }
 
   const sourceParts = calculation.mFormulaParts ?? [];
+  const percentMultiplier = calculation.mMultiplier?.__type === "NumberCalculationPart"
+    ? finiteNumber(calculation.mMultiplier.mNumber)
+    : calculation.mMultiplier
+      ? null
+      : 1;
+  if (calculation.mDisplayAsPercent && sourceParts.length === 1 && percentMultiplier !== null) {
+    const [part] = sourceParts;
+    const percentScale = percentMultiplier * 100;
+    if (part?.__type === "NamedDataValueCalculationPart") {
+      const entry = context.dataValues.get(String(part.mDataValue).toLowerCase());
+      if (entry) return `${formatValueSeries(entry.values, percentScale)}%`;
+    }
+    if (part?.__type === "EffectValueCalculationPart") {
+      const entry = context.dataValues.get(`effect${Number(part.mEffectIndex)}amount`);
+      if (entry) return `${formatValueSeries(entry.values, percentScale)}%`;
+    }
+    if (part?.__type === "ByCharLevelBreakpointsCalculationPart") {
+      return formatCharacterLevelBreakpoints(part, percentScale, "%");
+    }
+  }
   const parts = sourceParts.map((part) => formatFormulaPart(part, context, issues, nextSeen));
   if (parts.some((part) => !part)) {
     issues.add(`公式 ${entry.name} 未完整展开`);
@@ -303,6 +440,7 @@ function formatCalculation(name, context, issues, seen = new Set()) {
   let result = parts.join(" + ");
   const multiplier = formatFormulaPart(calculation.mMultiplier, context, issues, nextSeen);
   if (multiplier) result = result ? `(${result}) × ${multiplier}` : multiplier;
+  if (result && calculation.mDisplayAsPercent) result = `(${result}) × 100%`;
   if (!result) {
     issues.add(`公式 ${entry.name}`);
     return null;
@@ -334,6 +472,10 @@ function resolveDataToken(token, context, issues) {
   const normalized = rawKey.replace(/^calc_/i, "").toLowerCase();
 
   if (/^spellmodifierdescriptionappend$/i.test(rawKey)) return "";
+  if (/^Spell_.+_Tooltip_\d+$/i.test(rawKey) && context.fallbackDescription) {
+    issues.add(`同版本模式本地化词条 ${rawKey} 未独立公开`);
+    return context.fallbackDescription;
+  }
   const keyword = keywordLabels.get(normalized);
   if (keyword) return keyword;
 
@@ -346,36 +488,50 @@ function resolveDataToken(token, context, issues) {
   const dataValue = aliases.map((key) => context.dataValues.get(key)).find(Boolean);
   if (dataValue) return formatValueSeries(dataValue.values, multiplier);
 
-  const calculation = aliases
-    .map((key) => formatCalculation(key, context, issues))
-    .find(Boolean);
-  if (calculation) {
-    return multiplier === 1 ? calculation : `(${calculation}) × ${formatNumber(multiplier)}`;
+  for (const alias of aliases) {
+    const calculationIssues = new Set();
+    const calculation = formatCalculation(alias, context, calculationIssues);
+    if (calculation) {
+      for (const issue of calculationIssues) issues.add(issue);
+      return multiplier === 1 ? calculation : `(${calculation}) × ${formatNumber(multiplier)}`;
+    }
   }
   if (/^f\d+(?:\.\d+)?$/i.test(rawKey) || /^(?:stack|count|current|total)\w*$/i.test(rawKey)) {
     issues.add(`对局实时字段 ${rawKey}`);
-    return null;
+    return "按对局实时属性计算";
   }
   issues.add(`未解析字段 ${rawKey}`);
-  return null;
+  return "按对局状态实时计算";
 }
 
-function resolvePublicText(value, context) {
+function resolvePublicText(value, context, stringTable = null, seenLocalizations = new Set()) {
   const issues = new Set();
   const unresolvedTokens = new Set();
-  let text = String(value ?? "");
-  text = text.replace(/@([^@\r\n]+)@/g, (_, token) => {
-    const resolved = resolveDataToken(token, context, issues);
-    if (resolved === null) unresolvedTokens.add(token.trim());
+  const resolveToken = (token) => {
+    const normalizedToken = token.trim();
+    const localized = stringTable ? localizationValue(stringTable, normalizedToken) : "";
+    if (localized && localized !== "???" && !seenLocalizations.has(normalizedToken.toLowerCase())) {
+      const nested = resolvePublicText(
+        localized,
+        context,
+        stringTable,
+        new Set(seenLocalizations).add(normalizedToken.toLowerCase()),
+      );
+      for (const issue of nested.issues) issues.add(issue);
+      for (const unresolved of nested.unresolvedTokens) unresolvedTokens.add(unresolved);
+      return nested.text;
+    }
+    const resolved = resolveDataToken(normalizedToken, context, issues);
+    if (resolved === null) unresolvedTokens.add(normalizedToken);
     return resolved ?? "";
-  });
+  };
+  let text = String(value ?? "");
+  text = text.replace(/@([^@\r\n]+)@/g, (_, token) => resolveToken(token));
   text = text.replace(/\{\{\s*([^{}]+?)\s*\}\}/g, (_, token) => {
     const normalized = token.trim().toLowerCase();
     const keyword = keywordLabels.get(normalized);
     if (keyword) return keyword;
-    const resolved = resolveDataToken(token, context, issues);
-    if (resolved === null) unresolvedTokens.add(token.trim());
-    return resolved ?? "";
+    return resolveToken(token);
   });
   text = cleanText(text);
 
@@ -426,6 +582,66 @@ function dataDragonContext(spell, baseContext) {
   return { ...baseContext, dataValues };
 }
 
+function tooltipDataForSpell(spellObject) {
+  return spellObject?.mSpell?.mClientData?.mTooltipData ?? null;
+}
+
+function scalarCount(value = "") {
+  return value.match(/\d+(?:\.\d+)?/g)?.length ?? 0;
+}
+
+function levelUpNumericDetail(tooltipData, stringTable, context) {
+  const elements = tooltipData?.mLists?.LevelUp?.Elements ?? [];
+  const rows = [];
+  const issues = new Set();
+  const unresolvedTokens = new Set();
+
+  for (const element of elements) {
+    const type = String(element?.type ?? "").trim();
+    if (!type) continue;
+    if (/^(?:Cooldown|Cost|CastRange|Effect%dAmount)$/i.test(type)) continue;
+    const multiplier = finiteNumber(element.multiplier) ?? 1;
+    const aliases = [
+      type.toLowerCase(),
+      type.replace(/^calc_/i, "").toLowerCase(),
+      type.includes(":") ? type.split(":").at(-1).toLowerCase() : null,
+    ].filter(Boolean);
+    const dataValue = aliases.map((key) => context.dataValues.get(key)).find(Boolean);
+    let value = dataValue ? formatValueSeries(dataValue.values, multiplier) : null;
+    if (!value) {
+      for (const alias of aliases) {
+        const calculationIssues = new Set();
+        const calculation = formatCalculation(alias, context, calculationIssues);
+        if (!calculation) continue;
+        value = multiplier === 1 ? calculation : `(${calculation}) × ${formatNumber(multiplier)}`;
+        for (const issue of calculationIssues) issues.add(issue);
+        break;
+      }
+    }
+    if (!value) {
+      if (/^AmmoRechargeTime$/i.test(type)) continue;
+      unresolvedTokens.add(type);
+      issues.add(`等级成长字段 ${type} 未解析`);
+      continue;
+    }
+
+    const shouldShowPercent = element.Style === 1
+      || (multiplier === 100 && dataValue?.values.every((entry) => Math.abs(entry) <= 2));
+    if (shouldShowPercent && !value.includes("%")) value += "%";
+    const localizedName = cleanText(localizationValue(stringTable, element.nameOverride));
+    const label = localizedName && localizedName !== "???"
+      ? localizedName
+      : levelUpLabels.get(type.toLowerCase()) ?? type;
+    rows.push(`${label}=${value}`);
+  }
+
+  return {
+    text: rows.length > 0 ? `等级成长：${rows.join("；")}` : "",
+    issues: [...issues],
+    unresolvedTokens: [...unresolvedTokens],
+  };
+}
+
 function findCharacterRecord(bin, championKey) {
   const normalizedKey = String(championKey).replace(/[^a-z0-9]/gi, "").toLowerCase();
   const matches = Object.entries(bin).filter(([path, entry]) => {
@@ -462,45 +678,71 @@ function buildAbility({
   payload,
   spell,
   spellObject,
+  fallbackSpellObjects = [],
+  stringTable,
   binUrl,
   livePatch,
   communityPatch,
   passive = false,
 }) {
   const maxRank = passive ? 1 : Math.max(1, Number(spell.maxrank) || 1);
-  const binContext = collectSpellContext([spellObject], maxRank);
-  const context = passive ? binContext : dataDragonContext(spell, binContext);
-  const textCandidates = [
+  const binContext = {
+    ...collectSpellContext([spellObject, ...fallbackSpellObjects], maxRank),
+    fallbackDescription: cleanText(passive ? payload.passive.description : spell.description),
+  };
+  // 客户端 tooltip 与 LevelUp 元数据引用 CommunityDragon 的原始比例单位
+  // （如 0.2 表示 20%）；Data Dragon effectBurn 有时已换算为 20。两套
+  // 单位不能覆盖混用，否则再乘 tooltip 的 *100 会被放大一百倍。
+  const fallbackContext = passive ? binContext : dataDragonContext(spell, binContext);
+  const tooltipData = tooltipDataForSpell(spellObject);
+  const clientTooltip = localizationValue(stringTable, tooltipData?.mLocKeys?.keyTooltip);
+  const fallbackCandidates = [
     passive ? payload.passive.description : spell.tooltip,
     passive ? "" : spell.description,
-  ].filter(Boolean).map((text) => resolvePublicText(text, context));
-  const statusWeight = { available: 3, partial: 2, unavailable: 1 };
-  const numericTokenCount = (value) =>
-    value.match(/\d+(?:\.\d+)?(?:\s*\/\s*\d+(?:\.\d+)?)*/g)?.length ?? 0;
-  textCandidates.sort((left, right) =>
-    numericTokenCount(right.text) - numericTokenCount(left.text)
-    || statusWeight[right.status] - statusWeight[left.status]
-    || right.text.length - left.text.length);
-  const resolved = textCandidates[0] ?? {
+  ].filter(Boolean).map((text) => resolvePublicText(text, fallbackContext, stringTable))
+    .sort((left, right) => scalarCount(right.text) - scalarCount(left.text) || right.text.length - left.text.length);
+  const resolved = clientTooltip && clientTooltip !== "???"
+    ? resolvePublicText(clientTooltip, binContext, stringTable)
+    : fallbackCandidates[0] ?? {
     text: "",
     status: "unavailable",
     issues: ["技能文本缺失"],
     unresolvedTokens: [],
   };
+  const extendedResolutions = [
+    tooltipData?.mLocKeys?.keyTooltipExtended,
+    tooltipData?.mLocKeys?.keyTooltipExtendedBelowLine,
+  ]
+    .map((key) => localizationValue(stringTable, key))
+    .filter((text) => text && text !== "???")
+    .map((text) => resolvePublicText(text, binContext, stringTable))
+    .filter((entry, index, all) =>
+      entry.text && entry.text !== resolved.text && all.findIndex((candidate) => candidate.text === entry.text) === index);
+  const levelUp = levelUpNumericDetail(tooltipData, stringTable, binContext);
+  const range = passive ? null : publicSpellRange(spell, spellObject, maxRank);
   const coreRows = passive ? [] : [
     spell.cooldownBurn ? `冷却=${spell.cooldownBurn}` : "",
     spell.costBurn ? `消耗=${spell.costBurn}` : "",
-    spell.rangeBurn ? `范围=${spell.rangeBurn}` : "",
+    range ? `范围=${range}` : "",
   ].filter(Boolean);
   const numericParts = [
     resolved.text ? `技能文本：${resolved.text}` : "",
+    ...extendedResolutions.map((entry) => `补充数值：${entry.text}`),
+    levelUp.text,
     coreRows.length > 0 ? `基础参数：${coreRows.join("；")}` : "",
   ].filter(Boolean);
-  const allIssues = [...new Set(resolved.issues)];
+  const allIssues = [...new Set([
+    ...resolved.issues,
+    ...extendedResolutions.flatMap((entry) => entry.issues),
+    ...levelUp.issues,
+  ])];
   if (!spellObject) allIssues.push(`CommunityDragon ${key} 技能对象未唯一匹配`);
+  const hasPartialSegment = resolved.status !== "available"
+    || extendedResolutions.some((entry) => entry.status !== "available")
+    || levelUp.unresolvedTokens.length > 0;
   const numericStatus = numericParts.length === 0
     ? "unavailable"
-    : resolved.status === "available" && allIssues.length === 0
+    : !hasPartialSegment && allIssues.length === 0
       ? "available"
       : "partial";
 
@@ -513,13 +755,18 @@ function buildAbility({
       : `https://ddragon.leagueoflegends.com/cdn/${livePatch}/img/spell/${spell.image.full}`,
     cooldown: passive ? null : (spell.cooldownBurn || null),
     cost: passive ? null : (spell.costBurn || null),
-    range: passive ? null : (spell.rangeBurn || null),
+    range,
     numericDetail: numericParts.join("\n"),
     numericVersion: `Riot Data Dragon ${livePatch} / CommunityDragon ${communityPatch}`,
     sourceUrl: binUrl,
     dataDragonSourceUrl: `https://ddragon.leagueoflegends.com/cdn/${livePatch}/data/zh_CN/champion/${payload.id}.json`,
     numericStatus,
-    unresolvedTokens: [...new Set([...resolved.unresolvedTokens, ...allIssues])],
+    unresolvedTokens: [...new Set([
+      ...resolved.unresolvedTokens,
+      ...extendedResolutions.flatMap((entry) => entry.unresolvedTokens),
+      ...levelUp.unresolvedTokens,
+      ...allIssues,
+    ])],
   };
 }
 
@@ -634,7 +881,10 @@ function normalizeAugment({
       sourceUrl: arenaSourceUrl,
     },
   ].filter((candidate) => candidate.raw && candidate.raw !== "???")
-    .map((candidate) => ({ ...candidate, resolved: resolvePublicText(candidate.raw, candidate.context) }));
+    .map((candidate) => ({
+      ...candidate,
+      resolved: resolvePublicText(candidate.raw, candidate.context, stringTable),
+    }));
 
   const statusWeight = { available: 3, partial: 2, unavailable: 1 };
   candidates.sort((left, right) =>
@@ -746,12 +996,15 @@ const champions = roster.map((rosterEntry, index) => {
   const stat = (ddragonValue, characterValue, field, scale = 1) =>
     chooseValidatedStat(ddragonValue, characterValue, field, validation, scale);
   const spellReferences = Array.isArray(record.spells) ? record.spells : [];
+  const championSpellObjects = Object.values(bin).filter((entry) => entry?.mSpell);
   const activeKeys = ["Q", "W", "E", "R"];
   const activeAbilities = payload.spells.map((spell, spellIndex) => buildAbility({
     key: activeKeys[spellIndex],
     payload,
     spell,
     spellObject: findSpellObject(bin, spellReferences[spellIndex], spell),
+    fallbackSpellObjects: championSpellObjects,
+    stringTable,
     binUrl,
     livePatch,
     communityPatch,
@@ -822,6 +1075,8 @@ const champions = roster.map((rosterEntry, index) => {
         payload,
         spell: payload.passive,
         spellObject: findSpellObject(bin, record.mCharacterPassiveSpell, payload.passive),
+        fallbackSpellObjects: championSpellObjects,
+        stringTable,
         binUrl,
         livePatch,
         communityPatch,

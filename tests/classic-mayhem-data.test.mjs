@@ -66,9 +66,29 @@ test("怀旧海斗使用同一批 60 位经典英雄，但技能与属性来自�
       assert.doesNotMatch(ability.numericDetail, /属性枚举|对应属性/, `${champion.name} ${ability.key} 存在伪解析属性`);
       assert.doesNotMatch(
         ability.numericDetail,
+        /AmmoRechargeTime=/,
+        `${champion.name} ${ability.key} 向用户暴露了客户端内部等级字段`,
+      );
+      assert.doesNotMatch(
+        ability.numericDetail,
         /客户端字段|客户端公式|effect\d+amount|\[[A-Za-z_][A-Za-z0-9_.:-]*\]|CalculationPart|客户端未提供静态值|客户端词条未解析|客户端字段未命名|数据状态：unavailable/i,
         `${champion.name} ${ability.key} 不应向用户泄漏客户端内部字段或占位符`,
       );
+      assert.doesNotMatch(
+        ability.numericDetail,
+        /持续\s*秒|缩短\s*秒|获得\s*%|有\s*层充能\s*\(\s*秒|按对局状态实时计算个/,
+        `${champion.name} ${ability.key} 不应出现缺失公开数值后的空洞句子`,
+      );
+      for (const levelMatch of ability.numericDetail.matchAll(/英雄等级([0-9/]+)/g)) {
+        const levels = levelMatch[1].split("/").map(Number);
+        assert.ok(
+          levels.every((level, index) => Number.isInteger(level)
+            && level >= 1
+            && level <= 18
+            && (index === 0 || level > levels[index - 1])),
+          `${champion.name} ${ability.key} 包含不可达或乱序的英雄等级断点：${levelMatch[1]}`,
+        );
+      }
       if (ability.numericStatus === "available") {
         assert.doesNotMatch(
           ability.numericDetail,
@@ -81,6 +101,62 @@ test("怀旧海斗使用同一批 60 位经典英雄，但技能与属性来自�
     }
     assert.ok(classicAssetManifest[champion.portrait], `${champion.name}现代头像缺少本地镜像`);
   }
+
+  const vayne = liveClassicChampions.find((champion) => champion.key === "Vayne");
+  const vayneW = vayne?.abilities.find((ability) => ability.key === "W");
+  assert.equal(vayneW?.numericStatus, "available");
+  assert.match(vayneW?.numericDetail ?? "", /6\/7\/8\/9\/10%最大生命值/);
+  assert.match(vayneW?.numericDetail ?? "", /最低?造成50\/65\/80\/95\/110|最少造成50\/65\/80\/95\/110/);
+  assert.match(vayneW?.numericDetail ?? "", /140\/155\/170\/185\/200/);
+
+  const teemo = liveClassicChampions.find((champion) => champion.key === "Teemo");
+  const teemoR = teemo?.abilities.find((ability) => ability.key === "R");
+  assert.equal(teemoR?.numericStatus, "available");
+  assert.match(teemoR?.numericDetail ?? "", /3\/4\/5层充能/);
+  assert.match(teemoR?.numericDetail ?? "", /35\/30\/25秒充能时间/);
+
+  const annie = liveClassicChampions.find((champion) => champion.key === "Annie");
+  const annieR = annie?.abilities.find((ability) => ability.key === "R");
+  assert.equal(annieR?.numericStatus, "available");
+  assert.match(annieR?.numericDetail ?? "", /提伯斯拥有/);
+  assert.match(annieR?.numericDetail ?? "", /1150/);
+  assert.match(annieR?.numericDetail ?? "", /30\/45\/60/);
+
+  const garen = liveClassicChampions.find((champion) => champion.key === "Garen");
+  const garenP = garen?.abilities.find((ability) => ability.key === "P");
+  assert.equal(garenP?.numericStatus, "available");
+  assert.match(
+    garenP?.numericDetail ?? "",
+    /1\.5\/1\.7\/1\.9\/2\.1\/2\.3\/2\.5\/3\.3\/4\.1\/4\.9\/5\.7\/6\.5\/7\.3\/8\.1\/8\.5\/8\.9\/9\.3\/9\.7\/10\.1%（英雄等级1\/2\/3\/4\/5\/6\/7\/8\/9\/10\/11\/12\/13\/14\/15\/16\/17\/18）/,
+  );
+  assert.doesNotMatch(garenP?.numericDetail ?? "", /150%|1010%/);
+
+  const jax = liveClassicChampions.find((champion) => champion.key === "Jax");
+  const jaxP = jax?.abilities.find((ability) => ability.key === "P");
+  assert.match(jaxP?.numericDetail ?? "", /英雄等级1\/4\/7\/10\/13\/16/);
+  assert.doesNotMatch(jaxP?.numericDetail ?? "", /英雄等级[^）]*19/);
+
+  const katarina = liveClassicChampions.find((champion) => champion.key === "Katarina");
+  const katarinaE = katarina?.abilities.find((ability) => ability.key === "E");
+  assert.match(katarinaE?.numericDetail ?? "", /英雄等级1\/6\/11\/16/);
+  assert.doesNotMatch(katarinaE?.numericDetail ?? "", /英雄等级[^）]*21/);
+
+  const lulu = liveClassicChampions.find((champion) => champion.key === "Lulu");
+  const luluW = lulu?.abilities.find((ability) => ability.key === "W");
+  assert.equal(luluW?.numericStatus, "available");
+  assert.match(luluW?.numericDetail ?? "", /20\/22\.5\/25\/27\.5\/30%攻击速度/);
+  assert.doesNotMatch(luluW?.numericDetail ?? "", /2000%|3000%/);
+
+  const heimerdinger = liveClassicChampions.find((champion) => champion.key === "Heimerdinger");
+  const heimerdingerR = heimerdinger?.abilities.find((ability) => ability.key === "R");
+  assert.equal(heimerdingerR?.numericStatus, "available");
+  assert.match(heimerdingerR?.numericDetail ?? "", /升级版导弹对小兵造成2000%伤害/);
+
+  const janna = liveClassicChampions.find((champion) => champion.key === "Janna");
+  const jannaW = janna?.abilities.find((ability) => ability.key === "W");
+  assert.equal(jannaW?.range, "550");
+  assert.match(jannaW?.numericDetail ?? "", /范围=550/);
+  assert.doesNotMatch(jannaW?.numericDetail ?? "", /4294967295/);
 });
 
 test("技能数值面板异步解码图标，并隐藏不可用的空数值卡", async () => {
@@ -231,9 +307,10 @@ test("OP.GG 怀旧海斗快照覆盖 60 位英雄并保留页面原始统计", (
 });
 
 test("怀旧海斗页面不再复用峡谷方案或启发式推荐，并纳入每日同步", async () => {
-  const [pageSource, componentSource, generatorSource, workflowSource, packageSource] = await Promise.all([
+  const [pageSource, componentSource, styleSource, generatorSource, workflowSource, packageSource] = await Promise.all([
     readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/components/ClassicMayhemGuide.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/globals.css", import.meta.url), "utf8"),
     readFile(new URL("../scripts/generate-opgg-mayhem-builds.mjs", import.meta.url), "utf8"),
     readFile(new URL("../.github/workflows/sync-classic-data.yml", import.meta.url), "utf8"),
     readFile(new URL("../package.json", import.meta.url), "utf8"),
@@ -247,6 +324,9 @@ test("怀旧海斗页面不再复用峡谷方案或启发式推荐，并纳入�
   assert.match(componentSource, /runtime\.augmentRecommendations/);
   assert.match(componentSource, /build\.skillBuilds\.map/);
   assert.match(componentSource, /ChampionAbilityPanel/);
+  assert.match(componentSource, /aria-orientation="horizontal"/);
+  assert.match(componentSource, /selectSection/);
+  assert.match(componentSource, /scrollIntoView\(\{ block: "start", behavior: "auto" \}\)/);
   assert.match(componentSource, /白银阶/);
   assert.match(componentSource, /黄金阶/);
   assert.match(componentSource, /棱彩阶/);
@@ -257,6 +337,10 @@ test("怀旧海斗页面不再复用峡谷方案或启发式推荐，并纳入�
   assert.doesNotMatch(componentSource, /mayhem-rune-status|数据未找到/);
   assert.doesNotMatch(componentSource, /prismatic: "棱镜"/);
   assert.doesNotMatch(componentSource, /classicBuildGuides|augmentScore|preferredTags/);
+  assert.match(
+    styleSource,
+    /\.mayhem-detail-nav\s*\{[\s\S]*grid-template-columns:\s*repeat\(5,\s*minmax\(0,\s*1fr\)\)/,
+  );
   assert.match(generatorSource, /\/augments/);
   assert.match(generatorSource, /entry\.rareity/);
   assert.match(generatorSource, /Skill table/);

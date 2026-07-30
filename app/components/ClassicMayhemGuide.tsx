@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { ClassicChampion } from "../classic-data";
 import { localAssetUrl } from "../classic-assets";
 import { classicItems } from "../classic-items.generated";
@@ -175,8 +175,16 @@ export default function ClassicMayhemGuide({ champion }: { champion: ClassicCham
   const [catalogFilter, setCatalogFilter] = useState<CatalogFilter>("all");
   const [catalogRarity, setCatalogRarity] = useState<"all" | MayhemRarity>("all");
   const [catalogSearch, setCatalogSearch] = useState("");
+  const pageRef = useRef<HTMLElement>(null);
   const runtime = runtimeState?.classicId === champion.classicId ? runtimeState.payload : null;
   const loadError = loadFailure?.classicId === champion.classicId ? loadFailure.message : null;
+
+  const selectSection = (section: MayhemSection) => {
+    setActiveSection(section);
+    window.requestAnimationFrame(() => {
+      pageRef.current?.scrollIntoView({ block: "start", behavior: "auto" });
+    });
+  };
 
   useEffect(() => {
     let current = true;
@@ -274,7 +282,7 @@ export default function ClassicMayhemGuide({ champion }: { champion: ClassicCham
   };
 
   return (
-    <section className="mayhem-page" aria-label="海克斯大乱斗经典模式版攻略">
+    <section ref={pageRef} className="mayhem-page" aria-label="海克斯大乱斗经典模式版攻略">
       <section className="mayhem-intro">
         <div>
           <span className="eyebrow">ARAM: MAYHEM CLASSIC-ISH · {meta.mode}</span>
@@ -309,17 +317,36 @@ export default function ClassicMayhemGuide({ champion }: { champion: ClassicCham
         <nav
           className="mayhem-detail-nav"
           aria-label="怀旧海斗功能"
-          aria-orientation="vertical"
+          aria-orientation="horizontal"
           role="tablist"
         >
           {sectionLabels.map((section, index) => (
             <button
               key={section.id}
               className={activeSection === section.id ? "active" : ""}
-              onClick={() => setActiveSection(section.id)}
+              onClick={() => selectSection(section.id)}
+              onKeyDown={(event) => {
+                if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+                event.preventDefault();
+                const lastIndex = sectionLabels.length - 1;
+                const nextIndex = event.key === "Home"
+                  ? 0
+                  : event.key === "End"
+                    ? lastIndex
+                    : event.key === "ArrowRight"
+                      ? (index + 1) % sectionLabels.length
+                      : (index - 1 + sectionLabels.length) % sectionLabels.length;
+                selectSection(sectionLabels[nextIndex].id);
+                event.currentTarget.parentElement
+                  ?.querySelectorAll<HTMLButtonElement>("[role='tab']")
+                  .item(nextIndex)
+                  .focus();
+              }}
               role="tab"
+              id={`mayhem-tab-${section.id}`}
               aria-selected={activeSection === section.id}
-              aria-controls={`mayhem-panel-${section.id}`}
+              aria-controls="mayhem-detail-panel"
+              tabIndex={activeSection === section.id ? 0 : -1}
             >
               <i>{String(index + 1).padStart(2, "0")}</i>
               <span><b>{section.label}</b><small>{section.description}</small></span>
@@ -330,8 +357,9 @@ export default function ClassicMayhemGuide({ champion }: { champion: ClassicCham
 
         <div
           className="mayhem-detail-panel"
-          id={`mayhem-panel-${activeSection}`}
+          id="mayhem-detail-panel"
           role="tabpanel"
+          aria-labelledby={`mayhem-tab-${activeSection}`}
         >
           {activeSection === "overview" && (
             <article className="mayhem-champion-card">

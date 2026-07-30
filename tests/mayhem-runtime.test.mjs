@@ -24,6 +24,18 @@ test("怀旧海斗运行时数据按英雄拆分并保持 OP.GG 完整结构", a
     assert.equal(payload.meta.hasJungleRole, false);
     assert.equal(payload.champion.classicId, name.replace(".json", ""));
     assert.equal(payload.build.classicId, payload.champion.classicId);
+    assert.deepEqual(
+      payload.champion.abilities.map((ability) => ability.key),
+      ["P", "Q", "W", "E", "R"],
+      `${payload.build.name} 技能结构不完整`,
+    );
+    for (const ability of payload.champion.abilities) {
+      assert.ok(ability.name.trim(), `${payload.build.name} ${ability.key} 缺少技能名称`);
+      assert.ok(ability.description.trim(), `${payload.build.name} ${ability.key} 缺少技能说明`);
+      assert.ok(ability.numericDetail.trim(), `${payload.build.name} ${ability.key} 缺少完整技能数值结构`);
+      assert.match(ability.numericDetail, /\d/, `${payload.build.name} ${ability.key} 技能数值没有数字`);
+      assert.notEqual(ability.numericStatus, "unavailable", `${payload.build.name} ${ability.key} 数值不可用`);
+    }
     assert.equal(payload.build.skillBuilds.length, 5, `${payload.build.name} 技能方案不完整`);
     assert.equal(payload.augmentRecommendations.length, 45, `${payload.build.name} 强化推荐不完整`);
     for (const rarity of ["silver", "gold", "prismatic"]) {
@@ -64,4 +76,28 @@ test("完整强化池只在进入图鉴后按需加载", async () => {
   assert.match(componentSource, /classic-data\/mayhem/);
   assert.match(componentSource, /build\.skillBuilds\.map/);
   assert.doesNotMatch(componentSource, /mayhem-rune-status|数据未找到/);
+});
+
+test("运行时快照保留已核对的技能数值，防止每日同步退化", async () => {
+  const vayne = await readJson("60067.json");
+  const vayneW = vayne.champion.abilities.find((ability) => ability.key === "W");
+  assert.match(vayneW.numericDetail, /6\/7\/8\/9\/10%最大生命值/);
+  assert.match(vayneW.numericDetail, /50\/65\/80\/95\/110/);
+  assert.match(vayneW.numericDetail, /140\/155\/170\/185\/200/);
+
+  const teemo = await readJson("60017.json");
+  const teemoR = teemo.champion.abilities.find((ability) => ability.key === "R");
+  assert.match(teemoR.numericDetail, /3\/4\/5层充能/);
+  assert.match(teemoR.numericDetail, /35\/30\/25秒充能时间/);
+
+  const annie = await readJson("60001.json");
+  const annieR = annie.champion.abilities.find((ability) => ability.key === "R");
+  assert.match(annieR.numericDetail, /提伯斯拥有/);
+  assert.match(annieR.numericDetail, /1150/);
+  assert.match(annieR.numericDetail, /30\/45\/60/);
+
+  const lulu = await readJson("60117.json");
+  const luluW = lulu.champion.abilities.find((ability) => ability.key === "W");
+  assert.match(luluW.numericDetail, /20\/22\.5\/25\/27\.5\/30%攻击速度/);
+  assert.doesNotMatch(luluW.numericDetail, /2000%|3000%/);
 });
