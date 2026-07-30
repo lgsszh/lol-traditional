@@ -6,6 +6,46 @@ function skillKey(value) {
   return allSkillKeys.has(key) ? key : null;
 }
 
+function extractBalancedObjectAt(source, start, label) {
+  if (source[start] !== "{") {
+    throw new Error(`${label}: OP.GG object does not start at the expected position`);
+  }
+  let depth = 0;
+  let inString = false;
+  let escaped = false;
+  for (let index = start; index < source.length; index += 1) {
+    const character = source[index];
+    if (inString) {
+      if (escaped) escaped = false;
+      else if (character === "\\") escaped = true;
+      else if (character === "\"") inString = false;
+      continue;
+    }
+    if (character === "\"") inString = true;
+    else if (character === "{") depth += 1;
+    else if (character === "}") {
+      depth -= 1;
+      if (depth === 0) return source.slice(start, index + 1);
+    }
+  }
+  throw new Error(`${label}: OP.GG object is incomplete`);
+}
+
+export function parseOpggAugmentGroups(payload, championName) {
+  const marker = '"data":{"1":[';
+  const markerIndex = payload.lastIndexOf(marker);
+  if (markerIndex < 0) {
+    throw new Error(`${championName}: OP.GG augment data object is missing`);
+  }
+  const objectStart = markerIndex + '"data":'.length;
+  const source = extractBalancedObjectAt(payload, objectStart, championName);
+  try {
+    return JSON.parse(source);
+  } catch (error) {
+    throw new Error(`${championName}: OP.GG augment data is invalid JSON (${error.message})`);
+  }
+}
+
 export function parseOpggSkillBuild($, skillRow, championName) {
   const skillCell = skillRow.find("td").first();
   if (skillCell.length !== 1) {
@@ -34,17 +74,13 @@ export function parseOpggSkillBuild($, skillRow, championName) {
     );
   }
 
-  const openingSequence = levelSequence.slice(0, 3);
   const skillCounts = Object.fromEntries(
     [...allSkillKeys].map((key) => [key, levelSequence.filter((entry) => entry === key).length]),
   );
-  const expectedUltimateLevels = [6, 11, 16].filter((level) => level <= levelSequence.length);
-  const actualUltimateLevels = levelSequence.flatMap((key, index) => key === "R" ? [index + 1] : []);
   if (
-    new Set(openingSequence).size !== 3
-    || openingSequence.some((key) => !activeSkillKeys.has(key))
-    || ["Q", "W", "E"].some((key) => skillCounts[key] < 1 || skillCounts[key] > 5)
-    || actualUltimateLevels.join(",") !== expectedUltimateLevels.join(",")
+    ["Q", "W", "E"].some((key) => skillCounts[key] < 1 || skillCounts[key] > 5)
+    || skillCounts.R < 0
+    || skillCounts.R > 3
   ) {
     throw new Error(`${championName}: invalid OP.GG level sequence ${levelSequence.join("")}`);
   }

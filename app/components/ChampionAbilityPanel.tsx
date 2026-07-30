@@ -38,6 +38,8 @@ function highlightedNumbers(value: string) {
 
 export default function ChampionAbilityPanel({ skillSet, activeKey, onSelect }: Props) {
   const ability = skillSet.abilities.find((entry) => entry.key === activeKey) || skillSet.abilities[0];
+  const numericDetail = ability.numericDetail?.trim() ?? "";
+  const showNumericDetail = ability.numericStatus !== "unavailable" && Boolean(numericDetail);
   const tabSetId = useId().replace(/:/g, "");
 
   return (
@@ -71,7 +73,7 @@ export default function ChampionAbilityPanel({ skillSet, activeKey, onSelect }: 
             aria-controls={`${tabSetId}-panel`}
             tabIndex={entry.key === ability.key ? 0 : -1}
           >
-            <img key={entry.icon} src={localAssetUrl(entry.icon)} alt="" decoding="sync" />
+            <img key={entry.icon} src={localAssetUrl(entry.icon)} alt="" decoding="async" />
             <span><b>{entry.key}</b><strong>{entry.name}</strong></span>
           </button>
         ))}
@@ -84,7 +86,7 @@ export default function ChampionAbilityPanel({ skillSet, activeKey, onSelect }: 
         aria-labelledby={`${tabSetId}-tab-${ability.key}`}
       >
         <div className="ability-heading">
-          <img key={ability.icon} src={localAssetUrl(ability.icon)} alt="" decoding="sync" />
+          <img key={ability.icon} src={localAssetUrl(ability.icon)} alt="" decoding="async" />
           <div>
             <span>{ability.key === "P" ? "被动技能" : `${ability.key} · 主动技能`}</span>
             <h4>{ability.name}</h4>
@@ -99,7 +101,7 @@ export default function ChampionAbilityPanel({ skillSet, activeKey, onSelect }: 
           <div><dt>技能消耗</dt><dd>{valueLabel(ability.cost, "无消耗")}</dd></div>
           <div><dt>施法距离</dt><dd>{valueLabel(ability.range, "自身／被动")}</dd></div>
         </dl>
-        {ability.numericDetail && (
+        {showNumericDetail && (
           <section className="ability-numeric">
             <header>
               <div>
@@ -111,7 +113,7 @@ export default function ChampionAbilityPanel({ skillSet, activeKey, onSelect }: 
             {ability.numericStatus === "partial" && (
               <p className="ability-disclosure">同版本客户端仍有部分公式无法静态展开；以下只展示公开字段，不推算缺失数值。</p>
             )}
-            {ability.numericDetail.split("\n").filter(Boolean).map((line, index) => (
+            {numericDetail.split("\n").filter(Boolean).map((line, index) => (
               <p key={`${line}-${index}`}>{highlightedNumbers(line)}</p>
             ))}
           </section>

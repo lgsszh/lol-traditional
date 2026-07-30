@@ -185,7 +185,7 @@ function statLabel(part, fieldName = "", issues = null) {
 
   const issue = `未命名属性枚举 ${statCode}`;
   issues?.add(issue);
-  return `客户端未命名属性（枚举 ${statCode}）`;
+  return null;
 }
 
 function formatFormulaPart(part, context, issues, seen) {
@@ -194,23 +194,25 @@ function formatFormulaPart(part, context, issues, seen) {
 
   if (type === "NamedDataValueCalculationPart") {
     const entry = context.dataValues.get(String(part.mDataValue).toLowerCase());
-    if (entry) return `[${entry.name}] ${formatValueSeries(entry.values)}`;
+    if (entry) return formatValueSeries(entry.values);
   }
   if (type === "StatByNamedDataValueCalculationPart") {
     const entry = context.dataValues.get(String(part.mDataValue).toLowerCase());
     if (entry) {
-      return `[${entry.name}] ${formatValueSeries(entry.values)} × ${statLabel(part, entry.name, issues)}`;
+      const label = statLabel(part, entry.name, issues);
+      if (label) return `${formatValueSeries(entry.values)} × ${label}`;
     }
   }
   if (type === "StatByCoefficientCalculationPart") {
     const coefficient = formatNumber(part.mCoefficient);
-    if (coefficient) return `${coefficient} × ${statLabel(part, "", issues)}`;
+    const label = statLabel(part, "", issues);
+    if (coefficient && label) return `${coefficient} × ${label}`;
   }
   if (type === "NumberCalculationPart") return formatNumber(part.mNumber);
   if (type === "EffectValueCalculationPart") {
     const effectIndex = Number(part.mEffectIndex);
     const entry = context.dataValues.get(`effect${effectIndex}amount`);
-    if (entry) return `[effect${effectIndex}amount] ${formatValueSeries(entry.values)}`;
+    if (entry) return formatValueSeries(entry.values);
   }
   if (type === "ByCharLevelInterpolationCalculationPart") {
     const start = formatNumber(part.mStartValue);
@@ -230,42 +232,41 @@ function formatFormulaPart(part, context, issues, seen) {
   }
   if (type === "BuffCounterByCoefficientCalculationPart") {
     const coefficient = formatNumber(part.mCoefficient);
-    if (coefficient) return `${coefficient} × ${part.mBuffName || "状态"}层数`;
+    if (coefficient) return `${coefficient} × 状态层数`;
   }
   if (type === "BuffCounterByNamedDataValueCalculationPart") {
     const entry = context.dataValues.get(String(part.mDataValue).toLowerCase());
-    if (entry) return `[${entry.name}] ${formatValueSeries(entry.values)} × ${part.mBuffName || "状态"}层数`;
+    if (entry) return `${formatValueSeries(entry.values)} × 状态层数`;
   }
   if (type === "SumOfSubPartsCalculationPart") {
-    const subparts = (part.mSubparts ?? [])
-      .map((subpart) => formatFormulaPart(subpart, context, issues, seen))
-      .filter(Boolean);
+    const sourceParts = part.mSubparts ?? [];
+    const subparts = sourceParts.map((subpart) => formatFormulaPart(subpart, context, issues, seen));
+    if (subparts.some((subpart) => !subpart)) {
+      issues.add(`公式部件 ${type} 未完整展开`);
+      return null;
+    }
     if (subparts.length > 0) return `(${subparts.join(" + ")})`;
   }
   if (type === "ProductOfSubPartsCalculationPart") {
-    const subparts = (part.mSubparts ?? [])
-      .map((subpart) => formatFormulaPart(subpart, context, issues, seen))
-      .filter(Boolean);
+    const sourceParts = part.mSubparts ?? [];
+    const subparts = sourceParts.map((subpart) => formatFormulaPart(subpart, context, issues, seen));
+    if (subparts.some((subpart) => !subpart)) {
+      issues.add(`公式部件 ${type} 未完整展开`);
+      return null;
+    }
     if (subparts.length > 0) return `(${subparts.join(" × ")})`;
   }
   if (type === "StatBySubPartCalculationPart") {
     const subpart = formatFormulaPart(part.mSubpart, context, issues, seen);
-    if (subpart) return `${subpart} × ${statLabel(part, "", issues)}`;
+    const label = statLabel(part, "", issues);
+    if (subpart && label) return `${subpart} × ${label}`;
   }
   if (type === "{f3cbe7b2}" && part.mSpellCalculationKey) {
     return formatCalculation(part.mSpellCalculationKey, context, issues, seen);
   }
 
-  const publicNumbers = Object.entries(part)
-    .filter(([key, value]) =>
-      key !== "__type"
-      && typeof value === "number"
-      && Number.isFinite(value))
-    .map(([key, value]) => `${key}=${formatNumber(value)}`);
   issues.add(`公式部件 ${type}`);
-  return publicNumbers.length > 0
-    ? `客户端公式 ${type}（${publicNumbers.join("，")}）`
-    : `客户端公式 ${type}`;
+  return null;
 }
 
 function formatCalculation(name, context, issues, seen = new Set()) {
@@ -274,29 +275,55 @@ function formatCalculation(name, context, issues, seen = new Set()) {
   if (!entry) return null;
   if (seen.has(key)) {
     issues.add(`循环公式 ${entry.name}`);
-    return `[${entry.name}]`;
+    return null;
   }
   const nextSeen = new Set(seen).add(key);
   const calculation = entry.calculation;
 
   if (calculation.__type === "GameCalculationModified") {
-    const base = formatCalculation(calculation.mModifiedGameCalculation, context, issues, nextSeen)
-      ?? `[${calculation.mModifiedGameCalculation}]`;
+    const base = formatCalculation(calculation.mModifiedGameCalculation, context, issues, nextSeen);
+    if (!base) {
+      issues.add(`公式 ${entry.name} 的基础公式未完整展开`);
+      return null;
+    }
     const multiplier = formatFormulaPart(calculation.mMultiplier, context, issues, nextSeen);
-    return multiplier ? `(${base}) × ${multiplier}` : base;
+    if (!multiplier) {
+      issues.add(`公式 ${entry.name} 的倍率未完整展开`);
+      return null;
+    }
+    return `(${base}) × ${multiplier}`;
   }
 
-  const parts = (calculation.mFormulaParts ?? [])
-    .map((part) => formatFormulaPart(part, context, issues, nextSeen))
-    .filter(Boolean);
+  const sourceParts = calculation.mFormulaParts ?? [];
+  const parts = sourceParts.map((part) => formatFormulaPart(part, context, issues, nextSeen));
+  if (parts.some((part) => !part)) {
+    issues.add(`公式 ${entry.name} 未完整展开`);
+    return null;
+  }
   let result = parts.join(" + ");
   const multiplier = formatFormulaPart(calculation.mMultiplier, context, issues, nextSeen);
   if (multiplier) result = result ? `(${result}) × ${multiplier}` : multiplier;
   if (!result) {
     issues.add(`公式 ${entry.name}`);
-    return `[${entry.name}：客户端未公开可展开公式]`;
+    return null;
   }
   return result;
+}
+
+function sanitizeNumericText(value = "") {
+  return cleanText(value)
+    .replace(/\[(?:[A-Za-z_][A-Za-z0-9_.:-]*)\]\s*/g, "")
+    .replace(/【客户端(?:未提供静态值|词条未解析|字段未命名)：[^】]*】/g, "")
+    .replace(/@[^@\r\n]+@|\{\{[^{}]+\}\}|\{[0-9a-f]{8}\}/gi, "")
+    .replace(/\beffect\d+amount\b/gi, "")
+    .replace(/\b[A-Za-z_][A-Za-z0-9_]*CalculationPart\b/g, "")
+    .replace(/\?{2,}/g, "")
+    .replace(/\(\s*\)|（\s*）/g, "")
+    .replace(/[：:=]\s*(?=[，。；,.!?]|$)/g, "")
+    .replace(/\s+([，。；,.!?])/g, "$1")
+    .replace(/([，。；])(?:\s*[，。；])+/g, "$1")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 function resolveDataToken(token, context, issues) {
@@ -327,10 +354,10 @@ function resolveDataToken(token, context, issues) {
   }
   if (/^f\d+(?:\.\d+)?$/i.test(rawKey) || /^(?:stack|count|current|total)\w*$/i.test(rawKey)) {
     issues.add(`对局实时字段 ${rawKey}`);
-    return "对局内实时值";
+    return null;
   }
   issues.add(`未解析字段 ${rawKey}`);
-  return `【客户端未提供静态值：${rawKey}】`;
+  return null;
 }
 
 function resolvePublicText(value, context) {
@@ -339,16 +366,16 @@ function resolvePublicText(value, context) {
   let text = String(value ?? "");
   text = text.replace(/@([^@\r\n]+)@/g, (_, token) => {
     const resolved = resolveDataToken(token, context, issues);
-    if (resolved.startsWith("【客户端未提供静态值：")) unresolvedTokens.add(token.trim());
-    return resolved;
+    if (resolved === null) unresolvedTokens.add(token.trim());
+    return resolved ?? "";
   });
   text = text.replace(/\{\{\s*([^{}]+?)\s*\}\}/g, (_, token) => {
     const normalized = token.trim().toLowerCase();
     const keyword = keywordLabels.get(normalized);
     if (keyword) return keyword;
     const resolved = resolveDataToken(token, context, issues);
-    if (resolved.startsWith("【客户端未提供静态值：")) unresolvedTokens.add(token.trim());
-    return resolved;
+    if (resolved === null) unresolvedTokens.add(token.trim());
+    return resolved ?? "";
   });
   text = cleanText(text);
 
@@ -358,16 +385,11 @@ function resolvePublicText(value, context) {
     ...(text.match(/\{[0-9a-f]{8}\}/gi) ?? []),
   ];
   for (const token of remainingTokens) unresolvedTokens.add(token);
-  if (remainingTokens.length > 0) {
-    text = text
-      .replace(/@([^@\r\n]+)@/g, (_, token) => `【客户端未提供静态值：${token}】`)
-      .replace(/\{\{\s*([^{}]+?)\s*\}\}/g, (_, token) => `【客户端词条未解析：${token}】`)
-      .replace(/\{([0-9a-f]{8})\}/gi, (_, token) => `【客户端字段未命名：${token}】`);
-  }
+  if (text.includes("???")) unresolvedTokens.add("???");
+  text = sanitizeNumericText(text);
 
-  const hasUnavailable = unresolvedTokens.size > 0 || text.includes("???");
-  const hasRuntimeOrFormulaIssue = issues.size > unresolvedTokens.size;
-  const status = hasUnavailable ? "unavailable" : hasRuntimeOrFormulaIssue ? "partial" : "available";
+  const hasIssue = unresolvedTokens.size > 0 || issues.size > 0;
+  const status = !text ? "unavailable" : hasIssue ? "partial" : "available";
   return {
     text,
     status,
@@ -402,22 +424,6 @@ function dataDragonContext(spell, baseContext) {
     }
   }
   return { ...baseContext, dataValues };
-}
-
-function officialLedger(context) {
-  const valueRows = [...context.dataValues.values()]
-    .map((entry) => `${entry.name}=${formatValueSeries(entry.values)}`);
-  const formulaIssues = new Set();
-  const formulaRows = [...context.calculations.values()]
-    .map((entry) => `${entry.name}=${formatCalculation(entry.name, context, formulaIssues)}`)
-    .filter((row) => !row.endsWith("=null"));
-  return {
-    text: [
-      valueRows.length > 0 ? `客户端字段：${valueRows.join("；")}` : "",
-      formulaRows.length > 0 ? `客户端公式：${formulaRows.join("；")}` : "",
-    ].filter(Boolean).join("。"),
-    issues: [...formulaIssues],
-  };
 }
 
 function findCharacterRecord(bin, championKey) {
@@ -469,8 +475,11 @@ function buildAbility({
     passive ? "" : spell.description,
   ].filter(Boolean).map((text) => resolvePublicText(text, context));
   const statusWeight = { available: 3, partial: 2, unavailable: 1 };
+  const numericTokenCount = (value) =>
+    value.match(/\d+(?:\.\d+)?(?:\s*\/\s*\d+(?:\.\d+)?)*/g)?.length ?? 0;
   textCandidates.sort((left, right) =>
-    statusWeight[right.status] - statusWeight[left.status]
+    numericTokenCount(right.text) - numericTokenCount(left.text)
+    || statusWeight[right.status] - statusWeight[left.status]
     || right.text.length - left.text.length);
   const resolved = textCandidates[0] ?? {
     text: "",
@@ -478,7 +487,6 @@ function buildAbility({
     issues: ["技能文本缺失"],
     unresolvedTokens: [],
   };
-  const ledger = officialLedger(context);
   const coreRows = passive ? [] : [
     spell.cooldownBurn ? `冷却=${spell.cooldownBurn}` : "",
     spell.costBurn ? `消耗=${spell.costBurn}` : "",
@@ -487,16 +495,14 @@ function buildAbility({
   const numericParts = [
     resolved.text ? `技能文本：${resolved.text}` : "",
     coreRows.length > 0 ? `基础参数：${coreRows.join("；")}` : "",
-    ledger.text,
   ].filter(Boolean);
-  const allIssues = [...new Set([...resolved.issues, ...ledger.issues])];
+  const allIssues = [...new Set(resolved.issues)];
   if (!spellObject) allIssues.push(`CommunityDragon ${key} 技能对象未唯一匹配`);
-  let numericStatus = resolved.status;
-  if (numericStatus === "available" && allIssues.length > 0) numericStatus = "partial";
-  if (numericParts.length === 0) {
-    numericStatus = "unavailable";
-    numericParts.push("数据状态：unavailable（同版本客户端公开数据未提供可稳定展示的静态数值）。");
-  }
+  const numericStatus = numericParts.length === 0
+    ? "unavailable"
+    : resolved.status === "available" && allIssues.length === 0
+      ? "available"
+      : "partial";
 
   return {
     key,
@@ -508,7 +514,7 @@ function buildAbility({
     cooldown: passive ? null : (spell.cooldownBurn || null),
     cost: passive ? null : (spell.costBurn || null),
     range: passive ? null : (spell.rangeBurn || null),
-    numericDetail: numericParts.join("。"),
+    numericDetail: numericParts.join("\n"),
     numericVersion: `Riot Data Dragon ${livePatch} / CommunityDragon ${communityPatch}`,
     sourceUrl: binUrl,
     dataDragonSourceUrl: `https://ddragon.leagueoflegends.com/cdn/${livePatch}/data/zh_CN/champion/${payload.id}.json`,
@@ -561,6 +567,20 @@ function arenaDescriptionContext(entry) {
     if (values.length > 0) dataValues.set(name.toLowerCase(), { name, values });
   }
   return { dataValues, calculations: new Map(), maxRank: 1 };
+}
+
+function confirmedAugmentDescription(apiName, context) {
+  if (apiName !== "ARAM_Erosion") return null;
+
+  const firstValue = (key) => context.dataValues.get(key.toLowerCase())?.values?.[0];
+  const shred = firstValue("Shred");
+  const duration = firstValue("ShredDuration");
+  const maxStacks = firstValue("MaxStacks");
+  if (![shred, duration, maxStacks].every(Number.isFinite)) return null;
+
+  return `对敌人造成伤害时会施加一层持续${formatNumber(duration)}秒、每层`
+    + `${formatNumber(shred * 100)}%的护甲和魔法抗性击碎效果，最多叠加`
+    + `${formatNumber(maxStacks)}层。`;
 }
 
 function normalizeAugment({
@@ -621,14 +641,16 @@ function normalizeAugment({
     statusWeight[right.resolved.status] - statusWeight[left.resolved.status]
     || right.resolved.text.length - left.resolved.text.length);
   const selected = candidates[0] ?? null;
-  const descriptionStatus = selected?.resolved.status ?? "unavailable";
-  const unresolvedTokens = selected?.resolved.unresolvedTokens ?? [];
+  const confirmedDescription = confirmedAugmentDescription(apiName, context);
+  const descriptionStatus = confirmedDescription ? "available" : selected?.resolved.status ?? "unavailable";
+  const unresolvedTokens = confirmedDescription ? [] : selected?.resolved.unresolvedTokens ?? [];
   const unavailableReason = descriptionStatus === "unavailable"
     ? (unresolvedTokens.length > 0
       ? `客户端公开文本仍含未解析变量：${unresolvedTokens.join(", ")}`
       : "同版本客户端公开数据未提供可稳定展示的说明文本")
     : null;
-  const description = selected?.resolved.text
+  const description = confirmedDescription
+    || selected?.resolved.text
     || `数据状态：unavailable（${unavailableReason}）。`;
   const clientName = cleanText(localizationValue(stringTable, data.NameTra));
   const metadataName = cleanText(meta.nameTRA);
@@ -651,7 +673,7 @@ function normalizeAugment({
     descriptionStatus,
     unavailableReason,
     unresolvedTokens,
-    descriptionSourceUrl: selected?.sourceUrl ?? modeSourceUrl,
+    descriptionSourceUrl: confirmedDescription ? arenaSourceUrl : selected?.sourceUrl ?? modeSourceUrl,
   };
 }
 

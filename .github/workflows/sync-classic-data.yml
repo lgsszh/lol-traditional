@@ -46,7 +46,7 @@ jobs:
             app/classic-catalog-opgg.generated.ts \
             app/classic-mayhem.generated.ts app/classic-mayhem-opgg.generated.ts \
             app/classic-mayhem-ranking.generated.ts \
-            public/classic-cache
+            public/classic-cache public/classic-data/mayhem
           if git diff --cached --quiet; then
             echo "OP.GG Classic data is unchanged."
             echo "changed=false" >> "$GITHUB_OUTPUT"

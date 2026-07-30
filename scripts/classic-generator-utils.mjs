@@ -56,7 +56,7 @@ export async function fetchText(url, label, attempts = 4) {
       const response = await fetch(url, {
         headers: {
           "accept-language": "zh-CN,zh;q=0.9,en;q=0.7",
-          "user-agent": "lol-traditional-data-sync/0.5 (+https://github.com/lgsszh/lol-traditional)",
+          "user-agent": "lol-traditional-data-sync/0.6 (+https://github.com/lgsszh/lol-traditional)",
         },
         signal: AbortSignal.timeout(30_000),
       });

@@ -13,7 +13,7 @@ import {
   LIVE_DATA_PATCH,
   classicMayhemAugments,
 } from "../app/classic-mayhem.generated.ts";
-import { parseOpggSkillBuild } from "./opgg-mayhem-parser.mjs";
+import { parseOpggAugmentGroups, parseOpggSkillBuild } from "./opgg-mayhem-parser.mjs";
 
 const outputPath = new URL("../app/classic-mayhem-opgg.generated.ts", import.meta.url);
 const rankingOutputPath = new URL("../app/classic-mayhem-ranking.generated.ts", import.meta.url);
@@ -23,6 +23,12 @@ const modePath = "/zh-cn/lol/modes/aram-mayhem-classic";
 const modeUrl = `https://op.gg${modePath}`;
 const startingGold = 1400;
 const requestSpacingMs = 300;
+const augmentRarityGroups = [
+  { key: "1", rareity: 1, rarity: "silver" },
+  { key: "4", rareity: 4, rarity: "gold" },
+  { key: "8", rareity: 8, rarity: "prismatic" },
+];
+const augmentById = new Map(classicMayhemAugments.map((augment) => [augment.id, augment]));
 let requestGate = Promise.resolve();
 let nextRequestAt = 0;
 
@@ -43,22 +49,7 @@ function round(value, precision = 6) {
   return Math.round(value * factor) / factor;
 }
 
-function parseMetric(row, label) {
-  const cells = row.find("td");
-  const pickText = cells.eq(-2).text().replace(/\s+/g, "");
-  const winText = cells.eq(-1).text().replace(/\s+/g, "");
-  const pickMatch = pickText.match(/(\d+(?:\.\d+)?)%/);
-  const gamesMatch = pickText.match(/([\d,]+)场/);
-  const winMatch = winText.match(/(\d+(?:\.\d+)?)%/);
-  if (!pickMatch || !gamesMatch || !winMatch) {
-    const compact = row.text().replace(/\s+/g, "");
-    throw new Error(`${label}: cannot parse metric row "${compact.slice(0, 160)}"`);
-  }
-  const metric = {
-    pickRate: Number(pickMatch[1]),
-    games: Number(gamesMatch[1].replace(/,/g, "")),
-    winRate: Number(winMatch[1]),
-  };
+function validateMetric(metric, label) {
   if (
     !Number.isFinite(metric.pickRate)
     || !Number.isInteger(metric.games)
@@ -72,6 +63,32 @@ function parseMetric(row, label) {
     throw new Error(`${label}: invalid metric ${JSON.stringify(metric)}`);
   }
   return metric;
+}
+
+function parseMetric(row, label) {
+  const cells = row.find("td");
+  const pickText = cells.eq(-2).text().replace(/\s+/g, "");
+  const winText = cells.eq(-1).text().replace(/\s+/g, "");
+  const pickMatch = pickText.match(/(\d+(?:\.\d+)?)%/);
+  const gamesMatch = pickText.match(/([\d,]+)场/);
+  const winMatch = winText.match(/(\d+(?:\.\d+)?)%/);
+  if (!pickMatch || !gamesMatch || !winMatch) {
+    const compact = row.text().replace(/\s+/g, "");
+    throw new Error(`${label}: cannot parse metric row "${compact.slice(0, 160)}"`);
+  }
+  return validateMetric({
+    pickRate: Number(pickMatch[1]),
+    games: Number(gamesMatch[1].replace(/,/g, "")),
+    winRate: Number(winMatch[1]),
+  }, label);
+}
+
+function parsePayloadMetric(entry, label) {
+  return validateMetric({
+    pickRate: Number(entry.pick_rate),
+    games: Number(String(entry.play).replace(/,/g, "")),
+    winRate: Number(entry.win_rate),
+  }, label);
 }
 
 function imageKey(source, folder) {
@@ -89,6 +106,25 @@ function tableByCaption($, caption) {
   const table = $("table").filter((_, element) => $(element).find("caption").text().trim() === caption).first();
   if (table.length === 0) throw new Error(`Missing table: ${caption}`);
   return table;
+}
+
+function validateChampionPageIdentity($, ranking, patch, tab) {
+  const expectedCanonical = `${modeUrl}/${ranking.key}/${tab}`;
+  const canonical = $("link[rel='canonical']").attr("href");
+  const title = $("title").text().trim();
+  const selectedPatch = $("label.select-label span.whitespace-nowrap")
+    .filter((_, element) => $(element).text().trim() === `Ver: ${patch}`);
+  if (
+    canonical !== expectedCanonical
+    || !title.includes(ranking.name)
+    || !title.includes("ARAM: Mayhem Classic-ish")
+    || selectedPatch.length < 1
+  ) {
+    throw new Error(
+      `${ranking.name}: unexpected ${tab} identity `
+      + `(canonical=${canonical || "missing"}, title=${title || "missing"}, patch=${selectedPatch.length})`,
+    );
+  }
 }
 
 function mapWithConcurrency(items, limit, mapper) {
@@ -182,56 +218,10 @@ function parseItemsTable($, caption, expectedRows, itemMap, championName) {
   });
 }
 
-function parseChampionPage(html, rosterEntry, ranking, patch, itemMap) {
+function parseBuildPage(html, rosterEntry, ranking, patch, itemMap) {
   const $ = load(html);
   const sourceUrl = `${modeUrl}/${ranking.key}/build?region=global&tier=all&patch=${patch}`;
-  const expectedCanonical = `${modeUrl}/${ranking.key}/build`;
-  const canonical = $("link[rel='canonical']").attr("href");
-  const title = $("title").text().trim();
-  const selectedPatch = $("label.select-label span.whitespace-nowrap")
-    .filter((_, element) => $(element).text().trim() === `Ver: ${patch}`);
-  if (
-    canonical !== expectedCanonical
-    || !title.includes(ranking.name)
-    || !title.includes("ARAM: Mayhem Classic-ish")
-    || selectedPatch.length < 1
-  ) {
-    throw new Error(
-      `${ranking.name}: unexpected detail identity `
-      + `(canonical=${canonical || "missing"}, title=${title || "missing"}, patch=${selectedPatch.length})`,
-    );
-  }
-
-  const augmentRows = tableByCaption($, "增幅装置").find("tbody tr").toArray();
-  if (augmentRows.length !== 10) {
-    throw new Error(`${ranking.name}: expected 10 augment rows, received ${augmentRows.length}`);
-  }
-  const augments = augmentRows.map((element, rowIndex) => {
-    const row = $(element);
-    const image = row.find("img").first();
-    const name = image.attr("alt")?.trim();
-    const remoteKey = imageKey(image.attr("src"), "augment").replace(/_small$/i, "");
-    const nameMatches = classicMayhemAugments.filter((entry) => entry.name === name);
-    const keyMatches = classicMayhemAugments.filter(
-      (entry) => normalizeKey(entry.apiName) === normalizeKey(remoteKey),
-    );
-    if (nameMatches.length > 1 || (!nameMatches.length && keyMatches.length !== 1)) {
-      throw new Error(
-        `${ranking.name}: ambiguous OP.GG augment ${name || remoteKey} `
-        + `(name matches ${nameMatches.length}, icon matches ${keyMatches.length})`,
-      );
-    }
-    const augment = nameMatches[0] ?? keyMatches[0];
-    if (!name || !augment) {
-      throw new Error(`${ranking.name}: cannot map OP.GG augment ${name || remoteKey} to KIWI_JADE catalog`);
-    }
-    return {
-      augmentId: augment.id,
-      apiName: augment.apiName,
-      name,
-      metric: parseMetric(row, `${ranking.name} augment row ${rowIndex + 1}`),
-    };
-  });
+  validateChampionPageIdentity($, ranking, patch, "build");
 
   const summonerTables = $("table").filter(
     (_, element) => $(element).find("caption").text().trim() === "SummonerSpells Table",
@@ -260,14 +250,6 @@ function parseChampionPage(html, rosterEntry, ranking, patch, itemMap) {
   if (summonerSets.length !== 2) {
     throw new Error(`${ranking.name}: expected 2 summoner spell rows, received ${summonerSets.length}`);
   }
-
-  const skillRow = tableByCaption($, "SkillOrder Table").find("tbody tr").first();
-  const { priority, levelSequence } = parseOpggSkillBuild($, skillRow, ranking.name);
-  const skillBuilds = [{
-    priority,
-    levelSequence,
-    metric: parseMetric(skillRow, `${ranking.name} skill build`),
-  }];
 
   const starting = parseItemsTable($, "Items Table", 2, itemMap, ranking.name);
   const boots = parseItemsTable($, "Boots Table", 2, itemMap, ranking.name);
@@ -303,15 +285,96 @@ function parseChampionPage(html, rosterEntry, ranking, patch, itemMap) {
       winRate: round(Number(ranking.win_rate) * 100),
     },
     startingGold,
-    augments,
     summonerSets,
     runes: {
       status: "unavailable",
       reason: "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。",
     },
-    skillBuilds,
     items: { starting, boots, core },
   };
+}
+
+function parseAugmentsPage(html, ranking, patch) {
+  const $ = load(html);
+  validateChampionPageIdentity($, ranking, patch, "augments");
+  const payload = decodeNextPayload(html);
+  const data = parseOpggAugmentGroups(payload, ranking.name);
+  const keys = Object.keys(data).sort((left, right) => Number(left) - Number(right));
+  if (keys.join(",") !== augmentRarityGroups.map((group) => group.key).join(",")) {
+    throw new Error(`${ranking.name}: unexpected OP.GG augment rarity keys ${keys.join(",") || "(none)"}`);
+  }
+
+  const seenIds = new Set();
+  const recommendations = augmentRarityGroups.flatMap((group) => {
+    const entries = data[group.key];
+    if (!Array.isArray(entries) || entries.length !== 15) {
+      throw new Error(
+        `${ranking.name}: expected 15 ${group.rarity} augment rows, received ${entries?.length ?? "invalid"}`,
+      );
+    }
+    return entries.map((entry, rowIndex) => {
+      if (
+        !Number.isInteger(entry.id)
+        || typeof entry.name !== "string"
+        || !entry.name.trim()
+        || Number(entry.rareity) !== group.rareity
+      ) {
+        throw new Error(
+          `${ranking.name}: invalid ${group.rarity} augment payload row ${rowIndex + 1}`,
+        );
+      }
+      if (seenIds.has(entry.id)) {
+        throw new Error(`${ranking.name}: duplicate OP.GG augment id ${entry.id}`);
+      }
+      seenIds.add(entry.id);
+
+      const augment = augmentById.get(entry.id);
+      if (!augment) {
+        throw new Error(`${ranking.name}: OP.GG augment id ${entry.id} is absent from KIWI_JADE catalog`);
+      }
+      if (augment.name !== entry.name.trim() || augment.rarity !== group.rarity) {
+        throw new Error(
+          `${ranking.name}: OP.GG augment ${entry.id} mismatch `
+          + `(remote=${entry.name}/${group.rarity}, local=${augment.name}/${augment.rarity})`,
+        );
+      }
+      return {
+        augmentId: augment.id,
+        apiName: augment.apiName,
+        name: augment.name,
+        rarity: group.rarity,
+        metric: parsePayloadMetric(
+          entry,
+          `${ranking.name} ${group.rarity} augment row ${rowIndex + 1}`,
+        ),
+      };
+    });
+  });
+  if (recommendations.length !== 45 || seenIds.size !== 45) {
+    throw new Error(
+      `${ranking.name}: expected 45 distinct OP.GG augment recommendations, `
+      + `received ${recommendations.length}/${seenIds.size}`,
+    );
+  }
+  return recommendations;
+}
+
+function parseSkillsPage(html, ranking, patch) {
+  const $ = load(html);
+  validateChampionPageIdentity($, ranking, patch, "skills");
+  const skillRows = tableByCaption($, "Skill table").find("tbody tr").toArray();
+  if (skillRows.length !== 5) {
+    throw new Error(`${ranking.name}: expected 5 skill build rows, received ${skillRows.length}`);
+  }
+  return skillRows.map((element, rowIndex) => {
+    const row = $(element);
+    const { priority, levelSequence } = parseOpggSkillBuild($, row, ranking.name);
+    return {
+      priority,
+      levelSequence,
+      metric: parseMetric(row, `${ranking.name} skill build row ${rowIndex + 1}`),
+    };
+  });
 }
 
 function parseRootPage(html) {
@@ -369,12 +432,28 @@ for (const entry of roster) {
 
 const builds = await mapWithConcurrency(roster, 3, async (entry, index) => {
   const ranking = rankingById.get(entry.riotId);
-  const sourceUrl = `${modeUrl}/${ranking.key}/build?region=global&tier=all&patch=${patch}`;
-  const result = await fetchValidated(
-    sourceUrl,
-    `OP.GG ${ranking.name} Classic-ish build`,
-    (html) => parseChampionPage(html, entry, ranking, patch, itemMap),
-  );
+  const query = `region=global&tier=all&patch=${patch}`;
+  const buildUrl = `${modeUrl}/${ranking.key}/build?${query}`;
+  const augmentsUrl = `${modeUrl}/${ranking.key}/augments?${query}`;
+  const skillsUrl = `${modeUrl}/${ranking.key}/skills?${query}`;
+  const [build, augments, skillBuilds] = await Promise.all([
+    fetchValidated(
+      buildUrl,
+      `OP.GG ${ranking.name} Classic-ish build`,
+      (html) => parseBuildPage(html, entry, ranking, patch, itemMap),
+    ),
+    fetchValidated(
+      augmentsUrl,
+      `OP.GG ${ranking.name} Classic-ish augments`,
+      (html) => parseAugmentsPage(html, ranking, patch),
+    ),
+    fetchValidated(
+      skillsUrl,
+      `OP.GG ${ranking.name} Classic-ish skills`,
+      (html) => parseSkillsPage(html, ranking, patch),
+    ),
+  ]);
+  const result = { ...build, augments, skillBuilds };
   if ((index + 1) % 10 === 0 || index === roster.length - 1) {
     console.log(`Parsed ${index + 1}/${roster.length} OP.GG Classic-ish champion builds`);
   }
@@ -419,6 +498,7 @@ export type OpggMayhemChampionBuild = {
     augmentId: number;
     apiName: string;
     name: string;
+    rarity: "silver" | "gold" | "prismatic";
     metric: OpggMetric;
   }>;
   summonerSets: Array<{

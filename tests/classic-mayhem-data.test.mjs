@@ -64,6 +64,11 @@ test("怀旧海斗使用同一批 60 位经典英雄，但技能与属性来自�
         assert.doesNotMatch(ability.numericDetail, /\{\{|@|动态数值|\?{2,}/, `${champion.name} ${ability.key} 存在未解析数值`);
       }
       assert.doesNotMatch(ability.numericDetail, /属性枚举|对应属性/, `${champion.name} ${ability.key} 存在伪解析属性`);
+      assert.doesNotMatch(
+        ability.numericDetail,
+        /客户端字段|客户端公式|effect\d+amount|\[[A-Za-z_][A-Za-z0-9_.:-]*\]|CalculationPart|客户端未提供静态值|客户端词条未解析|客户端字段未命名|数据状态：unavailable/i,
+        `${champion.name} ${ability.key} 不应向用户泄漏客户端内部字段或占位符`,
+      );
       if (ability.numericStatus === "available") {
         assert.doesNotMatch(
           ability.numericDetail,
@@ -76,6 +81,17 @@ test("怀旧海斗使用同一批 60 位经典英雄，但技能与属性来自�
     }
     assert.ok(classicAssetManifest[champion.portrait], `${champion.name}现代头像缺少本地镜像`);
   }
+});
+
+test("技能数值面板异步解码图标，并隐藏不可用的空数值卡", async () => {
+  const componentSource = await readFile(
+    new URL("../app/components/ChampionAbilityPanel.tsx", import.meta.url),
+    "utf8",
+  );
+  assert.doesNotMatch(componentSource, /decoding="sync"/);
+  assert.ok((componentSource.match(/decoding="async"/g) ?? []).length >= 2);
+  assert.match(componentSource, /numericStatus !== "unavailable"/);
+  assert.match(componentSource, /\{showNumericDetail && \(/);
 });
 
 test("KIWI 与 KIWI_JADE 模式池分离，强化说明不保留模板占位符", () => {
@@ -100,6 +116,13 @@ test("KIWI 与 KIWI_JADE 模式池分离，强化说明不保留模板占位符"
     assert.ok(classicAssetManifest[augment.icon], `${augment.name}强化图标缺少本地镜像`);
     assert.ok(["silver", "gold", "prismatic"].includes(augment.rarity));
   }
+
+  const erosion = classicMayhemAugments.find((augment) => augment.apiName === "ARAM_Erosion");
+  assert.ok(erosion, "怀旧海斗强化池应包含侵蚀");
+  assert.match(erosion.description, /持续4秒/);
+  assert.match(erosion.description, /每层1\.5%/);
+  assert.match(erosion.description, /最多叠加20层/);
+  assert.doesNotMatch(erosion.description, /\?|0\.015\s*\+|20\s*\+\s*10/);
 });
 
 test("OP.GG 怀旧海斗快照覆盖 60 位英雄并保留页面原始统计", () => {
@@ -127,6 +150,11 @@ test("OP.GG 怀旧海斗快照覆盖 60 位英雄并保留页面原始统计", (
     [...opggMayhemChampionBuilds.map((build) => build.rank)].sort((a, b) => a - b),
     Array.from({ length: 60 }, (_, index) => index + 1),
   );
+  assert.equal(
+    opggMayhemChampionBuilds.reduce((total, build) => total + build.augments.length, 0),
+    2_700,
+    "60 位英雄都应保留 45 条 OP.GG 分品质强化推荐",
+  );
 
   for (const build of opggMayhemChampionBuilds) {
     assert.equal(build.patch, OP_GG_MAYHEM_PATCH);
@@ -136,12 +164,25 @@ test("OP.GG 怀旧海斗快照覆盖 60 位英雄并保留页面原始统计", (
     assert.ok(build.championMetrics.pickRate > 0 && build.championMetrics.pickRate <= 100);
     assert.ok(build.championMetrics.winRate > 0 && build.championMetrics.winRate <= 100);
 
-    assert.equal(build.augments.length, 10, `${build.name}应保留 OP.GG 前 10 个强化`);
+    assert.equal(build.augments.length, 45, `${build.name}应保留 OP.GG 三个品质各 15 个强化`);
+    assert.equal(
+      new Set(build.augments.map((recommendation) => recommendation.augmentId)).size,
+      45,
+      `${build.name}强化推荐不应跨品质重复`,
+    );
+    for (const rarity of ["silver", "gold", "prismatic"]) {
+      assert.equal(
+        build.augments.filter((recommendation) => recommendation.rarity === rarity).length,
+        15,
+        `${build.name} ${rarity} 强化应保留 OP.GG 原始 15 行`,
+      );
+    }
     for (const recommendation of build.augments) {
       const catalogAugment = classicMayhemAugments.find((augment) => augment.id === recommendation.augmentId);
       assert.ok(catalogAugment);
       assert.equal(recommendation.name, catalogAugment.name, `${build.name}强化名称与目录 ID 不一致`);
       assert.equal(recommendation.apiName, catalogAugment.apiName, `${build.name}强化 API 名与目录 ID 不一致`);
+      assert.equal(recommendation.rarity, catalogAugment.rarity, `${build.name}强化品质与目录 ID 不一致`);
       assertMetric(recommendation.metric, `${build.name} ${recommendation.name}`);
     }
 
@@ -157,17 +198,20 @@ test("OP.GG 怀旧海斗快照覆盖 60 位英雄并保留页面原始统计", (
 
     assert.equal(build.runes.status, "unavailable");
     assert.match(build.runes.reason, /OP\.GG|数据未找到/);
-    assert.equal(build.skillBuilds.length, 1);
-    const skillBuild = build.skillBuilds[0];
-    assert.equal(skillBuild.priority.length, 3);
-    assert.deepEqual(new Set(skillBuild.priority), new Set(["Q", "W", "E"]));
-    assert.ok(skillBuild.levelSequence.length >= 15 && skillBuild.levelSequence.length <= 18);
-    assert.ok(skillBuild.levelSequence.every((key) => ["Q", "W", "E", "R"].includes(key)));
-    assert.deepEqual(new Set(skillBuild.levelSequence.slice(0, 3)), new Set(["Q", "W", "E"]));
-    const expectedUltimateLevels = [6, 11, 16].filter((level) => level <= skillBuild.levelSequence.length);
-    const actualUltimateLevels = skillBuild.levelSequence.flatMap((key, index) => key === "R" ? [index + 1] : []);
-    assert.deepEqual(actualUltimateLevels, expectedUltimateLevels);
-    assertMetric(skillBuild.metric, `${build.name}技能加点`);
+    assert.equal(build.skillBuilds.length, 5);
+    for (const skillBuild of build.skillBuilds) {
+      assert.equal(skillBuild.priority.length, 3);
+      assert.deepEqual(new Set(skillBuild.priority), new Set(["Q", "W", "E"]));
+      assert.ok(skillBuild.levelSequence.length >= 15 && skillBuild.levelSequence.length <= 18);
+      assert.ok(skillBuild.levelSequence.every((key) => ["Q", "W", "E", "R"].includes(key)));
+      for (const key of ["Q", "W", "E"]) {
+        const points = skillBuild.levelSequence.filter((entry) => entry === key).length;
+        assert.ok(points >= 1 && points <= 5, `${build.name} ${key} 技能点数越界`);
+      }
+      const ultimatePoints = skillBuild.levelSequence.filter((entry) => entry === "R").length;
+      assert.ok(ultimatePoints >= 0 && ultimatePoints <= 3, `${build.name} R 技能点数越界`);
+      assertMetric(skillBuild.metric, `${build.name}技能加点`);
+    }
 
     assert.equal(build.items.starting.length, 2);
     assert.equal(build.items.boots.length, 2);
@@ -199,18 +243,24 @@ test("怀旧海斗页面不再复用峡谷方案或启发式推荐，并纳入�
   assert.match(pageSource, /怀旧海斗排名/);
   assert.match(pageSource, /classic-mayhem-ranking\.generated/);
   assert.doesNotMatch(pageSource, /from "\.\/classic-mayhem-opgg\.generated"/);
-  assert.match(componentSource, /opggMayhemChampionBuilds/);
+  assert.match(componentSource, /classic-data\/mayhem/);
+  assert.match(componentSource, /runtime\.augmentRecommendations/);
+  assert.match(componentSource, /build\.skillBuilds\.map/);
   assert.match(componentSource, /ChampionAbilityPanel/);
-  assert.match(componentSource, /MAYHEM_STARTING_GOLD/);
-  assert.match(componentSource, /数据未找到/);
   assert.match(componentSource, /白银阶/);
   assert.match(componentSource, /黄金阶/);
   assert.match(componentSource, /棱彩阶/);
-  assert.match(componentSource, /公开数值不可用/);
+  assert.doesNotMatch(
+    componentSource,
+    /from\s+["']\.\.\/classic-mayhem(?:-opgg)?\.generated["']/,
+  );
+  assert.doesNotMatch(componentSource, /mayhem-rune-status|数据未找到/);
   assert.doesNotMatch(componentSource, /prismatic: "棱镜"/);
   assert.doesNotMatch(componentSource, /classicBuildGuides|augmentScore|preferredTags/);
-  assert.match(generatorSource, /增幅装置/);
-  assert.match(generatorSource, /SkillOrder Table/);
+  assert.match(generatorSource, /\/augments/);
+  assert.match(generatorSource, /entry\.rareity/);
+  assert.match(generatorSource, /Skill table/);
+  assert.match(generatorSource, /\/skills/);
   assert.match(generatorSource, /startingGold = 1400/);
   assert.match(generatorSource, /Smite is not legal/);
   assert.match(generatorSource, /rankings\.length !== 60/);

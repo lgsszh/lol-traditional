@@ -5,7 +5,8 @@ import ChampionAbilityPanel from "./components/ChampionAbilityPanel";
 import ItemDetailPanel from "./components/ItemDetailPanel";
 
 // 帮助抽屉与新手指引只在打开时才需要，懒加载让它们不占首屏体积。
-const ClassicMayhemGuide = lazy(() => import("./components/ClassicMayhemGuide"));
+const loadClassicMayhemGuide = () => import("./components/ClassicMayhemGuide");
+const ClassicMayhemGuide = lazy(loadClassicMayhemGuide);
 const HelpDrawer = lazy(() => import("./components/HelpDrawer"));
 const OnboardingGuide = lazy(() => import("./components/OnboardingGuide"));
 import {
@@ -51,6 +52,19 @@ import { opggMayhemRankingSummary } from "./classic-mayhem-ranking.generated";
 type WorkbenchView = "runes" | "masteries" | "build" | "mayhem" | "ai";
 type RuneCounts = Record<string, number>;
 type MasteryRanks = Record<string, number>;
+const workbenchNavigation: ReadonlyArray<{
+  id: WorkbenchView;
+  label: string;
+  shortLabel: string;
+  badge: string;
+  description: string;
+}> = [
+  { id: "runes", label: "符文模拟器", shortLabel: "符文", badge: "50", description: "30 格经典符文页" },
+  { id: "masteries", label: "天赋模拟器", shortLabel: "天赋", badge: "56", description: "30 点完整天赋树" },
+  { id: "build", label: "技能与出装", shortLabel: "构筑", badge: "152", description: "玩法、技能与装备" },
+  { id: "mayhem", label: "怀旧海斗", shortLabel: "怀旧海斗", badge: "188", description: "OP.GG 每日同步" },
+  { id: "ai", label: "AI 助手", shortLabel: "AI", badge: "✦", description: "已校验数据生成" },
+];
 type AiProfileId = "balanced" | "aggressive" | "defensive" | "teamfight";
 type AiRecommendation = {
   profile: AiProfileId;
@@ -174,24 +188,21 @@ function preloadImage(src: string) {
 }
 
 function preloadChampionAssets(champion: ClassicChampion) {
-  const skillSet = championSkillSet(champion);
-  const skillIcons = skillSet?.abilities.map((ability) => ability.icon) || [];
-  const artworkSources = skillSet?.artworks.map((artwork) => artwork.imageUrl) || [];
-  return Promise.all([
-    preloadImage(championPortrait(champion)),
-    ...artworkSources.map(preloadImage),
-    ...skillIcons.map(preloadImage),
-  ]);
+  // 英雄行悬停只为下一次切换预热头像与默认原画。技能图和其余原画由
+  // 实际打开的面板自行加载，避免首屏或扫过列表时解码整套英雄资源。
+  const sources = [championPortrait(champion), championHeroArt(champion)];
+  return Promise.all([...new Set(sources)].map(preloadImage));
 }
 
 function preloadWorkbenchAssets(view: WorkbenchView) {
+  if (view === "mayhem") {
+    return loadClassicMayhemGuide().then(() => []);
+  }
   const sources = view === "runes"
-    ? [runeBoardBackground, ...classicRuneGroups.flatMap((group) => group.runes.map((rune) => rune.icon))]
+    ? [runeBoardBackground]
     : view === "masteries"
-      ? [...Object.values(masteryBackgrounds), ...classicMasteries.map((mastery) => mastery.icon)]
-      : view === "build"
-        ? [...classicSpells.map((spell) => spell.icon), ...mainItemPool.map((item) => item.icon)]
-        : [];
+      ? Object.values(masteryBackgrounds)
+      : [];
   return Promise.all([...new Set(sources)].map(preloadImage));
 }
 
@@ -582,7 +593,6 @@ export default function Home() {
         while (safeItems.length < 6) safeItems.push(fallbackItems[safeItems.length]);
 
         // Restoring browser-persisted state is intentionally performed after hydration.
-        // eslint-disable-next-line react-hooks/set-state-in-effect
         setSelectedChampion(champion);
         setSelectedArtworkId(classicSkillsByChampion.get(champion.classicId)?.artworks[0]?.id || "");
         setSelectedGuideId(classicBuildGuides[champion.classicId][0].id);
@@ -706,29 +716,12 @@ export default function Home() {
   };
 
   useEffect(() => {
-    let cancelled = false;
-    let timer = 0;
-    let cursor = 0;
-    const queue = classicChampions;
-    const preloadNextPair = async () => {
-      if (cancelled || cursor >= queue.length) return;
-      const batch = queue.slice(cursor, cursor + 2);
-      cursor += batch.length;
-      await Promise.all(batch.map((entry) => preloadImage(championPortrait(entry))));
-      if (!cancelled) timer = window.setTimeout(preloadNextPair, 120);
-    };
-    timer = window.setTimeout(preloadNextPair, 700);
-    const workbenchTimer = window.setTimeout(() => {
-      void preloadWorkbenchAssets("runes");
-      void preloadWorkbenchAssets("masteries");
-      void preloadWorkbenchAssets("build");
-    }, 900);
-    return () => {
-      cancelled = true;
-      window.clearTimeout(timer);
-      window.clearTimeout(workbenchTimer);
-    };
-  }, []);
+    // 只预热当前英雄的头像、默认原画与当前工作台背景。其余英雄头像继续
+    // 交给 loading="lazy"，技能图由当前面板按需加载，避免首屏 900ms 后
+    // 同时解码数百张图片而造成明显卡顿。
+    void preloadChampionAssets(selectedChampion);
+    void preloadWorkbenchAssets(view);
+  }, [selectedChampion, view]);
 
   const restoreRecommended = () => {
     // 「恢复推荐」＝回到该英雄的原始方案（攻略区第一套），并把符文、天赋、
@@ -997,6 +990,8 @@ export default function Home() {
     }, 360);
   };
 
+  const activeWorkbench = workbenchNavigation.find((entry) => entry.id === view) ?? workbenchNavigation[0];
+
   return (
     <main className="app-shell" style={{ "--champion-accent": selectedChampion.accent } as React.CSSProperties}>
       <a className="skip-link" href="#builder-content">跳到构筑内容</a>
@@ -1005,26 +1000,13 @@ export default function Home() {
           <span className="brand-mark">怀</span>
           <span><strong>英雄联盟怀旧服攻略介绍</strong><small>S3 考据 · 全同步工作台</small></span>
         </button>
-        <nav className="main-nav" aria-label="构筑功能" data-guide="module-nav">
-          {([
-            ["runes", "符文模拟器", "50"],
-            ["masteries", "天赋模拟器", "56"],
-            ["build", "技能与出装", "152"],
-            ["mayhem", "怀旧海斗", "188"],
-            ["ai", "AI 助手", "✦"],
-          ] as const).map(([id, label, badge]) => (
-            <button
-              key={id}
-              className={view === id ? "active" : ""}
-              onClick={() => changeView(id)}
-              onPointerEnter={() => preloadWorkbenchAssets(id)}
-              onFocus={() => preloadWorkbenchAssets(id)}
-              aria-current={view === id ? "page" : undefined}
-            >
-              {label}<span>{badge}</span>
-            </button>
-          ))}
-        </nav>
+        <div className="topbar-context" aria-live="polite">
+          <span>{String(workbenchNavigation.findIndex((entry) => entry.id === view) + 1).padStart(2, "0")}</span>
+          <div>
+            <strong>{activeWorkbench.label}</strong>
+            <small>{activeWorkbench.description} · 当前英雄 {selectedChampion.name}</small>
+          </div>
+        </div>
         <div className="sync-status">
           <span className="live-dot" />
           <span>
@@ -1039,6 +1021,32 @@ export default function Home() {
       </header>
 
       <div className="workspace">
+        <nav className="main-nav module-rail" aria-label="构筑功能" data-guide="module-nav">
+          <div className="module-rail-heading">
+            <span>功能</span>
+            <small>{workbenchNavigation.length} 项</small>
+          </div>
+          {workbenchNavigation.map((entry, index) => (
+            <button
+              key={entry.id}
+              className={view === entry.id ? "active" : ""}
+              onClick={() => changeView(entry.id)}
+              onPointerEnter={() => preloadWorkbenchAssets(entry.id)}
+              onFocus={() => preloadWorkbenchAssets(entry.id)}
+              aria-current={view === entry.id ? "page" : undefined}
+              aria-label={`${entry.label}，${entry.description}`}
+            >
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <strong>{entry.label}</strong>
+              <small>{entry.badge}</small>
+            </button>
+          ))}
+          <div className="module-rail-note">
+            <span>快捷切换</span>
+            <strong>Alt + 1–5</strong>
+          </div>
+        </nav>
+
         <aside className="champion-rail" data-guide="champion-picker">
           <div className="rail-heading">
             <span>{view === "mayhem" ? "怀旧海斗排名" : "经典英雄"}</span>
@@ -1176,26 +1184,29 @@ export default function Home() {
           </section>
 
           <div className="mobile-view-tabs" data-guide="module-nav">
-            {([
-              ["runes", "符文"],
-              ["masteries", "天赋"],
-              ["build", "构筑"],
-              ["mayhem", "怀旧海斗"],
-              ["ai", "AI"],
-            ] as const).map(([id, label]) => (
+            {workbenchNavigation.map((entry) => (
               <button
-                key={id}
-                className={view === id ? "active" : ""}
-                onClick={() => changeView(id)}
-                onPointerDown={() => preloadWorkbenchAssets(id)}
+                key={entry.id}
+                className={view === entry.id ? "active" : ""}
+                onClick={() => changeView(entry.id)}
+                onPointerDown={() => preloadWorkbenchAssets(entry.id)}
               >
-                {label}
+                {entry.shortLabel}
               </button>
             ))}
           </div>
 
           {view === "mayhem" && (
-            <Suspense fallback={<div className="mayhem-loading" role="status">正在载入现代技能与强化符文快照…</div>}>
+            <Suspense
+              fallback={(
+                <div className="mayhem-loading mayhem-entry-loading" role="status">
+                  <span />
+                  <span />
+                  <span />
+                  <b>正在载入当前英雄数据…</b>
+                </div>
+              )}
+            >
               <ClassicMayhemGuide champion={selectedChampion} />
             </Suspense>
           )}

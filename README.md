@@ -23,9 +23,9 @@
   峡谷分路、打野或惩戒；
   完整收录客户端 `KIWI_JADE` 的 188 个强化符文，并与新版海斗
   `KIWI` 交叉验证、标出 25 个经典专属词条。60 位英雄的排名、
-  胜率、选用率、强化、召唤师技能、技能加点、出门装、鞋子和核心
-  装备均来自 OP.GG Classic-ish 每日快照；OP.GG 无符文数据时明确
-  显示“数据未找到”。
+  胜率、选用率、每个品质前 15 个强化、前 5 套技能加点、召唤师
+  技能、出门装、鞋子和核心装备均来自 OP.GG Classic-ish 每日快照；
+  OP.GG 未提供的普通符文区不会显示，也不会用峡谷符文或人工方案替代。
 - **242 套完整玩法方案**：每位英雄至少 3 套（主流派、S3 考据研究
   流派、特色流派与稳健路线）。每套方案包含出门装（≤475 金校验）、
   按金币分档的回城购买路线、六格成装与备选、召唤师技能、逐格符文
@@ -102,12 +102,14 @@ app/                        页面、组件与数据模块
   classic-catalog-opgg.generated.ts  经典符文／天赋／召唤师技能快照
   classic-mayhem.generated.ts   现代技能与两套海斗强化快照
   classic-mayhem-opgg.generated.ts  60 英雄 OP.GG 怀旧海斗统计
+  classic-mayhem-runtime.ts     按当前英雄异步加载怀旧海斗数据
   components/ClassicMayhemGuide.tsx  怀旧海斗攻略与图鉴
   *.generated.ts            OP.GG / Data Dragon 同步生成的数据快照
 scripts/                    数据同步、资产镜像与本地启动脚本
 tests/                      数据完整性、搜索与渲染测试
 .github/workflows/          Pages 部署与每日数据同步
 public/classic-cache/       图像资产本地镜像（哈希命名）
+public/classic-data/mayhem/  60 份逐英雄运行时 JSON 与强化图鉴
 ```
 
 ## 清理旧版后台任务
