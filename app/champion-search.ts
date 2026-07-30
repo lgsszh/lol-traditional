@@ -46,3 +46,21 @@ export function championMatchesFilters(
 
   return searchIndex.includes(query);
 }
+
+export function championMatchesIdentitySearch(
+  champion: ClassicChampion,
+  search: string,
+) {
+  const query = normalizeSearch(search.trim());
+  if (!query) return true;
+
+  const searchIndex = normalizeSearch([
+    champion.name,
+    champion.title,
+    ...champion.aliases,
+    champion.key,
+    champion.role,
+  ].join(" "));
+
+  return searchIndex.includes(query);
+}

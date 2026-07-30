@@ -9,6 +9,7 @@ const ClassicMayhemGuide = lazy(() => import("./components/ClassicMayhemGuide"))
 const HelpDrawer = lazy(() => import("./components/HelpDrawer"));
 const OnboardingGuide = lazy(() => import("./components/OnboardingGuide"));
 import {
+  championMatchesIdentitySearch,
   championMatchesFilters,
   laneFilterOptions,
   type LaneFilterId,
@@ -45,6 +46,7 @@ import {
   type ClassicAbilityKey,
   type ClassicChampionSkillSet,
 } from "./classic-skills.generated";
+import { opggMayhemRankingSummary } from "./classic-mayhem-ranking.generated";
 
 type WorkbenchView = "runes" | "masteries" | "build" | "mayhem" | "ai";
 type RuneCounts = Record<string, number>;
@@ -88,6 +90,9 @@ const percentStats = new Set([
 
 const itemById = new Map(classicItems.map((item) => [item.id, item]));
 const mainItemPool = classicItems;
+const mayhemRankingByChampion = new Map(
+  opggMayhemRankingSummary.map((entry) => [entry.classicId, entry]),
+);
 const craftableItemCount = Object.values(classicItemRecipes).filter((recipe) => recipe.from.length > 0).length;
 const selectableItemIds = new Set(mainItemPool.map((item) => item.id));
 const spellIds = new Set(classicSpells.map((spell) => spell.id));
@@ -502,11 +507,17 @@ export default function Home() {
     return assignments;
   }, [runeCounts]);
 
-  const filteredChampions = useMemo(
-    () => classicChampions.filter((champion) =>
-      championMatchesFilters(champion, laneFilter, search) || Boolean(guideMatchFor(champion, search))),
-    [laneFilter, search],
-  );
+  const filteredChampions = useMemo(() => {
+    if (view === "mayhem") {
+      return classicChampions
+        .filter((champion) => championMatchesIdentitySearch(champion, search))
+        .sort((left, right) =>
+          (mayhemRankingByChampion.get(left.classicId)?.rank || 999)
+          - (mayhemRankingByChampion.get(right.classicId)?.rank || 999));
+    }
+    return classicChampions.filter((champion) =>
+      championMatchesFilters(champion, laneFilter, search) || Boolean(guideMatchFor(champion, search)));
+  }, [laneFilter, search, view]);
 
   const displayedItems = useMemo(() => mainItemPool.filter((item) => {
     const query = itemSearch.trim();
@@ -828,22 +839,33 @@ export default function Home() {
   };
 
   const shareBuild = async () => {
-    const payload = encodeBuildState({
-      championId: selectedChampion.classicId,
-      runeCounts,
-      masteryRanks,
-      spells: selectedSpells,
-      items,
-      skillPlan,
-    });
-    const url = `${window.location.origin}${window.location.pathname}#build=${payload}`;
-    window.history.replaceState(null, "", url);
+    const mayhemSourceUrl = mayhemRankingByChampion.get(selectedChampion.classicId)?.sourceUrl;
+    const payload = view === "mayhem" ? null : encodeBuildState({
+        championId: selectedChampion.classicId,
+        runeCounts,
+        masteryRanks,
+        spells: selectedSpells,
+        items,
+        skillPlan,
+      });
+    const url = view === "mayhem"
+      ? mayhemSourceUrl
+      : `${window.location.origin}${window.location.pathname}#build=${payload}`;
+    if (!url) {
+      showToast("当前英雄缺少可分享的 OP.GG 怀旧海斗来源");
+      return;
+    }
+    if (view !== "mayhem") window.history.replaceState(null, "", url);
     try {
       if (!navigator.clipboard) throw new Error("clipboard unavailable");
       await navigator.clipboard.writeText(url);
-      showToast("无需登录的构筑链接已复制");
+      showToast(view === "mayhem" ? "OP.GG 怀旧海斗攻略链接已复制" : "无需登录的构筑链接已复制");
     } catch {
-      showToast("链接已写入地址栏，请手动复制");
+      showToast(
+        view === "mayhem"
+          ? "浏览器未授予剪贴板权限，请使用页面中的“查看 OP.GG 此英雄”"
+          : "链接已写入地址栏，请手动复制",
+      );
     }
   };
 
@@ -1012,50 +1034,83 @@ export default function Home() {
           <button className="help-trigger" onClick={() => setHelpOpen(true)} aria-label="打开使用帮助">
             <span aria-hidden="true">?</span><span className="help-label">使用帮助</span>
           </button>
-          <button onClick={shareBuild} data-guide="share">分享</button>
+          <button onClick={shareBuild} data-guide="share">{view === "mayhem" ? "分享 OP.GG" : "分享"}</button>
         </div>
       </header>
 
       <div className="workspace">
         <aside className="champion-rail" data-guide="champion-picker">
-          <div className="rail-heading"><span>经典英雄</span><b>{classicChampions.length} / 60</b></div>
+          <div className="rail-heading">
+            <span>{view === "mayhem" ? "怀旧海斗排名" : "经典英雄"}</span>
+            <b>{classicChampions.length} / 60</b>
+          </div>
           <label className="champion-search">
             <span aria-hidden="true">⌕</span>
-            <input ref={championSearchRef} value={search} onChange={(event) => setSearch(event.target.value)} placeholder="搜索英雄、称号、外号或定位" />
+            <input
+              ref={championSearchRef}
+              value={search}
+              onChange={(event) => setSearch(event.target.value)}
+              placeholder={view === "mayhem" ? "搜索英雄、称号或外号" : "搜索英雄、称号、外号或定位"}
+            />
           </label>
-          <div className="role-filters" aria-label="位置筛选">
-            {laneFilterOptions.map(({ id }) => (
-              <button key={id} className={laneFilter === id ? "active" : ""} onClick={() => setLaneFilter(id)} aria-pressed={laneFilter === id}>{id}</button>
-            ))}
-          </div>
+          {view !== "mayhem" && (
+            <div className="role-filters" aria-label="位置筛选">
+              {laneFilterOptions.map(({ id }) => (
+                <button key={id} className={laneFilter === id ? "active" : ""} onClick={() => setLaneFilter(id)} aria-pressed={laneFilter === id}>{id}</button>
+              ))}
+            </div>
+          )}
           <div className="champion-list">
-            {filteredChampions.map((champion) => (
-              <button
-                key={champion.classicId}
-                className={champion.classicId === (pendingChampionId ?? selectedChampion.classicId) ? "champion-row active" : "champion-row"}
-                onClick={() => chooseChampion(champion)}
-                onPointerEnter={() => preloadChampionAssets(champion)}
-                onPointerDown={() => preloadChampionAssets(champion)}
-                onFocus={() => preloadChampionAssets(champion)}
-              >
-                <img src={championPortrait(champion)} alt="" loading="lazy" />
-                <span>
-                  <strong>{champion.name}</strong>
-                  <small>{champion.title} · {champion.lane}</small>
-                  {champion.aliases.length > 0 && <em>{champion.aliases.join(" / ")}</em>}
-                </span>
-                <i>{champion.classicId === selectedChampion.classicId ? "●" : "›"}</i>
-              </button>
-            ))}
+            {filteredChampions.map((champion) => {
+              const mayhemRanking = mayhemRankingByChampion.get(champion.classicId);
+              return (
+                <button
+                  key={champion.classicId}
+                  className={champion.classicId === (pendingChampionId ?? selectedChampion.classicId) ? "champion-row active" : "champion-row"}
+                  onClick={() => chooseChampion(champion)}
+                  onPointerEnter={() => preloadChampionAssets(champion)}
+                  onPointerDown={() => preloadChampionAssets(champion)}
+                  onFocus={() => preloadChampionAssets(champion)}
+                >
+                  <img src={championPortrait(champion)} alt="" loading="lazy" />
+                  <span>
+                    <strong>{champion.name}</strong>
+                    <small>
+                      {view === "mayhem" && mayhemRanking
+                        ? `第 ${mayhemRanking.tier} 段位 · 胜率 ${mayhemRanking.championMetrics.winRate.toFixed(2)}%`
+                        : `${champion.title} · ${champion.lane}`}
+                    </small>
+                    {view !== "mayhem" && champion.aliases.length > 0 && <em>{champion.aliases.join(" / ")}</em>}
+                  </span>
+                  <i>
+                    {view === "mayhem" && mayhemRanking
+                      ? `#${mayhemRanking.rank}`
+                      : champion.classicId === selectedChampion.classicId ? "●" : "›"}
+                  </i>
+                </button>
+              );
+            })}
             {filteredChampions.length === 0 && (
               <div className="champion-empty" role="status">
                 <strong>没有找到符合条件的英雄</strong>
-                <small>可尝试英雄名、外号、称号、英文名或“打野／中路”等定位。</small>
+                <small>
+                  {view === "mayhem"
+                    ? "怀旧海斗没有峡谷分路；请尝试英雄名、外号、称号或英文名。"
+                    : "可尝试英雄名、外号、称号、英文名或“打野／中路”等定位。"}
+                </small>
                 <button onClick={() => { setSearch(""); setLaneFilter("全部"); }}>清除筛选</button>
               </div>
             )}
           </div>
-          <div className="rail-footnote"><span>目录覆盖</span><strong>60 英雄 · 16 技能</strong><small>OP.GG Classic 目录每日自动检测；异常数据不会发布。</small></div>
+          <div className="rail-footnote">
+            <span>目录覆盖</span>
+            <strong>{view === "mayhem" ? "60 英雄 · 全部有统计" : "60 英雄 · 16 技能"}</strong>
+            <small>
+              {view === "mayhem"
+                ? "按 OP.GG 排名排序；每日全量抓取，任一英雄缺表即拒绝发布。"
+                : "OP.GG Classic 目录每日自动检测；异常数据不会发布。"}
+            </small>
+          </div>
         </aside>
 
         <section className="builder" id="builder-content" tabIndex={-1}>
@@ -1477,7 +1532,7 @@ export default function Home() {
                   <p>
                     {selectedGuide.sourceNote} 出门预算按 475 金币校验；多兰叠出只会显示在回城路线。
                     <span>
-                      {[...classicGuideSources, ...selectedGuide.sourceUrls.map((url) => ({ label: "当前路线原始资料", url }))]
+                      {[...classicGuideSources, ...selectedGuide.sourceUrls.map((url) => ({ label: "目录或研究资料", url }))]
                         .filter((source, index, all) => all.findIndex((entry) => entry.url === source.url) === index)
                         .map((source) => <a key={source.url} href={source.url} target="_blank" rel="noreferrer">{source.label}</a>)}
                     </span>

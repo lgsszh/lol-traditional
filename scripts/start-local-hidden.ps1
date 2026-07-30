@@ -4,7 +4,7 @@ $projectRoot = Split-Path -Parent $PSScriptRoot
 $serverUrl = "http://127.0.0.1:3415/"
 $launcherPath = Join-Path $projectRoot "start-local-hidden.vbs"
 
-function Test-RiftLabServer {
+function Test-ClassicGuideServer {
     try {
         $response = Invoke-WebRequest -UseBasicParsing -Uri $serverUrl -TimeoutSec 1
         return $response.StatusCode -eq 200
@@ -14,8 +14,8 @@ function Test-RiftLabServer {
     }
 }
 
-if (Test-RiftLabServer) {
-    Write-Output "[RIFT//LAB] Already running: $serverUrl"
+if (Test-ClassicGuideServer) {
+    Write-Output "[英雄联盟怀旧服攻略介绍] Already running: $serverUrl"
     exit 0
 }
 
@@ -25,11 +25,11 @@ Start-Process -FilePath "explorer.exe" -ArgumentList "`"$launcherPath`""
 
 for ($attempt = 1; $attempt -le 10; $attempt += 1) {
     Start-Sleep -Milliseconds 500
-    if (Test-RiftLabServer) {
-        Write-Output "[RIFT//LAB] Background server started: $serverUrl"
+    if (Test-ClassicGuideServer) {
+        Write-Output "[英雄联盟怀旧服攻略介绍] Background server started: $serverUrl"
         exit 0
     }
 }
 
-Write-Error "[RIFT//LAB] Health check failed after 5 seconds. Read .vinext-server.error.log."
+Write-Error "[英雄联盟怀旧服攻略介绍] Health check failed after 5 seconds. Read .vinext-server.error.log."
 exit 1

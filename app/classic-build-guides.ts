@@ -537,7 +537,7 @@ function createVariant(
       "后期根据敌方护甲、魔抗、控制和爆发调整最后两格，六神装不是固定答案。",
     ],
     tags: [...new Set([profile.lane, profile.archetype, profile.style, ...(profile.tags || [])])],
-    sourceNote: profile.sourceNote || "OP.GG Classic 16.15 英雄、符文、天赋、召唤师技能与装备目录；Season 3 社区攻略交叉整理。",
+    sourceNote: profile.sourceNote || "站内规则方案：使用 OP.GG Classic 目录约束合法 ID，并按 S3 位置与职业原则生成；OP.GG 未提供逐英雄出装统计，因此本方案不代表 OP.GG 推荐。",
     sourceUrls: profile.sourceUrls || ["https://op.gg/zh-cn/lol/classic"],
   };
 }

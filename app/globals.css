@@ -816,6 +816,7 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, a:focus-visib
 .ability-numeric > header small { border: 1px solid #203054; border-radius: 12px; color: #5677bf; padding: 3px 8px; font-size: 10px; white-space: nowrap; }
 .ability-numeric > p { margin: 5px 0 0; color: #babbc7; font-size: 13px; line-height: 1.75; }
 .ability-numeric > p strong { color: #6690ec; font-weight: 900; }
+.ability-numeric > p.ability-disclosure { margin-bottom: 9px; color: #d0ad6d; font-size: 11px; }
 .ability-rank-note { display: grid; grid-template-columns: 100px 1fr; align-items: center; gap: 10px; grid-column: 1 / -1; border-top: 1px solid var(--line); padding-top: 11px; }
 .ability-rank-note b { color: #999bab; font-size: 12px; }
 .ability-rank-note span { color: #777a8b; font-size: 12px; line-height: 1.5; }
@@ -2038,6 +2039,18 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, a:focus-visib
   font-style: normal;
   white-space: nowrap;
 }
+.augment-card h4 .augment-rarity-label {
+  margin-left: 7px;
+  border: 1px solid #555965;
+  border-radius: 9px;
+  color: #a5a9b5;
+  padding: 2px 5px;
+  font-size: 9px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.augment-card.rarity-gold h4 .augment-rarity-label { border-color: rgba(194,164,80,.55); color: #d4bb71; }
+.augment-card.rarity-prismatic h4 .augment-rarity-label { border-color: rgba(155,116,229,.55); color: #b998ef; }
 .augment-card p {
   display: -webkit-box;
   overflow: hidden;
@@ -2094,6 +2107,172 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, a:focus-visib
 .mayhem-methodology strong { color: #9fa2b0; }
 .mayhem-methodology p { margin: 0; }
 
+/* OP.GG-backed Classic-ish data blocks. */
+.mayhem-champion-card .mayhem-stats {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.mayhem-champion-card .mayhem-stats span:nth-child(4) { border-right: 0; }
+.mayhem-champion-card .mayhem-stats span:nth-child(-n+4) { border-bottom: 1px solid #31313a; }
+.mayhem-ability-shell { padding: 14px 16px 18px; }
+.mayhem-ability-shell .ability-explorer { border: 1px solid #31313a; border-radius: 7px; overflow: hidden; }
+.mayhem-ability-shell .ability-tabs { padding: 12px; }
+.mayhem-ability-shell .ability-detail { grid-template-columns: 1fr; border-top-color: #31313a; }
+.mayhem-ability-shell .ability-detail > p,
+.mayhem-ability-shell .ability-stats { grid-column: 1; }
+.mayhem-summoner-block,
+.mayhem-skill-build,
+.mayhem-rune-status {
+  margin: 0 16px 12px;
+  border: 1px solid #30303a;
+  border-radius: 6px;
+  background: #17171c;
+  padding: 12px;
+}
+.mayhem-summoner-block > strong,
+.mayhem-skill-build > strong,
+.mayhem-rune-status > strong {
+  display: block;
+  margin-bottom: 9px;
+  color: #cfd1db;
+  font-size: 12px;
+}
+.opgg-spell-row {
+  display: grid;
+  grid-template-columns: minmax(140px, 1fr) minmax(190px, auto);
+  align-items: center;
+  gap: 10px;
+  padding: 9px 0;
+  border-top: 1px solid #2d2d35;
+}
+.opgg-spell-row:first-of-type { border-top: 0; }
+.opgg-spell-row > span:first-child { display: flex; gap: 8px; }
+.opgg-spell-row > span:first-child > span { display: grid; grid-template-columns: 36px auto; align-items: center; gap: 7px; }
+.opgg-spell-row img { width: 36px; height: 36px; border-radius: 5px; }
+.opgg-spell-row small { color: #a8aab7; font-size: 11px; }
+.opgg-metric-line {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: end;
+  gap: 8px;
+  color: #7d808e;
+  font-size: 10px;
+  white-space: nowrap;
+}
+.opgg-metric-line b { color: #d3d5de; }
+.opgg-metric-line em { color: #777b8b; font-style: normal; }
+.opgg-metric-line strong { color: #6f9deb; }
+.skill-level-sequence { display: grid; grid-template-columns: repeat(8, 1fr); gap: 4px; margin: 10px 0; }
+.skill-level-sequence span {
+  min-height: 36px;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  position: relative;
+  border: 1px solid #353641;
+  border-radius: 4px;
+  background: #202129;
+}
+.skill-level-sequence span.ultimate { border-color: #6d80c9; background: #23283a; }
+.skill-level-sequence small { position: absolute; top: 2px; left: 4px; color: #626676; font-size: 8px; }
+.skill-level-sequence b { color: #9eb8f0; font-size: 13px; }
+.mayhem-skill-build > p,
+.mayhem-rune-status > p { margin: 8px 0 0; color: #777a89; font-size: 10px; line-height: 1.55; }
+.mayhem-rune-status > span {
+  display: inline-flex;
+  border: 1px solid #4a4b58;
+  border-radius: 14px;
+  color: #a4a6b1;
+  padding: 4px 9px;
+  font-size: 11px;
+}
+.opgg-augment-recommendations .augment-card { min-height: 154px; }
+.opgg-augment-recommendations .augment-card p {
+  display: block;
+  overflow: visible;
+  -webkit-line-clamp: unset;
+}
+.opgg-augment-recommendations .opgg-metric-line {
+  grid-template-columns: 1fr;
+  justify-content: start;
+  gap: 2px;
+  margin-top: 8px;
+  white-space: normal;
+}
+.mayhem-items-section {
+  margin-top: 14px;
+  border: 1px solid #383842;
+  border-radius: 9px;
+  background: #1a1a20;
+  padding: 20px;
+}
+.opgg-item-groups {
+  display: grid;
+  grid-template-columns: minmax(280px, .9fr) minmax(280px, .9fr) minmax(360px, 1.2fr);
+  gap: 10px;
+}
+.opgg-item-groups > article {
+  min-width: 0;
+  border: 1px solid #30303a;
+  border-radius: 6px;
+  background: #17171c;
+  overflow: hidden;
+}
+.opgg-item-groups h4 {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 0;
+  border-bottom: 1px solid #30303a;
+  padding: 11px 12px;
+  color: #d0d2db;
+  font-size: 12px;
+}
+.opgg-item-groups h4 small { color: #8fa8df; font-size: 10px; }
+.opgg-item-row {
+  display: grid;
+  grid-template-columns: minmax(120px, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+  min-height: 82px;
+  border-top: 1px solid #292a32;
+  padding: 10px 11px;
+}
+.opgg-item-row:first-of-type { border-top: 0; }
+.opgg-item-icons { display: flex; flex-wrap: wrap; gap: 7px; }
+.opgg-item-icons > span { width: 54px; display: grid; justify-items: center; position: relative; gap: 3px; }
+.opgg-item-icons img { width: 40px; height: 40px; border: 1px solid #4b4d59; border-radius: 4px; }
+.opgg-item-icons b {
+  position: absolute;
+  top: 24px;
+  right: 1px;
+  border-radius: 8px;
+  background: #0f1015;
+  color: #f0f1f5;
+  padding: 1px 4px;
+  font-size: 9px;
+}
+.opgg-item-icons small {
+  max-width: 58px;
+  overflow: hidden;
+  color: #858896;
+  font-size: 9px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.opgg-price {
+  grid-column: 1;
+  color: #d1ae5b;
+  font-size: 10px;
+}
+.opgg-item-row .opgg-metric-line {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  grid-template-columns: 1fr;
+  gap: 2px;
+  text-align: right;
+}
+
 @media (max-width: 1500px) {
   .topbar { grid-template-columns: 250px minmax(500px, 1fr) 260px; }
   .workspace { grid-template-columns: 250px minmax(0, 1fr); }
@@ -2121,6 +2300,7 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, a:focus-visib
   .mayhem-recommendations, .mayhem-augment-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .mayhem-filters { grid-template-columns: 1fr 1fr; }
   .mayhem-filters input { grid-column: 1 / -1; }
+  .mayhem-guide-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 900px) {
@@ -2381,4 +2561,32 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, a:focus-visib
   border: 1px solid #46639e;
   background: #1d2334;
   color: #9bb8f4;
+}
+
+@media (max-width: 1380px) {
+  .opgg-item-groups { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .opgg-item-groups > article:last-child { grid-column: 1 / -1; }
+}
+
+@media (max-width: 900px) {
+  .opgg-item-groups { grid-template-columns: 1fr; }
+  .opgg-item-groups > article:last-child { grid-column: 1; }
+  .opgg-spell-row { grid-template-columns: 1fr; }
+  .opgg-spell-row .opgg-metric-line { justify-content: start; }
+  .mayhem-ability-shell { padding: 10px; }
+}
+
+@media (max-width: 560px) {
+  .mayhem-champion-card .mayhem-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .mayhem-champion-card .mayhem-stats span:nth-child(2n) { border-right: 0; }
+  .mayhem-champion-card .mayhem-stats span:nth-child(-n+6) { border-bottom: 1px solid #31313a; }
+  .skill-level-sequence { grid-template-columns: repeat(5, 1fr); }
+  .opgg-item-row { grid-template-columns: 1fr; }
+  .opgg-item-row .opgg-metric-line {
+    grid-column: 1;
+    grid-row: auto;
+    grid-template-columns: repeat(3, auto);
+    justify-content: start;
+    text-align: left;
+  }
 }

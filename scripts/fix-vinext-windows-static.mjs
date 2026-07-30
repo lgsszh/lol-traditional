@@ -22,16 +22,16 @@ let source;
 try {
   source = await readFile(vinextCacheFile, "utf8");
 } catch (error) {
-  console.error("[RIFT//LAB] 未找到 vinext，请先执行 npm install。");
+  console.error("[英雄联盟怀旧服攻略介绍] 未找到 vinext，请先执行 npm install。");
   throw error;
 }
 
 if (source.includes(fixedSource)) process.exit(0);
 
 if (!source.includes(brokenSource)) {
-  console.log("[RIFT//LAB] 当前 vinext 不需要 Windows 静态资源兼容补丁。");
+  console.log("[英雄联盟怀旧服攻略介绍] 当前 vinext 不需要 Windows 静态资源兼容补丁。");
   process.exit(0);
 }
 
 await writeFile(vinextCacheFile, source.replace(brokenSource, fixedSource), "utf8");
-console.log("[RIFT//LAB] 已修复 vinext 在 Windows 上的 CSS/JS 静态资源路径。");
+console.log("[英雄联盟怀旧服攻略介绍] 已修复 vinext 在 Windows 上的 CSS/JS 静态资源路径。");

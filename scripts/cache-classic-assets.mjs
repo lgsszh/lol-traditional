@@ -4,6 +4,7 @@ import { classicChampions, classicMasteries, classicRuneGroups, classicSpells, m
 import { classicItems } from "../app/classic-items.generated.ts";
 import { classicChampionSkills } from "../app/classic-skills.generated.ts";
 import { classicMayhemAugments, liveClassicChampions } from "../app/classic-mayhem.generated.ts";
+import { opggMayhemChampionBuilds } from "../app/classic-mayhem-opgg.generated.ts";
 
 const publicDirectory = new URL("../public/classic-cache/", import.meta.url);
 const manifestPath = new URL("../app/classic-assets.generated.ts", import.meta.url);
@@ -39,6 +40,11 @@ for (const champion of liveClassicChampions) {
   for (const ability of champion.abilities) add(ability.icon, `${champion.name}现代${ability.key}`);
 }
 for (const augment of classicMayhemAugments) add(augment.icon, `${augment.name}强化符文`);
+for (const build of opggMayhemChampionBuilds) {
+  for (const set of build.summonerSets) {
+    for (const spell of set.spells) add(spell.icon, `${spell.name}怀旧海斗召唤师技能`);
+  }
+}
 for (const [tree, source] of Object.entries(masteryBackgrounds)) add(source, `${tree}天赋背景`);
 add(runeBoardBackground, "符文面板");
 
@@ -84,7 +90,7 @@ async function download(url, labels) {
       const response = await fetch(url, {
         headers: {
           accept: "image/avif,image/webp,image/png,image/jpeg,*/*;q=0.8",
-          "user-agent": "RIFT-LAB-Classic-Asset-Mirror/1.0",
+          "user-agent": "lol-traditional-asset-mirror/0.5 (+https://github.com/lgsszh/lol-traditional)",
         },
         signal: AbortSignal.timeout(30_000),
       });

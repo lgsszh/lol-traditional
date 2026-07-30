@@ -6,6 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
+  actions: write
   contents: write
   issues: write
 
@@ -35,20 +36,61 @@ jobs:
       - name: Validate generated data and website
         run: npm test
       - name: Commit verified source changes
+        id: commit
         run: |
           git config user.name "classic-data-bot"
           git config user.email "actions@users.noreply.github.com"
           # 数据、镜像清单和新下载的图片必须一起提交，否则部署会缺图。
           git add app/classic-items.generated.ts app/classic-skills.generated.ts \
             app/classic-item-recipes.generated.ts app/classic-assets.generated.ts \
-            app/classic-mayhem.generated.ts \
+            app/classic-catalog-opgg.generated.ts \
+            app/classic-mayhem.generated.ts app/classic-mayhem-opgg.generated.ts \
+            app/classic-mayhem-ranking.generated.ts \
             public/classic-cache
           if git diff --cached --quiet; then
             echo "OP.GG Classic data is unchanged."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           git commit -m "data: sync OP.GG Classic snapshot"
           git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+      - name: Deploy and verify the current data snapshot
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          dispatch_time="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          dispatched=false
+          for attempt in 1 2 3 4 5; do
+            if gh workflow run deploy-pages.yml --ref main; then
+              dispatched=true
+              break
+            fi
+            echo "Pages dispatch failed; retry ${attempt}/5."
+            sleep $((attempt * 5))
+          done
+          if [ "$dispatched" != "true" ]; then
+            echo "Unable to dispatch deploy-pages.yml after 5 attempts."
+            exit 1
+          fi
+
+          run_id=""
+          for attempt in $(seq 1 30); do
+            run_id="$(gh run list --workflow deploy-pages.yml --branch main \
+              --event workflow_dispatch --limit 10 --json databaseId,headSha,createdAt \
+              --jq ".[] | select(.createdAt >= \"${dispatch_time}\") | .databaseId" \
+              | head -n 1)"
+            if [ -n "$run_id" ]; then
+              break
+            fi
+            echo "Waiting for dispatched Pages run ${attempt}/30."
+            sleep 10
+          done
+          if [ -z "$run_id" ]; then
+            echo "The dispatched Pages run was not discoverable."
+            exit 1
+          fi
+          gh run watch "$run_id" --exit-status
       - name: File an issue when sync needs a human
         if: failure()
         uses: actions/github-script@v9

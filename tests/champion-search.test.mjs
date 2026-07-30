@@ -1,6 +1,9 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { championMatchesFilters } from "../app/champion-search.ts";
+import {
+  championMatchesFilters,
+  championMatchesIdentitySearch,
+} from "../app/champion-search.ts";
 import { classicChampions } from "../app/classic-data.ts";
 
 const champion = {
@@ -31,6 +34,14 @@ test("位置筛选与搜索词需要同时满足", () => {
   assert.equal(championMatchesFilters(champion, "野", "剑圣"), true);
   assert.equal(championMatchesFilters(champion, "中", "剑圣"), false);
   assert.equal(championMatchesFilters(champion, "全部", "阿狸"), false);
+});
+
+test("怀旧海斗身份搜索不会把峡谷分路或 jungler 原型当作英雄关键词", () => {
+  assert.equal(championMatchesIdentitySearch(champion, "剑圣"), true);
+  assert.equal(championMatchesIdentitySearch(champion, "战士"), true);
+  assert.equal(championMatchesIdentitySearch(champion, "打野"), false);
+  assert.equal(championMatchesIdentitySearch(champion, "jungle"), false);
+  assert.equal(championMatchesIdentitySearch(champion, "jungler"), false);
 });
 
 test("常用外号采用玩家称呼且允许没有独立外号的英雄留空", () => {

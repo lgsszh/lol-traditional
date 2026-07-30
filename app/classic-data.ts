@@ -1,3 +1,9 @@
+import {
+  classicOpggMasteries,
+  classicOpggRunes,
+  classicOpggSpells,
+} from "./classic-catalog-opgg.generated.ts";
+
 export const CLASSIC_PATCH = "16.15";
 export const CLASSIC_ASSET_BASE = `https://opgg-static.akamaized.net/meta/images/lol/${CLASSIC_PATCH}/classic`;
 
@@ -219,7 +225,7 @@ const rune = (
   asset: string,
 ): ClassicRune => ({ id, name, short, stat, value, per, icon: runeIcon(asset) });
 
-export const classicRuneGroups: ClassicRuneGroup[] = [
+const classicRuneGroupsEditorial: ClassicRuneGroup[] = [
   {
     id: "mark",
     name: "印记",
@@ -304,6 +310,30 @@ export const classicRuneGroups: ClassicRuneGroup[] = [
   },
 ];
 
+const opggRuneByLocalId = new Map<string, (typeof classicOpggRunes)[number]>(
+  classicOpggRunes.map((entry) => [entry.runeId, entry]),
+);
+const opggRunePer = (description: string) => {
+  const match = description.match(/\d+(?:\.\d+)?/);
+  return match ? Number(match[0]) : null;
+};
+export const classicRuneGroups: ClassicRuneGroup[] = classicRuneGroupsEditorial.map((group) => ({
+  ...group,
+  runes: group.runes.map((runeEntry) => {
+    const opgg = opggRuneByLocalId.get(runeEntry.id);
+    const remotePer = opgg ? opggRunePer(opgg.description) : null;
+    return opgg
+      ? {
+          ...runeEntry,
+          name: opgg.title === "空白符文" ? runeEntry.name : opgg.title,
+          value: opgg.description,
+          per: remotePer ?? runeEntry.per,
+          icon: opgg.imageUrl,
+        }
+      : runeEntry;
+  }),
+}));
+
 const mastery = (
   id: string,
   name: string,
@@ -321,7 +351,7 @@ const mastery = (
   icon: masteryIcon(id),
 });
 
-export const classicMasteries: ClassicMastery[] = [
+const classicMasteriesEditorial: ClassicMastery[] = [
   mastery("511", "召唤师的愤怒", "进攻", 1, "强化虚弱、引燃、幽灵疾步、战意激增、战争图腾和晋升。"),
   mastery("512", "狂怒", "进攻", 4, "每级获得 +1% 攻击速度。"),
   mastery("513", "巫术", "进攻", 4, "每级获得 +1% 冷却缩减。"),
@@ -380,6 +410,16 @@ export const classicMasteries: ClassicMastery[] = [
   mastery("762", "灵敏", "通用", 1, "移动速度提升 3%。"),
 ];
 
+const opggMasteryById = new Map<string, (typeof classicOpggMasteries)[number]>(
+  classicOpggMasteries.map((entry) => [entry.identifier, entry]),
+);
+export const classicMasteries: ClassicMastery[] = classicMasteriesEditorial.map((masteryEntry) => {
+  const opgg = opggMasteryById.get(masteryEntry.id);
+  return opgg
+    ? { ...masteryEntry, name: opgg.title, description: opgg.description, icon: opgg.imageUrl }
+    : masteryEntry;
+});
+
 const spell = (
   id: string,
   name: string,
@@ -388,7 +428,7 @@ const spell = (
   description: string,
 ): ClassicSpell => ({ id, name, cooldown, icon: spellIcon(asset), description });
 
-export const classicSpells: ClassicSpell[] = [
+const classicSpellsEditorial: ClassicSpell[] = [
   spell("74", "闪现", 300, "s3_summoner_flash", "朝指针位置瞬间传送一小段距离。召唤师的感悟可缩短 15 秒冷却。"),
   spell("714", "引燃", 210, "s3_summonerignite", "持续造成真实伤害并降低治疗效果；强化后冷却期间获得 5 攻击力和法术强度。"),
   spell("712", "传送", 300, "s3_summoner_teleport", "引导后传送至友方小兵、防御塔或守卫；强化后缩短引导时间。"),
@@ -406,6 +446,22 @@ export const classicSpells: ClassicSpell[] = [
   spell("720", "晋升", 270, "38", "强化一名小兵并共享其击杀金币；强化后攻击力光环也会影响英雄。"),
   spell("777", "重生", 510, "s3_summoner_revive", "立即在泉水复活并临时提高移动速度；强化后临时提供 220–560 生命值。"),
 ];
+
+const opggSpellById = new Map<string, (typeof classicOpggSpells)[number]>(
+  classicOpggSpells.map((entry) => [entry.identifier, entry]),
+);
+export const classicSpells: ClassicSpell[] = classicSpellsEditorial.map((spellEntry) => {
+  const opgg = opggSpellById.get(spellEntry.id);
+  return opgg
+    ? {
+      ...spellEntry,
+      name: opgg.title,
+      cooldown: opgg.cooldown ?? spellEntry.cooldown,
+      icon: opgg.imageUrl,
+      description: opgg.description,
+    }
+    : spellEntry;
+});
 
 export const initialMasteryRanks: Record<string, number> = {
   "511": 1,

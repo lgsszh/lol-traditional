@@ -17,10 +17,15 @@
 ## 功能特性
 
 - **海克斯大乱斗 · 经典模式版**：同一批 60 位经典英雄使用
-  Data Dragon 16.15.1 现代技能与基础属性，搭配经典装备路线；
+  Riot 16.15.1 / CommunityDragon 16.15 现代技能、可公开数值与基础／
+  成长属性；客户端未能静态展开的公式明确标为“部分”，不补猜数值。
+  模式搭配经典装备，独立按 1400 金出门预算校验，不包含
+  峡谷分路、打野或惩戒；
   完整收录客户端 `KIWI_JADE` 的 188 个强化符文，并与新版海斗
-  `KIWI` 交叉验证、标出 25 个经典专属词条。支持英雄协同推荐、
-  品质／共享状态筛选、关键词搜索和 OP.GG 英雄页直达。
+  `KIWI` 交叉验证、标出 25 个经典专属词条。60 位英雄的排名、
+  胜率、选用率、强化、召唤师技能、技能加点、出门装、鞋子和核心
+  装备均来自 OP.GG Classic-ish 每日快照；OP.GG 无符文数据时明确
+  显示“数据未找到”。
 - **242 套完整玩法方案**：每位英雄至少 3 套（主流派、S3 考据研究
   流派、特色流派与稳健路线）。每套方案包含出门装（≤475 金校验）、
   按金币分档的回城购买路线、六格成装与备选、召唤师技能、逐格符文
@@ -56,8 +61,10 @@ npm run dev
 | `npm run build:pages` | GitHub Pages 静态导出（CI 设置环境变量） |
 | `npm run data:update` | 重新抓取 OP.GG Classic、现代技能与海斗模式池并更新快照 |
 | `npm run data:check` | 在线重新生成并确认仓库快照没有漂移 |
-| `npm run mayhem:update` | 仅更新现代技能与 KIWI／KIWI_JADE 强化快照 |
-| `npm run mayhem:check` | 在线重新生成并校验海斗快照 |
+| `npm run classic:catalog:update` | 更新 OP.GG 的 50 符文／56 天赋／16 召唤师技能目录 |
+| `npm run classic:catalog:check` | 在线校验 OP.GG 经典目录快照 |
+| `npm run mayhem:update` | 更新现代技能、两套强化池与 60 英雄 OP.GG 统计 |
+| `npm run mayhem:check` | 在线重新生成并校验全部怀旧海斗快照 |
 | `npm run roster:check` | 校验 OP.GG Classic 英雄名单是否与本站一致 |
 
 开发服务器只应在开发期间运行，请勿设置为开机启动或定时重启。
@@ -65,20 +72,25 @@ npm run dev
 ## 数据来源与校验
 
 - 英雄、装备、符文、天赋、召唤师技能目录与图像：OP.GG Classic
-  16.15 快照；完整技能公式：Riot Data Dragon 3.15.5。
-- 怀旧海斗现代技能与属性：Riot Data Dragon 16.15.1；新版海斗
-  `KIWI`、怀旧海斗 `KIWI_JADE` 模式池及强化名称／品质／图标：
-  CommunityDragon 16.15 客户端导出；OP.GG 中文模式页用于交叉验证。
+  16.15 每日快照；经典完整技能公式：Riot Data Dragon 3.15.5。
+- 怀旧海斗现代技能、基础与成长属性、公开公式：Riot Data Dragon
+  16.15.1 与 CommunityDragon 16.15 同补丁客户端数据；新版海斗 `KIWI`、
+  怀旧海斗 `KIWI_JADE` 模式池及强化名称／品质／图标／公开效果：
+  CommunityDragon 16.15 客户端导出。
+- 怀旧海斗逐英雄排名、胜率、选用率、强化顺序、召唤师技能、技能
+  加点、出门装、鞋子和核心装备：OP.GG Classic-ish 16.15。同步
+  保留页面显示值和场次，不自行推算或修正 OP.GG 的统计。
 - 玩法方案：Mobafire / MetaSRC Classic 等 2012–2013 攻略逐英雄
   考据（见每套方案内的来源链接），装备名称与价格按当前目录校正。
 - 所有图片均镜像到 `public/classic-cache/` 并做哈希审计；测试校验
   装备 ID、召唤师技能 ID、符文预设逐格有效性、天赋 30 点、出门装
   预算与方案完整性。
 - GitHub Actions 每日自动重新读取数据源：数值、技能与装备变化在
-  校验与测试通过后自动提交上线；英雄名单增减、ID 变化或页面结构
+  校验与测试通过后自动提交，并显式调度 `deploy-pages.yml` 上线；
+  英雄名单增减、ID 变化或页面结构
   变化会让同步失败并**自动开 Issue** 提醒人工处理（手工维护的定位、
-  外号与玩法数据无法自动改写）。部署工作流在 `npm test` 通过后构建
-  并发布 Pages。
+  外号与玩法数据无法自动改写）。每日运行都会调度并等待 Pages
+  部署结果，即使前一次部署失败、次日没有新数据，也会自动补偿重试。
 
 ## 目录结构
 
@@ -87,7 +99,9 @@ app/                        页面、组件与数据模块
   classic-data.ts           英雄／符文／天赋／召唤师技能目录
   classic-build-guides.ts   玩法方案组装与校验逻辑
   classic-researched-guides.ts  113 套 S3 考据玩法数据（带来源）
+  classic-catalog-opgg.generated.ts  经典符文／天赋／召唤师技能快照
   classic-mayhem.generated.ts   现代技能与两套海斗强化快照
+  classic-mayhem-opgg.generated.ts  60 英雄 OP.GG 怀旧海斗统计
   components/ClassicMayhemGuide.tsx  怀旧海斗攻略与图鉴
   *.generated.ts            OP.GG / Data Dragon 同步生成的数据快照
 scripts/                    数据同步、资产镜像与本地启动脚本

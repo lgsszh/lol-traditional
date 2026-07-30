@@ -57,12 +57,12 @@ status labels:
 
 ## 项目现状与工程约定
 
-### 二、项目现状（v0.3.1）
+### 二、项目现状（v0.5.1）
 
 - 站点名：**英雄联盟怀旧服攻略介绍**（原 RIFT//LAB，已全量更名；代码/测试中不允许再出现 RIFT//LAB 字样，rendered-html 测试会拦截）。
 - 线上地址：https://lgsszh.github.io/lol-traditional/ （GitHub Pages，项目页）。
-- 内容规模：60 位英雄、242 套 S3（2012–2013）考据玩法方案、152 件装备、50 符文、56 天赋、16 召唤师技能。
-- 版本：package.json `0.3.1`；Git 标签 v0.1.0 / v0.2.0 / v0.3.0 / v0.3.1 均有对应 GitHub Release。
+- 内容规模：60 位英雄、242 套 S3（2012–2013）考据玩法方案、152 件装备、50 符文、56 天赋、16 召唤师技能；另有 60 英雄 OP.GG 怀旧海斗攻略与 188 个 KIWI_JADE 强化符文。
+- 版本：package.json `0.5.1`；已发布 Git 标签截至 v0.5.0，本次改动发布后应新增 v0.5.1。
 - 界面：OP.GG 风格蓝色系（强调色 `#5383e8`），每个英雄保留专属主题色（`--champion-accent`，来自 classic-data 的 accent 字段，不要统一掉）。
 - 英雄直达链接：`#champion=<key小写>`（如 `#champion=ezreal`）直接打开该英雄出装页；`#build=` 是完整构筑分享链接，两者互斥，别破坏。
 
@@ -78,7 +78,7 @@ status labels:
 - `npm ci` 要求 package.json 与 package-lock.json 的**根版本号一致**。升版本时两处都要改（lock 前 12 行内有两处 `"version"`），否则 CI 直接 EUSAGE 失败。
 
 **2. sync-classic-data.yml —— 每日数据同步（UTC 04:20）**
-流程：`npm run roster:check`（比对 OP.GG Classic 英雄名单，英雄增减/ID 变化即失败）→ `npm run data:update`（重抓数据+镜像图片）→ `npm test` → 只提交 4 个 `*.generated.ts` + `public/classic-cache/`。
+流程：`npm run roster:check`（比对 OP.GG Classic 英雄名单，英雄增减/ID 变化即失败）→ `npm run data:update`（重抓数据+镜像图片）→ `npm test` → 只提交 8 个 `*.generated.ts` + `public/classic-cache/` → 显式调度并等待 `deploy-pages.yml`。即使当天数据无变化，也会重试并验证 Pages 部署，补偿前一天可能失败的发布。
 **任何一步失败会自动创建带 `classic-sync` 标签的 GitHub Issue**。设计意图：数值/技能/装备变化自动上线；英雄名单变化必须人工处理（因为 classic-data.ts 的定位/外号、classic-researched-guides.ts 的玩法是手工考据，机器不能瞎编）。
 
 ### 四、数据架构（谁生成、谁手写、谁不能碰）
@@ -88,7 +88,7 @@ status labels:
 | app/classic-data.ts | 手写 | 60 英雄目录（classicId/key/分路/职业/原型/外号/主题色/默认加点）、符文/天赋/召唤师技能目录、**5 套天赋预设**（攻21防9、攻21通9、防21通9、防21攻9、通21防9，均为合法 30 点）、runePresetIds |
 | app/classic-researched-guides.ts | 生成后手维护 | 113 套 S3 考据玩法（每套含逐格符文页 runePreset、天赋预设、召唤师技能、加点、≤475 金出门装、4 档回城路线、六格出装、前中后期打法、来源 URL）。**装备/符文/技能全部用 ID，不要手改 ID**；新增方案照现有结构写并跑测试验证 |
 | app/classic-build-guides.ts | 手写 | 方案组装逻辑：primary（primaryOverrides）+ researched + specialProfiles（潘森水晶瓶、蓝EZ、韩式/传统薇恩、AD豹女、攻速提莫、代理炼金、剑圣暴击/攻速）+ safeProfile，按 name-lane-style 去重 → 242 套 |
-| app/*.generated.ts（4 个）+ public/classic-cache/ | 机器生成 | **绝不手改**，由 `npm run data:update` / `assets:update` 再生 |
+| app/*.generated.ts（8 个）+ public/classic-cache/ | 机器生成 | **绝不手改**，由 `npm run data:update` / `assets:update` 再生；怀旧海斗完整构筑与轻量排行摘要必须同批生成 |
 | app/page.tsx | 手写 | 主页面（约 1600 行，拆分是已知的将来任务）；ChampionAbilityPanel / ItemDetailPanel / HelpDrawer / OnboardingGuide 已拆到 app/components/（后两个懒加载） |
 
 关键不变量：**每套方案的 runeSummary 文字必须与 runePreset 逐格一致、masteryPreset 必须是 30 点合法预设**——「一键应用」和 AI 助手写入面板的就是这些字段，测试逐格校验，文字和面板不同步会直接测挂。
@@ -99,6 +99,8 @@ status labels:
 
 - tests/classic-detail-data.test.mjs：每英雄 ≥3 套方案、六格恰好 6 件、出门装 ≤475 金、回城 ≥4 档、总方案数 ≥240、符文预设逐格有效、天赋 30 点、文字与预设同步、每英雄至少 1 套非 op.gg 来源的方案；并钉死了招牌玩法（潘森水晶瓶+双蓝药、剑圣暴击/攻速/AP 三流派、蓝EZ 773004+773025、韩式薇恩主W/传统主Q、AD豹女、攻速提莫、代理炼金鬼步+传送）。**删改这些英雄的方案前先看测试**。
 - tests/champion-search.test.mjs：钉死了部分外号（薇恩 VN、盖伦、贾克斯「武器」、提莫「提百万/提莫队长」、莫甘娜「堕天使」、奥拉夫/卡萨丁留空等）。外号已全量网络核对过，改动需有据。
+- tests/classic-mayhem-data.test.mjs：钉死 60 英雄 OP.GG 快照、1400 金、无惩戒、强化名称与 ID 一致、召唤师技能／装备表行数、公开数值状态以及每日部署闭环。
+- tests/opgg-mayhem-parser.test.mjs：钉死 OP.GG 技能表按“主加图标区 + 逐级 DOM 格子”语义解析；当前 15 级和未来 18 级均可读取，禁止退回整行文本固定长度切片。
 - tests/rendered-html.test.mjs：SSR 必须含「英雄联盟怀旧服攻略介绍」，**不得**含 RIFT//LAB。
 - classic-detail-data 里还有对 page.tsx / components / scripts 的**源码正则断言**（如 preloadWorkbenchAssets、localAssetUrl、applyClassicGuide、经典玩法攻略、一键应用完整方案等标识符和文案）——重命名这些东西必须同步改测试。
 
@@ -137,3 +139,10 @@ npm run data:check     # 校验数据快照无漂移
 npm run roster:check   # 校验英雄名单与 OP.GG 一致
 npm run assets:update  # 仅更新图片镜像与审计清单
 ```
+
+### 十、OP.GG 怀旧海斗解析与状态口径
+
+- `SkillOrder Table` 必须通过 `scripts/opgg-mayhem-parser.mjs` 读取：3 个主加优先级来自技能图标容器，逐级加点来自独立等级格子。**禁止**把整行 Q/W/E/R 文本按 18 或 21 个字符硬切片，也禁止把 1–15 级臆补成 4–18 级。
+- 当前 OP.GG 公开 1–15 级时原样显示；若以后页面增加到 16–18 级，解析器会按实际 DOM 自动保留，并继续校验大招位于 6/11/16 级。页面没公开的等级不猜写。
+- HTTP 失败、超时、429、Cloudflare challenge 才属于 `🔴 网络异常／正在重连` 并允许重试。HTTP 200 且 OP.GG 正常返回、但 DOM/表格契约变化属于**页面结构或数据门禁失败**，不得误报为网络异常，也不得连续重试相同结构错误。
+- OP.GG 完整构筑快照、轻量排行摘要和测试必须同批更新；共享图标不能覆盖精确中文强化名称，名称／ID／apiName 任一不一致即拒绝发布。

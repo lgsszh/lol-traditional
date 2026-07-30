@@ -56,7 +56,7 @@ export async function fetchText(url, label, attempts = 4) {
       const response = await fetch(url, {
         headers: {
           "accept-language": "zh-CN,zh;q=0.9,en;q=0.7",
-          "user-agent": "RIFT-LAB-Classic-Data-Sync/2.1",
+          "user-agent": "lol-traditional-data-sync/0.5 (+https://github.com/lgsszh/lol-traditional)",
         },
         signal: AbortSignal.timeout(30_000),
       });
@@ -77,11 +77,29 @@ export async function fetchText(url, label, attempts = 4) {
       }
     }
   }
-  throw new Error(`${label}: ${lastError?.message || lastError}`);
+  const finalError = new Error(`${label}: ${lastError?.message || lastError}`);
+  finalError.retryAfter = lastError?.retryAfter || 0;
+  finalError.retryable = true;
+  throw finalError;
 }
 
 export async function fetchJson(url, label) {
-  return JSON.parse(await fetchText(url, label));
+  let lastError;
+  for (let attempt = 1; attempt <= 4; attempt += 1) {
+    try {
+      return JSON.parse(await fetchText(url, label, 1));
+    } catch (error) {
+      lastError = error;
+      if (attempt < 4) {
+        const delay = Math.min(8_000, 750 * (2 ** (attempt - 1)));
+        console.warn(`${label}: JSON retry ${attempt + 1}/4 in ${delay}ms (${error.message})`);
+        await sleep(delay);
+      }
+    }
+  }
+  const finalError = new Error(`${label}: ${lastError?.message || lastError}`);
+  finalError.retryAfter = lastError?.retryAfter || 0;
+  throw finalError;
 }
 
 export async function writeOrCheck(outputPath, output, label) {
@@ -90,7 +108,7 @@ export async function writeOrCheck(outputPath, output, label) {
     return;
   }
   const current = await readFile(outputPath, "utf8").catch(() => "");
-  if (current !== output) {
+  if (current.replace(/\r\n/g, "\n") !== output.replace(/\r\n/g, "\n")) {
     throw new Error(`${label} 与线上数据不一致；请运行 npm run data:update`);
   }
 }
