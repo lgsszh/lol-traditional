@@ -3,6 +3,7 @@ import { mkdir, readFile, rename, stat, unlink, writeFile } from "node:fs/promis
 import { classicChampions, classicMasteries, classicRuneGroups, classicSpells, masteryBackgrounds, runeBoardBackground } from "../app/classic-data.ts";
 import { classicItems } from "../app/classic-items.generated.ts";
 import { classicChampionSkills } from "../app/classic-skills.generated.ts";
+import { classicMayhemAugments, liveClassicChampions } from "../app/classic-mayhem.generated.ts";
 
 const publicDirectory = new URL("../public/classic-cache/", import.meta.url);
 const manifestPath = new URL("../app/classic-assets.generated.ts", import.meta.url);
@@ -33,6 +34,11 @@ for (const mastery of classicMasteries) {
 }
 for (const spell of classicSpells) add(spell.icon, spell.name);
 for (const item of classicItems) add(item.icon, item.name);
+for (const champion of liveClassicChampions) {
+  add(champion.portrait, `${champion.name}现代头像`);
+  for (const ability of champion.abilities) add(ability.icon, `${champion.name}现代${ability.key}`);
+}
+for (const augment of classicMayhemAugments) add(augment.icon, `${augment.name}强化符文`);
 for (const [tree, source] of Object.entries(masteryBackgrounds)) add(source, `${tree}天赋背景`);
 add(runeBoardBackground, "符文面板");
 

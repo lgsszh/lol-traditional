@@ -5,8 +5,9 @@
 
 面向英雄联盟怀旧服（Classic）的玩法攻略与构筑工作台：60 位经典
 英雄、242 套按 S3（2012–2013）社区攻略考据的完整玩法方案、152 件
-经典装备、50 枚符文、56 点天赋和 16 个召唤师技能。无需登录，打开
-公开网址即可使用。
+经典装备、50 枚符文、56 点天赋和 16 个召唤师技能；并提供使用
+现代英雄技能、经典地图与装备的「海克斯大乱斗 · 经典模式版」攻略。
+无需登录，打开公开网址即可使用。
 
 **在线使用：<https://lgsszh.github.io/lol-traditional/>**
 
@@ -15,6 +16,11 @@
 
 ## 功能特性
 
+- **海克斯大乱斗 · 经典模式版**：同一批 60 位经典英雄使用
+  Data Dragon 16.15.1 现代技能与基础属性，搭配经典装备路线；
+  完整收录客户端 `KIWI_JADE` 的 188 个强化符文，并与新版海斗
+  `KIWI` 交叉验证、标出 25 个经典专属词条。支持英雄协同推荐、
+  品质／共享状态筛选、关键词搜索和 OP.GG 英雄页直达。
 - **242 套完整玩法方案**：每位英雄至少 3 套（主流派、S3 考据研究
   流派、特色流派与稳健路线）。每套方案包含出门装（≤475 金校验）、
   按金币分档的回城购买路线、六格成装与备选、召唤师技能、逐格符文
@@ -48,8 +54,10 @@ npm run dev
 | `npm run typecheck` | TypeScript 类型检查 |
 | `npm run build` | Vinext 生产构建 |
 | `npm run build:pages` | GitHub Pages 静态导出（CI 设置环境变量） |
-| `npm run data:update` | 重新抓取 OP.GG Classic 与 Riot 历史数据并更新快照 |
+| `npm run data:update` | 重新抓取 OP.GG Classic、现代技能与海斗模式池并更新快照 |
 | `npm run data:check` | 在线重新生成并确认仓库快照没有漂移 |
+| `npm run mayhem:update` | 仅更新现代技能与 KIWI／KIWI_JADE 强化快照 |
+| `npm run mayhem:check` | 在线重新生成并校验海斗快照 |
 | `npm run roster:check` | 校验 OP.GG Classic 英雄名单是否与本站一致 |
 
 开发服务器只应在开发期间运行，请勿设置为开机启动或定时重启。
@@ -58,6 +66,9 @@ npm run dev
 
 - 英雄、装备、符文、天赋、召唤师技能目录与图像：OP.GG Classic
   16.15 快照；完整技能公式：Riot Data Dragon 3.15.5。
+- 怀旧海斗现代技能与属性：Riot Data Dragon 16.15.1；新版海斗
+  `KIWI`、怀旧海斗 `KIWI_JADE` 模式池及强化名称／品质／图标：
+  CommunityDragon 16.15 客户端导出；OP.GG 中文模式页用于交叉验证。
 - 玩法方案：Mobafire / MetaSRC Classic 等 2012–2013 攻略逐英雄
   考据（见每套方案内的来源链接），装备名称与价格按当前目录校正。
 - 所有图片均镜像到 `public/classic-cache/` 并做哈希审计；测试校验
@@ -76,6 +87,8 @@ app/                        页面、组件与数据模块
   classic-data.ts           英雄／符文／天赋／召唤师技能目录
   classic-build-guides.ts   玩法方案组装与校验逻辑
   classic-researched-guides.ts  113 套 S3 考据玩法数据（带来源）
+  classic-mayhem.generated.ts   现代技能与两套海斗强化快照
+  components/ClassicMayhemGuide.tsx  怀旧海斗攻略与图鉴
   *.generated.ts            OP.GG / Data Dragon 同步生成的数据快照
 scripts/                    数据同步、资产镜像与本地启动脚本
 tests/                      数据完整性、搜索与渲染测试

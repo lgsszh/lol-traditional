@@ -15,6 +15,7 @@ test("server renders the complete Classic builder", async () => {
   assert.equal(response.status, 200);
   const html = await response.text();
   assert.match(html, /英雄联盟怀旧服攻略介绍/);
+  assert.match(html, /怀旧海斗/);
   assert.match(html, /全同步工作台/);
   assert.doesNotMatch(html, /RIFT\/\/LAB/);
   assert.match(html, /经典符文模拟器/);

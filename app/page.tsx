@@ -5,6 +5,7 @@ import ChampionAbilityPanel from "./components/ChampionAbilityPanel";
 import ItemDetailPanel from "./components/ItemDetailPanel";
 
 // 帮助抽屉与新手指引只在打开时才需要，懒加载让它们不占首屏体积。
+const ClassicMayhemGuide = lazy(() => import("./components/ClassicMayhemGuide"));
 const HelpDrawer = lazy(() => import("./components/HelpDrawer"));
 const OnboardingGuide = lazy(() => import("./components/OnboardingGuide"));
 import {
@@ -45,7 +46,7 @@ import {
   type ClassicChampionSkillSet,
 } from "./classic-skills.generated";
 
-type WorkbenchView = "runes" | "masteries" | "build" | "ai";
+type WorkbenchView = "runes" | "masteries" | "build" | "mayhem" | "ai";
 type RuneCounts = Record<string, number>;
 type MasteryRanks = Record<string, number>;
 type AiProfileId = "balanced" | "aggressive" | "defensive" | "teamfight";
@@ -621,9 +622,9 @@ export default function Home() {
         championSearchRef.current?.focus();
         return;
       }
-      if (event.altKey && ["1", "2", "3", "4"].includes(event.key)) {
+      if (event.altKey && ["1", "2", "3", "4", "5"].includes(event.key)) {
         event.preventDefault();
-        const views: WorkbenchView[] = ["runes", "masteries", "build", "ai"];
+        const views: WorkbenchView[] = ["runes", "masteries", "build", "mayhem", "ai"];
         changeView(views[Number(event.key) - 1]);
       }
     };
@@ -987,6 +988,7 @@ export default function Home() {
             ["runes", "符文模拟器", "50"],
             ["masteries", "天赋模拟器", "56"],
             ["build", "技能与出装", "152"],
+            ["mayhem", "怀旧海斗", "188"],
             ["ai", "AI 助手", "✦"],
           ] as const).map(([id, label, badge]) => (
             <button
@@ -1003,7 +1005,10 @@ export default function Home() {
         </nav>
         <div className="sync-status">
           <span className="live-dot" />
-          <span><strong>Classic {CLASSIC_PATCH}</strong><small>OP.GG · 每日自动校验</small></span>
+          <span>
+            <strong>{view === "mayhem" ? "Mayhem Classic-ish" : `Classic ${CLASSIC_PATCH}`}</strong>
+            <small>{view === "mayhem" ? "Riot / CommunityDragon / OP.GG" : "OP.GG · 每日自动校验"}</small>
+          </span>
           <button className="help-trigger" onClick={() => setHelpOpen(true)} aria-label="打开使用帮助">
             <span aria-hidden="true">?</span><span className="help-label">使用帮助</span>
           </button>
@@ -1069,7 +1074,9 @@ export default function Home() {
             />
             <div className="hero-shade" />
             <div className="hero-content">
-              <span className="eyebrow">CLASSIC · {selectedChampion.lane} · {selectedChampion.role}</span>
+              <span className="eyebrow">
+                {view === "mayhem" ? "MAYHEM CLASSIC-ISH · 现代技能" : `CLASSIC · ${selectedChampion.lane} · ${selectedChampion.role}`}
+              </span>
               <h1>{selectedChampion.name}<small>{selectedChampion.title}</small></h1>
               {selectedChampion.aliases.length > 0 && (
                 <div className="hero-aliases"><span>玩家常用称呼</span>{selectedChampion.aliases.map((alias) => <b key={alias}>{alias}</b>)}</div>
@@ -1092,11 +1099,24 @@ export default function Home() {
                   ))}
                 </div>
               )}
-              <p>完整经典目录已载入：符文 50 · 天赋 56 · 召唤师技能 16 · 装备 152</p>
+              <p>
+                {view === "mayhem"
+                  ? "现代英雄技能 + 经典地图与装备 + KIWI_JADE 独立强化符文池"
+                  : "完整经典目录已载入：符文 50 · 天赋 56 · 召唤师技能 16 · 装备 152"}
+              </p>
             </div>
             <div className="hero-actions">
-              <button onClick={restoreRecommended}>恢复推荐</button>
-              <button className="primary" onClick={shareBuild}>复制方案链接</button>
+              {view === "mayhem" ? (
+                <>
+                  <button onClick={() => changeView("build")}>查看 S3 技能对照</button>
+                  <a className="button primary" href={`https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/${selectedChampion.key.toLowerCase()}/build`} target="_blank" rel="noreferrer">OP.GG 攻略</a>
+                </>
+              ) : (
+                <>
+                  <button onClick={restoreRecommended}>恢复推荐</button>
+                  <button className="primary" onClick={shareBuild}>复制方案链接</button>
+                </>
+              )}
             </div>
           </section>
 
@@ -1105,6 +1125,7 @@ export default function Home() {
               ["runes", "符文"],
               ["masteries", "天赋"],
               ["build", "构筑"],
+              ["mayhem", "怀旧海斗"],
               ["ai", "AI"],
             ] as const).map(([id, label]) => (
               <button
@@ -1117,6 +1138,12 @@ export default function Home() {
               </button>
             ))}
           </div>
+
+          {view === "mayhem" && (
+            <Suspense fallback={<div className="mayhem-loading" role="status">正在载入现代技能与强化符文快照…</div>}>
+              <ClassicMayhemGuide champion={selectedChampion} />
+            </Suspense>
+          )}
 
           {view === "runes" && (
             <section className="simulator-page">
@@ -1737,7 +1764,11 @@ export default function Home() {
 
           <footer className="site-footer">
             <span>「英雄联盟怀旧服攻略介绍」是非官方玩家工具，与 Riot Games 或 OP.GG 无隶属关系。</span>
-            <span>数据源：OP.GG Classic {CLASSIC_PATCH} · 每日自动校验 · 无需账号即可使用与保存</span>
+            <span>
+              {view === "mayhem"
+                ? "数据源：Riot Data Dragon · CommunityDragon 客户端配置 · OP.GG 中文页交叉验证"
+                : `数据源：OP.GG Classic ${CLASSIC_PATCH} · 每日自动校验 · 无需账号即可使用与保存`}
+            </span>
           </footer>
         </section>
       </div>

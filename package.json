@@ -1,9 +1,9 @@
 {
   "name": "rift-lab-classic-builder",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "private": true,
   "type": "module",
-  "description": "英雄联盟怀旧服攻略介绍：60 位英雄、242 套 S3 考据玩法，出门装、回城路线、符文、天赋、召唤师技能与出装全同步。",
+  "description": "英雄联盟怀旧服攻略介绍：60 位英雄、242 套 S3 考据玩法，以及现代技能搭配经典地图、装备与强化符文的怀旧海斗攻略。",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -20,8 +20,10 @@
     "dev": "vinext dev",
     "build": "vinext build",
     "build:pages": "next build",
-    "data:update": "node scripts/sync-classic-data.mjs && npm run assets:update",
-    "data:check": "node scripts/sync-classic-data.mjs --check && npm run assets:check",
+    "data:update": "node scripts/sync-classic-data.mjs && npm run mayhem:update && npm run assets:update",
+    "data:check": "node scripts/sync-classic-data.mjs --check && npm run mayhem:check && npm run assets:check",
+    "mayhem:update": "node scripts/generate-classic-mayhem-data.mjs",
+    "mayhem:check": "node scripts/generate-classic-mayhem-data.mjs --check",
     "roster:check": "node scripts/check-classic-roster.mjs",
     "assets:update": "node --experimental-strip-types scripts/cache-classic-assets.mjs",
     "assets:check": "node --experimental-strip-types scripts/cache-classic-assets.mjs --check",
@@ -29,7 +31,7 @@
     "prestart": "node scripts/fix-vinext-windows-static.mjs",
     "start": "vinext start",
     "start:hidden": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/start-local-hidden.ps1",
-    "test": "npm run assets:check && node --test tests/champion-search.test.mjs tests/classic-detail-data.test.mjs && npm run build && node --test tests/rendered-html.test.mjs",
+    "test": "npm run assets:check && node --test tests/champion-search.test.mjs tests/classic-detail-data.test.mjs tests/classic-mayhem-data.test.mjs && npm run build && node --test tests/rendered-html.test.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "typecheck": "tsc --noEmit"
   },

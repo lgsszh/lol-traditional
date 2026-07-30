@@ -41,6 +41,7 @@ jobs:
           # 数据、镜像清单和新下载的图片必须一起提交，否则部署会缺图。
           git add app/classic-items.generated.ts app/classic-skills.generated.ts \
             app/classic-item-recipes.generated.ts app/classic-assets.generated.ts \
+            app/classic-mayhem.generated.ts \
             public/classic-cache
           if git diff --cached --quiet; then
             echo "OP.GG Classic data is unchanged."
