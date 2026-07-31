@@ -2,6 +2,19 @@
 
 本项目遵循 [语义化版本](https://semver.org/lang/zh-CN/)。
 
+## v0.6.3 — 2026-07-31
+
+### Windows GitHub 网络链路加固
+
+- 新增统一网络守卫：Git 分支／标签推送固定使用 Git 内置 OpenSSL 与 HTTP/1.1，
+  绕开本机 Schannel 握手链路；仅对 TLS 握手、连接复位与超时执行最多 5 次
+  指数退避，非快进、权限等真实 Git 错误立即返回。
+- 新增 GitHub Pages 无缓存在线核验，自动验证站点标题、仓库 basePath 与本地
+  图片镜像路径；只重试 TLS、`ECONNRESET`、超时及 408/425/429/5xx，
+  HTTP 404 或页面契约缺失不会被误判为网络抖动。
+- 新增网络错误分类、退避边界、Git 参数与 Pages 页面契约测试，并将后续发布
+  流程统一切换到 `network:git-push` 和 `network:pages-verify`。
+
 ## v0.6.2 — 2026-07-31
 
 ### 怀旧海斗技能复核与每日同步自愈

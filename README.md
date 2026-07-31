@@ -92,6 +92,12 @@ npm run dev
   外号与玩法数据无法自动改写）。每日运行都会调度并等待 Pages
   部署结果，即使前一次部署失败、次日没有新数据，也会自动补偿重试。
 
+Windows 本地发布统一使用 `npm run network:git-push -- origin <分支或标签>`；
+脚本固定采用 Git 内置 OpenSSL + HTTP/1.1，并只对 TLS 握手、连接复位与超时
+进行最多 5 次指数退避。部署后使用 `npm run network:pages-verify` 做无缓存
+在线核验；HTTP 404 或页面缺少标题、basePath、镜像资源时会立即失败，不会
+被网络重试掩盖。
+
 ## 目录结构
 
 ```text

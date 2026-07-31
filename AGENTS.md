@@ -57,12 +57,12 @@ status labels:
 
 ## 项目现状与工程约定
 
-### 二、项目现状（v0.6.2）
+### 二、项目现状（v0.6.3）
 
 - 站点名：**英雄联盟怀旧服攻略介绍**（原 RIFT//LAB，已全量更名；代码/测试中不允许再出现 RIFT//LAB 字样，rendered-html 测试会拦截）。
 - 线上地址：https://lgsszh.github.io/lol-traditional/ （GitHub Pages，项目页）。
 - 内容规模：60 位英雄、242 套 S3（2012–2013）考据玩法方案、152 件装备、50 符文、56 天赋、16 召唤师技能；另有 60 英雄 OP.GG 怀旧海斗攻略、2700 条分品质强化推荐、300 套技能加点与 188 个 KIWI_JADE 强化符文。
-- 版本：package.json `0.6.2`；已发布 Git 标签截至 v0.6.1，本次改动发布后应新增 v0.6.2。
+- 版本：package.json `0.6.3`；已发布 Git 标签截至 v0.6.2，本次改动发布后应新增 v0.6.3。
 - 界面：OP.GG 风格蓝色系（强调色 `#5383e8`），每个英雄保留专属主题色（`--champion-accent`，来自 classic-data 的 accent 字段，不要统一掉）。
 - 英雄直达链接：`#champion=<key小写>`（如 `#champion=ezreal`）直接打开该英雄出装页；`#build=` 是完整构筑分享链接，两者互斥，别破坏。
 
@@ -109,7 +109,8 @@ status labels:
 ### 六、本地环境陷阱（Windows，历史踩坑记录）
 
 - npm 直连 registry.npmjs.org 常超时：用 `npm install --registry=https://registry.npmmirror.com`；改动依赖后如 CI 报 `npm ci` 缺 @emnapi/* → 删 node_modules + lock 完整重装（Windows 增量安装会剪掉跨平台可选依赖）。
-- git 推拉 github.com 需借系统代理：`git config --global http.https://github.com.proxy <系统代理>` 已配置过；网络失败重试即可，遇到真 rebase 冲突再处理。
+- git 推拉 github.com 需借系统代理：`git config --global http.https://github.com.proxy <系统代理>` 已配置过。本机 Git 系统配置默认使用 Schannel，曾发生 TLS 握手失败；本仓库已改用 Git 内置 OpenSSL + HTTP/1.1。推送必须执行 `npm run network:git-push -- origin <分支或标签>`，由 `scripts/network-guard.mjs` 对握手失败、连接复位和超时做最多 5 次指数退避；非快进、权限、页面契约等真实错误不会重试。
+- GitHub Pages 在线核验必须执行 `npm run network:pages-verify`，不要临时拼 Node `fetch` 或 `curl`。该命令会添加无缓存参数，并仅对 TLS、`ECONNRESET`、超时、HTTP 408/425/429/5xx 重试；HTTP 404 或缺少标题、basePath、镜像路径会立即失败。
 - **先 commit 再 `git pull --rebase`**（CRLF 漂移会让工作区显示为脏，rebase 拒绝执行）。
 - PowerShell 5.1 写文件默认带 BOM：改 package.json / package-lock.json 必须用无 BOM UTF-8（vitefu 直接 JSON.parse，带 BOM 就炸）。
 - tsconfig 已开 allowImportingTsExtensions（源码里 `import x from "./y.ts"` 是刻意的，别"修"掉后缀）。
@@ -126,9 +127,9 @@ status labels:
 
 1. 改代码 → 本地 `npm test` 全绿；
 2. 升 package.json 版本 + 同步 package-lock 根版本（两处）+ CHANGELOG.md 加条目；
-3. commit → `git pull --rebase origin main` → push（CI 自动测试并部署）；
-4. Actions 跑绿后：`git tag -a vX.Y.Z -m "..."` → `git push origin vX.Y.Z` → GitHub 上从该标签发 Release（正文抄 CHANGELOG 对应段落）；
-5. 强刷 https://lgsszh.github.io/lol-traditional/ 验证。
+3. commit → `git pull --rebase origin main` → `npm run network:git-push -- origin main`（CI 自动测试并部署）；
+4. Actions 跑绿后：`git tag -a vX.Y.Z -m "..."` → `npm run network:git-push -- origin vX.Y.Z` → GitHub 上从该标签发 Release（正文抄 CHANGELOG 对应段落）；
+5. 执行 `npm run network:pages-verify` 验证线上标题、basePath 与镜像资源。
 
 ### 九、常用命令
 
@@ -141,6 +142,8 @@ npm run data:update    # 重抓 OP.GG/Riot 数据 + 更新图片镜像
 npm run data:check     # 校验数据快照无漂移
 npm run roster:check   # 校验英雄名单与 OP.GG 一致
 npm run assets:update  # 仅更新图片镜像与审计清单
+npm run network:git-push -- origin main   # 抗 TLS 瞬断推送分支或标签
+npm run network:pages-verify              # 抗连接复位验证线上 Pages
 ```
 
 ### 十、OP.GG 怀旧海斗解析与状态口径
