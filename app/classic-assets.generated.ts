@@ -427,7 +427,6 @@ export const classicAssetManifest = {
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_lulu/hud/icons2d/jade_lulu_whimsy.project_jade.png": "/classic-cache/40f936360b79941d82ae5e09.png",
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_lulu/skins/base/images/jade_lulu_splash_centered_0.project_jade.jpg": "/classic-cache/18bb3d6b374afd41f5b29d68.jpg",
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_lux/skins/base/images/jade_lux_splash_centered_0.project_jade.jpg": "/classic-cache/df2e164f3feee210bb4d2e31.jpg",
-  "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_lux/skins/skin301/images/jade_lux_splash_centered_301.project_jade.jpg": "/classic-cache/0adddc49595385cd759253bb.jpg",
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_malphite/skins/base/images/jade_malphite_splash_centered_0.project_jade.jpg": "/classic-cache/c8636a9106daf7414c0c2838.jpg",
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_malzahar/skins/base/images/jade_malzahar_splash_centered_0.project_jade.jpg": "/classic-cache/843f992dffdc4f45d647c125.jpg",
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_masteryi/skins/base/images/jade_masteryi_splash_centered_0.project_jade.jpg": "/classic-cache/dbaadd790da9aeebf4dcd499.jpg",
@@ -741,9 +740,10 @@ export const classicAssetManifest = {
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jademasteries/762_on.png": "/classic-cache/5198324f4b8a413ec87ae485.png",
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jaderunes/b_1_2.project_jade.png": "/classic-cache/b28066ff5335de69488af3eb.png",
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jaderunes/b_1_3.project_jade.png": "/classic-cache/831feb32dd9ecd1ba1c42a5b.png",
-  "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jaderunes/b_2_3.project_jade.png": "/classic-cache/98e05f725b0290d436183fec.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jaderunes/b_2_2.project_jade.png": "/classic-cache/b6dae4b76bd56784825b602a.png",
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jaderunes/b_3_2.project_jade.png": "/classic-cache/22be416353f9ebae01d1831d.png",
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jaderunes/b_3_3.project_jade.png": "/classic-cache/066ad9659b8b702c936b7d43.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jaderunes/b_4_2.project_jade.png": "/classic-cache/78a0946c0be67fc45d725490.png",
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jaderunes/b_4_3.project_jade.png": "/classic-cache/d107ea422c2d261f7f5d7864.png",
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jaderunes/bl_1_3.project_jade.png": "/classic-cache/cef508cde6436d470c53eac3.png",
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jaderunes/bl_2_3.project_jade.png": "/classic-cache/5ae7a8c02befa2c685a8c9b1.png",
@@ -4268,7 +4268,7 @@ export const classicAssetAudit = {
     "bytes": 139087,
     "sha256": "fbe9f4b84676ffbbb6f243e50bb28687e844c77e02d3bd8445c0b91dbfea6fec",
     "labels": [
-      "阿狸经典阿狸原画"
+      "阿狸经典 阿狸原画"
     ]
   },
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_alistar/skins/base/images/jade_alistar_splash_centered_0.project_jade.jpg": {
@@ -4284,7 +4284,7 @@ export const classicAssetAudit = {
     "bytes": 138412,
     "sha256": "ce31de36acd1b2894c25d87f8e5e3e2b6fadcf370a4e96427994099a245b5f15",
     "labels": [
-      "阿利斯塔经典阿利斯塔原画"
+      "阿利斯塔经典 阿利斯塔原画"
     ]
   },
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_amumu/skins/base/images/jade_amumu_splash_centered_0.project_jade.jpg": {
@@ -4356,7 +4356,7 @@ export const classicAssetAudit = {
     "bytes": 126752,
     "sha256": "4309a56024d03b2988d0e03cf8d2a10f09d3ad1f76f89e10d5674dd986fcfcf4",
     "labels": [
-      "安妮经典安妮原画"
+      "安妮经典 安妮原画"
     ]
   },
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_ashe/skins/base/images/jade_ashe_splash_centered_0.project_jade.jpg": {
@@ -4412,7 +4412,7 @@ export const classicAssetAudit = {
     "bytes": 131044,
     "sha256": "6b088a34ed9baa31febf690b46151f4d28bfcb26844343518ba75ba4dabf5c17",
     "labels": [
-      "蒙多医生经典蒙多原画"
+      "蒙多医生经典 蒙多原画"
     ]
   },
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_evelynn/skins/base/images/jade_evelynn_splash_centered_0.project_jade.jpg": {
@@ -4428,7 +4428,7 @@ export const classicAssetAudit = {
     "bytes": 124563,
     "sha256": "386121c0bc6c430748b8818ff7d601e4276a4770a54f5de9f0348063e3b8e5c9",
     "labels": [
-      "伊芙琳经典伊芙琳原画"
+      "伊芙琳经典 伊芙琳原画"
     ]
   },
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_ezreal/skins/base/images/jade_ezreal_splash_centered_0.project_jade.jpg": {
@@ -4444,7 +4444,7 @@ export const classicAssetAudit = {
     "bytes": 127082,
     "sha256": "94417e9297c2f4adba101fc8afc026fa0b7f90cfbbbdb9e9a1fe3c92b1c1c694",
     "labels": [
-      "伊泽瑞尔经典伊泽瑞尔原画"
+      "伊泽瑞尔经典 伊泽瑞尔原画"
     ]
   },
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_fiddlesticks/skins/base/images/jade_fiddlesticks_splash_centered_0.project_jade.jpg": {
@@ -4460,7 +4460,7 @@ export const classicAssetAudit = {
     "bytes": 145123,
     "sha256": "a26ddd79928dc29883b1aec9fe51e30ccacaa74c0ffb8ace51f56330426918d8",
     "labels": [
-      "费德提克经典费德提克原画"
+      "费德提克经典 费德提克原画"
     ]
   },
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_gangplank/skins/base/images/jade_gangplank_splash_centered_0.project_jade.jpg": {
@@ -4703,14 +4703,6 @@ export const classicAssetAudit = {
       "拉克丝光辉女郎原画"
     ]
   },
-  "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_lux/skins/skin301/images/jade_lux_splash_centered_301.project_jade.jpg": {
-    "path": "/classic-cache/0adddc49595385cd759253bb.jpg",
-    "bytes": 140129,
-    "sha256": "ef8b2a7ced760092bb90d352f2ef91ba3dae2321fb325d89691542159bad1c05",
-    "labels": [
-      "拉克丝经典拉克丝原画"
-    ]
-  },
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_malphite/skins/base/images/jade_malphite_splash_centered_0.project_jade.jpg": {
     "path": "/classic-cache/c8636a9106daf7414c0c2838.jpg",
     "bytes": 87877,
@@ -4940,7 +4932,7 @@ export const classicAssetAudit = {
     "bytes": 123328,
     "sha256": "f15124823378e276fe80a6ae76da3518a5075bfbe25ebe6ff95bc11a7b153a2c",
     "labels": [
-      "索拉卡经典索拉卡原画"
+      "索拉卡经典 索拉卡原画"
     ]
   },
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_taric/skins/base/images/jade_taric_splash_centered_0.project_jade.jpg": {
@@ -4956,7 +4948,7 @@ export const classicAssetAudit = {
     "bytes": 120112,
     "sha256": "9277aa589a9f24592e15f25861c3671c1caeb6f6175fd227c083bd98e97d2b87",
     "labels": [
-      "塔里克经典塔里克原画"
+      "塔里克经典 塔里克原画"
     ]
   },
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_teemo/skins/base/images/jade_teemo_splash_centered_0.project_jade.jpg": {
@@ -5012,7 +5004,7 @@ export const classicAssetAudit = {
     "bytes": 126255,
     "sha256": "09c0731d8cbecb31b23a2bf0d954aab85a601ebda9227014d948ef8e0405c2c7",
     "labels": [
-      "崔斯特经典崔斯特原画"
+      "崔斯特经典 崔斯特原画"
     ]
   },
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_twitch/skins/base/images/jade_twitch_splash_centered_0.project_jade.jpg": {
@@ -5028,7 +5020,7 @@ export const classicAssetAudit = {
     "bytes": 133561,
     "sha256": "90a73e104bef54679a56203ac59afae80928fe7eb65aedf69393ddc990170444",
     "labels": [
-      "图奇经典图奇原画"
+      "图奇经典 图奇原画"
     ]
   },
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_vayne/skins/base/images/jade_vayne_splash_centered_0.project_jade.jpg": {
@@ -5100,7 +5092,7 @@ export const classicAssetAudit = {
     "bytes": 124882,
     "sha256": "28aafd65e9d0850ebef2fd339940eb3298090e046027c904a3be53e2526aafc5",
     "labels": [
-      "沃里克经典沃里克原画"
+      "沃里克经典 沃里克原画"
     ]
   },
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_wukong/skins/base/images/jade_wukong_splash_centered_0.project_jade.jpg": {
@@ -7207,7 +7199,7 @@ export const classicAssetAudit = {
     "bytes": 62645,
     "sha256": "46fb2a29c9369927c9ed2ecfb5c9dbcd17ce1dfdd76008c8c5828eb3fc5c734f",
     "labels": [
-      "次级护甲雕纹"
+      "初级护甲雕纹"
     ]
   },
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jaderunes/b_1_3.project_jade.png": {
@@ -7221,12 +7213,12 @@ export const classicAssetAudit = {
       "冷却缩减雕纹"
     ]
   },
-  "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jaderunes/b_2_3.project_jade.png": {
-    "path": "/classic-cache/98e05f725b0290d436183fec.png",
-    "bytes": 82431,
-    "sha256": "cce735fb1fa27c32cc9001f4ab2e1c83816d692ec203cc06b16e154cc8fc5898",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jaderunes/b_2_2.project_jade.png": {
+    "path": "/classic-cache/b6dae4b76bd56784825b602a.png",
+    "bytes": 61963,
+    "sha256": "e17540bc015b93c6f8e68f2199ce56499c3afb003b8f5117b1ce7a6b82f0ba44",
     "labels": [
-      "次级暴击伤害雕纹"
+      "初级暴击伤害雕纹"
     ]
   },
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jaderunes/b_3_2.project_jade.png": {
@@ -7234,7 +7226,7 @@ export const classicAssetAudit = {
     "bytes": 77440,
     "sha256": "d5e9f77e753c16200c63aff83c6703795efd84fa45833191ae73f89e78bdb7fb",
     "labels": [
-      "次级攻击速度雕纹"
+      "初级攻击速度雕纹"
     ]
   },
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jaderunes/b_3_3.project_jade.png": {
@@ -7246,14 +7238,21 @@ export const classicAssetAudit = {
       "魔法抗性雕纹"
     ]
   },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jaderunes/b_4_2.project_jade.png": {
+    "path": "/classic-cache/78a0946c0be67fc45d725490.png",
+    "bytes": 71331,
+    "sha256": "6d53be15c213ede0db83a110719519d80c354f346962079ce13900d75352414d",
+    "labels": [
+      "初级生命值雕纹"
+    ]
+  },
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jaderunes/b_4_3.project_jade.png": {
     "path": "/classic-cache/d107ea422c2d261f7f5d7864.png",
     "bytes": 81920,
     "sha256": "eb89d5ffcfdb16ebfd0c36096517cac88ca4456c45ed1c917400701113db544e",
     "labels": [
       "成长法术强度雕纹",
-      "成长魔法抗性雕纹",
-      "次级生命值雕纹"
+      "成长魔法抗性雕纹"
     ]
   },
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jaderunes/bl_1_3.project_jade.png": {
@@ -7304,8 +7303,8 @@ export const classicAssetAudit = {
     "bytes": 69501,
     "sha256": "c48815405ef4a9fa22cda137ca6b4e77f176587c0458e907814fb5268954eb96",
     "labels": [
-      "次级护甲印记",
-      "次级冷却缩减印记"
+      "初级护甲印记",
+      "初级冷却缩减印记"
     ]
   },
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jaderunes/r_1_3.project_jade.png": {
@@ -7332,7 +7331,7 @@ export const classicAssetAudit = {
     "bytes": 69760,
     "sha256": "89762e451f5cb9e68d99bf60fde810518a7f7e53282a22378d85fd500e423ff6",
     "labels": [
-      "次级生命值印记"
+      "初级生命值印记"
     ]
   },
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jaderunes/r_3_3.project_jade.png": {
@@ -7360,7 +7359,7 @@ export const classicAssetAudit = {
     "bytes": 79201,
     "sha256": "2a92c8c4e78a0345d95a3569a55c5502f08385ee769061fa0e9e09be4f4b9bcf",
     "labels": [
-      "次级暴击伤害符印"
+      "初级暴击伤害符印"
     ]
   },
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jaderunes/y_2_3.project_jade.png": {
@@ -7377,9 +7376,9 @@ export const classicAssetAudit = {
     "bytes": 72245,
     "sha256": "567430f525663ce77fcc094a3604871761451a133e9968bd2cc92c05255cd581",
     "labels": [
-      "次级暴击几率符印",
-      "次级攻击速度符印",
-      "次级魔法抗性符印"
+      "初级暴击几率符印",
+      "初级攻击速度符印",
+      "初级魔法抗性符印"
     ]
   },
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jaderunes/y_3_3.project_jade.png": {

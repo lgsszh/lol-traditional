@@ -210,6 +210,25 @@ function formatCharacterLevelBreakpoints(part, multiplier = 1, suffix = "") {
     : `${valueText}（英雄等级${shownLevels.join("/")}）`;
 }
 
+function characterLevelFormulaValues(part) {
+  if (!Array.isArray(part?.values)) return [];
+  const numeric = part.values.map(finiteNumber);
+  // Riot 的英雄等级数组通常包含 0 级占位，实际 1–18 级位于索引 1–18。
+  // 少数资源直接从 1 级开始；只在没有完整占位长度时使用前 18 项。
+  const selected = numeric.length >= 19 ? numeric.slice(1, 19) : numeric.slice(0, 18);
+  return selected.filter((value) => value !== null);
+}
+
+function formatCharacterLevelFormula(part, multiplier = 1, suffix = "") {
+  const values = characterLevelFormulaValues(part);
+  if (values.length === 0) return null;
+  const scaled = values.map((value) => value * multiplier);
+  const displayValues = multiplier === 1 && scaled.some((value) => Math.abs(value) >= 10)
+    ? scaled.map((value) => Math.round(value))
+    : scaled;
+  return `${formatValueSeries(displayValues)}${suffix}（英雄等级1–${displayValues.length}）`;
+}
+
 function formulaSubparts(part) {
   if (Array.isArray(part?.mSubparts)) return part.mSubparts;
   return [part?.mPart1, part?.mPart2].filter(Boolean);
@@ -339,6 +358,9 @@ function formatFormulaPart(part, context, issues, seen) {
   if (type === "ByCharLevelBreakpointsCalculationPart") {
     return formatCharacterLevelBreakpoints(part);
   }
+  if (type === "ByCharLevelFormulaCalculationPart") {
+    return formatCharacterLevelFormula(part);
+  }
   if (type === "AbilityResourceByCoefficientCalculationPart") {
     const coefficient = formatNumber(part.mCoefficient);
     if (coefficient) return `${coefficient} × 当前资源`;
@@ -360,7 +382,15 @@ function formatFormulaPart(part, context, issues, seen) {
     }
     const meaningfulParts = subparts.filter((subpart) => subpart !== "0");
     if (meaningfulParts.length === 1) return meaningfulParts[0];
-    if (meaningfulParts.length > 1) return `(${meaningfulParts.join(" + ")})`;
+    if (meaningfulParts.length > 1) {
+      const expression = meaningfulParts.reduce((result, value, index) => {
+        if (index === 0) return value;
+        return value.startsWith("-")
+          ? `${result} - ${value.slice(1)}`
+          : `${result} + ${value}`;
+      }, "");
+      return `(${expression})`;
+    }
     if (subparts.length > 0) return "0";
   }
   if (type === "ProductOfSubPartsCalculationPart") {
@@ -431,6 +461,9 @@ function formatCalculation(name, context, issues, seen = new Set()) {
     if (part?.__type === "ByCharLevelBreakpointsCalculationPart") {
       return formatCharacterLevelBreakpoints(part, percentScale, "%");
     }
+    if (part?.__type === "ByCharLevelFormulaCalculationPart") {
+      return formatCharacterLevelFormula(part, percentScale, "%");
+    }
   }
   const parts = sourceParts.map((part) => formatFormulaPart(part, context, issues, nextSeen));
   if (parts.some((part) => !part)) {
@@ -456,6 +489,8 @@ function sanitizeNumericText(value = "") {
     .replace(/\beffect\d+amount\b/gi, "")
     .replace(/\b[A-Za-z_][A-Za-z0-9_]*CalculationPart\b/g, "")
     .replace(/\?{2,}/g, "")
+    .replace(/\s*[（(]\s*按对局实时属性计算\s*[）)]/g, "")
+    .replace(/\+\s+-\s*/g, "− ")
     .replace(/\(\s*\)|（\s*）/g, "")
     .replace(/[：:=]\s*(?=[，。；,.!?]|$)/g, "")
     .replace(/\s+([，。；,.!?])/g, "$1")
@@ -696,19 +731,46 @@ function buildAbility({
   const fallbackContext = passive ? binContext : dataDragonContext(spell, binContext);
   const tooltipData = tooltipDataForSpell(spellObject);
   const clientTooltip = localizationValue(stringTable, tooltipData?.mLocKeys?.keyTooltip);
-  const fallbackCandidates = [
-    passive ? payload.passive.description : spell.tooltip,
-    passive ? "" : spell.description,
-  ].filter(Boolean).map((text) => resolvePublicText(text, fallbackContext, stringTable))
-    .sort((left, right) => scalarCount(right.text) - scalarCount(left.text) || right.text.length - left.text.length);
-  const resolved = clientTooltip && clientTooltip !== "???"
-    ? resolvePublicText(clientTooltip, binContext, stringTable)
-    : fallbackCandidates[0] ?? {
+  const statusWeight = { available: 3, partial: 2, unavailable: 1 };
+  const resolutionCandidates = [
+    ...(clientTooltip && clientTooltip !== "???"
+      ? [{ kind: "client", resolved: resolvePublicText(clientTooltip, binContext, stringTable) }]
+      : []),
+    ...[
+      passive ? payload.passive.description : spell.tooltip,
+      passive ? "" : spell.description,
+    ].filter(Boolean).map((text) => ({
+      kind: "data-dragon",
+      resolved: resolvePublicText(text, fallbackContext, stringTable),
+    })),
+  ].sort((left, right) =>
+    statusWeight[right.resolved.status] - statusWeight[left.resolved.status]
+    || scalarCount(right.resolved.text) - scalarCount(left.resolved.text)
+    || right.resolved.text.length - left.resolved.text.length
+    || (left.kind === "client" ? -1 : 1));
+  let resolved = resolutionCandidates[0]?.resolved ?? {
     text: "",
     status: "unavailable",
     issues: ["技能文本缺失"],
     unresolvedTokens: [],
   };
+  if (payload.id === "Garen" && key === "E") {
+    const baseSpins = binContext.dataValues.get("numticks")?.values?.[0];
+    const attackSpeedPerSpin = binContext.dataValues.get("aspertick")?.values?.[0];
+    if (Number.isFinite(baseSpins) && Number.isFinite(attackSpeedPerSpin)) {
+      resolved = {
+        ...resolved,
+        text: resolved.text.replace(
+          /共旋转按对局实时属性计算圈/,
+          `基础旋转${formatNumber(baseSpins)}圈；每${formatNumber(attackSpeedPerSpin * 100)}%`
+            + "来自装备和等级的攻击速度额外增加1圈",
+        ),
+        status: "available",
+        issues: resolved.issues.filter((issue) => issue !== "对局实时字段 f1"),
+        unresolvedTokens: resolved.unresolvedTokens.filter((token) => token !== "f1"),
+      };
+    }
+  }
   const extendedResolutions = [
     tooltipData?.mLocKeys?.keyTooltipExtended,
     tooltipData?.mLocKeys?.keyTooltipExtendedBelowLine,
@@ -717,19 +779,16 @@ function buildAbility({
     .filter((text) => text && text !== "???")
     .map((text) => resolvePublicText(text, binContext, stringTable))
     .filter((entry, index, all) =>
-      entry.text && entry.text !== resolved.text && all.findIndex((candidate) => candidate.text === entry.text) === index);
+      entry.status === "available"
+      && entry.text
+      && entry.text !== resolved.text
+      && all.findIndex((candidate) => candidate.text === entry.text) === index);
   const levelUp = levelUpNumericDetail(tooltipData, stringTable, binContext);
   const range = passive ? null : publicSpellRange(spell, spellObject, maxRank);
-  const coreRows = passive ? [] : [
-    spell.cooldownBurn ? `冷却=${spell.cooldownBurn}` : "",
-    spell.costBurn ? `消耗=${spell.costBurn}` : "",
-    range ? `范围=${range}` : "",
-  ].filter(Boolean);
   const numericParts = [
     resolved.text ? `技能文本：${resolved.text}` : "",
     ...extendedResolutions.map((entry) => `补充数值：${entry.text}`),
     levelUp.text,
-    coreRows.length > 0 ? `基础参数：${coreRows.join("；")}` : "",
   ].filter(Boolean);
   const allIssues = [...new Set([
     ...resolved.issues,
@@ -749,7 +808,7 @@ function buildAbility({
   return {
     key,
     name: passive ? payload.passive.name : spell.name,
-    description: cleanText(passive ? payload.passive.description : spell.description),
+    description: resolved.text || cleanText(passive ? payload.passive.description : spell.description),
     icon: passive
       ? `https://ddragon.leagueoflegends.com/cdn/${livePatch}/img/passive/${payload.passive.image.full}`
       : `https://ddragon.leagueoflegends.com/cdn/${livePatch}/img/spell/${spell.image.full}`,

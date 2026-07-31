@@ -39,7 +39,13 @@ function highlightedNumbers(value: string) {
 export default function ChampionAbilityPanel({ skillSet, activeKey, onSelect }: Props) {
   const ability = skillSet.abilities.find((entry) => entry.key === activeKey) || skillSet.abilities[0];
   const numericDetail = ability.numericDetail?.trim() ?? "";
-  const showNumericDetail = ability.numericStatus !== "unavailable" && Boolean(numericDetail);
+  const numericLines = numericDetail
+    .split("\n")
+    .map((line) => line.trim())
+    // 冷却、消耗和距离已经在右上方的三格参数中展示，生成快照即使
+    // 暂时滞后也不应再把“基础参数”重复渲染到完整技能数值卡。
+    .filter((line) => line && !line.startsWith("基础参数："));
+  const showNumericDetail = ability.numericStatus !== "unavailable" && numericLines.length > 0;
   const tabSetId = useId().replace(/:/g, "");
 
   return (
@@ -95,7 +101,7 @@ export default function ChampionAbilityPanel({ skillSet, activeKey, onSelect }: 
             {skillSet.sourceLabel || "查看 OP.GG 源页"} →
           </a>
         </div>
-        <p>{ability.description}</p>
+        <p>{highlightedNumbers(ability.description)}</p>
         <dl className="ability-stats">
           <div><dt>冷却时间</dt><dd>{valueLabel(ability.cooldown, "无")} {ability.cooldown ? "秒" : ""}</dd></div>
           <div><dt>技能消耗</dt><dd>{valueLabel(ability.cost, "无消耗")}</dd></div>
@@ -113,7 +119,7 @@ export default function ChampionAbilityPanel({ skillSet, activeKey, onSelect }: 
             {ability.numericStatus === "partial" && (
               <p className="ability-disclosure">同版本客户端仍有部分公式无法静态展开；以下只展示公开字段，不推算缺失数值。</p>
             )}
-            {numericDetail.split("\n").filter(Boolean).map((line, index) => (
+            {numericLines.map((line, index) => (
               <p key={`${line}-${index}`}>{highlightedNumbers(line)}</p>
             ))}
           </section>

@@ -56,6 +56,15 @@ test("怀旧海斗使用同一批 60 位经典英雄，但技能与属性来自�
     for (const ability of champion.abilities) {
       assert.ok(ability.name.trim(), `${champion.name} ${ability.key} 缺少名称`);
       assert.ok(ability.description.trim(), `${champion.name} ${ability.key} 缺少说明`);
+      const clientText = ability.numericDetail
+        .split("\n")
+        .find((line) => line.startsWith("技能文本："))
+        ?.replace(/^技能文本：/, "");
+      assert.equal(
+        ability.description,
+        clientText,
+        `${champion.name} ${ability.key} 主说明没有使用同版本客户端完整技能文本`,
+      );
       assert.ok(ability.icon.startsWith("https://ddragon.leagueoflegends.com/"));
       assert.ok(classicAssetManifest[ability.icon], `${champion.name} ${ability.key} 缺少本地镜像`);
       if (ability.key !== "P") {
@@ -68,6 +77,16 @@ test("怀旧海斗使用同一批 60 位经典英雄，但技能与属性来自�
         ability.numericDetail,
         /AmmoRechargeTime=/,
         `${champion.name} ${ability.key} 向用户暴露了客户端内部等级字段`,
+      );
+      assert.doesNotMatch(
+        ability.numericDetail,
+        /基础参数：/,
+        `${champion.name} ${ability.key} 重复展示了冷却、消耗或距离`,
+      );
+      assert.doesNotMatch(
+        `${ability.description}\n${ability.numericDetail}`,
+        /\+\s+-/,
+        `${champion.name} ${ability.key} 暴露了未格式化的负数公式`,
       );
       assert.doesNotMatch(
         ability.numericDetail,
@@ -103,7 +122,9 @@ test("怀旧海斗使用同一批 60 位经典英雄，但技能与属性来自�
   }
 
   const vayne = liveClassicChampions.find((champion) => champion.key === "Vayne");
+  const vayneP = vayne?.abilities.find((ability) => ability.key === "P");
   const vayneW = vayne?.abilities.find((ability) => ability.key === "W");
+  assert.match(vayneP?.description ?? "", /获得30移动速度/);
   assert.equal(vayneW?.numericStatus, "available");
   assert.match(vayneW?.numericDetail ?? "", /6\/7\/8\/9\/10%最大生命值/);
   assert.match(vayneW?.numericDetail ?? "", /最低?造成50\/65\/80\/95\/110|最少造成50\/65\/80\/95\/110/);
@@ -155,7 +176,7 @@ test("怀旧海斗使用同一批 60 位经典英雄，但技能与属性来自�
   const janna = liveClassicChampions.find((champion) => champion.key === "Janna");
   const jannaW = janna?.abilities.find((ability) => ability.key === "W");
   assert.equal(jannaW?.range, "550");
-  assert.match(jannaW?.numericDetail ?? "", /范围=550/);
+  assert.doesNotMatch(jannaW?.numericDetail ?? "", /范围=550/);
   assert.doesNotMatch(jannaW?.numericDetail ?? "", /4294967295/);
 });
 
@@ -168,6 +189,8 @@ test("技能数值面板异步解码图标，并隐藏不可用的空数值卡",
   assert.ok((componentSource.match(/decoding="async"/g) ?? []).length >= 2);
   assert.match(componentSource, /numericStatus !== "unavailable"/);
   assert.match(componentSource, /\{showNumericDetail && \(/);
+  assert.match(componentSource, /!line\.startsWith\("基础参数："\)/);
+  assert.match(componentSource, /highlightedNumbers\(ability\.description\)/);
 });
 
 test("KIWI 与 KIWI_JADE 模式池分离，强化说明不保留模板占位符", () => {

@@ -33,8 +33,26 @@ test("怀旧海斗运行时数据按英雄拆分并保持 OP.GG 完整结构", a
       assert.ok(ability.name.trim(), `${payload.build.name} ${ability.key} 缺少技能名称`);
       assert.ok(ability.description.trim(), `${payload.build.name} ${ability.key} 缺少技能说明`);
       assert.ok(ability.numericDetail.trim(), `${payload.build.name} ${ability.key} 缺少完整技能数值结构`);
-      assert.match(ability.numericDetail, /\d/, `${payload.build.name} ${ability.key} 技能数值没有数字`);
       assert.notEqual(ability.numericStatus, "unavailable", `${payload.build.name} ${ability.key} 数值不可用`);
+      const clientText = ability.numericDetail
+        .split("\n")
+        .find((line) => line.startsWith("技能文本："))
+        ?.replace(/^技能文本：/, "");
+      assert.equal(
+        ability.description,
+        clientText,
+        `${payload.build.name} ${ability.key} 运行时主说明不是完整客户端技能文本`,
+      );
+      assert.doesNotMatch(
+        ability.numericDetail,
+        /基础参数：/,
+        `${payload.build.name} ${ability.key} 重复展示基础参数`,
+      );
+      assert.doesNotMatch(
+        `${ability.description}\n${ability.numericDetail}`,
+        /\+\s+-/,
+        `${payload.build.name} ${ability.key} 暴露了未格式化的负数公式`,
+      );
     }
     assert.equal(payload.build.skillBuilds.length, 5, `${payload.build.name} 技能方案不完整`);
     assert.equal(payload.augmentRecommendations.length, 45, `${payload.build.name} 强化推荐不完整`);
@@ -80,7 +98,9 @@ test("完整强化池只在进入图鉴后按需加载", async () => {
 
 test("运行时快照保留已核对的技能数值，防止每日同步退化", async () => {
   const vayne = await readJson("60067.json");
+  const vayneP = vayne.champion.abilities.find((ability) => ability.key === "P");
   const vayneW = vayne.champion.abilities.find((ability) => ability.key === "W");
+  assert.match(vayneP.description, /获得30移动速度/);
   assert.match(vayneW.numericDetail, /6\/7\/8\/9\/10%最大生命值/);
   assert.match(vayneW.numericDetail, /50\/65\/80\/95\/110/);
   assert.match(vayneW.numericDetail, /140\/155\/170\/185\/200/);

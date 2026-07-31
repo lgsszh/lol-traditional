@@ -40,13 +40,13 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/ahri",
     "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/v1/champion-icons/60103.png",
     "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_ahri/skins/skin301/images/jade_ahri_splash_centered_301.project_jade.jpg",
-    "classicSplashName": "经典阿狸",
+    "classicSplashName": "经典 阿狸",
     "classicSplashId": "60103301",
     "classicSplashIsDefault": false,
     "artworks": [
       {
         "id": "60103301",
-        "name": "经典阿狸",
+        "name": "经典 阿狸",
         "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_ahri/skins/skin301/images/jade_ahri_splash_centered_301.project_jade.jpg",
         "kind": "classic",
         "isDefault": false
@@ -523,13 +523,13 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/taric",
     "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/v1/champion-icons/60044.png",
     "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_taric/skins/skin301/images/jade_taric_splash_centered_301.project_jade.jpg",
-    "classicSplashName": "经典塔里克",
+    "classicSplashName": "经典 塔里克",
     "classicSplashId": "60044301",
     "classicSplashIsDefault": false,
     "artworks": [
       {
         "id": "60044301",
-        "name": "经典塔里克",
+        "name": "经典 塔里克",
         "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_taric/skins/skin301/images/jade_taric_splash_centered_301.project_jade.jpg",
         "kind": "classic",
         "isDefault": false
@@ -1251,13 +1251,13 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/evelynn",
     "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/v1/champion-icons/60028.png",
     "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_evelynn/skins/skin301/images/jade_evelynn_splash_centered_301.project_jade.jpg",
-    "classicSplashName": "经典伊芙琳",
+    "classicSplashName": "经典 伊芙琳",
     "classicSplashId": "60028301",
     "classicSplashIsDefault": false,
     "artworks": [
       {
         "id": "60028301",
-        "name": "经典伊芙琳",
+        "name": "经典 伊芙琳",
         "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_evelynn/skins/skin301/images/jade_evelynn_splash_centered_301.project_jade.jpg",
         "kind": "classic",
         "isDefault": false
@@ -1334,18 +1334,11 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "拉克丝",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/lux",
     "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/v1/champion-icons/60099.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_lux/skins/skin301/images/jade_lux_splash_centered_301.project_jade.jpg",
-    "classicSplashName": "经典拉克丝",
-    "classicSplashId": "60099301",
-    "classicSplashIsDefault": false,
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_lux/skins/base/images/jade_lux_splash_centered_0.project_jade.jpg",
+    "classicSplashName": "光辉女郎",
+    "classicSplashId": "60099000",
+    "classicSplashIsDefault": true,
     "artworks": [
-      {
-        "id": "60099301",
-        "name": "经典拉克丝",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_lux/skins/skin301/images/jade_lux_splash_centered_301.project_jade.jpg",
-        "kind": "classic",
-        "isDefault": false
-      },
       {
         "id": "60099000",
         "name": "光辉女郎",
@@ -1354,7 +1347,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "isDefault": true
       }
     ],
-    "availableSkinCount": 7,
+    "availableSkinCount": 6,
     "abilities": [
       {
         "key": "P",
@@ -1503,13 +1496,13 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/annie",
     "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/v1/champion-icons/60001.png",
     "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_annie/skins/skin301/images/jade_annie_splash_centered_301.project_jade.jpg",
-    "classicSplashName": "经典安妮",
+    "classicSplashName": "经典 安妮",
     "classicSplashId": "60001301",
     "classicSplashIsDefault": false,
     "artworks": [
       {
         "id": "60001301",
-        "name": "经典安妮",
+        "name": "经典 安妮",
         "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_annie/skins/skin301/images/jade_annie_splash_centered_301.project_jade.jpg",
         "kind": "classic",
         "isDefault": false
@@ -1664,13 +1657,13 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/twisted-fate",
     "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/v1/champion-icons/60004.png",
     "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_twistedfate/skins/skin301/images/jade_twistedfate_splash_centered_301.project_jade.jpg",
-    "classicSplashName": "经典崔斯特",
+    "classicSplashName": "经典 崔斯特",
     "classicSplashId": "60004301",
     "classicSplashIsDefault": false,
     "artworks": [
       {
         "id": "60004301",
-        "name": "经典崔斯特",
+        "name": "经典 崔斯特",
         "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_twistedfate/skins/skin301/images/jade_twistedfate_splash_centered_301.project_jade.jpg",
         "kind": "classic",
         "isDefault": false
@@ -2231,13 +2224,13 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/fiddlesticks",
     "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/v1/champion-icons/60009.png",
     "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_fiddlesticks/skins/skin301/images/jade_fiddlesticks_splash_centered_301.project_jade.jpg",
-    "classicSplashName": "经典费德提克",
+    "classicSplashName": "经典 费德提克",
     "classicSplashId": "60009301",
     "classicSplashIsDefault": false,
     "artworks": [
       {
         "id": "60009301",
-        "name": "经典费德提克",
+        "name": "经典 费德提克",
         "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_fiddlesticks/skins/skin301/images/jade_fiddlesticks_splash_centered_301.project_jade.jpg",
         "kind": "classic",
         "isDefault": false
@@ -2315,13 +2308,13 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/alistar",
     "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/v1/champion-icons/60012.png",
     "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_alistar/skins/skin301/images/jade_alistar_splash_centered_301.project_jade.jpg",
-    "classicSplashName": "经典阿利斯塔",
+    "classicSplashName": "经典 阿利斯塔",
     "classicSplashId": "60012301",
     "classicSplashIsDefault": false,
     "artworks": [
       {
         "id": "60012301",
-        "name": "经典阿利斯塔",
+        "name": "经典 阿利斯塔",
         "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_alistar/skins/skin301/images/jade_alistar_splash_centered_301.project_jade.jpg",
         "kind": "classic",
         "isDefault": false
@@ -3183,13 +3176,13 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/warwick",
     "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/v1/champion-icons/60019.png",
     "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_warwick/skins/skin301/images/jade_warwick_splash_centered_301.project_jade.jpg",
-    "classicSplashName": "经典沃里克",
+    "classicSplashName": "经典 沃里克",
     "classicSplashId": "60019301",
     "classicSplashIsDefault": false,
     "artworks": [
       {
         "id": "60019301",
-        "name": "经典沃里克",
+        "name": "经典 沃里克",
         "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_warwick/skins/skin301/images/jade_warwick_splash_centered_301.project_jade.jpg",
         "kind": "classic",
         "isDefault": false
@@ -3512,13 +3505,13 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/ezreal",
     "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/v1/champion-icons/60081.png",
     "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_ezreal/skins/skin301/images/jade_ezreal_splash_centered_301.project_jade.jpg",
-    "classicSplashName": "经典伊泽瑞尔",
+    "classicSplashName": "经典 伊泽瑞尔",
     "classicSplashId": "60081301",
     "classicSplashIsDefault": false,
     "artworks": [
       {
         "id": "60081301",
-        "name": "经典伊泽瑞尔",
+        "name": "经典 伊泽瑞尔",
         "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_ezreal/skins/skin301/images/jade_ezreal_splash_centered_301.project_jade.jpg",
         "kind": "classic",
         "isDefault": false
@@ -3680,13 +3673,13 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/twitch",
     "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/v1/champion-icons/60029.png",
     "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_twitch/skins/skin301/images/jade_twitch_splash_centered_301.project_jade.jpg",
-    "classicSplashName": "经典图奇",
+    "classicSplashName": "经典 图奇",
     "classicSplashId": "60029301",
     "classicSplashIsDefault": false,
     "artworks": [
       {
         "id": "60029301",
-        "name": "经典图奇",
+        "name": "经典 图奇",
         "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_twitch/skins/skin301/images/jade_twitch_splash_centered_301.project_jade.jpg",
         "kind": "classic",
         "isDefault": false
@@ -4348,7 +4341,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "key": "P",
         "name": "伪装",
-        "description": "如果提莫保持静止，并在短时间内未执行任何操作，他将进入无限期的隐形状态。如果提莫在草丛中，他可以在移动时保持隐形。提莫脱离隐形后获得【出奇制胜】效果，提升攻击速度，持续数秒。",
+        "description": "如果提莫保持静止，并在短时间内未执行任何操作，他将进入无限期的隐形状态。提莫脱离隐形后获得【出奇制胜】效果，提升攻击速度，持续数秒。",
         "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/ux/jade/s3icons/samesized/teemo_camouflage.project_jade.png",
         "cooldown": null,
         "cost": null,
@@ -4723,13 +4716,13 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/soraka",
     "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/v1/champion-icons/60016.png",
     "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_soraka/skins/skin301/images/jade_soraka_splash_centered_301.project_jade.jpg",
-    "classicSplashName": "经典索拉卡",
+    "classicSplashName": "经典 索拉卡",
     "classicSplashId": "60016301",
     "classicSplashIsDefault": false,
     "artworks": [
       {
         "id": "60016301",
-        "name": "经典索拉卡",
+        "name": "经典 索拉卡",
         "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_soraka/skins/skin301/images/jade_soraka_splash_centered_301.project_jade.jpg",
         "kind": "classic",
         "isDefault": false
@@ -4807,13 +4800,13 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/dr-mundo",
     "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/v1/champion-icons/60036.png",
     "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_drmundo/skins/skin301/images/jade_drmundo_splash_centered_301.project_jade.jpg",
-    "classicSplashName": "经典蒙多",
+    "classicSplashName": "经典 蒙多",
     "classicSplashId": "60036301",
     "classicSplashIsDefault": false,
     "artworks": [
       {
         "id": "60036301",
-        "name": "经典蒙多",
+        "name": "经典 蒙多",
         "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_drmundo/skins/skin301/images/jade_drmundo_splash_centered_301.project_jade.jpg",
         "kind": "classic",
         "isDefault": false

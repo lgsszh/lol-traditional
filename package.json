@@ -1,6 +1,6 @@
 {
   "name": "lol-traditional-classic-builder",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "private": true,
   "type": "module",
   "description": "英雄联盟怀旧服攻略介绍：60 位英雄、242 套 S3 考据玩法，以及现代技能搭配经典地图、装备与强化符文的怀旧海斗攻略。",

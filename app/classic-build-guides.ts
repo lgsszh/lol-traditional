@@ -1,6 +1,7 @@
 import {
   classicBuildPresets,
   classicChampions,
+  classicRuneGroups,
   runePresetIds,
   type ChampionArchetype,
   type ClassicChampion,
@@ -496,6 +497,16 @@ function defaultSituational(archetype: ChampionArchetype) {
   return ["773065", "773143", "773026", "773156"];
 }
 
+function runeSummaryFromPreset(preset: ResearchedRunePreset) {
+  return classicRuneGroups
+    .map((group) => {
+      const rune = group.runes.find((entry) => entry.id === preset[group.id]);
+      return rune ? `${rune.name}×${group.cap}` : "";
+    })
+    .filter(Boolean)
+    .join("／");
+}
+
 function createVariant(
   champion: ClassicChampion,
   profile: GuideProfile,
@@ -509,6 +520,7 @@ function createVariant(
         : "攻击 21 / 防御 9");
   const coreItems = profile.coreItems || finalBuild(profile.archetype);
   const standardPlan = phaseNotes[profile.archetype];
+  const runePreset = profile.runePreset || runePresetIds[profile.archetype];
   return {
     id: `${champion.key.toLowerCase()}-${profile.id || (index === 0 ? "primary" : `variant-${index}`)}`,
     name: profile.name,
@@ -516,8 +528,8 @@ function createVariant(
     style: profile.style,
     summary: profile.summary,
     runeArchetype: profile.archetype,
-    runeSummary: profile.runeSummary || runeSummaries[profile.archetype],
-    runePreset: profile.runePreset || runePresetIds[profile.archetype],
+    runeSummary: runeSummaryFromPreset(runePreset) || profile.runeSummary || runeSummaries[profile.archetype],
+    runePreset,
     masteryPreset,
     spellIds: profile.spells || laneSpells[profile.lane],
     skillOrder: profile.skillOrder || champion.spellOrder,

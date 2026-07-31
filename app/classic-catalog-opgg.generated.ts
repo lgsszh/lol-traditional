@@ -140,7 +140,7 @@ export const classicOpggRunes = [
   {
     "runeId": "mark-armor-lesser",
     "identifier": "775257",
-    "title": "次级护甲印记",
+    "title": "初级护甲印记",
     "description": "+0.8护甲",
     "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jaderunes/r_1_2.project_jade.png",
     "group": {
@@ -153,7 +153,7 @@ export const classicOpggRunes = [
   {
     "runeId": "mark-cdr-lesser",
     "identifier": "775265",
-    "title": "次级冷却缩减印记",
+    "title": "初级冷却缩减印记",
     "description": "0.3%冷却缩减",
     "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jaderunes/r_1_2.project_jade.png",
     "group": {
@@ -166,7 +166,7 @@ export const classicOpggRunes = [
   {
     "runeId": "mark-health-lesser",
     "identifier": "775255",
-    "title": "次级生命值印记",
+    "title": "初级生命值印记",
     "description": "+3生命值",
     "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jaderunes/r_3_2.project_jade.png",
     "group": {
@@ -257,7 +257,7 @@ export const classicOpggRunes = [
   {
     "runeId": "seal-crit-lesser",
     "identifier": "775311",
-    "title": "次级暴击几率符印",
+    "title": "初级暴击几率符印",
     "description": "+0.45%暴击几率",
     "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jaderunes/y_3_2.project_jade.png",
     "group": {
@@ -270,7 +270,7 @@ export const classicOpggRunes = [
   {
     "runeId": "seal-crit-damage-lesser",
     "identifier": "775309",
-    "title": "次级暴击伤害符印",
+    "title": "初级暴击伤害符印",
     "description": "+0.7%暴击伤害",
     "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jaderunes/y_2_2.project_jade.png",
     "group": {
@@ -283,7 +283,7 @@ export const classicOpggRunes = [
   {
     "runeId": "seal-as-lesser",
     "identifier": "775307",
-    "title": "次级攻击速度符印",
+    "title": "初级攻击速度符印",
     "description": "+0.8%攻击速度",
     "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jaderunes/y_3_2.project_jade.png",
     "group": {
@@ -296,7 +296,7 @@ export const classicOpggRunes = [
   {
     "runeId": "seal-mr-lesser",
     "identifier": "775319",
-    "title": "次级魔法抗性符印",
+    "title": "初级魔法抗性符印",
     "description": "+0.75魔法抗性",
     "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jaderunes/y_3_2.project_jade.png",
     "group": {
@@ -426,9 +426,9 @@ export const classicOpggRunes = [
   {
     "runeId": "glyph-crit-damage-lesser",
     "identifier": "775279",
-    "title": "次级暴击伤害雕纹",
+    "title": "初级暴击伤害雕纹",
     "description": "+0.7%暴击伤害",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jaderunes/b_2_3.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jaderunes/b_2_2.project_jade.png",
     "group": {
       "key": "runes-glyphs",
       "label": null
@@ -439,7 +439,7 @@ export const classicOpggRunes = [
   {
     "runeId": "glyph-as-lesser",
     "identifier": "775277",
-    "title": "次级攻击速度雕纹",
+    "title": "初级攻击速度雕纹",
     "description": "+0.8%攻击速度",
     "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jaderunes/b_3_2.project_jade.png",
     "group": {
@@ -452,7 +452,7 @@ export const classicOpggRunes = [
   {
     "runeId": "glyph-armor-lesser",
     "identifier": "775287",
-    "title": "次级护甲雕纹",
+    "title": "初级护甲雕纹",
     "description": "+0.8护甲",
     "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jaderunes/b_1_2.project_jade.png",
     "group": {
@@ -465,9 +465,9 @@ export const classicOpggRunes = [
   {
     "runeId": "glyph-health-lesser",
     "identifier": "775285",
-    "title": "次级生命值雕纹",
+    "title": "初级生命值雕纹",
     "description": "+3生命值",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jaderunes/b_4_3.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jaderunes/b_4_2.project_jade.png",
     "group": {
       "key": "runes-glyphs",
       "label": null
