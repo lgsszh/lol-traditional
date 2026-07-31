@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import {
   buildGitPushArgs,
+  createPagesDispatcher,
   isTransientNetworkFailure,
   retryNetworkOperation,
   validatePagesHtml,
@@ -80,4 +81,10 @@ test("Pages 在线核验同时要求标题、basePath 与本地镜像", () => {
     () => validatePagesHtml("英雄联盟怀旧服攻略介绍"),
     /Next\.js basePath 资源、本地图片镜像/,
   );
+});
+
+test("Pages 在线核验显式使用环境代理调度器", async () => {
+  const dispatcher = createPagesDispatcher();
+  assert.equal(dispatcher.constructor.name, "EnvHttpProxyAgent");
+  await dispatcher.close();
 });

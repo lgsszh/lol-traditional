@@ -94,9 +94,9 @@ npm run dev
 
 Windows 本地发布统一使用 `npm run network:git-push -- origin <分支或标签>`；
 脚本固定采用 Git 内置 OpenSSL + HTTP/1.1，并只对 TLS 握手、连接复位与超时
-进行最多 5 次指数退避。部署后使用 `npm run network:pages-verify` 做无缓存
-在线核验；HTTP 404 或页面缺少标题、basePath、镜像资源时会立即失败，不会
-被网络重试掩盖。
+进行最多 5 次指数退避。部署后使用 `npm run network:pages-verify`，通过固定
+版本的 Undici 显式复用系统 HTTPS 代理并做无缓存在线核验；HTTP 404 或页面
+缺少标题、basePath、镜像资源时会立即失败，不会被网络重试掩盖。
 
 ## 目录结构
 

@@ -110,7 +110,7 @@ status labels:
 
 - npm 直连 registry.npmjs.org 常超时：用 `npm install --registry=https://registry.npmmirror.com`；改动依赖后如 CI 报 `npm ci` 缺 @emnapi/* → 删 node_modules + lock 完整重装（Windows 增量安装会剪掉跨平台可选依赖）。
 - git 推拉 github.com 需借系统代理：`git config --global http.https://github.com.proxy <系统代理>` 已配置过。本机 Git 系统配置默认使用 Schannel，曾发生 TLS 握手失败；本仓库已改用 Git 内置 OpenSSL + HTTP/1.1。推送必须执行 `npm run network:git-push -- origin <分支或标签>`，由 `scripts/network-guard.mjs` 对握手失败、连接复位和超时做最多 5 次指数退避；非快进、权限、页面契约等真实错误不会重试。
-- GitHub Pages 在线核验必须执行 `npm run network:pages-verify`，不要临时拼 Node `fetch` 或 `curl`。该命令会添加无缓存参数，并仅对 TLS、`ECONNRESET`、超时、HTTP 408/425/429/5xx 重试；HTTP 404 或缺少标题、basePath、镜像路径会立即失败。
+- GitHub Pages 在线核验必须执行 `npm run network:pages-verify`，不要临时拼 Node `fetch` 或 `curl`。该命令通过固定版本的 Undici `EnvHttpProxyAgent` 显式复用系统 HTTPS 代理并添加无缓存参数，仅对 TLS、`ECONNRESET`、超时、HTTP 408/425/429/5xx 重试；HTTP 404 或缺少标题、basePath、镜像路径会立即失败。
 - **先 commit 再 `git pull --rebase`**（CRLF 漂移会让工作区显示为脏，rebase 拒绝执行）。
 - PowerShell 5.1 写文件默认带 BOM：改 package.json / package-lock.json 必须用无 BOM UTF-8（vitefu 直接 JSON.parse，带 BOM 就炸）。
 - tsconfig 已开 allowImportingTsExtensions（源码里 `import x from "./y.ts"` 是刻意的，别"修"掉后缀）。

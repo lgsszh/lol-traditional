@@ -1,6 +1,7 @@
 import { spawnSync } from "node:child_process";
 import process from "node:process";
 import { pathToFileURL } from "node:url";
+import { EnvHttpProxyAgent } from "undici";
 
 const DEFAULT_ATTEMPTS = 5;
 const DEFAULT_BASE_DELAY_MS = 800;
@@ -156,6 +157,10 @@ export function validatePagesHtml(html, {
   };
 }
 
+export function createPagesDispatcher() {
+  return new EnvHttpProxyAgent();
+}
+
 function retryableHttpError(status) {
   const error = new Error(`GitHub Pages returned HTTP ${status}`);
   error.status = status;
@@ -165,28 +170,35 @@ function retryableHttpError(status) {
 
 export async function verifyPagesOnline(pageUrl = DEFAULT_PAGE_URL, options = {}) {
   const attempts = options.attempts ?? DEFAULT_ATTEMPTS;
-  return retryNetworkOperation("GitHub Pages verify", async (attempt) => {
-    const url = new URL(pageUrl);
-    url.searchParams.set("network_guard", `${Date.now()}-${attempt}`);
-    const response = await fetch(url, {
-      cache: "no-store",
-      redirect: "follow",
-      headers: {
-        "cache-control": "no-cache",
-        pragma: "no-cache",
-        "user-agent": "lol-traditional-network-guard/1.0",
-      },
-      signal: AbortSignal.timeout(options.timeoutMs ?? 20_000),
-    });
-    if (!response.ok) throw retryableHttpError(response.status);
-    const html = await response.text();
-    return {
-      attempt,
-      status: response.status,
-      url: response.url,
-      ...validatePagesHtml(html, options),
-    };
-  }, { ...options, attempts });
+  const ownedDispatcher = options.dispatcher ? null : createPagesDispatcher();
+  const dispatcher = options.dispatcher ?? ownedDispatcher;
+  try {
+    return await retryNetworkOperation("GitHub Pages verify", async (attempt) => {
+      const url = new URL(pageUrl);
+      url.searchParams.set("network_guard", `${Date.now()}-${attempt}`);
+      const response = await fetch(url, {
+        cache: "no-store",
+        dispatcher,
+        redirect: "follow",
+        headers: {
+          "cache-control": "no-cache",
+          pragma: "no-cache",
+          "user-agent": "lol-traditional-network-guard/1.0",
+        },
+        signal: AbortSignal.timeout(options.timeoutMs ?? 20_000),
+      });
+      if (!response.ok) throw retryableHttpError(response.status);
+      const html = await response.text();
+      return {
+        attempt,
+        status: response.status,
+        url: response.url,
+        ...validatePagesHtml(html, options),
+      };
+    }, { ...options, attempts });
+  } finally {
+    await ownedDispatcher?.close();
+  }
 }
 
 async function main() {
