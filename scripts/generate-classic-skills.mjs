@@ -172,12 +172,37 @@ async function fetchChampion(champion) {
     classicSplashIsDefault: primarySkin.isBase === true,
     artworks,
     availableSkinCount: skins.length,
+    stats: {
+      hp: historicalChampion.stats.hp,
+      hpPerLevel: historicalChampion.stats.hpperlevel,
+      resource: historicalChampion.stats.mp,
+      resourcePerLevel: historicalChampion.stats.mpperlevel,
+      attackDamage: historicalChampion.stats.attackdamage,
+      attackDamagePerLevel: historicalChampion.stats.attackdamageperlevel,
+      attackSpeed: Number((0.625 / (1 + (historicalChampion.stats.attackspeedoffset || 0))).toFixed(5)),
+      attackSpeedPerLevel: historicalChampion.stats.attackspeedperlevel,
+      armor: historicalChampion.stats.armor,
+      armorPerLevel: historicalChampion.stats.armorperlevel,
+      magicResist: historicalChampion.stats.spellblock,
+      magicResistPerLevel: historicalChampion.stats.spellblockperlevel,
+      moveSpeed: historicalChampion.stats.movespeed,
+      attackRange: historicalChampion.stats.attackrange,
+    },
     abilities: detail.abilities.map((ability, index) => {
       if (!ability.imageUrl?.includes("/classic/")) {
         throw new Error(`${champion.key} ${ability.key}: non-classic icon`);
       }
       const historicalSpell = index === 0 ? null : historicalChampion.spells[index - 1];
-      const detailText = historicalSpell ? numericDetail(historicalSpell) : null;
+      // Data Dragon 3.15.5 does not expose a separate passive tooltip object,
+      // but OP.GG's Classic ability card is still authoritative public data.
+      // Preserve it in the same detail channel instead of leaving every one of
+      // the 60 passives blank.
+      let detailText = historicalSpell
+        ? numericDetail(historicalSpell)
+        : `技能文本：${ability.description}`;
+      if (!/\d/.test(detailText)) {
+        detailText += "\n数值说明：OP.GG Classic 与 Riot 3.15.5 公开字段未提供独立固定数值；不使用其他版本或人工估值补写。";
+      }
       if (detailText && /{{|}}|@[a-z0-9_.]+/i.test(detailText)) {
         throw new Error(`${champion.key} ${ability.key}: unresolved numeric placeholder`);
       }
@@ -190,7 +215,7 @@ async function fetchChampion(champion) {
         cost: ability.cost,
         range: ability.range,
         numericDetail: detailText,
-        numericVersion: historicalSpell ? numericVersion : null,
+        numericVersion,
       };
     }),
   };
@@ -244,6 +269,22 @@ export type ClassicChampionSkillSet = {
     isDefault: boolean;
   }>;
   availableSkinCount: number;
+  stats: {
+    hp: number;
+    hpPerLevel: number;
+    resource: number;
+    resourcePerLevel: number;
+    attackDamage: number;
+    attackDamagePerLevel: number;
+    attackSpeed: number;
+    attackSpeedPerLevel: number;
+    armor: number;
+    armorPerLevel: number;
+    magicResist: number;
+    magicResistPerLevel: number;
+    moveSpeed: number;
+    attackRange: number;
+  };
   abilities: ClassicAbility[];
 };
 

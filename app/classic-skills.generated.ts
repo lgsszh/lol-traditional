@@ -30,6 +30,22 @@ export type ClassicChampionSkillSet = {
     isDefault: boolean;
   }>;
   availableSkinCount: number;
+  stats: {
+    hp: number;
+    hpPerLevel: number;
+    resource: number;
+    resourcePerLevel: number;
+    attackDamage: number;
+    attackDamagePerLevel: number;
+    attackSpeed: number;
+    attackSpeedPerLevel: number;
+    armor: number;
+    armorPerLevel: number;
+    magicResist: number;
+    magicResistPerLevel: number;
+    moveSpeed: number;
+    attackRange: number;
+  };
   abilities: ClassicAbility[];
 };
 
@@ -60,6 +76,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 8,
+    "stats": {
+      "hp": 380,
+      "hpPerLevel": 80,
+      "resource": 250,
+      "resourcePerLevel": 50,
+      "attackDamage": 50,
+      "attackDamagePerLevel": 3,
+      "attackSpeed": 0.66845,
+      "attackSpeedPerLevel": 2,
+      "armor": 11,
+      "armorPerLevel": 3.5,
+      "magicResist": 30,
+      "magicResistPerLevel": 0,
+      "moveSpeed": 330,
+      "attackRange": 550
+    },
     "abilities": [
       {
         "key": "P",
@@ -69,8 +101,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：每当用技能命中敌人时获得一层摄魂夺魄的充能。达到9层充能后，下一个技能会回复阿狸的生命值。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -144,6 +176,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 9,
+    "stats": {
+      "hp": 463,
+      "hpPerLevel": 98,
+      "resource": 230,
+      "resourcePerLevel": 35,
+      "attackDamage": 56.3,
+      "attackDamagePerLevel": 3.375,
+      "attackSpeed": 0.63776,
+      "attackSpeedPerLevel": 3.4,
+      "armor": 18,
+      "armorPerLevel": 3.5,
+      "magicResist": 30,
+      "magicResistPerLevel": 1.25,
+      "moveSpeed": 350,
+      "attackRange": 125
+    },
     "abilities": [
       {
         "key": "P",
@@ -153,8 +201,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：贾克斯会基于装备提供的额外攻击力和法术强度获得额外生命值。\n数值说明：OP.GG Classic 与 Riot 3.15.5 公开字段未提供独立固定数值；不使用其他版本或人工估值补写。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -228,6 +276,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 8,
+    "stats": {
+      "hp": 428,
+      "hpPerLevel": 85,
+      "resource": 200,
+      "resourcePerLevel": 0,
+      "attackDamage": 55.8,
+      "attackDamagePerLevel": 3.2,
+      "attackSpeed": 0.65104,
+      "attackSpeedPerLevel": 3,
+      "armor": 16,
+      "armorPerLevel": 3.7,
+      "magicResist": 30,
+      "magicResistPerLevel": 1.25,
+      "moveSpeed": 350,
+      "attackRange": 125
+    },
     "abilities": [
       {
         "key": "P",
@@ -237,8 +301,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：李青使用一次技能后，他接下来的两次普通攻击会获得40%攻击速度，且每次攻击回复15能量。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -305,6 +369,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 8,
+    "stats": {
+      "hp": 395,
+      "hpPerLevel": 79,
+      "resource": 173,
+      "resourcePerLevel": 35,
+      "attackDamage": 46.3,
+      "attackDamagePerLevel": 2.85,
+      "attackSpeed": 0.65789,
+      "attackSpeedPerLevel": 4,
+      "armor": 11.5,
+      "armorPerLevel": 3.4,
+      "magicResist": 30,
+      "magicResistPerLevel": 0,
+      "moveSpeed": 325,
+      "attackRange": 600
+    },
     "abilities": [
       {
         "key": "P",
@@ -314,8 +394,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：艾希在脱离战斗时会积累 全神贯注 层数。当艾希拥有100层 全神贯注 时，她的下一次攻击必定暴击。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -382,6 +462,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 7,
+    "stats": {
+      "hp": 356,
+      "hpPerLevel": 78,
+      "resource": 302,
+      "resourcePerLevel": 64,
+      "attackDamage": 49,
+      "attackDamagePerLevel": 2.95,
+      "attackSpeed": 0.625,
+      "attackSpeedPerLevel": 2.61,
+      "armor": 9,
+      "armorPerLevel": 3.8,
+      "magicResist": 30,
+      "magicResistPerLevel": 0,
+      "moveSpeed": 335,
+      "attackRange": 475
+    },
     "abilities": [
       {
         "key": "P",
@@ -391,8 +487,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：迦娜和友方英雄的移动速度提升3%。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -459,6 +555,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 6,
+    "stats": {
+      "hp": 359,
+      "hpPerLevel": 83,
+      "resource": 173,
+      "resourcePerLevel": 35,
+      "attackDamage": 50,
+      "attackDamagePerLevel": 3.25,
+      "attackSpeed": 0.65789,
+      "attackSpeedPerLevel": 3.1,
+      "armor": 9.3,
+      "armorPerLevel": 3.4,
+      "magicResist": 30,
+      "magicResistPerLevel": 0,
+      "moveSpeed": 330,
+      "attackRange": 550
+    },
     "abilities": [
       {
         "key": "P",
@@ -468,8 +580,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：薇恩毫不留情地猎杀世间邪恶。向附近敌方英雄移动时获得30移动速度。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -543,6 +655,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 7,
+    "stats": {
+      "hp": 468,
+      "hpPerLevel": 90,
+      "resource": 255,
+      "resourcePerLevel": 56,
+      "attackDamage": 52,
+      "attackDamagePerLevel": 3.5,
+      "attackSpeed": 0.625,
+      "attackSpeedPerLevel": 2.02,
+      "armor": 16.5,
+      "armorPerLevel": 3.2,
+      "magicResist": 30,
+      "magicResistPerLevel": 1.25,
+      "moveSpeed": 340,
+      "attackRange": 125
+    },
     "abilities": [
       {
         "key": "P",
@@ -552,8 +680,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：塔里克喜欢在所有武器上镶嵌魔法宝石，使他的普通攻击根据他的最大法力值造成额外魔法伤害。\n数值说明：OP.GG Classic 与 Riot 3.15.5 公开字段未提供独立固定数值；不使用其他版本或人工估值补写。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -620,6 +748,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 6,
+    "stats": {
+      "hp": 350,
+      "hpPerLevel": 70,
+      "resource": 257,
+      "resourcePerLevel": 53,
+      "attackDamage": 48,
+      "attackDamagePerLevel": 3.2,
+      "attackSpeed": 0.625,
+      "attackSpeedPerLevel": 1.68,
+      "armor": 10.5,
+      "armorPerLevel": 4,
+      "magicResist": 30,
+      "magicResistPerLevel": 0,
+      "moveSpeed": 325,
+      "attackRange": 600
+    },
     "abilities": [
       {
         "key": "P",
@@ -629,8 +773,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：在濒临死亡的时候，艾尼维亚将会变成一枚凤凰蛋。如果凤凰蛋在6秒内没有被击破的话，艾尼维亚就会闪亮重生。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -704,6 +848,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 7,
+    "stats": {
+      "hp": 425,
+      "hpPerLevel": 80,
+      "resource": 0,
+      "resourcePerLevel": 0,
+      "attackDamage": 53,
+      "attackDamagePerLevel": 3.2,
+      "attackSpeed": 0.65789,
+      "attackSpeedPerLevel": 2.74,
+      "armor": 17,
+      "armorPerLevel": 3.5,
+      "magicResist": 30,
+      "magicResistPerLevel": 1.25,
+      "moveSpeed": 345,
+      "attackRange": 125
+    },
     "abilities": [
       {
         "key": "P",
@@ -713,8 +873,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：击杀英雄或参与助攻可使她的技能冷却时间减少15秒。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -788,6 +948,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 6,
+    "stats": {
+      "hp": 350,
+      "hpPerLevel": 75,
+      "resource": 240,
+      "resourcePerLevel": 40,
+      "attackDamage": 53,
+      "attackDamagePerLevel": 2.7,
+      "attackSpeed": 0.625,
+      "attackSpeedPerLevel": 1.36,
+      "armor": 10,
+      "armorPerLevel": 3,
+      "magicResist": 30,
+      "magicResistPerLevel": 0,
+      "moveSpeed": 335,
+      "attackRange": 550
+    },
     "abilities": [
       {
         "key": "P",
@@ -797,8 +973,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：黑默丁格为周围的友军炮台、防御塔和英雄提供生命回复加成。\n数值说明：OP.GG Classic 与 Riot 3.15.5 公开字段未提供独立固定数值；不使用其他版本或人工估值补写。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -865,6 +1041,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 6,
+    "stats": {
+      "hp": 420,
+      "hpPerLevel": 90,
+      "resource": 235,
+      "resourcePerLevel": 40,
+      "attackDamage": 50,
+      "attackDamagePerLevel": 3.4,
+      "attackSpeed": 0.65789,
+      "attackSpeedPerLevel": 2.5,
+      "armor": 14,
+      "armorPerLevel": 3.6,
+      "magicResist": 30,
+      "magicResistPerLevel": 1.25,
+      "moveSpeed": 340,
+      "attackRange": 175
+    },
     "abilities": [
       {
         "key": "P",
@@ -874,8 +1066,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：嘉文四世对一名敌人发起的第一次普攻会造成基于目标当前生命值的额外物理伤害。这个效果在数秒内无法重复作用于同一目标。\n数值说明：OP.GG Classic 与 Riot 3.15.5 公开字段未提供独立固定数值；不使用其他版本或人工估值补写。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -949,6 +1141,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 8,
+    "stats": {
+      "hp": 455,
+      "hpPerLevel": 96,
+      "resource": 0,
+      "resourcePerLevel": 0,
+      "attackDamage": 52,
+      "attackDamagePerLevel": 3.5,
+      "attackSpeed": 0.625,
+      "attackSpeedPerLevel": 2.9,
+      "armor": 19,
+      "armorPerLevel": 2.7,
+      "magicResist": 30,
+      "magicResistPerLevel": 1.25,
+      "moveSpeed": 345,
+      "attackRange": 125
+    },
     "abilities": [
       {
         "key": "P",
@@ -958,8 +1166,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：如果盖伦近期没有受到伤害或者被敌方技能命中，那么他会每秒回复若干百分比的总生命值。\n数值说明：OP.GG Classic 与 Riot 3.15.5 公开字段未提供独立固定数值；不使用其他版本或人工估值补写。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -1033,6 +1241,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 8,
+    "stats": {
+      "hp": 403,
+      "hpPerLevel": 86,
+      "resource": 240,
+      "resourcePerLevel": 60,
+      "attackDamage": 51.58,
+      "attackDamagePerLevel": 3.5,
+      "attackSpeed": 0.625,
+      "attackSpeedPerLevel": 1.53,
+      "armor": 15,
+      "armorPerLevel": 3.8,
+      "magicResist": 30,
+      "magicResistPerLevel": 0,
+      "moveSpeed": 335,
+      "attackRange": 450
+    },
     "abilities": [
       {
         "key": "P",
@@ -1042,8 +1266,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：莫甘娜拥有法术吸血效果，在技能造成伤害时回复自身生命值。\n数值说明：OP.GG Classic 与 Riot 3.15.5 公开字段未提供独立固定数值；不使用其他版本或人工估值补写。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -1110,6 +1334,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 6,
+    "stats": {
+      "hp": 441,
+      "hpPerLevel": 84,
+      "resource": 230,
+      "resourcePerLevel": 40,
+      "attackDamage": 51.7,
+      "attackDamagePerLevel": 3.5,
+      "attackSpeed": 0.69444,
+      "attackSpeedPerLevel": 3,
+      "armor": 15,
+      "armorPerLevel": 3.5,
+      "magicResist": 30,
+      "magicResistPerLevel": 1.25,
+      "moveSpeed": 350,
+      "attackRange": 125
+    },
     "abilities": [
       {
         "key": "P",
@@ -1119,8 +1359,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：萨科从背后打击一名敌人时造成20%额外伤害。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -1187,6 +1427,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 6,
+    "stats": {
+      "hp": 380,
+      "hpPerLevel": 76,
+      "resource": 250,
+      "resourcePerLevel": 45,
+      "attackDamage": 52,
+      "attackDamagePerLevel": 3,
+      "attackSpeed": 0.625,
+      "attackSpeedPerLevel": 1.36,
+      "armor": 12,
+      "armorPerLevel": 3.5,
+      "magicResist": 30,
+      "magicResistPerLevel": 0,
+      "moveSpeed": 340,
+      "attackRange": 550
+    },
     "abilities": [
       {
         "key": "P",
@@ -1196,8 +1452,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：布兰德的技能会对目标施加烈焰焚身效果，在4秒内持续造成共8%目标最大生命值的魔法伤害。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -1271,6 +1527,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 8,
+    "stats": {
+      "hp": 380,
+      "hpPerLevel": 90,
+      "resource": 190,
+      "resourcePerLevel": 45,
+      "attackDamage": 48,
+      "attackDamagePerLevel": 3.5,
+      "attackSpeed": 0.625,
+      "attackSpeedPerLevel": 3.6,
+      "armor": 12,
+      "armorPerLevel": 4,
+      "magicResist": 30,
+      "magicResistPerLevel": 1.25,
+      "moveSpeed": 340,
+      "attackRange": 125
+    },
     "abilities": [
       {
         "key": "P",
@@ -1280,8 +1552,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：脱离战斗后，伊芙琳会进入伪装状态，只会被附近的敌方英雄或真实视野看见。在潜行状态下，她会快速回复法力值。\n数值说明：OP.GG Classic 与 Riot 3.15.5 公开字段未提供独立固定数值；不使用其他版本或人工估值补写。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -1348,6 +1620,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 6,
+    "stats": {
+      "hp": 345,
+      "hpPerLevel": 79,
+      "resource": 250,
+      "resourcePerLevel": 50,
+      "attackDamage": 50,
+      "attackDamagePerLevel": 3.3,
+      "attackSpeed": 0.625,
+      "attackSpeedPerLevel": 1.36,
+      "armor": 8,
+      "armorPerLevel": 4,
+      "magicResist": 30,
+      "magicResistPerLevel": 0,
+      "moveSpeed": 330,
+      "attackRange": 550
+    },
     "abilities": [
       {
         "key": "P",
@@ -1357,8 +1645,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：拉克丝的伤害类技能会将能量注入敌人，持续6秒。拉克丝的下一次攻击将会点燃这股能量，对目标造成额外魔法伤害（基于拉克丝的等级）。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -1432,6 +1720,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 7,
+    "stats": {
+      "hp": 495,
+      "hpPerLevel": 81,
+      "resource": 215,
+      "resourcePerLevel": 40,
+      "attackDamage": 54,
+      "attackDamagePerLevel": 3,
+      "attackSpeed": 0.65104,
+      "attackSpeedPerLevel": 2.75,
+      "armor": 16.5,
+      "armorPerLevel": 3.3,
+      "magicResist": 30,
+      "magicResistPerLevel": 1.25,
+      "moveSpeed": 345,
+      "attackRange": 125
+    },
     "abilities": [
       {
         "key": "P",
@@ -1441,8 +1745,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：普朗克的攻击会施加中毒效果，每秒造成魔法伤害，伤害会随等级提升。\n数值说明：OP.GG Classic 与 Riot 3.15.5 公开字段未提供独立固定数值；不使用其他版本或人工估值补写。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -1516,6 +1820,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 10,
+    "stats": {
+      "hp": 384,
+      "hpPerLevel": 76,
+      "resource": 250,
+      "resourcePerLevel": 50,
+      "attackDamage": 48,
+      "attackDamagePerLevel": 2.625,
+      "attackSpeed": 0.5787,
+      "attackSpeedPerLevel": 1.36,
+      "armor": 8.5,
+      "armorPerLevel": 4,
+      "magicResist": 30,
+      "magicResistPerLevel": 0,
+      "moveSpeed": 335,
+      "attackRange": 625
+    },
     "abilities": [
       {
         "key": "P",
@@ -1525,8 +1845,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：在施放4个技能后，安妮的下一次伤害类技能会对目标造成持续1.75秒的晕眩效果。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -1593,6 +1913,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 6,
+    "stats": {
+      "hp": 434,
+      "hpPerLevel": 89,
+      "resource": 221,
+      "resourcePerLevel": 47,
+      "attackDamage": 55.78,
+      "attackDamagePerLevel": 3.375,
+      "attackSpeed": 0.65104,
+      "attackSpeedPerLevel": 2.05,
+      "armor": 16,
+      "armorPerLevel": 3.6,
+      "magicResist": 30,
+      "magicResistPerLevel": 0,
+      "moveSpeed": 340,
+      "attackRange": 125
+    },
     "abilities": [
       {
         "key": "P",
@@ -1602,8 +1938,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：古拉加斯每次使用技能后都会喝一小杯，从而回复些许生命值。\n数值说明：OP.GG Classic 与 Riot 3.15.5 公开字段未提供独立固定数值；不使用其他版本或人工估值补写。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -1677,6 +2013,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 7,
+    "stats": {
+      "hp": 384,
+      "hpPerLevel": 82,
+      "resource": 202,
+      "resourcePerLevel": 38,
+      "attackDamage": 46.41,
+      "attackDamagePerLevel": 3.3,
+      "attackSpeed": 0.65104,
+      "attackSpeedPerLevel": 3.22,
+      "armor": 11.25,
+      "armorPerLevel": 3.15,
+      "magicResist": 30,
+      "magicResistPerLevel": 0,
+      "moveSpeed": 330,
+      "attackRange": 525
+    },
     "abilities": [
       {
         "key": "P",
@@ -1686,8 +2038,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：崔斯特与友军每次击杀可额外获得2金币。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -1761,6 +2113,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 7,
+    "stats": {
+      "hp": 370,
+      "hpPerLevel": 90,
+      "resource": 220,
+      "resourcePerLevel": 45,
+      "attackDamage": 49,
+      "attackDamagePerLevel": 3.5,
+      "attackSpeed": 0.67003,
+      "attackSpeedPerLevel": 3.22,
+      "armor": 11,
+      "armorPerLevel": 3.5,
+      "magicResist": 30,
+      "magicResistPerLevel": 0,
+      "moveSpeed": 335,
+      "attackRange": 525
+    },
     "abilities": [
       {
         "key": "P",
@@ -1770,8 +2138,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：穿越草丛时，奈德丽的移动速度提升15%，持续2秒。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -1838,6 +2206,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 5,
+    "stats": {
+      "hp": 441,
+      "hpPerLevel": 93,
+      "resource": 190,
+      "resourcePerLevel": 45,
+      "attackDamage": 54.1,
+      "attackDamagePerLevel": 3.5,
+      "attackSpeed": 0.69444,
+      "attackSpeedPerLevel": 2.7,
+      "armor": 17,
+      "armorPerLevel": 3,
+      "magicResist": 30,
+      "magicResistPerLevel": 1.25,
+      "moveSpeed": 350,
+      "attackRange": 125
+    },
     "abilities": [
       {
         "key": "P",
@@ -1847,8 +2231,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：奥拉夫的攻击速度会随着他的生命值减少而提升。\n数值说明：OP.GG Classic 与 Riot 3.15.5 公开字段未提供独立固定数值；不使用其他版本或人工估值补写。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -1915,6 +2299,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 7,
+    "stats": {
+      "hp": 405,
+      "hpPerLevel": 82,
+      "resource": 215,
+      "resourcePerLevel": 45,
+      "attackDamage": 56.65,
+      "attackDamagePerLevel": 3.375,
+      "attackSpeed": 0.61275,
+      "attackSpeedPerLevel": 1.81,
+      "armor": 18,
+      "armorPerLevel": 3.5,
+      "magicResist": 30,
+      "magicResistPerLevel": 0,
+      "moveSpeed": 345,
+      "attackRange": 125
+    },
     "abilities": [
       {
         "key": "P",
@@ -1924,8 +2324,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：辛吉德每拥有100法力值， 生命值 提升25。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -1999,6 +2399,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 9,
+    "stats": {
+      "hp": 360,
+      "hpPerLevel": 86,
+      "resource": 250,
+      "resourcePerLevel": 55,
+      "attackDamage": 52,
+      "attackDamagePerLevel": 3,
+      "attackSpeed": 0.625,
+      "attackSpeedPerLevel": 2.112,
+      "armor": 11,
+      "armorPerLevel": 3.9,
+      "magicResist": 30,
+      "magicResistPerLevel": 0,
+      "moveSpeed": 340,
+      "attackRange": 550
+    },
     "abilities": [
       {
         "key": "P",
@@ -2008,8 +2424,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：瑞兹的技能会减少其他所有技能的冷却时间。\n数值说明：OP.GG Classic 与 Riot 3.15.5 公开字段未提供独立固定数值；不使用其他版本或人工估值补写。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -2083,6 +2499,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 7,
+    "stats": {
+      "hp": 415,
+      "hpPerLevel": 82,
+      "resource": 193,
+      "resourcePerLevel": 32,
+      "attackDamage": 46.5,
+      "attackDamagePerLevel": 3,
+      "attackSpeed": 0.65606,
+      "attackSpeedPerLevel": 4,
+      "armor": 15,
+      "armorPerLevel": 3,
+      "magicResist": 30,
+      "magicResistPerLevel": 0,
+      "moveSpeed": 325,
+      "attackRange": 550
+    },
     "abilities": [
       {
         "key": "P",
@@ -2092,8 +2524,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：崔丝塔娜的攻击距离随等级提升。\n数值说明：OP.GG Classic 与 Riot 3.15.5 公开字段未提供独立固定数值；不使用其他版本或人工估值补写。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -2160,6 +2592,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 6,
+    "stats": {
+      "hp": 461,
+      "hpPerLevel": 98,
+      "resource": 100,
+      "resourcePerLevel": 0,
+      "attackDamage": 56,
+      "attackDamagePerLevel": 3.2,
+      "attackSpeed": 0.67003,
+      "attackSpeedPerLevel": 2.9,
+      "armor": 14.9,
+      "armorPerLevel": 3.1,
+      "magicResist": 30,
+      "magicResistPerLevel": 1.25,
+      "moveSpeed": 345,
+      "attackRange": 125
+    },
     "abilities": [
       {
         "key": "P",
@@ -2169,8 +2617,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：泰达米尔获得额外的暴击几率，这个加成基于他的已损失生命值而提升。\n数值说明：OP.GG Classic 与 Riot 3.15.5 公开字段未提供独立固定数值；不使用其他版本或人工估值补写。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -2244,6 +2692,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 6,
+    "stats": {
+      "hp": 390,
+      "hpPerLevel": 80,
+      "resource": 251,
+      "resourcePerLevel": 59,
+      "attackDamage": 45.95,
+      "attackDamagePerLevel": 2.625,
+      "attackSpeed": 0.625,
+      "attackSpeedPerLevel": 2.11,
+      "armor": 11,
+      "armorPerLevel": 3.5,
+      "magicResist": 30,
+      "magicResistPerLevel": 0,
+      "moveSpeed": 335,
+      "attackRange": 480
+    },
     "abilities": [
       {
         "key": "P",
@@ -2253,8 +2717,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：附近敌人的魔法抗性降低。\n数值说明：OP.GG Classic 与 Riot 3.15.5 公开字段未提供独立固定数值；不使用其他版本或人工估值补写。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -2328,6 +2792,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 9,
+    "stats": {
+      "hp": 442,
+      "hpPerLevel": 102,
+      "resource": 215,
+      "resourcePerLevel": 38,
+      "attackDamage": 55.03,
+      "attackDamagePerLevel": 3.62,
+      "attackSpeed": 0.625,
+      "attackSpeedPerLevel": 2.125,
+      "armor": 14.5,
+      "armorPerLevel": 3.5,
+      "magicResist": 30,
+      "magicResistPerLevel": 1.25,
+      "moveSpeed": 330,
+      "attackRange": 125
+    },
     "abilities": [
       {
         "key": "P",
@@ -2337,8 +2817,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：每当阿利斯塔施放技能时，都会践踏周围单位和防御塔数秒，对他经过的单位造成伤害。\n数值说明：OP.GG Classic 与 Riot 3.15.5 公开字段未提供独立固定数值；不使用其他版本或人工估值补写。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -2405,6 +2885,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 7,
+    "stats": {
+      "hp": 420,
+      "hpPerLevel": 86,
+      "resource": 255,
+      "resourcePerLevel": 33,
+      "attackDamage": 50,
+      "attackDamagePerLevel": 3.5,
+      "attackSpeed": 0.625,
+      "attackSpeedPerLevel": 2.215,
+      "armor": 21,
+      "armorPerLevel": 3.8,
+      "magicResist": 30,
+      "magicResistPerLevel": 1.25,
+      "moveSpeed": 335,
+      "attackRange": 125
+    },
     "abilities": [
       {
         "key": "P",
@@ -2414,8 +2910,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：拉莫斯外壳强化后获得额外伤害，将自身25%护甲转化为攻击力。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -2482,6 +2978,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 5,
+    "stats": {
+      "hp": 435,
+      "hpPerLevel": 85,
+      "resource": 202,
+      "resourcePerLevel": 38,
+      "attackDamage": 54.5,
+      "attackDamagePerLevel": 3.2,
+      "attackSpeed": 0.65789,
+      "attackSpeedPerLevel": 3,
+      "armor": 15,
+      "armorPerLevel": 3.5,
+      "magicResist": 30,
+      "magicResistPerLevel": 1.25,
+      "moveSpeed": 345,
+      "attackRange": 175
+    },
     "abilities": [
       {
         "key": "P",
@@ -2491,8 +3003,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：孙悟空的护甲和魔法抗性会根据周围的敌方英雄数量而增加。\n数值说明：OP.GG Classic 与 Riot 3.15.5 公开字段未提供独立固定数值；不使用其他版本或人工估值补写。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -2559,6 +3071,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 6,
+    "stats": {
+      "hp": 380,
+      "hpPerLevel": 70,
+      "resource": 265,
+      "resourcePerLevel": 45,
+      "attackDamage": 47,
+      "attackDamagePerLevel": 3,
+      "attackSpeed": 0.64433,
+      "attackSpeedPerLevel": 2.3,
+      "armor": 8,
+      "armorPerLevel": 3.3,
+      "magicResist": 30,
+      "magicResistPerLevel": 0,
+      "moveSpeed": 330,
+      "attackRange": 550
+    },
     "abilities": [
       {
         "key": "P",
@@ -2568,8 +3096,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：施放3次技能后，娑娜的下一次攻击造成额外魔法伤害并降低她的目标在若干秒内造成的伤害。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -2636,6 +3164,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 7,
+    "stats": {
+      "hp": 423,
+      "hpPerLevel": 90,
+      "resource": 215,
+      "resourcePerLevel": 40,
+      "attackDamage": 56.3,
+      "attackDamagePerLevel": 3.375,
+      "attackSpeed": 0.63776,
+      "attackSpeedPerLevel": 3.4,
+      "armor": 18,
+      "armorPerLevel": 3.75,
+      "magicResist": 30,
+      "magicResistPerLevel": 1.25,
+      "moveSpeed": 335,
+      "attackRange": 125
+    },
     "abilities": [
       {
         "key": "P",
@@ -2645,8 +3189,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：墨菲特被岩石护盾保护，最多吸收10%最大生命值的伤害。若10秒内未受到攻击，这个护盾将重置。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -2720,6 +3264,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 7,
+    "stats": {
+      "hp": 410,
+      "hpPerLevel": 90,
+      "resource": 200,
+      "resourcePerLevel": 45,
+      "attackDamage": 53.3,
+      "attackDamagePerLevel": 3.5,
+      "attackSpeed": 0.63776,
+      "attackSpeedPerLevel": 3.48,
+      "armor": 15,
+      "armorPerLevel": 3.5,
+      "magicResist": 30,
+      "magicResistPerLevel": 1.25,
+      "moveSpeed": 350,
+      "attackRange": 125
+    },
     "abilities": [
       {
         "key": "P",
@@ -2729,8 +3289,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：内瑟会从敌人身上吸取灵魂能量，从而获得额外生命偷取。\n数值说明：OP.GG Classic 与 Riot 3.15.5 公开字段未提供独立固定数值；不使用其他版本或人工估值补写。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -2797,6 +3357,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 7,
+    "stats": {
+      "hp": 472,
+      "hpPerLevel": 84,
+      "resource": 220,
+      "resourcePerLevel": 40,
+      "attackDamage": 47,
+      "attackDamagePerLevel": 3.8,
+      "attackSpeed": 0.63776,
+      "attackSpeedPerLevel": 2.18,
+      "armor": 18,
+      "armorPerLevel": 3.3,
+      "magicResist": 30,
+      "magicResistPerLevel": 1.25,
+      "moveSpeed": 335,
+      "attackRange": 125
+    },
     "abilities": [
       {
         "key": "P",
@@ -2806,8 +3382,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：阿木木的攻击会削弱目标的魔法抗性，持续3秒。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -2874,6 +3450,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 6,
+    "stats": {
+      "hp": 435,
+      "hpPerLevel": 85,
+      "resource": 212,
+      "resourcePerLevel": 38,
+      "attackDamage": 46.5,
+      "attackDamagePerLevel": 3,
+      "attackSpeed": 0.65606,
+      "attackSpeedPerLevel": 3.01,
+      "armor": 15,
+      "armorPerLevel": 3,
+      "magicResist": 30,
+      "magicResistPerLevel": 0,
+      "moveSpeed": 325,
+      "attackRange": 550
+    },
     "abilities": [
       {
         "key": "P",
@@ -2883,8 +3475,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：未受到攻击5秒后，厄运小姐额外获得 25移动速度 。该加成每秒提升9，最高可达70。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -2951,6 +3543,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 6,
+    "stats": {
+      "hp": 440,
+      "hpPerLevel": 84,
+      "resource": 255,
+      "resourcePerLevel": 40,
+      "attackDamage": 46,
+      "attackDamagePerLevel": 3,
+      "attackSpeed": 0.66489,
+      "attackSpeedPerLevel": 2.65,
+      "armor": 10,
+      "armorPerLevel": 3.5,
+      "magicResist": 30,
+      "magicResistPerLevel": 0,
+      "moveSpeed": 330,
+      "attackRange": 500
+    },
     "abilities": [
       {
         "key": "P",
@@ -2960,8 +3568,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：阵亡后，克格莫的身体将启动连锁反应，并于4秒之后爆炸，对周围的敌人们造成魔法伤害。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -3035,6 +3643,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 8,
+    "stats": {
+      "hp": 418,
+      "hpPerLevel": 93,
+      "resource": 255,
+      "resourcePerLevel": 40,
+      "attackDamage": 53.3,
+      "attackDamagePerLevel": 2.8,
+      "attackSpeed": 0.63776,
+      "attackSpeedPerLevel": 2.5,
+      "armor": 17,
+      "armorPerLevel": 3.5,
+      "magicResist": 30,
+      "magicResistPerLevel": 0,
+      "moveSpeed": 335,
+      "attackRange": 125
+    },
     "abilities": [
       {
         "key": "P",
@@ -3044,8 +3668,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：凯尔获得相当于自身一定百分比法术强度的攻击力，并获得相当于自身一定百分比攻击力的法术强度。\n数值说明：OP.GG Classic 与 Riot 3.15.5 公开字段未提供独立固定数值；不使用其他版本或人工估值补写。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -3112,6 +3736,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 5,
+    "stats": {
+      "hp": 380,
+      "hpPerLevel": 71,
+      "resource": 260,
+      "resourcePerLevel": 60,
+      "attackDamage": 48.6,
+      "attackDamagePerLevel": 3,
+      "attackSpeed": 0.625,
+      "attackSpeedPerLevel": 2.13,
+      "armor": 6.75,
+      "armorPerLevel": 3.8,
+      "magicResist": 30,
+      "magicResistPerLevel": 0,
+      "moveSpeed": 335,
+      "attackRange": 600
+    },
     "abilities": [
       {
         "key": "P",
@@ -3121,8 +3761,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：基兰和友军获得额外经验。\n数值说明：OP.GG Classic 与 Riot 3.15.5 公开字段未提供独立固定数值；不使用其他版本或人工估值补写。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -3196,6 +3836,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 8,
+    "stats": {
+      "hp": 428,
+      "hpPerLevel": 98,
+      "resource": 190,
+      "resourcePerLevel": 30,
+      "attackDamage": 56.76,
+      "attackDamagePerLevel": 3.375,
+      "attackSpeed": 0.67935,
+      "attackSpeedPerLevel": 2.88,
+      "armor": 16,
+      "armorPerLevel": 3.5,
+      "magicResist": 30,
+      "magicResistPerLevel": 1.25,
+      "moveSpeed": 345,
+      "attackRange": 125
+    },
     "abilities": [
       {
         "key": "P",
@@ -3205,8 +3861,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：沃里克的每次攻击都会为他恢复生命值。每次对同一目标连续发起攻击都会提高生命偷取的数值。\n数值说明：OP.GG Classic 与 Riot 3.15.5 公开字段未提供独立固定数值；不使用其他版本或人工估值补写。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -3273,6 +3929,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 6,
+    "stats": {
+      "hp": 430,
+      "hpPerLevel": 87,
+      "resource": 235,
+      "resourcePerLevel": 40,
+      "attackDamage": 55,
+      "attackDamagePerLevel": 3,
+      "attackSpeed": 0.625,
+      "attackSpeedPerLevel": 2.9,
+      "armor": 18,
+      "armorPerLevel": 3.1,
+      "magicResist": 30,
+      "magicResistPerLevel": 1.25,
+      "moveSpeed": 335,
+      "attackRange": 125
+    },
     "abilities": [
       {
         "key": "P",
@@ -3282,8 +3954,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：伤害类技能会在敌人身上施加持续3.5秒的日光效果。在此期间，当友方英雄对被标记的敌人造成伤害时，会消耗日光减益来使目标受到额外的魔法伤害。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -3357,6 +4029,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 6,
+    "stats": {
+      "hp": 440,
+      "hpPerLevel": 96,
+      "resource": 205,
+      "resourcePerLevel": 40,
+      "attackDamage": 54.1,
+      "attackDamagePerLevel": 4.2,
+      "attackSpeed": 0.625,
+      "attackSpeedPerLevel": 2.1,
+      "armor": 19,
+      "armorPerLevel": 3.8,
+      "magicResist": 30,
+      "magicResistPerLevel": 1.25,
+      "moveSpeed": 345,
+      "attackRange": 125
+    },
     "abilities": [
       {
         "key": "P",
@@ -3366,8 +4054,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：普通攻击使所有技能的冷却时间缩短0.5秒。攻击英雄时将此效果翻倍。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -3441,6 +4129,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 8,
+    "stats": {
+      "hp": 390,
+      "hpPerLevel": 75,
+      "resource": 270,
+      "resourcePerLevel": 61,
+      "attackDamage": 42.2,
+      "attackDamagePerLevel": 3.25,
+      "attackSpeed": 0.625,
+      "attackSpeedPerLevel": 2.11,
+      "armor": 11,
+      "armorPerLevel": 3.5,
+      "magicResist": 30,
+      "magicResistPerLevel": 0,
+      "moveSpeed": 335,
+      "attackRange": 450
+    },
     "abilities": [
       {
         "key": "P",
@@ -3450,8 +4154,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：在死亡时，卡尔萨斯会化为一个灵体，能够继续施放技能。\n数值说明：OP.GG Classic 与 Riot 3.15.5 公开字段未提供独立固定数值；不使用其他版本或人工估值补写。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -3525,6 +4229,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 7,
+    "stats": {
+      "hp": 350,
+      "hpPerLevel": 80,
+      "resource": 235,
+      "resourcePerLevel": 45,
+      "attackDamage": 47.2,
+      "attackDamagePerLevel": 3,
+      "attackSpeed": 0.625,
+      "attackSpeedPerLevel": 2.8,
+      "armor": 12,
+      "armorPerLevel": 3.5,
+      "magicResist": 30,
+      "magicResistPerLevel": 0,
+      "moveSpeed": 325,
+      "attackRange": 550
+    },
     "abilities": [
       {
         "key": "P",
@@ -3534,8 +4254,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：伊泽瑞尔的任何技能在击中目标后，都会提升他的攻击速度（最多可叠加5次）。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -3609,6 +4329,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 6,
+    "stats": {
+      "hp": 403,
+      "hpPerLevel": 104,
+      "resource": 200,
+      "resourcePerLevel": 40,
+      "attackDamage": 55.52,
+      "attackDamagePerLevel": 3.1875,
+      "attackSpeed": 0.625,
+      "attackSpeedPerLevel": 1.63,
+      "armor": 17.75,
+      "armorPerLevel": 3.25,
+      "magicResist": 30,
+      "magicResistPerLevel": 1.25,
+      "moveSpeed": 345,
+      "attackRange": 125
+    },
     "abilities": [
       {
         "key": "P",
@@ -3618,8 +4354,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：赛恩每次受到攻击时，有40%几率无视最多30/40/50伤害。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -3693,6 +4429,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 7,
+    "stats": {
+      "hp": 389,
+      "hpPerLevel": 81,
+      "resource": 220,
+      "resourcePerLevel": 40,
+      "attackDamage": 49,
+      "attackDamagePerLevel": 3,
+      "attackSpeed": 0.67935,
+      "attackSpeedPerLevel": 3.38,
+      "armor": 14,
+      "armorPerLevel": 3,
+      "magicResist": 30,
+      "magicResistPerLevel": 0,
+      "moveSpeed": 330,
+      "attackRange": 550
+    },
     "abilities": [
       {
         "key": "P",
@@ -3702,8 +4454,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：图奇的普通攻击会使目标感染，每秒造成魔法伤害。\n数值说明：OP.GG Classic 与 Riot 3.15.5 公开字段未提供独立固定数值；不使用其他版本或人工估值补写。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -3777,6 +4529,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 8,
+    "stats": {
+      "hp": 444,
+      "hpPerLevel": 92,
+      "resource": 180,
+      "resourcePerLevel": 42,
+      "attackDamage": 55,
+      "attackDamagePerLevel": 3,
+      "attackSpeed": 0.67935,
+      "attackSpeedPerLevel": 2,
+      "armor": 15,
+      "armorPerLevel": 3,
+      "magicResist": 30,
+      "magicResistPerLevel": 1.25,
+      "moveSpeed": 355,
+      "attackRange": 125
+    },
     "abilities": [
       {
         "key": "P",
@@ -3786,8 +4554,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：易有时会连续攻击两次。\n数值说明：OP.GG Classic 与 Riot 3.15.5 公开字段未提供独立固定数值；不使用其他版本或人工估值补写。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -3854,6 +4622,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 6,
+    "stats": {
+      "hp": 415,
+      "hpPerLevel": 82,
+      "resource": 200,
+      "resourcePerLevel": 55,
+      "attackDamage": 44,
+      "attackDamagePerLevel": 2.6,
+      "attackSpeed": 0.625,
+      "attackSpeedPerLevel": 2.25,
+      "armor": 9,
+      "armorPerLevel": 3.7,
+      "magicResist": 30,
+      "magicResistPerLevel": 0,
+      "moveSpeed": 325,
+      "attackRange": 550
+    },
     "abilities": [
       {
         "key": "P",
@@ -3863,8 +4647,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：每当皮克斯正在跟随的英雄进行攻击时，皮克斯就会发射魔法飞弹。这些飞弹会自动寻敌，但也会被其它单位所拦截。\n数值说明：OP.GG Classic 与 Riot 3.15.5 公开字段未提供独立固定数值；不使用其他版本或人工估值补写。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -3931,6 +4715,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 5,
+    "stats": {
+      "hp": 355,
+      "hpPerLevel": 82,
+      "resource": 250,
+      "resourcePerLevel": 55,
+      "attackDamage": 48.3,
+      "attackDamagePerLevel": 2.625,
+      "attackSpeed": 0.625,
+      "attackSpeedPerLevel": 2.24,
+      "armor": 12.25,
+      "armorPerLevel": 3.75,
+      "magicResist": 30,
+      "magicResistPerLevel": 0,
+      "moveSpeed": 340,
+      "attackRange": 525
+    },
     "abilities": [
       {
         "key": "P",
@@ -3940,8 +4740,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：维迦每损失1%法力值，法力回复便提升1%。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -4008,6 +4808,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 6,
+    "stats": {
+      "hp": 440,
+      "hpPerLevel": 80,
+      "resource": 205,
+      "resourcePerLevel": 40,
+      "attackDamage": 54.1,
+      "attackDamagePerLevel": 4.2,
+      "attackSpeed": 0.625,
+      "attackSpeedPerLevel": 1.44,
+      "armor": 19,
+      "armorPerLevel": 3.5,
+      "magicResist": 30,
+      "magicResistPerLevel": 1.25,
+      "moveSpeed": 345,
+      "attackRange": 125
+    },
     "abilities": [
       {
         "key": "P",
@@ -4017,8 +4833,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：当科加斯击杀一个单位时，他会回复生命值和法力值。回复的数值会随科加斯的等级提升。\n数值说明：OP.GG Classic 与 Riot 3.15.5 公开字段未提供独立固定数值；不使用其他版本或人工估值补写。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -4085,6 +4901,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 6,
+    "stats": {
+      "hp": 380,
+      "hpPerLevel": 80,
+      "resource": 250,
+      "resourcePerLevel": 45,
+      "attackDamage": 51.66,
+      "attackDamagePerLevel": 3,
+      "attackSpeed": 0.625,
+      "attackSpeedPerLevel": 1.36,
+      "armor": 12,
+      "armorPerLevel": 3.5,
+      "magicResist": 30,
+      "magicResistPerLevel": 0,
+      "moveSpeed": 340,
+      "attackRange": 550
+    },
     "abilities": [
       {
         "key": "P",
@@ -4094,8 +4926,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：每隔几次施法，玛尔扎哈会召唤一只无法控制的虚灵主动攻击敌人。虚灵会随时间成长，获得护甲、伤害和攻击速度。\n数值说明：OP.GG Classic 与 Riot 3.15.5 公开字段未提供独立固定数值；不使用其他版本或人工估值补写。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -4169,6 +5001,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 7,
+    "stats": {
+      "hp": 433,
+      "hpPerLevel": 78,
+      "resource": 230,
+      "resourcePerLevel": 45,
+      "attackDamage": 52.3,
+      "attackDamagePerLevel": 3.9,
+      "attackSpeed": 0.63971,
+      "attackSpeedPerLevel": 3.7,
+      "armor": 14,
+      "armorPerLevel": 3.2,
+      "magicResist": 30,
+      "magicResistPerLevel": 0,
+      "moveSpeed": 340,
+      "attackRange": 125
+    },
     "abilities": [
       {
         "key": "P",
@@ -4178,8 +5026,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：卡萨丁受到的 魔法伤害 减少15%，并将该伤害转化为额外 攻击速度 。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -4253,6 +5101,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 6,
+    "stats": {
+      "hp": 437,
+      "hpPerLevel": 96,
+      "resource": 213,
+      "resourcePerLevel": 42,
+      "attackDamage": 51.06,
+      "attackDamagePerLevel": 3.45,
+      "attackSpeed": 0.625,
+      "attackSpeedPerLevel": 2.25,
+      "armor": 16.5,
+      "armorPerLevel": 3.5,
+      "magicResist": 30,
+      "magicResistPerLevel": 1.25,
+      "moveSpeed": 350,
+      "attackRange": 125
+    },
     "abilities": [
       {
         "key": "P",
@@ -4262,8 +5126,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：进行5次攻击后，努努可以免费施放一个技能。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -4337,6 +5201,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 9,
+    "stats": {
+      "hp": 378,
+      "hpPerLevel": 82,
+      "resource": 200,
+      "resourcePerLevel": 40,
+      "attackDamage": 44.5,
+      "attackDamagePerLevel": 3,
+      "attackSpeed": 0.69038,
+      "attackSpeedPerLevel": 3.38,
+      "armor": 14,
+      "armorPerLevel": 3.75,
+      "magicResist": 30,
+      "magicResistPerLevel": 0,
+      "moveSpeed": 330,
+      "attackRange": 500
+    },
     "abilities": [
       {
         "key": "P",
@@ -4346,8 +5226,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：如果提莫保持静止，并在短时间内未执行任何操作，他将进入无限期的隐形状态。提莫脱离隐形后获得【出奇制胜】效果，提升攻击速度，持续数秒。\n数值说明：OP.GG Classic 与 Riot 3.15.5 公开字段未提供独立固定数值；不使用其他版本或人工估值补写。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -4414,6 +5294,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 7,
+    "stats": {
+      "hp": 375,
+      "hpPerLevel": 82,
+      "resource": 243,
+      "resourcePerLevel": 37,
+      "attackDamage": 48.2,
+      "attackDamagePerLevel": 3,
+      "attackSpeed": 0.625,
+      "attackSpeedPerLevel": 2.3,
+      "armor": 13.5,
+      "armorPerLevel": 3.5,
+      "magicResist": 30,
+      "magicResistPerLevel": 0,
+      "moveSpeed": 325,
+      "attackRange": 550
+    },
     "abilities": [
       {
         "key": "P",
@@ -4423,8 +5319,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：库奇的普攻对小兵、野怪和英雄造成额外真实伤害。\n数值说明：OP.GG Classic 与 Riot 3.15.5 公开字段未提供独立固定数值；不使用其他版本或人工估值补写。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -4491,6 +5387,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 7,
+    "stats": {
+      "hp": 378,
+      "hpPerLevel": 82,
+      "resource": 203,
+      "resourcePerLevel": 43,
+      "attackDamage": 49,
+      "attackDamagePerLevel": 3,
+      "attackSpeed": 0.65789,
+      "attackSpeedPerLevel": 1.6,
+      "armor": 12.75,
+      "armorPerLevel": 3.25,
+      "magicResist": 30,
+      "magicResistPerLevel": 0,
+      "moveSpeed": 335,
+      "attackRange": 500
+    },
     "abilities": [
       {
         "key": "P",
@@ -4500,8 +5412,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：希维尔攻击敌方英雄时，会短暂获得移动速度提升。\n数值说明：OP.GG Classic 与 Riot 3.15.5 公开字段未提供独立固定数值；不使用其他版本或人工估值补写。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -4575,6 +5487,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 8,
+    "stats": {
+      "hp": 433,
+      "hpPerLevel": 87,
+      "resource": 210,
+      "resourcePerLevel": 34,
+      "attackDamage": 50.7,
+      "attackDamagePerLevel": 2.9,
+      "attackSpeed": 0.67935,
+      "attackSpeedPerLevel": 2.95,
+      "armor": 17.1,
+      "armorPerLevel": 3.9,
+      "magicResist": 30,
+      "magicResistPerLevel": 1.25,
+      "moveSpeed": 355,
+      "attackRange": 150
+    },
     "abilities": [
       {
         "key": "P",
@@ -4584,8 +5512,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：每攻击或施法4次后，潘森可格挡下一次普通攻击或防御塔攻击。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -4652,6 +5580,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 9,
+    "stats": {
+      "hp": 423,
+      "hpPerLevel": 95,
+      "resource": 200,
+      "resourcePerLevel": 40,
+      "attackDamage": 55.66,
+      "attackDamagePerLevel": 3.5,
+      "attackSpeed": 0.625,
+      "attackSpeedPerLevel": 1.13,
+      "armor": 14.5,
+      "armorPerLevel": 3.5,
+      "magicResist": 30,
+      "magicResistPerLevel": 1.25,
+      "moveSpeed": 325,
+      "attackRange": 125
+    },
     "abilities": [
       {
         "key": "P",
@@ -4661,8 +5605,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：布里茨的生命值降到20%以下时，法力屏障就会激活，生成一道相当于其50%法力值的护盾，持续10秒。法力屏障每90秒内只能触发一次。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -4694,7 +5638,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": "9 / 8 / 7 / 6 / 5",
         "cost": "25",
         "range": "300",
-        "numericDetail": "布里茨为机械手臂充能，下一次攻击造成双倍伤害并将目标抛向空中。",
+        "numericDetail": "布里茨为机械手臂充能，下一次攻击造成双倍伤害并将目标抛向空中。\n数值说明：OP.GG Classic 与 Riot 3.15.5 公开字段未提供独立固定数值；不使用其他版本或人工估值补写。",
         "numericVersion": "3.15.5"
       },
       {
@@ -4736,6 +5680,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 7,
+    "stats": {
+      "hp": 405,
+      "hpPerLevel": 76,
+      "resource": 240,
+      "resourcePerLevel": 60,
+      "attackDamage": 48.8,
+      "attackDamagePerLevel": 3,
+      "attackSpeed": 0.625,
+      "attackSpeedPerLevel": 2.14,
+      "armor": 13,
+      "armorPerLevel": 3.8,
+      "magicResist": 30,
+      "magicResistPerLevel": 0,
+      "moveSpeed": 340,
+      "attackRange": 550
+    },
     "abilities": [
       {
         "key": "P",
@@ -4745,8 +5705,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：使周围友军提高16魔法抗性。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",
@@ -4820,6 +5780,22 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       }
     ],
     "availableSkinCount": 6,
+    "stats": {
+      "hp": 433,
+      "hpPerLevel": 89,
+      "resource": 0,
+      "resourcePerLevel": 0,
+      "attackDamage": 56.23,
+      "attackDamagePerLevel": 3,
+      "attackSpeed": 0.625,
+      "attackSpeedPerLevel": 2.8,
+      "armor": 17,
+      "armorPerLevel": 3.5,
+      "magicResist": 30,
+      "magicResistPerLevel": 1.25,
+      "moveSpeed": 345,
+      "attackRange": 125
+    },
     "abilities": [
       {
         "key": "P",
@@ -4829,8 +5805,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "cooldown": null,
         "cost": null,
         "range": null,
-        "numericDetail": null,
-        "numericVersion": null
+        "numericDetail": "技能文本：蒙多医生每秒回复0.3%的最大生命值。",
+        "numericVersion": "3.15.5"
       },
       {
         "key": "Q",

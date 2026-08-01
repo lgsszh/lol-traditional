@@ -2242,6 +2242,94 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, a:focus-visib
   background: #1a1a20;
   padding: 20px;
 }
+
+.ability-calculator {
+  margin-top: 18px;
+  padding: 16px;
+  border: 1px solid color-mix(in srgb, var(--champion-accent, #5383e8) 34%, #2d3340);
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(83, 131, 232, .09), rgba(14, 16, 22, .84));
+}
+
+.ability-calculator > header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.ability-calculator > header > div { margin-right: auto; }
+.ability-calculator > header b { display: block; color: #f2f4f8; font-size: 15px; }
+.ability-calculator > header small { color: #8d97aa; }
+.ability-calculator label { display: flex; align-items: center; gap: 9px; color: #aeb7c8; font-size: 13px; }
+.ability-calculator input[type="range"] { width: 150px; accent-color: var(--champion-accent, #5383e8); }
+.ability-calculator header button {
+  min-height: 36px;
+  padding: 0 13px;
+  border: 1px solid #394255;
+  border-radius: 6px;
+  background: #20242d;
+  color: #b8c1d3;
+}
+.ability-calculator header button.active { border-color: #5383e8; background: #24365b; color: #dce8ff; }
+.ability-calculator > div {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(74px, 1fr));
+  gap: 1px;
+  margin-top: 14px;
+  overflow: hidden;
+  border: 1px solid #2c313d;
+  border-radius: 6px;
+  background: #2c313d;
+}
+.ability-calculator > div span { padding: 10px 8px; text-align: center; background: #171a21; }
+.ability-calculator > div small { display: block; color: #7f899c; }
+.ability-calculator > div b { display: block; margin-top: 3px; color: #9dbbff; font-size: 15px; }
+.ability-calculator > p { margin: 11px 0 0; color: #778298; font-size: 12px; line-height: 1.6; }
+
+.mayhem-six-build {
+  margin-top: 18px;
+  padding: 18px;
+  border: 1px solid #303744;
+  border-radius: 8px;
+  background: #17191f;
+}
+.mayhem-six-build > header { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; }
+.mayhem-six-build > header span { color: #7fa6ff; font-size: 12px; font-weight: 700; letter-spacing: .08em; }
+.mayhem-six-build > header h4 { margin: 4px 0; color: #f2f4f8; font-size: 20px; }
+.mayhem-six-build > header p { margin: 0; color: #8b95a8; line-height: 1.55; }
+.mayhem-six-build > header > b { color: #7fa6ff; font-size: 18px; white-space: nowrap; }
+.mayhem-six-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; margin-top: 16px; }
+.mayhem-six-grid > span { position: relative; display: grid; justify-items: center; gap: 6px; padding: 12px 8px; border: 1px solid #303744; border-radius: 7px; background: #1d2028; text-align: center; }
+.mayhem-six-grid img { width: 50px; height: 50px; border-radius: 6px; }
+.mayhem-six-grid i { position: absolute; top: 6px; left: 7px; color: #6f7c95; font-style: normal; font-size: 11px; }
+.mayhem-six-grid b { color: #dce1eb; font-size: 13px; }
+.mayhem-six-grid small { color: #778298; }
+.mayhem-six-grid > span.missing { border-style: dashed; background: #181b22; }
+.mayhem-six-grid > span.missing b { margin-top: 14px; color: #8d97aa; }
+.mayhem-matchups { display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 14px; margin-top: 16px; }
+.mayhem-matchups nav { display: grid; gap: 6px; }
+.mayhem-matchups nav button { padding: 9px 11px; border: 1px solid #303744; border-radius: 5px; background: #1c1f26; color: #9da7b9; text-align: left; }
+.mayhem-matchups nav button.active { border-color: #5383e8; background: #23345a; color: #dce8ff; }
+.mayhem-matchups > div { display: flex; align-items: center; gap: 9px; flex-wrap: wrap; padding: 12px; border: 1px solid #2a303b; border-radius: 6px; }
+.mayhem-matchups > div > strong { width: 100%; color: #aeb8ca; }
+.mayhem-matchups > div > span { display: grid; grid-template-columns: 38px auto; column-gap: 8px; align-items: center; padding: 7px; border-radius: 5px; background: #20232b; }
+.mayhem-matchups > div img { grid-row: 1 / 3; width: 38px; height: 38px; border-radius: 4px; }
+.mayhem-matchups > div b { color: #d7dce6; font-size: 12px; }
+.mayhem-matchups > div small { max-width: 180px; color: #737e92; font-size: 10px; }
+.mayhem-matchups > div p { margin: 0; color: #7e899d; }
+
+@media (max-width: 1200px) {
+  .ability-calculator > div { grid-template-columns: repeat(4, minmax(74px, 1fr)); }
+  .mayhem-six-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 720px) {
+  .ability-calculator > div { grid-template-columns: repeat(2, minmax(74px, 1fr)); }
+  .mayhem-six-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .mayhem-matchups { grid-template-columns: 1fr; }
+  .mayhem-matchups nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
 .opgg-item-groups {
   display: grid;
   grid-template-columns: minmax(280px, .9fr) minmax(280px, .9fr) minmax(360px, 1.2fr);

@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "英雄联盟怀旧服攻略介绍",
-    description: "无需登录 · 5v5 怀旧服 · 海克斯大乱斗经典模式版 · AI 方案",
+    description: "无需登录 · 5v5 怀旧服 · 海克斯大乱斗经典模式版 · 阵容方案",
     images: ["og-public.jpg"],
   },
 };

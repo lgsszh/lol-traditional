@@ -34,7 +34,7 @@ import {
   type ClassicMastery,
   type ClassicRuneGroup,
 } from "./classic-data";
-import { classicItems } from "./classic-items.generated";
+import { classicItems, type ClassicItem } from "./classic-items.generated";
 import { classicItemRecipes } from "./classic-item-recipes.generated";
 import { localAssetUrl } from "./classic-assets";
 import {
@@ -63,7 +63,7 @@ const workbenchNavigation: ReadonlyArray<{
   { id: "masteries", label: "天赋模拟器", shortLabel: "天赋", badge: "56", description: "30 点完整天赋树" },
   { id: "build", label: "技能与出装", shortLabel: "构筑", badge: "152", description: "玩法、技能与装备" },
   { id: "mayhem", label: "怀旧海斗", shortLabel: "怀旧海斗", badge: "188", description: "OP.GG 每日同步" },
-  { id: "ai", label: "AI 助手", shortLabel: "AI", badge: "✦", description: "已校验数据生成" },
+  { id: "ai", label: "阵容方案", shortLabel: "阵容", badge: "✦", description: "透明规则生成六格替换" },
 ];
 type AiProfileId = "balanced" | "aggressive" | "defensive" | "teamfight";
 type AiRecommendation = {
@@ -994,7 +994,7 @@ export default function Home() {
         adjustments,
       });
       setAiState("ready");
-      showToast(`${champion.name} 的 AI 个性化方案已写入（调整 ${adjustments.length} 处）`);
+      showToast(`${champion.name} 的阵容方案已写入（按条件调整 ${adjustments.length} 处）`);
     }, 360);
   };
 
@@ -1354,7 +1354,7 @@ export default function Home() {
                 <div className="subsection-title">
                   <div>
                     <h3>经典玩法攻略</h3>
-                    <p>点击方案卡即整体切换——符文、天赋、召唤师技能、加点与六格出装同步应用该方案；AI 生成的内容切换后即被替换。</p>
+                    <p>点击方案卡即整体切换——符文、天赋、召唤师技能、加点与六格出装同步应用该方案；阵容规则生成的内容切换后即被替换。</p>
                   </div>
                   <span>{selectedGuides.length} 套可切换</span>
                 </div>
@@ -1395,7 +1395,7 @@ export default function Home() {
                       <span>{guide.lane}</span>
                       <strong>{guide.name}</strong>
                       <small>{guide.style}</small>
-                      {aiRecommendation?.guideId === guide.id && <b className="tab-ai-flag">AI</b>}
+                        {aiRecommendation?.guideId === guide.id && <b className="tab-ai-flag">阵容</b>}
                     </button>
                   ))}
                 </div>
@@ -1406,8 +1406,8 @@ export default function Home() {
                     <p>{selectedGuide.summary}</p>
                     {aiRecommendation && aiRecommendation.guideId === selectedGuide.id && (
                       <div className="ai-applied-note">
-                        <b>AI</b>
-                        <span>AI 助手已基于此方案生成「{aiRecommendation.title}」{aiRecommendation.adjustments.length ? `（个性化调整 ${aiRecommendation.adjustments.length} 处）` : ""}，符文、天赋、召唤师技能、加点与六格出装均已写入面板。</span>
+                        <b>阵容规则</b>
+                        <span>阵容方案已基于此路线生成「{aiRecommendation.title}」{aiRecommendation.adjustments.length ? `（按条件调整 ${aiRecommendation.adjustments.length} 处）` : ""}，符文、天赋、召唤师技能、加点与六格出装均已写入面板。</span>
                       </div>
                     )}
                     <div className="strategy-tags" aria-label="玩法标签">
@@ -1552,6 +1552,8 @@ export default function Home() {
                     skillSet={selectedSkillSet}
                     activeKey={inspectedAbility}
                     onSelect={setInspectedAbility}
+                    equippedItems={items.map((id) => itemById.get(id)).filter((item): item is ClassicItem => Boolean(item))}
+                    growthModel="classic-linear"
                   />
                 ) : (
                   <div className="ability-missing" role="status">该英雄的技能资料暂未载入。</div>
@@ -1586,10 +1588,10 @@ export default function Home() {
                   <span>当前方案</span>
                   <strong>{selectedGuide.name}</strong>
                   <em>{selectedGuide.lane} · {selectedGuide.style}</em>
-                  {aiRecommendation && <b className="ai-flag">AI 方案已写入</b>}
+                  {aiRecommendation && <b className="ai-flag">阵容方案已写入</b>}
                   {aiRecommendation && items.length === aiRecommendation.coreItems.length
                     && aiRecommendation.coreItems.every((id, index) => items[index] === id)
-                    ? <b className="synced">六格与 AI 方案一致</b>
+                    ? <b className="synced">六格与阵容方案一致</b>
                     : items.length === selectedGuide.coreItems.length
                     && selectedGuide.coreItems.every((id, index) => items[index] === id)
                     ? <b className="synced">六格与方案一致</b>
@@ -1680,15 +1682,15 @@ export default function Home() {
           {view === "ai" && (
             <section className="simulator-page ai-page" data-guide="ai-assistant">
               <div className="simulator-heading">
-                <div><span>04</span><div><h2>Classic 智能构筑助手</h2><p>依据当前 OP.GG Classic 数据快照、英雄定位和你的作战偏好生成可继续编辑的完整方案。</p></div></div>
+                <div><span>05</span><div><h2>Classic 阵容方案</h2><p>依据当前 OP.GG Classic 数据快照、英雄定位和敌方阵容生成可继续编辑的完整方案。</p></div></div>
                 <div className="simulator-actions"><b className="honesty-badge">规则透明 · 不混入正式服数据</b></div>
               </div>
               <div className="ai-composer">
                 <div className="ai-orb">✦</div>
                 <div className="ai-copy">
-                  <span>AI 构筑助手</span>
+                  <span>透明规则构筑器</span>
                   <h3>为 {selectedChampion.name}{selectedChampion.aliases.length > 0 ? `（${selectedChampion.aliases.join("／")}）` : ""}生成经典方案</h3>
-                  <p>AI 会先在当前英雄的已核验流派中匹配，再统一写入出门装、符文、30 点天赋、召唤师技能、18 级加点、回城路线、六格出装与备选装备。</p>
+                  <p>规则引擎会先在当前英雄的已核验流派中匹配，再按物理爆发、法术爆发、前排、回复等明确条件调整六格出装；全程不调用模型，也不编造 OP.GG 数据。</p>
                   <div className="ai-profile-grid" aria-label="方案策略">
                     {aiProfiles.map((profile) => (
                       <button
@@ -1706,7 +1708,7 @@ export default function Home() {
                       </button>
                     ))}
                   </div>
-                  <textarea value={prompt} onChange={(event) => setPrompt(event.target.value)} aria-label="AI 构筑偏好" />
+                  <textarea value={prompt} onChange={(event) => setPrompt(event.target.value)} aria-label="阵容与构筑偏好" />
                   <div className="ai-route-chips" aria-label={`${selectedChampion.name}可用流派`}>
                     <span>直接指定流派</span>
                     {selectedGuides.map((guide) => (
@@ -1737,7 +1739,7 @@ export default function Home() {
                 <section className="ai-result" aria-live="polite">
                   <header>
                     <div>
-                      <span>AI 生成方案</span>
+                      <span>规则生成方案</span>
                       <h3>{aiRecommendation.title}</h3>
                       <div className="ai-base">
                         <b>基于已核验方案</b>
@@ -1809,7 +1811,7 @@ export default function Home() {
                       return item ? <button key={id} onClick={() => { setInspectedItem(id); changeView("build"); }}><img src={localAssetUrl(item.icon)} alt="" /><span><strong>{item.name}</strong><small>{item.price} 金币 · 点击查看合成树</small></span></button> : null;
                     }) : <small>当前策略暂无额外备选。</small>}
                   </div>
-                  <footer>来源：OP.GG Classic {CLASSIC_PATCH} 本地校验快照 · 方案引擎：位置、职业、装备属性标签与用户偏好规则</footer>
+                  <footer>来源：OP.GG Classic {CLASSIC_PATCH} 本地校验快照 · 确定性规则：位置、职业、装备属性标签与用户选择；不调用联网模型</footer>
                 </section>
               )}
               <div className="source-strip">

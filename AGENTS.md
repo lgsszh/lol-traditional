@@ -57,12 +57,12 @@ status labels:
 
 ## 项目现状与工程约定
 
-### 二、项目现状（v0.6.3）
+### 二、项目现状（v0.7.0）
 
 - 站点名：**英雄联盟怀旧服攻略介绍**（原 RIFT//LAB，已全量更名；代码/测试中不允许再出现 RIFT//LAB 字样，rendered-html 测试会拦截）。
 - 线上地址：https://lgsszh.github.io/lol-traditional/ （GitHub Pages，项目页）。
 - 内容规模：60 位英雄、242 套 S3（2012–2013）考据玩法方案、152 件装备、50 符文、56 天赋、16 召唤师技能；另有 60 英雄 OP.GG 怀旧海斗攻略、2700 条分品质强化推荐、300 套技能加点与 188 个 KIWI_JADE 强化符文。
-- 版本：package.json `0.6.3`；已发布 Git 标签截至 v0.6.2，本次改动发布后应新增 v0.6.3。
+- 版本：package.json `0.7.0`；已发布 Git 标签截至 v0.6.3，本次改动发布后应新增 v0.7.0。
 - 界面：OP.GG 风格蓝色系（强调色 `#5383e8`），每个英雄保留专属主题色（`--champion-accent`，来自 classic-data 的 accent 字段，不要统一掉）。
 - 英雄直达链接：`#champion=<key小写>`（如 `#champion=ezreal`）直接打开该英雄出装页；`#build=` 是完整构筑分享链接，两者互斥，别破坏。
 
@@ -112,6 +112,7 @@ status labels:
 - git 推拉 github.com 需借系统代理：`git config --global http.https://github.com.proxy <系统代理>` 已配置过。本机 Git 系统配置默认使用 Schannel，曾发生 TLS 握手失败；本仓库已改用 Git 内置 OpenSSL + HTTP/1.1。推送必须执行 `npm run network:git-push -- origin <分支或标签>`，由 `scripts/network-guard.mjs` 对握手失败、连接复位和超时做最多 5 次指数退避；非快进、权限、页面契约等真实错误不会重试。
 - GitHub Pages 在线核验必须执行 `npm run network:pages-verify`，不要临时拼 Node `fetch` 或 `curl`。该命令通过固定版本的 Undici `EnvHttpProxyAgent` 显式复用系统 HTTPS 代理并添加无缓存参数，仅对 TLS、`ECONNRESET`、超时、HTTP 408/425/429/5xx 重试；HTTP 404 或缺少标题、basePath、镜像路径会立即失败。
 - **先 commit 再 `git pull --rebase`**（CRLF 漂移会让工作区显示为脏，rebase 拒绝执行）。
+- GitHub 代码检索必须执行 `npm run network:github-search -- "<精确查询>" [结果数]`。不要调用 agent-reach 的通用 GitHub 搜索封装等待后台超时；agent-reach 只用于选路，实际检索由已登录的 `gh search code` 完成，并由 network guard 限时、结构化输出和仅对瞬断重试。外部代码检索只是补充证据，Riot／CommunityDragon／OP.GG 主数据已经足够时不得让它阻塞生成与测试。
 - PowerShell 5.1 写文件默认带 BOM：改 package.json / package-lock.json 必须用无 BOM UTF-8（vitefu 直接 JSON.parse，带 BOM 就炸）。
 - tsconfig 已开 allowImportingTsExtensions（源码里 `import x from "./y.ts"` 是刻意的，别"修"掉后缀）。
 - Windows 本机的 `agent-reach doctor` 对 Jina Reader 可能只检查模块存在而误报可用：当前系统 `curl`/Schannel 会报 `SEC_E_NO_CREDENTIALS`，且匿名 Jina 请求可能因网络信誉返回 401。**本项目常规调研不得先探测或调用 `r.jina.ai`**；即使 agent-reach 报告 Jina 可用，OP.GG 页面也应直接使用项目内 Node `fetch` 或平台 Web 连接器。Jina 失败不得误报成 OP.GG 网络异常，也不得对同一结构错误连续重试 5 次。禁止用 `curl -k` 绕过 TLS 校验；只有用户明确要求且已配置正式 Jina API Key 时才可使用，并按 HTTP 状态区分鉴权、限流和真实网络故障。
@@ -144,6 +145,7 @@ npm run roster:check   # 校验英雄名单与 OP.GG 一致
 npm run assets:update  # 仅更新图片镜像与审计清单
 npm run network:git-push -- origin main   # 抗 TLS 瞬断推送分支或标签
 npm run network:pages-verify              # 抗连接复位验证线上 Pages
+npm run network:github-search -- "query" 20 # 限时、可重试的 GitHub 代码检索
 ```
 
 ### 十、OP.GG 怀旧海斗解析与状态口径

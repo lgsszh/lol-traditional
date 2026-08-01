@@ -347,6 +347,12 @@ test("怀旧海斗页面不再复用峡谷方案或启发式推荐，并纳入�
   assert.match(componentSource, /runtime\.augmentRecommendations/);
   assert.match(componentSource, /build\.skillBuilds\.map/);
   assert.match(componentSource, /ChampionAbilityPanel/);
+  assert.match(componentSource, /cache:\s*"no-store"/);
+  assert.match(componentSource, /fresh=\$\{Date\.now\(\)\}/);
+  assert.doesNotMatch(componentSource, /cache:\s*"force-cache"/);
+  assert.match(componentSource, /Array\.from\(\{ length: 6 \}/);
+  assert.match(componentSource, /OP\.GG 样本不足六件时保留“数据未提供”空位/);
+  assert.match(componentSource, /从 OP\.GG 其他高频路线替换/);
   assert.match(componentSource, /aria-orientation="horizontal"/);
   assert.match(componentSource, /selectSection/);
   assert.match(componentSource, /scrollIntoView\(\{ block: "start", behavior: "auto" \}\)/);

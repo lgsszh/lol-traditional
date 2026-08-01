@@ -17,6 +17,7 @@ import ChampionAbilityPanel, { type AbilityPanelSkillSet } from "./ChampionAbili
 type MayhemSection = "overview" | "augments" | "skills" | "items" | "catalog";
 type CatalogFilter = "recommended" | "exclusive" | "shared" | "all";
 type AbilityKey = "P" | "Q" | "W" | "E" | "R";
+type MatchupProfile = "physical" | "magic" | "frontline" | "sustain";
 
 const rarityLabels: Record<MayhemRarity, string> = {
   silver: "白银阶",
@@ -50,7 +51,13 @@ function runtimeUrl(path: string) {
 }
 
 async function fetchRuntime<T>(path: string): Promise<T> {
-  const response = await fetch(runtimeUrl(path), { cache: "force-cache" });
+  // These filenames intentionally stay stable so the initial bundle can load
+  // only the selected champion. Never let an older deployment's JSON survive
+  // a data refresh in the browser cache.
+  const separator = path.includes("?") ? "&" : "?";
+  const response = await fetch(`${runtimeUrl(path)}${separator}fresh=${Date.now()}`, {
+    cache: "no-store",
+  });
   if (!response.ok) throw new Error(`数据快照请求失败（HTTP ${response.status}）`);
   return response.json() as Promise<T>;
 }
@@ -97,6 +104,22 @@ function groupedItems(itemIds: string[]) {
     quantity,
   })).filter((entry) => entry.item);
 }
+
+function recommendedSixItemIds(items: MayhemChampionRuntime["build"]["items"]) {
+  const ordered = [
+    ...(items.boots[0]?.itemIds ?? []),
+    ...(items.core[0]?.itemIds ?? []),
+    ...items.core.flatMap((entry) => entry.itemIds),
+  ];
+  return [...new Set(ordered)].slice(0, 6);
+}
+
+const matchupProfiles: Record<MatchupProfile, { label: string; tags: string[] }> = {
+  physical: { label: "物理爆发", tags: ["armor", "health"] },
+  magic: { label: "法术爆发", tags: ["magic-resistance", "health"] },
+  frontline: { label: "高血量前排", tags: ["armor-penetration", "magic-penetration", "damage", "spell-damage"] },
+  sustain: { label: "回复消耗", tags: ["health", "life-steal", "spell-vamp", "cooldown-reduction"] },
+};
 
 function ItemRecommendationRow({
   recommendation,
@@ -175,6 +198,7 @@ export default function ClassicMayhemGuide({ champion }: { champion: ClassicCham
   const [catalogFilter, setCatalogFilter] = useState<CatalogFilter>("all");
   const [catalogRarity, setCatalogRarity] = useState<"all" | MayhemRarity>("all");
   const [catalogSearch, setCatalogSearch] = useState("");
+  const [matchupProfile, setMatchupProfile] = useState<MatchupProfile>("physical");
   const pageRef = useRef<HTMLElement>(null);
   const runtime = runtimeState?.classicId === champion.classicId ? runtimeState.payload : null;
   const loadError = loadFailure?.classicId === champion.classicId ? loadFailure.message : null;
@@ -263,8 +287,37 @@ export default function ClassicMayhemGuide({ champion }: { champion: ClassicCham
     sourceUrl: liveChampion.statsSourceUrl,
     sourceLabel: `Riot 当前技能 ${meta.livePatch}`,
     numericSourceLabel: `Riot ${meta.livePatch} / CommunityDragon ${meta.communityPatch}`,
+    stats: {
+      hp: liveChampion.stats.hp,
+      hpPerLevel: liveChampion.stats.hpPerLevel,
+      resource: liveChampion.stats.resource,
+      resourcePerLevel: liveChampion.stats.resourcePerLevel,
+      attackDamage: liveChampion.stats.attackDamage,
+      attackDamagePerLevel: liveChampion.stats.attackDamagePerLevel,
+      attackSpeed: liveChampion.stats.attackSpeed,
+      attackSpeedPerLevel: liveChampion.stats.attackSpeedPerLevel,
+      armor: liveChampion.stats.armor,
+      armorPerLevel: liveChampion.stats.armorPerLevel,
+      magicResist: liveChampion.stats.magicResist,
+      magicResistPerLevel: liveChampion.stats.magicResistPerLevel,
+      moveSpeed: liveChampion.stats.moveSpeed,
+      attackRange: liveChampion.stats.attackRange,
+    },
     abilities: liveChampion.abilities,
   };
+  const sixItemIds = recommendedSixItemIds(build.items);
+  const sixItems = sixItemIds.map(itemById).filter((item): item is NonNullable<typeof item> => Boolean(item));
+  const sixSlots = Array.from({ length: 6 }, (_, index) => sixItems[index] ?? null);
+  const sampledItemIds = [...new Set([
+    ...build.items.boots.flatMap((entry) => entry.itemIds),
+    ...build.items.core.flatMap((entry) => entry.itemIds),
+  ])];
+  const matchupAlternatives = sampledItemIds
+    .filter((id) => !sixItemIds.includes(id))
+    .map(itemById)
+    .filter((item): item is NonNullable<typeof item> => Boolean(item))
+    .filter((item) => matchupProfiles[matchupProfile].tags.some((tag) => item.tags.includes(tag)))
+    .slice(0, 4);
   const stats = liveChampion.stats;
   const recommendationsForRarity = runtime.augmentRecommendations.filter(
     (entry) => entry.augment.rarity === activeRarity,
@@ -389,6 +442,8 @@ export default function ClassicMayhemGuide({ champion }: { champion: ClassicCham
                   skillSet={abilitySkillSet}
                   activeKey={activeAbility}
                   onSelect={setActiveAbility}
+                  equippedItems={sixItems}
+                  growthModel="modern-curve"
                 />
               </div>
             </article>
@@ -540,6 +595,54 @@ export default function ClassicMayhemGuide({ champion }: { champion: ClassicCham
                   ))}
                 </article>
               </div>
+              <section className="mayhem-six-build">
+                <header>
+                  <div>
+                    <span>OP.GG 统计组合</span>
+                    <h4>六格成装与阵容替换</h4>
+                    <p>按最高选用率鞋子、第一核心路线及其余高频路线依次去重；OP.GG 样本不足六件时保留“数据未提供”空位，不借用峡谷方案补写。</p>
+                  </div>
+                  <b>{sixItems.length} / 6</b>
+                </header>
+                <div className="mayhem-six-grid">
+                  {sixSlots.map((item, index) => item ? (
+                    <span key={item.id}>
+                      <i>{index + 1}</i>
+                      <img src={localAssetUrl(item.icon)} alt="" loading="lazy" decoding="async" />
+                      <b>{item.name}</b>
+                      <small>{item.price} 金</small>
+                    </span>
+                  ) : (
+                    <span key={`missing-${index}`} className="missing">
+                      <i>{index + 1}</i><b>数据未提供</b><small>等待 OP.GG 样本</small>
+                    </span>
+                  ))}
+                </div>
+                <div className="mayhem-matchups">
+                  <nav aria-label="敌方阵容类型">
+                    {(Object.entries(matchupProfiles) as Array<[MatchupProfile, (typeof matchupProfiles)[MatchupProfile]]>)
+                      .map(([id, profile]) => (
+                        <button
+                          key={id}
+                          className={matchupProfile === id ? "active" : ""}
+                          onClick={() => setMatchupProfile(id)}
+                          aria-pressed={matchupProfile === id}
+                        >
+                          {profile.label}
+                        </button>
+                      ))}
+                  </nav>
+                  <div>
+                    <strong>从 OP.GG 其他高频路线替换</strong>
+                    {matchupAlternatives.length ? matchupAlternatives.map((item) => (
+                      <span key={item.id}>
+                        <img src={localAssetUrl(item.icon)} alt="" loading="lazy" decoding="async" />
+                        <b>{item.name}</b><small>{item.tags.join(" · ")}</small>
+                      </span>
+                    )) : <p>本批 OP.GG 样本没有符合该条件且未进入六格的替换装，不补写人工推荐。</p>}
+                  </div>
+                </div>
+              </section>
             </section>
           )}
 

@@ -1,12 +1,27 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import {
+  buildGithubCodeSearchArgs,
   buildGitPushArgs,
   createPagesDispatcher,
   isTransientNetworkFailure,
   retryNetworkOperation,
   validatePagesHtml,
 } from "../scripts/network-guard.mjs";
+
+test("GitHub 代码检索固定走有界 gh 结构化查询", () => {
+  assert.deepEqual(buildGithubCodeSearchArgs("Vayne Night Hunter", 12), [
+    "search",
+    "code",
+    "Vayne Night Hunter",
+    "--limit",
+    "12",
+    "--json",
+    "repository,path,url,textMatches",
+  ]);
+  assert.equal(buildGithubCodeSearchArgs("test", 999)[4], "100");
+  assert.throws(() => buildGithubCodeSearchArgs(""), /用法/);
+});
 
 test("Git 推送固定绕开 Schannel 并使用 HTTP/1.1", () => {
   assert.deepEqual(buildGitPushArgs("origin", "main"), [

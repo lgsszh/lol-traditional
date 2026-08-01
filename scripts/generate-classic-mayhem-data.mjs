@@ -784,16 +784,28 @@ function buildAbility({
       && entry.text !== resolved.text
       && all.findIndex((candidate) => candidate.text === entry.text) === index);
   const levelUp = levelUpNumericDetail(tooltipData, stringTable, binContext);
-  const range = passive ? null : publicSpellRange(spell, spellObject, maxRank);
+  const range = publicSpellRange(spell, spellObject, maxRank);
+  const passiveCooldown = passive && tooltipData?.mLocKeys?.keyCooldown
+    ? resolvePublicText(
+      localizationValue(stringTable, tooltipData.mLocKeys.keyCooldown),
+      binContext,
+      stringTable,
+    )
+    : null;
   const numericParts = [
     resolved.text ? `技能文本：${resolved.text}` : "",
+    passiveCooldown?.text ? `被动冷却：${passiveCooldown.text}` : "",
     ...extendedResolutions.map((entry) => `补充数值：${entry.text}`),
     levelUp.text,
   ].filter(Boolean);
+  if (!/\d/.test(numericParts.join(" "))) {
+    numericParts.push("数值说明：同版本 Riot 客户端公开字段未提供独立固定数值；不以人工估值替代。");
+  }
   const allIssues = [...new Set([
     ...resolved.issues,
     ...extendedResolutions.flatMap((entry) => entry.issues),
     ...levelUp.issues,
+    ...(passiveCooldown?.issues ?? []),
   ])];
   if (!spellObject) allIssues.push(`CommunityDragon ${key} 技能对象未唯一匹配`);
   const hasPartialSegment = resolved.status !== "available"
@@ -812,7 +824,7 @@ function buildAbility({
     icon: passive
       ? `https://ddragon.leagueoflegends.com/cdn/${livePatch}/img/passive/${payload.passive.image.full}`
       : `https://ddragon.leagueoflegends.com/cdn/${livePatch}/img/spell/${spell.image.full}`,
-    cooldown: passive ? null : (spell.cooldownBurn || null),
+    cooldown: passive ? (passiveCooldown?.text || null) : (spell.cooldownBurn || null),
     cost: passive ? null : (spell.costBurn || null),
     range,
     numericDetail: numericParts.join("\n"),

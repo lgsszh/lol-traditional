@@ -134,6 +134,38 @@ export async function pushGitRef(remote, refspec, options = {}) {
   }, options);
 }
 
+export function buildGithubCodeSearchArgs(query, limit = 20) {
+  if (!query?.trim()) {
+    throw new Error("用法：npm run network:github-search -- <query> [limit]");
+  }
+  const safeLimit = Math.max(1, Math.min(Number(limit) || 20, 100));
+  return [
+    "search",
+    "code",
+    query,
+    "--limit",
+    String(safeLimit),
+    "--json",
+    "repository,path,url,textMatches",
+  ];
+}
+
+export async function searchGithubCode(query, limit = 20, options = {}) {
+  const args = buildGithubCodeSearchArgs(query, limit);
+  return retryNetworkOperation("GitHub code search", () => {
+    const result = spawnSync("gh", args, {
+      cwd: options.cwd ?? process.cwd(),
+      encoding: "utf8",
+      timeout: options.timeoutMs ?? 25_000,
+      windowsHide: true,
+    });
+    if (result.status !== 0 || result.error) throw commandError(result);
+    const records = JSON.parse(String(result.stdout || "[]"));
+    process.stdout.write(`${JSON.stringify(records, null, 2)}\n`);
+    return records;
+  }, options);
+}
+
 export function validatePagesHtml(html, {
   title = "英雄联盟怀旧服攻略介绍",
   basePath = DEFAULT_BASE_PATH,
@@ -212,8 +244,12 @@ async function main() {
     console.log(JSON.stringify(result));
     return;
   }
+  if (command === "github-search") {
+    await searchGithubCode(args[0], args[1]);
+    return;
+  }
   throw new Error(
-    "用法：node scripts/network-guard.mjs <git-push remote ref|pages-verify [url]>",
+    "用法：node scripts/network-guard.mjs <git-push remote ref|pages-verify [url]|github-search query [limit]>",
   );
 }
 

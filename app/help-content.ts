@@ -52,7 +52,7 @@ export const guideSteps: GuideStep[] = [
   {
     eyebrow: "第 5 步",
     title: "生成草案，检查后分享",
-    description: "可让 AI 助手按本地 Classic 数据先生成草案，再回到各模块手动微调。",
+    description: "可让阵容方案按本地 Classic 数据和明确条件生成草案，再回到各模块手动微调。",
     detail: "点击“分享”会把整套构筑写入网址；收到公开链接的人无需登录即可查看和继续编辑。",
     target: '[data-guide="ai-assistant"]',
     view: "ai",
@@ -81,7 +81,7 @@ export const helpSections = [
     body: "英雄经典原画、技能图标、说明、冷却、消耗、距离以及装备目录来自 OP.GG Classic；完整技能公式来自 Riot Data Dragon 3.15.5 历史数据。项目每天自动重新读取 OP.GG，只有在数据生成、完整性测试和网站构建全部通过后才会提交更新。",
   },
   {
-    title: "AI 助手",
+    title: "阵容方案",
     body: "当前版本依据已载入的 Classic 数据和本地规则生成草案，并非实时联网胜率统计。生成后仍可回到各模拟器继续修改。",
   },
   {
@@ -96,6 +96,7 @@ export const shortcuts = [
   ["Alt + 1", "打开符文模拟器"],
   ["Alt + 2", "打开天赋模拟器"],
   ["Alt + 3", "打开技能与出装"],
-  ["Alt + 4", "打开 AI 助手"],
+  ["Alt + 4", "打开怀旧海斗"],
+  ["Alt + 5", "打开阵容方案"],
   ["Esc", "关闭教程或帮助"],
 ];
