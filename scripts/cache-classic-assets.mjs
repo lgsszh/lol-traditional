@@ -4,7 +4,7 @@ import { classicChampions, classicMasteries, classicRuneGroups, classicSpells, m
 import { classicItems } from "../app/classic-items.generated.ts";
 import { classicChampionSkills } from "../app/classic-skills.generated.ts";
 import { classicMayhemAugments, liveClassicChampions } from "../app/classic-mayhem.generated.ts";
-import { opggMayhemChampionBuilds } from "../app/classic-mayhem-opgg.generated.ts";
+import { opggMayhemChampionBuilds, opggMayhemItems } from "../app/classic-mayhem-opgg.generated.ts";
 
 const publicDirectory = new URL("../public/classic-cache/", import.meta.url);
 const manifestPath = new URL("../app/classic-assets.generated.ts", import.meta.url);
@@ -45,6 +45,7 @@ for (const build of opggMayhemChampionBuilds) {
     for (const spell of set.spells) add(spell.icon, `${spell.name}怀旧海斗召唤师技能`);
   }
 }
+for (const item of opggMayhemItems) add(item.icon, item.name);
 for (const [tree, source] of Object.entries(masteryBackgrounds)) add(source, `${tree}天赋背景`);
 add(runeBoardBackground, "符文面板");
 

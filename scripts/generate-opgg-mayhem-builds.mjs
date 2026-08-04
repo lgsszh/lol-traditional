@@ -190,7 +190,7 @@ async function fetchValidated(url, label, validate, attempts = 5) {
   throw finalError;
 }
 
-function parseItemsTable($, caption, expectedRows, itemMap, championName) {
+function parseItemsTable($, caption, expectedRows, itemMap, modeItemMap, championName) {
   const rows = tableByCaption($, caption).find("tbody tr").toArray();
   if (rows.length !== expectedRows) {
     throw new Error(`${championName}: ${caption} expected ${expectedRows} rows, received ${rows.length}`);
@@ -198,7 +198,22 @@ function parseItemsTable($, caption, expectedRows, itemMap, championName) {
   return rows.map((element, rowIndex) => {
     const row = $(element);
     const itemIds = row.find("td").first().find("img").toArray().flatMap((image) => {
-      const itemId = imageKey($(image).attr("src"), "item");
+      const source = canonicalImage($(image).attr("src"));
+      const itemId = imageKey(source, "item");
+      if (!itemMap.has(itemId)) {
+        const name = $(image).attr("alt")?.trim() || itemId;
+        const previous = modeItemMap.get(itemId);
+        if (previous && (previous.name !== name || previous.icon !== source)) {
+          throw new Error(`${championName}: OP.GG mode item ${itemId} metadata changed during snapshot`);
+        }
+        modeItemMap.set(itemId, previous || {
+          id: itemId,
+          name,
+          icon: source,
+          price: null,
+          tags: [],
+        });
+      }
       const quantityText = $(image).closest("div.relative").children("div.absolute").last().text().trim();
       const quantity = quantityText ? Number(quantityText) : 1;
       if (!Number.isInteger(quantity) || quantity < 1 || quantity > 10) {
@@ -207,18 +222,18 @@ function parseItemsTable($, caption, expectedRows, itemMap, championName) {
       return Array.from({ length: quantity }, () => itemId);
     });
     if (itemIds.length === 0) throw new Error(`${championName}: ${caption} row ${rowIndex + 1} has no items`);
-    for (const itemId of itemIds) {
-      if (!itemMap.has(itemId)) throw new Error(`${championName}: OP.GG item ${itemId} is absent from Classic catalog`);
-    }
+    const prices = itemIds.map((itemId) => itemMap.get(itemId)?.price ?? modeItemMap.get(itemId)?.price);
     return {
       itemIds,
-      totalPrice: itemIds.reduce((sum, itemId) => sum + itemMap.get(itemId).price, 0),
+      totalPrice: prices.every((price) => Number.isFinite(price))
+        ? prices.reduce((sum, price) => sum + price, 0)
+        : null,
       metric: parseMetric(row, `${championName} ${caption} row ${rowIndex + 1}`),
     };
   });
 }
 
-function parseBuildPage(html, rosterEntry, ranking, patch, itemMap) {
+function parseBuildPage(html, rosterEntry, ranking, patch, itemMap, modeItemMap) {
   const $ = load(html);
   const sourceUrl = `${modeUrl}/${ranking.key}/build?region=global&tier=all&patch=${patch}`;
   validateChampionPageIdentity($, ranking, patch, "build");
@@ -251,11 +266,11 @@ function parseBuildPage(html, rosterEntry, ranking, patch, itemMap) {
     throw new Error(`${ranking.name}: expected 2 summoner spell rows, received ${summonerSets.length}`);
   }
 
-  const starting = parseItemsTable($, "Items Table", 2, itemMap, ranking.name);
-  const boots = parseItemsTable($, "Boots Table", 2, itemMap, ranking.name);
-  const core = parseItemsTable($, "Builds Table", 5, itemMap, ranking.name);
+  const starting = parseItemsTable($, "Items Table", 2, itemMap, modeItemMap, ranking.name);
+  const boots = parseItemsTable($, "Boots Table", 2, itemMap, modeItemMap, ranking.name);
+  const core = parseItemsTable($, "Builds Table", 5, itemMap, modeItemMap, ranking.name);
   for (const recommendation of starting) {
-    if (recommendation.totalPrice > startingGold) {
+    if (recommendation.totalPrice !== null && recommendation.totalPrice > startingGold) {
       throw new Error(
         `${ranking.name}: starting recommendation costs ${recommendation.totalPrice}, above ${startingGold} gold`,
       );
@@ -414,6 +429,7 @@ const classicItems = JSON.parse(
   extractBalancedArray(itemSource, "export const classicItems: ClassicItem[] ="),
 );
 const itemMap = new Map(classicItems.map((item) => [item.id, item]));
+const modeItemMap = new Map();
 
 const { rankings, patch, assetPatch } = await fetchValidated(
   modeUrl,
@@ -440,7 +456,7 @@ const builds = await mapWithConcurrency(roster, 3, async (entry, index) => {
     fetchValidated(
       buildUrl,
       `OP.GG ${ranking.name} Classic-ish build`,
-      (html) => parseBuildPage(html, entry, ranking, patch, itemMap),
+      (html) => parseBuildPage(html, entry, ranking, patch, itemMap, modeItemMap),
     ),
     fetchValidated(
       augmentsUrl,
@@ -460,9 +476,10 @@ const builds = await mapWithConcurrency(roster, 3, async (entry, index) => {
   return result;
 });
 builds.sort((left, right) => left.rank - right.rank);
+const modeItems = [...modeItemMap.values()].sort((left, right) => left.id.localeCompare(right.id));
 
 const snapshotHash = createHash("sha256")
-  .update(JSON.stringify({ patch, assetPatch, builds }))
+  .update(JSON.stringify({ patch, assetPatch, builds, modeItems }))
   .digest("hex");
 const output = `// Generated from OP.GG ARAM Mayhem Classic-ish ${patch}. Do not edit manually.
 export const OP_GG_MAYHEM_PATCH = ${JSON.stringify(patch)};
@@ -472,6 +489,16 @@ export const OP_GG_MAYHEM_SNAPSHOT_HASH = ${JSON.stringify(snapshotHash)};
 export const MAYHEM_STARTING_GOLD = ${startingGold};
 export const MAYHEM_HAS_JUNGLE_ROLE = false;
 
+export type OpggMayhemItem = {
+  id: string;
+  name: string;
+  icon: string;
+  price: number | null;
+  tags: string[];
+};
+
+export const opggMayhemItems: OpggMayhemItem[] = ${JSON.stringify(modeItems, null, 2)};
+
 export type OpggMetric = {
   pickRate: number;
   games: number;
@@ -480,7 +507,7 @@ export type OpggMetric = {
 
 export type OpggItemRecommendation = {
   itemIds: string[];
-  totalPrice: number;
+  totalPrice: number | null;
   metric: OpggMetric;
 };
 

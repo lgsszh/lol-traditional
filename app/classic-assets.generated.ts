@@ -364,6 +364,8 @@ export const classicAssetManifest = {
   "https://ddragon.leagueoflegends.com/cdn/16.15.1/img/spell/WujuStyle.png": "/classic-cache/24ad627b8f54ba45425cb7f0.png",
   "https://ddragon.leagueoflegends.com/cdn/16.15.1/img/spell/ZileanQ.png": "/classic-cache/efecc1ebc07e1e0356179db6.png",
   "https://ddragon.leagueoflegends.com/cdn/16.15.1/img/spell/ZileanW.png": "/classic-cache/fe75ae7f7b9a9d9c2e41db99.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/item/773040.png": "/classic-cache/24568033b025a7420a19e05e.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/item/773042.png": "/classic-cache/da8d2efb52c7e25ca323151d.png",
   "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerBarrier.png": "/classic-cache/bd52366afd9cd9eab203f824.png",
   "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerDot.png": "/classic-cache/dce973207426c9b6e0d31ce7.png",
   "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png": "/classic-cache/715afe5353ef02b5d8a0ac4d.png",
@@ -4197,6 +4199,22 @@ export const classicAssetAudit = {
     "sha256": "cd991fc15cffd9c4914c19aacf57551893d3f4291e8b8b355ee28adda08a94f4",
     "labels": [
       "时光守护者现代W"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/item/773040.png": {
+    "path": "/classic-cache/24568033b025a7420a19e05e.png",
+    "bytes": 6586,
+    "sha256": "80bbf4e486d5c8e7996677dc9975666bade69ac942d8ba1eada1a4508baac231",
+    "labels": [
+      "炽天使之拥"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/item/773042.png": {
+    "path": "/classic-cache/da8d2efb52c7e25ca323151d.png",
+    "bytes": 6457,
+    "sha256": "476b131d1c1b47bac1aa4fed3e6d0b3948244cc5fd80b71395ee129d2d32af71",
+    "labels": [
+      "魔切"
     ]
   },
   "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerBarrier.png": {

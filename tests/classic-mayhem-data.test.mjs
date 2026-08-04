@@ -18,11 +18,13 @@ import {
   MAYHEM_STARTING_GOLD,
   OP_GG_MAYHEM_PATCH,
   OP_GG_MAYHEM_SNAPSHOT_HASH,
+  opggMayhemItems,
   opggMayhemChampionBuilds,
 } from "../app/classic-mayhem-opgg.generated.ts";
 import { opggMayhemRankingSummary } from "../app/classic-mayhem-ranking.generated.ts";
 
 const itemById = new Map(classicItems.map((item) => [item.id, item]));
+const modeItemById = new Map(opggMayhemItems.map((item) => [item.id, item]));
 
 function assertMetric(metric, context) {
   assert.ok(Number.isFinite(metric.pickRate) && metric.pickRate >= 0 && metric.pickRate <= 100, `${context}选用率无效`);
@@ -317,15 +319,24 @@ test("OP.GG 怀旧海斗快照覆盖 60 位英雄并保留页面原始统计", (
     assert.equal(build.items.core.length, 5);
     for (const recommendation of [...build.items.starting, ...build.items.boots, ...build.items.core]) {
       assert.ok(recommendation.itemIds.length >= 1);
-      const recalculated = recommendation.itemIds.reduce((sum, itemId) => {
-        const item = itemById.get(itemId);
-        assert.ok(item, `${build.name}引用未知装备 ${itemId}`);
-        return sum + item.price;
-      }, 0);
-      assert.equal(recommendation.totalPrice, recalculated);
+      const hasModeItem = recommendation.itemIds.some((itemId) => modeItemById.has(itemId));
+      if (hasModeItem) {
+        assert.equal(recommendation.totalPrice, null);
+        for (const itemId of recommendation.itemIds) {
+          assert.ok(itemById.has(itemId) || modeItemById.has(itemId), `${build.name} unknown item ${itemId}`);
+        }
+      } else {
+        const recalculated = recommendation.itemIds.reduce((sum, itemId) => {
+          const item = itemById.get(itemId);
+          assert.ok(item, `${build.name} unknown item ${itemId}`);
+          return sum + item.price;
+        }, 0);
+        assert.equal(recommendation.totalPrice, recalculated);
+      }
       assertMetric(recommendation.metric, `${build.name}装备路线`);
     }
-    assert.ok(build.items.starting.every((recommendation) => recommendation.totalPrice <= 1400));
+    assert.ok(build.items.starting.every((recommendation) => recommendation.totalPrice === null
+      || recommendation.totalPrice <= 1400));
   }
 });
 

@@ -3,13 +3,14 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { ClassicChampion } from "../classic-data";
 import { localAssetUrl } from "../classic-assets";
-import { classicItems } from "../classic-items.generated";
+import { classicItems, type ClassicItem } from "../classic-items.generated";
 import type {
   MayhemAugment,
   MayhemCatalogRuntime,
   MayhemChampionRuntime,
   MayhemRarity,
   OpggItemRecommendation,
+  OpggMayhemItem,
   OpggMetric,
 } from "../classic-mayhem-runtime";
 import ChampionAbilityPanel, { type AbilityPanelSkillSet } from "./ChampionAbilityPanel";
@@ -92,17 +93,19 @@ function MetricLine({ metric }: { metric: OpggMetric }) {
   );
 }
 
-function itemById(id: string) {
-  return classicItems.find((item) => item.id === id);
+type MayhemItem = ClassicItem | OpggMayhemItem;
+
+function itemById(id: string, modeItems: OpggMayhemItem[] = []) {
+  return modeItems.find((item) => item.id === id) ?? classicItems.find((item) => item.id === id);
 }
 
-function groupedItems(itemIds: string[]) {
+function groupedItems(itemIds: string[], modeItems: OpggMayhemItem[]) {
   const counts = new Map<string, number>();
   for (const itemId of itemIds) counts.set(itemId, (counts.get(itemId) || 0) + 1);
   return [...counts].map(([itemId, quantity]) => ({
-    item: itemById(itemId),
+    item: itemById(itemId, modeItems),
     quantity,
-  })).filter((entry) => entry.item);
+  })).filter((entry): entry is { item: MayhemItem; quantity: number } => Boolean(entry.item));
 }
 
 function recommendedSixItemIds(items: MayhemChampionRuntime["build"]["items"]) {
@@ -125,15 +128,17 @@ function ItemRecommendationRow({
   recommendation,
   showPrice = false,
   startingGold,
+  modeItems,
 }: {
   recommendation: OpggItemRecommendation;
   showPrice?: boolean;
   startingGold: number;
+  modeItems: OpggMayhemItem[];
 }) {
   return (
     <div className="opgg-item-row">
       <div className="opgg-item-icons">
-        {groupedItems(recommendation.itemIds).map(({ item, quantity }) => (
+        {groupedItems(recommendation.itemIds, modeItems).map(({ item, quantity }) => (
           <span key={item!.id}>
             <img src={localAssetUrl(item!.icon)} alt={item!.name} loading="lazy" decoding="async" />
             {quantity > 1 && <b>×{quantity}</b>}
@@ -143,7 +148,9 @@ function ItemRecommendationRow({
       </div>
       {showPrice && (
         <span className="opgg-price">
-          {recommendation.totalPrice} / {startingGold} 金
+          {recommendation.totalPrice === null
+            ? "费用未公开"
+            : `${recommendation.totalPrice} / ${startingGold} 金`}
         </span>
       )}
       <MetricLine metric={recommendation.metric} />
@@ -282,6 +289,8 @@ export default function ClassicMayhemGuide({ champion }: { champion: ClassicCham
   if (!runtime) return <MayhemSkeleton />;
 
   const { build, champion: liveChampion, meta } = runtime;
+  const modeItems = runtime.items ?? [];
+  const findItem = (id: string) => itemById(id, modeItems);
   const abilitySkillSet: AbilityPanelSkillSet = {
     championName: liveChampion.name,
     sourceUrl: liveChampion.statsSourceUrl,
@@ -306,15 +315,18 @@ export default function ClassicMayhemGuide({ champion }: { champion: ClassicCham
     abilities: liveChampion.abilities,
   };
   const sixItemIds = recommendedSixItemIds(build.items);
-  const sixItems = sixItemIds.map(itemById).filter((item): item is NonNullable<typeof item> => Boolean(item));
+  const sixItems = sixItemIds.map(findItem).filter((item): item is NonNullable<typeof item> => Boolean(item));
   const sixSlots = Array.from({ length: 6 }, (_, index) => sixItems[index] ?? null);
+  const equippedClassicItems = sixItems.filter(
+    (item): item is ClassicItem => "category" in item && "description" in item,
+  );
   const sampledItemIds = [...new Set([
     ...build.items.boots.flatMap((entry) => entry.itemIds),
     ...build.items.core.flatMap((entry) => entry.itemIds),
   ])];
   const matchupAlternatives = sampledItemIds
     .filter((id) => !sixItemIds.includes(id))
-    .map(itemById)
+    .map(findItem)
     .filter((item): item is NonNullable<typeof item> => Boolean(item))
     .filter((item) => matchupProfiles[matchupProfile].tags.some((tag) => item.tags.includes(tag)))
     .slice(0, 4);
@@ -442,7 +454,7 @@ export default function ClassicMayhemGuide({ champion }: { champion: ClassicCham
                   skillSet={abilitySkillSet}
                   activeKey={activeAbility}
                   onSelect={setActiveAbility}
-                  equippedItems={sixItems}
+                  equippedItems={equippedClassicItems}
                   growthModel="modern-curve"
                 />
               </div>
@@ -571,6 +583,7 @@ export default function ClassicMayhemGuide({ champion }: { champion: ClassicCham
                       recommendation={recommendation}
                       startingGold={meta.startingGold}
                       showPrice
+                      modeItems={modeItems}
                     />
                   ))}
                 </article>
@@ -581,6 +594,7 @@ export default function ClassicMayhemGuide({ champion }: { champion: ClassicCham
                       key={`boots-${index}`}
                       recommendation={recommendation}
                       startingGold={meta.startingGold}
+                      modeItems={modeItems}
                     />
                   ))}
                 </article>
@@ -591,6 +605,7 @@ export default function ClassicMayhemGuide({ champion }: { champion: ClassicCham
                       key={`core-${index}`}
                       recommendation={recommendation}
                       startingGold={meta.startingGold}
+                      modeItems={modeItems}
                     />
                   ))}
                 </article>

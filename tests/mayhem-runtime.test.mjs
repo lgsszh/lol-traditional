@@ -24,6 +24,12 @@ test("怀旧海斗运行时数据按英雄拆分并保持 OP.GG 完整结构", a
     assert.equal(payload.meta.hasJungleRole, false);
     assert.equal(payload.champion.classicId, name.replace(".json", ""));
     assert.equal(payload.build.classicId, payload.champion.classicId);
+    assert.ok(Array.isArray(payload.items), `${payload.build.name} 缺少模式专属装备表`);
+    for (const item of payload.items) {
+      assert.match(item.id, /^\d+$/);
+      assert.ok(item.name.trim());
+      assert.ok(item.icon.startsWith("https://"));
+    }
     assert.deepEqual(
       payload.champion.abilities.map((ability) => ability.key),
       ["P", "Q", "W", "E", "R"],

@@ -13,6 +13,7 @@ import {
   MAYHEM_STARTING_GOLD,
   OP_GG_MAYHEM_PATCH,
   OP_GG_MAYHEM_SNAPSHOT_HASH,
+  opggMayhemItems,
   opggMayhemChampionBuilds,
 } from "../app/classic-mayhem-opgg.generated.ts";
 import {
@@ -58,6 +59,7 @@ const outputs = liveClassicChampions.map((champion) => {
     meta,
     champion,
     build,
+    items: opggMayhemItems,
     augmentRecommendations,
   };
   return writeOrCheck(

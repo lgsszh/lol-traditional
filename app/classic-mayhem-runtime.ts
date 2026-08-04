@@ -77,9 +77,17 @@ export type OpggMetric = {
   winRate: number;
 };
 
+export type OpggMayhemItem = {
+  id: string;
+  name: string;
+  icon: string;
+  price: number | null;
+  tags: string[];
+};
+
 export type OpggItemRecommendation = {
   itemIds: string[];
-  totalPrice: number;
+  totalPrice: number | null;
   metric: OpggMetric;
 };
 
@@ -134,6 +142,7 @@ export type MayhemChampionRuntime = {
   meta: MayhemRuntimeMeta;
   champion: LiveClassicChampion;
   build: OpggMayhemChampionBuild;
+  items: OpggMayhemItem[];
   augmentRecommendations: Array<{
     augment: MayhemAugment;
     metric: OpggMetric;

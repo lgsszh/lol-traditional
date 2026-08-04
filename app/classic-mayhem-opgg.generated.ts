@@ -2,9 +2,34 @@
 export const OP_GG_MAYHEM_PATCH = "16.15";
 export const OP_GG_MAYHEM_ASSET_PATCH = "16.15.1";
 export const OP_GG_MAYHEM_SOURCE_URL = "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic";
-export const OP_GG_MAYHEM_SNAPSHOT_HASH = "6506ab80c9d76e5a5add16cc7b5085429ed69e634b3869bf9a6a83da95a0bb50";
+export const OP_GG_MAYHEM_SNAPSHOT_HASH = "a75a0c665ca33a7d4085d90a68181eeb7aaefd20f35daa18b66d18fba84c609c";
 export const MAYHEM_STARTING_GOLD = 1400;
 export const MAYHEM_HAS_JUNGLE_ROLE = false;
+
+export type OpggMayhemItem = {
+  id: string;
+  name: string;
+  icon: string;
+  price: number | null;
+  tags: string[];
+};
+
+export const opggMayhemItems: OpggMayhemItem[] = [
+  {
+    "id": "773040",
+    "name": "炽天使之拥",
+    "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/item/773040.png",
+    "price": null,
+    "tags": []
+  },
+  {
+    "id": "773042",
+    "name": "魔切",
+    "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/item/773042.png",
+    "price": null,
+    "tags": []
+  }
+];
 
 export type OpggMetric = {
   pickRate: number;
@@ -14,7 +39,7 @@ export type OpggMetric = {
 
 export type OpggItemRecommendation = {
   itemIds: string[];
-  totalPrice: number;
+  totalPrice: number | null;
   metric: OpggMetric;
 };
 
@@ -163,67 +188,67 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
       "core": [
         {
           "itemIds": [
+            "773124",
+            "773114",
+            "773146"
+          ],
+          "totalPrice": 8035,
+          "metric": {
+            "pickRate": 3.56,
+            "games": 367,
+            "winRate": 67.3
+          }
+        },
+        {
+          "itemIds": [
+            "773115",
+            "773114",
+            "773124"
+          ],
+          "totalPrice": 7135,
+          "metric": {
+            "pickRate": 2.83,
+            "games": 291,
+            "winRate": 68.38
+          }
+        },
+        {
+          "itemIds": [
             "773115",
             "773124",
             "773146"
           ],
           "totalPrice": 8500,
           "metric": {
-            "pickRate": 5.4,
-            "games": 329,
-            "winRate": 68.09
+            "pickRate": 2.83,
+            "games": 291,
+            "winRate": 69.07
           }
         },
         {
           "itemIds": [
             "773115",
             "773124",
-            "773089"
+            "773114"
           ],
-          "totalPrice": 8400,
+          "totalPrice": 7135,
           "metric": {
-            "pickRate": 3.24,
-            "games": 197,
-            "winRate": 72.59
-          }
-        },
-        {
-          "itemIds": [
-            "773078",
-            "773124",
-            "773146"
-          ],
-          "totalPrice": 9628,
-          "metric": {
-            "pickRate": 2.92,
-            "games": 178,
-            "winRate": 67.98
+            "pickRate": 2.78,
+            "games": 286,
+            "winRate": 71.33
           }
         },
         {
           "itemIds": [
             "773124",
-            "773146",
-            "773091"
+            "773114",
+            "773115"
           ],
-          "totalPrice": 8150,
+          "totalPrice": 7135,
           "metric": {
-            "pickRate": 2.84,
-            "games": 173,
-            "winRate": 61.85
-          }
-        },
-        {
-          "itemIds": [
-            "773124",
-            "773115",
-            "773146"
-          ],
-          "totalPrice": 8500,
-          "metric": {
-            "pickRate": 2.37,
-            "games": 144,
-            "winRate": 75
+            "pickRate": 2.54,
+            "games": 262,
+            "winRate": 73.66
           }
         }
       ]
@@ -989,9 +1014,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 8200,
           "metric": {
-            "pickRate": 10.21,
-            "games": 720,
-            "winRate": 62.36
+            "pickRate": 8.54,
+            "games": 888,
+            "winRate": 63.63
           }
         },
         {
@@ -1002,9 +1027,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 8200,
           "metric": {
-            "pickRate": 8.8,
-            "games": 620,
-            "winRate": 62.1
+            "pickRate": 7.61,
+            "games": 792,
+            "winRate": 62.25
           }
         },
         {
@@ -1015,9 +1040,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9400,
           "metric": {
-            "pickRate": 2.71,
-            "games": 191,
-            "winRate": 65.97
+            "pickRate": 2.47,
+            "games": 257,
+            "winRate": 65.37
           }
         },
         {
@@ -1028,9 +1053,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9400,
           "metric": {
-            "pickRate": 2.45,
-            "games": 173,
-            "winRate": 62.43
+            "pickRate": 2.17,
+            "games": 226,
+            "winRate": 61.95
           }
         },
         {
@@ -1041,9 +1066,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 8200,
           "metric": {
-            "pickRate": 2.43,
-            "games": 171,
-            "winRate": 61.4
+            "pickRate": 2.12,
+            "games": 220,
+            "winRate": 62.27
           }
         }
       ]
@@ -1809,9 +1834,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9800,
           "metric": {
-            "pickRate": 8.32,
-            "games": 628,
-            "winRate": 59.24
+            "pickRate": 6.29,
+            "games": 683,
+            "winRate": 60.61
           }
         },
         {
@@ -1822,9 +1847,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 8200,
           "metric": {
-            "pickRate": 4.3,
-            "games": 325,
-            "winRate": 56.92
+            "pickRate": 3.82,
+            "games": 415,
+            "winRate": 53.49
           }
         },
         {
@@ -1835,9 +1860,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 8200,
           "metric": {
-            "pickRate": 3.91,
-            "games": 295,
-            "winRate": 58.31
+            "pickRate": 3.64,
+            "games": 395,
+            "winRate": 57.47
           }
         },
         {
@@ -1848,9 +1873,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 7950,
           "metric": {
-            "pickRate": 3.39,
-            "games": 256,
-            "winRate": 60.55
+            "pickRate": 2.99,
+            "games": 325,
+            "winRate": 61.54
           }
         },
         {
@@ -1861,9 +1886,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9600,
           "metric": {
-            "pickRate": 3.02,
-            "games": 228,
-            "winRate": 60.53
+            "pickRate": 2.65,
+            "games": 288,
+            "winRate": 62.15
           }
         }
       ]
@@ -2630,22 +2655,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 8400,
           "metric": {
-            "pickRate": 16.71,
-            "games": 855,
-            "winRate": 61.29
-          }
-        },
-        {
-          "itemIds": [
-            "773083",
-            "773065",
-            "773068"
-          ],
-          "totalPrice": 8400,
-          "metric": {
-            "pickRate": 8.29,
-            "games": 424,
-            "winRate": 59.91
+            "pickRate": 10.45,
+            "games": 975,
+            "winRate": 61.74
           }
         },
         {
@@ -2656,35 +2668,48 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 8400,
           "metric": {
-            "pickRate": 8.23,
-            "games": 421,
-            "winRate": 57.24
+            "pickRate": 5.06,
+            "games": 472,
+            "winRate": 59.11
           }
         },
         {
           "itemIds": [
             "773083",
             "773065",
-            "773143"
+            "773064"
           ],
-          "totalPrice": 8875,
+          "totalPrice": 8360,
           "metric": {
-            "pickRate": 5.57,
-            "games": 285,
-            "winRate": 55.09
+            "pickRate": 3.86,
+            "games": 360,
+            "winRate": 60
           }
         },
         {
           "itemIds": [
             "773083",
             "773065",
-            "773075"
+            "773068"
           ],
-          "totalPrice": 7950,
+          "totalPrice": 8400,
           "metric": {
-            "pickRate": 5.12,
-            "games": 262,
-            "winRate": 63.36
+            "pickRate": 3.82,
+            "games": 356,
+            "winRate": 64.61
+          }
+        },
+        {
+          "itemIds": [
+            "773083",
+            "773065",
+            "773005"
+          ],
+          "totalPrice": 8050,
+          "metric": {
+            "pickRate": 2.92,
+            "games": 272,
+            "winRate": 64.71
           }
         }
       ]
@@ -3446,13 +3471,26 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "itemIds": [
             "773087",
             "773031",
+            "773035"
+          ],
+          "totalPrice": 8600,
+          "metric": {
+            "pickRate": 13.48,
+            "games": 1469,
+            "winRate": 59.63
+          }
+        },
+        {
+          "itemIds": [
+            "773087",
+            "773031",
             "773072"
           ],
           "totalPrice": 9500,
           "metric": {
-            "pickRate": 15,
-            "games": 1033,
-            "winRate": 60.6
+            "pickRate": 8.91,
+            "games": 971,
+            "winRate": 61.17
           }
         },
         {
@@ -3463,22 +3501,22 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9100,
           "metric": {
-            "pickRate": 12.14,
-            "games": 836,
-            "winRate": 56.94
+            "pickRate": 5.23,
+            "games": 570,
+            "winRate": 58.95
           }
         },
         {
           "itemIds": [
             "773087",
-            "773031",
-            "773153"
+            "773072",
+            "773035"
           ],
-          "totalPrice": 9500,
+          "totalPrice": 8000,
           "metric": {
-            "pickRate": 5.15,
-            "games": 355,
-            "winRate": 56.06
+            "pickRate": 3.19,
+            "games": 348,
+            "winRate": 47.7
           }
         },
         {
@@ -3489,22 +3527,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9500,
           "metric": {
-            "pickRate": 4.59,
-            "games": 316,
-            "winRate": 57.59
-          }
-        },
-        {
-          "itemIds": [
-            "773087",
-            "773072",
-            "773046"
-          ],
-          "totalPrice": 8500,
-          "metric": {
-            "pickRate": 2.89,
-            "games": 199,
-            "winRate": 49.25
+            "pickRate": 3.08,
+            "games": 336,
+            "winRate": 60.42
           }
         }
       ]
@@ -4270,9 +4295,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9400,
           "metric": {
-            "pickRate": 6.39,
-            "games": 525,
-            "winRate": 54.48
+            "pickRate": 5.3,
+            "games": 643,
+            "winRate": 55.52
           }
         },
         {
@@ -4283,9 +4308,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 8200,
           "metric": {
-            "pickRate": 4.95,
-            "games": 407,
-            "winRate": 56.02
+            "pickRate": 4.13,
+            "games": 501,
+            "winRate": 55.29
           }
         },
         {
@@ -4296,9 +4321,22 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9400,
           "metric": {
-            "pickRate": 3.83,
-            "games": 315,
-            "winRate": 63.81
+            "pickRate": 3.35,
+            "games": 406,
+            "winRate": 64.29
+          }
+        },
+        {
+          "itemIds": [
+            "773153",
+            "773085",
+            "773091"
+          ],
+          "totalPrice": 7750,
+          "metric": {
+            "pickRate": 2.22,
+            "games": 269,
+            "winRate": 51.3
           }
         },
         {
@@ -4309,22 +4347,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9800,
           "metric": {
-            "pickRate": 2.69,
-            "games": 221,
-            "winRate": 56.56
-          }
-        },
-        {
-          "itemIds": [
-            "773153",
-            "773109",
-            "773085"
-          ],
-          "totalPrice": 9400,
-          "metric": {
-            "pickRate": 2.56,
-            "games": 210,
-            "winRate": 57.14
+            "pickRate": 2.18,
+            "games": 265,
+            "winRate": 56.6
           }
         }
       ]
@@ -5087,71 +5112,67 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
       "core": [
         {
           "itemIds": [
-            "773070",
-            "773003",
-            "773116",
-            "773089"
-          ],
-          "totalPrice": 9600,
-          "metric": {
-            "pickRate": 4.82,
-            "games": 285,
-            "winRate": 53.68
-          }
-        },
-        {
-          "itemIds": [
-            "773070",
-            "773003",
-            "773089",
-            "773135"
-          ],
-          "totalPrice": 8995,
-          "metric": {
-            "pickRate": 2.67,
-            "games": 158,
-            "winRate": 48.73
-          }
-        },
-        {
-          "itemIds": [
-            "773070",
-            "773003",
+            "773151",
             "773089",
             "773116"
           ],
-          "totalPrice": 9600,
+          "totalPrice": 9100,
           "metric": {
-            "pickRate": 2.64,
-            "games": 156,
-            "winRate": 57.69
+            "pickRate": 2.99,
+            "games": 362,
+            "winRate": 57.18
           }
         },
         {
           "itemIds": [
-            "773070",
-            "773003",
-            "773128",
+            "773151",
+            "773135",
+            "773116"
+          ],
+          "totalPrice": 8095,
+          "metric": {
+            "pickRate": 2.89,
+            "games": 350,
+            "winRate": 51.71
+          }
+        },
+        {
+          "itemIds": [
+            "773151",
+            "773040",
+            "773116"
+          ],
+          "totalPrice": null,
+          "metric": {
+            "pickRate": 2.66,
+            "games": 322,
+            "winRate": 55.28
+          }
+        },
+        {
+          "itemIds": [
+            "773151",
+            "773116",
             "773089"
           ],
-          "totalPrice": 9800,
+          "totalPrice": 9100,
           "metric": {
-            "pickRate": 2.64,
-            "games": 156,
-            "winRate": 49.36
+            "pickRate": 2.34,
+            "games": 283,
+            "winRate": 58.3
           }
         },
         {
           "itemIds": [
-            "773135",
-            "773116",
-            "773128"
+            "773151",
+            "773040",
+            "773089"
           ],
-          "totalPrice": 8295,
+          "totalPrice": null,
           "metric": {
-            "pickRate": 2.08,
-            "games": 123,
-            "winRate": 50.41
+            "pickRate": 2.2,
+            "games": 266,
+            "winRate": 56.77
           }
         }
       ]
@@ -5912,30 +5933,54 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
       "core": [
         {
           "itemIds": [
-            "773070",
-            "773003",
-            "773089",
-            "773135"
+            "773040",
+            "773128",
+            "773089"
           ],
-          "totalPrice": 8995,
+          "totalPrice": null,
           "metric": {
-            "pickRate": 8.86,
-            "games": 578,
-            "winRate": 54.15
+            "pickRate": 4.09,
+            "games": 469,
+            "winRate": 51.6
           }
         },
         {
           "itemIds": [
-            "773070",
-            "773003",
-            "773128",
+            "773040",
+            "773089",
+            "773135"
+          ],
+          "totalPrice": null,
+          "metric": {
+            "pickRate": 3.88,
+            "games": 445,
+            "winRate": 55.28
+          }
+        },
+        {
+          "itemIds": [
+            "773040",
+            "773151",
             "773089"
           ],
-          "totalPrice": 9800,
+          "totalPrice": null,
           "metric": {
-            "pickRate": 7.48,
-            "games": 488,
-            "winRate": 52.25
+            "pickRate": 2.58,
+            "games": 296,
+            "winRate": 55.74
+          }
+        },
+        {
+          "itemIds": [
+            "773040",
+            "773089",
+            "773128"
+          ],
+          "totalPrice": null,
+          "metric": {
+            "pickRate": 2.33,
+            "games": 267,
+            "winRate": 53.56
           }
         },
         {
@@ -5946,37 +5991,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 8695,
           "metric": {
-            "pickRate": 5.59,
-            "games": 365,
-            "winRate": 53.97
-          }
-        },
-        {
-          "itemIds": [
-            "773070",
-            "773003",
-            "773089",
-            "773128"
-          ],
-          "totalPrice": 9800,
-          "metric": {
-            "pickRate": 4.61,
-            "games": 301,
-            "winRate": 49.5
-          }
-        },
-        {
-          "itemIds": [
-            "773070",
-            "773128",
-            "773003",
-            "773089"
-          ],
-          "totalPrice": 9800,
-          "metric": {
-            "pickRate": 3.05,
-            "games": 199,
-            "winRate": 49.25
+            "pickRate": 2.14,
+            "games": 246,
+            "winRate": 52.44
           }
         }
       ]
@@ -6736,67 +6753,67 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
       "core": [
         {
           "itemIds": [
+            "773027",
             "773116",
-            "773110",
-            "773075"
+            "773151"
           ],
-          "totalPrice": 8000,
+          "totalPrice": 8600,
           "metric": {
-            "pickRate": 6.52,
-            "games": 77,
-            "winRate": 46.75
+            "pickRate": 19.66,
+            "games": 1462,
+            "winRate": 58.82
+          }
+        },
+        {
+          "itemIds": [
+            "773027",
+            "773151",
+            "773116"
+          ],
+          "totalPrice": 8600,
+          "metric": {
+            "pickRate": 6.64,
+            "games": 494,
+            "winRate": 58.1
           }
         },
         {
           "itemIds": [
             "773116",
-            "773128",
-            "773089"
+            "773027",
+            "773151"
           ],
-          "totalPrice": 9300,
+          "totalPrice": 8600,
           "metric": {
-            "pickRate": 2.54,
-            "games": 30,
-            "winRate": 63.33
+            "pickRate": 2.12,
+            "games": 158,
+            "winRate": 58.86
           }
         },
         {
           "itemIds": [
-            "773128",
+            "773027",
             "773116",
-            "773089"
+            "773001"
           ],
-          "totalPrice": 9300,
+          "totalPrice": 8260,
           "metric": {
-            "pickRate": 2.46,
-            "games": 29,
-            "winRate": 55.17
+            "pickRate": 1.94,
+            "games": 144,
+            "winRate": 59.03
           }
         },
         {
           "itemIds": [
-            "773116",
-            "773089",
-            "773135"
+            "773027",
+            "773001",
+            "773151"
           ],
-          "totalPrice": 8495,
+          "totalPrice": 8260,
           "metric": {
-            "pickRate": 2.2,
-            "games": 26,
-            "winRate": 57.69
-          }
-        },
-        {
-          "itemIds": [
-            "773116",
-            "773135",
-            "773089"
-          ],
-          "totalPrice": 8495,
-          "metric": {
-            "pickRate": 1.86,
-            "games": 22,
-            "winRate": 77.27
+            "pickRate": 1.92,
+            "games": 143,
+            "winRate": 60.84
           }
         }
       ]
@@ -7562,9 +7579,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9500,
           "metric": {
-            "pickRate": 4.88,
-            "games": 361,
-            "winRate": 57.34
+            "pickRate": 3.49,
+            "games": 427,
+            "winRate": 55.5
           }
         },
         {
@@ -7575,9 +7592,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9700,
           "metric": {
-            "pickRate": 4.61,
-            "games": 341,
-            "winRate": 59.24
+            "pickRate": 2.56,
+            "games": 313,
+            "winRate": 59.42
           }
         },
         {
@@ -7588,35 +7605,35 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9800,
           "metric": {
-            "pickRate": 1.88,
-            "games": 139,
-            "winRate": 47.48
+            "pickRate": 1.42,
+            "games": 174,
+            "winRate": 47.7
           }
         },
         {
           "itemIds": [
-            "773031",
             "773142",
-            "773072"
+            "773031",
+            "773035"
           ],
-          "totalPrice": 9700,
+          "totalPrice": 8800,
           "metric": {
-            "pickRate": 1.7,
-            "games": 126,
-            "winRate": 50.79
+            "pickRate": 1.22,
+            "games": 150,
+            "winRate": 56
           }
         },
         {
           "itemIds": [
+            "773142",
             "773031",
-            "773046",
-            "773072"
+            "773078"
           ],
-          "totalPrice": 9800,
+          "totalPrice": 10128,
           "metric": {
-            "pickRate": 1.61,
-            "games": 119,
-            "winRate": 53.78
+            "pickRate": 1.13,
+            "games": 138,
+            "winRate": 45.65
           }
         }
       ]
@@ -8379,67 +8396,67 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
       "core": [
         {
           "itemIds": [
-            "773084",
-            "773504",
-            "773107"
-          ],
-          "totalPrice": 7800,
-          "metric": {
-            "pickRate": 3.15,
-            "games": 103,
-            "winRate": 63.11
-          }
-        },
-        {
-          "itemIds": [
-            "773504",
-            "773222",
-            "773107"
-          ],
-          "totalPrice": 7650,
-          "metric": {
-            "pickRate": 2.42,
-            "games": 79,
-            "winRate": 60.76
-          }
-        },
-        {
-          "itemIds": [
-            "773084",
-            "773504",
+            "773069",
+            "773023",
             "773222"
           ],
-          "totalPrice": 7350,
+          "totalPrice": 6500,
           "metric": {
-            "pickRate": 1.99,
-            "games": 65,
-            "winRate": 50.77
+            "pickRate": 1.22,
+            "games": 103,
+            "winRate": 39.81
           }
         },
         {
           "itemIds": [
-            "773504",
-            "773222",
+            "773023",
+            "773069",
+            "773222"
+          ],
+          "totalPrice": 6500,
+          "metric": {
+            "pickRate": 0.91,
+            "games": 77,
+            "winRate": 48.05
+          }
+        },
+        {
+          "itemIds": [
+            "773173",
+            "773084",
+            "773504"
+          ],
+          "totalPrice": 5950,
+          "metric": {
+            "pickRate": 0.72,
+            "games": 61,
+            "winRate": 59.02
+          }
+        },
+        {
+          "itemIds": [
+            "773173",
+            "773092",
             "773084"
           ],
-          "totalPrice": 7350,
+          "totalPrice": 5350,
           "metric": {
-            "pickRate": 1.47,
-            "games": 48,
-            "winRate": 52.08
+            "pickRate": 0.71,
+            "games": 60,
+            "winRate": 61.67
           }
         },
         {
           "itemIds": [
-            "773084",
             "773504",
-            "773152"
+            "773069",
+            "773222"
           ],
-          "totalPrice": 7400,
+          "totalPrice": 6800,
           "metric": {
-            "pickRate": 1.44,
-            "games": 47,
-            "winRate": 68.09
+            "pickRate": 0.62,
+            "games": 52,
+            "winRate": 57.69
           }
         }
       ]
@@ -9206,9 +9223,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 8400,
           "metric": {
-            "pickRate": 9.05,
-            "games": 378,
-            "winRate": 54.5
+            "pickRate": 4.78,
+            "games": 390,
+            "winRate": 53.85
           }
         },
         {
@@ -9219,9 +9236,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 8400,
           "metric": {
-            "pickRate": 6.78,
-            "games": 283,
-            "winRate": 60.78
+            "pickRate": 3.64,
+            "games": 297,
+            "winRate": 57.91
           }
         },
         {
@@ -9232,9 +9249,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 8300,
           "metric": {
-            "pickRate": 3.66,
-            "games": 153,
-            "winRate": 54.9
+            "pickRate": 2.26,
+            "games": 184,
+            "winRate": 52.72
           }
         },
         {
@@ -9245,22 +9262,22 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 8550,
           "metric": {
-            "pickRate": 3.33,
-            "games": 139,
-            "winRate": 53.96
+            "pickRate": 1.95,
+            "games": 159,
+            "winRate": 56.6
           }
         },
         {
           "itemIds": [
             "773083",
-            "773068",
-            "773110"
+            "773065",
+            "773064"
           ],
-          "totalPrice": 8550,
+          "totalPrice": 8360,
           "metric": {
-            "pickRate": 2.47,
-            "games": 103,
-            "winRate": 45.63
+            "pickRate": 1.48,
+            "games": 121,
+            "winRate": 52.89
           }
         }
       ]
@@ -10022,66 +10039,66 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
         {
           "itemIds": [
             "773115",
-            "773089",
-            "773135"
-          ],
-          "totalPrice": 8095,
-          "metric": {
-            "pickRate": 5.54,
-            "games": 290,
-            "winRate": 51.72
-          }
-        },
-        {
-          "itemIds": [
-            "773115",
-            "773089",
-            "773091"
-          ],
-          "totalPrice": 7950,
-          "metric": {
-            "pickRate": 4.03,
-            "games": 211,
-            "winRate": 51.66
-          }
-        },
-        {
-          "itemIds": [
-            "773115",
-            "773091",
+            "773151",
             "773089"
           ],
-          "totalPrice": 7950,
+          "totalPrice": 8700,
           "metric": {
-            "pickRate": 3.73,
-            "games": 195,
-            "winRate": 49.74
+            "pickRate": 5.36,
+            "games": 613,
+            "winRate": 50.24
           }
         },
         {
           "itemIds": [
+            "773151",
             "773115",
-            "773128",
             "773089"
           ],
-          "totalPrice": 8900,
+          "totalPrice": 8700,
           "metric": {
-            "pickRate": 3.42,
-            "games": 179,
-            "winRate": 55.31
+            "pickRate": 4.68,
+            "games": 535,
+            "winRate": 52.34
           }
         },
         {
           "itemIds": [
             "773115",
-            "773089",
-            "773157"
+            "773114",
+            "773151"
           ],
-          "totalPrice": 9060,
+          "totalPrice": 7435,
           "metric": {
-            "pickRate": 3.14,
-            "games": 164,
-            "winRate": 51.22
+            "pickRate": 2.73,
+            "games": 312,
+            "winRate": 53.21
+          }
+        },
+        {
+          "itemIds": [
+            "773115",
+            "773151",
+            "773114"
+          ],
+          "totalPrice": 7435,
+          "metric": {
+            "pickRate": 2.61,
+            "games": 298,
+            "winRate": 56.71
+          }
+        },
+        {
+          "itemIds": [
+            "773151",
+            "773114",
+            "773089"
+          ],
+          "totalPrice": 8235,
+          "metric": {
+            "pickRate": 1.9,
+            "games": 217,
+            "winRate": 56.68
           }
         }
       ]
@@ -10841,41 +10858,15 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
       "core": [
         {
           "itemIds": [
-            "773087",
-            "773031",
-            "773072"
-          ],
-          "totalPrice": 9500,
-          "metric": {
-            "pickRate": 5.83,
-            "games": 416,
-            "winRate": 60.34
-          }
-        },
-        {
-          "itemIds": [
             "773031",
             "773087",
             "773072"
           ],
           "totalPrice": 9500,
           "metric": {
-            "pickRate": 5.8,
-            "games": 414,
-            "winRate": 60.63
-          }
-        },
-        {
-          "itemIds": [
-            "773087",
-            "773031",
-            "773046"
-          ],
-          "totalPrice": 9100,
-          "metric": {
-            "pickRate": 5.19,
-            "games": 370,
-            "winRate": 53.24
+            "pickRate": 3.82,
+            "games": 432,
+            "winRate": 60.42
           }
         },
         {
@@ -10886,22 +10877,48 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9100,
           "metric": {
-            "pickRate": 4.88,
-            "games": 348,
-            "winRate": 54.89
+            "pickRate": 3.55,
+            "games": 402,
+            "winRate": 57.96
           }
         },
         {
           "itemIds": [
+            "773087",
             "773031",
-            "773046",
             "773072"
           ],
-          "totalPrice": 9800,
+          "totalPrice": 9500,
           "metric": {
-            "pickRate": 3.91,
-            "games": 279,
-            "winRate": 54.48
+            "pickRate": 3.15,
+            "games": 357,
+            "winRate": 59.66
+          }
+        },
+        {
+          "itemIds": [
+            "773087",
+            "773031",
+            "773046"
+          ],
+          "totalPrice": 9100,
+          "metric": {
+            "pickRate": 3,
+            "games": 340,
+            "winRate": 52.94
+          }
+        },
+        {
+          "itemIds": [
+            "773087",
+            "773031",
+            "773035"
+          ],
+          "totalPrice": 8600,
+          "metric": {
+            "pickRate": 2.95,
+            "games": 334,
+            "winRate": 58.08
           }
         }
       ]
@@ -11668,9 +11685,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 8700,
           "metric": {
-            "pickRate": 4.35,
-            "games": 162,
-            "winRate": 53.09
+            "pickRate": 2.76,
+            "games": 191,
+            "winRate": 53.93
           }
         },
         {
@@ -11681,22 +11698,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 8700,
           "metric": {
-            "pickRate": 2.82,
-            "games": 105,
-            "winRate": 64.76
-          }
-        },
-        {
-          "itemIds": [
-            "773190",
-            "773083",
-            "773065"
-          ],
-          "totalPrice": 7975,
-          "metric": {
-            "pickRate": 2.18,
-            "games": 81,
-            "winRate": 56.79
+            "pickRate": 1.85,
+            "games": 128,
+            "winRate": 60.94
           }
         },
         {
@@ -11707,22 +11711,35 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 7975,
           "metric": {
-            "pickRate": 2.18,
-            "games": 81,
-            "winRate": 49.38
+            "pickRate": 1.44,
+            "games": 100,
+            "winRate": 49
           }
         },
         {
           "itemIds": [
             "773083",
             "773065",
-            "773075"
+            "773064"
           ],
-          "totalPrice": 7950,
+          "totalPrice": 8360,
           "metric": {
-            "pickRate": 1.77,
-            "games": 66,
-            "winRate": 43.94
+            "pickRate": 1.4,
+            "games": 97,
+            "winRate": 63.92
+          }
+        },
+        {
+          "itemIds": [
+            "773190",
+            "773083",
+            "773065"
+          ],
+          "totalPrice": 7975,
+          "metric": {
+            "pickRate": 1.2,
+            "games": 83,
+            "winRate": 55.42
           }
         }
       ]
@@ -12482,70 +12499,67 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
       "core": [
         {
           "itemIds": [
-            "773070",
-            "773003",
+            "773040",
             "773089",
             "773135"
           ],
-          "totalPrice": 8995,
+          "totalPrice": null,
           "metric": {
-            "pickRate": 9.35,
-            "games": 560,
-            "winRate": 47.68
+            "pickRate": 4.42,
+            "games": 513,
+            "winRate": 46.59
           }
         },
         {
           "itemIds": [
-            "773070",
-            "773003",
-            "773135",
-            "773089"
-          ],
-          "totalPrice": 8995,
-          "metric": {
-            "pickRate": 3.77,
-            "games": 226,
-            "winRate": 48.23
-          }
-        },
-        {
-          "itemIds": [
-            "773128",
+            "773174",
             "773089",
             "773135"
           ],
-          "totalPrice": 8695,
+          "totalPrice": 8195,
           "metric": {
-            "pickRate": 3.51,
-            "games": 210,
-            "winRate": 45.24
+            "pickRate": 3.07,
+            "games": 357,
+            "winRate": 56.02
           }
         },
         {
           "itemIds": [
-            "773089",
+            "773174",
             "773135",
-            "773165"
+            "773151"
           ],
           "totalPrice": 7795,
           "metric": {
-            "pickRate": 3.37,
-            "games": 202,
-            "winRate": 47.03
+            "pickRate": 2.55,
+            "games": 296,
+            "winRate": 48.31
           }
         },
         {
           "itemIds": [
-            "773070",
-            "773003",
-            "773128",
+            "773174",
+            "773089",
+            "773151"
+          ],
+          "totalPrice": 8800,
+          "metric": {
+            "pickRate": 1.88,
+            "games": 218,
+            "winRate": 56.42
+          }
+        },
+        {
+          "itemIds": [
+            "773040",
+            "773135",
             "773089"
           ],
-          "totalPrice": 9800,
+          "totalPrice": null,
           "metric": {
-            "pickRate": 3.29,
-            "games": 197,
-            "winRate": 42.64
+            "pickRate": 1.78,
+            "games": 207,
+            "winRate": 48.31
           }
         }
       ]
@@ -13312,9 +13326,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 8700,
           "metric": {
-            "pickRate": 3.17,
-            "games": 71,
-            "winRate": 67.61
+            "pickRate": 2.01,
+            "games": 81,
+            "winRate": 64.2
           }
         },
         {
@@ -13325,9 +13339,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 7925,
           "metric": {
-            "pickRate": 2.77,
-            "games": 62,
-            "winRate": 53.23
+            "pickRate": 1.86,
+            "games": 75,
+            "winRate": 48
           }
         },
         {
@@ -13338,22 +13352,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 8700,
           "metric": {
-            "pickRate": 2.68,
-            "games": 60,
-            "winRate": 63.33
-          }
-        },
-        {
-          "itemIds": [
-            "773190",
-            "773107",
-            "773065"
-          ],
-          "totalPrice": 7925,
-          "metric": {
-            "pickRate": 2.5,
-            "games": 56,
-            "winRate": 51.79
+            "pickRate": 1.69,
+            "games": 68,
+            "winRate": 64.71
           }
         },
         {
@@ -13364,9 +13365,22 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 7975,
           "metric": {
-            "pickRate": 2.28,
-            "games": 51,
-            "winRate": 45.1
+            "pickRate": 1.64,
+            "games": 66,
+            "winRate": 45.45
+          }
+        },
+        {
+          "itemIds": [
+            "773190",
+            "773107",
+            "773065"
+          ],
+          "totalPrice": 7925,
+          "metric": {
+            "pickRate": 1.52,
+            "games": 61,
+            "winRate": 52.46
           }
         }
       ]
@@ -14132,9 +14146,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 8200,
           "metric": {
-            "pickRate": 8.44,
-            "games": 656,
-            "winRate": 54.73
+            "pickRate": 7.21,
+            "games": 818,
+            "winRate": 54.28
           }
         },
         {
@@ -14145,9 +14159,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9400,
           "metric": {
-            "pickRate": 7.72,
-            "games": 600,
-            "winRate": 52.83
+            "pickRate": 6.54,
+            "games": 742,
+            "winRate": 52.7
           }
         },
         {
@@ -14158,9 +14172,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9400,
           "metric": {
-            "pickRate": 4.37,
-            "games": 340,
-            "winRate": 61.76
+            "pickRate": 3.94,
+            "games": 447,
+            "winRate": 59.06
           }
         },
         {
@@ -14171,9 +14185,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 8200,
           "metric": {
-            "pickRate": 2.95,
-            "games": 229,
-            "winRate": 50.66
+            "pickRate": 2.57,
+            "games": 292,
+            "winRate": 51.37
           }
         },
         {
@@ -14184,9 +14198,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9400,
           "metric": {
-            "pickRate": 2.75,
-            "games": 214,
-            "winRate": 57.48
+            "pickRate": 2.26,
+            "games": 256,
+            "winRate": 59.38
           }
         }
       ]
@@ -14954,63 +14968,61 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 8695,
           "metric": {
-            "pickRate": 8.51,
-            "games": 478,
-            "winRate": 52.09
+            "pickRate": 3,
+            "games": 322,
+            "winRate": 48.14
           }
         },
         {
           "itemIds": [
-            "773070",
-            "773003",
+            "773151",
+            "773135",
+            "773165"
+          ],
+          "totalPrice": 7395,
+          "metric": {
+            "pickRate": 2.91,
+            "games": 312,
+            "winRate": 46.15
+          }
+        },
+        {
+          "itemIds": [
+            "773040",
+            "773151",
+            "773089"
+          ],
+          "totalPrice": null,
+          "metric": {
+            "pickRate": 2.7,
+            "games": 290,
+            "winRate": 44.14
+          }
+        },
+        {
+          "itemIds": [
+            "773151",
+            "773135",
+            "773089"
+          ],
+          "totalPrice": 8495,
+          "metric": {
+            "pickRate": 2.15,
+            "games": 231,
+            "winRate": 55.41
+          }
+        },
+        {
+          "itemIds": [
+            "773040",
             "773128",
             "773089"
           ],
-          "totalPrice": 9800,
+          "totalPrice": null,
           "metric": {
-            "pickRate": 4.35,
-            "games": 244,
-            "winRate": 50.41
-          }
-        },
-        {
-          "itemIds": [
-            "773070",
-            "773003",
-            "773089",
-            "773135"
-          ],
-          "totalPrice": 8995,
-          "metric": {
-            "pickRate": 3.49,
-            "games": 196,
-            "winRate": 52.55
-          }
-        },
-        {
-          "itemIds": [
-            "773128",
-            "773003",
-            "773089"
-          ],
-          "totalPrice": 9100,
-          "metric": {
-            "pickRate": 2.78,
-            "games": 156,
-            "winRate": 48.72
-          }
-        },
-        {
-          "itemIds": [
-            "773128",
-            "773089",
-            "773157"
-          ],
-          "totalPrice": 9660,
-          "metric": {
-            "pickRate": 2.72,
-            "games": 153,
-            "winRate": 55.56
+            "pickRate": 2.04,
+            "games": 219,
+            "winRate": 49.32
           }
         }
       ]
@@ -15777,22 +15789,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 8700,
           "metric": {
-            "pickRate": 5.41,
-            "games": 241,
-            "winRate": 58.09
-          }
-        },
-        {
-          "itemIds": [
-            "773107",
-            "773083",
-            "773065"
-          ],
-          "totalPrice": 8700,
-          "metric": {
-            "pickRate": 3.43,
-            "games": 153,
-            "winRate": 58.17
+            "pickRate": 3.33,
+            "games": 262,
+            "winRate": 60.31
           }
         },
         {
@@ -15803,9 +15802,22 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 7975,
           "metric": {
-            "pickRate": 3.28,
-            "games": 146,
-            "winRate": 47.95
+            "pickRate": 2.26,
+            "games": 178,
+            "winRate": 46.63
+          }
+        },
+        {
+          "itemIds": [
+            "773107",
+            "773083",
+            "773065"
+          ],
+          "totalPrice": 8700,
+          "metric": {
+            "pickRate": 2.16,
+            "games": 170,
+            "winRate": 57.06
           }
         },
         {
@@ -15816,9 +15828,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 8175,
           "metric": {
-            "pickRate": 2.83,
-            "games": 126,
-            "winRate": 50
+            "pickRate": 1.94,
+            "games": 153,
+            "winRate": 53.59
           }
         },
         {
@@ -15829,9 +15841,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 7925,
           "metric": {
-            "pickRate": 2.45,
-            "games": 109,
-            "winRate": 64.22
+            "pickRate": 1.71,
+            "games": 135,
+            "winRate": 64.44
           }
         }
       ]
@@ -16593,65 +16605,65 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "itemIds": [
             "773068",
             "773110",
-            "773083"
+            "773001"
           ],
-          "totalPrice": 8550,
+          "totalPrice": 8110,
           "metric": {
-            "pickRate": 7.04,
-            "games": 197,
-            "winRate": 52.79
+            "pickRate": 2.18,
+            "games": 169,
+            "winRate": 53.25
           }
         },
         {
           "itemIds": [
             "773068",
-            "773083",
+            "773001",
             "773110"
+          ],
+          "totalPrice": 8110,
+          "metric": {
+            "pickRate": 2.14,
+            "games": 166,
+            "winRate": 60.24
+          }
+        },
+        {
+          "itemIds": [
+            "773068",
+            "773110",
+            "773083"
           ],
           "totalPrice": 8550,
           "metric": {
-            "pickRate": 3.68,
-            "games": 103,
-            "winRate": 49.51
+            "pickRate": 1.43,
+            "games": 111,
+            "winRate": 50.45
           }
         },
         {
           "itemIds": [
             "773110",
             "773068",
+            "773001"
+          ],
+          "totalPrice": 8110,
+          "metric": {
+            "pickRate": 1.04,
+            "games": 81,
+            "winRate": 41.98
+          }
+        },
+        {
+          "itemIds": [
+            "773068",
+            "773001",
             "773083"
           ],
-          "totalPrice": 8550,
+          "totalPrice": 8210,
           "metric": {
-            "pickRate": 2.82,
-            "games": 79,
-            "winRate": 44.3
-          }
-        },
-        {
-          "itemIds": [
-            "773068",
-            "773083",
-            "773065"
-          ],
-          "totalPrice": 8400,
-          "metric": {
-            "pickRate": 1.93,
-            "games": 54,
-            "winRate": 66.67
-          }
-        },
-        {
-          "itemIds": [
-            "773068",
-            "773083",
-            "773143"
-          ],
-          "totalPrice": 8775,
-          "metric": {
-            "pickRate": 1.54,
-            "games": 43,
-            "winRate": 32.56
+            "pickRate": 0.89,
+            "games": 69,
+            "winRate": 57.97
           }
         }
       ]
@@ -17412,71 +17424,68 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
         {
           "itemIds": [
             "773070",
-            "773003",
-            "773089",
-            "773135"
-          ],
-          "totalPrice": 8995,
-          "metric": {
-            "pickRate": 11.66,
-            "games": 484,
-            "winRate": 51.65
-          }
-        },
-        {
-          "itemIds": [
-            "773070",
-            "773003",
-            "773128",
+            "773027",
+            "773040",
             "773089"
           ],
-          "totalPrice": 9800,
+          "totalPrice": null,
           "metric": {
-            "pickRate": 8.69,
-            "games": 361,
-            "winRate": 52.35
+            "pickRate": 6.09,
+            "games": 575,
+            "winRate": 57.57
           }
         },
         {
           "itemIds": [
-            "773070",
-            "773003",
-            "773135",
+            "773027",
+            "773040",
             "773089"
           ],
-          "totalPrice": 8995,
+          "totalPrice": null,
           "metric": {
-            "pickRate": 6.38,
-            "games": 265,
-            "winRate": 49.43
+            "pickRate": 3.87,
+            "games": 366,
+            "winRate": 49.73
+          }
+        },
+        {
+          "itemIds": [
+            "773040",
+            "773174",
+            "773089"
+          ],
+          "totalPrice": null,
+          "metric": {
+            "pickRate": 3,
+            "games": 283,
+            "winRate": 48.06
           }
         },
         {
           "itemIds": [
             "773070",
-            "773003",
-            "773089",
+            "773027",
+            "773040",
             "773128"
           ],
-          "totalPrice": 9800,
+          "totalPrice": null,
           "metric": {
-            "pickRate": 4.55,
-            "games": 189,
-            "winRate": 57.67
+            "pickRate": 2.94,
+            "games": 278,
+            "winRate": 46.04
           }
         },
         {
           "itemIds": [
-            "773070",
-            "773128",
-            "773003",
+            "773040",
+            "773027",
             "773089"
           ],
-          "totalPrice": 9800,
+          "totalPrice": null,
           "metric": {
-            "pickRate": 2.99,
-            "games": 124,
-            "winRate": 48.39
+            "pickRate": 2.42,
+            "games": 229,
+            "winRate": 52.84
           }
         }
       ]
@@ -18239,71 +18248,67 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
       "core": [
         {
           "itemIds": [
+            "773151",
             "773135",
-            "773116",
-            "773128"
+            "773116"
           ],
-          "totalPrice": 8295,
+          "totalPrice": 8095,
           "metric": {
-            "pickRate": 3.96,
-            "games": 158,
-            "winRate": 47.47
+            "pickRate": 4.33,
+            "games": 375,
+            "winRate": 50.67
           }
         },
         {
           "itemIds": [
-            "773070",
-            "773003",
+            "773151",
             "773089",
             "773116"
           ],
-          "totalPrice": 9600,
+          "totalPrice": 9100,
           "metric": {
-            "pickRate": 3.26,
-            "games": 130,
-            "winRate": 46.15
+            "pickRate": 2.92,
+            "games": 253,
+            "winRate": 54.15
           }
         },
         {
           "itemIds": [
-            "773070",
-            "773003",
+            "773040",
+            "773151",
+            "773089"
+          ],
+          "totalPrice": null,
+          "metric": {
+            "pickRate": 2.77,
+            "games": 240,
+            "winRate": 51.25
+          }
+        },
+        {
+          "itemIds": [
+            "773040",
+            "773151",
+            "773116"
+          ],
+          "totalPrice": null,
+          "metric": {
+            "pickRate": 2.07,
+            "games": 179,
+            "winRate": 55.31
+          }
+        },
+        {
+          "itemIds": [
+            "773151",
             "773116",
             "773089"
           ],
-          "totalPrice": 9600,
+          "totalPrice": 9100,
           "metric": {
-            "pickRate": 2.84,
-            "games": 113,
-            "winRate": 55.75
-          }
-        },
-        {
-          "itemIds": [
-            "773070",
-            "773003",
-            "773089",
-            "773135"
-          ],
-          "totalPrice": 8995,
-          "metric": {
-            "pickRate": 2.46,
-            "games": 98,
-            "winRate": 52.04
-          }
-        },
-        {
-          "itemIds": [
-            "773070",
-            "773003",
-            "773128",
-            "773089"
-          ],
-          "totalPrice": 9800,
-          "metric": {
-            "pickRate": 1.98,
-            "games": 79,
-            "winRate": 46.84
+            "pickRate": 1.99,
+            "games": 172,
+            "winRate": 53.49
           }
         }
       ]
@@ -19065,71 +19070,67 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
       "core": [
         {
           "itemIds": [
+            "773040",
+            "773151",
+            "773089"
+          ],
+          "totalPrice": null,
+          "metric": {
+            "pickRate": 2.76,
+            "games": 234,
+            "winRate": 52.99
+          }
+        },
+        {
+          "itemIds": [
+            "773151",
+            "773135",
+            "773165"
+          ],
+          "totalPrice": 7395,
+          "metric": {
+            "pickRate": 2.61,
+            "games": 221,
+            "winRate": 46.61
+          }
+        },
+        {
+          "itemIds": [
             "773128",
             "773089",
             "773135"
           ],
           "totalPrice": 8695,
           "metric": {
-            "pickRate": 8.55,
-            "games": 351,
-            "winRate": 50.43
+            "pickRate": 2.5,
+            "games": 212,
+            "winRate": 51.42
           }
         },
         {
           "itemIds": [
-            "773070",
-            "773003",
-            "773128",
-            "773089"
-          ],
-          "totalPrice": 9800,
-          "metric": {
-            "pickRate": 5.28,
-            "games": 217,
-            "winRate": 48.39
-          }
-        },
-        {
-          "itemIds": [
-            "773070",
-            "773003",
-            "773089",
-            "773135"
-          ],
-          "totalPrice": 8995,
-          "metric": {
-            "pickRate": 4.6,
-            "games": 189,
-            "winRate": 41.27
-          }
-        },
-        {
-          "itemIds": [
-            "773070",
-            "773003",
+            "773151",
             "773135",
             "773089"
           ],
-          "totalPrice": 8995,
+          "totalPrice": 8495,
           "metric": {
-            "pickRate": 2.87,
-            "games": 118,
-            "winRate": 57.63
+            "pickRate": 2.03,
+            "games": 172,
+            "winRate": 54.65
           }
         },
         {
           "itemIds": [
-            "773070",
             "773128",
-            "773003",
+            "773151",
             "773089"
           ],
-          "totalPrice": 9800,
+          "totalPrice": 9300,
           "metric": {
-            "pickRate": 2.58,
-            "games": 106,
-            "winRate": 54.72
+            "pickRate": 1.74,
+            "games": 147,
+            "winRate": 46.94
           }
         }
       ]
@@ -19892,71 +19893,67 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
       "core": [
         {
           "itemIds": [
-            "773070",
-            "773003",
-            "773116",
+            "773040",
+            "773151",
             "773089"
           ],
-          "totalPrice": 9600,
+          "totalPrice": null,
           "metric": {
-            "pickRate": 4.67,
-            "games": 219,
-            "winRate": 40.64
+            "pickRate": 3.06,
+            "games": 328,
+            "winRate": 49.7
           }
         },
         {
           "itemIds": [
-            "773070",
-            "773003",
-            "773128",
-            "773089"
-          ],
-          "totalPrice": 9800,
-          "metric": {
-            "pickRate": 3.86,
-            "games": 181,
-            "winRate": 45.3
-          }
-        },
-        {
-          "itemIds": [
-            "773070",
-            "773003",
-            "773089",
-            "773135"
-          ],
-          "totalPrice": 8995,
-          "metric": {
-            "pickRate": 3.82,
-            "games": 179,
-            "winRate": 52.51
-          }
-        },
-        {
-          "itemIds": [
-            "773070",
-            "773003",
-            "773089",
+            "773151",
+            "773135",
             "773116"
           ],
-          "totalPrice": 9600,
+          "totalPrice": 8095,
           "metric": {
-            "pickRate": 3.39,
-            "games": 159,
-            "winRate": 46.54
+            "pickRate": 2.83,
+            "games": 303,
+            "winRate": 47.52
           }
         },
         {
           "itemIds": [
-            "773135",
-            "773116",
-            "773128"
+            "773151",
+            "773040",
+            "773116"
           ],
-          "totalPrice": 8295,
+          "totalPrice": null,
           "metric": {
-            "pickRate": 2.77,
-            "games": 130,
-            "winRate": 40
+            "pickRate": 2.69,
+            "games": 288,
+            "winRate": 46.18
+          }
+        },
+        {
+          "itemIds": [
+            "773040",
+            "773151",
+            "773116"
+          ],
+          "totalPrice": null,
+          "metric": {
+            "pickRate": 2.31,
+            "games": 248,
+            "winRate": 47.18
+          }
+        },
+        {
+          "itemIds": [
+            "773151",
+            "773040",
+            "773089"
+          ],
+          "totalPrice": null,
+          "metric": {
+            "pickRate": 2.01,
+            "games": 215,
+            "winRate": 56.74
           }
         }
       ]
@@ -20719,67 +20716,67 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
       "core": [
         {
           "itemIds": [
+            "773151",
             "773128",
-            "773089",
-            "773135"
-          ],
-          "totalPrice": 8695,
-          "metric": {
-            "pickRate": 9.19,
-            "games": 348,
-            "winRate": 47.13
-          }
-        },
-        {
-          "itemIds": [
-            "773128",
-            "773135",
             "773089"
-          ],
-          "totalPrice": 8695,
-          "metric": {
-            "pickRate": 4.78,
-            "games": 181,
-            "winRate": 43.09
-          }
-        },
-        {
-          "itemIds": [
-            "773128",
-            "773089",
-            "773157"
-          ],
-          "totalPrice": 9660,
-          "metric": {
-            "pickRate": 4.65,
-            "games": 176,
-            "winRate": 50.57
-          }
-        },
-        {
-          "itemIds": [
-            "773128",
-            "773157",
-            "773089"
-          ],
-          "totalPrice": 9660,
-          "metric": {
-            "pickRate": 3.96,
-            "games": 150,
-            "winRate": 52.67
-          }
-        },
-        {
-          "itemIds": [
-            "773128",
-            "773089",
-            "773116"
           ],
           "totalPrice": 9300,
           "metric": {
-            "pickRate": 2.06,
-            "games": 78,
-            "winRate": 61.54
+            "pickRate": 5.22,
+            "games": 483,
+            "winRate": 49.28
+          }
+        },
+        {
+          "itemIds": [
+            "773128",
+            "773151",
+            "773089"
+          ],
+          "totalPrice": 9300,
+          "metric": {
+            "pickRate": 3.98,
+            "games": 368,
+            "winRate": 52.72
+          }
+        },
+        {
+          "itemIds": [
+            "773151",
+            "773128",
+            "773135"
+          ],
+          "totalPrice": 8295,
+          "metric": {
+            "pickRate": 3.51,
+            "games": 325,
+            "winRate": 46.77
+          }
+        },
+        {
+          "itemIds": [
+            "773151",
+            "773089",
+            "773135"
+          ],
+          "totalPrice": 8495,
+          "metric": {
+            "pickRate": 2.19,
+            "games": 203,
+            "winRate": 52.71
+          }
+        },
+        {
+          "itemIds": [
+            "773128",
+            "773151",
+            "773135"
+          ],
+          "totalPrice": 8295,
+          "metric": {
+            "pickRate": 2.07,
+            "games": 191,
+            "winRate": 43.46
           }
         }
       ]
@@ -21540,41 +21537,15 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
       "core": [
         {
           "itemIds": [
-            "773128",
-            "773089",
-            "773135"
-          ],
-          "totalPrice": 8695,
-          "metric": {
-            "pickRate": 4.79,
-            "games": 255,
-            "winRate": 52.16
-          }
-        },
-        {
-          "itemIds": [
             "773068",
             "773110",
             "773065"
           ],
           "totalPrice": 8300,
           "metric": {
-            "pickRate": 3.96,
-            "games": 211,
-            "winRate": 52.13
-          }
-        },
-        {
-          "itemIds": [
-            "773083",
-            "773068",
-            "773065"
-          ],
-          "totalPrice": 8400,
-          "metric": {
-            "pickRate": 3.85,
-            "games": 205,
-            "winRate": 55.61
+            "pickRate": 2.39,
+            "games": 242,
+            "winRate": 52.07
           }
         },
         {
@@ -21585,22 +21556,48 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 8400,
           "metric": {
-            "pickRate": 3.72,
-            "games": 198,
-            "winRate": 51.52
+            "pickRate": 2.13,
+            "games": 215,
+            "winRate": 49.3
+          }
+        },
+        {
+          "itemIds": [
+            "773083",
+            "773068",
+            "773065"
+          ],
+          "totalPrice": 8400,
+          "metric": {
+            "pickRate": 2,
+            "games": 202,
+            "winRate": 57.92
           }
         },
         {
           "itemIds": [
             "773128",
             "773089",
-            "773157"
+            "773135"
           ],
-          "totalPrice": 9660,
+          "totalPrice": 8695,
           "metric": {
-            "pickRate": 2.12,
-            "games": 113,
-            "winRate": 41.59
+            "pickRate": 1.87,
+            "games": 189,
+            "winRate": 53.44
+          }
+        },
+        {
+          "itemIds": [
+            "773027",
+            "773128",
+            "773089"
+          ],
+          "totalPrice": 9200,
+          "metric": {
+            "pickRate": 1.13,
+            "games": 114,
+            "winRate": 51.75
           }
         }
       ]
@@ -22365,22 +22362,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9928,
           "metric": {
-            "pickRate": 21.57,
-            "games": 634,
-            "winRate": 46.21
-          }
-        },
-        {
-          "itemIds": [
-            "773078",
-            "773071",
-            "773074"
-          ],
-          "totalPrice": 9928,
-          "metric": {
-            "pickRate": 7.35,
-            "games": 216,
-            "winRate": 46.76
+            "pickRate": 14.66,
+            "games": 758,
+            "winRate": 46.44
           }
         },
         {
@@ -22391,22 +22375,35 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9928,
           "metric": {
-            "pickRate": 7.01,
-            "games": 206,
-            "winRate": 49.03
+            "pickRate": 5.09,
+            "games": 263,
+            "winRate": 50.95
           }
         },
         {
           "itemIds": [
             "773078",
-            "773074",
-            "773156"
+            "773071",
+            "773074"
           ],
-          "totalPrice": 10128,
+          "totalPrice": 9928,
           "metric": {
-            "pickRate": 2.48,
-            "games": 73,
-            "winRate": 42.47
+            "pickRate": 4.37,
+            "games": 226,
+            "winRate": 50.44
+          }
+        },
+        {
+          "itemIds": [
+            "773074",
+            "773071",
+            "773078"
+          ],
+          "totalPrice": 9928,
+          "metric": {
+            "pickRate": 1.55,
+            "games": 80,
+            "winRate": 62.5
           }
         },
         {
@@ -22418,9 +22415,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 11265,
           "metric": {
-            "pickRate": 2.48,
-            "games": 73,
-            "winRate": 46.58
+            "pickRate": 1.55,
+            "games": 80,
+            "winRate": 43.75
           }
         }
       ]
@@ -23181,71 +23178,68 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
         {
           "itemIds": [
             "773070",
-            "773003",
-            "773128",
+            "773027",
+            "773040",
             "773089"
           ],
-          "totalPrice": 9800,
+          "totalPrice": null,
           "metric": {
-            "pickRate": 9.21,
-            "games": 374,
-            "winRate": 46.52
+            "pickRate": 4.34,
+            "games": 387,
+            "winRate": 57.62
           }
         },
         {
           "itemIds": [
-            "773070",
-            "773003",
-            "773089",
-            "773135"
+            "773027",
+            "773040",
+            "773089"
           ],
-          "totalPrice": 8995,
+          "totalPrice": null,
           "metric": {
-            "pickRate": 8.59,
-            "games": 349,
-            "winRate": 51.58
+            "pickRate": 3.39,
+            "games": 302,
+            "winRate": 50.99
+          }
+        },
+        {
+          "itemIds": [
+            "773040",
+            "773174",
+            "773089"
+          ],
+          "totalPrice": null,
+          "metric": {
+            "pickRate": 2.92,
+            "games": 260,
+            "winRate": 50
           }
         },
         {
           "itemIds": [
             "773070",
-            "773003",
-            "773089",
+            "773027",
+            "773040",
             "773128"
           ],
-          "totalPrice": 9800,
+          "totalPrice": null,
           "metric": {
-            "pickRate": 4.38,
-            "games": 178,
-            "winRate": 51.12
+            "pickRate": 2.6,
+            "games": 232,
+            "winRate": 46.55
           }
         },
         {
           "itemIds": [
-            "773070",
-            "773003",
-            "773100",
-            "773089"
+            "773027",
+            "773040",
+            "773128"
           ],
-          "totalPrice": 9700,
+          "totalPrice": null,
           "metric": {
-            "pickRate": 3.69,
-            "games": 150,
-            "winRate": 57.33
-          }
-        },
-        {
-          "itemIds": [
-            "773070",
-            "773003",
-            "773135",
-            "773089"
-          ],
-          "totalPrice": 8995,
-          "metric": {
-            "pickRate": 3.55,
-            "games": 144,
-            "winRate": 52.08
+            "pickRate": 2.15,
+            "games": 192,
+            "winRate": 46.35
           }
         }
       ]
@@ -24010,9 +24004,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 10128,
           "metric": {
-            "pickRate": 7.94,
-            "games": 467,
-            "winRate": 49.68
+            "pickRate": 6.49,
+            "games": 581,
+            "winRate": 48.71
           }
         },
         {
@@ -24023,9 +24017,23 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 10428,
           "metric": {
-            "pickRate": 6.34,
-            "games": 373,
-            "winRate": 53.08
+            "pickRate": 4.99,
+            "games": 447,
+            "winRate": 51.23
+          }
+        },
+        {
+          "itemIds": [
+            "773070",
+            "773078",
+            "773042",
+            "773031"
+          ],
+          "totalPrice": null,
+          "metric": {
+            "pickRate": 4.23,
+            "games": 379,
+            "winRate": 53.3
           }
         },
         {
@@ -24036,36 +24044,22 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 10628,
           "metric": {
-            "pickRate": 5.64,
-            "games": 332,
-            "winRate": 56.93
-          }
-        },
-        {
-          "itemIds": [
-            "773070",
-            "773078",
-            "773004",
-            "773031"
-          ],
-          "totalPrice": 10228,
-          "metric": {
-            "pickRate": 5.3,
-            "games": 312,
-            "winRate": 53.53
+            "pickRate": 3.31,
+            "games": 296,
+            "winRate": 54.39
           }
         },
         {
           "itemIds": [
             "773078",
-            "773004",
+            "773042",
             "773031"
           ],
-          "totalPrice": 9528,
+          "totalPrice": null,
           "metric": {
-            "pickRate": 3.99,
-            "games": 235,
-            "winRate": 52.77
+            "pickRate": 3.08,
+            "games": 276,
+            "winRate": 53.62
           }
         }
       ]
@@ -24827,39 +24821,39 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "itemIds": [
             "773074",
             "773153",
-            "773072"
-          ],
-          "totalPrice": 9700,
-          "metric": {
-            "pickRate": 3.48,
-            "games": 93,
-            "winRate": 46.24
-          }
-        },
-        {
-          "itemIds": [
-            "773074",
-            "773153",
             "773065"
           ],
           "totalPrice": 9250,
           "metric": {
-            "pickRate": 3.37,
-            "games": 90,
-            "winRate": 53.33
+            "pickRate": 2.32,
+            "games": 106,
+            "winRate": 54.72
           }
         },
         {
           "itemIds": [
-            "773153",
             "773074",
+            "773153",
+            "773022"
+          ],
+          "totalPrice": 9800,
+          "metric": {
+            "pickRate": 2.25,
+            "games": 103,
+            "winRate": 52.43
+          }
+        },
+        {
+          "itemIds": [
+            "773074",
+            "773153",
             "773072"
           ],
           "totalPrice": 9700,
           "metric": {
-            "pickRate": 2.77,
-            "games": 74,
-            "winRate": 50
+            "pickRate": 2.03,
+            "games": 93,
+            "winRate": 55.91
           }
         },
         {
@@ -24870,22 +24864,22 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9250,
           "metric": {
-            "pickRate": 2.43,
-            "games": 65,
-            "winRate": 66.15
+            "pickRate": 1.51,
+            "games": 69,
+            "winRate": 66.67
           }
         },
         {
           "itemIds": [
             "773153",
-            "773074",
-            "773065"
+            "773072",
+            "773022"
           ],
-          "totalPrice": 9250,
+          "totalPrice": 9700,
           "metric": {
-            "pickRate": 2.28,
-            "games": 61,
-            "winRate": 54.1
+            "pickRate": 1.49,
+            "games": 68,
+            "winRate": 51.47
           }
         }
       ]
@@ -25650,9 +25644,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9428,
           "metric": {
-            "pickRate": 10.24,
-            "games": 468,
-            "winRate": 50.64
+            "pickRate": 8.15,
+            "games": 588,
+            "winRate": 48.47
           }
         },
         {
@@ -25663,9 +25657,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9828,
           "metric": {
-            "pickRate": 7.13,
-            "games": 326,
-            "winRate": 46.01
+            "pickRate": 5.75,
+            "games": 415,
+            "winRate": 45.3
           }
         },
         {
@@ -25676,9 +25670,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9428,
           "metric": {
-            "pickRate": 5.78,
-            "games": 264,
-            "winRate": 55.3
+            "pickRate": 4.97,
+            "games": 359,
+            "winRate": 55.71
           }
         },
         {
@@ -25689,9 +25683,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9828,
           "metric": {
-            "pickRate": 4.64,
-            "games": 212,
-            "winRate": 54.25
+            "pickRate": 3.63,
+            "games": 262,
+            "winRate": 55.73
           }
         },
         {
@@ -25702,9 +25696,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9628,
           "metric": {
-            "pickRate": 3.26,
-            "games": 149,
-            "winRate": 53.69
+            "pickRate": 2.56,
+            "games": 185,
+            "winRate": 56.76
           }
         }
       ]
@@ -26467,71 +26461,67 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
       "core": [
         {
           "itemIds": [
-            "773070",
-            "773003",
-            "773089",
-            "773135"
+            "773040",
+            "773151",
+            "773089"
           ],
-          "totalPrice": 8995,
+          "totalPrice": null,
           "metric": {
-            "pickRate": 7.13,
-            "games": 388,
-            "winRate": 52.84
+            "pickRate": 3.55,
+            "games": 369,
+            "winRate": 53.12
           }
         },
         {
           "itemIds": [
-            "773070",
-            "773003",
+            "773151",
             "773128",
             "773089"
           ],
-          "totalPrice": 9800,
+          "totalPrice": 9300,
           "metric": {
-            "pickRate": 5.86,
-            "games": 319,
-            "winRate": 50.78
+            "pickRate": 1.85,
+            "games": 192,
+            "winRate": 39.06
           }
         },
         {
           "itemIds": [
-            "773128",
+            "773151",
             "773089",
             "773135"
           ],
-          "totalPrice": 8695,
+          "totalPrice": 8495,
           "metric": {
-            "pickRate": 4.02,
-            "games": 219,
-            "winRate": 42.92
+            "pickRate": 1.74,
+            "games": 181,
+            "winRate": 51.38
           }
         },
         {
           "itemIds": [
-            "773070",
-            "773003",
+            "773151",
             "773135",
-            "773089"
+            "773116"
           ],
-          "totalPrice": 8995,
+          "totalPrice": 8095,
           "metric": {
-            "pickRate": 3.51,
-            "games": 191,
-            "winRate": 50.79
+            "pickRate": 1.73,
+            "games": 180,
+            "winRate": 56.11
           }
         },
         {
           "itemIds": [
-            "773070",
-            "773003",
-            "773089",
-            "773128"
+            "773151",
+            "773040",
+            "773089"
           ],
-          "totalPrice": 9800,
+          "totalPrice": null,
           "metric": {
-            "pickRate": 3.09,
-            "games": 168,
-            "winRate": 48.21
+            "pickRate": 1.52,
+            "games": 158,
+            "winRate": 50.63
           }
         }
       ]
@@ -27294,67 +27284,67 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
       "core": [
         {
           "itemIds": [
-            "773504",
-            "773222",
-            "773107"
-          ],
-          "totalPrice": 7650,
-          "metric": {
-            "pickRate": 4.12,
-            "games": 93,
-            "winRate": 41.94
-          }
-        },
-        {
-          "itemIds": [
-            "773084",
-            "773504",
-            "773107"
-          ],
-          "totalPrice": 7800,
-          "metric": {
-            "pickRate": 2.88,
-            "games": 65,
-            "winRate": 38.46
-          }
-        },
-        {
-          "itemIds": [
-            "773084",
-            "773504",
+            "773069",
+            "773023",
             "773222"
           ],
-          "totalPrice": 7350,
+          "totalPrice": 6500,
           "metric": {
-            "pickRate": 2.75,
-            "games": 62,
-            "winRate": 45.16
+            "pickRate": 1.51,
+            "games": 104,
+            "winRate": 44.23
           }
         },
         {
           "itemIds": [
-            "773504",
-            "773107",
-            "773084"
+            "773023",
+            "773069",
+            "773222"
           ],
-          "totalPrice": 7800,
+          "totalPrice": 6500,
           "metric": {
-            "pickRate": 2.75,
-            "games": 62,
-            "winRate": 45.16
+            "pickRate": 1.14,
+            "games": 78,
+            "winRate": 51.28
           }
         },
         {
           "itemIds": [
-            "773504",
-            "773222",
-            "773084"
+            "773023",
+            "773092",
+            "773504"
           ],
-          "totalPrice": 7350,
+          "totalPrice": 5700,
           "metric": {
-            "pickRate": 2.13,
-            "games": 48,
-            "winRate": 41.67
+            "pickRate": 0.9,
+            "games": 62,
+            "winRate": 38.71
+          }
+        },
+        {
+          "itemIds": [
+            "773069",
+            "773504",
+            "773023"
+          ],
+          "totalPrice": 6200,
+          "metric": {
+            "pickRate": 0.84,
+            "games": 58,
+            "winRate": 43.1
+          }
+        },
+        {
+          "itemIds": [
+            "773023",
+            "773092",
+            "773069"
+          ],
+          "totalPrice": 5600,
+          "metric": {
+            "pickRate": 0.77,
+            "games": 53,
+            "winRate": 47.17
           }
         }
       ]
@@ -28120,9 +28110,48 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 8695,
           "metric": {
-            "pickRate": 9.68,
-            "games": 327,
-            "winRate": 48.01
+            "pickRate": 2.87,
+            "games": 221,
+            "winRate": 50.23
+          }
+        },
+        {
+          "itemIds": [
+            "773128",
+            "773151",
+            "773089"
+          ],
+          "totalPrice": 9300,
+          "metric": {
+            "pickRate": 2.47,
+            "games": 190,
+            "winRate": 48.95
+          }
+        },
+        {
+          "itemIds": [
+            "773151",
+            "773128",
+            "773135"
+          ],
+          "totalPrice": 8295,
+          "metric": {
+            "pickRate": 2.34,
+            "games": 180,
+            "winRate": 44.44
+          }
+        },
+        {
+          "itemIds": [
+            "773100",
+            "773128",
+            "773089"
+          ],
+          "totalPrice": 9400,
+          "metric": {
+            "pickRate": 2.25,
+            "games": 173,
+            "winRate": 50.87
           }
         },
         {
@@ -28133,48 +28162,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9400,
           "metric": {
-            "pickRate": 5.8,
-            "games": 196,
-            "winRate": 50
-          }
-        },
-        {
-          "itemIds": [
-            "773100",
-            "773128",
-            "773089"
-          ],
-          "totalPrice": 9400,
-          "metric": {
-            "pickRate": 5.45,
-            "games": 184,
-            "winRate": 47.83
-          }
-        },
-        {
-          "itemIds": [
-            "773128",
-            "773089",
-            "773100"
-          ],
-          "totalPrice": 9400,
-          "metric": {
-            "pickRate": 4.56,
-            "games": 154,
-            "winRate": 51.3
-          }
-        },
-        {
-          "itemIds": [
-            "773128",
-            "773135",
-            "773089"
-          ],
-          "totalPrice": 8695,
-          "metric": {
-            "pickRate": 3.61,
-            "games": 122,
-            "winRate": 48.36
+            "pickRate": 2.06,
+            "games": 159,
+            "winRate": 50.94
           }
         }
       ]
@@ -28939,22 +28929,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9078,
           "metric": {
-            "pickRate": 6.8,
-            "games": 236,
-            "winRate": 41.1
-          }
-        },
-        {
-          "itemIds": [
-            "773078",
-            "773074",
-            "773071"
-          ],
-          "totalPrice": 9928,
-          "metric": {
-            "pickRate": 4.03,
-            "games": 140,
-            "winRate": 55
+            "pickRate": 5.11,
+            "games": 320,
+            "winRate": 43.13
           }
         },
         {
@@ -28965,9 +28942,22 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9078,
           "metric": {
-            "pickRate": 3.94,
-            "games": 137,
-            "winRate": 44.53
+            "pickRate": 2.89,
+            "games": 181,
+            "winRate": 41.99
+          }
+        },
+        {
+          "itemIds": [
+            "773078",
+            "773074",
+            "773071"
+          ],
+          "totalPrice": 9928,
+          "metric": {
+            "pickRate": 2.41,
+            "games": 151,
+            "winRate": 54.3
           }
         },
         {
@@ -28978,9 +28968,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9928,
           "metric": {
-            "pickRate": 1.67,
-            "games": 58,
-            "winRate": 51.72
+            "pickRate": 1.1,
+            "games": 69,
+            "winRate": 50.72
           }
         },
         {
@@ -28991,9 +28981,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 8778,
           "metric": {
-            "pickRate": 1.61,
-            "games": 56,
-            "winRate": 46.43
+            "pickRate": 0.97,
+            "games": 61,
+            "winRate": 49.18
           }
         }
       ]
@@ -29754,13 +29744,26 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "itemIds": [
             "773078",
             "773083",
-            "773071"
+            "773005"
           ],
-          "totalPrice": 9628,
+          "totalPrice": 8928,
           "metric": {
-            "pickRate": 4.01,
-            "games": 120,
-            "winRate": 50
+            "pickRate": 4.02,
+            "games": 258,
+            "winRate": 50.78
+          }
+        },
+        {
+          "itemIds": [
+            "773078",
+            "773156",
+            "773005"
+          ],
+          "totalPrice": 9128,
+          "metric": {
+            "pickRate": 1.92,
+            "games": 123,
+            "winRate": 48.78
           }
         },
         {
@@ -29771,9 +29774,22 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9928,
           "metric": {
-            "pickRate": 3.74,
-            "games": 112,
-            "winRate": 55.36
+            "pickRate": 1.73,
+            "games": 111,
+            "winRate": 54.05
+          }
+        },
+        {
+          "itemIds": [
+            "773078",
+            "773074",
+            "773005"
+          ],
+          "totalPrice": 9228,
+          "metric": {
+            "pickRate": 1.73,
+            "games": 111,
+            "winRate": 59.46
           }
         },
         {
@@ -29784,35 +29800,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9928,
           "metric": {
-            "pickRate": 3.04,
-            "games": 91,
-            "winRate": 56.04
-          }
-        },
-        {
-          "itemIds": [
-            "773078",
-            "773083",
-            "773156"
-          ],
-          "totalPrice": 9828,
-          "metric": {
-            "pickRate": 2.81,
-            "games": 84,
-            "winRate": 34.52
-          }
-        },
-        {
-          "itemIds": [
-            "773078",
-            "773074",
-            "773156"
-          ],
-          "totalPrice": 10128,
-          "metric": {
-            "pickRate": 2.31,
-            "games": 69,
-            "winRate": 47.83
+            "pickRate": 1.29,
+            "games": 83,
+            "winRate": 57.83
           }
         }
       ]
@@ -30577,9 +30567,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9928,
           "metric": {
-            "pickRate": 12.88,
-            "games": 370,
-            "winRate": 45.68
+            "pickRate": 8.01,
+            "games": 443,
+            "winRate": 47.86
           }
         },
         {
@@ -30590,9 +30580,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9928,
           "metric": {
-            "pickRate": 6.37,
-            "games": 183,
-            "winRate": 42.62
+            "pickRate": 4.18,
+            "games": 231,
+            "winRate": 44.59
           }
         },
         {
@@ -30603,22 +30593,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9928,
           "metric": {
-            "pickRate": 2.72,
-            "games": 78,
-            "winRate": 34.62
-          }
-        },
-        {
-          "itemIds": [
-            "773074",
-            "773071",
-            "773156"
-          ],
-          "totalPrice": 9500,
-          "metric": {
-            "pickRate": 2.26,
-            "games": 65,
-            "winRate": 53.85
+            "pickRate": 1.39,
+            "games": 77,
+            "winRate": 41.56
           }
         },
         {
@@ -30629,9 +30606,23 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9928,
           "metric": {
-            "pickRate": 1.92,
-            "games": 55,
-            "winRate": 40
+            "pickRate": 0.85,
+            "games": 47,
+            "winRate": 31.91
+          }
+        },
+        {
+          "itemIds": [
+            "773134",
+            "773071",
+            "773078",
+            "773074"
+          ],
+          "totalPrice": 11265,
+          "metric": {
+            "pickRate": 0.81,
+            "games": 45,
+            "winRate": 60
           }
         }
       ]
@@ -31391,41 +31382,41 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
       "core": [
         {
           "itemIds": [
+            "773023",
+            "773100",
+            "773116"
+          ],
+          "totalPrice": 7800,
+          "metric": {
+            "pickRate": 3.51,
+            "games": 346,
+            "winRate": 43.35
+          }
+        },
+        {
+          "itemIds": [
             "773100",
             "773128",
             "773089"
           ],
           "totalPrice": 9400,
           "metric": {
-            "pickRate": 7.11,
-            "games": 394,
-            "winRate": 47.46
+            "pickRate": 3.13,
+            "games": 308,
+            "winRate": 48.05
           }
         },
         {
           "itemIds": [
+            "773023",
             "773100",
-            "773116",
             "773128"
           ],
-          "totalPrice": 9000,
+          "totalPrice": 8000,
           "metric": {
-            "pickRate": 3.82,
-            "games": 212,
-            "winRate": 43.4
-          }
-        },
-        {
-          "itemIds": [
-            "773100",
-            "773089",
-            "773135"
-          ],
-          "totalPrice": 8595,
-          "metric": {
-            "pickRate": 3.72,
-            "games": 206,
-            "winRate": 60.19
+            "pickRate": 2.22,
+            "games": 219,
+            "winRate": 45.21
           }
         },
         {
@@ -31436,22 +31427,22 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9400,
           "metric": {
-            "pickRate": 3.5,
-            "games": 194,
-            "winRate": 55.67
+            "pickRate": 1.86,
+            "games": 183,
+            "winRate": 55.19
           }
         },
         {
           "itemIds": [
+            "773023",
             "773100",
-            "773157",
             "773089"
           ],
-          "totalPrice": 9560,
+          "totalPrice": 8200,
           "metric": {
-            "pickRate": 2.38,
-            "games": 132,
-            "winRate": 49.24
+            "pickRate": 1.47,
+            "games": 145,
+            "winRate": 51.72
           }
         }
       ]
@@ -32213,28 +32204,28 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
       "core": [
         {
           "itemIds": [
-            "773068",
             "773083",
+            "773068",
             "773065"
           ],
           "totalPrice": 8400,
           "metric": {
-            "pickRate": 8.48,
-            "games": 193,
-            "winRate": 47.67
+            "pickRate": 4.87,
+            "games": 213,
+            "winRate": 47.42
           }
         },
         {
           "itemIds": [
-            "773083",
             "773068",
+            "773083",
             "773065"
           ],
           "totalPrice": 8400,
           "metric": {
-            "pickRate": 7.78,
-            "games": 177,
-            "winRate": 44.63
+            "pickRate": 4.78,
+            "games": 209,
+            "winRate": 45.93
           }
         },
         {
@@ -32245,9 +32236,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 8550,
           "metric": {
-            "pickRate": 4.09,
-            "games": 93,
-            "winRate": 48.39
+            "pickRate": 2.17,
+            "games": 95,
+            "winRate": 44.21
           }
         },
         {
@@ -32258,22 +32249,22 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 8550,
           "metric": {
-            "pickRate": 3.16,
-            "games": 72,
-            "winRate": 44.44
+            "pickRate": 1.99,
+            "games": 87,
+            "winRate": 49.43
           }
         },
         {
           "itemIds": [
             "773083",
-            "773078",
-            "773065"
+            "773065",
+            "773064"
           ],
-          "totalPrice": 9378,
+          "totalPrice": 8360,
           "metric": {
-            "pickRate": 2.11,
-            "games": 48,
-            "winRate": 52.08
+            "pickRate": 1.28,
+            "games": 56,
+            "winRate": 48.21
           }
         }
       ]
@@ -33033,72 +33024,69 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
       "core": [
         {
           "itemIds": [
+            "773040",
+            "773174",
+            "773089"
+          ],
+          "totalPrice": null,
+          "metric": {
+            "pickRate": 2.99,
+            "games": 252,
+            "winRate": 46.83
+          }
+        },
+        {
+          "itemIds": [
+            "773174",
+            "773135",
+            "773165"
+          ],
+          "totalPrice": 7095,
+          "metric": {
+            "pickRate": 2.05,
+            "games": 173,
+            "winRate": 43.35
+          }
+        },
+        {
+          "itemIds": [
             "773070",
-            "773003",
+            "773027",
+            "773040",
+            "773089"
+          ],
+          "totalPrice": null,
+          "metric": {
+            "pickRate": 1.99,
+            "games": 168,
+            "winRate": 50
+          }
+        },
+        {
+          "itemIds": [
+            "773070",
+            "773027",
+            "773040",
+            "773151"
+          ],
+          "totalPrice": null,
+          "metric": {
+            "pickRate": 1.98,
+            "games": 167,
+            "winRate": 47.31
+          }
+        },
+        {
+          "itemIds": [
+            "773040",
             "773089",
             "773135"
           ],
-          "totalPrice": 8995,
+          "totalPrice": null,
           "metric": {
-            "pickRate": 11.11,
-            "games": 402,
-            "winRate": 48.01
-          }
-        },
-        {
-          "itemIds": [
-            "773070",
-            "773003",
-            "773128",
-            "773089"
-          ],
-          "totalPrice": 9800,
-          "metric": {
-            "pickRate": 6.96,
-            "games": 252,
-            "winRate": 42.46
-          }
-        },
-        {
-          "itemIds": [
-            "773070",
-            "773003",
-            "773135",
-            "773089"
-          ],
-          "totalPrice": 8995,
-          "metric": {
-            "pickRate": 4.64,
-            "games": 168,
-            "winRate": 40.48
-          }
-        },
-        {
-          "itemIds": [
-            "773070",
-            "773003",
-            "773089",
-            "773128"
-          ],
-          "totalPrice": 9800,
-          "metric": {
-            "pickRate": 3.09,
-            "games": 112,
-            "winRate": 41.07
-          }
-        },
-        {
-          "itemIds": [
-            "773070",
-            "773003",
-            "773089",
-            "773165"
-          ],
-          "totalPrice": 8900,
-          "metric": {
-            "pickRate": 2.98,
-            "games": 108,
-            "winRate": 49.07
+            "pickRate": 1.85,
+            "games": 156,
+            "winRate": 48.08
           }
         }
       ]
@@ -33863,9 +33851,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9928,
           "metric": {
-            "pickRate": 13.31,
-            "games": 528,
-            "winRate": 47.92
+            "pickRate": 8.58,
+            "games": 617,
+            "winRate": 45.87
           }
         },
         {
@@ -33876,9 +33864,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9928,
           "metric": {
-            "pickRate": 7.11,
-            "games": 282,
-            "winRate": 47.16
+            "pickRate": 4.84,
+            "games": 348,
+            "winRate": 47.41
           }
         },
         {
@@ -33889,9 +33877,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9928,
           "metric": {
-            "pickRate": 3.23,
-            "games": 128,
-            "winRate": 43.75
+            "pickRate": 1.58,
+            "games": 114,
+            "winRate": 45.61
           }
         },
         {
@@ -33903,22 +33891,23 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 11265,
           "metric": {
-            "pickRate": 2.37,
-            "games": 94,
-            "winRate": 53.19
+            "pickRate": 1.22,
+            "games": 88,
+            "winRate": 53.41
           }
         },
         {
           "itemIds": [
-            "773074",
+            "773134",
             "773071",
-            "773156"
+            "773142",
+            "773035"
           ],
-          "totalPrice": 9500,
+          "totalPrice": 9337,
           "metric": {
-            "pickRate": 2.32,
-            "games": 92,
-            "winRate": 55.43
+            "pickRate": 1.17,
+            "games": 84,
+            "winRate": 44.05
           }
         }
       ]
@@ -34683,9 +34672,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 10128,
           "metric": {
-            "pickRate": 11.15,
-            "games": 569,
-            "winRate": 44.99
+            "pickRate": 6.9,
+            "games": 568,
+            "winRate": 46.83
           }
         },
         {
@@ -34696,9 +34685,22 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 10428,
           "metric": {
-            "pickRate": 5.84,
-            "games": 298,
-            "winRate": 49.33
+            "pickRate": 4.05,
+            "games": 333,
+            "winRate": 47.15
+          }
+        },
+        {
+          "itemIds": [
+            "773078",
+            "773031",
+            "773035"
+          ],
+          "totalPrice": 9728,
+          "metric": {
+            "pickRate": 3.85,
+            "games": 317,
+            "winRate": 46.69
           }
         },
         {
@@ -34709,22 +34711,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 10128,
           "metric": {
-            "pickRate": 5.39,
-            "games": 275,
-            "winRate": 52.73
-          }
-        },
-        {
-          "itemIds": [
-            "773078",
-            "773031",
-            "773087"
-          ],
-          "totalPrice": 9928,
-          "metric": {
-            "pickRate": 3.27,
-            "games": 167,
-            "winRate": 51.5
+            "pickRate": 3.84,
+            "games": 316,
+            "winRate": 53.16
           }
         },
         {
@@ -34735,9 +34724,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9928,
           "metric": {
-            "pickRate": 3.18,
-            "games": 162,
-            "winRate": 48.15
+            "pickRate": 2.13,
+            "games": 175,
+            "winRate": 48
           }
         }
       ]
@@ -35503,9 +35492,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 8400,
           "metric": {
-            "pickRate": 8.26,
-            "games": 402,
-            "winRate": 45.27
+            "pickRate": 4.46,
+            "games": 423,
+            "winRate": 45.63
           }
         },
         {
@@ -35516,22 +35505,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 8400,
           "metric": {
-            "pickRate": 5.59,
-            "games": 272,
-            "winRate": 54.04
-          }
-        },
-        {
-          "itemIds": [
-            "773083",
-            "773110",
-            "773065"
-          ],
-          "totalPrice": 8650,
-          "metric": {
-            "pickRate": 4.87,
-            "games": 237,
-            "winRate": 46.84
+            "pickRate": 3.4,
+            "games": 322,
+            "winRate": 51.86
           }
         },
         {
@@ -35542,22 +35518,35 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 8300,
           "metric": {
-            "pickRate": 3.88,
-            "games": 189,
-            "winRate": 49.74
+            "pickRate": 2.63,
+            "games": 249,
+            "winRate": 46.18
+          }
+        },
+        {
+          "itemIds": [
+            "773083",
+            "773110",
+            "773065"
+          ],
+          "totalPrice": 8650,
+          "metric": {
+            "pickRate": 2.44,
+            "games": 231,
+            "winRate": 46.75
           }
         },
         {
           "itemIds": [
             "773083",
             "773065",
-            "773068"
+            "773064"
           ],
-          "totalPrice": 8400,
+          "totalPrice": 8360,
           "metric": {
-            "pickRate": 2.59,
-            "games": 126,
-            "winRate": 49.21
+            "pickRate": 1.59,
+            "games": 151,
+            "winRate": 62.91
           }
         }
       ]
@@ -36323,9 +36312,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 8978,
           "metric": {
-            "pickRate": 3.79,
-            "games": 206,
-            "winRate": 52.91
+            "pickRate": 2.52,
+            "games": 225,
+            "winRate": 52.89
           }
         },
         {
@@ -36336,9 +36325,22 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 8650,
           "metric": {
-            "pickRate": 3.02,
-            "games": 164,
-            "winRate": 46.95
+            "pickRate": 2,
+            "games": 179,
+            "winRate": 51.96
+          }
+        },
+        {
+          "itemIds": [
+            "773153",
+            "773022",
+            "773091"
+          ],
+          "totalPrice": 8650,
+          "metric": {
+            "pickRate": 2,
+            "games": 179,
+            "winRate": 48.04
           }
         },
         {
@@ -36349,35 +36351,22 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 10128,
           "metric": {
-            "pickRate": 2.5,
-            "games": 136,
-            "winRate": 50.74
+            "pickRate": 1.87,
+            "games": 167,
+            "winRate": 51.5
           }
         },
         {
           "itemIds": [
-            "773087",
-            "773031",
-            "773153"
-          ],
-          "totalPrice": 9500,
-          "metric": {
-            "pickRate": 2.19,
-            "games": 119,
-            "winRate": 48.74
-          }
-        },
-        {
-          "itemIds": [
-            "773153",
             "773078",
-            "773031"
+            "773153",
+            "773091"
           ],
-          "totalPrice": 10628,
+          "totalPrice": 8978,
           "metric": {
-            "pickRate": 2.06,
-            "games": 112,
-            "winRate": 51.79
+            "pickRate": 1.44,
+            "games": 129,
+            "winRate": 61.24
           }
         }
       ]
@@ -37144,9 +37133,22 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 7850,
           "metric": {
-            "pickRate": 5.56,
-            "games": 147,
-            "winRate": 50.34
+            "pickRate": 2.22,
+            "games": 123,
+            "winRate": 54.47
+          }
+        },
+        {
+          "itemIds": [
+            "773068",
+            "773110",
+            "773001"
+          ],
+          "totalPrice": 8110,
+          "metric": {
+            "pickRate": 1.46,
+            "games": 81,
+            "winRate": 54.32
           }
         },
         {
@@ -37157,22 +37159,22 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 7850,
           "metric": {
-            "pickRate": 3.37,
-            "games": 89,
-            "winRate": 56.18
+            "pickRate": 1.33,
+            "games": 74,
+            "winRate": 48.65
           }
         },
         {
           "itemIds": [
-            "773068",
-            "773110",
-            "773083"
+            "773075",
+            "773083",
+            "773064"
           ],
-          "totalPrice": 8550,
+          "totalPrice": 7810,
           "metric": {
-            "pickRate": 2.95,
-            "games": 78,
-            "winRate": 46.15
+            "pickRate": 1.24,
+            "games": 69,
+            "winRate": 53.62
           }
         },
         {
@@ -37183,22 +37185,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 7750,
           "metric": {
-            "pickRate": 2.8,
-            "games": 74,
-            "winRate": 45.95
-          }
-        },
-        {
-          "itemIds": [
-            "773083",
-            "773075",
-            "773068"
-          ],
-          "totalPrice": 7850,
-          "metric": {
-            "pickRate": 2.8,
-            "games": 74,
-            "winRate": 52.7
+            "pickRate": 1.15,
+            "games": 64,
+            "winRate": 50
           }
         }
       ]
@@ -37963,9 +37952,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9928,
           "metric": {
-            "pickRate": 8.66,
-            "games": 321,
-            "winRate": 47.98
+            "pickRate": 5.89,
+            "games": 384,
+            "winRate": 49.74
           }
         },
         {
@@ -37976,9 +37965,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9928,
           "metric": {
-            "pickRate": 6.86,
-            "games": 254,
-            "winRate": 45.28
+            "pickRate": 4.68,
+            "games": 305,
+            "winRate": 44.92
           }
         },
         {
@@ -37989,35 +37978,35 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 10128,
           "metric": {
-            "pickRate": 1.43,
-            "games": 53,
-            "winRate": 50.94
+            "pickRate": 0.94,
+            "games": 61,
+            "winRate": 52.46
+          }
+        },
+        {
+          "itemIds": [
+            "773078",
+            "773074",
+            "773153"
+          ],
+          "totalPrice": 10128,
+          "metric": {
+            "pickRate": 0.69,
+            "games": 45,
+            "winRate": 51.11
           }
         },
         {
           "itemIds": [
             "773074",
-            "773071",
-            "773078"
+            "773078",
+            "773072"
           ],
-          "totalPrice": 9928,
+          "totalPrice": 10128,
           "metric": {
-            "pickRate": 1.38,
-            "games": 51,
-            "winRate": 35.29
-          }
-        },
-        {
-          "itemIds": [
-            "773074",
-            "773071",
-            "773156"
-          ],
-          "totalPrice": 9500,
-          "metric": {
-            "pickRate": 1.13,
-            "games": 42,
-            "winRate": 47.62
+            "pickRate": 0.6,
+            "games": 39,
+            "winRate": 43.59
           }
         }
       ]
@@ -38780,67 +38769,67 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
       "core": [
         {
           "itemIds": [
-            "773504",
-            "773222",
-            "773107"
-          ],
-          "totalPrice": 7650,
-          "metric": {
-            "pickRate": 4.29,
-            "games": 113,
-            "winRate": 62.83
-          }
-        },
-        {
-          "itemIds": [
-            "773504",
-            "773107",
-            "773084"
-          ],
-          "totalPrice": 7800,
-          "metric": {
-            "pickRate": 3.22,
-            "games": 85,
-            "winRate": 52.94
-          }
-        },
-        {
-          "itemIds": [
-            "773504",
-            "773222",
-            "773084"
-          ],
-          "totalPrice": 7350,
-          "metric": {
-            "pickRate": 3.15,
-            "games": 83,
-            "winRate": 45.78
-          }
-        },
-        {
-          "itemIds": [
-            "773084",
-            "773504",
-            "773107"
-          ],
-          "totalPrice": 7800,
-          "metric": {
-            "pickRate": 2.96,
-            "games": 78,
-            "winRate": 62.82
-          }
-        },
-        {
-          "itemIds": [
-            "773084",
-            "773504",
+            "773069",
+            "773023",
             "773222"
           ],
-          "totalPrice": 7350,
+          "totalPrice": 6500,
           "metric": {
-            "pickRate": 2.54,
-            "games": 67,
-            "winRate": 44.78
+            "pickRate": 1.6,
+            "games": 110,
+            "winRate": 36.36
+          }
+        },
+        {
+          "itemIds": [
+            "773023",
+            "773069",
+            "773222"
+          ],
+          "totalPrice": 6500,
+          "metric": {
+            "pickRate": 1.22,
+            "games": 84,
+            "winRate": 42.86
+          }
+        },
+        {
+          "itemIds": [
+            "773504",
+            "773069",
+            "773222"
+          ],
+          "totalPrice": 6800,
+          "metric": {
+            "pickRate": 1.21,
+            "games": 83,
+            "winRate": 56.63
+          }
+        },
+        {
+          "itemIds": [
+            "773504",
+            "773069",
+            "773023"
+          ],
+          "totalPrice": 6200,
+          "metric": {
+            "pickRate": 1.15,
+            "games": 79,
+            "winRate": 51.9
+          }
+        },
+        {
+          "itemIds": [
+            "773504",
+            "773023",
+            "773069"
+          ],
+          "totalPrice": 6200,
+          "metric": {
+            "pickRate": 1.13,
+            "games": 78,
+            "winRate": 50
           }
         }
       ]
@@ -39605,9 +39594,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9300,
           "metric": {
-            "pickRate": 4.12,
-            "games": 158,
-            "winRate": 48.1
+            "pickRate": 3.41,
+            "games": 199,
+            "winRate": 47.24
           }
         },
         {
@@ -39618,9 +39607,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9500,
           "metric": {
-            "pickRate": 2.81,
-            "games": 108,
-            "winRate": 50
+            "pickRate": 2.69,
+            "games": 157,
+            "winRate": 52.23
           }
         },
         {
@@ -39631,9 +39620,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9800,
           "metric": {
-            "pickRate": 2.11,
-            "games": 81,
-            "winRate": 54.32
+            "pickRate": 1.54,
+            "games": 90,
+            "winRate": 55.56
           }
         },
         {
@@ -39644,22 +39633,22 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 10228,
           "metric": {
-            "pickRate": 1.75,
-            "games": 67,
-            "winRate": 44.78
+            "pickRate": 1.51,
+            "games": 88,
+            "winRate": 39.77
           }
         },
         {
           "itemIds": [
-            "773153",
-            "773046",
-            "773031"
+            "773031",
+            "773124",
+            "773046"
           ],
-          "totalPrice": 9800,
+          "totalPrice": 9200,
           "metric": {
-            "pickRate": 1.75,
-            "games": 67,
-            "winRate": 52.24
+            "pickRate": 1.39,
+            "games": 81,
+            "winRate": 48.15
           }
         }
       ]
@@ -40419,71 +40408,68 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
       "core": [
         {
           "itemIds": [
-            "773070",
-            "773004",
+            "773042",
             "773078",
             "773031"
           ],
-          "totalPrice": 10228,
+          "totalPrice": null,
           "metric": {
-            "pickRate": 7.99,
-            "games": 567,
-            "winRate": 45.5
+            "pickRate": 5.87,
+            "games": 724,
+            "winRate": 47.1
           }
         },
         {
           "itemIds": [
             "773070",
             "773078",
-            "773004",
+            "773042",
             "773031"
           ],
-          "totalPrice": 10228,
+          "totalPrice": null,
           "metric": {
-            "pickRate": 5.28,
-            "games": 375,
-            "winRate": 49.6
+            "pickRate": 3.51,
+            "games": 433,
+            "winRate": 48.04
           }
         },
         {
           "itemIds": [
             "773078",
-            "773004",
+            "773042",
             "773031"
           ],
-          "totalPrice": 9528,
+          "totalPrice": null,
           "metric": {
-            "pickRate": 3.13,
-            "games": 222,
-            "winRate": 48.65
+            "pickRate": 2.34,
+            "games": 289,
+            "winRate": 47.06
           }
         },
         {
           "itemIds": [
-            "773070",
-            "773004",
+            "773042",
             "773078",
             "773142"
           ],
-          "totalPrice": 9128,
+          "totalPrice": null,
           "metric": {
-            "pickRate": 2.1,
-            "games": 149,
-            "winRate": 50.34
+            "pickRate": 1.61,
+            "games": 199,
+            "winRate": 47.74
           }
         },
         {
           "itemIds": [
-            "773070",
             "773078",
-            "773004",
-            "773153"
+            "773042",
+            "773071"
           ],
-          "totalPrice": 9628,
+          "totalPrice": null,
           "metric": {
-            "pickRate": 2.07,
-            "games": 147,
-            "winRate": 49.66
+            "pickRate": 1.33,
+            "games": 164,
+            "winRate": 45.73
           }
         }
       ]
@@ -41244,72 +41230,68 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
       "core": [
         {
           "itemIds": [
-            "773070",
-            "773003",
-            "773089",
-            "773116"
+            "773027",
+            "773151",
+            "773089"
           ],
-          "totalPrice": 9600,
+          "totalPrice": 9000,
           "metric": {
-            "pickRate": 4.9,
-            "games": 198,
-            "winRate": 48.99
+            "pickRate": 3.37,
+            "games": 381,
+            "winRate": 48.56
           }
         },
         {
           "itemIds": [
-            "773070",
-            "773003",
-            "773089",
+            "773027",
+            "773151",
             "773157"
           ],
-          "totalPrice": 9960,
+          "totalPrice": 8960,
           "metric": {
-            "pickRate": 3.61,
-            "games": 146,
-            "winRate": 36.3
+            "pickRate": 2.93,
+            "games": 331,
+            "winRate": 42.6
           }
         },
         {
           "itemIds": [
-            "773070",
-            "773003",
-            "773157",
-            "773116"
-          ],
-          "totalPrice": 9560,
-          "metric": {
-            "pickRate": 3.44,
-            "games": 139,
-            "winRate": 38.13
-          }
-        },
-        {
-          "itemIds": [
-            "773070",
-            "773003",
-            "773157",
+            "773040",
+            "773151",
             "773089"
           ],
-          "totalPrice": 9960,
+          "totalPrice": null,
           "metric": {
-            "pickRate": 3.41,
-            "games": 138,
-            "winRate": 46.38
+            "pickRate": 2.45,
+            "games": 277,
+            "winRate": 45.49
           }
         },
         {
           "itemIds": [
             "773070",
-            "773003",
-            "773128",
+            "773151",
+            "773040",
             "773089"
           ],
-          "totalPrice": 9800,
+          "totalPrice": null,
           "metric": {
-            "pickRate": 2.42,
-            "games": 98,
-            "winRate": 37.76
+            "pickRate": 2.27,
+            "games": 257,
+            "winRate": 49.03
+          }
+        },
+        {
+          "itemIds": [
+            "773151",
+            "773027",
+            "773089"
+          ],
+          "totalPrice": 9000,
+          "metric": {
+            "pickRate": 2,
+            "games": 226,
+            "winRate": 51.33
           }
         }
       ]
@@ -42070,72 +42052,67 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
       "core": [
         {
           "itemIds": [
-            "773070",
-            "773003",
-            "773089",
-            "773135"
+            "773040",
+            "773151",
+            "773089"
           ],
-          "totalPrice": 8995,
+          "totalPrice": null,
           "metric": {
-            "pickRate": 7.26,
-            "games": 265,
-            "winRate": 43.77
+            "pickRate": 3.44,
+            "games": 275,
+            "winRate": 44.73
           }
         },
         {
           "itemIds": [
-            "773070",
-            "773003",
+            "773151",
+            "773135",
+            "773165"
+          ],
+          "totalPrice": 7395,
+          "metric": {
+            "pickRate": 2.11,
+            "games": 169,
+            "winRate": 43.79
+          }
+        },
+        {
+          "itemIds": [
+            "773040",
             "773128",
             "773089"
           ],
-          "totalPrice": 9800,
+          "totalPrice": null,
           "metric": {
-            "pickRate": 5.56,
-            "games": 203,
-            "winRate": 46.8
+            "pickRate": 1.95,
+            "games": 156,
+            "winRate": 41.67
           }
         },
         {
           "itemIds": [
-            "773070",
-            "773003",
+            "773040",
             "773089",
-            "773165"
+            "773135"
           ],
-          "totalPrice": 8900,
+          "totalPrice": null,
           "metric": {
-            "pickRate": 3.72,
-            "games": 136,
-            "winRate": 43.38
+            "pickRate": 1.85,
+            "games": 148,
+            "winRate": 45.27
           }
         },
         {
           "itemIds": [
-            "773070",
-            "773003",
-            "773135",
-            "773089"
+            "773040",
+            "773151",
+            "773135"
           ],
-          "totalPrice": 8995,
+          "totalPrice": null,
           "metric": {
-            "pickRate": 3.12,
-            "games": 114,
-            "winRate": 41.23
-          }
-        },
-        {
-          "itemIds": [
-            "773070",
-            "773003",
-            "773165",
-            "773089"
-          ],
-          "totalPrice": 8900,
-          "metric": {
-            "pickRate": 2.71,
-            "games": 99,
-            "winRate": 44.44
+            "pickRate": 1.79,
+            "games": 143,
+            "winRate": 39.16
           }
         }
       ]
@@ -42901,9 +42878,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 8700,
           "metric": {
-            "pickRate": 2.76,
-            "games": 134,
-            "winRate": 47.01
+            "pickRate": 1.44,
+            "games": 141,
+            "winRate": 48.23
           }
         },
         {
@@ -42914,22 +42891,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 8700,
           "metric": {
-            "pickRate": 2.04,
-            "games": 99,
-            "winRate": 50.51
-          }
-        },
-        {
-          "itemIds": [
-            "773190",
-            "773083",
-            "773065"
-          ],
-          "totalPrice": 7975,
-          "metric": {
-            "pickRate": 1.86,
-            "games": 90,
-            "winRate": 54.44
+            "pickRate": 1.2,
+            "games": 117,
+            "winRate": 53.85
           }
         },
         {
@@ -42940,22 +42904,35 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 7925,
           "metric": {
-            "pickRate": 1.79,
-            "games": 87,
-            "winRate": 43.68
+            "pickRate": 1.12,
+            "games": 109,
+            "winRate": 43.12
           }
         },
         {
           "itemIds": [
             "773107",
             "773190",
-            "773083"
+            "773065"
           ],
-          "totalPrice": 8175,
+          "totalPrice": 7925,
           "metric": {
-            "pickRate": 1.75,
-            "games": 85,
-            "winRate": 48.24
+            "pickRate": 1.06,
+            "games": 103,
+            "winRate": 43.69
+          }
+        },
+        {
+          "itemIds": [
+            "773190",
+            "773083",
+            "773065"
+          ],
+          "totalPrice": 7975,
+          "metric": {
+            "pickRate": 1,
+            "games": 98,
+            "winRate": 53.06
           }
         }
       ]
@@ -43717,66 +43694,66 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
         {
           "itemIds": [
             "773128",
+            "773100",
+            "773089"
+          ],
+          "totalPrice": 9400,
+          "metric": {
+            "pickRate": 4.56,
+            "games": 224,
+            "winRate": 39.73
+          }
+        },
+        {
+          "itemIds": [
+            "773128",
             "773089",
+            "773135"
+          ],
+          "totalPrice": 8695,
+          "metric": {
+            "pickRate": 4.22,
+            "games": 207,
+            "winRate": 39.61
+          }
+        },
+        {
+          "itemIds": [
+            "773100",
+            "773128",
+            "773089"
+          ],
+          "totalPrice": 9400,
+          "metric": {
+            "pickRate": 3.22,
+            "games": 158,
+            "winRate": 58.86
+          }
+        },
+        {
+          "itemIds": [
+            "773151",
+            "773128",
             "773135"
           ],
-          "totalPrice": 8695,
+          "totalPrice": 8295,
           "metric": {
-            "pickRate": 10.92,
-            "games": 285,
-            "winRate": 36.84
+            "pickRate": 3.18,
+            "games": 156,
+            "winRate": 34.62
           }
         },
         {
           "itemIds": [
             "773128",
-            "773100",
-            "773089"
+            "773151",
+            "773135"
           ],
-          "totalPrice": 9400,
+          "totalPrice": 8295,
           "metric": {
-            "pickRate": 8.93,
-            "games": 233,
-            "winRate": 40.77
-          }
-        },
-        {
-          "itemIds": [
-            "773100",
-            "773128",
-            "773089"
-          ],
-          "totalPrice": 9400,
-          "metric": {
-            "pickRate": 5.9,
-            "games": 154,
-            "winRate": 55.84
-          }
-        },
-        {
-          "itemIds": [
-            "773128",
-            "773089",
-            "773100"
-          ],
-          "totalPrice": 9400,
-          "metric": {
-            "pickRate": 5.25,
-            "games": 137,
-            "winRate": 44.53
-          }
-        },
-        {
-          "itemIds": [
-            "773128",
-            "773146",
-            "773089"
-          ],
-          "totalPrice": 9800,
-          "metric": {
-            "pickRate": 4.1,
-            "games": 107,
-            "winRate": 39.25
+            "pickRate": 2.89,
+            "games": 142,
+            "winRate": 48.59
           }
         }
       ]
@@ -44536,66 +44513,66 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
         {
           "itemIds": [
             "773146",
+            "773001",
+            "773151"
+          ],
+          "totalPrice": 8860,
+          "metric": {
+            "pickRate": 6.21,
+            "games": 562,
+            "winRate": 46.62
+          }
+        },
+        {
+          "itemIds": [
+            "773146",
             "773128",
             "773089"
           ],
           "totalPrice": 9800,
           "metric": {
-            "pickRate": 11.25,
-            "games": 514,
-            "winRate": 43.97
+            "pickRate": 4.8,
+            "games": 435,
+            "winRate": 45.29
           }
         },
         {
           "itemIds": [
             "773146",
-            "773089",
-            "773135"
-          ],
-          "totalPrice": 8995,
-          "metric": {
-            "pickRate": 4.88,
-            "games": 223,
-            "winRate": 39.46
-          }
-        },
-        {
-          "itemIds": [
-            "773146",
-            "773135",
+            "773001",
             "773089"
           ],
-          "totalPrice": 8995,
+          "totalPrice": 9260,
           "metric": {
-            "pickRate": 4.07,
-            "games": 186,
-            "winRate": 47.31
-          }
-        },
-        {
-          "itemIds": [
-            "773128",
-            "773146",
-            "773089"
-          ],
-          "totalPrice": 9800,
-          "metric": {
-            "pickRate": 3.35,
-            "games": 153,
-            "winRate": 41.83
+            "pickRate": 3.14,
+            "games": 284,
+            "winRate": 48.94
           }
         },
         {
           "itemIds": [
             "773146",
-            "773089",
+            "773001",
             "773157"
           ],
-          "totalPrice": 9960,
+          "totalPrice": 9220,
           "metric": {
-            "pickRate": 3.28,
-            "games": 150,
-            "winRate": 52
+            "pickRate": 2.94,
+            "games": 266,
+            "winRate": 46.24
+          }
+        },
+        {
+          "itemIds": [
+            "773146",
+            "773001",
+            "773128"
+          ],
+          "totalPrice": 9060,
+          "metric": {
+            "pickRate": 2.41,
+            "games": 218,
+            "winRate": 45.87
           }
         }
       ]
@@ -45355,15 +45332,28 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
       "core": [
         {
           "itemIds": [
+            "773173",
             "773084",
-            "773504",
             "773083"
           ],
-          "totalPrice": 7850,
+          "totalPrice": 6750,
           "metric": {
-            "pickRate": 3.26,
-            "games": 107,
-            "winRate": 46.73
+            "pickRate": 1.02,
+            "games": 90,
+            "winRate": 53.33
+          }
+        },
+        {
+          "itemIds": [
+            "773173",
+            "773084",
+            "773504"
+          ],
+          "totalPrice": 5950,
+          "metric": {
+            "pickRate": 0.85,
+            "games": 75,
+            "winRate": 40
           }
         },
         {
@@ -45374,48 +45364,35 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 7850,
           "metric": {
-            "pickRate": 3.17,
-            "games": 104,
-            "winRate": 46.15
+            "pickRate": 0.78,
+            "games": 69,
+            "winRate": 53.62
           }
         },
         {
           "itemIds": [
-            "773504",
             "773084",
+            "773504",
             "773083"
           ],
           "totalPrice": 7850,
           "metric": {
-            "pickRate": 2.13,
-            "games": 70,
-            "winRate": 34.29
+            "pickRate": 0.69,
+            "games": 61,
+            "winRate": 55.74
           }
         },
         {
           "itemIds": [
+            "773173",
             "773504",
-            "773083",
             "773084"
           ],
-          "totalPrice": 7850,
+          "totalPrice": 5950,
           "metric": {
-            "pickRate": 1.62,
-            "games": 53,
-            "winRate": 33.96
-          }
-        },
-        {
-          "itemIds": [
-            "773084",
-            "773083",
-            "773190"
-          ],
-          "totalPrice": 7875,
-          "metric": {
-            "pickRate": 1.59,
-            "games": 52,
-            "winRate": 34.62
+            "pickRate": 0.66,
+            "games": 58,
+            "winRate": 53.45
           }
         }
       ]
@@ -46175,67 +46152,67 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
       "core": [
         {
           "itemIds": [
+            "773116",
+            "773110",
+            "773151"
+          ],
+          "totalPrice": 8700,
+          "metric": {
+            "pickRate": 2.19,
+            "games": 152,
+            "winRate": 44.74
+          }
+        },
+        {
+          "itemIds": [
+            "773116",
+            "773151",
+            "773065"
+          ],
+          "totalPrice": 8550,
+          "metric": {
+            "pickRate": 2.17,
+            "games": 151,
+            "winRate": 47.02
+          }
+        },
+        {
+          "itemIds": [
+            "773110",
+            "773116",
+            "773151"
+          ],
+          "totalPrice": 8700,
+          "metric": {
+            "pickRate": 1.79,
+            "games": 124,
+            "winRate": 46.77
+          }
+        },
+        {
+          "itemIds": [
             "773128",
             "773089",
             "773135"
           ],
           "totalPrice": 8695,
           "metric": {
-            "pickRate": 5,
-            "games": 154,
-            "winRate": 42.86
-          }
-        },
-        {
-          "itemIds": [
-            "773110",
-            "773116",
-            "773065"
-          ],
-          "totalPrice": 8550,
-          "metric": {
-            "pickRate": 3.86,
-            "games": 119,
-            "winRate": 39.5
+            "pickRate": 1.68,
+            "games": 117,
+            "winRate": 35.04
           }
         },
         {
           "itemIds": [
             "773116",
-            "773110",
-            "773065"
-          ],
-          "totalPrice": 8550,
-          "metric": {
-            "pickRate": 3.44,
-            "games": 106,
-            "winRate": 41.51
-          }
-        },
-        {
-          "itemIds": [
-            "773128",
-            "773089",
-            "773157"
-          ],
-          "totalPrice": 9660,
-          "metric": {
-            "pickRate": 2.56,
-            "games": 79,
-            "winRate": 35.44
-          }
-        },
-        {
-          "itemIds": [
-            "773116",
-            "773128",
+            "773151",
             "773089"
           ],
-          "totalPrice": 9300,
+          "totalPrice": 9100,
           "metric": {
-            "pickRate": 2.3,
-            "games": 71,
-            "winRate": 45.07
+            "pickRate": 1.4,
+            "games": 97,
+            "winRate": 36.08
           }
         }
       ]
@@ -47001,9 +46978,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9928,
           "metric": {
-            "pickRate": 11.09,
-            "games": 403,
-            "winRate": 39.45
+            "pickRate": 7.4,
+            "games": 484,
+            "winRate": 40.7
           }
         },
         {
@@ -47014,9 +46991,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9928,
           "metric": {
-            "pickRate": 10.37,
-            "games": 377,
-            "winRate": 38.2
+            "pickRate": 6.92,
+            "games": 453,
+            "winRate": 42.16
           }
         },
         {
@@ -47027,9 +47004,22 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9500,
           "metric": {
-            "pickRate": 5.34,
-            "games": 194,
-            "winRate": 38.14
+            "pickRate": 2.38,
+            "games": 156,
+            "winRate": 36.54
+          }
+        },
+        {
+          "itemIds": [
+            "773141",
+            "773074",
+            "773071"
+          ],
+          "totalPrice": 7500,
+          "metric": {
+            "pickRate": 2.29,
+            "games": 150,
+            "winRate": 35.33
           }
         },
         {
@@ -47040,22 +47030,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 9928,
           "metric": {
-            "pickRate": 3.8,
-            "games": 138,
-            "winRate": 42.03
-          }
-        },
-        {
-          "itemIds": [
-            "773074",
-            "773071",
-            "773072"
-          ],
-          "totalPrice": 9500,
-          "metric": {
-            "pickRate": 3.27,
-            "games": 119,
-            "winRate": 42.02
+            "pickRate": 1.96,
+            "games": 128,
+            "winRate": 41.41
           }
         }
       ]
@@ -47817,66 +47794,66 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
         {
           "itemIds": [
             "773142",
+            "773031",
+            "773035"
+          ],
+          "totalPrice": 8800,
+          "metric": {
+            "pickRate": 2.45,
+            "games": 220,
+            "winRate": 35.91
+          }
+        },
+        {
+          "itemIds": [
+            "773142",
             "773071",
             "773031"
           ],
           "totalPrice": 9500,
           "metric": {
-            "pickRate": 3.89,
-            "games": 171,
-            "winRate": 39.77
+            "pickRate": 1.5,
+            "games": 135,
+            "winRate": 37.04
           }
         },
         {
           "itemIds": [
             "773142",
-            "773031",
-            "773071"
+            "773035",
+            "773031"
           ],
-          "totalPrice": 9500,
+          "totalPrice": 8800,
           "metric": {
-            "pickRate": 2.98,
-            "games": 131,
-            "winRate": 40.46
+            "pickRate": 1.32,
+            "games": 119,
+            "winRate": 39.5
           }
         },
         {
           "itemIds": [
+            "773031",
             "773142",
-            "773031",
-            "773153"
+            "773035"
           ],
-          "totalPrice": 9700,
+          "totalPrice": 8800,
           "metric": {
-            "pickRate": 2.89,
-            "games": 127,
-            "winRate": 35.43
+            "pickRate": 1.03,
+            "games": 93,
+            "winRate": 31.18
           }
         },
         {
           "itemIds": [
+            "773151",
             "773128",
-            "773089",
-            "773135"
-          ],
-          "totalPrice": 8695,
-          "metric": {
-            "pickRate": 2.39,
-            "games": 105,
-            "winRate": 46.67
-          }
-        },
-        {
-          "itemIds": [
-            "773142",
-            "773031",
-            "773046"
+            "773089"
           ],
           "totalPrice": 9300,
           "metric": {
-            "pickRate": 2.16,
-            "games": 95,
-            "winRate": 36.84
+            "pickRate": 1.03,
+            "games": 93,
+            "winRate": 36.56
           }
         }
       ]
@@ -48637,72 +48614,68 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
       "core": [
         {
           "itemIds": [
-            "773070",
-            "773003",
-            "773089",
-            "773128"
+            "773040",
+            "773151",
+            "773089"
           ],
-          "totalPrice": 9800,
+          "totalPrice": null,
           "metric": {
-            "pickRate": 5.92,
-            "games": 291,
-            "winRate": 39.18
+            "pickRate": 3.16,
+            "games": 308,
+            "winRate": 37.66
+          }
+        },
+        {
+          "itemIds": [
+            "773027",
+            "773151",
+            "773089"
+          ],
+          "totalPrice": 9000,
+          "metric": {
+            "pickRate": 2.14,
+            "games": 209,
+            "winRate": 31.1
           }
         },
         {
           "itemIds": [
             "773070",
-            "773003",
+            "773151",
+            "773040",
+            "773089"
+          ],
+          "totalPrice": null,
+          "metric": {
+            "pickRate": 1.54,
+            "games": 150,
+            "winRate": 40.67
+          }
+        },
+        {
+          "itemIds": [
+            "773040",
             "773128",
             "773089"
           ],
-          "totalPrice": 9800,
+          "totalPrice": null,
           "metric": {
-            "pickRate": 3.74,
-            "games": 184,
-            "winRate": 38.04
+            "pickRate": 1.53,
+            "games": 149,
+            "winRate": 35.57
           }
         },
         {
           "itemIds": [
-            "773070",
-            "773003",
-            "773089",
-            "773135"
-          ],
-          "totalPrice": 8995,
-          "metric": {
-            "pickRate": 3.66,
-            "games": 180,
-            "winRate": 46.11
-          }
-        },
-        {
-          "itemIds": [
-            "773070",
-            "773003",
-            "773089",
-            "773165"
-          ],
-          "totalPrice": 8900,
-          "metric": {
-            "pickRate": 2.26,
-            "games": 111,
-            "winRate": 40.54
-          }
-        },
-        {
-          "itemIds": [
-            "773070",
-            "773003",
-            "773165",
+            "773040",
+            "773027",
             "773089"
           ],
-          "totalPrice": 8900,
+          "totalPrice": null,
           "metric": {
-            "pickRate": 2.18,
-            "games": 107,
-            "winRate": 42.99
+            "pickRate": 1.4,
+            "games": 137,
+            "winRate": 40.15
           }
         }
       ]
