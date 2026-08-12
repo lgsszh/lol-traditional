@@ -87,9 +87,9 @@ test("完整强化池只在进入图鉴后按需加载", async () => {
   assert.equal(catalog.counts.classic, 188);
   assert.equal(catalog.augments.length, 188);
   assert.deepEqual(catalog.counts.byRarity, {
-    silver: 51,
-    gold: 76,
-    prismatic: 61,
+    silver: catalog.augments.filter((augment) => augment.rarity === "silver").length,
+    gold: catalog.augments.filter((augment) => augment.rarity === "gold").length,
+    prismatic: catalog.augments.filter((augment) => augment.rarity === "prismatic").length,
   });
 
   const componentSource = await readFile(

@@ -49,6 +49,10 @@ export function extractBalancedArray(source, marker) {
 
 export const sleep = (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds));
 
+export function isRetryableHttpStatus(status) {
+  return status === 408 || status === 425 || status === 429 || status >= 500;
+}
+
 export async function fetchText(url, label, attempts = 4) {
   let lastError;
   for (let attempt = 1; attempt <= attempts; attempt += 1) {
@@ -62,6 +66,8 @@ export async function fetchText(url, label, attempts = 4) {
       });
       if (!response.ok) {
         const error = new Error(`HTTP ${response.status}`);
+        error.status = response.status;
+        error.retryable = isRetryableHttpStatus(response.status);
         const retryAfter = Number(response.headers.get("retry-after"));
         error.retryAfter = Number.isFinite(retryAfter) ? retryAfter * 1000 : 0;
         throw error;
@@ -69,6 +75,7 @@ export async function fetchText(url, label, attempts = 4) {
       return await response.text();
     } catch (error) {
       lastError = error;
+      if (error.retryable === false) break;
       if (attempt < attempts) {
         const backoff = Math.min(8_000, 750 * (2 ** (attempt - 1)));
         const delay = Math.max(error.retryAfter || 0, backoff + Math.floor(Math.random() * 350));
@@ -78,8 +85,9 @@ export async function fetchText(url, label, attempts = 4) {
     }
   }
   const finalError = new Error(`${label}: ${lastError?.message || lastError}`);
+  finalError.status = lastError?.status;
   finalError.retryAfter = lastError?.retryAfter || 0;
-  finalError.retryable = true;
+  finalError.retryable = lastError?.retryable !== false;
   throw finalError;
 }
 
@@ -90,6 +98,7 @@ export async function fetchJson(url, label) {
       return JSON.parse(await fetchText(url, label, 1));
     } catch (error) {
       lastError = error;
+      if (error.retryable === false) break;
       if (attempt < 4) {
         const delay = Math.min(8_000, 750 * (2 ** (attempt - 1)));
         console.warn(`${label}: JSON retry ${attempt + 1}/4 in ${delay}ms (${error.message})`);
@@ -98,7 +107,9 @@ export async function fetchJson(url, label) {
     }
   }
   const finalError = new Error(`${label}: ${lastError?.message || lastError}`);
+  finalError.status = lastError?.status;
   finalError.retryAfter = lastError?.retryAfter || 0;
+  finalError.retryable = lastError?.retryable !== false;
   throw finalError;
 }
 

@@ -51,7 +51,12 @@ const outputs = liveClassicChampions.map((champion) => {
       );
     }
     return {
-      augment,
+      augment: {
+        ...augment,
+        // Recommendation groups belong to the preserved OP.GG snapshot. Keep
+        // its historical tier when the live catalog changes an augment tier.
+        rarity: recommendation.rarity,
+      },
       metric: recommendation.metric,
     };
   });

@@ -35,7 +35,14 @@ function assertMetric(metric, context) {
 test("怀旧海斗使用同一批 60 位经典英雄，但技能与属性来自当前客户端快照", () => {
   assert.equal(CLASSIC_MAYHEM_MODE, "KIWI_JADE");
   assert.match(CLASSIC_MAYHEM_PATCH, /^\d+\.\d+$/);
-  assert.match(LIVE_DATA_PATCH, new RegExp(`^${CLASSIC_MAYHEM_PATCH.replace(".", "\\.")}\\.\\d+$`));
+  assert.match(LIVE_DATA_PATCH, /^\d+\.\d+\.\d+$/);
+  const [communityMajor, communityMinor] = CLASSIC_MAYHEM_PATCH.split(".").map(Number);
+  const [liveMajor, liveMinor] = LIVE_DATA_PATCH.split(".").map(Number);
+  assert.equal(communityMajor, liveMajor);
+  assert.ok(
+    communityMinor <= liveMinor,
+    `CommunityDragon ${CLASSIC_MAYHEM_PATCH} cannot be newer than Data Dragon ${LIVE_DATA_PATCH}`,
+  );
   assert.equal(liveClassicChampions.length, 60);
   assert.deepEqual(
     new Set(liveClassicChampions.map((champion) => champion.classicId)),
@@ -283,7 +290,14 @@ test("OP.GG 怀旧海斗快照覆盖 60 位英雄并保留页面原始统计", (
       assert.ok(catalogAugment);
       assert.equal(recommendation.name, catalogAugment.name, `${build.name}强化名称与目录 ID 不一致`);
       assert.equal(recommendation.apiName, catalogAugment.apiName, `${build.name}强化 API 名与目录 ID 不一致`);
-      assert.equal(recommendation.rarity, catalogAugment.rarity, `${build.name}强化品质与目录 ID 不一致`);
+      if (OP_GG_MAYHEM_PATCH === CLASSIC_MAYHEM_PATCH) {
+        assert.equal(recommendation.rarity, catalogAugment.rarity, `${build.name}强化品质与目录 ID 不一致`);
+      } else {
+        assert.ok(
+          ["silver", "gold", "prismatic"].includes(recommendation.rarity),
+          `${build.name}保留的 OP.GG 推荐含无效历史品质`,
+        );
+      }
       assertMetric(recommendation.metric, `${build.name} ${recommendation.name}`);
     }
 
@@ -388,6 +402,8 @@ test("怀旧海斗页面不再复用峡谷方案或启发式推荐，并纳入�
   assert.match(generatorSource, /startingGold = 1400/);
   assert.match(generatorSource, /Smite is not legal/);
   assert.match(generatorSource, /rankings\.length !== 60/);
+  assert.match(generatorSource, /statisticsUnavailable/);
+  assert.match(generatorSource, /preserving the verified/);
   assert.match(workflowSource, /app\/classic-mayhem-opgg\.generated\.ts/);
   assert.match(workflowSource, /app\/classic-mayhem-ranking\.generated\.ts/);
   assert.match(workflowSource, /actions:\s*write/);

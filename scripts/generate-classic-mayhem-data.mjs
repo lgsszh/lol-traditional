@@ -1001,38 +1001,79 @@ function normalizeAugment({
 const versions = await fetchJson(versionsUrl, "Data Dragon versions");
 const livePatch = versions[0];
 if (!/^\d+\.\d+\.\d+$/.test(livePatch)) throw new Error(`Unexpected Data Dragon patch: ${livePatch}`);
-const communityPatch = livePatch.split(".").slice(0, 2).join(".");
-const communityBase = `https://raw.communitydragon.org/${communityPatch}`;
-const regularBinUrl = `${communityBase}/game/maps/modespecificdata/kiwi.bin.json`;
-const classicBinUrl = `${communityBase}/game/maps/modespecificdata/kiwi_jade.bin.json`;
-const stringTableUrl = `${communityBase}/game/zh_cn/data/menu/en_us/lol.stringtable.json`;
-const arenaSourceUrl = `${communityBase}/cdragon/arena/zh_cn.json`;
 
 const classicSource = await readFile(classicDataPath, "utf8");
 const roster = readRoster(classicSource);
 if (roster.length !== 60) throw new Error(`Expected 60 Classic champions, received ${roster.length}`);
 
-const [
+async function loadCommunityDragonSnapshot(patch) {
+  const base = `https://raw.communitydragon.org/${patch}`;
+  const regularBinUrl = `${base}/game/maps/modespecificdata/kiwi.bin.json`;
+  const classicBinUrl = `${base}/game/maps/modespecificdata/kiwi_jade.bin.json`;
+  const stringTableUrl = `${base}/game/zh_cn/data/menu/en_us/lol.stringtable.json`;
+  const arenaSourceUrl = `${base}/cdragon/arena/zh_cn.json`;
+  const [augmentLists, augmentMetadata, arenaData, regularBin, classicBin, stringTable] = await Promise.all([
+    fetchJson(
+      `${base}/plugins/rcp-be-lol-game-data/global/zh_cn/v1/augment-lists.json`,
+      `CommunityDragon ${patch} augment lists`,
+    ),
+    fetchJson(
+      `${base}/plugins/rcp-be-lol-game-data/global/zh_cn/v1/cherry-augments.json`,
+      `CommunityDragon ${patch} augment metadata`,
+    ),
+    fetchJson(arenaSourceUrl, `CommunityDragon ${patch} augment descriptions`),
+    fetchJson(regularBinUrl, `CommunityDragon ${patch} KIWI bin`),
+    fetchJson(classicBinUrl, `CommunityDragon ${patch} KIWI_JADE bin`),
+    fetchJson(stringTableUrl, `CommunityDragon ${patch} zh_CN string table`),
+  ]);
+  return {
+    patch,
+    base,
+    regularBinUrl,
+    classicBinUrl,
+    arenaSourceUrl,
+    augmentLists,
+    augmentMetadata,
+    arenaData,
+    regularBin,
+    classicBin,
+    stringTable,
+  };
+}
+
+const communityCandidates = [...new Set(
+  versions.slice(0, 20).map((version) => version.split(".").slice(0, 2).join(".")),
+)];
+let communitySnapshot;
+for (const candidate of communityCandidates) {
+  try {
+    communitySnapshot = await loadCommunityDragonSnapshot(candidate);
+    break;
+  } catch (error) {
+    if (error.status !== 404) throw error;
+    console.warn(`CommunityDragon ${candidate} is not published completely; trying the previous patch.`);
+  }
+}
+if (!communitySnapshot) {
+  throw new Error(`No complete CommunityDragon snapshot found for Data Dragon ${livePatch}`);
+}
+
+const {
+  patch: communityPatch,
+  base: communityBase,
+  regularBinUrl,
+  classicBinUrl,
+  arenaSourceUrl,
   augmentLists,
   augmentMetadata,
   arenaData,
   regularBin,
   classicBin,
   stringTable,
-] = await Promise.all([
-  fetchJson(
-    `${communityBase}/plugins/rcp-be-lol-game-data/global/zh_cn/v1/augment-lists.json`,
-    `CommunityDragon ${communityPatch} augment lists`,
-  ),
-  fetchJson(
-    `${communityBase}/plugins/rcp-be-lol-game-data/global/zh_cn/v1/cherry-augments.json`,
-    `CommunityDragon ${communityPatch} augment metadata`,
-  ),
-  fetchJson(arenaSourceUrl, `CommunityDragon ${communityPatch} augment descriptions`),
-  fetchJson(regularBinUrl, `CommunityDragon ${communityPatch} KIWI bin`),
-  fetchJson(classicBinUrl, `CommunityDragon ${communityPatch} KIWI_JADE bin`),
-  fetchJson(stringTableUrl, `CommunityDragon ${communityPatch} zh_CN string table`),
-]);
+} = communitySnapshot;
+if (communityPatch !== livePatch.split(".").slice(0, 2).join(".")) {
+  console.warn(`Data Dragon ${livePatch} is ahead of CommunityDragon; using complete snapshot ${communityPatch}.`);
+}
 
 const championSources = await mapWithConcurrency(roster, 8, async ({ key }) => {
   const dataDragonUrl =

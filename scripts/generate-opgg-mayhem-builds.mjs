@@ -13,6 +13,10 @@ import {
   LIVE_DATA_PATCH,
   classicMayhemAugments,
 } from "../app/classic-mayhem.generated.ts";
+import {
+  OP_GG_MAYHEM_PATCH as PRESERVED_OP_GG_MAYHEM_PATCH,
+  opggMayhemChampionBuilds as preservedOpggMayhemChampionBuilds,
+} from "../app/classic-mayhem-opgg.generated.ts";
 import { parseOpggAugmentGroups, parseOpggSkillBuild } from "./opgg-mayhem-parser.mjs";
 
 const outputPath = new URL("../app/classic-mayhem-opgg.generated.ts", import.meta.url);
@@ -401,6 +405,23 @@ function parseRootPage(html) {
     && Number.isFinite(champion.win_rate)
     && Number.isFinite(champion.pick_rate));
   if (rankings.length !== 60) {
+    const statisticsUnavailable = rankings.length === 0
+      && rootChampions.length >= 60
+      && rootChampions.every((champion) => (
+        !Number.isInteger(champion.rank)
+        && !Number.isInteger(champion.tier)
+        && !Number.isFinite(champion.win_rate)
+        && !Number.isFinite(champion.pick_rate)
+      ));
+    if (statisticsUnavailable) {
+      if (preservedOpggMayhemChampionBuilds.length !== 60) {
+        throw new Error(
+          `OP.GG statistics are unavailable and the preserved snapshot is incomplete: `
+          + `${preservedOpggMayhemChampionBuilds.length}/60 champions`,
+        );
+      }
+      return { statisticsUnavailable: true };
+    }
     throw new Error(`OP.GG must expose exactly 60 ranked Classic-ish champions; received ${rankings.length}`);
   }
   const patch = rootPayload.match(/"query":\{"region":"global","tier":"all","patch":"(\d+\.\d+)"/)?.[1]
@@ -410,7 +431,9 @@ function parseRootPage(html) {
   if (!assetPatch || !assetPatch.startsWith(`${patch}.`)) {
     throw new Error(`Unexpected OP.GG asset patch ${assetPatch || "(missing)"} for statistics patch ${patch}`);
   }
-  if (patch !== CLASSIC_MAYHEM_PATCH || !LIVE_DATA_PATCH.startsWith(`${patch}.`)) {
+  const [opggMajor, opggMinor] = patch.split(".").map(Number);
+  const [liveMajor, liveMinor] = LIVE_DATA_PATCH.split(".").map(Number);
+  if (opggMajor !== liveMajor || opggMinor > liveMinor) {
     throw new Error(
       `Cross-source patch mismatch: OP.GG ${patch}/${assetPatch}, `
       + `CommunityDragon ${CLASSIC_MAYHEM_PATCH}, Data Dragon ${LIVE_DATA_PATCH}`,
@@ -436,6 +459,14 @@ const { rankings, patch, assetPatch } = await fetchValidated(
   "OP.GG ARAM Mayhem Classic-ish ranking",
   parseRootPage,
 );
+
+if (!rankings) {
+  console.warn(
+    `OP.GG Classic-ish currently exposes no ranked statistics; preserving the verified `
+    + `${PRESERVED_OP_GG_MAYHEM_PATCH} snapshot (${preservedOpggMayhemChampionBuilds.length} champions).`,
+  );
+  process.exit(0);
+}
 
 const rankingById = new Map(rankings.map((champion) => [champion.id, champion]));
 for (const entry of roster) {
