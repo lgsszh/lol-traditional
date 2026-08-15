@@ -7,7 +7,7 @@ const abilityKeys = ["P", "Q", "W", "E", "R"];
 const unresolvedPattern = /{{|}}|@[a-z0-9_.]+|数据状态：?unavailable|客户端内部变量/i;
 
 function assertAbilitySet(label, champions, { requireStatus = false } = {}) {
-  assert.equal(champions.length, 60, `${label} 必须覆盖 60 位英雄`);
+  assert.equal(champions.length, classicChampionSkills.length, `${label} 必须覆盖当前完整英雄目录`);
   const abilities = [];
   for (const champion of champions) {
     assert.ok(champion.stats, `${label} ${champion.championName || champion.name} 缺少等级面板基础属性`);
@@ -37,10 +37,10 @@ function assertAbilitySet(label, champions, { requireStatus = false } = {}) {
       abilities.push(ability);
     }
   }
-  assert.equal(abilities.length, 300, `${label} 必须正好覆盖 300 个技能`);
+  assert.equal(abilities.length, champions.length * abilityKeys.length, `${label} 必须覆盖每位英雄的 5 个技能`);
 }
 
-test("03 与 04 共 600 个技能均有来源、说明和独立数值明细", () => {
+test("03 与 04 的全部技能均有来源、说明和独立数值明细", () => {
   assertAbilitySet("03", classicChampionSkills);
   assertAbilitySet("04", liveClassicChampions, { requireStatus: true });
 });

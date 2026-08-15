@@ -529,7 +529,8 @@ export default function Home() {
   const filteredChampions = useMemo(() => {
     if (view === "mayhem") {
       return classicChampions
-        .filter((champion) => championMatchesIdentitySearch(champion, search))
+        .filter((champion) => mayhemRankingByChampion.has(champion.classicId)
+          && championMatchesIdentitySearch(champion, search))
         .sort((left, right) =>
           (mayhemRankingByChampion.get(left.classicId)?.rank || 999)
           - (mayhemRankingByChampion.get(right.classicId)?.rank || 999));
@@ -998,6 +999,13 @@ export default function Home() {
     }, 360);
   };
 
+  useEffect(() => {
+    if (view !== "mayhem" || mayhemRankingByChampion.has(selectedChampion.classicId)) return;
+    const firstRankedChampion = classicChampions.find((champion) =>
+      mayhemRankingByChampion.has(champion.classicId));
+    if (firstRankedChampion) chooseChampion(firstRankedChampion);
+  }, [selectedChampion.classicId, view]);
+
   return (
     <main className="app-shell" style={{ "--champion-accent": selectedChampion.accent } as React.CSSProperties}>
       <a className="skip-link" href="#builder-content">跳到构筑内容</a>
@@ -1042,7 +1050,9 @@ export default function Home() {
         <aside className="champion-rail" data-guide="champion-picker">
           <div className="rail-heading">
             <span>{view === "mayhem" ? "怀旧海斗排名" : "经典英雄"}</span>
-            <b>{classicChampions.length} / 60</b>
+            <b>{view === "mayhem"
+              ? `${mayhemRankingByChampion.size} / ${mayhemRankingByChampion.size}`
+              : `${classicChampions.length} / ${classicChampions.length}`}</b>
           </div>
           <label className="champion-search">
             <span aria-hidden="true">⌕</span>
@@ -1104,7 +1114,9 @@ export default function Home() {
           </div>
           <div className="rail-footnote">
             <span>目录覆盖</span>
-            <strong>{view === "mayhem" ? "60 英雄 · 全部有统计" : "60 英雄 · 16 技能"}</strong>
+            <strong>{view === "mayhem"
+              ? `${mayhemRankingByChampion.size} 英雄 · 全部有统计`
+              : `${classicChampions.length} 英雄 · 16 技能`}</strong>
             <small>
               {view === "mayhem"
                 ? "按 OP.GG 排名排序；每日全量抓取，任一英雄缺表即拒绝发布。"

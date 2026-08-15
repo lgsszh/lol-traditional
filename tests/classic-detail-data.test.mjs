@@ -8,7 +8,7 @@ import { classicChampionSkills } from "../app/classic-skills.generated.ts";
 import { classicBuildGuides } from "../app/classic-build-guides.ts";
 import { classicAssetAudit, classicAssetManifest } from "../app/classic-assets.generated.ts";
 
-test("60 位经典英雄均包含被动与 Q/W/E/R 详情", () => {
+test("全部经典英雄均包含被动与 Q/W/E/R 详情", () => {
   assert.equal(classicChampionSkills.length, classicChampions.length);
   assert.equal(new Set(classicChampionSkills.map((entry) => entry.championId)).size, classicChampions.length);
 
@@ -36,7 +36,7 @@ test("60 位经典英雄均包含被动与 Q/W/E/R 详情", () => {
   }
 });
 
-test("60 位英雄优先使用名称含经典的皮肤，并保留 OP.GG 默认原画", () => {
+test("全部英雄优先使用名称含经典的皮肤，并保留 OP.GG 默认原画", () => {
   const compactName = (value) => value.replace(/\s+/g, "");
   const ahri = classicChampionSkills.find((entry) => entry.championId === "60103");
   const jax = classicChampionSkills.find((entry) => entry.championId === "60024");
@@ -80,7 +80,7 @@ test("全部 Classic 图片均有经过哈希校验的本地镜像", () => {
   }
 });
 
-test("60 位英雄均提供至少三套完整经典玩法、回城路线和合法出门预算", () => {
+test("全部英雄均提供至少三套完整经典玩法、回城路线和合法出门预算", () => {
   const itemIds = new Set(classicItems.map((item) => item.id));
   const spellIds = new Set(["74", "714", "712", "711", "76", "73", "71", "75", "77", "721", "713", "705", "709", "716", "720", "777"]);
   let variantCount = 0;

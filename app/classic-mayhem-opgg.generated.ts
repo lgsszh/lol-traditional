@@ -1,8 +1,8 @@
-// Generated from OP.GG ARAM Mayhem Classic-ish 16.15. Do not edit manually.
-export const OP_GG_MAYHEM_PATCH = "16.15";
-export const OP_GG_MAYHEM_ASSET_PATCH = "16.15.1";
+// Generated from OP.GG ARAM Mayhem Classic-ish 16.16. Do not edit manually.
+export const OP_GG_MAYHEM_PATCH = "16.16";
+export const OP_GG_MAYHEM_ASSET_PATCH = "16.16.1";
 export const OP_GG_MAYHEM_SOURCE_URL = "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic";
-export const OP_GG_MAYHEM_SNAPSHOT_HASH = "a75a0c665ca33a7d4085d90a68181eeb7aaefd20f35daa18b66d18fba84c609c";
+export const OP_GG_MAYHEM_SNAPSHOT_HASH = "0623de02ce164a75afcdc469a4b778a4b4bf4ff27d8524c294deca7247864f87";
 export const MAYHEM_STARTING_GOLD = 1400;
 export const MAYHEM_HAS_JUNGLE_ROLE = false;
 
@@ -18,14 +18,14 @@ export const opggMayhemItems: OpggMayhemItem[] = [
   {
     "id": "773040",
     "name": "炽天使之拥",
-    "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/item/773040.png",
+    "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/item/773040.png",
     "price": null,
     "tags": []
   },
   {
     "id": "773042",
     "name": "魔切",
-    "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/item/773042.png",
+    "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/item/773042.png",
     "price": null,
     "tags": []
   }
@@ -82,8 +82,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60010",
     "key": "kayle",
     "name": "正义天使",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/kayle/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/kayle/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 1,
     "tier": 1,
     "championMetrics": {
@@ -97,12 +97,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
           }
         ],
         "metric": {
@@ -116,12 +116,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -168,20 +168,20 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 900,
           "metric": {
-            "pickRate": 61.18,
-            "games": 4342,
-            "winRate": 65.82
+            "pickRate": 86.91,
+            "games": 7690,
+            "winRate": 64.89
           }
         },
         {
           "itemIds": [
-            "773172"
+            "773111"
           ],
-          "totalPrice": 2850,
+          "totalPrice": 1200,
           "metric": {
-            "pickRate": 25.59,
-            "games": 1816,
-            "winRate": 60.24
+            "pickRate": 4.93,
+            "games": 436,
+            "winRate": 66.74
           }
         }
       ],
@@ -902,8 +902,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60096",
     "key": "kogmaw",
     "name": "深渊巨口",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/kogmaw/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/kogmaw/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 2,
     "tier": 1,
     "championMetrics": {
@@ -917,12 +917,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
           }
         ],
         "metric": {
@@ -936,12 +936,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -988,20 +988,20 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 900,
           "metric": {
-            "pickRate": 57.73,
-            "games": 3901,
-            "winRate": 63.19
+            "pickRate": 83.01,
+            "games": 6432,
+            "winRate": 62.69
           }
         },
         {
           "itemIds": [
-            "773172"
+            "773020"
           ],
-          "totalPrice": 2850,
+          "totalPrice": 1100,
           "metric": {
-            "pickRate": 24.43,
-            "games": 1651,
-            "winRate": 57.48
+            "pickRate": 10.98,
+            "games": 851,
+            "winRate": 56.4
           }
         }
       ],
@@ -1722,8 +1722,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60067",
     "key": "vayne",
     "name": "暗夜猎手",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/vayne/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/vayne/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 3,
     "tier": 1,
     "championMetrics": {
@@ -1737,12 +1737,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
           }
         ],
         "metric": {
@@ -1756,12 +1756,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -1808,20 +1808,20 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 900,
           "metric": {
-            "pickRate": 67.63,
-            "games": 5483,
-            "winRate": 59.53
+            "pickRate": 94.7,
+            "games": 9460,
+            "winRate": 59.04
           }
         },
         {
           "itemIds": [
-            "773172"
+            "773111"
           ],
-          "totalPrice": 2850,
+          "totalPrice": 1200,
           "metric": {
-            "pickRate": 28.11,
-            "games": 2279,
-            "winRate": 56.95
+            "pickRate": 3.03,
+            "games": 303,
+            "winRate": 59.41
           }
         }
       ],
@@ -2542,8 +2542,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60036",
     "key": "drmundo",
     "name": "祖安狂人",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/drmundo/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/drmundo/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 4,
     "tier": 1,
     "championMetrics": {
@@ -2557,12 +2557,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -2576,12 +2576,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
           }
         ],
         "metric": {
@@ -2629,20 +2629,20 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1200,
           "metric": {
-            "pickRate": 44.96,
-            "games": 2640,
-            "winRate": 62.61
+            "pickRate": 60.67,
+            "games": 4155,
+            "winRate": 61.3
           }
         },
         {
           "itemIds": [
-            "773005"
+            "773047"
           ],
-          "totalPrice": 2300,
+          "totalPrice": 1000,
           "metric": {
-            "pickRate": 25.8,
-            "games": 1515,
-            "winRate": 59.21
+            "pickRate": 22.66,
+            "games": 1552,
+            "winRate": 57.28
           }
         }
       ],
@@ -3363,8 +3363,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60015",
     "key": "sivir",
     "name": "战争女神",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/sivir/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/sivir/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 5,
     "tier": 1,
     "championMetrics": {
@@ -3378,12 +3378,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
           }
         ],
         "metric": {
@@ -3397,12 +3397,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -3449,20 +3449,20 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 900,
           "metric": {
-            "pickRate": 88.49,
-            "games": 6372,
-            "winRate": 57.88
+            "pickRate": 94.15,
+            "games": 9030,
+            "winRate": 58.07
           }
         },
         {
           "itemIds": [
-            "773172"
+            "773111"
           ],
-          "totalPrice": 2850,
+          "totalPrice": 1200,
           "metric": {
-            "pickRate": 6.14,
-            "games": 442,
-            "winRate": 59.73
+            "pickRate": 2.68,
+            "games": 257,
+            "winRate": 54.47
           }
         }
       ],
@@ -4183,8 +4183,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60022",
     "key": "ashe",
     "name": "寒冰射手",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/ashe/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/ashe/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 6,
     "tier": 2,
     "championMetrics": {
@@ -4198,12 +4198,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
           }
         ],
         "metric": {
@@ -4217,12 +4217,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -4269,20 +4269,20 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 900,
           "metric": {
-            "pickRate": 67.37,
-            "games": 5724,
-            "winRate": 57.53
+            "pickRate": 88.79,
+            "games": 9296,
+            "winRate": 56.19
           }
         },
         {
           "itemIds": [
-            "773172"
+            "773158"
           ],
-          "totalPrice": 2850,
+          "totalPrice": 1000,
           "metric": {
-            "pickRate": 22.32,
-            "games": 1896,
-            "winRate": 51.64
+            "pickRate": 4.68,
+            "games": 490,
+            "winRate": 53.67
           }
         }
       ],
@@ -5003,8 +5003,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60063",
     "key": "brand",
     "name": "复仇焰魂",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/brand/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/brand/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 7,
     "tier": 2,
     "championMetrics": {
@@ -5018,12 +5018,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -5037,12 +5037,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
           }
         ],
         "metric": {
@@ -5092,20 +5092,20 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1100,
           "metric": {
-            "pickRate": 74.63,
-            "games": 5231,
-            "winRate": 56.68
+            "pickRate": 88.06,
+            "games": 7442,
+            "winRate": 56.58
           }
         },
         {
           "itemIds": [
-            "773010"
+            "773158"
           ],
-          "totalPrice": 1200,
+          "totalPrice": 1000,
           "metric": {
-            "pickRate": 10.83,
-            "games": 759,
-            "winRate": 48.22
+            "pickRate": 7.27,
+            "games": 614,
+            "winRate": 55.7
           }
         }
       ],
@@ -5826,8 +5826,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60045",
     "key": "veigar",
     "name": "邪恶小法师",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/veigar/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/veigar/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 8,
     "tier": 2,
     "championMetrics": {
@@ -5841,12 +5841,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -5860,12 +5860,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
           }
         ],
         "metric": {
@@ -5913,20 +5913,20 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1100,
           "metric": {
-            "pickRate": 68.4,
-            "games": 5023,
-            "winRate": 55.48
+            "pickRate": 84.37,
+            "games": 7201,
+            "winRate": 55.58
           }
         },
         {
           "itemIds": [
-            "773010"
+            "773158"
           ],
-          "totalPrice": 1200,
+          "totalPrice": 1000,
           "metric": {
-            "pickRate": 15.97,
-            "games": 1173,
-            "winRate": 51.75
+            "pickRate": 9.48,
+            "games": 809,
+            "winRate": 52.04
           }
         }
       ],
@@ -6647,8 +6647,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60027",
     "key": "singed",
     "name": "炼金术士",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/singed/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/singed/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 9,
     "tier": 2,
     "championMetrics": {
@@ -6662,12 +6662,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -6681,12 +6681,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
           }
         ],
         "metric": {
@@ -6733,9 +6733,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1000,
           "metric": {
-            "pickRate": 42.31,
-            "games": 2642,
-            "winRate": 56.55
+            "pickRate": 56.4,
+            "games": 4048,
+            "winRate": 56.42
           }
         },
         {
@@ -6744,9 +6744,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1200,
           "metric": {
-            "pickRate": 25.5,
-            "games": 1592,
-            "winRate": 58.35
+            "pickRate": 32.51,
+            "games": 2333,
+            "winRate": 57.91
           }
         }
       ],
@@ -7467,8 +7467,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60021",
     "key": "missfortune",
     "name": "赏金猎人",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/missfortune/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/missfortune/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 10,
     "tier": 2,
     "championMetrics": {
@@ -7482,12 +7482,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
           }
         ],
         "metric": {
@@ -7501,12 +7501,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -7553,9 +7553,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 900,
           "metric": {
-            "pickRate": 65.4,
-            "games": 4626,
-            "winRate": 55.1
+            "pickRate": 70.08,
+            "games": 6489,
+            "winRate": 55.17
           }
         },
         {
@@ -7564,9 +7564,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1100,
           "metric": {
-            "pickRate": 11.47,
-            "games": 811,
-            "winRate": 52.03
+            "pickRate": 12.51,
+            "games": 1158,
+            "winRate": 50.86
           }
         }
       ],
@@ -8287,8 +8287,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60037",
     "key": "sona",
     "name": "琴瑟仙女",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/sona/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/sona/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 11,
     "tier": 2,
     "championMetrics": {
@@ -8302,12 +8302,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHeal.png"
           }
         ],
         "metric": {
@@ -8321,12 +8321,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerMana",
             "name": "清晰术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerMana.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerMana.png"
           }
         ],
         "metric": {
@@ -8376,20 +8376,20 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1000,
           "metric": {
-            "pickRate": 36.91,
-            "games": 2119,
-            "winRate": 58.85
+            "pickRate": 65.53,
+            "games": 3713,
+            "winRate": 57.58
           }
         },
         {
           "itemIds": [
-            "773010"
+            "773020"
           ],
-          "totalPrice": 1200,
+          "totalPrice": 1100,
           "metric": {
-            "pickRate": 23.86,
-            "games": 1370,
-            "winRate": 51.75
+            "pickRate": 21.07,
+            "games": 1194,
+            "winRate": 51.51
           }
         }
       ],
@@ -9110,8 +9110,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60014",
     "key": "sion",
     "name": "亡灵战神",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/sion/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/sion/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 12,
     "tier": 2,
     "championMetrics": {
@@ -9125,12 +9125,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -9144,12 +9144,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHeal.png"
           }
         ],
         "metric": {
@@ -9197,20 +9197,20 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1200,
           "metric": {
-            "pickRate": 44,
-            "games": 2273,
-            "winRate": 56.97
+            "pickRate": 61.85,
+            "games": 3707,
+            "winRate": 57.14
           }
         },
         {
           "itemIds": [
-            "773005"
+            "773047"
           ],
-          "totalPrice": 2300,
+          "totalPrice": 1000,
           "metric": {
-            "pickRate": 26.64,
-            "games": 1376,
-            "winRate": 54.58
+            "pickRate": 18.79,
+            "games": 1126,
+            "winRate": 51.07
           }
         }
       ],
@@ -9931,8 +9931,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60017",
     "key": "teemo",
     "name": "迅捷斥候",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/teemo/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/teemo/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 13,
     "tier": 2,
     "championMetrics": {
@@ -9946,12 +9946,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
           }
         ],
         "metric": {
@@ -9965,12 +9965,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -10018,9 +10018,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1100,
           "metric": {
-            "pickRate": 47.8,
-            "games": 3265,
-            "winRate": 53.94
+            "pickRate": 52.49,
+            "games": 4652,
+            "winRate": 54.34
           }
         },
         {
@@ -10029,9 +10029,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 900,
           "metric": {
-            "pickRate": 35.25,
-            "games": 2408,
-            "winRate": 52.49
+            "pickRate": 37.78,
+            "games": 3348,
+            "winRate": 52.33
           }
         }
       ],
@@ -10752,8 +10752,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60018",
     "key": "tristana",
     "name": "麦林炮手",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/tristana/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/tristana/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 14,
     "tier": 2,
     "championMetrics": {
@@ -10767,12 +10767,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
           }
         ],
         "metric": {
@@ -10786,12 +10786,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -10838,20 +10838,20 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 900,
           "metric": {
-            "pickRate": 90.3,
-            "games": 6274,
-            "winRate": 53.32
+            "pickRate": 95.36,
+            "games": 8825,
+            "winRate": 53.7
           }
         },
         {
           "itemIds": [
-            "773172"
+            "773111"
           ],
-          "totalPrice": 2850,
+          "totalPrice": 1200,
           "metric": {
-            "pickRate": 4.42,
-            "games": 307,
-            "winRate": 57
+            "pickRate": 1.67,
+            "games": 155,
+            "winRate": 51.61
           }
         }
       ],
@@ -11572,8 +11572,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60012",
     "key": "alistar",
     "name": "牛头酋长",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/alistar/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/alistar/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 15,
     "tier": 2,
     "championMetrics": {
@@ -11587,12 +11587,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -11606,12 +11606,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHeal.png"
           }
         ],
         "metric": {
@@ -11659,9 +11659,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1200,
           "metric": {
-            "pickRate": 49.11,
-            "games": 2289,
-            "winRate": 58.15
+            "pickRate": 58.83,
+            "games": 3304,
+            "winRate": 57.11
           }
         },
         {
@@ -11670,9 +11670,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1000,
           "metric": {
-            "pickRate": 13.92,
-            "games": 649,
-            "winRate": 52.39
+            "pickRate": 16.95,
+            "games": 952,
+            "winRate": 52.84
           }
         }
       ],
@@ -12393,8 +12393,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60099",
     "key": "lux",
     "name": "光辉女郎",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/lux/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/lux/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 16,
     "tier": 2,
     "championMetrics": {
@@ -12408,12 +12408,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -12427,12 +12427,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
           }
         ],
         "metric": {
@@ -12479,20 +12479,20 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1100,
           "metric": {
-            "pickRate": 56.68,
-            "games": 4670,
-            "winRate": 52.55
+            "pickRate": 87.68,
+            "games": 7457,
+            "winRate": 52.11
           }
         },
         {
           "itemIds": [
-            "773174"
+            "773158"
           ],
-          "totalPrice": 2600,
+          "totalPrice": 1000,
           "metric": {
-            "pickRate": 26.87,
-            "games": 2214,
-            "winRate": 52.21
+            "pickRate": 8.32,
+            "games": 708,
+            "winRate": 50.85
           }
         }
       ],
@@ -13213,8 +13213,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60044",
     "key": "taric",
     "name": "瓦洛兰之盾",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/taric/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/taric/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 17,
     "tier": 3,
     "championMetrics": {
@@ -13228,12 +13228,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -13247,12 +13247,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHeal.png"
           }
         ],
         "metric": {
@@ -13300,20 +13300,20 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1200,
           "metric": {
-            "pickRate": 51.21,
-            "games": 1372,
-            "winRate": 56.49
+            "pickRate": 64.91,
+            "games": 2024,
+            "winRate": 56.23
           }
         },
         {
           "itemIds": [
-            "773010"
+            "773047"
           ],
-          "totalPrice": 1200,
+          "totalPrice": 1000,
           "metric": {
-            "pickRate": 15.45,
-            "games": 414,
-            "winRate": 50.72
+            "pickRate": 18.31,
+            "games": 571,
+            "winRate": 53.42
           }
         }
       ],
@@ -14034,8 +14034,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60029",
     "key": "twitch",
     "name": "瘟疫之源",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/twitch/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/twitch/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 18,
     "tier": 3,
     "championMetrics": {
@@ -14049,12 +14049,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
           }
         ],
         "metric": {
@@ -14068,12 +14068,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -14120,20 +14120,20 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 900,
           "metric": {
-            "pickRate": 72.84,
-            "games": 5306,
-            "winRate": 52.47
+            "pickRate": 94,
+            "games": 8431,
+            "winRate": 52.18
           }
         },
         {
           "itemIds": [
-            "773172"
+            "773020"
           ],
-          "totalPrice": 2850,
+          "totalPrice": 1100,
           "metric": {
-            "pickRate": 20.74,
-            "games": 1511,
-            "winRate": 52.55
+            "pickRate": 2.19,
+            "games": 196,
+            "winRate": 47.45
           }
         }
       ],
@@ -14854,8 +14854,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60103",
     "key": "ahri",
     "name": "九尾妖狐",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/ahri/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/ahri/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 19,
     "tier": 3,
     "championMetrics": {
@@ -14869,12 +14869,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -14888,12 +14888,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerDot",
             "name": "引燃",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerDot.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerDot.png"
           }
         ],
         "metric": {
@@ -14942,20 +14942,20 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1100,
           "metric": {
-            "pickRate": 73.68,
-            "games": 5211,
-            "winRate": 52.35
+            "pickRate": 87.54,
+            "games": 7626,
+            "winRate": 51.82
           }
         },
         {
           "itemIds": [
-            "773010"
+            "773158"
           ],
-          "totalPrice": 1200,
+          "totalPrice": 1000,
           "metric": {
-            "pickRate": 12.54,
-            "games": 887,
-            "winRate": 47.13
+            "pickRate": 7.04,
+            "games": 613,
+            "winRate": 47.8
           }
         }
       ],
@@ -15676,8 +15676,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60089",
     "key": "leona",
     "name": "曙光女神",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/leona/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/leona/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 20,
     "tier": 3,
     "championMetrics": {
@@ -15691,12 +15691,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -15710,12 +15710,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHeal.png"
           }
         ],
         "metric": {
@@ -15763,9 +15763,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1200,
           "metric": {
-            "pickRate": 62.65,
-            "games": 2895,
-            "winRate": 53.71
+            "pickRate": 69.4,
+            "games": 4108,
+            "winRate": 53.02
           }
         },
         {
@@ -15774,9 +15774,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1000,
           "metric": {
-            "pickRate": 19.91,
-            "games": 920,
-            "winRate": 48.91
+            "pickRate": 22.27,
+            "games": 1318,
+            "winRate": 49.09
           }
         }
       ],
@@ -16497,8 +16497,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60032",
     "key": "amumu",
     "name": "殇之木乃伊",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/amumu/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/amumu/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 21,
     "tier": 3,
     "championMetrics": {
@@ -16512,12 +16512,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -16531,12 +16531,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHeal.png"
           }
         ],
         "metric": {
@@ -16583,9 +16583,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1200,
           "metric": {
-            "pickRate": 49.91,
-            "games": 2313,
-            "winRate": 53.78
+            "pickRate": 61.24,
+            "games": 3456,
+            "winRate": 53.82
           }
         },
         {
@@ -16594,9 +16594,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1000,
           "metric": {
-            "pickRate": 15.39,
-            "games": 713,
-            "winRate": 48.67
+            "pickRate": 17.83,
+            "games": 1006,
+            "winRate": 50.3
           }
         }
       ],
@@ -17317,8 +17317,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60013",
     "key": "ryze",
     "name": "符文法师",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/ryze/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/ryze/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 22,
     "tier": 3,
     "championMetrics": {
@@ -17332,12 +17332,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
           }
         ],
         "metric": {
@@ -17351,12 +17351,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -17403,20 +17403,20 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1100,
           "metric": {
-            "pickRate": 37.44,
-            "games": 2970,
-            "winRate": 51.62
+            "pickRate": 72.36,
+            "games": 5231,
+            "winRate": 51.73
           }
         },
         {
           "itemIds": [
-            "773010"
+            "773158"
           ],
-          "totalPrice": 1200,
+          "totalPrice": 1000,
           "metric": {
-            "pickRate": 26.34,
-            "games": 2089,
-            "winRate": 50.17
+            "pickRate": 10.68,
+            "games": 772,
+            "winRate": 50.39
           }
         }
       ],
@@ -18139,8 +18139,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60074",
     "key": "heimerdinger",
     "name": "大发明家",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/heimerdinger/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/heimerdinger/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 23,
     "tier": 3,
     "championMetrics": {
@@ -18154,12 +18154,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -18173,12 +18173,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
           }
         ],
         "metric": {
@@ -18228,20 +18228,20 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1100,
           "metric": {
-            "pickRate": 71.41,
-            "games": 3395,
-            "winRate": 50.1
+            "pickRate": 85.88,
+            "games": 4901,
+            "winRate": 50.5
           }
         },
         {
           "itemIds": [
-            "773010"
+            "773158"
           ],
-          "totalPrice": 1200,
+          "totalPrice": 1000,
           "metric": {
-            "pickRate": 12.64,
-            "games": 601,
-            "winRate": 44.93
+            "pickRate": 6.85,
+            "games": 391,
+            "winRate": 51.66
           }
         }
       ],
@@ -18962,8 +18962,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60001",
     "key": "annie",
     "name": "黑暗之女",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/annie/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/annie/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 24,
     "tier": 3,
     "championMetrics": {
@@ -18977,12 +18977,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -18996,12 +18996,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerDot",
             "name": "引燃",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerDot.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerDot.png"
           }
         ],
         "metric": {
@@ -19050,20 +19050,20 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1100,
           "metric": {
-            "pickRate": 71.2,
-            "games": 4089,
-            "winRate": 51.72
+            "pickRate": 85.93,
+            "games": 5949,
+            "winRate": 51.3
           }
         },
         {
           "itemIds": [
-            "773010"
+            "773158"
           ],
-          "totalPrice": 1200,
+          "totalPrice": 1000,
           "metric": {
-            "pickRate": 14.54,
-            "games": 835,
-            "winRate": 48.26
+            "pickRate": 6.49,
+            "games": 449,
+            "winRate": 53.01
           }
         }
       ],
@@ -19784,8 +19784,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60090",
     "key": "malzahar",
     "name": "虚空先知",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/malzahar/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/malzahar/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 25,
     "tier": 3,
     "championMetrics": {
@@ -19799,12 +19799,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -19818,12 +19818,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
           }
         ],
         "metric": {
@@ -19873,20 +19873,20 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1100,
           "metric": {
-            "pickRate": 72.68,
-            "games": 4551,
-            "winRate": 51.68
+            "pickRate": 88.87,
+            "games": 6680,
+            "winRate": 51.92
           }
         },
         {
           "itemIds": [
-            "773010"
+            "773158"
           ],
-          "totalPrice": 1200,
+          "totalPrice": 1000,
           "metric": {
-            "pickRate": 13.7,
-            "games": 858,
-            "winRate": 46.85
+            "pickRate": 6.27,
+            "games": 471,
+            "winRate": 52.44
           }
         }
       ],
@@ -20607,8 +20607,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60009",
     "key": "fiddlesticks",
     "name": "远古恐惧",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/fiddlesticks/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/fiddlesticks/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 26,
     "tier": 3,
     "championMetrics": {
@@ -20622,12 +20622,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -20641,12 +20641,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHeal.png"
           }
         ],
         "metric": {
@@ -20696,20 +20696,20 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1100,
           "metric": {
-            "pickRate": 72.24,
-            "games": 4241,
-            "winRate": 50.93
+            "pickRate": 84.83,
+            "games": 6045,
+            "winRate": 51.15
           }
         },
         {
           "itemIds": [
-            "773010"
+            "773158"
           ],
-          "totalPrice": 1200,
+          "totalPrice": 1000,
           "metric": {
-            "pickRate": 13.47,
-            "games": 791,
-            "winRate": 44.75
+            "pickRate": 7.18,
+            "games": 512,
+            "winRate": 47.07
           }
         }
       ],
@@ -21430,8 +21430,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60054",
     "key": "malphite",
     "name": "熔岩巨兽",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/malphite/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/malphite/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 27,
     "tier": 3,
     "championMetrics": {
@@ -21445,12 +21445,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -21464,12 +21464,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerDot",
             "name": "引燃",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerDot.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerDot.png"
           }
         ],
         "metric": {
@@ -21517,9 +21517,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1100,
           "metric": {
-            "pickRate": 30.01,
-            "games": 1904,
-            "winRate": 47.01
+            "pickRate": 38.07,
+            "games": 2861,
+            "winRate": 48.69
           }
         },
         {
@@ -21528,9 +21528,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1200,
           "metric": {
-            "pickRate": 29.15,
-            "games": 1849,
-            "winRate": 52.68
+            "pickRate": 36.06,
+            "games": 2710,
+            "winRate": 52.25
           }
         }
       ],
@@ -22251,8 +22251,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60062",
     "key": "monkeyking",
     "name": "齐天大圣",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/monkeyking/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/monkeyking/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 28,
     "tier": 3,
     "championMetrics": {
@@ -22266,12 +22266,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -22285,12 +22285,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHeal.png"
           }
         ],
         "metric": {
@@ -22336,9 +22336,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1200,
           "metric": {
-            "pickRate": 59.53,
-            "games": 2234,
-            "winRate": 51.92
+            "pickRate": 64.2,
+            "games": 3190,
+            "winRate": 51.13
           }
         },
         {
@@ -22347,9 +22347,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1000,
           "metric": {
-            "pickRate": 16.73,
-            "games": 628,
-            "winRate": 47.29
+            "pickRate": 17.97,
+            "games": 893,
+            "winRate": 49.16
           }
         }
       ],
@@ -23071,8 +23071,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60038",
     "key": "kassadin",
     "name": "虚空行者",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/kassadin/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/kassadin/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 29,
     "tier": 3,
     "championMetrics": {
@@ -23086,12 +23086,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -23105,12 +23105,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerDot",
             "name": "引燃",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerDot.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerDot.png"
           }
         ],
         "metric": {
@@ -23157,20 +23157,20 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1100,
           "metric": {
-            "pickRate": 39.62,
-            "games": 2848,
-            "winRate": 50.95
+            "pickRate": 79.48,
+            "games": 5023,
+            "winRate": 51.5
           }
         },
         {
           "itemIds": [
-            "773010"
+            "773111"
           ],
           "totalPrice": 1200,
           "metric": {
-            "pickRate": 25.18,
-            "games": 1810,
-            "winRate": 48.34
+            "pickRate": 9.13,
+            "games": 577,
+            "winRate": 51.47
           }
         }
       ],
@@ -23893,8 +23893,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60042",
     "key": "corki",
     "name": "英勇投弹手",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/corki/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/corki/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 30,
     "tier": 3,
     "championMetrics": {
@@ -23908,12 +23908,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
           }
         ],
         "metric": {
@@ -23927,12 +23927,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -23978,9 +23978,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 900,
           "metric": {
-            "pickRate": 69.86,
-            "games": 4294,
-            "winRate": 50.26
+            "pickRate": 72.71,
+            "games": 5903,
+            "winRate": 49.77
           }
         },
         {
@@ -23989,9 +23989,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1000,
           "metric": {
-            "pickRate": 11.53,
-            "games": 709,
-            "winRate": 49.65
+            "pickRate": 11.67,
+            "games": 947,
+            "winRate": 49.63
           }
         }
       ],
@@ -24713,8 +24713,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60002",
     "key": "olaf",
     "name": "狂战士",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/olaf/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/olaf/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 31,
     "tier": 3,
     "championMetrics": {
@@ -24728,12 +24728,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -24747,12 +24747,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
           }
         ],
         "metric": {
@@ -24799,9 +24799,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 900,
           "metric": {
-            "pickRate": 45,
-            "games": 1691,
-            "winRate": 50.15
+            "pickRate": 46.96,
+            "games": 2316,
+            "winRate": 49.74
           }
         },
         {
@@ -24810,9 +24810,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1200,
           "metric": {
-            "pickRate": 26.58,
-            "games": 999,
-            "winRate": 52.35
+            "pickRate": 27.72,
+            "games": 1367,
+            "winRate": 51.06
           }
         }
       ],
@@ -25533,8 +25533,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60024",
     "key": "jax",
     "name": "武器大师",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/jax/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/jax/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 32,
     "tier": 4,
     "championMetrics": {
@@ -25548,12 +25548,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -25567,12 +25567,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHeal.png"
           }
         ],
         "metric": {
@@ -25618,9 +25618,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1200,
           "metric": {
-            "pickRate": 52.44,
-            "games": 2907,
-            "winRate": 51.63
+            "pickRate": 56.53,
+            "games": 4173,
+            "winRate": 50.9
           }
         },
         {
@@ -25629,9 +25629,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1000,
           "metric": {
-            "pickRate": 24.93,
-            "games": 1382,
-            "winRate": 46.82
+            "pickRate": 26.48,
+            "games": 1955,
+            "winRate": 47.21
           }
         }
       ],
@@ -26352,8 +26352,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60030",
     "key": "karthus",
     "name": "死亡颂唱者",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/karthus/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/karthus/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 33,
     "tier": 4,
     "championMetrics": {
@@ -26367,12 +26367,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -26386,12 +26386,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHeal.png"
           }
         ],
         "metric": {
@@ -26441,20 +26441,20 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1100,
           "metric": {
-            "pickRate": 60.34,
-            "games": 3203,
-            "winRate": 50.61
+            "pickRate": 85,
+            "games": 4658,
+            "winRate": 50.6
           }
         },
         {
           "itemIds": [
-            "773010"
+            "773158"
           ],
-          "totalPrice": 1200,
+          "totalPrice": 1000,
           "metric": {
-            "pickRate": 23.19,
-            "games": 1231,
-            "winRate": 47.44
+            "pickRate": 12.28,
+            "games": 673,
+            "winRate": 47.99
           }
         }
       ],
@@ -27175,8 +27175,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60040",
     "key": "janna",
     "name": "风暴之怒",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/janna/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/janna/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 34,
     "tier": 4,
     "championMetrics": {
@@ -27190,12 +27190,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHeal.png"
           }
         ],
         "metric": {
@@ -27209,12 +27209,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -27264,20 +27264,20 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1000,
           "metric": {
-            "pickRate": 38.61,
-            "games": 1711,
+            "pickRate": 63.45,
+            "games": 2868,
             "winRate": 49.44
           }
         },
         {
           "itemIds": [
-            "773010"
+            "773020"
           ],
-          "totalPrice": 1200,
+          "totalPrice": 1100,
           "metric": {
-            "pickRate": 22,
-            "games": 975,
-            "winRate": 46.15
+            "pickRate": 14.56,
+            "games": 658,
+            "winRate": 45.29
           }
         }
       ],
@@ -27998,8 +27998,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60079",
     "key": "gragas",
     "name": "酒桶",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/gragas/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/gragas/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 35,
     "tier": 4,
     "championMetrics": {
@@ -28013,12 +28013,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -28032,12 +28032,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHeal.png"
           }
         ],
         "metric": {
@@ -28084,20 +28084,20 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1100,
           "metric": {
-            "pickRate": 52.2,
-            "games": 2839,
-            "winRate": 49.1
+            "pickRate": 67.17,
+            "games": 4173,
+            "winRate": 49.8
           }
         },
         {
           "itemIds": [
-            "773010"
+            "773111"
           ],
           "totalPrice": 1200,
           "metric": {
-            "pickRate": 17.26,
-            "games": 939,
-            "winRate": 44.09
+            "pickRate": 16.1,
+            "games": 1000,
+            "winRate": 48.4
           }
         }
       ],
@@ -28818,8 +28818,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60086",
     "key": "garen",
     "name": "德玛西亚之力",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/garen/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/garen/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 36,
     "tier": 4,
     "championMetrics": {
@@ -28833,12 +28833,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -28852,12 +28852,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
           }
         ],
         "metric": {
@@ -28903,9 +28903,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1200,
           "metric": {
-            "pickRate": 44.53,
-            "games": 2555,
-            "winRate": 49.32
+            "pickRate": 49.68,
+            "games": 3785,
+            "winRate": 50.33
           }
         },
         {
@@ -28914,9 +28914,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1000,
           "metric": {
-            "pickRate": 20.77,
-            "games": 1192,
-            "winRate": 46.14
+            "pickRate": 23.69,
+            "games": 1805,
+            "winRate": 45.54
           }
         }
       ],
@@ -29637,8 +29637,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60075",
     "key": "nasus",
     "name": "沙漠死神",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/nasus/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/nasus/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 37,
     "tier": 4,
     "championMetrics": {
@@ -29652,12 +29652,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -29671,12 +29671,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
           }
         ],
         "metric": {
@@ -29722,20 +29722,20 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1200,
           "metric": {
-            "pickRate": 29.68,
-            "games": 1422,
-            "winRate": 52.67
+            "pickRate": 43.09,
+            "games": 2410,
+            "winRate": 52.66
           }
         },
         {
           "itemIds": [
-            "773005"
+            "773047"
           ],
-          "totalPrice": 2300,
+          "totalPrice": 1000,
           "metric": {
-            "pickRate": 25.59,
-            "games": 1226,
-            "winRate": 50
+            "pickRate": 22.71,
+            "games": 1270,
+            "winRate": 48.03
           }
         }
       ],
@@ -30456,8 +30456,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60059",
     "key": "jarvaniv",
     "name": "德玛西亚皇子",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/jarvaniv/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/jarvaniv/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 38,
     "tier": 4,
     "championMetrics": {
@@ -30471,12 +30471,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -30490,12 +30490,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHeal.png"
           }
         ],
         "metric": {
@@ -30541,9 +30541,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1200,
           "metric": {
-            "pickRate": 56.37,
-            "games": 2174,
-            "winRate": 50.74
+            "pickRate": 63.1,
+            "games": 3162,
+            "winRate": 50.28
           }
         },
         {
@@ -30552,9 +30552,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1000,
           "metric": {
-            "pickRate": 19.55,
-            "games": 754,
-            "winRate": 43.37
+            "pickRate": 21.97,
+            "games": 1101,
+            "winRate": 43.23
           }
         }
       ],
@@ -31276,8 +31276,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60004",
     "key": "twistedfate",
     "name": "卡牌大师",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/twistedfate/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/twistedfate/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 39,
     "tier": 4,
     "championMetrics": {
@@ -31291,12 +31291,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
           }
         ],
         "metric": {
@@ -31310,12 +31310,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -31362,9 +31362,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1100,
           "metric": {
-            "pickRate": 56.61,
-            "games": 3953,
-            "winRate": 50.34
+            "pickRate": 62.85,
+            "games": 5623,
+            "winRate": 49.99
           }
         },
         {
@@ -31373,9 +31373,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 900,
           "metric": {
-            "pickRate": 19.68,
-            "games": 1374,
-            "winRate": 45.85
+            "pickRate": 22.87,
+            "games": 2046,
+            "winRate": 45.94
           }
         }
       ],
@@ -32096,8 +32096,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60072",
     "key": "skarner",
     "name": "上古领主",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/skarner/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/skarner/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 40,
     "tier": 4,
     "championMetrics": {
@@ -32111,12 +32111,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -32130,12 +32130,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHeal.png"
           }
         ],
         "metric": {
@@ -32184,9 +32184,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1200,
           "metric": {
-            "pickRate": 55.78,
-            "games": 1786,
-            "winRate": 49.16
+            "pickRate": 67.47,
+            "games": 2640,
+            "winRate": 48.56
           }
         },
         {
@@ -32195,9 +32195,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1000,
           "metric": {
-            "pickRate": 21.46,
-            "games": 687,
-            "winRate": 43.38
+            "pickRate": 26.5,
+            "games": 1037,
+            "winRate": 44.07
           }
         }
       ],
@@ -32918,8 +32918,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60034",
     "key": "anivia",
     "name": "冰晶凤凰",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/anivia/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/anivia/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 41,
     "tier": 4,
     "championMetrics": {
@@ -32933,12 +32933,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
           }
         ],
         "metric": {
@@ -32952,12 +32952,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -33004,20 +33004,20 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1100,
           "metric": {
-            "pickRate": 48.75,
-            "games": 3229,
-            "winRate": 49.86
+            "pickRate": 85.92,
+            "games": 5413,
+            "winRate": 49.53
           }
         },
         {
           "itemIds": [
-            "773174"
+            "773158"
           ],
-          "totalPrice": 2600,
+          "totalPrice": 1000,
           "metric": {
-            "pickRate": 26.4,
-            "games": 1749,
-            "winRate": 47.06
+            "pickRate": 4.76,
+            "games": 300,
+            "winRate": 48
           }
         }
       ],
@@ -33740,8 +33740,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60080",
     "key": "pantheon",
     "name": "不屈之枪",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/pantheon/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/pantheon/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 42,
     "tier": 4,
     "championMetrics": {
@@ -33755,12 +33755,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -33774,12 +33774,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerDot",
             "name": "引燃",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerDot.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerDot.png"
           }
         ],
         "metric": {
@@ -33825,9 +33825,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1200,
           "metric": {
-            "pickRate": 55.94,
-            "games": 2827,
-            "winRate": 48.99
+            "pickRate": 61.26,
+            "games": 4068,
+            "winRate": 48.87
           }
         },
         {
@@ -33836,9 +33836,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1000,
           "metric": {
-            "pickRate": 15.87,
-            "games": 802,
-            "winRate": 44.51
+            "pickRate": 17.6,
+            "games": 1169,
+            "winRate": 43.54
           }
         }
       ],
@@ -34561,8 +34561,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60041",
     "key": "gangplank",
     "name": "海洋之灾",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/gangplank/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/gangplank/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 43,
     "tier": 4,
     "championMetrics": {
@@ -34576,12 +34576,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -34595,12 +34595,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerDot",
             "name": "引燃",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerDot.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerDot.png"
           }
         ],
         "metric": {
@@ -34646,9 +34646,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1000,
           "metric": {
-            "pickRate": 36.27,
-            "games": 1574,
-            "winRate": 49.62
+            "pickRate": 38.93,
+            "games": 2203,
+            "winRate": 51.07
           }
         },
         {
@@ -34657,9 +34657,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 900,
           "metric": {
-            "pickRate": 21.22,
-            "games": 921,
-            "winRate": 45.82
+            "pickRate": 22.92,
+            "games": 1297,
+            "winRate": 45.64
           }
         }
       ],
@@ -35380,8 +35380,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60031",
     "key": "chogath",
     "name": "虚空恐惧",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/chogath/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/chogath/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 44,
     "tier": 4,
     "championMetrics": {
@@ -35395,12 +35395,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -35414,12 +35414,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHeal.png"
           }
         ],
         "metric": {
@@ -35466,20 +35466,20 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1200,
           "metric": {
-            "pickRate": 44.73,
-            "games": 2726,
-            "winRate": 50.62
+            "pickRate": 61.9,
+            "games": 4232,
+            "winRate": 49.81
           }
         },
         {
           "itemIds": [
-            "773010"
+            "773047"
           ],
-          "totalPrice": 1200,
+          "totalPrice": 1000,
           "metric": {
-            "pickRate": 18,
-            "games": 1097,
-            "winRate": 43.94
+            "pickRate": 17.03,
+            "games": 1164,
+            "winRate": 43.64
           }
         }
       ],
@@ -36200,8 +36200,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60011",
     "key": "masteryi",
     "name": "无极剑圣",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/masteryi/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/masteryi/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 45,
     "tier": 4,
     "championMetrics": {
@@ -36215,12 +36215,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -36234,12 +36234,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
           }
         ],
         "metric": {
@@ -36286,9 +36286,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 900,
           "metric": {
-            "pickRate": 78.7,
-            "games": 4989,
-            "winRate": 47.85
+            "pickRate": 86.47,
+            "games": 7181,
+            "winRate": 47.46
           }
         },
         {
@@ -36297,9 +36297,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1200,
           "metric": {
-            "pickRate": 8.05,
-            "games": 510,
-            "winRate": 49.02
+            "pickRate": 9.09,
+            "games": 755,
+            "winRate": 48.87
           }
         }
       ],
@@ -37020,8 +37020,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60033",
     "key": "rammus",
     "name": "披甲龙龟",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/rammus/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/rammus/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 46,
     "tier": 4,
     "championMetrics": {
@@ -37035,12 +37035,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -37054,12 +37054,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
           }
         ],
         "metric": {
@@ -37107,9 +37107,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1200,
           "metric": {
-            "pickRate": 48.11,
-            "games": 1555,
-            "winRate": 47.07
+            "pickRate": 55.59,
+            "games": 2212,
+            "winRate": 47.02
           }
         },
         {
@@ -37118,9 +37118,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1000,
           "metric": {
-            "pickRate": 24.2,
-            "games": 782,
-            "winRate": 46.93
+            "pickRate": 28.73,
+            "games": 1143,
+            "winRate": 45.84
           }
         }
       ],
@@ -37841,8 +37841,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60019",
     "key": "warwick",
     "name": "祖安怒兽",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/warwick/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/warwick/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 47,
     "tier": 4,
     "championMetrics": {
@@ -37856,12 +37856,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -37875,12 +37875,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHeal.png"
           }
         ],
         "metric": {
@@ -37926,9 +37926,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1200,
           "metric": {
-            "pickRate": 47.88,
-            "games": 2148,
-            "winRate": 48.56
+            "pickRate": 54.02,
+            "games": 3151,
+            "winRate": 49.51
           }
         },
         {
@@ -37937,9 +37937,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 900,
           "metric": {
-            "pickRate": 17.94,
-            "games": 805,
-            "winRate": 45.84
+            "pickRate": 20.42,
+            "games": 1191,
+            "winRate": 46.43
           }
         }
       ],
@@ -38660,8 +38660,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60117",
     "key": "lulu",
     "name": "仙灵女巫",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/lulu/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/lulu/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 48,
     "tier": 4,
     "championMetrics": {
@@ -38675,12 +38675,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHeal.png"
           }
         ],
         "metric": {
@@ -38694,12 +38694,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -38749,20 +38749,20 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1000,
           "metric": {
-            "pickRate": 40.92,
-            "games": 1833,
-            "winRate": 49.05
+            "pickRate": 63.26,
+            "games": 2980,
+            "winRate": 47.35
           }
         },
         {
           "itemIds": [
-            "773010"
+            "773006"
           ],
-          "totalPrice": 1200,
+          "totalPrice": 900,
           "metric": {
-            "pickRate": 20.89,
-            "games": 936,
-            "winRate": 44.55
+            "pickRate": 12.8,
+            "games": 603,
+            "winRate": 37.98
           }
         }
       ],
@@ -39483,8 +39483,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60023",
     "key": "tryndamere",
     "name": "蛮族之王",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/tryndamere/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/tryndamere/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 49,
     "tier": 4,
     "championMetrics": {
@@ -39498,12 +39498,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -39517,12 +39517,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
           }
         ],
         "metric": {
@@ -39568,9 +39568,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 900,
           "metric": {
-            "pickRate": 74.15,
-            "games": 3164,
-            "winRate": 46.84
+            "pickRate": 81.02,
+            "games": 4479,
+            "winRate": 47.27
           }
         },
         {
@@ -39579,9 +39579,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1200,
           "metric": {
-            "pickRate": 9.77,
-            "games": 417,
-            "winRate": 47.72
+            "pickRate": 11.56,
+            "games": 639,
+            "winRate": 46.79
           }
         }
       ],
@@ -40302,8 +40302,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60081",
     "key": "ezreal",
     "name": "探险家",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/ezreal/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/ezreal/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 50,
     "tier": 4,
     "championMetrics": {
@@ -40317,12 +40317,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
           }
         ],
         "metric": {
@@ -40336,12 +40336,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerBarrier",
             "name": "屏障",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerBarrier.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerBarrier.png"
           }
         ],
         "metric": {
@@ -40388,9 +40388,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1000,
           "metric": {
-            "pickRate": 49.83,
-            "games": 3433,
-            "winRate": 50.1
+            "pickRate": 51.96,
+            "games": 4749,
+            "winRate": 49.86
           }
         },
         {
@@ -40399,9 +40399,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 900,
           "metric": {
-            "pickRate": 28.57,
-            "games": 1968,
-            "winRate": 46.34
+            "pickRate": 30.07,
+            "games": 2748,
+            "winRate": 46.4
           }
         }
       ],
@@ -41123,8 +41123,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60025",
     "key": "morgana",
     "name": "堕落天使",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/morgana/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/morgana/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 51,
     "tier": 4,
     "championMetrics": {
@@ -41138,12 +41138,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -41157,12 +41157,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
           }
         ],
         "metric": {
@@ -41210,20 +41210,20 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1100,
           "metric": {
-            "pickRate": 60.38,
-            "games": 5184,
-            "winRate": 46.82
+            "pickRate": 78.28,
+            "games": 7836,
+            "winRate": 46.86
           }
         },
         {
           "itemIds": [
-            "773010"
+            "773158"
           ],
-          "totalPrice": 1200,
+          "totalPrice": 1000,
           "metric": {
-            "pickRate": 19.81,
-            "games": 1701,
-            "winRate": 45.56
+            "pickRate": 17.6,
+            "games": 1762,
+            "winRate": 46.71
           }
         }
       ],
@@ -41945,8 +41945,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60026",
     "key": "zilean",
     "name": "时光守护者",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/zilean/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/zilean/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 52,
     "tier": 5,
     "championMetrics": {
@@ -41960,12 +41960,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
           }
         ],
         "metric": {
@@ -41979,12 +41979,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -42032,9 +42032,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1100,
           "metric": {
-            "pickRate": 51.17,
-            "games": 2732,
-            "winRate": 45.13
+            "pickRate": 63.45,
+            "games": 4030,
+            "winRate": 45.33
           }
         },
         {
@@ -42043,9 +42043,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1000,
           "metric": {
-            "pickRate": 20.73,
-            "games": 1107,
-            "winRate": 45.89
+            "pickRate": 27.65,
+            "games": 1756,
+            "winRate": 46.36
           }
         }
       ],
@@ -42766,8 +42766,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60053",
     "key": "blitzcrank",
     "name": "蒸汽机器人",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/blitzcrank/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/blitzcrank/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 53,
     "tier": 5,
     "championMetrics": {
@@ -42781,12 +42781,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -42800,12 +42800,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerDot",
             "name": "引燃",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerDot.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerDot.png"
           }
         ],
         "metric": {
@@ -42852,9 +42852,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1200,
           "metric": {
-            "pickRate": 28.94,
-            "games": 1877,
-            "winRate": 49.01
+            "pickRate": 34.72,
+            "games": 2743,
+            "winRate": 49.18
           }
         },
         {
@@ -42863,9 +42863,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1100,
           "metric": {
-            "pickRate": 18.5,
-            "games": 1200,
-            "winRate": 43.5
+            "pickRate": 22.52,
+            "games": 1779,
+            "winRate": 43.45
           }
         }
       ],
@@ -43586,8 +43586,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60028",
     "key": "evelynn",
     "name": "痛苦之拥",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/evelynn/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/evelynn/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 54,
     "tier": 5,
     "championMetrics": {
@@ -43601,12 +43601,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -43620,12 +43620,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerDot",
             "name": "引燃",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerDot.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerDot.png"
           }
         ],
         "metric": {
@@ -43673,20 +43673,20 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1100,
           "metric": {
-            "pickRate": 77.89,
-            "games": 2494,
-            "winRate": 41.86
+            "pickRate": 85.38,
+            "games": 3517,
+            "winRate": 42.25
           }
         },
         {
           "itemIds": [
-            "773010"
+            "773117"
           ],
-          "totalPrice": 1200,
+          "totalPrice": 1000,
           "metric": {
-            "pickRate": 7.78,
-            "games": 249,
-            "winRate": 34.54
+            "pickRate": 4.73,
+            "games": 195,
+            "winRate": 40.51
           }
         }
       ],
@@ -44407,8 +44407,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60055",
     "key": "katarina",
     "name": "不祥之刃",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/katarina/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/katarina/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 55,
     "tier": 5,
     "championMetrics": {
@@ -44422,12 +44422,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -44441,12 +44441,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerDot",
             "name": "引燃",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerDot.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerDot.png"
           }
         ],
         "metric": {
@@ -44492,9 +44492,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1100,
           "metric": {
-            "pickRate": 80.39,
-            "games": 4736,
-            "winRate": 44.02
+            "pickRate": 83.96,
+            "games": 6606,
+            "winRate": 44.4
           }
         },
         {
@@ -44503,9 +44503,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1200,
           "metric": {
-            "pickRate": 6.3,
-            "games": 371,
-            "winRate": 47.71
+            "pickRate": 7.09,
+            "games": 558,
+            "winRate": 46.77
           }
         }
       ],
@@ -45226,8 +45226,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60016",
     "key": "soraka",
     "name": "众星之子",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/soraka/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/soraka/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 56,
     "tier": 5,
     "championMetrics": {
@@ -45241,12 +45241,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHeal.png"
           }
         ],
         "metric": {
@@ -45260,12 +45260,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerMana",
             "name": "清晰术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerMana.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerMana.png"
           }
         ],
         "metric": {
@@ -45312,20 +45312,20 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1000,
           "metric": {
-            "pickRate": 30.3,
-            "games": 2005,
-            "winRate": 45.09
+            "pickRate": 61.21,
+            "games": 3820,
+            "winRate": 45.03
           }
         },
         {
           "itemIds": [
-            "773010"
+            "773009"
           ],
-          "totalPrice": 1200,
+          "totalPrice": 1000,
           "metric": {
-            "pickRate": 24.62,
-            "games": 1629,
-            "winRate": 40.88
+            "pickRate": 12.05,
+            "games": 752,
+            "winRate": 42.02
           }
         }
       ],
@@ -46046,8 +46046,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60020",
     "key": "nunu",
     "name": "雪原双子",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/nunu/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/nunu/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 57,
     "tier": 5,
     "championMetrics": {
@@ -46061,12 +46061,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -46080,12 +46080,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
           }
         ],
         "metric": {
@@ -46132,9 +46132,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1100,
           "metric": {
-            "pickRate": 25.38,
-            "games": 1319,
-            "winRate": 40.03
+            "pickRate": 30.58,
+            "games": 1955,
+            "winRate": 40.72
           }
         },
         {
@@ -46143,9 +46143,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1200,
           "metric": {
-            "pickRate": 23.07,
-            "games": 1199,
-            "winRate": 44.29
+            "pickRate": 28.8,
+            "games": 1841,
+            "winRate": 44.38
           }
         }
       ],
@@ -46866,8 +46866,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60064",
     "key": "leesin",
     "name": "盲僧",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/leesin/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/leesin/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 58,
     "tier": 5,
     "championMetrics": {
@@ -46881,12 +46881,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -46900,12 +46900,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerDot",
             "name": "引燃",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerDot.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerDot.png"
           }
         ],
         "metric": {
@@ -46952,9 +46952,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1200,
           "metric": {
-            "pickRate": 60.08,
-            "games": 2823,
-            "winRate": 42.22
+            "pickRate": 63.53,
+            "games": 3978,
+            "winRate": 41.78
           }
         },
         {
@@ -46963,9 +46963,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1000,
           "metric": {
-            "pickRate": 18.09,
-            "games": 850,
-            "winRate": 38.35
+            "pickRate": 18.6,
+            "games": 1165,
+            "winRate": 39.48
           }
         }
       ],
@@ -47686,8 +47686,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60035",
     "key": "shaco",
     "name": "恶魔小丑",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/shaco/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/shaco/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 59,
     "tier": 5,
     "championMetrics": {
@@ -47701,12 +47701,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -47720,12 +47720,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerDot",
             "name": "引燃",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerDot.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerDot.png"
           }
         ],
         "metric": {
@@ -47773,9 +47773,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 900,
           "metric": {
-            "pickRate": 35.91,
-            "games": 1962,
-            "winRate": 39.14
+            "pickRate": 39.86,
+            "games": 2782,
+            "winRate": 39.47
           }
         },
         {
@@ -47784,9 +47784,9 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1100,
           "metric": {
-            "pickRate": 23.45,
-            "games": 1281,
-            "winRate": 43.01
+            "pickRate": 26.52,
+            "games": 1851,
+            "winRate": 42.46
           }
         }
       ],
@@ -48507,8 +48507,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60076",
     "key": "nidalee",
     "name": "狂野女猎手",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/nidalee/build?region=global&tier=all&patch=16.15",
-    "patch": "16.15",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/nidalee/build?region=global&tier=all&patch=16.16",
+    "patch": "16.16",
     "rank": 60,
     "tier": 5,
     "championMetrics": {
@@ -48522,12 +48522,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": {
@@ -48541,12 +48541,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
           }
         ],
         "metric": {
@@ -48594,20 +48594,20 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           ],
           "totalPrice": 1100,
           "metric": {
-            "pickRate": 69.09,
-            "games": 5103,
-            "winRate": 39.82
+            "pickRate": 84.64,
+            "games": 7518,
+            "winRate": 39.9
           }
         },
         {
           "itemIds": [
-            "773010"
+            "773158"
           ],
-          "totalPrice": 1200,
+          "totalPrice": 1000,
           "metric": {
-            "pickRate": 15.92,
-            "games": 1176,
-            "winRate": 37.59
+            "pickRate": 10.3,
+            "games": 915,
+            "winRate": 37.7
           }
         }
       ],

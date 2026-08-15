@@ -1004,7 +1004,7 @@ if (!/^\d+\.\d+\.\d+$/.test(livePatch)) throw new Error(`Unexpected Data Dragon 
 
 const classicSource = await readFile(classicDataPath, "utf8");
 const roster = readRoster(classicSource);
-if (roster.length !== 60) throw new Error(`Expected 60 Classic champions, received ${roster.length}`);
+if (roster.length < 60) throw new Error(`Expected at least 60 Classic champions, received ${roster.length}`);
 
 async function loadCommunityDragonSnapshot(patch) {
   const base = `https://raw.communitydragon.org/${patch}`;
@@ -1321,8 +1321,8 @@ console.log(
   + `${classicExclusive.size} Classic-exclusive augments (${livePatch}).`,
 );
 console.log(
-  `Coverage: stats ${champions.length}/60 complete (${fallbackFields.length} CharacterRecord fallbacks); `
-  + `abilities ${abilities.length}/300 `
+  `Coverage: stats ${champions.length}/${roster.length} complete (${fallbackFields.length} CharacterRecord fallbacks); `
+  + `abilities ${abilities.length}/${roster.length * 5} `
   + `(available ${abilityCoverage.available}, partial ${abilityCoverage.partial}, unavailable ${abilityCoverage.unavailable}); `
   + `KIWI_JADE augments ${classicAugments.length}/188 `
   + `(available ${augmentCoverage.available}, partial ${augmentCoverage.partial}, unavailable ${augmentCoverage.unavailable}).`,

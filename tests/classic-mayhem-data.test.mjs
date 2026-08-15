@@ -32,7 +32,7 @@ function assertMetric(metric, context) {
   assert.ok(Number.isFinite(metric.winRate) && metric.winRate >= 0 && metric.winRate <= 100, `${context}胜率无效`);
 }
 
-test("怀旧海斗使用同一批 60 位经典英雄，但技能与属性来自当前客户端快照", () => {
+test("现代技能快照覆盖完整经典目录，但怀旧海斗只展示 OP.GG 有统计的英雄", () => {
   assert.equal(CLASSIC_MAYHEM_MODE, "KIWI_JADE");
   assert.match(CLASSIC_MAYHEM_PATCH, /^\d+\.\d+$/);
   assert.match(LIVE_DATA_PATCH, /^\d+\.\d+\.\d+$/);
@@ -43,7 +43,7 @@ test("怀旧海斗使用同一批 60 位经典英雄，但技能与属性来自�
     communityMinor <= liveMinor,
     `CommunityDragon ${CLASSIC_MAYHEM_PATCH} cannot be newer than Data Dragon ${LIVE_DATA_PATCH}`,
   );
-  assert.equal(liveClassicChampions.length, 60);
+  assert.equal(liveClassicChampions.length, classicChampions.length);
   assert.deepEqual(
     new Set(liveClassicChampions.map((champion) => champion.classicId)),
     new Set(classicChampions.map((champion) => champion.classicId)),
@@ -233,16 +233,16 @@ test("KIWI 与 KIWI_JADE 模式池分离，强化说明不保留模板占位符"
   assert.doesNotMatch(erosion.description, /\?|0\.015\s*\+|20\s*\+\s*10/);
 });
 
-test("OP.GG 怀旧海斗快照覆盖 60 位英雄并保留页面原始统计", () => {
+test("OP.GG 怀旧海斗快照仅覆盖当前有排名统计的英雄", () => {
   assert.match(OP_GG_MAYHEM_PATCH, /^\d+\.\d+$/);
   assert.match(OP_GG_MAYHEM_SNAPSHOT_HASH, /^[a-f0-9]{64}$/);
   assert.equal(MAYHEM_STARTING_GOLD, 1400);
   assert.equal(MAYHEM_HAS_JUNGLE_ROLE, false);
-  assert.equal(opggMayhemChampionBuilds.length, 60);
-  assert.equal(opggMayhemRankingSummary.length, 60);
+  assert.ok(opggMayhemChampionBuilds.length >= 60);
+  assert.equal(opggMayhemRankingSummary.length, opggMayhemChampionBuilds.length);
   assert.deepEqual(
     new Set(opggMayhemChampionBuilds.map((build) => build.classicId)),
-    new Set(classicChampions.map((champion) => champion.classicId)),
+    new Set(opggMayhemRankingSummary.map((entry) => entry.classicId)),
   );
   assert.deepEqual(
     opggMayhemRankingSummary,
@@ -256,12 +256,12 @@ test("OP.GG 怀旧海斗快照覆盖 60 位英雄并保留页面原始统计", (
   );
   assert.deepEqual(
     [...opggMayhemChampionBuilds.map((build) => build.rank)].sort((a, b) => a - b),
-    Array.from({ length: 60 }, (_, index) => index + 1),
+    Array.from({ length: opggMayhemChampionBuilds.length }, (_, index) => index + 1),
   );
   assert.equal(
     opggMayhemChampionBuilds.reduce((total, build) => total + build.augments.length, 0),
-    2_700,
-    "60 位英雄都应保留 45 条 OP.GG 分品质强化推荐",
+    opggMayhemChampionBuilds.length * 45,
+    "每位有排名的英雄都应保留 45 条 OP.GG 分品质强化推荐",
   );
 
   for (const build of opggMayhemChampionBuilds) {
@@ -290,14 +290,10 @@ test("OP.GG 怀旧海斗快照覆盖 60 位英雄并保留页面原始统计", (
       assert.ok(catalogAugment);
       assert.equal(recommendation.name, catalogAugment.name, `${build.name}强化名称与目录 ID 不一致`);
       assert.equal(recommendation.apiName, catalogAugment.apiName, `${build.name}强化 API 名与目录 ID 不一致`);
-      if (OP_GG_MAYHEM_PATCH === CLASSIC_MAYHEM_PATCH) {
-        assert.equal(recommendation.rarity, catalogAugment.rarity, `${build.name}强化品质与目录 ID 不一致`);
-      } else {
-        assert.ok(
-          ["silver", "gold", "prismatic"].includes(recommendation.rarity),
-          `${build.name}保留的 OP.GG 推荐含无效历史品质`,
-        );
-      }
+      assert.ok(
+        ["silver", "gold", "prismatic"].includes(recommendation.rarity),
+        `${build.name}保留的 OP.GG 推荐含无效品质`,
+      );
       assertMetric(recommendation.metric, `${build.name} ${recommendation.name}`);
     }
 
@@ -401,7 +397,10 @@ test("怀旧海斗页面不再复用峡谷方案或启发式推荐，并纳入�
   assert.match(generatorSource, /\/skills/);
   assert.match(generatorSource, /startingGold = 1400/);
   assert.match(generatorSource, /Smite is not legal/);
-  assert.match(generatorSource, /rankings\.length !== 60/);
+  assert.match(generatorSource, /rankings\.length < preservedCount/);
+  assert.match(generatorSource, /localRoster\.filter\(\(entry\) => rankingById\.has\(entry\.riotId\)\)/);
+  assert.match(generatorSource, /海克斯大乱斗 经典模式版/);
+  assert.match(generatorSource, /!\[1, 4, 8\]\.includes\(Number\(entry\.rareity\)\)/);
   assert.match(generatorSource, /statisticsUnavailable/);
   assert.match(generatorSource, /preserving the verified/);
   assert.match(workflowSource, /app\/classic-mayhem-opgg\.generated\.ts/);

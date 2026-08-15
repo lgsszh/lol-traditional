@@ -5853,6 +5853,299 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "numericVersion": "3.15.5"
       }
     ]
+  },
+  {
+    "championId": "60084",
+    "championName": "阿卡丽",
+    "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/akali",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/v1/champion-icons/60084.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/characters/jade_akali/skins/skin301/images/jade_akali_splash_centered_301.project_jade.jpg",
+    "classicSplashName": "经典 阿卡丽",
+    "classicSplashId": "60084301",
+    "classicSplashIsDefault": false,
+    "artworks": [
+      {
+        "id": "60084301",
+        "name": "经典 阿卡丽",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/characters/jade_akali/skins/skin301/images/jade_akali_splash_centered_301.project_jade.jpg",
+        "kind": "classic",
+        "isDefault": false
+      },
+      {
+        "id": "60084000",
+        "name": "暗影之拳",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/characters/jade_akali/skins/base/images/jade_akali_splash_centered_0.project_jade.jpg",
+        "kind": "default",
+        "isDefault": true
+      }
+    ],
+    "availableSkinCount": 7,
+    "stats": {
+      "hp": 445,
+      "hpPerLevel": 85,
+      "resource": 200,
+      "resourcePerLevel": 0,
+      "attackDamage": 53,
+      "attackDamagePerLevel": 3.2,
+      "attackSpeed": 0.69444,
+      "attackSpeedPerLevel": 3.1,
+      "armor": 16.5,
+      "armorPerLevel": 3.5,
+      "magicResist": 30,
+      "magicResistPerLevel": 1.25,
+      "moveSpeed": 350,
+      "attackRange": 125
+    },
+    "abilities": [
+      {
+        "key": "P",
+        "name": "忍法！苍绯印",
+        "description": "获得基于法术强度的攻击附带伤害 获得基于攻击力的法术吸血",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/ux/jade/s3icons/samesized/akalitwindisciplines.project_jade.png",
+        "cooldown": null,
+        "cost": null,
+        "range": null,
+        "numericDetail": "技能文本：获得基于法术强度的攻击附带伤害 获得基于攻击力的法术吸血\n数值说明：OP.GG Classic 与 Riot 3.15.5 公开字段未提供独立固定数值；不使用其他版本或人工估值补写。",
+        "numericVersion": "3.15.5"
+      },
+      {
+        "key": "Q",
+        "name": "奥义！绯叶",
+        "description": "阿卡丽向目标投掷她的忍镰，造成魔法伤害，并在目标身上施加一个持续6秒的绯叶印。阿卡丽对被标记单位的近战攻击将会触发并消耗掉绯叶印，来造成额外伤害并回复能量。",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/ux/jade/s3icons/samesized/akalimota.project_jade.png",
+        "cooldown": "6 / 5.5 / 5 / 4.5 / 4 / 6",
+        "cost": "60",
+        "range": "550",
+        "numericDetail": "阿卡丽向目标投掷十字镰，造成35/55/75/95/115(+40%法术强度)点魔法伤害，并为目标施加一个持续6秒的绯叶印。\n\n当阿卡丽对被附加了绯叶印的单位进行近战攻击时，印记会触发并消耗，以造成45/70/95/120/145(+40%法术强度)点额外的魔法伤害，并回复20/25/30/35/40点能量值。",
+        "numericVersion": "3.15.5"
+      },
+      {
+        "key": "W",
+        "name": "我流奥义！霞阵",
+        "description": "阿卡丽扔下一枚烟幕弹。当处于这个区域内时，阿卡丽获得护甲和魔法抗性并进入隐形状态。攻击或使用技能会短暂地使她显形。烟幕弹之中的敌人们会被降低移动速度。",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/ux/jade/s3icons/samesized/akalitwilightshroud.project_jade.png",
+        "cooldown": "20",
+        "cost": "80 / 75 / 70 / 65 / 60 / 55",
+        "range": "700",
+        "numericDetail": "阿卡丽扔下一枚烟幕弹，烟幕将持续8秒。当阿卡丽处于烟幕弹的作用范围内的时候，她会进入隐形状态，并且护甲值和魔法抗性会提高10/20/30/40/50点。攻击或施法将使阿卡丽短暂地现身。\n\n被烟幕所笼罩的敌人，移动速度将会被减少14/18/22/26/30%。",
+        "numericVersion": "3.15.5"
+      },
+      {
+        "key": "E",
+        "name": "奥义！散华",
+        "description": "阿卡丽挥舞她的忍镰，造成基于她的攻击力和法术强度的伤害。",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/ux/jade/s3icons/samesized/akalicrescentslash.project_jade.png",
+        "cooldown": "7 / 6 / 5 / 4 / 3 / 7",
+        "cost": "60",
+        "range": "325",
+        "numericDetail": "阿卡丽舞动十字镰，对附近单位造成30/55/80/105/130(+60%总攻击力)(+30%法术强度)点物理伤害。\n\n可以触发目标身上的【Q奥义！绯叶】。",
+        "numericVersion": "3.15.5"
+      },
+      {
+        "key": "R",
+        "name": "秘奥义！幻樱杀缭乱",
+        "description": "阿卡丽穿过影子来对目标发起快速突击，对目标造成伤害，同时消耗掉一层幻樱之华。阿卡丽会周期性地获得幻樱之华，击杀和助攻也会获得幻樱之华，幻樱之华最多储备3层。",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/ux/jade/s3icons/samesized/akalishadowdance.project_jade.png",
+        "cooldown": "2 / 1.5 / 1",
+        "cost": "0",
+        "range": "675",
+        "numericDetail": "阿卡丽穿过阴影对目标发动快速攻击，造成100/175/250(+50%法术强度)魔法伤害。\n\n阿卡丽每30/22.5/15秒获得一个幻樱之华，最多储存3个。",
+        "numericVersion": "3.15.5"
+      }
+    ]
+  },
+  {
+    "championId": "60085",
+    "championName": "凯南",
+    "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/kennen",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/v1/champion-icons/60085.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/characters/jade_kennen/skins/base/images/jade_kennen_splash_centered_0.project_jade_16_16.jpg",
+    "classicSplashName": "狂暴之心",
+    "classicSplashId": "60085000",
+    "classicSplashIsDefault": true,
+    "artworks": [
+      {
+        "id": "60085000",
+        "name": "狂暴之心",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/characters/jade_kennen/skins/base/images/jade_kennen_splash_centered_0.project_jade_16_16.jpg",
+        "kind": "default",
+        "isDefault": true
+      }
+    ],
+    "availableSkinCount": 5,
+    "stats": {
+      "hp": 403,
+      "hpPerLevel": 79,
+      "resource": 200,
+      "resourcePerLevel": 0,
+      "attackDamage": 47,
+      "attackDamagePerLevel": 3.3,
+      "attackSpeed": 0.69038,
+      "attackSpeedPerLevel": 3.4,
+      "armor": 14,
+      "armorPerLevel": 3.75,
+      "magicResist": 30,
+      "magicResistPerLevel": 0,
+      "moveSpeed": 335,
+      "attackRange": 550
+    },
+    "abilities": [
+      {
+        "key": "P",
+        "name": "忍法！雷缚印",
+        "description": "凯南在用技能命中敌人时会将其标记。一旦对目标施加了3个标记，就会将其晕眩。",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/ux/jade/s3icons/samesized/kennen_markofstorm.project_jade.png",
+        "cooldown": null,
+        "cost": null,
+        "range": null,
+        "numericDetail": "技能文本：凯南在用技能命中敌人时会将其标记。一旦对目标施加了3个标记，就会将其晕眩。",
+        "numericVersion": "3.15.5"
+      },
+      {
+        "key": "Q",
+        "name": "奥义！千鸟",
+        "description": "凯南向目标区域投掷快速飞行的飞镖，给击中的任意敌人造成伤害和附加【忍法！雷缚印】。",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/ux/jade/s3icons/samesized/kennen_thunderingshuriken.project_jade.png",
+        "cooldown": "8 / 7 / 6 / 5 / 4 / 3",
+        "cost": "65 / 60 / 55 / 50 / 45 / 40",
+        "range": "1000",
+        "numericDetail": "凯南向目标区域投掷手里剑，对命中的第一个敌人造成75/115/155/195/235(+75%法术强度)魔法伤害。",
+        "numericVersion": "3.15.5"
+      },
+      {
+        "key": "W",
+        "name": "奥义！电刃",
+        "description": "凯南连续攻击附加额外伤害并对目标造成一层【忍法！雷缚印】，主动释放会对所有带有【忍法！雷缚印】的敌人造成闪电伤害，并额外附加一层【忍法！雷缚印】。",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/ux/jade/s3icons/samesized/kennen_electricalsurge.project_jade.png",
+        "cooldown": "14 / 12 / 10 / 8 / 6",
+        "cost": "40",
+        "range": "725",
+        "numericDetail": "被动：凯南每攻击4次，第5次攻击就会附加 40/50/60/70/80% 攻击力的魔法伤害，并为目标施加一层【忍法！雷缚印】。\n\n主动：释放【W奥义！电刃】，对附近所有被施加了【忍法！雷缚印】的敌人造成 65/95/125/155/185(+55.0%法术强度)魔法伤害，并对其额外施加一层【忍法！雷缚印】。",
+        "numericVersion": "3.15.5"
+      },
+      {
+        "key": "E",
+        "name": "奥义！雷铠",
+        "description": "凯南变身为一个闪电形态，高速移动并可以穿越单位。对碰到的所有敌人造成伤害并施加一层【忍法！雷缚印】。",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/ux/jade/s3icons/samesized/kennen_lightningrush.project_jade.png",
+        "cooldown": "10 / 9 / 8 / 7 / 6",
+        "cost": "100 / 95 / 90 / 85 / 80 / 75",
+        "range": "170",
+        "numericDetail": "凯南快速移动，移动速度提升335，并可以穿越单位，对沿途的敌人造成 85/125/165/205/245(+60%法术强度)魔法伤害，持续2秒。此外,凯南将获得10/20/30/40/50护甲和魔法抗性加成，持续4秒。\n\n如果凯南穿过一个敌人，则会回复40点能量值，但该效果只能获得一次。【E奥义！雷铠】对小兵的伤害减半。",
+        "numericVersion": "3.15.5"
+      },
+      {
+        "key": "R",
+        "name": "秘奥义！万雷天牢引",
+        "description": "凯南召唤出一团风暴，会对附近的随机敌方英雄造成魔法伤害。",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/ux/jade/s3icons/samesized/kennen_slicingmaelstrom.project_jade.png",
+        "cooldown": "120",
+        "cost": "0",
+        "range": "550",
+        "numericDetail": "召唤一阵魔法风暴，每0.5/0.4/0.33秒会随机对凯南附近的任意一名敌方英雄造成80/145/210(+40%法术强度)魔法伤害。该风暴最多攻击6/10/15次，且不能攻击同一目标超过3次。",
+        "numericVersion": "3.15.5"
+      }
+    ]
+  },
+  {
+    "championId": "60098",
+    "championName": "慎",
+    "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/shen",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/v1/champion-icons/60098.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/characters/jade_shen/skins/skin301/images/jade_shen_splash_centered_301.project_jade_16_16.jpg",
+    "classicSplashName": "经典 慎",
+    "classicSplashId": "60098301",
+    "classicSplashIsDefault": false,
+    "artworks": [
+      {
+        "id": "60098301",
+        "name": "经典 慎",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/characters/jade_shen/skins/skin301/images/jade_shen_splash_centered_301.project_jade_16_16.jpg",
+        "kind": "classic",
+        "isDefault": false
+      },
+      {
+        "id": "60098000",
+        "name": "暮光之眼",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/characters/jade_shen/skins/base/images/jade_shen_splash_centered_0.project_jade.jpg",
+        "kind": "default",
+        "isDefault": true
+      }
+    ],
+    "availableSkinCount": 7,
+    "stats": {
+      "hp": 428,
+      "hpPerLevel": 85,
+      "resource": 200,
+      "resourcePerLevel": 0,
+      "attackDamage": 54.5,
+      "attackDamagePerLevel": 3.375,
+      "attackSpeed": 0.65104,
+      "attackSpeedPerLevel": 3.4,
+      "armor": 15,
+      "armorPerLevel": 4,
+      "magicResist": 30,
+      "magicResistPerLevel": 0,
+      "moveSpeed": 335,
+      "attackRange": 125
+    },
+    "abilities": [
+      {
+        "key": "P",
+        "name": "忍法！诛邪斩",
+        "description": "每9秒，慎的下一次攻击会造成额外伤害。慎的每次攻击都会缩短【忍法！诛邪斩】的冷却时间。",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/ux/jade/s3icons/samesized/shen_kistrike.project_jade.png",
+        "cooldown": null,
+        "cost": null,
+        "range": null,
+        "numericDetail": "技能文本：每9秒，慎的下一次攻击会造成额外伤害。慎的每次攻击都会缩短【忍法！诛邪斩】的冷却时间。",
+        "numericVersion": "3.15.5"
+      },
+      {
+        "key": "Q",
+        "name": "奥义！却邪",
+        "description": "伤害目标单位并分流其生命力，从而治疗那些攻击该目标的友军。",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/ux/jade/s3icons/samesized/shen_vorpalblade.project_jade.png",
+        "cooldown": "6 / 5.5 / 5 / 4.5 / 4 / 3.5",
+        "cost": "60",
+        "range": "475",
+        "numericDetail": "对目标单位造成60/100/140/180/220(+60%法术强度)点魔法伤害，并对目标施加一个持续5秒的却邪印。\n\n友军对该目标施放单体技能或进行攻击，会使该友军在3秒里持续回复6/10/14/18/22 (6/10/14/18/22+1.5%health[慎最大生命值的1.5%])点生命值。\n\n用【奥义！却邪】将敌人杀死，会使慎直接回复0点点生命值。",
+        "numericVersion": "3.15.5"
+      },
+      {
+        "key": "W",
+        "name": "奥义！空我",
+        "description": "慎为自己提供护盾，从而吸收即将到来的伤害，持续若干秒。",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/ux/jade/s3icons/samesized/shen_feint.project_jade.png",
+        "cooldown": "9 / 8 / 7 / 6 / 5 / 10",
+        "cost": "50",
+        "range": "20",
+        "numericDetail": "慎进入防御姿态，用护盾来格挡接下来的60/100/140/180/220(+60%法术强度)点伤害。最多持续3秒。\n\n当【奥义！空我】持续时，慎的每次攻击会额外减少【忍法！诛邪斩】1秒冷却时间。",
+        "numericVersion": "3.15.5"
+      },
+      {
+        "key": "E",
+        "name": "奥义！影缚",
+        "description": "慎快速冲刺至一个目标区域，从而嘲讽他遇到的敌方英雄们并造成少量伤害。",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/ux/jade/s3icons/samesized/shen_shadowdash.project_jade.png",
+        "cooldown": "16 / 14 / 12 / 10 / 8 / 6",
+        "cost": "120",
+        "range": "575",
+        "numericDetail": "慎向目标区域猛冲，对敌方英雄造成50/85/120/155/190(+50%法术强度)魔法伤害，并对沿途的敌人们进行嘲讽，持续1.5秒。\n\n被嘲讽的敌人会被强制对慎发起攻击，并且他们的普通攻击的伤害会减少50%。\n\n每击中一个敌方英雄，慎就会恢复40点能量值。",
+        "numericVersion": "3.15.5"
+      },
+      {
+        "key": "R",
+        "name": "秘奥义！慈悲度魂落",
+        "description": "慎为目标友方英雄提供一层吸收伤害的护盾，然后很快传送到目标身旁。",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/ux/jade/s3icons/samesized/shen_standunited.project_jade.png",
+        "cooldown": "200 / 180 / 160",
+        "cost": "0",
+        "range": "25000",
+        "numericDetail": "施放一个护盾到目标友方英雄身上，在5秒的持续时间里为他吸收250/550/850(+135%法术强度)的伤害。在吟唱3秒后,慎将传送至友军目标处。",
+        "numericVersion": "3.15.5"
+      }
+    ]
   }
 ];
 

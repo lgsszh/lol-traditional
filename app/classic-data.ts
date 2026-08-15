@@ -4,7 +4,7 @@ import {
   classicOpggSpells,
 } from "./classic-catalog-opgg.generated.ts";
 
-export const CLASSIC_PATCH = "16.15";
+export const CLASSIC_PATCH = "16.16";
 export const CLASSIC_ASSET_BASE = `https://opgg-static.akamaized.net/meta/images/lol/${CLASSIC_PATCH}/classic`;
 
 export type ChampionArchetype = "mage" | "fighter" | "jungler" | "marksman" | "tank" | "support";
@@ -83,6 +83,9 @@ export const championAliases: Record<string, string[]> = {
   Blitzcrank: ["机器人"],
   Soraka: ["奶妈", "星妈"],
   DrMundo: ["蒙多"],
+  Akali: [],
+  Kennen: [],
+  Shen: [],
 };
 
 export type ClassicRune = {
@@ -206,6 +209,9 @@ export const classicChampions: ClassicChampion[] = [
   champion("60053", "Blitzcrank", "布里茨", "蒸汽机器人", "辅助", "坦克", "support", "#c1a754", ["Q", "E", "W"]),
   champion("60016", "Soraka", "索拉卡", "众星之子", "辅助", "辅助", "support", "#9b75cb", ["W", "Q", "E"]),
   champion("60036", "DrMundo", "蒙多医生", "祖安狂人", "上路", "坦克", "tank", "#8aaf75", ["Q", "E", "W"]),
+  champion("60084", "Akali", "阿卡丽", "暗影之拳", "中路", "刺客", "mage", "#b65a73", ["Q", "E", "W"]),
+  champion("60085", "Kennen", "凯南", "狂暴之心", "上路", "法师", "mage", "#8c72c7", ["Q", "W", "E"]),
+  champion("60098", "Shen", "慎", "暮光之眼", "上路", "坦克", "tank", "#668ba3", ["Q", "E", "W"]),
 ];
 
 export const championIcon = (champion: ClassicChampion) =>

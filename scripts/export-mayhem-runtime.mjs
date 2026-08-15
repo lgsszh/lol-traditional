@@ -40,39 +40,47 @@ const buildByClassicId = new Map(
   opggMayhemChampionBuilds.map((build) => [build.classicId, build]),
 );
 
-const outputs = liveClassicChampions.map((champion) => {
-  const build = buildByClassicId.get(champion.classicId);
-  if (!build) throw new Error(`${champion.name}: missing OP.GG Mayhem runtime build`);
-  const augmentRecommendations = build.augments.map((recommendation) => {
-    const augment = augmentById.get(recommendation.augmentId);
-    if (!augment) {
-      throw new Error(
-        `${champion.name}: OP.GG augment ${recommendation.augmentId} is absent from the mode catalog`,
-      );
-    }
-    return {
-      augment: {
-        ...augment,
-        // Recommendation groups belong to the preserved OP.GG snapshot. Keep
-        // its historical tier when the live catalog changes an augment tier.
-        rarity: recommendation.rarity,
-      },
-      metric: recommendation.metric,
+const outputs = liveClassicChampions
+  .filter((champion) => buildByClassicId.has(champion.classicId))
+  .map((champion) => {
+    const build = buildByClassicId.get(champion.classicId);
+    if (!build) throw new Error(`${champion.name}: missing OP.GG Mayhem runtime build`);
+    const augmentRecommendations = build.augments.map((recommendation) => {
+      const augment = augmentById.get(recommendation.augmentId);
+      if (!augment) {
+        throw new Error(
+          `${champion.name}: OP.GG augment ${recommendation.augmentId} is absent from the mode catalog`,
+        );
+      }
+      return {
+        augment: {
+          ...augment,
+          // Recommendation groups belong to the preserved OP.GG snapshot. Keep
+          // its historical tier when the live catalog changes an augment tier.
+          rarity: recommendation.rarity,
+        },
+        metric: recommendation.metric,
+      };
+    });
+    const payload = {
+      meta,
+      champion,
+      build,
+      items: opggMayhemItems,
+      augmentRecommendations,
     };
+    return writeOrCheck(
+      new URL(`${champion.classicId}.json`, outputDirectory),
+      `${JSON.stringify(payload)}\n`,
+      `${champion.name} Mayhem runtime payload`,
+    );
   });
-  const payload = {
-    meta,
-    champion,
-    build,
-    items: opggMayhemItems,
-    augmentRecommendations,
-  };
-  return writeOrCheck(
-    new URL(`${champion.classicId}.json`, outputDirectory),
-    `${JSON.stringify(payload)}\n`,
-    `${champion.name} Mayhem runtime payload`,
+
+if (outputs.length !== opggMayhemChampionBuilds.length) {
+  throw new Error(
+    `Mayhem runtime coverage mismatch: ${outputs.length}/${opggMayhemChampionBuilds.length}`,
   );
-});
+}
 
 const catalog = {
   meta,
@@ -97,6 +105,6 @@ outputs.push(writeOrCheck(
 
 await Promise.all(outputs);
 console.log(
-  `Mayhem runtime export: ${liveClassicChampions.length} champion payloads + `
+  `Mayhem runtime export: ${opggMayhemChampionBuilds.length} champion payloads + `
   + `${classicMayhemAugments.length}-augment catalog (${OP_GG_MAYHEM_SNAPSHOT_HASH.slice(0, 12)}).`,
 );

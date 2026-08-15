@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { readFile, readdir, stat } from "node:fs/promises";
 import test from "node:test";
+import { opggMayhemChampionBuilds } from "../app/classic-mayhem-opgg.generated.ts";
 
 const runtimeDirectory = new URL("../public/classic-data/mayhem/", import.meta.url);
 
@@ -10,7 +11,7 @@ async function readJson(name) {
 
 test("怀旧海斗运行时数据按英雄拆分并保持 OP.GG 完整结构", async () => {
   const files = (await readdir(runtimeDirectory)).filter((name) => /^\d+\.json$/.test(name));
-  assert.equal(files.length, 60);
+  assert.equal(files.length, opggMayhemChampionBuilds.length);
 
   let recommendationCount = 0;
   for (const name of files) {
@@ -78,7 +79,7 @@ test("怀旧海斗运行时数据按英雄拆分并保持 OP.GG 完整结构", a
     }
     recommendationCount += payload.augmentRecommendations.length;
   }
-  assert.equal(recommendationCount, 2700);
+  assert.equal(recommendationCount, opggMayhemChampionBuilds.length * 45);
 });
 
 test("完整强化池只在进入图鉴后按需加载", async () => {

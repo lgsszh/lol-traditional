@@ -5,6 +5,7 @@ export const classicAssetManifest = {
   "https://c-lol-web.op.gg/app-router/assets/images/classic-builds/masteries/mastery_util_bg.jpg": "/classic-cache/e11d1268e242d2a0658ee652.jpg",
   "https://c-lol-web.op.gg/app-router/assets/images/classic-builds/runes/rune_panel.png": "/classic-cache/230455ee8f8cced7032ad5fc.png",
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/champion/Ahri.png": "/classic-cache/99803fafd1a763d6b3429063.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/champion/Akali.png": "/classic-cache/4dbd9222fe277db9f1bc2257.png",
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/champion/Alistar.png": "/classic-cache/a60ccf087bf65fcec01432c4.png",
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/champion/Amumu.png": "/classic-cache/983b362cfae8c7fc3fb49d91.png",
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/champion/Anivia.png": "/classic-cache/c1d4ea8b386acc34fe78b1f3.png",
@@ -29,6 +30,7 @@ export const classicAssetManifest = {
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/champion/Kassadin.png": "/classic-cache/826fbc025bdbdfa987ed40d3.png",
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/champion/Katarina.png": "/classic-cache/a62a6aa883aa503c3ad66a45.png",
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/champion/Kayle.png": "/classic-cache/07f9ed6fa23dc2221cc67f41.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/champion/Kennen.png": "/classic-cache/7002a2293954a60a7bb5296e.png",
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/champion/KogMaw.png": "/classic-cache/b6eb63a0b50ca28189450355.png",
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/champion/LeeSin.png": "/classic-cache/e3a4ef88b76b4951b95a853f.png",
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/champion/Leona.png": "/classic-cache/146299f04f9059df96006406.png",
@@ -48,6 +50,7 @@ export const classicAssetManifest = {
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/champion/Rammus.png": "/classic-cache/acc3a2e0d7bfb322b0fccffe.png",
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/champion/Ryze.png": "/classic-cache/d18d6b7b4615874092590343.png",
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/champion/Shaco.png": "/classic-cache/90654e361444dcf0c1eb4605.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/champion/Shen.png": "/classic-cache/6b16ecb2ee9774341b31592c.png",
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/champion/Singed.png": "/classic-cache/5a5ab0934b5ab556222bb161.png",
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/champion/Sion.png": "/classic-cache/727be17ad28b8bcf11e0592f.png",
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/champion/Sivir.png": "/classic-cache/9664b70892fd5b7aaeda8afd.png",
@@ -65,6 +68,7 @@ export const classicAssetManifest = {
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/champion/Warwick.png": "/classic-cache/e9f47666af2f690465a919c7.png",
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/champion/Zilean.png": "/classic-cache/d227d681d38bc078e4895255.png",
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/passive/Ahri_SoulEater2.png": "/classic-cache/3609cd70e4c64130cb89c160.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/passive/Akali_P.png": "/classic-cache/44f4ac34fde29b8700fbacb5.png",
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/passive/Alistar_E.png": "/classic-cache/aa3f9850de8fda112e55565c.png",
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/passive/Amumu_Passive.png": "/classic-cache/11874e7e2ca7efd2386d8d62.png",
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/passive/Anivia_P.png": "/classic-cache/a1d58efdb7084dbd584f4616.png",
@@ -93,6 +97,7 @@ export const classicAssetManifest = {
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/passive/Kassadin_Passive.png": "/classic-cache/c7e69865d64a9eb657ceef1d.png",
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/passive/Katarina_Passive.png": "/classic-cache/7e98a6b9c2db6c145549a5bb.png",
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/passive/Kayle_P.png": "/classic-cache/d5b200fdf73c8829a3592025.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/passive/Kennen_Passive.png": "/classic-cache/be1fead7056a2e40d3d29360.png",
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/passive/KogMaw_IcathianSurprise.png": "/classic-cache/c663286c57bbd3c30ac632b8.png",
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/passive/LeeSinPassive.png": "/classic-cache/82a58189867c247fd7b3e190.png",
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/passive/LeonaSunlight.png": "/classic-cache/9c2b5b0f96cb9cbd60436504.png",
@@ -109,6 +114,7 @@ export const classicAssetManifest = {
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/passive/Olaf_Passive.png": "/classic-cache/2b3fe9d69404624520f770bc.png",
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/passive/Pantheon_Passive.png": "/classic-cache/6f03a832c779521db6ebaf57.png",
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/passive/Ryze_P.png": "/classic-cache/85fa23608620b4f3535c0538.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/passive/Shen_Passive.png": "/classic-cache/e208a69011073be4c9544c0d.png",
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/passive/Singed_Passive.png": "/classic-cache/9f9ad8e423431efd3cb8527b.png",
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/passive/Sion_Passive1.png": "/classic-cache/299919f782c4580d9c7b0bea.png",
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/passive/Sivir_Passive.png": "/classic-cache/152209fef17c4fdbe92bdda1.png",
@@ -128,6 +134,10 @@ export const classicAssetManifest = {
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/AhriQ.png": "/classic-cache/3ab08e185586a7494d54b0cb.png",
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/AhriR.png": "/classic-cache/a61b602a9731514d6850c713.png",
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/AhriW.png": "/classic-cache/bc3d54d4435f5d4e79a0ad84.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/AkaliE.png": "/classic-cache/2d431c84101a0129d600ba31.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/AkaliQ.png": "/classic-cache/c32ba66f8e59e3747cd0469e.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/AkaliR.png": "/classic-cache/5bfba4756d8b36edc657864b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/AkaliW.png": "/classic-cache/7c6fc416400bd4132a975585.png",
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/AlistarE.png": "/classic-cache/071a94acb0ce0fbc4ccfd8da.png",
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/AlphaStrike.png": "/classic-cache/70662308580b3092cd2f909a.png",
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/AnnieE.png": "/classic-cache/a9e8160aee2e341b8fde28cb.png",
@@ -222,6 +232,10 @@ export const classicAssetManifest = {
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/KayleQ.png": "/classic-cache/bf51289564e5555c87c6fab2.png",
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/KayleR.png": "/classic-cache/48a6663562d7dc46a9ed737b.png",
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/KayleW.png": "/classic-cache/12e27c1a94a17d482b925852.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/KennenBringTheLight.png": "/classic-cache/72ae11f6b544fa297adb4f1f.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/KennenLightningRush.png": "/classic-cache/27e1442d757d1efb5a350200.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/KennenShurikenHurlMissile1.png": "/classic-cache/113afac03384a4b913e8617b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/KennenShurikenStorm.png": "/classic-cache/39c28727a3108406b07822ea.png",
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/KogMawBioArcaneBarrage.png": "/classic-cache/2b4a05b01522e15b047d8a45.png",
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/KogMawLivingArtillery.png": "/classic-cache/30cda2aa3197920394ff4718.png",
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/KogMawQ.png": "/classic-cache/91f1cf1644956e261ad6efa9.png",
@@ -299,6 +313,10 @@ export const classicAssetManifest = {
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/RyzeR.png": "/classic-cache/d6def993236fa8e2b95e8d5f.png",
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/RyzeW.png": "/classic-cache/d1abdb665ca702212602d20e.png",
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/SeismicShard.png": "/classic-cache/47b35d3d6437c04fe6b23438.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/ShenE.png": "/classic-cache/ec5eca783862de72bdc740be.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/ShenQ.png": "/classic-cache/c8de186803b8f4bd5b88cc77.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/ShenR.png": "/classic-cache/76194f0293c557b79c77a4c5.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/ShenW.png": "/classic-cache/67e3e1062ac46758c34b4255.png",
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/SionE.png": "/classic-cache/da179dcd4d08ed4f129b44fe.png",
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/SionQ.png": "/classic-cache/1a3c81d012f1afd06c620707.png",
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/SionR.png": "/classic-cache/f8698a9f521b0de817ecc04f.png",
@@ -364,15 +382,6 @@ export const classicAssetManifest = {
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/WujuStyle.png": "/classic-cache/f5027b4f142d6c58b98ed94a.png",
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/ZileanQ.png": "/classic-cache/73d57fc4fff66bba3c14a99d.png",
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/ZileanW.png": "/classic-cache/a28b16279623546ccf8c2e4a.png",
-  "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/item/773040.png": "/classic-cache/24568033b025a7420a19e05e.png",
-  "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/item/773042.png": "/classic-cache/da8d2efb52c7e25ca323151d.png",
-  "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerBarrier.png": "/classic-cache/bd52366afd9cd9eab203f824.png",
-  "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerDot.png": "/classic-cache/dce973207426c9b6e0d31ce7.png",
-  "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png": "/classic-cache/715afe5353ef02b5d8a0ac4d.png",
-  "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png": "/classic-cache/97585994d6117a8994beda12.png",
-  "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHeal.png": "/classic-cache/2f023a1504e6cee7aeafb200.png",
-  "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerMana.png": "/classic-cache/52f17ec87341a5bf9387d800.png",
-  "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png": "/classic-cache/c4f6e08c7f9caae4124e3059.png",
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_ahri/skins/base/images/jade_ahri_splash_centered_0.project_jade.jpg": "/classic-cache/a756f506bf795010c4a33d25.jpg",
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_ahri/skins/skin301/images/jade_ahri_splash_centered_301.project_jade.jpg": "/classic-cache/070985d928d15935d7c05eb1.jpg",
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_alistar/skins/base/images/jade_alistar_splash_centered_0.project_jade.jpg": "/classic-cache/9293c6fdab1996325607faba.jpg",
@@ -1122,6 +1131,38 @@ export const classicAssetManifest = {
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/v1/champion-icons/60099.png": "/classic-cache/cc43bfa56ece33482ed5d7cc.png",
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/v1/champion-icons/60103.png": "/classic-cache/486d86ab36551e7a5d595ded.png",
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/v1/champion-icons/60117.png": "/classic-cache/169233fe781758771d5370d8.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/item/773040.png": "/classic-cache/02df178ba5dd9b4d50392629.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/item/773042.png": "/classic-cache/4cd93e67bf0b2f9112801daf.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerBarrier.png": "/classic-cache/77e299c4c04875dc833e0ee4.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerDot.png": "/classic-cache/04dd79a5ac7a0f2345ec4680.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png": "/classic-cache/381b3e57cac6f35eecdc417e.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png": "/classic-cache/a7a51f5b11247da02a7b68e7.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHeal.png": "/classic-cache/fe1d3e0ab2119fa730a9dcb5.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerMana.png": "/classic-cache/a83a17b0932eab52d22fac51.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png": "/classic-cache/4b4c5d41cf32eb5f3609bec7.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/characters/jade_akali/skins/base/images/jade_akali_splash_centered_0.project_jade.jpg": "/classic-cache/09ca2089cb205caca2e1c01c.jpg",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/characters/jade_akali/skins/skin301/images/jade_akali_splash_centered_301.project_jade.jpg": "/classic-cache/ca21781309abd20da709f38f.jpg",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/characters/jade_kennen/skins/base/images/jade_kennen_splash_centered_0.project_jade_16_16.jpg": "/classic-cache/415ad7836073facc2b3c2a12.jpg",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/characters/jade_shen/skins/base/images/jade_shen_splash_centered_0.project_jade.jpg": "/classic-cache/bc2c5b974be9d266f4abc2f5.jpg",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/characters/jade_shen/skins/skin301/images/jade_shen_splash_centered_301.project_jade_16_16.jpg": "/classic-cache/592c10aa860e5c8a2b90ab58.jpg",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/ux/jade/s3icons/samesized/akalicrescentslash.project_jade.png": "/classic-cache/a10e7d1477090046397163fe.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/ux/jade/s3icons/samesized/akalimota.project_jade.png": "/classic-cache/0d4e987394ee24f9e4210e99.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/ux/jade/s3icons/samesized/akalishadowdance.project_jade.png": "/classic-cache/b61f02b0afd16b68c28382eb.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/ux/jade/s3icons/samesized/akalitwilightshroud.project_jade.png": "/classic-cache/c610549ae10ff7ea266912ac.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/ux/jade/s3icons/samesized/akalitwindisciplines.project_jade.png": "/classic-cache/385a72d93ff06dadea81086c.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/ux/jade/s3icons/samesized/kennen_electricalsurge.project_jade.png": "/classic-cache/3d79b460d75d2e72d7332d57.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/ux/jade/s3icons/samesized/kennen_lightningrush.project_jade.png": "/classic-cache/58a3951c3116322815a7b7e0.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/ux/jade/s3icons/samesized/kennen_markofstorm.project_jade.png": "/classic-cache/16834bdf1e8a1301fd5379e5.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/ux/jade/s3icons/samesized/kennen_slicingmaelstrom.project_jade.png": "/classic-cache/176735c64a47952da057076f.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/ux/jade/s3icons/samesized/kennen_thunderingshuriken.project_jade.png": "/classic-cache/a1f112e021b26649e65bc9fe.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/ux/jade/s3icons/samesized/shen_feint.project_jade.png": "/classic-cache/e0a9bbd7b05c5cc089d1851e.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/ux/jade/s3icons/samesized/shen_kistrike.project_jade.png": "/classic-cache/03f3d9590e5a96c8ab8076a7.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/ux/jade/s3icons/samesized/shen_shadowdash.project_jade.png": "/classic-cache/350aee9b48498bdc7287686a.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/ux/jade/s3icons/samesized/shen_standunited.project_jade.png": "/classic-cache/7b6f7c5874664a03acb05c91.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/ux/jade/s3icons/samesized/shen_vorpalblade.project_jade.png": "/classic-cache/115667b80a9274afd0ef63e8.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/v1/champion-icons/60084.png": "/classic-cache/69b246b0187db8c07d8521d2.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/v1/champion-icons/60085.png": "/classic-cache/91e0975e2ccf59d84b361a84.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/v1/champion-icons/60098.png": "/classic-cache/ca2ce41e4cea5ed56277eb8a.png",
   "https://raw.communitydragon.org/16.16/game/assets/maps/particles/kiwi/magicmissile_small.png": "/classic-cache/7ad89031d7c49c8f02783d60.png",
   "https://raw.communitydragon.org/16.16/game/assets/ux/cherry/augments/icons/adapt_small.png": "/classic-cache/bcbc9d9363de6044576b6d4d.png",
   "https://raw.communitydragon.org/16.16/game/assets/ux/cherry/augments/icons/allforyou_small.png": "/classic-cache/dd40f77fdd07006c5d8bfaec.png",
@@ -1329,6 +1370,14 @@ export const classicAssetAudit = {
       "九尾妖狐现代头像"
     ]
   },
+  "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/champion/Akali.png": {
+    "path": "/classic-cache/4dbd9222fe277db9f1bc2257.png",
+    "bytes": 27191,
+    "sha256": "a62acc32c454b5cc39cebd0769f940b34f3d39ddaf157b95acb176027f81e17a",
+    "labels": [
+      "离群之刺现代头像"
+    ]
+  },
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/champion/Alistar.png": {
     "path": "/classic-cache/a60ccf087bf65fcec01432c4.png",
     "bytes": 28116,
@@ -1521,6 +1570,14 @@ export const classicAssetAudit = {
       "正义天使现代头像"
     ]
   },
+  "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/champion/Kennen.png": {
+    "path": "/classic-cache/7002a2293954a60a7bb5296e.png",
+    "bytes": 26105,
+    "sha256": "71239ebd9236d5d0fdbccfb8741727e6f13dd007a4d6905e5aa82f6b36aceebd",
+    "labels": [
+      "狂暴之心现代头像"
+    ]
+  },
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/champion/KogMaw.png": {
     "path": "/classic-cache/b6eb63a0b50ca28189450355.png",
     "bytes": 29237,
@@ -1673,6 +1730,14 @@ export const classicAssetAudit = {
       "恶魔小丑现代头像"
     ]
   },
+  "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/champion/Shen.png": {
+    "path": "/classic-cache/6b16ecb2ee9774341b31592c.png",
+    "bytes": 25298,
+    "sha256": "6570a91fb958ef079805dadd8c7a628da569d9601883b6b24610f0858bda8239",
+    "labels": [
+      "暮光之眼现代头像"
+    ]
+  },
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/champion/Singed.png": {
     "path": "/classic-cache/5a5ab0934b5ab556222bb161.png",
     "bytes": 27610,
@@ -1807,6 +1872,14 @@ export const classicAssetAudit = {
     "sha256": "5f23ebc71c6812a02c601525a25e426ff14920eeb22763b0f9b1abc9e4a5a2d9",
     "labels": [
       "九尾妖狐现代P"
+    ]
+  },
+  "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/passive/Akali_P.png": {
+    "path": "/classic-cache/44f4ac34fde29b8700fbacb5.png",
+    "bytes": 5069,
+    "sha256": "5d339e9097d0685523374b0a97cdfa56cad0e94367de84bcd1aef9b704d8924f",
+    "labels": [
+      "离群之刺现代P"
     ]
   },
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/passive/Alistar_E.png": {
@@ -2033,6 +2106,14 @@ export const classicAssetAudit = {
       "正义天使现代P"
     ]
   },
+  "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/passive/Kennen_Passive.png": {
+    "path": "/classic-cache/be1fead7056a2e40d3d29360.png",
+    "bytes": 6161,
+    "sha256": "7cf5f1561058cb673f77afe8d7d90b4034ce2346a2feb4968cc89996ea1e6c87",
+    "labels": [
+      "狂暴之心现代P"
+    ]
+  },
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/passive/KogMaw_IcathianSurprise.png": {
     "path": "/classic-cache/c663286c57bbd3c30ac632b8.png",
     "bytes": 6945,
@@ -2159,6 +2240,14 @@ export const classicAssetAudit = {
     "sha256": "6ede4edd6df532c978a0a0db5009838f9990244aa9e4c47ac10b19cf4d0050f1",
     "labels": [
       "符文法师现代P"
+    ]
+  },
+  "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/passive/Shen_Passive.png": {
+    "path": "/classic-cache/e208a69011073be4c9544c0d.png",
+    "bytes": 6855,
+    "sha256": "230744f21b25c7b6c3fecef4031f53f61e9fe300f3a41b9dbe57284e556ac58a",
+    "labels": [
+      "暮光之眼现代P"
     ]
   },
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/passive/Singed_Passive.png": {
@@ -2311,6 +2400,38 @@ export const classicAssetAudit = {
     "sha256": "fb77f1efec029da75c3718399558cd8432507a08d5e264ea63827c8186139abf",
     "labels": [
       "九尾妖狐现代W"
+    ]
+  },
+  "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/AkaliE.png": {
+    "path": "/classic-cache/2d431c84101a0129d600ba31.png",
+    "bytes": 5989,
+    "sha256": "60e23d4e1178cc40fc4bc7b2dd7854c6ec4767019c3bcb5566d6c5b11ad77889",
+    "labels": [
+      "离群之刺现代E"
+    ]
+  },
+  "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/AkaliQ.png": {
+    "path": "/classic-cache/c32ba66f8e59e3747cd0469e.png",
+    "bytes": 6047,
+    "sha256": "d4e65ccfb0c90287c34d89dc315ad50a8bbcd4ec8dd918e1d5d3c9df55bd4773",
+    "labels": [
+      "离群之刺现代Q"
+    ]
+  },
+  "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/AkaliR.png": {
+    "path": "/classic-cache/5bfba4756d8b36edc657864b.png",
+    "bytes": 5876,
+    "sha256": "3ce3f8b5ee431f194b11b15da5682377637515caae9beb2ca822fdc438fa37d9",
+    "labels": [
+      "离群之刺现代R"
+    ]
+  },
+  "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/AkaliW.png": {
+    "path": "/classic-cache/7c6fc416400bd4132a975585.png",
+    "bytes": 5158,
+    "sha256": "06958c550206cb2b5ef428b73234bf55653852590a9327d875c72014db357140",
+    "labels": [
+      "离群之刺现代W"
     ]
   },
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/AlistarE.png": {
@@ -3065,6 +3186,38 @@ export const classicAssetAudit = {
       "正义天使现代W"
     ]
   },
+  "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/KennenBringTheLight.png": {
+    "path": "/classic-cache/72ae11f6b544fa297adb4f1f.png",
+    "bytes": 5762,
+    "sha256": "ecdebce73c3f829cb948a83faa2e05d6ae0ea068b75038d2f7c591736ca08b18",
+    "labels": [
+      "狂暴之心现代W"
+    ]
+  },
+  "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/KennenLightningRush.png": {
+    "path": "/classic-cache/27e1442d757d1efb5a350200.png",
+    "bytes": 5917,
+    "sha256": "87804d53b16a082715d031bf15c26a264db96488d5d225f45bbfd309f7634c54",
+    "labels": [
+      "狂暴之心现代E"
+    ]
+  },
+  "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/KennenShurikenHurlMissile1.png": {
+    "path": "/classic-cache/113afac03384a4b913e8617b.png",
+    "bytes": 5323,
+    "sha256": "2b2d78f41615e1d078ae50d1d1afb3c944fee642324adfb11c14af10e1326ade",
+    "labels": [
+      "狂暴之心现代Q"
+    ]
+  },
+  "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/KennenShurikenStorm.png": {
+    "path": "/classic-cache/39c28727a3108406b07822ea.png",
+    "bytes": 6320,
+    "sha256": "a5a6535c9338cf84e794aec4e3635e6a42c8e692746b885fef9eae0896b315e7",
+    "labels": [
+      "狂暴之心现代R"
+    ]
+  },
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/KogMawBioArcaneBarrage.png": {
     "path": "/classic-cache/2b4a05b01522e15b047d8a45.png",
     "bytes": 6041,
@@ -3681,6 +3834,38 @@ export const classicAssetAudit = {
       "熔岩巨兽现代Q"
     ]
   },
+  "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/ShenE.png": {
+    "path": "/classic-cache/ec5eca783862de72bdc740be.png",
+    "bytes": 6487,
+    "sha256": "b2a5d7febc4ae4d85e8e3155f2c027204adbf3a28901a5e92a6aaec8ee141823",
+    "labels": [
+      "暮光之眼现代E"
+    ]
+  },
+  "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/ShenQ.png": {
+    "path": "/classic-cache/c8de186803b8f4bd5b88cc77.png",
+    "bytes": 5617,
+    "sha256": "9b013827cf5c747b5f90f44e738f9ba2881a8fa1b1a3c121b6a5d24dbe5609fb",
+    "labels": [
+      "暮光之眼现代Q"
+    ]
+  },
+  "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/ShenR.png": {
+    "path": "/classic-cache/76194f0293c557b79c77a4c5.png",
+    "bytes": 5871,
+    "sha256": "0bcb6fbb25a804dc41f6fdfcee82a306ff92aa31d6c0a9df635ce8448f21b9ed",
+    "labels": [
+      "暮光之眼现代R"
+    ]
+  },
+  "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/ShenW.png": {
+    "path": "/classic-cache/67e3e1062ac46758c34b4255.png",
+    "bytes": 6602,
+    "sha256": "962b5d9a53c55716b07a118e72dabd3408f8fafda2daebff424547e6270a1028",
+    "labels": [
+      "暮光之眼现代W"
+    ]
+  },
   "https://ddragon.leagueoflegends.com/cdn/16.16.1/img/spell/SionE.png": {
     "path": "/classic-cache/da179dcd4d08ed4f129b44fe.png",
     "bytes": 6496,
@@ -4199,78 +4384,6 @@ export const classicAssetAudit = {
     "sha256": "cd991fc15cffd9c4914c19aacf57551893d3f4291e8b8b355ee28adda08a94f4",
     "labels": [
       "时光守护者现代W"
-    ]
-  },
-  "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/item/773040.png": {
-    "path": "/classic-cache/24568033b025a7420a19e05e.png",
-    "bytes": 6586,
-    "sha256": "80bbf4e486d5c8e7996677dc9975666bade69ac942d8ba1eada1a4508baac231",
-    "labels": [
-      "炽天使之拥"
-    ]
-  },
-  "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/item/773042.png": {
-    "path": "/classic-cache/da8d2efb52c7e25ca323151d.png",
-    "bytes": 6457,
-    "sha256": "476b131d1c1b47bac1aa4fed3e6d0b3948244cc5fd80b71395ee129d2d32af71",
-    "labels": [
-      "魔切"
-    ]
-  },
-  "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerBarrier.png": {
-    "path": "/classic-cache/bd52366afd9cd9eab203f824.png",
-    "bytes": 6401,
-    "sha256": "a0cf7b08cdd6d852d325bc9124e05f0e2c55aac340e50665c385755dfa86fbc0",
-    "labels": [
-      "屏障怀旧海斗召唤师技能"
-    ]
-  },
-  "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerDot.png": {
-    "path": "/classic-cache/dce973207426c9b6e0d31ce7.png",
-    "bytes": 5799,
-    "sha256": "958db3407c83a9499a5e464c2e37df59c6544590dcd3d822965a83740303b9af",
-    "labels": [
-      "引燃怀旧海斗召唤师技能"
-    ]
-  },
-  "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerFlash.png": {
-    "path": "/classic-cache/715afe5353ef02b5d8a0ac4d.png",
-    "bytes": 6403,
-    "sha256": "1272fe7b3275c0afc872a6aaa6b65e27d41572d57f9ce19b9ed81b79aa5eb2aa",
-    "labels": [
-      "闪现怀旧海斗召唤师技能"
-    ]
-  },
-  "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHaste.png": {
-    "path": "/classic-cache/97585994d6117a8994beda12.png",
-    "bytes": 5066,
-    "sha256": "9ce3605a1480f16453ff8230fa61e87cedca91e8a5c6217445c82eaf53884484",
-    "labels": [
-      "幽灵疾步怀旧海斗召唤师技能"
-    ]
-  },
-  "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerHeal.png": {
-    "path": "/classic-cache/2f023a1504e6cee7aeafb200.png",
-    "bytes": 5673,
-    "sha256": "ccebc4b0554572a041b2b5014f25a84d7265c371e97448a516765aaad651dc55",
-    "labels": [
-      "治疗术怀旧海斗召唤师技能"
-    ]
-  },
-  "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerMana.png": {
-    "path": "/classic-cache/52f17ec87341a5bf9387d800.png",
-    "bytes": 5860,
-    "sha256": "b312643034bb3855d1211884b31f254f00281b71afa39df94dae3c20e51b0d1e",
-    "labels": [
-      "清晰术怀旧海斗召唤师技能"
-    ]
-  },
-  "https://opgg-static.akamaized.net/meta/images/lol/16.15.1/spell/SummonerSnowball.png": {
-    "path": "/classic-cache/c4f6e08c7f9caae4124e3059.png",
-    "bytes": 4799,
-    "sha256": "0e2deaacd7cba5e9aee37e35aa91ac6ea69731d60689ed83c8e87fefb0115dbb",
-    "labels": [
-      "标记怀旧海斗召唤师技能"
     ]
   },
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/characters/jade_ahri/skins/base/images/jade_ahri_splash_centered_0.project_jade.jpg": {
@@ -10295,6 +10408,262 @@ export const classicAssetAudit = {
     "sha256": "d606d56fcb17368a052acafb0fb0383cdea533d44c7fcd099fe50e983791a5d4",
     "labels": [
       "璐璐头像"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/item/773040.png": {
+    "path": "/classic-cache/02df178ba5dd9b4d50392629.png",
+    "bytes": 6586,
+    "sha256": "80bbf4e486d5c8e7996677dc9975666bade69ac942d8ba1eada1a4508baac231",
+    "labels": [
+      "炽天使之拥"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/item/773042.png": {
+    "path": "/classic-cache/4cd93e67bf0b2f9112801daf.png",
+    "bytes": 6457,
+    "sha256": "476b131d1c1b47bac1aa4fed3e6d0b3948244cc5fd80b71395ee129d2d32af71",
+    "labels": [
+      "魔切"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerBarrier.png": {
+    "path": "/classic-cache/77e299c4c04875dc833e0ee4.png",
+    "bytes": 6401,
+    "sha256": "a0cf7b08cdd6d852d325bc9124e05f0e2c55aac340e50665c385755dfa86fbc0",
+    "labels": [
+      "屏障怀旧海斗召唤师技能"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerDot.png": {
+    "path": "/classic-cache/04dd79a5ac7a0f2345ec4680.png",
+    "bytes": 5799,
+    "sha256": "958db3407c83a9499a5e464c2e37df59c6544590dcd3d822965a83740303b9af",
+    "labels": [
+      "引燃怀旧海斗召唤师技能"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png": {
+    "path": "/classic-cache/381b3e57cac6f35eecdc417e.png",
+    "bytes": 6403,
+    "sha256": "1272fe7b3275c0afc872a6aaa6b65e27d41572d57f9ce19b9ed81b79aa5eb2aa",
+    "labels": [
+      "闪现怀旧海斗召唤师技能"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png": {
+    "path": "/classic-cache/a7a51f5b11247da02a7b68e7.png",
+    "bytes": 5066,
+    "sha256": "9ce3605a1480f16453ff8230fa61e87cedca91e8a5c6217445c82eaf53884484",
+    "labels": [
+      "幽灵疾步怀旧海斗召唤师技能"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHeal.png": {
+    "path": "/classic-cache/fe1d3e0ab2119fa730a9dcb5.png",
+    "bytes": 5673,
+    "sha256": "ccebc4b0554572a041b2b5014f25a84d7265c371e97448a516765aaad651dc55",
+    "labels": [
+      "治疗术怀旧海斗召唤师技能"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerMana.png": {
+    "path": "/classic-cache/a83a17b0932eab52d22fac51.png",
+    "bytes": 5860,
+    "sha256": "b312643034bb3855d1211884b31f254f00281b71afa39df94dae3c20e51b0d1e",
+    "labels": [
+      "清晰术怀旧海斗召唤师技能"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png": {
+    "path": "/classic-cache/4b4c5d41cf32eb5f3609bec7.png",
+    "bytes": 4799,
+    "sha256": "0e2deaacd7cba5e9aee37e35aa91ac6ea69731d60689ed83c8e87fefb0115dbb",
+    "labels": [
+      "标记怀旧海斗召唤师技能"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/characters/jade_akali/skins/base/images/jade_akali_splash_centered_0.project_jade.jpg": {
+    "path": "/classic-cache/09ca2089cb205caca2e1c01c.jpg",
+    "bytes": 67499,
+    "sha256": "4355b383afc3564fd5bea48fac3805d700037552104d04b3b6006f1317dea4b3",
+    "labels": [
+      "阿卡丽暗影之拳原画"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/characters/jade_akali/skins/skin301/images/jade_akali_splash_centered_301.project_jade.jpg": {
+    "path": "/classic-cache/ca21781309abd20da709f38f.jpg",
+    "bytes": 122075,
+    "sha256": "b5549d696a3c54252727be400694bf2667067b4ea22c7b1918c143d597792e0a",
+    "labels": [
+      "阿卡丽经典 阿卡丽原画"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/characters/jade_kennen/skins/base/images/jade_kennen_splash_centered_0.project_jade_16_16.jpg": {
+    "path": "/classic-cache/415ad7836073facc2b3c2a12.jpg",
+    "bytes": 128091,
+    "sha256": "67fad3942d674865548d96391bbabd58fe57ca50c7dfeb789b6016a68bac6fec",
+    "labels": [
+      "凯南狂暴之心原画"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/characters/jade_shen/skins/base/images/jade_shen_splash_centered_0.project_jade.jpg": {
+    "path": "/classic-cache/bc2c5b974be9d266f4abc2f5.jpg",
+    "bytes": 81562,
+    "sha256": "4a86a70141d112ea10f5bb5a7ae0f27a117d75fc2c47f3d3ef76a3da86c3869e",
+    "labels": [
+      "慎暮光之眼原画"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/characters/jade_shen/skins/skin301/images/jade_shen_splash_centered_301.project_jade_16_16.jpg": {
+    "path": "/classic-cache/592c10aa860e5c8a2b90ab58.jpg",
+    "bytes": 128749,
+    "sha256": "d72b9b41b289d1abaf4ab56c0f314a749d918982ac14dc59d6065896918be11f",
+    "labels": [
+      "慎经典 慎原画"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/ux/jade/s3icons/samesized/akalicrescentslash.project_jade.png": {
+    "path": "/classic-cache/a10e7d1477090046397163fe.png",
+    "bytes": 3938,
+    "sha256": "54f3004f4e603227324fb274fbb450632ad2bb7a89c64622c2adadf5ed1431e4",
+    "labels": [
+      "阿卡丽E"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/ux/jade/s3icons/samesized/akalimota.project_jade.png": {
+    "path": "/classic-cache/0d4e987394ee24f9e4210e99.png",
+    "bytes": 4683,
+    "sha256": "8970f5de69d9c9b56b0aeb64e7b7b99f74d0661b213aa2e3cd4b4ebddace8561",
+    "labels": [
+      "阿卡丽Q"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/ux/jade/s3icons/samesized/akalishadowdance.project_jade.png": {
+    "path": "/classic-cache/b61f02b0afd16b68c28382eb.png",
+    "bytes": 2818,
+    "sha256": "8c35f715f58d1bf672eb49edd40de0c7445cd9d980fd714a3cf49ff801032bdf",
+    "labels": [
+      "阿卡丽R"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/ux/jade/s3icons/samesized/akalitwilightshroud.project_jade.png": {
+    "path": "/classic-cache/c610549ae10ff7ea266912ac.png",
+    "bytes": 3815,
+    "sha256": "431382eb76ad8f31c618fb23e20e04c232f9ed735ef9573f001cadfcdc56a0ed",
+    "labels": [
+      "阿卡丽W"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/ux/jade/s3icons/samesized/akalitwindisciplines.project_jade.png": {
+    "path": "/classic-cache/385a72d93ff06dadea81086c.png",
+    "bytes": 3795,
+    "sha256": "29c924e8d9cd084bb04f56016f7a82a61a1b7a7d37b7c72c519072cfe9ed7311",
+    "labels": [
+      "阿卡丽P"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/ux/jade/s3icons/samesized/kennen_electricalsurge.project_jade.png": {
+    "path": "/classic-cache/3d79b460d75d2e72d7332d57.png",
+    "bytes": 3848,
+    "sha256": "b73a6182bc7197b3a6f86999e82588ecaf651135f41ff692ed14fe2582a43f19",
+    "labels": [
+      "凯南W"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/ux/jade/s3icons/samesized/kennen_lightningrush.project_jade.png": {
+    "path": "/classic-cache/58a3951c3116322815a7b7e0.png",
+    "bytes": 2957,
+    "sha256": "4103df5edd5f22c63a124a82ea30b2e7e2d539acb69d346270cdd51046c5ab3c",
+    "labels": [
+      "凯南E"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/ux/jade/s3icons/samesized/kennen_markofstorm.project_jade.png": {
+    "path": "/classic-cache/16834bdf1e8a1301fd5379e5.png",
+    "bytes": 3567,
+    "sha256": "f7bd7af2a4dd319c1121ad224a2d926cb8e37e6616478ddaf3ffa8c95e7ac6d9",
+    "labels": [
+      "凯南P"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/ux/jade/s3icons/samesized/kennen_slicingmaelstrom.project_jade.png": {
+    "path": "/classic-cache/176735c64a47952da057076f.png",
+    "bytes": 4045,
+    "sha256": "08af7230b851089501b879d09f79d0d9a9299ec794b3fdbd70e9beb7196fd030",
+    "labels": [
+      "凯南R"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/ux/jade/s3icons/samesized/kennen_thunderingshuriken.project_jade.png": {
+    "path": "/classic-cache/a1f112e021b26649e65bc9fe.png",
+    "bytes": 4197,
+    "sha256": "f543e8d88a98b0ec95ad9a7d85dc471859f3b09b979ca21606849c49cbb5f1cc",
+    "labels": [
+      "凯南Q"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/ux/jade/s3icons/samesized/shen_feint.project_jade.png": {
+    "path": "/classic-cache/e0a9bbd7b05c5cc089d1851e.png",
+    "bytes": 4529,
+    "sha256": "95d5693e86d650cd91feacc6e2a2b70aa0d459f254d5e2247d41b51a591b97b7",
+    "labels": [
+      "慎W"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/ux/jade/s3icons/samesized/shen_kistrike.project_jade.png": {
+    "path": "/classic-cache/03f3d9590e5a96c8ab8076a7.png",
+    "bytes": 4280,
+    "sha256": "4ef680f7f254d9be33f1d0f9019526760afb89f7682dcf6b26effc4899b80ca2",
+    "labels": [
+      "慎P"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/ux/jade/s3icons/samesized/shen_shadowdash.project_jade.png": {
+    "path": "/classic-cache/350aee9b48498bdc7287686a.png",
+    "bytes": 3918,
+    "sha256": "c5823c323388b5364af946c994fc8a9f32b9d07551dac3d46c30616071f635ef",
+    "labels": [
+      "慎E"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/ux/jade/s3icons/samesized/shen_standunited.project_jade.png": {
+    "path": "/classic-cache/7b6f7c5874664a03acb05c91.png",
+    "bytes": 4227,
+    "sha256": "c7f88adc32e7bda1274b589369d39c4aaf28132f342834846ffa230dab6d1e57",
+    "labels": [
+      "慎R"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/assets/ux/jade/s3icons/samesized/shen_vorpalblade.project_jade.png": {
+    "path": "/classic-cache/115667b80a9274afd0ef63e8.png",
+    "bytes": 4198,
+    "sha256": "2460a8d4adf4d4a2ece95bbf7daa155b44778841ff01c7da58e499de1c4b94e4",
+    "labels": [
+      "慎Q"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/v1/champion-icons/60084.png": {
+    "path": "/classic-cache/69b246b0187db8c07d8521d2.png",
+    "bytes": 27333,
+    "sha256": "f8cbb17b502677575e2a6b2c818746c3221d3b137f835d86462ce6699189766d",
+    "labels": [
+      "阿卡丽头像"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/v1/champion-icons/60085.png": {
+    "path": "/classic-cache/91e0975e2ccf59d84b361a84.png",
+    "bytes": 33159,
+    "sha256": "57ba871bfac0b9159ffe18262b9ebdfec973cefff5f14b30392331011165a97d",
+    "labels": [
+      "凯南头像"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.16/classic/v1/champion-icons/60098.png": {
+    "path": "/classic-cache/ca2ce41e4cea5ed56277eb8a.png",
+    "bytes": 32052,
+    "sha256": "eaa05affc5f37a7bcb39a6d9ffd3c65c964d595bd644746d9e9b7ca71eb434f9",
+    "labels": [
+      "慎头像"
     ]
   },
   "https://raw.communitydragon.org/16.16/game/assets/maps/particles/kiwi/magicmissile_small.png": {

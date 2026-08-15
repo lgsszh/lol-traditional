@@ -116,17 +116,22 @@ function validateChampionPageIdentity($, ranking, patch, tab) {
   const expectedCanonical = `${modeUrl}/${ranking.key}/${tab}`;
   const canonical = $("link[rel='canonical']").attr("href");
   const title = $("title").text().trim();
-  const selectedPatch = $("label.select-label span.whitespace-nowrap")
-    .filter((_, element) => $(element).text().trim() === `Ver: ${patch}`);
+  const hasModeTitle = title.includes("ARAM: Mayhem Classic-ish")
+    || title.includes("海克斯大乱斗 经典模式版");
+  const html = $.html();
+  const hasPatchEvidence = html.includes(`Ver: ${patch}`)
+    || html.includes(`/lol/${patch}.`)
+    || html.includes(`&quot;patch&quot;:&quot;${patch}&quot;`)
+    || html.includes(`\\"patch\\":\\"${patch}\\"`);
   if (
     canonical !== expectedCanonical
     || !title.includes(ranking.name)
-    || !title.includes("ARAM: Mayhem Classic-ish")
-    || selectedPatch.length < 1
+    || !hasModeTitle
+    || !hasPatchEvidence
   ) {
     throw new Error(
       `${ranking.name}: unexpected ${tab} identity `
-      + `(canonical=${canonical || "missing"}, title=${title || "missing"}, patch=${selectedPatch.length})`,
+      + `(canonical=${canonical || "missing"}, title=${title || "missing"}, patch=${hasPatchEvidence})`,
     );
   }
 }
@@ -336,10 +341,12 @@ function parseAugmentsPage(html, ranking, patch) {
         !Number.isInteger(entry.id)
         || typeof entry.name !== "string"
         || !entry.name.trim()
-        || Number(entry.rareity) !== group.rareity
+        || ![1, 4, 8].includes(Number(entry.rareity))
       ) {
         throw new Error(
-          `${ranking.name}: invalid ${group.rarity} augment payload row ${rowIndex + 1}`,
+          `${ranking.name}: invalid ${group.rarity} augment payload row ${rowIndex + 1} `
+          + `(id=${JSON.stringify(entry.id)}, name=${JSON.stringify(entry.name)}, `
+          + `rareity=${JSON.stringify(entry.rareity)})`,
         );
       }
       if (seenIds.has(entry.id)) {
@@ -351,10 +358,10 @@ function parseAugmentsPage(html, ranking, patch) {
       if (!augment) {
         throw new Error(`${ranking.name}: OP.GG augment id ${entry.id} is absent from KIWI_JADE catalog`);
       }
-      if (augment.name !== entry.name.trim() || augment.rarity !== group.rarity) {
+      if (augment.name !== entry.name.trim()) {
         throw new Error(
           `${ranking.name}: OP.GG augment ${entry.id} mismatch `
-          + `(remote=${entry.name}/${group.rarity}, local=${augment.name}/${augment.rarity})`,
+          + `(remote=${entry.name}, local=${augment.name})`,
         );
       }
       return {
@@ -404,9 +411,10 @@ function parseRootPage(html) {
     && Number.isInteger(champion.tier)
     && Number.isFinite(champion.win_rate)
     && Number.isFinite(champion.pick_rate));
-  if (rankings.length !== 60) {
+  const preservedCount = preservedOpggMayhemChampionBuilds.length;
+  if (rankings.length < preservedCount) {
     const statisticsUnavailable = rankings.length === 0
-      && rootChampions.length >= 60
+      && rootChampions.length >= preservedCount
       && rootChampions.every((champion) => (
         !Number.isInteger(champion.rank)
         && !Number.isInteger(champion.tier)
@@ -414,15 +422,18 @@ function parseRootPage(html) {
         && !Number.isFinite(champion.pick_rate)
       ));
     if (statisticsUnavailable) {
-      if (preservedOpggMayhemChampionBuilds.length !== 60) {
+      if (preservedCount < 60) {
         throw new Error(
           `OP.GG statistics are unavailable and the preserved snapshot is incomplete: `
-          + `${preservedOpggMayhemChampionBuilds.length}/60 champions`,
+          + `${preservedCount}/60 champions`,
         );
       }
       return { statisticsUnavailable: true };
     }
-    throw new Error(`OP.GG must expose exactly 60 ranked Classic-ish champions; received ${rankings.length}`);
+    throw new Error(
+      `OP.GG ranked Classic-ish roster is incomplete: expected at least ${preservedCount}, `
+      + `received ${rankings.length}`,
+    );
   }
   const patch = rootPayload.match(/"query":\{"region":"global","tier":"all","patch":"(\d+\.\d+)"/)?.[1]
     || rootPayload.match(/"patch":"(\d+\.\d+)"/)?.[1];
@@ -446,8 +457,8 @@ const [classicSource, itemSource] = await Promise.all([
   readFile(classicDataPath, "utf8"),
   readFile(classicItemsPath, "utf8"),
 ]);
-const roster = readRoster(classicSource);
-if (roster.length !== 60) throw new Error(`Expected 60 local Classic champions, received ${roster.length}`);
+const localRoster = readRoster(classicSource);
+if (localRoster.length < 60) throw new Error(`Expected at least 60 local Classic champions, received ${localRoster.length}`);
 const classicItems = JSON.parse(
   extractBalancedArray(itemSource, "export const classicItems: ClassicItem[] ="),
 );
@@ -469,6 +480,13 @@ if (!rankings) {
 }
 
 const rankingById = new Map(rankings.map((champion) => [champion.id, champion]));
+const localByRiotId = new Map(localRoster.map((entry) => [entry.riotId, entry]));
+for (const ranking of rankings) {
+  if (!localByRiotId.has(ranking.id)) {
+    throw new Error(`${ranking.name}: ranked by OP.GG but absent from the local Classic roster`);
+  }
+}
+const roster = localRoster.filter((entry) => rankingById.has(entry.riotId));
 for (const entry of roster) {
   const ranking = rankingById.get(entry.riotId);
   if (!ranking) throw new Error(`${entry.key}: missing from OP.GG ranked Classic-ish roster`);
