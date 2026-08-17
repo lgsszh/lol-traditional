@@ -11287,14 +11287,15 @@ export const regularMayhemAugments: MayhemAugment[] = [
     "name": "升级：焚天",
     "rarity": "gold",
     "icon": "https://raw.communitydragon.org/16.16/game/assets/ux/kiwi/augments/icons/upgradeie_small.png",
-    "description": "数据状态：unavailable（同版本客户端公开数据未提供可稳定展示的说明文本）。",
+    "description": "将【焚天】对每个目标的冷却时间缩短至5秒，并且治疗你(0.09) × 100%已损失生命值。 获得500金币。",
     "tags": [
-      "adaptive"
+      "spell",
+      "tank"
     ],
     "classicExclusive": false,
-    "hasPublicDescription": false,
-    "descriptionStatus": "unavailable",
-    "unavailableReason": "同版本客户端公开数据未提供可稳定展示的说明文本",
+    "hasPublicDescription": true,
+    "descriptionStatus": "available",
+    "unavailableReason": null,
     "unresolvedTokens": [],
     "descriptionSourceUrl": "https://raw.communitydragon.org/16.16/game/maps/modespecificdata/kiwi.bin.json"
   },
@@ -11304,14 +11305,15 @@ export const regularMayhemAugments: MayhemAugment[] = [
     "name": "升级：贪欲九头蛇",
     "rarity": "gold",
     "icon": "https://raw.communitydragon.org/16.16/game/assets/ux/kiwi/augments/icons/upgradesheen_small.png",
-    "description": "数据状态：unavailable（同版本客户端公开数据未提供可稳定展示的说明文本）。",
+    "description": "你对敌方英雄的技能命中会触发顺劈。【贪欲】获得按对局状态实时计算生命偷取。 获得500金币.",
     "tags": [
-      "adaptive"
+      "spell",
+      "tank"
     ],
     "classicExclusive": false,
-    "hasPublicDescription": false,
-    "descriptionStatus": "unavailable",
-    "unavailableReason": "同版本客户端公开数据未提供可稳定展示的说明文本",
+    "hasPublicDescription": true,
+    "descriptionStatus": "partial",
+    "unavailableReason": null,
     "unresolvedTokens": [],
     "descriptionSourceUrl": "https://raw.communitydragon.org/16.16/game/maps/modespecificdata/kiwi.bin.json"
   }
@@ -14622,14 +14624,14 @@ export const classicMayhemAugments: MayhemAugment[] = [
     "name": "召唤师的游猎",
     "rarity": "silver",
     "icon": "https://raw.communitydragon.org/16.16/game/assets/ux/kiwi/augments/icons/stabby_stabby_small.png",
-    "description": "数据状态：unavailable（同版本客户端公开数据未提供可稳定展示的说明文本）。",
+    "description": "在野区或河道中时，你会快速发现消耗品。 '中路？我们要去的地方不需要中路！'",
     "tags": [
       "utility"
     ],
     "classicExclusive": true,
-    "hasPublicDescription": false,
-    "descriptionStatus": "unavailable",
-    "unavailableReason": "同版本客户端公开数据未提供可稳定展示的说明文本",
+    "hasPublicDescription": true,
+    "descriptionStatus": "available",
+    "unavailableReason": null,
     "unresolvedTokens": [],
     "descriptionSourceUrl": "https://raw.communitydragon.org/16.16/game/maps/modespecificdata/kiwi_jade.bin.json"
   }
