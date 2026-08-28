@@ -108,8 +108,8 @@ test("运行时快照保留已核对的技能数值，防止每日同步退化",
   const vayneP = vayne.champion.abilities.find((ability) => ability.key === "P");
   const vayneW = vayne.champion.abilities.find((ability) => ability.key === "W");
   assert.match(vayneP.description, /获得30移动速度/);
-  assert.match(vayneW.numericDetail, /6\/7\/8\/9\/10%最大生命值/);
-  assert.match(vayneW.numericDetail, /50\/65\/80\/95\/110/);
+  assert.match(vayneW.numericDetail, /4\/5\.5\/7\/8\.5\/10%最大生命值/);
+  assert.match(vayneW.numericDetail, /40\/55\/70\/85\/100/);
   assert.match(vayneW.numericDetail, /140\/155\/170\/185\/200/);
 
   const teemo = await readJson("60017.json");

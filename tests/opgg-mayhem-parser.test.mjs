@@ -3,6 +3,7 @@ import test from "node:test";
 import { load } from "cheerio";
 import {
   parseOpggAugmentGroups,
+  parseOpggMetric,
   parseOpggSkillBuild,
 } from "../scripts/opgg-mayhem-parser.mjs";
 
@@ -63,4 +64,23 @@ test("只有拼接文本、缺少语义格子或技能点数越界时拒绝发�
 
   const invalid = skillRow(["E", "Q", "W"], [..."QQQQQQWEEERRRRW"]);
   assert.throws(() => parseOpggSkillBuild(invalid.$, invalid.row, "正义天使"), /level sequence/);
+});
+
+test("推荐行统计完整时解析，OP.GG 完全隐藏统计时保留空值", () => {
+  const complete = load(`
+    <table><tbody><tr><td>推荐内容</td><td>12.34% 1,234场</td><td>56.78%</td></tr></tbody></table>
+  `);
+  assert.deepEqual(parseOpggMetric(complete("tr"), "完整行"), {
+    pickRate: 12.34,
+    games: 1234,
+    winRate: 56.78,
+  });
+
+  const hidden = load("<table><tbody><tr><td><img alt='闪现'><img alt='标记'></td></tr></tbody></table>");
+  assert.equal(parseOpggMetric(hidden("tr"), "无统计行"), null);
+});
+
+test("推荐行只公开部分统计时仍拒绝发布", () => {
+  const partial = load("<table><tbody><tr><td>推荐内容</td><td>12.34%</td><td></td></tr></tbody></table>");
+  assert.throws(() => parseOpggMetric(partial("tr"), "残缺行"), /cannot parse metric row/);
 });

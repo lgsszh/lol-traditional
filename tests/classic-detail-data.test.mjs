@@ -43,6 +43,7 @@ test("全部英雄优先使用名称含经典的皮肤，并保留 OP.GG 默认�
   const janna = classicChampionSkills.find((entry) => entry.championId === "60040");
   const vayne = classicChampionSkills.find((entry) => entry.championId === "60067");
   const mundo = classicChampionSkills.find((entry) => entry.championId === "60036");
+  const kayle = classicChampionSkills.find((entry) => entry.championId === "60010");
   for (const skillSet of classicChampionSkills) {
     assert.ok(skillSet.artworks.length === 1 || skillSet.artworks.length === 2);
     assert.equal(skillSet.artworks.filter((artwork) => artwork.isDefault).length, 1, `${skillSet.championName}默认原画数量错误`);
@@ -64,6 +65,8 @@ test("全部英雄优先使用名称含经典的皮肤，并保留 OP.GG 默认�
   assert.equal(janna.classicSplashName, "风暴之怒");
   assert.equal(vayne.classicSplashName, "暗夜猎手");
   assert.deepEqual(mundo.artworks.map((artwork) => compactName(artwork.name)), ["经典蒙多", "祖安狂人"]);
+  assert.equal(compactName(kayle.classicSplashName), "经典2012凯尔");
+  assert.match(kayle.artworks.find((artwork) => artwork.isDefault)?.imageUrl ?? "", /\/skins\/skin302\/images\//);
 });
 
 test("全部 Classic 图片均有经过哈希校验的本地镜像", () => {
@@ -198,17 +201,17 @@ test("经典装备属性筛选数量与同步快照一致", () => {
     damage: 41,
     "critical-strike": 13,
     "attack-speed": 21,
-    "on-hit": 23,
+    "on-hit": 24,
     "armor-penetration": 4,
     "spell-damage": 42,
     mana: 36,
     "magic-penetration": 5,
-    health: 51,
-    armor: 23,
+    health: 52,
+    armor: 24,
     "magic-resistance": 21,
     "cooldown-reduction": 25,
     movement: 21,
-    "life-steal": 14,
+    "life-steal": 15,
   };
   for (const [tag, expected] of Object.entries(expectedCounts)) {
     assert.equal(

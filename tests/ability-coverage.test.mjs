@@ -48,12 +48,15 @@ test("03 与 04 的全部技能均有来源、说明和独立数值明细", () =
 test("关键被动的隐藏冷却与作用范围不得在生成时丢失", () => {
   const vayne = liveClassicChampions.find((champion) => champion.key === "Vayne");
   const mundo = liveClassicChampions.find((champion) => champion.key === "DrMundo");
+  const gragas = liveClassicChampions.find((champion) => champion.key === "Gragas");
   const vaynePassive = vayne?.abilities.find((ability) => ability.key === "P");
   const mundoPassive = mundo?.abilities.find((ability) => ability.key === "P");
+  const gragasPassive = gragas?.abilities.find((ability) => ability.key === "P");
   assert.equal(vaynePassive?.range, "2000");
   assert.match(vaynePassive?.numericDetail || "", /30.*移动速度/);
   assert.match(mundoPassive?.cooldown || "", /60.*51.*42.*33.*24.*15/);
   assert.match(mundoPassive?.numericDetail || "", /0\.4.*2\.3%/);
+  assert.match(gragasPassive?.cooldown || "", /12\/10\/8\/6（英雄等级1\/6\/11\/16）/);
 });
 
 test("03 与 04 共用可切换等级和装备的技能面板", async () => {

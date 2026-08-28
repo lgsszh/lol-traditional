@@ -17,7 +17,11 @@ import {
   OP_GG_MAYHEM_PATCH as PRESERVED_OP_GG_MAYHEM_PATCH,
   opggMayhemChampionBuilds as preservedOpggMayhemChampionBuilds,
 } from "../app/classic-mayhem-opgg.generated.ts";
-import { parseOpggAugmentGroups, parseOpggSkillBuild } from "./opgg-mayhem-parser.mjs";
+import {
+  parseOpggAugmentGroups,
+  parseOpggMetric,
+  parseOpggSkillBuild,
+} from "./opgg-mayhem-parser.mjs";
 
 const outputPath = new URL("../app/classic-mayhem-opgg.generated.ts", import.meta.url);
 const rankingOutputPath = new URL("../app/classic-mayhem-ranking.generated.ts", import.meta.url);
@@ -67,24 +71,6 @@ function validateMetric(metric, label) {
     throw new Error(`${label}: invalid metric ${JSON.stringify(metric)}`);
   }
   return metric;
-}
-
-function parseMetric(row, label) {
-  const cells = row.find("td");
-  const pickText = cells.eq(-2).text().replace(/\s+/g, "");
-  const winText = cells.eq(-1).text().replace(/\s+/g, "");
-  const pickMatch = pickText.match(/(\d+(?:\.\d+)?)%/);
-  const gamesMatch = pickText.match(/([\d,]+)场/);
-  const winMatch = winText.match(/(\d+(?:\.\d+)?)%/);
-  if (!pickMatch || !gamesMatch || !winMatch) {
-    const compact = row.text().replace(/\s+/g, "");
-    throw new Error(`${label}: cannot parse metric row "${compact.slice(0, 160)}"`);
-  }
-  return validateMetric({
-    pickRate: Number(pickMatch[1]),
-    games: Number(gamesMatch[1].replace(/,/g, "")),
-    winRate: Number(winMatch[1]),
-  }, label);
 }
 
 function parsePayloadMetric(entry, label) {
@@ -237,7 +223,7 @@ function parseItemsTable($, caption, expectedRows, itemMap, modeItemMap, champio
       totalPrice: prices.every((price) => Number.isFinite(price))
         ? prices.reduce((sum, price) => sum + price, 0)
         : null,
-      metric: parseMetric(row, `${championName} ${caption} row ${rowIndex + 1}`),
+      metric: parseOpggMetric(row, `${championName} ${caption} row ${rowIndex + 1}`),
     };
   });
 }
@@ -268,7 +254,7 @@ function parseBuildPage(html, rosterEntry, ranking, patch, itemMap, modeItemMap)
       }
       return {
         spells,
-        metric: parseMetric(row, `${ranking.name} summoner table ${tableIndex + 1} row ${rowIndex + 1}`),
+        metric: parseOpggMetric(row, `${ranking.name} summoner table ${tableIndex + 1} row ${rowIndex + 1}`),
       };
     }));
   if (summonerSets.length !== 2) {
@@ -398,7 +384,7 @@ function parseSkillsPage(html, ranking, patch) {
     return {
       priority,
       levelSequence,
-      metric: parseMetric(row, `${ranking.name} skill build row ${rowIndex + 1}`),
+      metric: parseOpggMetric(row, `${ranking.name} skill build row ${rowIndex + 1}`),
     };
   });
 }
@@ -557,7 +543,7 @@ export type OpggMetric = {
 export type OpggItemRecommendation = {
   itemIds: string[];
   totalPrice: number | null;
-  metric: OpggMetric;
+  metric: OpggMetric | null;
 };
 
 export type OpggMayhemChampionBuild = {
@@ -579,13 +565,13 @@ export type OpggMayhemChampionBuild = {
   }>;
   summonerSets: Array<{
     spells: Array<{ key: string; name: string; icon: string }>;
-    metric: OpggMetric;
+    metric: OpggMetric | null;
   }>;
   runes: { status: "unavailable"; reason: string };
   skillBuilds: Array<{
     priority: Array<"Q" | "W" | "E">;
     levelSequence: Array<"Q" | "W" | "E" | "R">;
-    metric: OpggMetric;
+    metric: OpggMetric | null;
   }>;
   items: {
     starting: OpggItemRecommendation[];

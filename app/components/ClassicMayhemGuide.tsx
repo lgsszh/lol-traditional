@@ -83,7 +83,8 @@ function formatPercent(value: number) {
   return `${percentFormatter.format(value)}%`;
 }
 
-function MetricLine({ metric }: { metric: OpggMetric }) {
+function MetricLine({ metric }: { metric: OpggMetric | null }) {
+  if (!metric) return null;
   return (
     <span className="opgg-metric-line">
       <b>选用 {formatPercent(metric.pickRate)}</b>

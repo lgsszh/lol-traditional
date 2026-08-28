@@ -32,6 +32,10 @@ function assertMetric(metric, context) {
   assert.ok(Number.isFinite(metric.winRate) && metric.winRate >= 0 && metric.winRate <= 100, `${context}胜率无效`);
 }
 
+function assertOptionalMetric(metric, context) {
+  if (metric !== null) assertMetric(metric, context);
+}
+
 test("现代技能快照覆盖完整经典目录，但怀旧海斗只展示 OP.GG 有统计的英雄", () => {
   assert.equal(CLASSIC_MAYHEM_MODE, "KIWI_JADE");
   assert.match(CLASSIC_MAYHEM_PATCH, /^\d+\.\d+$/);
@@ -135,8 +139,8 @@ test("现代技能快照覆盖完整经典目录，但怀旧海斗只展示 OP.G
   const vayneW = vayne?.abilities.find((ability) => ability.key === "W");
   assert.match(vayneP?.description ?? "", /获得30移动速度/);
   assert.equal(vayneW?.numericStatus, "available");
-  assert.match(vayneW?.numericDetail ?? "", /6\/7\/8\/9\/10%最大生命值/);
-  assert.match(vayneW?.numericDetail ?? "", /最低?造成50\/65\/80\/95\/110|最少造成50\/65\/80\/95\/110/);
+  assert.match(vayneW?.numericDetail ?? "", /4\/5\.5\/7\/8\.5\/10%最大生命值/);
+  assert.match(vayneW?.numericDetail ?? "", /最低?造成40\/55\/70\/85\/100|最少造成40\/55\/70\/85\/100/);
   assert.match(vayneW?.numericDetail ?? "", /140\/155\/170\/185\/200/);
 
   const teemo = liveClassicChampions.find((champion) => champion.key === "Teemo");
@@ -304,7 +308,7 @@ test("OP.GG 怀旧海斗快照仅覆盖当前有排名统计的英雄", () => {
       for (const spell of set.spells) {
         assert.ok(classicAssetManifest[spell.icon], `${build.name} ${spell.name}缺少本地镜像`);
       }
-      assertMetric(set.metric, `${build.name}召唤师技能`);
+      assertOptionalMetric(set.metric, `${build.name}召唤师技能`);
     }
 
     assert.equal(build.runes.status, "unavailable");
@@ -321,7 +325,7 @@ test("OP.GG 怀旧海斗快照仅覆盖当前有排名统计的英雄", () => {
       }
       const ultimatePoints = skillBuild.levelSequence.filter((entry) => entry === "R").length;
       assert.ok(ultimatePoints >= 0 && ultimatePoints <= 3, `${build.name} R 技能点数越界`);
-      assertMetric(skillBuild.metric, `${build.name}技能加点`);
+      assertOptionalMetric(skillBuild.metric, `${build.name}技能加点`);
     }
 
     assert.equal(build.items.starting.length, 2);
@@ -343,7 +347,7 @@ test("OP.GG 怀旧海斗快照仅覆盖当前有排名统计的英雄", () => {
         }, 0);
         assert.equal(recommendation.totalPrice, recalculated);
       }
-      assertMetric(recommendation.metric, `${build.name}装备路线`);
+      assertOptionalMetric(recommendation.metric, `${build.name}装备路线`);
     }
     assert.ok(build.items.starting.every((recommendation) => recommendation.totalPrice === null
       || recommendation.totalPrice <= 1400));
@@ -385,6 +389,7 @@ test("怀旧海斗页面不再复用峡谷方案或启发式推荐，并纳入�
     /from\s+["']\.\.\/classic-mayhem(?:-opgg)?\.generated["']/,
   );
   assert.doesNotMatch(componentSource, /mayhem-rune-status|数据未找到/);
+  assert.match(componentSource, /function MetricLine[\s\S]*if \(!metric\) return null/);
   assert.doesNotMatch(componentSource, /prismatic: "棱镜"/);
   assert.doesNotMatch(componentSource, /classicBuildGuides|augmentScore|preferredTags/);
   assert.match(

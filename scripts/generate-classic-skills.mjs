@@ -134,11 +134,16 @@ async function fetchChampion(champion) {
   }
   const defaultSkin = defaultSkins[0];
   const namedClassicSkin = skins.find((skin) => skin.name?.includes("经典")) || null;
-  if (!defaultSkin.imageUrl?.includes("/classic/assets/characters/")
-    || !defaultSkin.imageUrl.includes("/skins/base/")) {
+  // `isBase` is OP.GG's authoritative default marker. Kayle 16.17 points that
+  // card at the Classic 2012 skin302 artwork instead of a `/skins/base/` path,
+  // so validate the champion-owned Classic splash shape without assuming the
+  // storage folder name.
+  const isClassicSplash = (imageUrl) =>
+    /\/classic\/assets\/characters\/[^/]+\/skins\/(?:base|skin\d+)\/images\//.test(imageUrl || "");
+  if (!isClassicSplash(defaultSkin.imageUrl)) {
     throw new Error(`${champion.key}: OP.GG default skin is not a Classic base splash`);
   }
-  if (namedClassicSkin && !namedClassicSkin.imageUrl?.includes("/classic/assets/characters/")) {
+  if (namedClassicSkin && !isClassicSplash(namedClassicSkin.imageUrl)) {
     throw new Error(`${champion.key}: named Classic skin is not a Classic splash`);
   }
   const primarySkin = namedClassicSkin || defaultSkin;

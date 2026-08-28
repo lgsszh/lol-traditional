@@ -1,8 +1,8 @@
-// Generated from OP.GG ARAM Mayhem Classic-ish 16.16. Do not edit manually.
-export const OP_GG_MAYHEM_PATCH = "16.16";
-export const OP_GG_MAYHEM_ASSET_PATCH = "16.16.1";
+// Generated from OP.GG ARAM Mayhem Classic-ish 16.17. Do not edit manually.
+export const OP_GG_MAYHEM_PATCH = "16.17";
+export const OP_GG_MAYHEM_ASSET_PATCH = "16.17.1";
 export const OP_GG_MAYHEM_SOURCE_URL = "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic";
-export const OP_GG_MAYHEM_SNAPSHOT_HASH = "0623de02ce164a75afcdc469a4b778a4b4bf4ff27d8524c294deca7247864f87";
+export const OP_GG_MAYHEM_SNAPSHOT_HASH = "272e72e4091184828aa62e07396a4f057485058acbaff2a54f4e03ac733c4b81";
 export const MAYHEM_STARTING_GOLD = 1400;
 export const MAYHEM_HAS_JUNGLE_ROLE = false;
 
@@ -18,14 +18,14 @@ export const opggMayhemItems: OpggMayhemItem[] = [
   {
     "id": "773040",
     "name": "炽天使之拥",
-    "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/item/773040.png",
+    "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/item/773040.png",
     "price": null,
     "tags": []
   },
   {
     "id": "773042",
     "name": "魔切",
-    "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/item/773042.png",
+    "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/item/773042.png",
     "price": null,
     "tags": []
   }
@@ -40,7 +40,7 @@ export type OpggMetric = {
 export type OpggItemRecommendation = {
   itemIds: string[];
   totalPrice: number | null;
-  metric: OpggMetric;
+  metric: OpggMetric | null;
 };
 
 export type OpggMayhemChampionBuild = {
@@ -62,13 +62,13 @@ export type OpggMayhemChampionBuild = {
   }>;
   summonerSets: Array<{
     spells: Array<{ key: string; name: string; icon: string }>;
-    metric: OpggMetric;
+    metric: OpggMetric | null;
   }>;
   runes: { status: "unavailable"; reason: string };
   skillBuilds: Array<{
     priority: Array<"Q" | "W" | "E">;
     levelSequence: Array<"Q" | "W" | "E" | "R">;
-    metric: OpggMetric;
+    metric: OpggMetric | null;
   }>;
   items: {
     starting: OpggItemRecommendation[];
@@ -82,8 +82,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60010",
     "key": "kayle",
     "name": "正义天使",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/kayle/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/kayle/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 1,
     "tier": 1,
     "championMetrics": {
@@ -97,38 +97,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
           }
         ],
-        "metric": {
-          "pickRate": 45.78,
-          "games": 5311,
-          "winRate": 65.62
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 20.72,
-          "games": 2403,
-          "winRate": 63.13
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -142,11 +134,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773101"
           ],
           "totalPrice": 1250,
-          "metric": {
-            "pickRate": 14.15,
-            "games": 1238,
-            "winRate": 67.93
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -154,11 +142,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "771037"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 13.44,
-            "games": 1176,
-            "winRate": 61.99
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -167,22 +151,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773006"
           ],
           "totalPrice": 900,
-          "metric": {
-            "pickRate": 86.91,
-            "games": 7690,
-            "winRate": 64.89
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773111"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 4.93,
-            "games": 436,
-            "winRate": 66.74
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -193,11 +169,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773146"
           ],
           "totalPrice": 8035,
-          "metric": {
-            "pickRate": 3.56,
-            "games": 367,
-            "winRate": 67.3
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -206,11 +178,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773124"
           ],
           "totalPrice": 7135,
-          "metric": {
-            "pickRate": 2.83,
-            "games": 291,
-            "winRate": 68.38
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -219,11 +187,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773146"
           ],
           "totalPrice": 8500,
-          "metric": {
-            "pickRate": 2.83,
-            "games": 291,
-            "winRate": 69.07
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -232,11 +196,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773114"
           ],
           "totalPrice": 7135,
-          "metric": {
-            "pickRate": 2.78,
-            "games": 286,
-            "winRate": 71.33
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -245,11 +205,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773115"
           ],
           "totalPrice": 7135,
-          "metric": {
-            "pickRate": 2.54,
-            "games": 262,
-            "winRate": 73.66
-          }
+          "metric": null
         }
       ]
     },
@@ -774,11 +730,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 61.76,
-          "games": 5235,
-          "winRate": 64.78
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -803,11 +755,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 5.62,
-          "games": 476,
-          "winRate": 68.7
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -832,11 +780,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.06,
-          "games": 175,
-          "winRate": 67.43
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -861,11 +805,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.05,
-          "games": 174,
-          "winRate": 72.41
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -890,11 +830,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.04,
-          "games": 173,
-          "winRate": 64.16
-        }
+        "metric": null
       }
     ]
   },
@@ -902,8 +838,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60096",
     "key": "kogmaw",
     "name": "深渊巨口",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/kogmaw/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/kogmaw/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 2,
     "tier": 1,
     "championMetrics": {
@@ -917,38 +853,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
           }
         ],
-        "metric": {
-          "pickRate": 42.35,
-          "games": 4733,
-          "winRate": 60.89
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 15.73,
-          "games": 1758,
-          "winRate": 60.01
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -962,11 +890,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773144"
           ],
           "totalPrice": 1400,
-          "metric": {
-            "pickRate": 26.17,
-            "games": 2250,
-            "winRate": 62.62
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -974,11 +898,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "771055"
           ],
           "totalPrice": 1275,
-          "metric": {
-            "pickRate": 4.31,
-            "games": 371,
-            "winRate": 55.8
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -987,22 +907,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773006"
           ],
           "totalPrice": 900,
-          "metric": {
-            "pickRate": 83.01,
-            "games": 6432,
-            "winRate": 62.69
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773020"
           ],
           "totalPrice": 1100,
-          "metric": {
-            "pickRate": 10.98,
-            "games": 851,
-            "winRate": 56.4
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -1013,11 +925,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773124"
           ],
           "totalPrice": 8200,
-          "metric": {
-            "pickRate": 8.54,
-            "games": 888,
-            "winRate": 63.63
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -1026,11 +934,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773085"
           ],
           "totalPrice": 8200,
-          "metric": {
-            "pickRate": 7.61,
-            "games": 792,
-            "winRate": 62.25
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -1039,11 +943,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773109"
           ],
           "totalPrice": 9400,
-          "metric": {
-            "pickRate": 2.47,
-            "games": 257,
-            "winRate": 65.37
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -1052,11 +952,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773085"
           ],
           "totalPrice": 9400,
-          "metric": {
-            "pickRate": 2.17,
-            "games": 226,
-            "winRate": 61.95
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -1065,11 +961,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773124"
           ],
           "totalPrice": 8200,
-          "metric": {
-            "pickRate": 2.12,
-            "games": 220,
-            "winRate": 62.27
-          }
+          "metric": null
         }
       ]
     },
@@ -1594,11 +1486,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 51.66,
-          "games": 3643,
-          "winRate": 60.88
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -1623,11 +1511,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 3.42,
-          "games": 241,
-          "winRate": 54.36
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -1652,11 +1536,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "Q",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.41,
-          "games": 170,
-          "winRate": 61.76
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -1681,11 +1561,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "Q",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.37,
-          "games": 167,
-          "winRate": 56.89
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -1710,11 +1586,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.1,
-          "games": 148,
-          "winRate": 65.54
-        }
+        "metric": null
       }
     ]
   },
@@ -1722,8 +1594,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60067",
     "key": "vayne",
     "name": "暗夜猎手",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/vayne/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/vayne/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 3,
     "tier": 1,
     "championMetrics": {
@@ -1737,38 +1609,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
           }
         ],
-        "metric": {
-          "pickRate": 50.63,
-          "games": 6361,
-          "winRate": 59.85
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 14.68,
-          "games": 1845,
-          "winRate": 56.21
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -1782,11 +1646,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773144"
           ],
           "totalPrice": 1400,
-          "metric": {
-            "pickRate": 39.25,
-            "games": 3765,
-            "winRate": 58.8
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -1794,11 +1654,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "771055"
           ],
           "totalPrice": 1275,
-          "metric": {
-            "pickRate": 6.65,
-            "games": 638,
-            "winRate": 53.45
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -1807,22 +1663,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773006"
           ],
           "totalPrice": 900,
-          "metric": {
-            "pickRate": 94.7,
-            "games": 9460,
-            "winRate": 59.04
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773111"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 3.03,
-            "games": 303,
-            "winRate": 59.41
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -1833,11 +1681,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773031"
           ],
           "totalPrice": 9800,
-          "metric": {
-            "pickRate": 6.29,
-            "games": 683,
-            "winRate": 60.61
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -1846,11 +1690,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773085"
           ],
           "totalPrice": 8200,
-          "metric": {
-            "pickRate": 3.82,
-            "games": 415,
-            "winRate": 53.49
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -1859,11 +1699,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773124"
           ],
           "totalPrice": 8200,
-          "metric": {
-            "pickRate": 3.64,
-            "games": 395,
-            "winRate": 57.47
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -1872,11 +1708,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773091"
           ],
           "totalPrice": 7950,
-          "metric": {
-            "pickRate": 2.99,
-            "games": 325,
-            "winRate": 61.54
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -1885,11 +1717,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773109"
           ],
           "totalPrice": 9600,
-          "metric": {
-            "pickRate": 2.65,
-            "games": 288,
-            "winRate": 62.15
-          }
+          "metric": null
         }
       ]
     },
@@ -2414,11 +2242,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 60.01,
-          "games": 4316,
-          "winRate": 59.41
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -2443,11 +2267,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 4.27,
-          "games": 307,
-          "winRate": 55.7
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -2472,11 +2292,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 3.05,
-          "games": 219,
-          "winRate": 61.64
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -2501,11 +2317,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.89,
-          "games": 208,
-          "winRate": 63.94
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -2530,11 +2342,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.22,
-          "games": 160,
-          "winRate": 60
-        }
+        "metric": null
       }
     ]
   },
@@ -2542,8 +2350,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60036",
     "key": "drmundo",
     "name": "祖安狂人",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/drmundo/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/drmundo/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 4,
     "tier": 1,
     "championMetrics": {
@@ -2557,38 +2365,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 60.3,
-          "games": 6768,
-          "winRate": 59.96
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
           }
         ],
-        "metric": {
-          "pickRate": 14.48,
-          "games": 1625,
-          "winRate": 56.49
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -2603,11 +2403,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "771011"
           ],
           "totalPrice": 1180,
-          "metric": {
-            "pickRate": 14.32,
-            "games": 1216,
-            "winRate": 59.95
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -2615,11 +2411,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "771011"
           ],
           "totalPrice": 1325,
-          "metric": {
-            "pickRate": 8.95,
-            "games": 760,
-            "winRate": 60.66
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -2628,22 +2420,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773111"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 60.67,
-            "games": 4155,
-            "winRate": 61.3
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773047"
           ],
           "totalPrice": 1000,
-          "metric": {
-            "pickRate": 22.66,
-            "games": 1552,
-            "winRate": 57.28
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -2654,11 +2438,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773065"
           ],
           "totalPrice": 8400,
-          "metric": {
-            "pickRate": 10.45,
-            "games": 975,
-            "winRate": 61.74
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -2667,11 +2447,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773065"
           ],
           "totalPrice": 8400,
-          "metric": {
-            "pickRate": 5.06,
-            "games": 472,
-            "winRate": 59.11
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -2680,11 +2456,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773064"
           ],
           "totalPrice": 8360,
-          "metric": {
-            "pickRate": 3.86,
-            "games": 360,
-            "winRate": 60
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -2693,11 +2465,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773068"
           ],
           "totalPrice": 8400,
-          "metric": {
-            "pickRate": 3.82,
-            "games": 356,
-            "winRate": 64.61
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -2706,11 +2474,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773005"
           ],
           "totalPrice": 8050,
-          "metric": {
-            "pickRate": 2.92,
-            "games": 272,
-            "winRate": 64.71
-          }
+          "metric": null
         }
       ]
     },
@@ -3235,11 +2999,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 71.71,
-          "games": 6451,
-          "winRate": 59.67
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -3264,11 +3024,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.31,
-          "games": 208,
-          "winRate": 56.73
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -3293,11 +3049,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.27,
-          "games": 204,
-          "winRate": 59.8
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -3322,11 +3074,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.01,
-          "games": 181,
-          "winRate": 61.33
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -3351,11 +3099,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "W"
         ],
-        "metric": {
-          "pickRate": 1.7,
-          "games": 153,
-          "winRate": 57.52
-        }
+        "metric": null
       }
     ]
   },
@@ -3363,8 +3107,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60015",
     "key": "sivir",
     "name": "战争女神",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/sivir/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/sivir/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 5,
     "tier": 1,
     "championMetrics": {
@@ -3378,38 +3122,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
           }
         ],
-        "metric": {
-          "pickRate": 41.02,
-          "games": 4844,
-          "winRate": 57.8
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 15.82,
-          "games": 1868,
-          "winRate": 56.69
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -3424,22 +3160,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773093"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 25.65,
-            "games": 2296,
-            "winRate": 57.62
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773086"
           ],
           "totalPrice": 1175,
-          "metric": {
-            "pickRate": 11.75,
-            "games": 1052,
-            "winRate": 59.22
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -3448,22 +3176,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773006"
           ],
           "totalPrice": 900,
-          "metric": {
-            "pickRate": 94.15,
-            "games": 9030,
-            "winRate": 58.07
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773111"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 2.68,
-            "games": 257,
-            "winRate": 54.47
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -3474,11 +3194,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773035"
           ],
           "totalPrice": 8600,
-          "metric": {
-            "pickRate": 13.48,
-            "games": 1469,
-            "winRate": 59.63
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -3487,11 +3203,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773072"
           ],
           "totalPrice": 9500,
-          "metric": {
-            "pickRate": 8.91,
-            "games": 971,
-            "winRate": 61.17
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -3500,11 +3212,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773046"
           ],
           "totalPrice": 9100,
-          "metric": {
-            "pickRate": 5.23,
-            "games": 570,
-            "winRate": 58.95
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -3513,11 +3221,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773035"
           ],
           "totalPrice": 8000,
-          "metric": {
-            "pickRate": 3.19,
-            "games": 348,
-            "winRate": 47.7
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -3526,11 +3230,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773031"
           ],
           "totalPrice": 9500,
-          "metric": {
-            "pickRate": 3.08,
-            "games": 336,
-            "winRate": 60.42
-          }
+          "metric": null
         }
       ]
     },
@@ -4055,11 +3755,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 71.7,
-          "games": 6712,
-          "winRate": 57.4
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -4084,11 +3780,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 1.91,
-          "games": 179,
-          "winRate": 55.87
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -4113,11 +3805,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 1.85,
-          "games": 173,
-          "winRate": 54.91
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -4142,11 +3830,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "E"
         ],
-        "metric": {
-          "pickRate": 1.54,
-          "games": 144,
-          "winRate": 62.5
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -4171,11 +3855,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "E"
         ],
-        "metric": {
-          "pickRate": 1.42,
-          "games": 133,
-          "winRate": 64.66
-        }
+        "metric": null
       }
     ]
   },
@@ -4183,8 +3863,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60022",
     "key": "ashe",
     "name": "寒冰射手",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/ashe/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/ashe/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 6,
     "tier": 2,
     "championMetrics": {
@@ -4198,38 +3878,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
           }
         ],
-        "metric": {
-          "pickRate": 44.57,
-          "games": 6107,
-          "winRate": 55.15
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 15.03,
-          "games": 2060,
-          "winRate": 54.22
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -4243,11 +3915,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773144"
           ],
           "totalPrice": 1400,
-          "metric": {
-            "pickRate": 25.26,
-            "games": 2615,
-            "winRate": 56.52
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -4255,11 +3923,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "771043"
           ],
           "totalPrice": 1300,
-          "metric": {
-            "pickRate": 5.89,
-            "games": 610,
-            "winRate": 59.67
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -4268,22 +3932,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773006"
           ],
           "totalPrice": 900,
-          "metric": {
-            "pickRate": 88.79,
-            "games": 9296,
-            "winRate": 56.19
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773158"
           ],
           "totalPrice": 1000,
-          "metric": {
-            "pickRate": 4.68,
-            "games": 490,
-            "winRate": 53.67
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -4294,11 +3950,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773031"
           ],
           "totalPrice": 9400,
-          "metric": {
-            "pickRate": 5.3,
-            "games": 643,
-            "winRate": 55.52
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -4307,11 +3959,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773124"
           ],
           "totalPrice": 8200,
-          "metric": {
-            "pickRate": 4.13,
-            "games": 501,
-            "winRate": 55.29
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -4320,11 +3968,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773109"
           ],
           "totalPrice": 9400,
-          "metric": {
-            "pickRate": 3.35,
-            "games": 406,
-            "winRate": 64.29
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -4333,11 +3977,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773091"
           ],
           "totalPrice": 7750,
-          "metric": {
-            "pickRate": 2.22,
-            "games": 269,
-            "winRate": 51.3
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -4346,11 +3986,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773031"
           ],
           "totalPrice": 9800,
-          "metric": {
-            "pickRate": 2.18,
-            "games": 265,
-            "winRate": 56.6
-          }
+          "metric": null
         }
       ]
     },
@@ -4875,11 +4511,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 53.86,
-          "games": 4720,
-          "winRate": 56
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -4904,11 +4536,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 4.52,
-          "games": 396,
-          "winRate": 51.26
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -4933,11 +4561,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.94,
-          "games": 258,
-          "winRate": 54.26
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -4962,11 +4586,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.37,
-          "games": 208,
-          "winRate": 56.73
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -4991,11 +4611,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 1.88,
-          "games": 165,
-          "winRate": 61.21
-        }
+        "metric": null
       }
     ]
   },
@@ -5003,8 +4619,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60063",
     "key": "brand",
     "name": "复仇焰魂",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/brand/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/brand/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 7,
     "tier": 2,
     "championMetrics": {
@@ -5018,38 +4634,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 28.48,
-          "games": 3783,
-          "winRate": 55.35
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
           }
         ],
-        "metric": {
-          "pickRate": 22.54,
-          "games": 2994,
-          "winRate": 56.28
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -5065,11 +4673,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "771052"
           ],
           "totalPrice": 1345,
-          "metric": {
-            "pickRate": 15.13,
-            "games": 1531,
-            "winRate": 55.39
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -5078,11 +4682,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "771056"
           ],
           "totalPrice": 1310,
-          "metric": {
-            "pickRate": 8.48,
-            "games": 858,
-            "winRate": 51.86
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -5091,22 +4691,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773020"
           ],
           "totalPrice": 1100,
-          "metric": {
-            "pickRate": 88.06,
-            "games": 7442,
-            "winRate": 56.58
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773158"
           ],
           "totalPrice": 1000,
-          "metric": {
-            "pickRate": 7.27,
-            "games": 614,
-            "winRate": 55.7
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -5117,11 +4709,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773116"
           ],
           "totalPrice": 9100,
-          "metric": {
-            "pickRate": 2.99,
-            "games": 362,
-            "winRate": 57.18
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -5130,11 +4718,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773116"
           ],
           "totalPrice": 8095,
-          "metric": {
-            "pickRate": 2.89,
-            "games": 350,
-            "winRate": 51.71
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -5143,11 +4727,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773116"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 2.66,
-            "games": 322,
-            "winRate": 55.28
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -5156,11 +4736,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": 9100,
-          "metric": {
-            "pickRate": 2.34,
-            "games": 283,
-            "winRate": 58.3
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -5169,11 +4745,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 2.2,
-            "games": 266,
-            "winRate": 56.77
-          }
+          "metric": null
         }
       ]
     },
@@ -5698,11 +5270,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "Q",
           "Q"
         ],
-        "metric": {
-          "pickRate": 57.07,
-          "games": 4923,
-          "winRate": 54.19
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -5727,11 +5295,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "Q"
         ],
-        "metric": {
-          "pickRate": 3.08,
-          "games": 266,
-          "winRate": 49.25
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -5756,11 +5320,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "Q",
           "Q"
         ],
-        "metric": {
-          "pickRate": 2.5,
-          "games": 216,
-          "winRate": 55.09
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -5785,11 +5345,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "Q",
           "Q"
         ],
-        "metric": {
-          "pickRate": 2.48,
-          "games": 214,
-          "winRate": 56.07
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -5814,11 +5370,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "Q"
         ],
-        "metric": {
-          "pickRate": 2.32,
-          "games": 200,
-          "winRate": 56.5
-        }
+        "metric": null
       }
     ]
   },
@@ -5826,8 +5378,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60045",
     "key": "veigar",
     "name": "邪恶小法师",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/veigar/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/veigar/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 8,
     "tier": 2,
     "championMetrics": {
@@ -5841,38 +5393,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 25.44,
-          "games": 3387,
-          "winRate": 55.21
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
           }
         ],
-        "metric": {
-          "pickRate": 23.97,
-          "games": 3191,
-          "winRate": 54.34
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -5887,11 +5431,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773070"
           ],
           "totalPrice": 1025,
-          "metric": {
-            "pickRate": 5.48,
-            "games": 549,
-            "winRate": 54.46
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -5899,11 +5439,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "771056"
           ],
           "totalPrice": 1260,
-          "metric": {
-            "pickRate": 5.29,
-            "games": 530,
-            "winRate": 52.08
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -5912,22 +5448,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773020"
           ],
           "totalPrice": 1100,
-          "metric": {
-            "pickRate": 84.37,
-            "games": 7201,
-            "winRate": 55.58
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773158"
           ],
           "totalPrice": 1000,
-          "metric": {
-            "pickRate": 9.48,
-            "games": 809,
-            "winRate": 52.04
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -5938,11 +5466,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 4.09,
-            "games": 469,
-            "winRate": 51.6
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -5951,11 +5475,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773135"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 3.88,
-            "games": 445,
-            "winRate": 55.28
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -5964,11 +5484,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 2.58,
-            "games": 296,
-            "winRate": 55.74
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -5977,11 +5493,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773128"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 2.33,
-            "games": 267,
-            "winRate": 53.56
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -5990,11 +5502,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773135"
           ],
           "totalPrice": 8695,
-          "metric": {
-            "pickRate": 2.14,
-            "games": 246,
-            "winRate": 52.44
-          }
+          "metric": null
         }
       ]
     },
@@ -6519,11 +6027,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 67.74,
-          "games": 6655,
-          "winRate": 55.04
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -6548,11 +6052,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.64,
-          "games": 259,
-          "winRate": 55.21
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -6577,11 +6077,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.41,
-          "games": 237,
-          "winRate": 57.38
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -6606,11 +6102,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.05,
-          "games": 201,
-          "winRate": 55.22
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -6635,11 +6127,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.01,
-          "games": 197,
-          "winRate": 56.35
-        }
+        "metric": null
       }
     ]
   },
@@ -6647,8 +6135,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60027",
     "key": "singed",
     "name": "炼金术士",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/singed/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/singed/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 9,
     "tier": 2,
     "championMetrics": {
@@ -6662,38 +6150,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 40.38,
-          "games": 3488,
-          "winRate": 55.73
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
           }
         ],
-        "metric": {
-          "pickRate": 29.76,
-          "games": 2571,
-          "winRate": 57.41
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -6707,11 +6187,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773010"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 34.99,
-            "games": 2304,
-            "winRate": 55.6
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -6719,11 +6195,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "771026"
           ],
           "totalPrice": 1185,
-          "metric": {
-            "pickRate": 7.08,
-            "games": 466,
-            "winRate": 58.37
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -6732,22 +6204,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773009"
           ],
           "totalPrice": 1000,
-          "metric": {
-            "pickRate": 56.4,
-            "games": 4048,
-            "winRate": 56.42
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773111"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 32.51,
-            "games": 2333,
-            "winRate": 57.91
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -6758,11 +6222,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773151"
           ],
           "totalPrice": 8600,
-          "metric": {
-            "pickRate": 19.66,
-            "games": 1462,
-            "winRate": 58.82
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -6771,11 +6231,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773116"
           ],
           "totalPrice": 8600,
-          "metric": {
-            "pickRate": 6.64,
-            "games": 494,
-            "winRate": 58.1
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -6784,11 +6240,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773151"
           ],
           "totalPrice": 8600,
-          "metric": {
-            "pickRate": 2.12,
-            "games": 158,
-            "winRate": 58.86
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -6797,11 +6249,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773001"
           ],
           "totalPrice": 8260,
-          "metric": {
-            "pickRate": 1.94,
-            "games": 144,
-            "winRate": 59.03
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -6810,11 +6258,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773151"
           ],
           "totalPrice": 8260,
-          "metric": {
-            "pickRate": 1.92,
-            "games": 143,
-            "winRate": 60.84
-          }
+          "metric": null
         }
       ]
     },
@@ -7339,11 +6783,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 73.68,
-          "games": 5382,
-          "winRate": 57.06
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -7368,11 +6808,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.77,
-          "games": 202,
-          "winRate": 50
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -7397,11 +6833,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.7,
-          "games": 197,
-          "winRate": 51.78
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -7426,11 +6858,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 1.34,
-          "games": 98,
-          "winRate": 57.14
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -7455,11 +6883,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 1.29,
-          "games": 94,
-          "winRate": 59.57
-        }
+        "metric": null
       }
     ]
   },
@@ -7467,8 +6891,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60021",
     "key": "missfortune",
     "name": "赏金猎人",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/missfortune/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/missfortune/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 10,
     "tier": 2,
     "championMetrics": {
@@ -7482,38 +6906,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
           }
         ],
-        "metric": {
-          "pickRate": 31.47,
-          "games": 4303,
-          "winRate": 54.15
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 17.18,
-          "games": 2350,
-          "winRate": 51.4
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -7528,22 +6944,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "771037"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 6.29,
-            "games": 647,
-            "winRate": 56.11
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773134"
           ],
           "totalPrice": 1337,
-          "metric": {
-            "pickRate": 5.45,
-            "games": 561,
-            "winRate": 54.37
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -7552,22 +6960,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773006"
           ],
           "totalPrice": 900,
-          "metric": {
-            "pickRate": 70.08,
-            "games": 6489,
-            "winRate": 55.17
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773020"
           ],
           "totalPrice": 1100,
-          "metric": {
-            "pickRate": 12.51,
-            "games": 1158,
-            "winRate": 50.86
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -7578,11 +6978,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773071"
           ],
           "totalPrice": 9500,
-          "metric": {
-            "pickRate": 3.49,
-            "games": 427,
-            "winRate": 55.5
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -7591,11 +6987,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773072"
           ],
           "totalPrice": 9700,
-          "metric": {
-            "pickRate": 2.56,
-            "games": 313,
-            "winRate": 59.42
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -7604,11 +6996,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773031"
           ],
           "totalPrice": 9800,
-          "metric": {
-            "pickRate": 1.42,
-            "games": 174,
-            "winRate": 47.7
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -7617,11 +7005,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773035"
           ],
           "totalPrice": 8800,
-          "metric": {
-            "pickRate": 1.22,
-            "games": 150,
-            "winRate": 56
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -7630,11 +7014,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773078"
           ],
           "totalPrice": 10128,
-          "metric": {
-            "pickRate": 1.13,
-            "games": 138,
-            "winRate": 45.65
-          }
+          "metric": null
         }
       ]
     },
@@ -8159,11 +7539,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 61.81,
-          "games": 4476,
-          "winRate": 55.36
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -8188,11 +7564,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "E"
         ],
-        "metric": {
-          "pickRate": 3.38,
-          "games": 245,
-          "winRate": 55.51
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -8217,11 +7589,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.82,
-          "games": 204,
-          "winRate": 52.45
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -8246,11 +7614,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.79,
-          "games": 202,
-          "winRate": 57.43
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -8275,11 +7639,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.11,
-          "games": 153,
-          "winRate": 56.86
-        }
+        "metric": null
       }
     ]
   },
@@ -8287,8 +7647,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60037",
     "key": "sona",
     "name": "琴瑟仙女",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/sona/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/sona/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 11,
     "tier": 2,
     "championMetrics": {
@@ -8302,38 +7662,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHeal.png"
           }
         ],
-        "metric": {
-          "pickRate": 26.33,
-          "games": 2456,
-          "winRate": 54.32
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerMana",
             "name": "清晰术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerMana.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerMana.png"
           }
         ],
-        "metric": {
-          "pickRate": 18.33,
-          "games": 1710,
-          "winRate": 57.08
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -8350,11 +7702,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773098"
           ],
           "totalPrice": 1305,
-          "metric": {
-            "pickRate": 5.08,
-            "games": 349,
-            "winRate": 56.73
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -8362,11 +7710,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773010"
           ],
           "totalPrice": 1380,
-          "metric": {
-            "pickRate": 4.77,
-            "games": 328,
-            "winRate": 51.22
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -8375,22 +7719,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773158"
           ],
           "totalPrice": 1000,
-          "metric": {
-            "pickRate": 65.53,
-            "games": 3713,
-            "winRate": 57.58
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773020"
           ],
           "totalPrice": 1100,
-          "metric": {
-            "pickRate": 21.07,
-            "games": 1194,
-            "winRate": 51.51
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -8401,11 +7737,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773222"
           ],
           "totalPrice": 6500,
-          "metric": {
-            "pickRate": 1.22,
-            "games": 103,
-            "winRate": 39.81
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -8414,11 +7746,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773222"
           ],
           "totalPrice": 6500,
-          "metric": {
-            "pickRate": 0.91,
-            "games": 77,
-            "winRate": 48.05
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -8427,11 +7755,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773504"
           ],
           "totalPrice": 5950,
-          "metric": {
-            "pickRate": 0.72,
-            "games": 61,
-            "winRate": 59.02
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -8440,11 +7764,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773084"
           ],
           "totalPrice": 5350,
-          "metric": {
-            "pickRate": 0.71,
-            "games": 60,
-            "winRate": 61.67
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -8453,11 +7773,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773222"
           ],
           "totalPrice": 6800,
-          "metric": {
-            "pickRate": 0.62,
-            "games": 52,
-            "winRate": 57.69
-          }
+          "metric": null
         }
       ]
     },
@@ -8982,11 +8298,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 62.79,
-          "games": 3534,
-          "winRate": 55.35
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -9011,11 +8323,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 1.97,
-          "games": 111,
-          "winRate": 54.05
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -9040,11 +8348,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 1.9,
-          "games": 107,
-          "winRate": 56.07
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -9069,11 +8373,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 1.65,
-          "games": 93,
-          "winRate": 51.61
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -9098,11 +8398,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "E"
         ],
-        "metric": {
-          "pickRate": 1.65,
-          "games": 93,
-          "winRate": 48.39
-        }
+        "metric": null
       }
     ]
   },
@@ -9110,8 +8406,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60014",
     "key": "sion",
     "name": "亡灵战神",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/sion/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/sion/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 12,
     "tier": 2,
     "championMetrics": {
@@ -9125,38 +8421,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 67.98,
-          "games": 6880,
-          "winRate": 53.9
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHeal.png"
           }
         ],
-        "metric": {
-          "pickRate": 9.79,
-          "games": 991,
-          "winRate": 53.88
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -9171,11 +8459,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "771011"
           ],
           "totalPrice": 1180,
-          "metric": {
-            "pickRate": 9.33,
-            "games": 704,
-            "winRate": 53.55
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -9183,11 +8467,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "771011"
           ],
           "totalPrice": 1325,
-          "metric": {
-            "pickRate": 8.42,
-            "games": 635,
-            "winRate": 56.85
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -9196,22 +8476,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773111"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 61.85,
-            "games": 3707,
-            "winRate": 57.14
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773047"
           ],
           "totalPrice": 1000,
-          "metric": {
-            "pickRate": 18.79,
-            "games": 1126,
-            "winRate": 51.07
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -9222,11 +8494,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773065"
           ],
           "totalPrice": 8400,
-          "metric": {
-            "pickRate": 4.78,
-            "games": 390,
-            "winRate": 53.85
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -9235,11 +8503,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773065"
           ],
           "totalPrice": 8400,
-          "metric": {
-            "pickRate": 3.64,
-            "games": 297,
-            "winRate": 57.91
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -9248,11 +8512,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773065"
           ],
           "totalPrice": 8300,
-          "metric": {
-            "pickRate": 2.26,
-            "games": 184,
-            "winRate": 52.72
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -9261,11 +8521,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773110"
           ],
           "totalPrice": 8550,
-          "metric": {
-            "pickRate": 1.95,
-            "games": 159,
-            "winRate": 56.6
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -9274,11 +8530,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773064"
           ],
           "totalPrice": 8360,
-          "metric": {
-            "pickRate": 1.48,
-            "games": 121,
-            "winRate": 52.89
-          }
+          "metric": null
         }
       ]
     },
@@ -9803,11 +9055,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 66.77,
-          "games": 5328,
-          "winRate": 54.88
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -9832,11 +9080,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.93,
-          "games": 234,
-          "winRate": 44.02
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -9861,11 +9105,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.33,
-          "games": 186,
-          "winRate": 51.08
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -9890,11 +9130,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.21,
-          "games": 176,
-          "winRate": 52.84
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -9919,11 +9155,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.12,
-          "games": 169,
-          "winRate": 58.58
-        }
+        "metric": null
       }
     ]
   },
@@ -9931,8 +9163,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60017",
     "key": "teemo",
     "name": "迅捷斥候",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/teemo/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/teemo/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 13,
     "tier": 2,
     "championMetrics": {
@@ -9946,38 +9178,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
           }
         ],
-        "metric": {
-          "pickRate": 24.71,
-          "games": 3066,
-          "winRate": 53.1
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 24.68,
-          "games": 3063,
-          "winRate": 52.89
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -9991,11 +9215,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773101"
           ],
           "totalPrice": 1250,
-          "metric": {
-            "pickRate": 17.58,
-            "games": 1645,
-            "winRate": 52.46
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -10004,11 +9224,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "771052"
           ],
           "totalPrice": 1345,
-          "metric": {
-            "pickRate": 14.57,
-            "games": 1363,
-            "winRate": 56.57
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -10017,22 +9233,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773020"
           ],
           "totalPrice": 1100,
-          "metric": {
-            "pickRate": 52.49,
-            "games": 4652,
-            "winRate": 54.34
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773006"
           ],
           "totalPrice": 900,
-          "metric": {
-            "pickRate": 37.78,
-            "games": 3348,
-            "winRate": 52.33
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -10043,11 +9251,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": 8700,
-          "metric": {
-            "pickRate": 5.36,
-            "games": 613,
-            "winRate": 50.24
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -10056,11 +9260,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": 8700,
-          "metric": {
-            "pickRate": 4.68,
-            "games": 535,
-            "winRate": 52.34
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -10069,11 +9269,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773151"
           ],
           "totalPrice": 7435,
-          "metric": {
-            "pickRate": 2.73,
-            "games": 312,
-            "winRate": 53.21
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -10082,11 +9278,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773114"
           ],
           "totalPrice": 7435,
-          "metric": {
-            "pickRate": 2.61,
-            "games": 298,
-            "winRate": 56.71
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -10095,11 +9287,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": 8235,
-          "metric": {
-            "pickRate": 1.9,
-            "games": 217,
-            "winRate": 56.68
-          }
+          "metric": null
         }
       ]
     },
@@ -10624,11 +9812,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 61.55,
-          "games": 4156,
-          "winRate": 51.97
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -10653,11 +9837,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.5,
-          "games": 169,
-          "winRate": 50.89
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -10682,11 +9862,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 1.95,
-          "games": 132,
-          "winRate": 50
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -10711,11 +9887,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "W"
         ],
-        "metric": {
-          "pickRate": 1.66,
-          "games": 112,
-          "winRate": 50.89
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -10740,11 +9912,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 1.66,
-          "games": 112,
-          "winRate": 56.25
-        }
+        "metric": null
       }
     ]
   },
@@ -10752,8 +9920,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60018",
     "key": "tristana",
     "name": "麦林炮手",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/tristana/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/tristana/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 14,
     "tier": 2,
     "championMetrics": {
@@ -10767,38 +9935,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
           }
         ],
-        "metric": {
-          "pickRate": 30.76,
-          "games": 3826,
-          "winRate": 52.72
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 20.2,
-          "games": 2513,
-          "winRate": 52.09
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -10812,11 +9972,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773086"
           ],
           "totalPrice": 1175,
-          "metric": {
-            "pickRate": 13.36,
-            "games": 1258,
-            "winRate": 52.7
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -10824,11 +9980,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "771055"
           ],
           "totalPrice": 1350,
-          "metric": {
-            "pickRate": 8.62,
-            "games": 811,
-            "winRate": 51.17
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -10837,22 +9989,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773006"
           ],
           "totalPrice": 900,
-          "metric": {
-            "pickRate": 95.36,
-            "games": 8825,
-            "winRate": 53.7
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773111"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 1.67,
-            "games": 155,
-            "winRate": 51.61
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -10863,11 +10007,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773072"
           ],
           "totalPrice": 9500,
-          "metric": {
-            "pickRate": 3.82,
-            "games": 432,
-            "winRate": 60.42
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -10876,11 +10016,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773046"
           ],
           "totalPrice": 9100,
-          "metric": {
-            "pickRate": 3.55,
-            "games": 402,
-            "winRate": 57.96
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -10889,11 +10025,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773072"
           ],
           "totalPrice": 9500,
-          "metric": {
-            "pickRate": 3.15,
-            "games": 357,
-            "winRate": 59.66
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -10902,11 +10034,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773046"
           ],
           "totalPrice": 9100,
-          "metric": {
-            "pickRate": 3,
-            "games": 340,
-            "winRate": 52.94
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -10915,11 +10043,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773035"
           ],
           "totalPrice": 8600,
-          "metric": {
-            "pickRate": 2.95,
-            "games": 334,
-            "winRate": 58.08
-          }
+          "metric": null
         }
       ]
     },
@@ -11444,11 +10568,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 65.72,
-          "games": 5923,
-          "winRate": 54.16
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -11473,11 +10593,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 5.02,
-          "games": 452,
-          "winRate": 55.75
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -11502,11 +10618,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.53,
-          "games": 228,
-          "winRate": 51.32
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -11531,11 +10643,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.15,
-          "games": 194,
-          "winRate": 50.52
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -11560,11 +10668,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 1.59,
-          "games": 143,
-          "winRate": 51.05
-        }
+        "metric": null
       }
     ]
   },
@@ -11572,8 +10676,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60012",
     "key": "alistar",
     "name": "牛头酋长",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/alistar/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/alistar/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 15,
     "tier": 2,
     "championMetrics": {
@@ -11587,38 +10691,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 73.23,
-          "games": 6079,
-          "winRate": 54.65
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHeal.png"
           }
         ],
-        "metric": {
-          "pickRate": 8.5,
-          "games": 706,
-          "winRate": 49.43
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -11633,11 +10729,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773132"
           ],
           "totalPrice": 1265,
-          "metric": {
-            "pickRate": 8.73,
-            "games": 545,
-            "winRate": 54.31
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -11645,11 +10737,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "771011"
           ],
           "totalPrice": 1180,
-          "metric": {
-            "pickRate": 6.41,
-            "games": 400,
-            "winRate": 58.25
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -11658,22 +10746,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773111"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 58.83,
-            "games": 3304,
-            "winRate": 57.11
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773047"
           ],
           "totalPrice": 1000,
-          "metric": {
-            "pickRate": 16.95,
-            "games": 952,
-            "winRate": 52.84
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -11684,11 +10764,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773065"
           ],
           "totalPrice": 8700,
-          "metric": {
-            "pickRate": 2.76,
-            "games": 191,
-            "winRate": 53.93
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -11697,11 +10773,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773065"
           ],
           "totalPrice": 8700,
-          "metric": {
-            "pickRate": 1.85,
-            "games": 128,
-            "winRate": 60.94
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -11710,11 +10782,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773065"
           ],
           "totalPrice": 7975,
-          "metric": {
-            "pickRate": 1.44,
-            "games": 100,
-            "winRate": 49
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -11723,11 +10791,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773064"
           ],
           "totalPrice": 8360,
-          "metric": {
-            "pickRate": 1.4,
-            "games": 97,
-            "winRate": 63.92
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -11736,11 +10800,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773065"
           ],
           "totalPrice": 7975,
-          "metric": {
-            "pickRate": 1.2,
-            "games": 83,
-            "winRate": 55.42
-          }
+          "metric": null
         }
       ]
     },
@@ -12265,11 +11325,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 67.16,
-          "games": 4245,
-          "winRate": 54.82
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -12294,11 +11350,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.17,
-          "games": 137,
-          "winRate": 58.39
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -12323,11 +11375,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "E"
         ],
-        "metric": {
-          "pickRate": 1.84,
-          "games": 116,
-          "winRate": 57.76
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -12352,11 +11400,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "E"
         ],
-        "metric": {
-          "pickRate": 1.8,
-          "games": 114,
-          "winRate": 58.77
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -12381,11 +11425,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 1.72,
-          "games": 109,
-          "winRate": 47.71
-        }
+        "metric": null
       }
     ]
   },
@@ -12393,8 +11433,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60099",
     "key": "lux",
     "name": "光辉女郎",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/lux/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/lux/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 16,
     "tier": 2,
     "championMetrics": {
@@ -12408,38 +11448,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 19.72,
-          "games": 2638,
-          "winRate": 50.83
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
           }
         ],
-        "metric": {
-          "pickRate": 18.42,
-          "games": 2465,
-          "winRate": 49.86
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -12454,22 +11486,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773028"
           ],
           "totalPrice": 1280,
-          "metric": {
-            "pickRate": 5.05,
-            "games": 501,
-            "winRate": 50.7
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773041"
           ],
           "totalPrice": 1235,
-          "metric": {
-            "pickRate": 5,
-            "games": 496,
-            "winRate": 57.26
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -12478,22 +11502,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773020"
           ],
           "totalPrice": 1100,
-          "metric": {
-            "pickRate": 87.68,
-            "games": 7457,
-            "winRate": 52.11
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773158"
           ],
           "totalPrice": 1000,
-          "metric": {
-            "pickRate": 8.32,
-            "games": 708,
-            "winRate": 50.85
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -12504,11 +11520,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773135"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 4.42,
-            "games": 513,
-            "winRate": 46.59
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -12517,11 +11529,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773135"
           ],
           "totalPrice": 8195,
-          "metric": {
-            "pickRate": 3.07,
-            "games": 357,
-            "winRate": 56.02
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -12530,11 +11538,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773151"
           ],
           "totalPrice": 7795,
-          "metric": {
-            "pickRate": 2.55,
-            "games": 296,
-            "winRate": 48.31
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -12543,11 +11547,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773151"
           ],
           "totalPrice": 8800,
-          "metric": {
-            "pickRate": 1.88,
-            "games": 218,
-            "winRate": 56.42
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -12556,11 +11556,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 1.78,
-            "games": 207,
-            "winRate": 48.31
-          }
+          "metric": null
         }
       ]
     },
@@ -13085,11 +12081,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 61.46,
-          "games": 6325,
-          "winRate": 50.92
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -13114,11 +12106,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 4.68,
-          "games": 482,
-          "winRate": 53.73
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -13143,11 +12131,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 3.23,
-          "games": 332,
-          "winRate": 50
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -13172,11 +12156,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.11,
-          "games": 217,
-          "winRate": 48.39
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -13201,11 +12181,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.08,
-          "games": 214,
-          "winRate": 57.94
-        }
+        "metric": null
       }
     ]
   },
@@ -13213,8 +12189,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60044",
     "key": "taric",
     "name": "瓦洛兰之盾",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/taric/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/taric/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 17,
     "tier": 3,
     "championMetrics": {
@@ -13228,38 +12204,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 57.67,
-          "games": 2773,
-          "winRate": 54.67
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHeal.png"
           }
         ],
-        "metric": {
-          "pickRate": 11.92,
-          "games": 573,
-          "winRate": 50.96
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -13274,11 +12242,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773132"
           ],
           "totalPrice": 1265,
-          "metric": {
-            "pickRate": 9.63,
-            "games": 346,
-            "winRate": 52.31
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -13286,11 +12250,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "771011"
           ],
           "totalPrice": 1180,
-          "metric": {
-            "pickRate": 3.67,
-            "games": 132,
-            "winRate": 53.79
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -13299,22 +12259,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773111"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 64.91,
-            "games": 2024,
-            "winRate": 56.23
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773047"
           ],
           "totalPrice": 1000,
-          "metric": {
-            "pickRate": 18.31,
-            "games": 571,
-            "winRate": 53.42
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -13325,11 +12277,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773065"
           ],
           "totalPrice": 8700,
-          "metric": {
-            "pickRate": 2.01,
-            "games": 81,
-            "winRate": 64.2
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -13338,11 +12286,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773065"
           ],
           "totalPrice": 7925,
-          "metric": {
-            "pickRate": 1.86,
-            "games": 75,
-            "winRate": 48
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -13351,11 +12295,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773065"
           ],
           "totalPrice": 8700,
-          "metric": {
-            "pickRate": 1.69,
-            "games": 68,
-            "winRate": 64.71
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -13364,11 +12304,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773065"
           ],
           "totalPrice": 7975,
-          "metric": {
-            "pickRate": 1.64,
-            "games": 66,
-            "winRate": 45.45
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -13377,11 +12313,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773065"
           ],
           "totalPrice": 7925,
-          "metric": {
-            "pickRate": 1.52,
-            "games": 61,
-            "winRate": 52.46
-          }
+          "metric": null
         }
       ]
     },
@@ -13906,11 +12838,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 51.29,
-          "games": 1408,
-          "winRate": 56.39
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -13935,11 +12863,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 5.06,
-          "games": 139,
-          "winRate": 54.68
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -13964,11 +12888,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 3.9,
-          "games": 107,
-          "winRate": 40.19
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -13993,11 +12913,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 3.24,
-          "games": 89,
-          "winRate": 52.81
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -14022,11 +12938,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 3.13,
-          "games": 86,
-          "winRate": 55.81
-        }
+        "metric": null
       }
     ]
   },
@@ -14034,8 +12946,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60029",
     "key": "twitch",
     "name": "瘟疫之源",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/twitch/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/twitch/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 18,
     "tier": 3,
     "championMetrics": {
@@ -14049,38 +12961,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
           }
         ],
-        "metric": {
-          "pickRate": 44.58,
-          "games": 5567,
-          "winRate": 52.65
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 15.09,
-          "games": 1885,
-          "winRate": 51.3
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -14094,11 +12998,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773144"
           ],
           "totalPrice": 1400,
-          "metric": {
-            "pickRate": 28,
-            "games": 2650,
-            "winRate": 54.45
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -14106,11 +13006,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "771043"
           ],
           "totalPrice": 1300,
-          "metric": {
-            "pickRate": 7.18,
-            "games": 679,
-            "winRate": 51.84
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -14119,22 +13015,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773006"
           ],
           "totalPrice": 900,
-          "metric": {
-            "pickRate": 94,
-            "games": 8431,
-            "winRate": 52.18
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773020"
           ],
           "totalPrice": 1100,
-          "metric": {
-            "pickRate": 2.19,
-            "games": 196,
-            "winRate": 47.45
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -14145,11 +13033,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773124"
           ],
           "totalPrice": 8200,
-          "metric": {
-            "pickRate": 7.21,
-            "games": 818,
-            "winRate": 54.28
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -14158,11 +13042,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773031"
           ],
           "totalPrice": 9400,
-          "metric": {
-            "pickRate": 6.54,
-            "games": 742,
-            "winRate": 52.7
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -14171,11 +13051,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773109"
           ],
           "totalPrice": 9400,
-          "metric": {
-            "pickRate": 3.94,
-            "games": 447,
-            "winRate": 59.06
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -14184,11 +13060,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773085"
           ],
           "totalPrice": 8200,
-          "metric": {
-            "pickRate": 2.57,
-            "games": 292,
-            "winRate": 51.37
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -14197,11 +13069,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773085"
           ],
           "totalPrice": 9400,
-          "metric": {
-            "pickRate": 2.26,
-            "games": 256,
-            "winRate": 59.38
-          }
+          "metric": null
         }
       ]
     },
@@ -14726,11 +13594,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 65.24,
-          "games": 5928,
-          "winRate": 53.17
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -14755,11 +13619,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 3.31,
-          "games": 301,
-          "winRate": 50.5
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -14784,11 +13644,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.36,
-          "games": 214,
-          "winRate": 54.67
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -14813,11 +13669,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.21,
-          "games": 201,
-          "winRate": 49.25
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -14842,11 +13694,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 1.98,
-          "games": 180,
-          "winRate": 51.67
-        }
+        "metric": null
       }
     ]
   },
@@ -14854,8 +13702,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60103",
     "key": "ahri",
     "name": "九尾妖狐",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/ahri/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/ahri/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 19,
     "tier": 3,
     "championMetrics": {
@@ -14869,38 +13717,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 38.84,
-          "games": 4849,
-          "winRate": 51.17
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerDot",
             "name": "引燃",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerDot.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerDot.png"
           }
         ],
-        "metric": {
-          "pickRate": 17.46,
-          "games": 2180,
-          "winRate": 52.11
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -14915,11 +13755,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773108"
           ],
           "totalPrice": 1145,
-          "metric": {
-            "pickRate": 7.68,
-            "games": 721,
-            "winRate": 52.15
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -14928,11 +13764,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "771056"
           ],
           "totalPrice": 1310,
-          "metric": {
-            "pickRate": 6.84,
-            "games": 642,
-            "winRate": 51.4
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -14941,22 +13773,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773020"
           ],
           "totalPrice": 1100,
-          "metric": {
-            "pickRate": 87.54,
-            "games": 7626,
-            "winRate": 51.82
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773158"
           ],
           "totalPrice": 1000,
-          "metric": {
-            "pickRate": 7.04,
-            "games": 613,
-            "winRate": 47.8
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -14967,11 +13791,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773135"
           ],
           "totalPrice": 8695,
-          "metric": {
-            "pickRate": 3,
-            "games": 322,
-            "winRate": 48.14
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -14980,11 +13800,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773165"
           ],
           "totalPrice": 7395,
-          "metric": {
-            "pickRate": 2.91,
-            "games": 312,
-            "winRate": 46.15
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -14993,11 +13809,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 2.7,
-            "games": 290,
-            "winRate": 44.14
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -15006,11 +13818,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": 8495,
-          "metric": {
-            "pickRate": 2.15,
-            "games": 231,
-            "winRate": 55.41
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -15019,11 +13827,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 2.04,
-            "games": 219,
-            "winRate": 49.32
-          }
+          "metric": null
         }
       ]
     },
@@ -15548,11 +14352,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 67.56,
-          "games": 5883,
-          "winRate": 50.98
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -15577,11 +14377,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "E"
         ],
-        "metric": {
-          "pickRate": 3.17,
-          "games": 276,
-          "winRate": 46.38
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -15606,11 +14402,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.51,
-          "games": 219,
-          "winRate": 55.25
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -15635,11 +14427,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.14,
-          "games": 186,
-          "winRate": 45.7
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -15664,11 +14452,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.09,
-          "games": 182,
-          "winRate": 57.14
-        }
+        "metric": null
       }
     ]
   },
@@ -15676,8 +14460,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60089",
     "key": "leona",
     "name": "曙光女神",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/leona/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/leona/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 20,
     "tier": 3,
     "championMetrics": {
@@ -15691,38 +14475,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 68.05,
-          "games": 6088,
-          "winRate": 51.51
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHeal.png"
           }
         ],
-        "metric": {
-          "pickRate": 10.14,
-          "games": 907,
-          "winRate": 50.94
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -15737,11 +14513,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773132"
           ],
           "totalPrice": 1265,
-          "metric": {
-            "pickRate": 10.96,
-            "games": 733,
-            "winRate": 51.3
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -15749,11 +14521,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "771011"
           ],
           "totalPrice": 1180,
-          "metric": {
-            "pickRate": 7.97,
-            "games": 533,
-            "winRate": 51.41
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -15762,22 +14530,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773111"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 69.4,
-            "games": 4108,
-            "winRate": 53.02
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773047"
           ],
           "totalPrice": 1000,
-          "metric": {
-            "pickRate": 22.27,
-            "games": 1318,
-            "winRate": 49.09
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -15788,11 +14548,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773065"
           ],
           "totalPrice": 8700,
-          "metric": {
-            "pickRate": 3.33,
-            "games": 262,
-            "winRate": 60.31
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -15801,11 +14557,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773065"
           ],
           "totalPrice": 7975,
-          "metric": {
-            "pickRate": 2.26,
-            "games": 178,
-            "winRate": 46.63
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -15814,11 +14566,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773065"
           ],
           "totalPrice": 8700,
-          "metric": {
-            "pickRate": 2.16,
-            "games": 170,
-            "winRate": 57.06
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -15827,11 +14575,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773083"
           ],
           "totalPrice": 8175,
-          "metric": {
-            "pickRate": 1.94,
-            "games": 153,
-            "winRate": 53.59
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -15840,11 +14584,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773065"
           ],
           "totalPrice": 7925,
-          "metric": {
-            "pickRate": 1.71,
-            "games": 135,
-            "winRate": 64.44
-          }
+          "metric": null
         }
       ]
     },
@@ -16369,11 +15109,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "Q",
           "Q"
         ],
-        "metric": {
-          "pickRate": 55.47,
-          "games": 2895,
-          "winRate": 51.05
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -16398,11 +15134,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "Q"
         ],
-        "metric": {
-          "pickRate": 3.07,
-          "games": 160,
-          "winRate": 51.25
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -16427,11 +15159,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "Q"
         ],
-        "metric": {
-          "pickRate": 2.4,
-          "games": 125,
-          "winRate": 57.6
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -16456,11 +15184,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "Q"
         ],
-        "metric": {
-          "pickRate": 2.26,
-          "games": 118,
-          "winRate": 55.08
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -16485,11 +15209,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "Q"
         ],
-        "metric": {
-          "pickRate": 2.18,
-          "games": 114,
-          "winRate": 51.75
-        }
+        "metric": null
       }
     ]
   },
@@ -16497,8 +15217,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60032",
     "key": "amumu",
     "name": "殇之木乃伊",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/amumu/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/amumu/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 21,
     "tier": 3,
     "championMetrics": {
@@ -16512,38 +15232,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 68.55,
-          "games": 6075,
-          "winRate": 51.9
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHeal.png"
           }
         ],
-        "metric": {
-          "pickRate": 11.45,
-          "games": 1015,
-          "winRate": 48.77
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -16558,22 +15270,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "771054"
           ],
           "totalPrice": 1160,
-          "metric": {
-            "pickRate": 8.56,
-            "games": 563,
-            "winRate": 55.42
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773138"
           ],
           "totalPrice": 1275,
-          "metric": {
-            "pickRate": 8.18,
-            "games": 538,
-            "winRate": 48.51
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -16582,22 +15286,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773111"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 61.24,
-            "games": 3456,
-            "winRate": 53.82
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773047"
           ],
           "totalPrice": 1000,
-          "metric": {
-            "pickRate": 17.83,
-            "games": 1006,
-            "winRate": 50.3
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -16608,11 +15304,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773001"
           ],
           "totalPrice": 8110,
-          "metric": {
-            "pickRate": 2.18,
-            "games": 169,
-            "winRate": 53.25
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -16621,11 +15313,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773110"
           ],
           "totalPrice": 8110,
-          "metric": {
-            "pickRate": 2.14,
-            "games": 166,
-            "winRate": 60.24
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -16634,11 +15322,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773083"
           ],
           "totalPrice": 8550,
-          "metric": {
-            "pickRate": 1.43,
-            "games": 111,
-            "winRate": 50.45
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -16647,11 +15331,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773001"
           ],
           "totalPrice": 8110,
-          "metric": {
-            "pickRate": 1.04,
-            "games": 81,
-            "winRate": 41.98
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -16660,11 +15340,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773083"
           ],
           "totalPrice": 8210,
-          "metric": {
-            "pickRate": 0.89,
-            "games": 69,
-            "winRate": 57.97
-          }
+          "metric": null
         }
       ]
     },
@@ -17189,11 +15865,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 65.29,
-          "games": 3416,
-          "winRate": 52.58
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -17218,11 +15890,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.05,
-          "games": 107,
-          "winRate": 54.21
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -17247,11 +15915,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "W"
         ],
-        "metric": {
-          "pickRate": 1.68,
-          "games": 88,
-          "winRate": 54.55
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -17276,11 +15940,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 1.66,
-          "games": 87,
-          "winRate": 45.98
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -17305,11 +15965,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "W"
         ],
-        "metric": {
-          "pickRate": 1.61,
-          "games": 84,
-          "winRate": 59.52
-        }
+        "metric": null
       }
     ]
   },
@@ -17317,8 +15973,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60013",
     "key": "ryze",
     "name": "符文法师",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/ryze/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/ryze/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 22,
     "tier": 3,
     "championMetrics": {
@@ -17332,38 +15988,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
           }
         ],
-        "metric": {
-          "pickRate": 45.82,
-          "games": 5172,
-          "winRate": 52.2
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 24.08,
-          "games": 2718,
-          "winRate": 50.33
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -17377,11 +16025,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773010"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 8.46,
-            "games": 731,
-            "winRate": 49.79
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -17389,11 +16033,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773070"
           ],
           "totalPrice": 1100,
-          "metric": {
-            "pickRate": 8.25,
-            "games": 713,
-            "winRate": 55.26
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -17402,22 +16042,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773020"
           ],
           "totalPrice": 1100,
-          "metric": {
-            "pickRate": 72.36,
-            "games": 5231,
-            "winRate": 51.73
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773158"
           ],
           "totalPrice": 1000,
-          "metric": {
-            "pickRate": 10.68,
-            "games": 772,
-            "winRate": 50.39
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -17429,11 +16061,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 6.09,
-            "games": 575,
-            "winRate": 57.57
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -17442,11 +16070,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 3.87,
-            "games": 366,
-            "winRate": 49.73
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -17455,11 +16079,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 3,
-            "games": 283,
-            "winRate": 48.06
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -17469,11 +16089,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773128"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 2.94,
-            "games": 278,
-            "winRate": 46.04
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -17482,11 +16098,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 2.42,
-            "games": 229,
-            "winRate": 52.84
-          }
+          "metric": null
         }
       ]
     },
@@ -18011,11 +16623,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 69.31,
-          "games": 6412,
-          "winRate": 52.39
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -18040,11 +16648,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 3.69,
-          "games": 341,
-          "winRate": 55.72
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -18069,11 +16673,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.4,
-          "games": 222,
-          "winRate": 50.9
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -18098,11 +16698,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 1.39,
-          "games": 129,
-          "winRate": 44.19
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -18127,11 +16723,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 1.32,
-          "games": 122,
-          "winRate": 49.18
-        }
+        "metric": null
       }
     ]
   },
@@ -18139,8 +16731,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60074",
     "key": "heimerdinger",
     "name": "大发明家",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/heimerdinger/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/heimerdinger/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 23,
     "tier": 3,
     "championMetrics": {
@@ -18154,38 +16746,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 22.7,
-          "games": 2238,
-          "winRate": 51.16
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
           }
         ],
-        "metric": {
-          "pickRate": 19.96,
-          "games": 1967,
-          "winRate": 48.04
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -18201,11 +16785,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "771052"
           ],
           "totalPrice": 1345,
-          "metric": {
-            "pickRate": 9.48,
-            "games": 702,
-            "winRate": 50
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -18214,11 +16794,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "771056"
           ],
           "totalPrice": 1310,
-          "metric": {
-            "pickRate": 8.41,
-            "games": 623,
-            "winRate": 49.76
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -18227,22 +16803,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773020"
           ],
           "totalPrice": 1100,
-          "metric": {
-            "pickRate": 85.88,
-            "games": 4901,
-            "winRate": 50.5
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773158"
           ],
           "totalPrice": 1000,
-          "metric": {
-            "pickRate": 6.85,
-            "games": 391,
-            "winRate": 51.66
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -18253,11 +16821,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773116"
           ],
           "totalPrice": 8095,
-          "metric": {
-            "pickRate": 4.33,
-            "games": 375,
-            "winRate": 50.67
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -18266,11 +16830,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773116"
           ],
           "totalPrice": 9100,
-          "metric": {
-            "pickRate": 2.92,
-            "games": 253,
-            "winRate": 54.15
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -18279,11 +16839,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 2.77,
-            "games": 240,
-            "winRate": 51.25
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -18292,11 +16848,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773116"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 2.07,
-            "games": 179,
-            "winRate": 55.31
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -18305,11 +16857,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": 9100,
-          "metric": {
-            "pickRate": 1.99,
-            "games": 172,
-            "winRate": 53.49
-          }
+          "metric": null
         }
       ]
     },
@@ -18834,11 +17382,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 64.44,
-          "games": 4639,
-          "winRate": 50.1
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -18863,11 +17407,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.19,
-          "games": 158,
-          "winRate": 62.03
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -18892,11 +17432,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.14,
-          "games": 154,
-          "winRate": 52.6
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -18921,11 +17457,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "E"
         ],
-        "metric": {
-          "pickRate": 1.93,
-          "games": 139,
-          "winRate": 55.4
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -18950,11 +17482,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "E"
         ],
-        "metric": {
-          "pickRate": 1.89,
-          "games": 136,
-          "winRate": 49.26
-        }
+        "metric": null
       }
     ]
   },
@@ -18962,8 +17490,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60001",
     "key": "annie",
     "name": "黑暗之女",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/annie/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/annie/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 24,
     "tier": 3,
     "championMetrics": {
@@ -18977,38 +17505,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 48.29,
-          "games": 4832,
-          "winRate": 51.72
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerDot",
             "name": "引燃",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerDot.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerDot.png"
           }
         ],
-        "metric": {
-          "pickRate": 13.64,
-          "games": 1365,
-          "winRate": 50.26
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -19024,11 +17544,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "771056"
           ],
           "totalPrice": 1310,
-          "metric": {
-            "pickRate": 6.91,
-            "games": 525,
-            "winRate": 50.48
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -19036,11 +17552,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773108"
           ],
           "totalPrice": 1145,
-          "metric": {
-            "pickRate": 6.65,
-            "games": 505,
-            "winRate": 48.51
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -19049,22 +17561,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773020"
           ],
           "totalPrice": 1100,
-          "metric": {
-            "pickRate": 85.93,
-            "games": 5949,
-            "winRate": 51.3
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773158"
           ],
           "totalPrice": 1000,
-          "metric": {
-            "pickRate": 6.49,
-            "games": 449,
-            "winRate": 53.01
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -19075,11 +17579,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 2.76,
-            "games": 234,
-            "winRate": 52.99
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -19088,11 +17588,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773165"
           ],
           "totalPrice": 7395,
-          "metric": {
-            "pickRate": 2.61,
-            "games": 221,
-            "winRate": 46.61
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -19101,11 +17597,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773135"
           ],
           "totalPrice": 8695,
-          "metric": {
-            "pickRate": 2.5,
-            "games": 212,
-            "winRate": 51.42
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -19114,11 +17606,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": 8495,
-          "metric": {
-            "pickRate": 2.03,
-            "games": 172,
-            "winRate": 54.65
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -19127,11 +17615,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": 9300,
-          "metric": {
-            "pickRate": 1.74,
-            "games": 147,
-            "winRate": 46.94
-          }
+          "metric": null
         }
       ]
     },
@@ -19656,11 +18140,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 65.97,
-          "games": 5138,
-          "winRate": 51.42
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -19685,11 +18165,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.59,
-          "games": 202,
-          "winRate": 51.49
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -19714,11 +18190,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.57,
-          "games": 200,
-          "winRate": 50
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -19743,11 +18215,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.56,
-          "games": 199,
-          "winRate": 44.22
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -19772,11 +18240,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.11,
-          "games": 164,
-          "winRate": 55.49
-        }
+        "metric": null
       }
     ]
   },
@@ -19784,8 +18248,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60090",
     "key": "malzahar",
     "name": "虚空先知",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/malzahar/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/malzahar/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 25,
     "tier": 3,
     "championMetrics": {
@@ -19799,38 +18263,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 24.87,
-          "games": 2963,
-          "winRate": 48.9
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
           }
         ],
-        "metric": {
-          "pickRate": 23.79,
-          "games": 2835,
-          "winRate": 52.06
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -19846,11 +18302,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "771052"
           ],
           "totalPrice": 1345,
-          "metric": {
-            "pickRate": 10.6,
-            "games": 949,
-            "winRate": 50.16
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -19859,11 +18311,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "771056"
           ],
           "totalPrice": 1310,
-          "metric": {
-            "pickRate": 8.41,
-            "games": 753,
-            "winRate": 47.94
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -19872,22 +18320,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773020"
           ],
           "totalPrice": 1100,
-          "metric": {
-            "pickRate": 88.87,
-            "games": 6680,
-            "winRate": 51.92
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773158"
           ],
           "totalPrice": 1000,
-          "metric": {
-            "pickRate": 6.27,
-            "games": 471,
-            "winRate": 52.44
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -19898,11 +18338,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 3.06,
-            "games": 328,
-            "winRate": 49.7
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -19911,11 +18347,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773116"
           ],
           "totalPrice": 8095,
-          "metric": {
-            "pickRate": 2.83,
-            "games": 303,
-            "winRate": 47.52
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -19924,11 +18356,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773116"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 2.69,
-            "games": 288,
-            "winRate": 46.18
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -19937,11 +18365,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773116"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 2.31,
-            "games": 248,
-            "winRate": 47.18
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -19950,11 +18374,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 2.01,
-            "games": 215,
-            "winRate": 56.74
-          }
+          "metric": null
         }
       ]
     },
@@ -20479,11 +18899,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 60,
-          "games": 5122,
-          "winRate": 51.17
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -20508,11 +18924,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 7.72,
-          "games": 659,
-          "winRate": 47.04
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -20537,11 +18949,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.37,
-          "games": 202,
-          "winRate": 53.47
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -20566,11 +18974,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 1.75,
-          "games": 149,
-          "winRate": 48.32
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -20595,11 +18999,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 1.73,
-          "games": 148,
-          "winRate": 53.38
-        }
+        "metric": null
       }
     ]
   },
@@ -20607,8 +19007,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60009",
     "key": "fiddlesticks",
     "name": "远古恐惧",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/fiddlesticks/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/fiddlesticks/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 26,
     "tier": 3,
     "championMetrics": {
@@ -20622,38 +19022,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 64.02,
-          "games": 6919,
-          "winRate": 50.6
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHeal.png"
           }
         ],
-        "metric": {
-          "pickRate": 9.66,
-          "games": 1044,
-          "winRate": 47.13
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -20669,11 +19061,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "771052"
           ],
           "totalPrice": 1345,
-          "metric": {
-            "pickRate": 10.95,
-            "games": 888,
-            "winRate": 54.5
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -20682,11 +19070,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "771056"
           ],
           "totalPrice": 1310,
-          "metric": {
-            "pickRate": 6.19,
-            "games": 502,
-            "winRate": 48.8
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -20695,22 +19079,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773020"
           ],
           "totalPrice": 1100,
-          "metric": {
-            "pickRate": 84.83,
-            "games": 6045,
-            "winRate": 51.15
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773158"
           ],
           "totalPrice": 1000,
-          "metric": {
-            "pickRate": 7.18,
-            "games": 512,
-            "winRate": 47.07
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -20721,11 +19097,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": 9300,
-          "metric": {
-            "pickRate": 5.22,
-            "games": 483,
-            "winRate": 49.28
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -20734,11 +19106,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": 9300,
-          "metric": {
-            "pickRate": 3.98,
-            "games": 368,
-            "winRate": 52.72
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -20747,11 +19115,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773135"
           ],
           "totalPrice": 8295,
-          "metric": {
-            "pickRate": 3.51,
-            "games": 325,
-            "winRate": 46.77
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -20760,11 +19124,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773135"
           ],
           "totalPrice": 8495,
-          "metric": {
-            "pickRate": 2.19,
-            "games": 203,
-            "winRate": 52.71
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -20773,11 +19133,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773135"
           ],
           "totalPrice": 8295,
-          "metric": {
-            "pickRate": 2.07,
-            "games": 191,
-            "winRate": 43.46
-          }
+          "metric": null
         }
       ]
     },
@@ -21302,11 +19658,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 55.95,
-          "games": 3861,
-          "winRate": 49.44
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -21331,11 +19683,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "Q",
           "E"
         ],
-        "metric": {
-          "pickRate": 3.43,
-          "games": 237,
-          "winRate": 54.01
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -21360,11 +19708,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "Q",
           "E"
         ],
-        "metric": {
-          "pickRate": 3.14,
-          "games": 217,
-          "winRate": 53
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -21389,11 +19733,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.93,
-          "games": 202,
-          "winRate": 49.5
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -21418,11 +19758,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "Q",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.67,
-          "games": 184,
-          "winRate": 51.63
-        }
+        "metric": null
       }
     ]
   },
@@ -21430,8 +19766,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60054",
     "key": "malphite",
     "name": "熔岩巨兽",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/malphite/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/malphite/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 27,
     "tier": 3,
     "championMetrics": {
@@ -21445,38 +19781,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 66.46,
-          "games": 7900,
-          "winRate": 49.97
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerDot",
             "name": "引燃",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerDot.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerDot.png"
           }
         ],
-        "metric": {
-          "pickRate": 9.86,
-          "games": 1172,
-          "winRate": 49.83
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -21491,11 +19819,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773108"
           ],
           "totalPrice": 1145,
-          "metric": {
-            "pickRate": 5.34,
-            "games": 463,
-            "winRate": 46.44
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -21503,11 +19827,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "771011"
           ],
           "totalPrice": 1325,
-          "metric": {
-            "pickRate": 4.27,
-            "games": 370,
-            "winRate": 52.7
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -21516,22 +19836,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773020"
           ],
           "totalPrice": 1100,
-          "metric": {
-            "pickRate": 38.07,
-            "games": 2861,
-            "winRate": 48.69
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773111"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 36.06,
-            "games": 2710,
-            "winRate": 52.25
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -21542,11 +19854,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773065"
           ],
           "totalPrice": 8300,
-          "metric": {
-            "pickRate": 2.39,
-            "games": 242,
-            "winRate": 52.07
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -21555,11 +19863,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773065"
           ],
           "totalPrice": 8400,
-          "metric": {
-            "pickRate": 2.13,
-            "games": 215,
-            "winRate": 49.3
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -21568,11 +19872,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773065"
           ],
           "totalPrice": 8400,
-          "metric": {
-            "pickRate": 2,
-            "games": 202,
-            "winRate": 57.92
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -21581,11 +19881,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773135"
           ],
           "totalPrice": 8695,
-          "metric": {
-            "pickRate": 1.87,
-            "games": 189,
-            "winRate": 53.44
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -21594,11 +19890,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": 9200,
-          "metric": {
-            "pickRate": 1.13,
-            "games": 114,
-            "winRate": 51.75
-          }
+          "metric": null
         }
       ]
     },
@@ -22123,11 +20415,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 67.45,
-          "games": 5390,
-          "winRate": 50.28
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -22152,11 +20440,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.35,
-          "games": 188,
-          "winRate": 48.94
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -22181,11 +20465,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.11,
-          "games": 169,
-          "winRate": 42.6
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -22210,11 +20490,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.06,
-          "games": 165,
-          "winRate": 49.09
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -22239,11 +20515,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "W"
         ],
-        "metric": {
-          "pickRate": 1.75,
-          "games": 140,
-          "winRate": 52.86
-        }
+        "metric": null
       }
     ]
   },
@@ -22251,8 +20523,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60062",
     "key": "monkeyking",
     "name": "齐天大圣",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/monkeyking/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/monkeyking/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 28,
     "tier": 3,
     "championMetrics": {
@@ -22266,38 +20538,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 71.24,
-          "games": 5529,
-          "winRate": 49.95
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHeal.png"
           }
         ],
-        "metric": {
-          "pickRate": 8.92,
-          "games": 692,
-          "winRate": 45.66
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -22311,22 +20575,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773134"
           ],
           "totalPrice": 1337,
-          "metric": {
-            "pickRate": 10.32,
-            "games": 608,
-            "winRate": 50.99
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773044"
           ],
           "totalPrice": 1250,
-          "metric": {
-            "pickRate": 9.72,
-            "games": 573,
-            "winRate": 47.64
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -22335,22 +20591,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773111"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 64.2,
-            "games": 3190,
-            "winRate": 51.13
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773047"
           ],
           "totalPrice": 1000,
-          "metric": {
-            "pickRate": 17.97,
-            "games": 893,
-            "winRate": 49.16
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -22361,11 +20609,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773071"
           ],
           "totalPrice": 9928,
-          "metric": {
-            "pickRate": 14.66,
-            "games": 758,
-            "winRate": 46.44
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -22374,11 +20618,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773071"
           ],
           "totalPrice": 9928,
-          "metric": {
-            "pickRate": 5.09,
-            "games": 263,
-            "winRate": 50.95
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -22387,11 +20627,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773074"
           ],
           "totalPrice": 9928,
-          "metric": {
-            "pickRate": 4.37,
-            "games": 226,
-            "winRate": 50.44
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -22400,11 +20636,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773078"
           ],
           "totalPrice": 9928,
-          "metric": {
-            "pickRate": 1.55,
-            "games": 80,
-            "winRate": 62.5
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -22414,11 +20646,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773074"
           ],
           "totalPrice": 11265,
-          "metric": {
-            "pickRate": 1.55,
-            "games": 80,
-            "winRate": 43.75
-          }
+          "metric": null
         }
       ]
     },
@@ -22943,11 +21171,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 72.2,
-          "games": 4477,
-          "winRate": 50.08
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -22972,11 +21196,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.98,
-          "games": 185,
-          "winRate": 54.05
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -23001,11 +21221,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.45,
-          "games": 152,
-          "winRate": 46.05
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -23030,11 +21246,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "W"
         ],
-        "metric": {
-          "pickRate": 1.23,
-          "games": 76,
-          "winRate": 55.26
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -23059,11 +21271,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 1.23,
-          "games": 76,
-          "winRate": 51.32
-        }
+        "metric": null
       }
     ]
   },
@@ -23071,8 +21279,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60038",
     "key": "kassadin",
     "name": "虚空行者",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/kassadin/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/kassadin/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 29,
     "tier": 3,
     "championMetrics": {
@@ -23086,38 +21294,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 58.59,
-          "games": 6066,
-          "winRate": 49.92
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerDot",
             "name": "引燃",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerDot.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerDot.png"
           }
         ],
-        "metric": {
-          "pickRate": 8.88,
-          "games": 919,
-          "winRate": 49.51
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -23131,11 +21331,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773010"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 10.93,
-            "games": 851,
-            "winRate": 51.47
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -23143,11 +21339,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773070"
           ],
           "totalPrice": 1025,
-          "metric": {
-            "pickRate": 5.69,
-            "games": 443,
-            "winRate": 52.14
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -23156,22 +21348,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773020"
           ],
           "totalPrice": 1100,
-          "metric": {
-            "pickRate": 79.48,
-            "games": 5023,
-            "winRate": 51.5
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773111"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 9.13,
-            "games": 577,
-            "winRate": 51.47
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -23183,11 +21367,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 4.34,
-            "games": 387,
-            "winRate": 57.62
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -23196,11 +21376,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 3.39,
-            "games": 302,
-            "winRate": 50.99
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -23209,11 +21385,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 2.92,
-            "games": 260,
-            "winRate": 50
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -23223,11 +21395,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773128"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 2.6,
-            "games": 232,
-            "winRate": 46.55
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -23236,11 +21404,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773128"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 2.15,
-            "games": 192,
-            "winRate": 46.35
-          }
+          "metric": null
         }
       ]
     },
@@ -23765,11 +21929,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 62.1,
-          "games": 3816,
-          "winRate": 50.34
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -23794,11 +21954,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 3.86,
-          "games": 237,
-          "winRate": 53.59
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -23823,11 +21979,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.96,
-          "games": 182,
-          "winRate": 56.04
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -23852,11 +22004,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 1.9,
-          "games": 117,
-          "winRate": 55.56
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -23881,11 +22029,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "Q",
           "W"
         ],
-        "metric": {
-          "pickRate": 1.87,
-          "games": 115,
-          "winRate": 43.48
-        }
+        "metric": null
       }
     ]
   },
@@ -23893,8 +22037,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60042",
     "key": "corki",
     "name": "英勇投弹手",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/corki/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/corki/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 30,
     "tier": 3,
     "championMetrics": {
@@ -23908,38 +22052,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
           }
         ],
-        "metric": {
-          "pickRate": 26.45,
-          "games": 2729,
-          "winRate": 50.71
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 26.2,
-          "games": 2703,
-          "winRate": 47.8
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -23953,22 +22089,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773086"
           ],
           "totalPrice": 1175,
-          "metric": {
-            "pickRate": 16.01,
-            "games": 1264,
-            "winRate": 48.66
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773044"
           ],
           "totalPrice": 1250,
-          "metric": {
-            "pickRate": 11.45,
-            "games": 904,
-            "winRate": 51.11
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -23977,22 +22105,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773006"
           ],
           "totalPrice": 900,
-          "metric": {
-            "pickRate": 72.71,
-            "games": 5903,
-            "winRate": 49.77
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773009"
           ],
           "totalPrice": 1000,
-          "metric": {
-            "pickRate": 11.67,
-            "games": 947,
-            "winRate": 49.63
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -24003,11 +22123,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773031"
           ],
           "totalPrice": 10128,
-          "metric": {
-            "pickRate": 6.49,
-            "games": 581,
-            "winRate": 48.71
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -24016,11 +22132,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773071"
           ],
           "totalPrice": 10428,
-          "metric": {
-            "pickRate": 4.99,
-            "games": 447,
-            "winRate": 51.23
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -24030,11 +22142,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773031"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 4.23,
-            "games": 379,
-            "winRate": 53.3
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -24043,11 +22151,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773072"
           ],
           "totalPrice": 10628,
-          "metric": {
-            "pickRate": 3.31,
-            "games": 296,
-            "winRate": 54.39
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -24056,11 +22160,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773031"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 3.08,
-            "games": 276,
-            "winRate": 53.62
-          }
+          "metric": null
         }
       ]
     },
@@ -24585,11 +22685,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 71.33,
-          "games": 5424,
-          "winRate": 51.24
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -24614,11 +22710,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.95,
-          "games": 224,
-          "winRate": 47.77
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -24643,11 +22735,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.16,
-          "games": 164,
-          "winRate": 50
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -24672,11 +22760,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 1.59,
-          "games": 121,
-          "winRate": 48.76
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -24701,11 +22785,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 1.17,
-          "games": 89,
-          "winRate": 51.69
-        }
+        "metric": null
       }
     ]
   },
@@ -24713,8 +22793,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60002",
     "key": "olaf",
     "name": "狂战士",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/olaf/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/olaf/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 31,
     "tier": 3,
     "championMetrics": {
@@ -24728,38 +22808,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 43.33,
-          "games": 2803,
-          "winRate": 49.95
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
           }
         ],
-        "metric": {
-          "pickRate": 28.26,
-          "games": 1828,
-          "winRate": 50.38
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -24773,11 +22845,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773144"
           ],
           "totalPrice": 1400,
-          "metric": {
-            "pickRate": 11.52,
-            "games": 574,
-            "winRate": 48.61
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -24785,11 +22853,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "771037"
           ],
           "totalPrice": 1275,
-          "metric": {
-            "pickRate": 9.05,
-            "games": 451,
-            "winRate": 47.45
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -24798,22 +22862,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773006"
           ],
           "totalPrice": 900,
-          "metric": {
-            "pickRate": 46.96,
-            "games": 2316,
-            "winRate": 49.74
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773111"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 27.72,
-            "games": 1367,
-            "winRate": 51.06
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -24824,11 +22880,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773065"
           ],
           "totalPrice": 9250,
-          "metric": {
-            "pickRate": 2.32,
-            "games": 106,
-            "winRate": 54.72
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -24837,11 +22889,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773022"
           ],
           "totalPrice": 9800,
-          "metric": {
-            "pickRate": 2.25,
-            "games": 103,
-            "winRate": 52.43
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -24850,11 +22898,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773072"
           ],
           "totalPrice": 9700,
-          "metric": {
-            "pickRate": 2.03,
-            "games": 93,
-            "winRate": 55.91
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -24863,11 +22907,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773153"
           ],
           "totalPrice": 9250,
-          "metric": {
-            "pickRate": 1.51,
-            "games": 69,
-            "winRate": 66.67
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -24876,11 +22916,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773022"
           ],
           "totalPrice": 9700,
-          "metric": {
-            "pickRate": 1.49,
-            "games": 68,
-            "winRate": 51.47
-          }
+          "metric": null
         }
       ]
     },
@@ -25405,11 +23441,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 68.87,
-          "games": 2887,
-          "winRate": 49.88
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -25434,11 +23466,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.39,
-          "games": 100,
-          "winRate": 61
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -25463,11 +23491,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.31,
-          "games": 97,
-          "winRate": 52.58
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -25492,11 +23516,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.03,
-          "games": 85,
-          "winRate": 50.59
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -25521,11 +23541,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "W"
         ],
-        "metric": {
-          "pickRate": 1.69,
-          "games": 71,
-          "winRate": 52.11
-        }
+        "metric": null
       }
     ]
   },
@@ -25533,8 +23549,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60024",
     "key": "jax",
     "name": "武器大师",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/jax/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/jax/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 32,
     "tier": 4,
     "championMetrics": {
@@ -25548,38 +23564,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 68.01,
-          "games": 6741,
-          "winRate": 49.7
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHeal.png"
           }
         ],
-        "metric": {
-          "pickRate": 10.22,
-          "games": 1013,
-          "winRate": 45.8
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -25593,22 +23601,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773144"
           ],
           "totalPrice": 1400,
-          "metric": {
-            "pickRate": 26.34,
-            "games": 1967,
-            "winRate": 50.28
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773044"
           ],
           "totalPrice": 1250,
-          "metric": {
-            "pickRate": 15.75,
-            "games": 1176,
-            "winRate": 50.17
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -25617,22 +23617,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773111"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 56.53,
-            "games": 4173,
-            "winRate": 50.9
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773047"
           ],
           "totalPrice": 1000,
-          "metric": {
-            "pickRate": 26.48,
-            "games": 1955,
-            "winRate": 47.21
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -25643,11 +23635,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773124"
           ],
           "totalPrice": 9428,
-          "metric": {
-            "pickRate": 8.15,
-            "games": 588,
-            "winRate": 48.47
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -25656,11 +23644,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773071"
           ],
           "totalPrice": 9828,
-          "metric": {
-            "pickRate": 5.75,
-            "games": 415,
-            "winRate": 45.3
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -25669,11 +23653,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773124"
           ],
           "totalPrice": 9428,
-          "metric": {
-            "pickRate": 4.97,
-            "games": 359,
-            "winRate": 55.71
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -25682,11 +23662,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773071"
           ],
           "totalPrice": 9828,
-          "metric": {
-            "pickRate": 3.63,
-            "games": 262,
-            "winRate": 55.73
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -25695,11 +23671,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773124"
           ],
           "totalPrice": 9628,
-          "metric": {
-            "pickRate": 2.56,
-            "games": 185,
-            "winRate": 56.76
-          }
+          "metric": null
         }
       ]
     },
@@ -26224,11 +24196,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 56.51,
-          "games": 2872,
-          "winRate": 50.38
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -26253,11 +24221,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "Q",
           "E"
         ],
-        "metric": {
-          "pickRate": 3.17,
-          "games": 161,
-          "winRate": 52.8
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -26282,11 +24246,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "Q",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.79,
-          "games": 142,
-          "winRate": 46.48
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -26311,11 +24271,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "Q",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.79,
-          "games": 142,
-          "winRate": 54.23
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -26340,11 +24296,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "Q",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.64,
-          "games": 134,
-          "winRate": 52.99
-        }
+        "metric": null
       }
     ]
   },
@@ -26352,8 +24304,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60030",
     "key": "karthus",
     "name": "死亡颂唱者",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/karthus/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/karthus/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 33,
     "tier": 4,
     "championMetrics": {
@@ -26367,38 +24319,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 55.56,
-          "games": 6433,
-          "winRate": 49.15
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHeal.png"
           }
         ],
-        "metric": {
-          "pickRate": 9.66,
-          "games": 1119,
-          "winRate": 47.1
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -26414,11 +24358,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "771052"
           ],
           "totalPrice": 1345,
-          "metric": {
-            "pickRate": 8.27,
-            "games": 716,
-            "winRate": 51.4
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -26427,11 +24367,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "771056"
           ],
           "totalPrice": 1310,
-          "metric": {
-            "pickRate": 6.39,
-            "games": 553,
-            "winRate": 47.2
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -26440,22 +24376,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773020"
           ],
           "totalPrice": 1100,
-          "metric": {
-            "pickRate": 85,
-            "games": 4658,
-            "winRate": 50.6
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773158"
           ],
           "totalPrice": 1000,
-          "metric": {
-            "pickRate": 12.28,
-            "games": 673,
-            "winRate": 47.99
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -26466,11 +24394,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 3.55,
-            "games": 369,
-            "winRate": 53.12
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -26479,11 +24403,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": 9300,
-          "metric": {
-            "pickRate": 1.85,
-            "games": 192,
-            "winRate": 39.06
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -26492,11 +24412,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773135"
           ],
           "totalPrice": 8495,
-          "metric": {
-            "pickRate": 1.74,
-            "games": 181,
-            "winRate": 51.38
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -26505,11 +24421,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773116"
           ],
           "totalPrice": 8095,
-          "metric": {
-            "pickRate": 1.73,
-            "games": 180,
-            "winRate": 56.11
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -26518,11 +24430,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 1.52,
-            "games": 158,
-            "winRate": 50.63
-          }
+          "metric": null
         }
       ]
     },
@@ -27047,11 +24955,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 73.21,
-          "games": 6900,
-          "winRate": 48.54
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -27076,11 +24980,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.44,
-          "games": 230,
-          "winRate": 50
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -27105,11 +25005,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.11,
-          "games": 199,
-          "winRate": 51.76
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -27134,11 +25030,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "W"
         ],
-        "metric": {
-          "pickRate": 1.84,
-          "games": 173,
-          "winRate": 50.29
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -27163,11 +25055,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 1.26,
-          "games": 119,
-          "winRate": 59.66
-        }
+        "metric": null
       }
     ]
   },
@@ -27175,8 +25063,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60040",
     "key": "janna",
     "name": "风暴之怒",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/janna/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/janna/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 34,
     "tier": 4,
     "championMetrics": {
@@ -27190,38 +25078,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHeal.png"
           }
         ],
-        "metric": {
-          "pickRate": 27.14,
-          "games": 2037,
-          "winRate": 50.32
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 20.9,
-          "games": 1569,
-          "winRate": 48.5
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -27238,11 +25118,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773098"
           ],
           "totalPrice": 1305,
-          "metric": {
-            "pickRate": 5.79,
-            "games": 324,
-            "winRate": 51.85
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -27250,11 +25126,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773010"
           ],
           "totalPrice": 1380,
-          "metric": {
-            "pickRate": 3.86,
-            "games": 216,
-            "winRate": 48.61
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -27263,22 +25135,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773158"
           ],
           "totalPrice": 1000,
-          "metric": {
-            "pickRate": 63.45,
-            "games": 2868,
-            "winRate": 49.44
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773020"
           ],
           "totalPrice": 1100,
-          "metric": {
-            "pickRate": 14.56,
-            "games": 658,
-            "winRate": 45.29
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -27289,11 +25153,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773222"
           ],
           "totalPrice": 6500,
-          "metric": {
-            "pickRate": 1.51,
-            "games": 104,
-            "winRate": 44.23
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -27302,11 +25162,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773222"
           ],
           "totalPrice": 6500,
-          "metric": {
-            "pickRate": 1.14,
-            "games": 78,
-            "winRate": 51.28
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -27315,11 +25171,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773504"
           ],
           "totalPrice": 5700,
-          "metric": {
-            "pickRate": 0.9,
-            "games": 62,
-            "winRate": 38.71
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -27328,11 +25180,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773023"
           ],
           "totalPrice": 6200,
-          "metric": {
-            "pickRate": 0.84,
-            "games": 58,
-            "winRate": 43.1
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -27341,11 +25189,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773069"
           ],
           "totalPrice": 5600,
-          "metric": {
-            "pickRate": 0.77,
-            "games": 53,
-            "winRate": 47.17
-          }
+          "metric": null
         }
       ]
     },
@@ -27870,11 +25714,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 55.49,
-          "games": 2118,
-          "winRate": 48.39
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -27899,11 +25739,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "W"
         ],
-        "metric": {
-          "pickRate": 3.25,
-          "games": 124,
-          "winRate": 52.42
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -27928,11 +25764,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.07,
-          "games": 79,
-          "winRate": 50.63
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -27957,11 +25789,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "W"
         ],
-        "metric": {
-          "pickRate": 1.86,
-          "games": 71,
-          "winRate": 45.07
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -27986,11 +25814,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "W"
         ],
-        "metric": {
-          "pickRate": 1.83,
-          "games": 70,
-          "winRate": 41.43
-        }
+        "metric": null
       }
     ]
   },
@@ -27998,8 +25822,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60079",
     "key": "gragas",
     "name": "酒桶",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/gragas/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/gragas/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 35,
     "tier": 4,
     "championMetrics": {
@@ -28013,38 +25837,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 68.31,
-          "games": 6293,
-          "winRate": 49.12
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHeal.png"
           }
         ],
-        "metric": {
-          "pickRate": 9.31,
-          "games": 858,
-          "winRate": 44.52
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -28058,11 +25874,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773010"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 7.14,
-            "games": 496,
-            "winRate": 45.77
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -28070,11 +25882,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773108"
           ],
           "totalPrice": 1145,
-          "metric": {
-            "pickRate": 6.81,
-            "games": 473,
-            "winRate": 48.2
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -28083,22 +25891,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773020"
           ],
           "totalPrice": 1100,
-          "metric": {
-            "pickRate": 67.17,
-            "games": 4173,
-            "winRate": 49.8
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773111"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 16.1,
-            "games": 1000,
-            "winRate": 48.4
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -28109,11 +25909,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773135"
           ],
           "totalPrice": 8695,
-          "metric": {
-            "pickRate": 2.87,
-            "games": 221,
-            "winRate": 50.23
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -28122,11 +25918,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": 9300,
-          "metric": {
-            "pickRate": 2.47,
-            "games": 190,
-            "winRate": 48.95
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -28135,11 +25927,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773135"
           ],
           "totalPrice": 8295,
-          "metric": {
-            "pickRate": 2.34,
-            "games": 180,
-            "winRate": 44.44
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -28148,11 +25936,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": 9400,
-          "metric": {
-            "pickRate": 2.25,
-            "games": 173,
-            "winRate": 50.87
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -28161,11 +25945,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": 9400,
-          "metric": {
-            "pickRate": 2.06,
-            "games": 159,
-            "winRate": 50.94
-          }
+          "metric": null
         }
       ]
     },
@@ -28690,11 +26470,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 65.77,
-          "games": 4281,
-          "winRate": 48.54
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -28719,11 +26495,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.75,
-          "games": 179,
-          "winRate": 45.25
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -28748,11 +26520,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.53,
-          "games": 165,
-          "winRate": 50.3
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -28777,11 +26545,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.43,
-          "games": 158,
-          "winRate": 50
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -28806,11 +26570,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.03,
-          "games": 132,
-          "winRate": 62.12
-        }
+        "metric": null
       }
     ]
   },
@@ -28818,8 +26578,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60086",
     "key": "garen",
     "name": "德玛西亚之力",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/garen/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/garen/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 36,
     "tier": 4,
     "championMetrics": {
@@ -28833,38 +26593,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 63.62,
-          "games": 6247,
-          "winRate": 49.24
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
           }
         ],
-        "metric": {
-          "pickRate": 10.88,
-          "games": 1068,
-          "winRate": 49.53
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -28878,22 +26630,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773044"
           ],
           "totalPrice": 1250,
-          "metric": {
-            "pickRate": 13.13,
-            "games": 966,
-            "winRate": 47.93
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773086"
           ],
           "totalPrice": 1175,
-          "metric": {
-            "pickRate": 7.42,
-            "games": 546,
-            "winRate": 47.62
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -28902,22 +26646,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773111"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 49.68,
-            "games": 3785,
-            "winRate": 50.33
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773047"
           ],
           "totalPrice": 1000,
-          "metric": {
-            "pickRate": 23.69,
-            "games": 1805,
-            "winRate": 45.54
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -28928,11 +26664,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773074"
           ],
           "totalPrice": 9078,
-          "metric": {
-            "pickRate": 5.11,
-            "games": 320,
-            "winRate": 43.13
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -28941,11 +26673,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773131"
           ],
           "totalPrice": 9078,
-          "metric": {
-            "pickRate": 2.89,
-            "games": 181,
-            "winRate": 41.99
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -28954,11 +26682,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773071"
           ],
           "totalPrice": 9928,
-          "metric": {
-            "pickRate": 2.41,
-            "games": 151,
-            "winRate": 54.3
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -28967,11 +26691,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773074"
           ],
           "totalPrice": 9928,
-          "metric": {
-            "pickRate": 1.1,
-            "games": 69,
-            "winRate": 50.72
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -28980,11 +26700,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773071"
           ],
           "totalPrice": 8778,
-          "metric": {
-            "pickRate": 0.97,
-            "games": 61,
-            "winRate": 49.18
-          }
+          "metric": null
         }
       ]
     },
@@ -29509,11 +27225,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 61.14,
-          "games": 4073,
-          "winRate": 50.92
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -29538,11 +27250,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 4.59,
-          "games": 306,
-          "winRate": 47.71
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -29567,11 +27275,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 4.01,
-          "games": 267,
-          "winRate": 46.07
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -29596,11 +27300,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.42,
-          "games": 161,
-          "winRate": 50.93
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -29625,11 +27325,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.21,
-          "games": 147,
-          "winRate": 44.9
-        }
+        "metric": null
       }
     ]
   },
@@ -29637,8 +27333,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60075",
     "key": "nasus",
     "name": "沙漠死神",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/nasus/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/nasus/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 37,
     "tier": 4,
     "championMetrics": {
@@ -29652,38 +27348,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 49.28,
-          "games": 4030,
-          "winRate": 48.73
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
           }
         ],
-        "metric": {
-          "pickRate": 20.84,
-          "games": 1704,
-          "winRate": 47.71
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -29697,22 +27385,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773057"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 18.89,
-            "games": 1160,
-            "winRate": 51.29
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773044"
           ],
           "totalPrice": 1250,
-          "metric": {
-            "pickRate": 6.56,
-            "games": 403,
-            "winRate": 48.14
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -29721,22 +27401,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773111"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 43.09,
-            "games": 2410,
-            "winRate": 52.66
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773047"
           ],
           "totalPrice": 1000,
-          "metric": {
-            "pickRate": 22.71,
-            "games": 1270,
-            "winRate": 48.03
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -29747,11 +27419,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773005"
           ],
           "totalPrice": 8928,
-          "metric": {
-            "pickRate": 4.02,
-            "games": 258,
-            "winRate": 50.78
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -29760,11 +27428,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773005"
           ],
           "totalPrice": 9128,
-          "metric": {
-            "pickRate": 1.92,
-            "games": 123,
-            "winRate": 48.78
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -29773,11 +27437,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773083"
           ],
           "totalPrice": 9928,
-          "metric": {
-            "pickRate": 1.73,
-            "games": 111,
-            "winRate": 54.05
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -29786,11 +27446,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773005"
           ],
           "totalPrice": 9228,
-          "metric": {
-            "pickRate": 1.73,
-            "games": 111,
-            "winRate": 59.46
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -29799,11 +27455,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773074"
           ],
           "totalPrice": 9928,
-          "metric": {
-            "pickRate": 1.29,
-            "games": 83,
-            "winRate": 57.83
-          }
+          "metric": null
         }
       ]
     },
@@ -30328,11 +27980,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 63.14,
-          "games": 2898,
-          "winRate": 49.38
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -30357,11 +28005,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.55,
-          "games": 117,
-          "winRate": 46.15
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -30386,11 +28030,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.35,
-          "games": 108,
-          "winRate": 43.52
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -30415,11 +28055,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.2,
-          "games": 101,
-          "winRate": 50.5
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -30444,11 +28080,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.16,
-          "games": 99,
-          "winRate": 46.46
-        }
+        "metric": null
       }
     ]
   },
@@ -30456,8 +28088,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60059",
     "key": "jarvaniv",
     "name": "德玛西亚皇子",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/jarvaniv/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/jarvaniv/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 38,
     "tier": 4,
     "championMetrics": {
@@ -30471,38 +28103,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 72.98,
-          "games": 5880,
-          "winRate": 48.52
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHeal.png"
           }
         ],
-        "metric": {
-          "pickRate": 8.2,
-          "games": 661,
-          "winRate": 44.48
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -30516,22 +28140,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773134"
           ],
           "totalPrice": 1337,
-          "metric": {
-            "pickRate": 14.02,
-            "games": 852,
-            "winRate": 51.17
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773044"
           ],
           "totalPrice": 1250,
-          "metric": {
-            "pickRate": 5.99,
-            "games": 364,
-            "winRate": 44.78
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -30540,22 +28156,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773111"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 63.1,
-            "games": 3162,
-            "winRate": 50.28
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773047"
           ],
           "totalPrice": 1000,
-          "metric": {
-            "pickRate": 21.97,
-            "games": 1101,
-            "winRate": 43.23
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -30566,11 +28174,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773071"
           ],
           "totalPrice": 9928,
-          "metric": {
-            "pickRate": 8.01,
-            "games": 443,
-            "winRate": 47.86
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -30579,11 +28183,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773071"
           ],
           "totalPrice": 9928,
-          "metric": {
-            "pickRate": 4.18,
-            "games": 231,
-            "winRate": 44.59
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -30592,11 +28192,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773074"
           ],
           "totalPrice": 9928,
-          "metric": {
-            "pickRate": 1.39,
-            "games": 77,
-            "winRate": 41.56
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -30605,11 +28201,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773078"
           ],
           "totalPrice": 9928,
-          "metric": {
-            "pickRate": 0.85,
-            "games": 47,
-            "winRate": 31.91
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -30619,11 +28211,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773074"
           ],
           "totalPrice": 11265,
-          "metric": {
-            "pickRate": 0.81,
-            "games": 45,
-            "winRate": 60
-          }
+          "metric": null
         }
       ]
     },
@@ -31148,11 +28736,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 71.79,
-          "games": 4572,
-          "winRate": 47.81
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -31177,11 +28761,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 3.14,
-          "games": 200,
-          "winRate": 51.5
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -31206,11 +28786,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.68,
-          "games": 171,
-          "winRate": 47.95
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -31235,11 +28811,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "W"
         ],
-        "metric": {
-          "pickRate": 1.57,
-          "games": 100,
-          "winRate": 42
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -31264,11 +28836,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "W"
         ],
-        "metric": {
-          "pickRate": 1.43,
-          "games": 91,
-          "winRate": 50.55
-        }
+        "metric": null
       }
     ]
   },
@@ -31276,8 +28844,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60004",
     "key": "twistedfate",
     "name": "卡牌大师",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/twistedfate/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/twistedfate/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 39,
     "tier": 4,
     "championMetrics": {
@@ -31291,38 +28859,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
           }
         ],
-        "metric": {
-          "pickRate": 40.24,
-          "games": 4518,
-          "winRate": 49.03
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 23.21,
-          "games": 2606,
-          "winRate": 48.81
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -31337,22 +28897,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773098"
           ],
           "totalPrice": 1165,
-          "metric": {
-            "pickRate": 23.66,
-            "games": 2010,
-            "winRate": 48.51
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773057"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 10.5,
-            "games": 892,
-            "winRate": 49.44
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -31361,22 +28913,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773020"
           ],
           "totalPrice": 1100,
-          "metric": {
-            "pickRate": 62.85,
-            "games": 5623,
-            "winRate": 49.99
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773006"
           ],
           "totalPrice": 900,
-          "metric": {
-            "pickRate": 22.87,
-            "games": 2046,
-            "winRate": 45.94
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -31387,11 +28931,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773116"
           ],
           "totalPrice": 7800,
-          "metric": {
-            "pickRate": 3.51,
-            "games": 346,
-            "winRate": 43.35
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -31400,11 +28940,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": 9400,
-          "metric": {
-            "pickRate": 3.13,
-            "games": 308,
-            "winRate": 48.05
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -31413,11 +28949,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773128"
           ],
           "totalPrice": 8000,
-          "metric": {
-            "pickRate": 2.22,
-            "games": 219,
-            "winRate": 45.21
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -31426,11 +28958,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": 9400,
-          "metric": {
-            "pickRate": 1.86,
-            "games": 183,
-            "winRate": 55.19
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -31439,11 +28967,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": 8200,
-          "metric": {
-            "pickRate": 1.47,
-            "games": 145,
-            "winRate": 51.72
-          }
+          "metric": null
         }
       ]
     },
@@ -31968,11 +29492,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 61.06,
-          "games": 4603,
-          "winRate": 49.73
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -31997,11 +29517,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.33,
-          "games": 176,
-          "winRate": 57.39
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -32026,11 +29542,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 1.9,
-          "games": 143,
-          "winRate": 48.95
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -32055,11 +29567,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 1.87,
-          "games": 141,
-          "winRate": 48.94
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -32084,11 +29592,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 1.57,
-          "games": 118,
-          "winRate": 45.76
-        }
+        "metric": null
       }
     ]
   },
@@ -32096,8 +29600,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60072",
     "key": "skarner",
     "name": "上古领主",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/skarner/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/skarner/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 40,
     "tier": 4,
     "championMetrics": {
@@ -32111,38 +29615,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 67.76,
-          "games": 3743,
-          "winRate": 46.75
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHeal.png"
           }
         ],
-        "metric": {
-          "pickRate": 11.59,
-          "games": 640,
-          "winRate": 42.19
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -32157,11 +29653,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "771011"
           ],
           "totalPrice": 1325,
-          "metric": {
-            "pickRate": 24.12,
-            "games": 1004,
-            "winRate": 46.91
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -32170,11 +29662,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773132"
           ],
           "totalPrice": 1330,
-          "metric": {
-            "pickRate": 13.04,
-            "games": 543,
-            "winRate": 47.33
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -32183,22 +29671,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773111"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 67.47,
-            "games": 2640,
-            "winRate": 48.56
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773047"
           ],
           "totalPrice": 1000,
-          "metric": {
-            "pickRate": 26.5,
-            "games": 1037,
-            "winRate": 44.07
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -32209,11 +29689,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773065"
           ],
           "totalPrice": 8400,
-          "metric": {
-            "pickRate": 4.87,
-            "games": 213,
-            "winRate": 47.42
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -32222,11 +29698,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773065"
           ],
           "totalPrice": 8400,
-          "metric": {
-            "pickRate": 4.78,
-            "games": 209,
-            "winRate": 45.93
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -32235,11 +29707,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773110"
           ],
           "totalPrice": 8550,
-          "metric": {
-            "pickRate": 2.17,
-            "games": 95,
-            "winRate": 44.21
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -32248,11 +29716,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773110"
           ],
           "totalPrice": 8550,
-          "metric": {
-            "pickRate": 1.99,
-            "games": 87,
-            "winRate": 49.43
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -32261,11 +29725,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773064"
           ],
           "totalPrice": 8360,
-          "metric": {
-            "pickRate": 1.28,
-            "games": 56,
-            "winRate": 48.21
-          }
+          "metric": null
         }
       ]
     },
@@ -32790,11 +30250,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 68.75,
-          "games": 2827,
-          "winRate": 46.3
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -32819,11 +30275,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.41,
-          "games": 99,
-          "winRate": 50.51
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -32848,11 +30300,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.41,
-          "games": 99,
-          "winRate": 49.49
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -32877,11 +30325,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.19,
-          "games": 90,
-          "winRate": 43.33
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -32906,11 +30350,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.07,
-          "games": 85,
-          "winRate": 51.76
-        }
+        "metric": null
       }
     ]
   },
@@ -32918,8 +30358,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60034",
     "key": "anivia",
     "name": "冰晶凤凰",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/anivia/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/anivia/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 41,
     "tier": 4,
     "championMetrics": {
@@ -32933,38 +30373,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
           }
         ],
-        "metric": {
-          "pickRate": 24.38,
-          "games": 2421,
-          "winRate": 48.37
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 20.95,
-          "games": 2081,
-          "winRate": 48.2
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -32978,11 +30410,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773010"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 7.22,
-            "games": 548,
-            "winRate": 46.53
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -32990,11 +30418,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773070"
           ],
           "totalPrice": 1025,
-          "metric": {
-            "pickRate": 6.14,
-            "games": 466,
-            "winRate": 48.93
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -33003,22 +30427,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773020"
           ],
           "totalPrice": 1100,
-          "metric": {
-            "pickRate": 85.92,
-            "games": 5413,
-            "winRate": 49.53
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773158"
           ],
           "totalPrice": 1000,
-          "metric": {
-            "pickRate": 4.76,
-            "games": 300,
-            "winRate": 48
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -33029,11 +30445,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 2.99,
-            "games": 252,
-            "winRate": 46.83
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -33042,11 +30454,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773165"
           ],
           "totalPrice": 7095,
-          "metric": {
-            "pickRate": 2.05,
-            "games": 173,
-            "winRate": 43.35
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -33056,11 +30464,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 1.99,
-            "games": 168,
-            "winRate": 50
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -33070,11 +30474,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773151"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 1.98,
-            "games": 167,
-            "winRate": 47.31
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -33083,11 +30483,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773135"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 1.85,
-            "games": 156,
-            "winRate": 48.08
-          }
+          "metric": null
         }
       ]
     },
@@ -33612,11 +31008,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 60.94,
-          "games": 4163,
-          "winRate": 47.13
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -33641,11 +31033,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 4.46,
-          "games": 305,
-          "winRate": 52.79
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -33670,11 +31058,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 3.48,
-          "games": 238,
-          "winRate": 49.16
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -33699,11 +31083,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.3,
-          "games": 157,
-          "winRate": 49.04
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -33728,11 +31108,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.15,
-          "games": 147,
-          "winRate": 40.82
-        }
+        "metric": null
       }
     ]
   },
@@ -33740,8 +31116,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60080",
     "key": "pantheon",
     "name": "不屈之枪",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/pantheon/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/pantheon/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 42,
     "tier": 4,
     "championMetrics": {
@@ -33755,38 +31131,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 66.88,
-          "games": 7356,
-          "winRate": 48.53
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerDot",
             "name": "引燃",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerDot.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerDot.png"
           }
         ],
-        "metric": {
-          "pickRate": 12.11,
-          "games": 1332,
-          "winRate": 47
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -33800,22 +31168,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773134"
           ],
           "totalPrice": 1337,
-          "metric": {
-            "pickRate": 17.87,
-            "games": 1467,
-            "winRate": 49.08
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773141"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 5.31,
-            "games": 436,
-            "winRate": 49.08
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -33824,22 +31184,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773111"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 61.26,
-            "games": 4068,
-            "winRate": 48.87
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773047"
           ],
           "totalPrice": 1000,
-          "metric": {
-            "pickRate": 17.6,
-            "games": 1169,
-            "winRate": 43.54
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -33850,11 +31202,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773071"
           ],
           "totalPrice": 9928,
-          "metric": {
-            "pickRate": 8.58,
-            "games": 617,
-            "winRate": 45.87
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -33863,11 +31211,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773071"
           ],
           "totalPrice": 9928,
-          "metric": {
-            "pickRate": 4.84,
-            "games": 348,
-            "winRate": 47.41
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -33876,11 +31220,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773074"
           ],
           "totalPrice": 9928,
-          "metric": {
-            "pickRate": 1.58,
-            "games": 114,
-            "winRate": 45.61
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -33890,11 +31230,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773078"
           ],
           "totalPrice": 11265,
-          "metric": {
-            "pickRate": 1.22,
-            "games": 88,
-            "winRate": 53.41
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -33904,11 +31240,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773035"
           ],
           "totalPrice": 9337,
-          "metric": {
-            "pickRate": 1.17,
-            "games": 84,
-            "winRate": 44.05
-          }
+          "metric": null
         }
       ]
     },
@@ -34433,11 +31765,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 66.04,
-          "games": 4223,
-          "winRate": 48.52
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -34462,11 +31790,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "W"
         ],
-        "metric": {
-          "pickRate": 3.53,
-          "games": 226,
-          "winRate": 50.88
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -34491,11 +31815,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "W"
         ],
-        "metric": {
-          "pickRate": 3.36,
-          "games": 215,
-          "winRate": 49.77
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -34520,11 +31840,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.67,
-          "games": 171,
-          "winRate": 43.86
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -34549,11 +31865,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.36,
-          "games": 151,
-          "winRate": 48.34
-        }
+        "metric": null
       }
     ]
   },
@@ -34561,8 +31873,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60041",
     "key": "gangplank",
     "name": "海洋之灾",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/gangplank/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/gangplank/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 43,
     "tier": 4,
     "championMetrics": {
@@ -34576,38 +31888,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 55.76,
-          "games": 5742,
-          "winRate": 47.98
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerDot",
             "name": "引燃",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerDot.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerDot.png"
           }
         ],
-        "metric": {
-          "pickRate": 13.48,
-          "games": 1388,
-          "winRate": 47.05
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -34621,22 +31925,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773057"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 17.27,
-            "games": 1340,
-            "winRate": 47.84
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773134"
           ],
           "totalPrice": 1337,
-          "metric": {
-            "pickRate": 4.04,
-            "games": 313,
-            "winRate": 46.65
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -34645,22 +31941,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773158"
           ],
           "totalPrice": 1000,
-          "metric": {
-            "pickRate": 38.93,
-            "games": 2203,
-            "winRate": 51.07
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773006"
           ],
           "totalPrice": 900,
-          "metric": {
-            "pickRate": 22.92,
-            "games": 1297,
-            "winRate": 45.64
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -34671,11 +31959,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773142"
           ],
           "totalPrice": 10128,
-          "metric": {
-            "pickRate": 6.9,
-            "games": 568,
-            "winRate": 46.83
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -34684,11 +31968,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773071"
           ],
           "totalPrice": 10428,
-          "metric": {
-            "pickRate": 4.05,
-            "games": 333,
-            "winRate": 47.15
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -34697,11 +31977,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773035"
           ],
           "totalPrice": 9728,
-          "metric": {
-            "pickRate": 3.85,
-            "games": 317,
-            "winRate": 46.69
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -34710,11 +31986,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773031"
           ],
           "totalPrice": 10128,
-          "metric": {
-            "pickRate": 3.84,
-            "games": 316,
-            "winRate": 53.16
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -34723,11 +31995,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773031"
           ],
           "totalPrice": 9928,
-          "metric": {
-            "pickRate": 2.13,
-            "games": 175,
-            "winRate": 48
-          }
+          "metric": null
         }
       ]
     },
@@ -35252,11 +32520,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 70.93,
-          "games": 5753,
-          "winRate": 47.66
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -35281,11 +32545,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 3.42,
-          "games": 277,
-          "winRate": 51.62
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -35310,11 +32570,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.85,
-          "games": 231,
-          "winRate": 45.89
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -35339,11 +32595,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 1.7,
-          "games": 138,
-          "winRate": 44.2
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -35368,11 +32620,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "W"
         ],
-        "metric": {
-          "pickRate": 1.26,
-          "games": 102,
-          "winRate": 51.96
-        }
+        "metric": null
       }
     ]
   },
@@ -35380,8 +32628,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60031",
     "key": "chogath",
     "name": "虚空恐惧",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/chogath/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/chogath/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 44,
     "tier": 4,
     "championMetrics": {
@@ -35395,38 +32643,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 68.15,
-          "games": 7446,
-          "winRate": 48.16
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHeal.png"
           }
         ],
-        "metric": {
-          "pickRate": 10.42,
-          "games": 1139,
-          "winRate": 43.72
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -35441,22 +32681,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "771011"
           ],
           "totalPrice": 1180,
-          "metric": {
-            "pickRate": 8.62,
-            "games": 700,
-            "winRate": 48.57
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773010"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 6.21,
-            "games": 504,
-            "winRate": 48.81
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -35465,22 +32697,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773111"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 61.9,
-            "games": 4232,
-            "winRate": 49.81
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773047"
           ],
           "totalPrice": 1000,
-          "metric": {
-            "pickRate": 17.03,
-            "games": 1164,
-            "winRate": 43.64
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -35491,11 +32715,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773065"
           ],
           "totalPrice": 8400,
-          "metric": {
-            "pickRate": 4.46,
-            "games": 423,
-            "winRate": 45.63
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -35504,11 +32724,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773065"
           ],
           "totalPrice": 8400,
-          "metric": {
-            "pickRate": 3.4,
-            "games": 322,
-            "winRate": 51.86
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -35517,11 +32733,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773065"
           ],
           "totalPrice": 8300,
-          "metric": {
-            "pickRate": 2.63,
-            "games": 249,
-            "winRate": 46.18
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -35530,11 +32742,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773065"
           ],
           "totalPrice": 8650,
-          "metric": {
-            "pickRate": 2.44,
-            "games": 231,
-            "winRate": 46.75
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -35543,11 +32751,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773064"
           ],
           "totalPrice": 8360,
-          "metric": {
-            "pickRate": 1.59,
-            "games": 151,
-            "winRate": 62.91
-          }
+          "metric": null
         }
       ]
     },
@@ -36072,11 +33276,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 62.07,
-          "games": 4219,
-          "winRate": 47.07
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -36101,11 +33301,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "E"
         ],
-        "metric": {
-          "pickRate": 3.46,
-          "games": 235,
-          "winRate": 47.23
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -36130,11 +33326,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.96,
-          "games": 201,
-          "winRate": 48.76
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -36159,11 +33351,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.82,
-          "games": 192,
-          "winRate": 50.52
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -36188,11 +33376,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.53,
-          "games": 172,
-          "winRate": 52.33
-        }
+        "metric": null
       }
     ]
   },
@@ -36200,8 +33384,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60011",
     "key": "masteryi",
     "name": "无极剑圣",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/masteryi/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/masteryi/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 45,
     "tier": 4,
     "championMetrics": {
@@ -36215,38 +33399,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 59.42,
-          "games": 6952,
-          "winRate": 48.14
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
           }
         ],
-        "metric": {
-          "pickRate": 16.43,
-          "games": 1922,
-          "winRate": 48.39
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -36260,11 +33436,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773144"
           ],
           "totalPrice": 1400,
-          "metric": {
-            "pickRate": 28.75,
-            "games": 2503,
-            "winRate": 50.38
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -36272,11 +33444,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "771055"
           ],
           "totalPrice": 1275,
-          "metric": {
-            "pickRate": 5.48,
-            "games": 477,
-            "winRate": 44.23
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -36285,22 +33453,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773006"
           ],
           "totalPrice": 900,
-          "metric": {
-            "pickRate": 86.47,
-            "games": 7181,
-            "winRate": 47.46
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773111"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 9.09,
-            "games": 755,
-            "winRate": 48.87
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -36311,11 +33471,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773091"
           ],
           "totalPrice": 8978,
-          "metric": {
-            "pickRate": 2.52,
-            "games": 225,
-            "winRate": 52.89
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -36324,11 +33480,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773091"
           ],
           "totalPrice": 8650,
-          "metric": {
-            "pickRate": 2,
-            "games": 179,
-            "winRate": 51.96
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -36337,11 +33489,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773091"
           ],
           "totalPrice": 8650,
-          "metric": {
-            "pickRate": 2,
-            "games": 179,
-            "winRate": 48.04
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -36350,11 +33498,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773074"
           ],
           "totalPrice": 10128,
-          "metric": {
-            "pickRate": 1.87,
-            "games": 167,
-            "winRate": 51.5
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -36363,11 +33507,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773091"
           ],
           "totalPrice": 8978,
-          "metric": {
-            "pickRate": 1.44,
-            "games": 129,
-            "winRate": 61.24
-          }
+          "metric": null
         }
       ]
     },
@@ -36892,11 +34032,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 73.01,
-          "games": 7076,
-          "winRate": 49.21
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -36921,11 +34057,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.74,
-          "games": 266,
-          "winRate": 54.89
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -36950,11 +34082,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.31,
-          "games": 224,
-          "winRate": 47.77
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -36979,11 +34107,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "W"
         ],
-        "metric": {
-          "pickRate": 1.24,
-          "games": 120,
-          "winRate": 55
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -37008,11 +34132,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 1.21,
-          "games": 117,
-          "winRate": 49.57
-        }
+        "metric": null
       }
     ]
   },
@@ -37020,8 +34140,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60033",
     "key": "rammus",
     "name": "披甲龙龟",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/rammus/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/rammus/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 46,
     "tier": 4,
     "championMetrics": {
@@ -37035,38 +34155,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 56.93,
-          "games": 3549,
-          "winRate": 46.38
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
           }
         ],
-        "metric": {
-          "pickRate": 14.61,
-          "games": 911,
-          "winRate": 44.68
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -37082,22 +34194,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "771031"
           ],
           "totalPrice": 1345,
-          "metric": {
-            "pickRate": 11.65,
-            "games": 549,
-            "winRate": 47.91
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773138"
           ],
           "totalPrice": 1275,
-          "metric": {
-            "pickRate": 9.36,
-            "games": 441,
-            "winRate": 46.71
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -37106,22 +34210,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773111"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 55.59,
-            "games": 2212,
-            "winRate": 47.02
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773047"
           ],
           "totalPrice": 1000,
-          "metric": {
-            "pickRate": 28.73,
-            "games": 1143,
-            "winRate": 45.84
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -37132,11 +34228,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773083"
           ],
           "totalPrice": 7850,
-          "metric": {
-            "pickRate": 2.22,
-            "games": 123,
-            "winRate": 54.47
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -37145,11 +34237,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773001"
           ],
           "totalPrice": 8110,
-          "metric": {
-            "pickRate": 1.46,
-            "games": 81,
-            "winRate": 54.32
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -37158,11 +34246,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773068"
           ],
           "totalPrice": 7850,
-          "metric": {
-            "pickRate": 1.33,
-            "games": 74,
-            "winRate": 48.65
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -37171,11 +34255,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773064"
           ],
           "totalPrice": 7810,
-          "metric": {
-            "pickRate": 1.24,
-            "games": 69,
-            "winRate": 53.62
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -37184,11 +34264,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773110"
           ],
           "totalPrice": 7750,
-          "metric": {
-            "pickRate": 1.15,
-            "games": 64,
-            "winRate": 50
-          }
+          "metric": null
         }
       ]
     },
@@ -37713,11 +34789,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "Q",
           "Q"
         ],
-        "metric": {
-          "pickRate": 56.44,
-          "games": 2091,
-          "winRate": 46.87
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -37742,11 +34814,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "Q"
         ],
-        "metric": {
-          "pickRate": 3.02,
-          "games": 112,
-          "winRate": 45.54
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -37771,11 +34839,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "Q"
         ],
-        "metric": {
-          "pickRate": 2.59,
-          "games": 96,
-          "winRate": 56.25
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -37800,11 +34864,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "Q"
         ],
-        "metric": {
-          "pickRate": 2.4,
-          "games": 89,
-          "winRate": 47.19
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -37829,11 +34889,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "Q"
         ],
-        "metric": {
-          "pickRate": 2.32,
-          "games": 86,
-          "winRate": 46.51
-        }
+        "metric": null
       }
     ]
   },
@@ -37841,8 +34897,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60019",
     "key": "warwick",
     "name": "祖安怒兽",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/warwick/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/warwick/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 47,
     "tier": 4,
     "championMetrics": {
@@ -37856,38 +34912,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 58.27,
-          "games": 5072,
-          "winRate": 47.38
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHeal.png"
           }
         ],
-        "metric": {
-          "pickRate": 12.64,
-          "games": 1100,
-          "winRate": 44.73
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -37901,22 +34949,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773144"
           ],
           "totalPrice": 1400,
-          "metric": {
-            "pickRate": 9.78,
-            "games": 633,
-            "winRate": 49.61
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773044"
           ],
           "totalPrice": 1250,
-          "metric": {
-            "pickRate": 4.51,
-            "games": 292,
-            "winRate": 46.23
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -37925,22 +34965,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773111"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 54.02,
-            "games": 3151,
-            "winRate": 49.51
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773006"
           ],
           "totalPrice": 900,
-          "metric": {
-            "pickRate": 20.42,
-            "games": 1191,
-            "winRate": 46.43
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -37951,11 +34983,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773071"
           ],
           "totalPrice": 9928,
-          "metric": {
-            "pickRate": 5.89,
-            "games": 384,
-            "winRate": 49.74
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -37964,11 +34992,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773071"
           ],
           "totalPrice": 9928,
-          "metric": {
-            "pickRate": 4.68,
-            "games": 305,
-            "winRate": 44.92
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -37977,11 +35001,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773153"
           ],
           "totalPrice": 10128,
-          "metric": {
-            "pickRate": 0.94,
-            "games": 61,
-            "winRate": 52.46
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -37990,11 +35010,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773153"
           ],
           "totalPrice": 10128,
-          "metric": {
-            "pickRate": 0.69,
-            "games": 45,
-            "winRate": 51.11
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -38003,11 +35019,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773072"
           ],
           "totalPrice": 10128,
-          "metric": {
-            "pickRate": 0.6,
-            "games": 39,
-            "winRate": 43.59
-          }
+          "metric": null
         }
       ]
     },
@@ -38532,11 +35544,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 69.34,
-          "games": 4188,
-          "winRate": 48.71
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -38561,11 +35569,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.48,
-          "games": 150,
-          "winRate": 44.67
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -38590,11 +35594,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.04,
-          "games": 123,
-          "winRate": 44.72
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -38619,11 +35619,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "W"
         ],
-        "metric": {
-          "pickRate": 1.89,
-          "games": 114,
-          "winRate": 42.11
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -38648,11 +35644,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "W"
         ],
-        "metric": {
-          "pickRate": 1.59,
-          "games": 96,
-          "winRate": 43.75
-        }
+        "metric": null
       }
     ]
   },
@@ -38660,8 +35652,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60117",
     "key": "lulu",
     "name": "仙灵女巫",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/lulu/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/lulu/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 48,
     "tier": 4,
     "championMetrics": {
@@ -38675,38 +35667,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHeal.png"
           }
         ],
-        "metric": {
-          "pickRate": 30.43,
-          "games": 2267,
-          "winRate": 47.15
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 18.78,
-          "games": 1399,
-          "winRate": 45.96
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -38723,11 +35707,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773098"
           ],
           "totalPrice": 1305,
-          "metric": {
-            "pickRate": 9.16,
-            "games": 520,
-            "winRate": 50.77
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -38735,11 +35715,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773010"
           ],
           "totalPrice": 1380,
-          "metric": {
-            "pickRate": 3.82,
-            "games": 217,
-            "winRate": 53.92
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -38748,22 +35724,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773158"
           ],
           "totalPrice": 1000,
-          "metric": {
-            "pickRate": 63.26,
-            "games": 2980,
-            "winRate": 47.35
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773006"
           ],
           "totalPrice": 900,
-          "metric": {
-            "pickRate": 12.8,
-            "games": 603,
-            "winRate": 37.98
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -38774,11 +35742,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773222"
           ],
           "totalPrice": 6500,
-          "metric": {
-            "pickRate": 1.6,
-            "games": 110,
-            "winRate": 36.36
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -38787,11 +35751,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773222"
           ],
           "totalPrice": 6500,
-          "metric": {
-            "pickRate": 1.22,
-            "games": 84,
-            "winRate": 42.86
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -38800,11 +35760,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773222"
           ],
           "totalPrice": 6800,
-          "metric": {
-            "pickRate": 1.21,
-            "games": 83,
-            "winRate": 56.63
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -38813,11 +35769,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773023"
           ],
           "totalPrice": 6200,
-          "metric": {
-            "pickRate": 1.15,
-            "games": 79,
-            "winRate": 51.9
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -38826,11 +35778,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773069"
           ],
           "totalPrice": 6200,
-          "metric": {
-            "pickRate": 1.13,
-            "games": 78,
-            "winRate": 50
-          }
+          "metric": null
         }
       ]
     },
@@ -39355,11 +36303,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "Q",
           "Q"
         ],
-        "metric": {
-          "pickRate": 54.51,
-          "games": 2158,
-          "winRate": 48.1
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -39384,11 +36328,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "Q",
           "Q"
         ],
-        "metric": {
-          "pickRate": 5.3,
-          "games": 210,
-          "winRate": 52.38
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -39413,11 +36353,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "Q"
         ],
-        "metric": {
-          "pickRate": 2.5,
-          "games": 99,
-          "winRate": 53.54
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -39442,11 +36378,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "Q"
         ],
-        "metric": {
-          "pickRate": 2.25,
-          "games": 89,
-          "winRate": 38.2
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -39471,11 +36403,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "Q"
         ],
-        "metric": {
-          "pickRate": 2.22,
-          "games": 88,
-          "winRate": 44.32
-        }
+        "metric": null
       }
     ]
   },
@@ -39483,8 +36411,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60023",
     "key": "tryndamere",
     "name": "蛮族之王",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/tryndamere/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/tryndamere/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 49,
     "tier": 4,
     "championMetrics": {
@@ -39498,38 +36426,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 52.86,
-          "games": 4036,
-          "winRate": 47
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
           }
         ],
-        "metric": {
-          "pickRate": 18.77,
-          "games": 1433,
-          "winRate": 43.61
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -39543,22 +36463,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773086"
           ],
           "totalPrice": 1175,
-          "metric": {
-            "pickRate": 10.21,
-            "games": 594,
-            "winRate": 50.34
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773144"
           ],
           "totalPrice": 1400,
-          "metric": {
-            "pickRate": 5.97,
-            "games": 347,
-            "winRate": 45.82
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -39567,22 +36479,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773006"
           ],
           "totalPrice": 900,
-          "metric": {
-            "pickRate": 81.02,
-            "games": 4479,
-            "winRate": 47.27
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773111"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 11.56,
-            "games": 639,
-            "winRate": 46.79
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -39593,11 +36497,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773046"
           ],
           "totalPrice": 9300,
-          "metric": {
-            "pickRate": 3.41,
-            "games": 199,
-            "winRate": 47.24
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -39606,11 +36506,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773031"
           ],
           "totalPrice": 9500,
-          "metric": {
-            "pickRate": 2.69,
-            "games": 157,
-            "winRate": 52.23
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -39619,11 +36515,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773153"
           ],
           "totalPrice": 9800,
-          "metric": {
-            "pickRate": 1.54,
-            "games": 90,
-            "winRate": 55.56
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -39632,11 +36524,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773046"
           ],
           "totalPrice": 10228,
-          "metric": {
-            "pickRate": 1.51,
-            "games": 88,
-            "winRate": 39.77
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -39645,11 +36533,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773046"
           ],
           "totalPrice": 9200,
-          "metric": {
-            "pickRate": 1.39,
-            "games": 81,
-            "winRate": 48.15
-          }
+          "metric": null
         }
       ]
     },
@@ -40174,11 +37058,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 63.17,
-          "games": 3312,
-          "winRate": 46.83
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -40203,11 +37083,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 3.47,
-          "games": 182,
-          "winRate": 50.55
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -40232,11 +37108,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.69,
-          "games": 141,
-          "winRate": 42.55
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -40261,11 +37133,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.61,
-          "games": 137,
-          "winRate": 47.45
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -40290,11 +37158,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.19,
-          "games": 115,
-          "winRate": 53.91
-        }
+        "metric": null
       }
     ]
   },
@@ -40302,8 +37166,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60081",
     "key": "ezreal",
     "name": "探险家",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/ezreal/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/ezreal/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 50,
     "tier": 4,
     "championMetrics": {
@@ -40317,38 +37181,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
           }
         ],
-        "metric": {
-          "pickRate": 23.2,
-          "games": 3193,
-          "winRate": 48.83
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerBarrier",
             "name": "屏障",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerBarrier.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerBarrier.png"
           }
         ],
-        "metric": {
-          "pickRate": 22.12,
-          "games": 3044,
-          "winRate": 48.29
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -40363,22 +37219,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773070"
           ],
           "totalPrice": 1100,
-          "metric": {
-            "pickRate": 15.48,
-            "games": 1615,
-            "winRate": 48.17
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773057"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 10.49,
-            "games": 1095,
-            "winRate": 48.49
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -40387,22 +37235,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773158"
           ],
           "totalPrice": 1000,
-          "metric": {
-            "pickRate": 51.96,
-            "games": 4749,
-            "winRate": 49.86
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773006"
           ],
           "totalPrice": 900,
-          "metric": {
-            "pickRate": 30.07,
-            "games": 2748,
-            "winRate": 46.4
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -40413,11 +37253,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773031"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 5.87,
-            "games": 724,
-            "winRate": 47.1
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -40427,11 +37263,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773031"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 3.51,
-            "games": 433,
-            "winRate": 48.04
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -40440,11 +37272,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773031"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 2.34,
-            "games": 289,
-            "winRate": 47.06
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -40453,11 +37281,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773142"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 1.61,
-            "games": 199,
-            "winRate": 47.74
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -40466,11 +37290,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773071"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 1.33,
-            "games": 164,
-            "winRate": 45.73
-          }
+          "metric": null
         }
       ]
     },
@@ -40995,11 +37815,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 70.08,
-          "games": 6855,
-          "winRate": 48.08
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -41024,11 +37840,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.72,
-          "games": 266,
-          "winRate": 53.01
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -41053,11 +37865,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.56,
-          "games": 250,
-          "winRate": 46.4
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -41082,11 +37890,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.28,
-          "games": 223,
-          "winRate": 47.98
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -41111,11 +37915,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 1.93,
-          "games": 189,
-          "winRate": 47.62
-        }
+        "metric": null
       }
     ]
   },
@@ -41123,8 +37923,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60025",
     "key": "morgana",
     "name": "堕落天使",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/morgana/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/morgana/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 51,
     "tier": 4,
     "championMetrics": {
@@ -41138,38 +37938,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 44.64,
-          "games": 5862,
-          "winRate": 47.61
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
           }
         ],
-        "metric": {
-          "pickRate": 12.92,
-          "games": 1697,
-          "winRate": 46.91
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -41185,22 +37977,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773070"
           ],
           "totalPrice": 1370,
-          "metric": {
-            "pickRate": 18.48,
-            "games": 1842,
-            "winRate": 46.47
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773010"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 12.51,
-            "games": 1247,
-            "winRate": 45.87
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -41209,22 +37993,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773020"
           ],
           "totalPrice": 1100,
-          "metric": {
-            "pickRate": 78.28,
-            "games": 7836,
-            "winRate": 46.86
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773158"
           ],
           "totalPrice": 1000,
-          "metric": {
-            "pickRate": 17.6,
-            "games": 1762,
-            "winRate": 46.71
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -41235,11 +38011,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": 9000,
-          "metric": {
-            "pickRate": 3.37,
-            "games": 381,
-            "winRate": 48.56
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -41248,11 +38020,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773157"
           ],
           "totalPrice": 8960,
-          "metric": {
-            "pickRate": 2.93,
-            "games": 331,
-            "winRate": 42.6
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -41261,11 +38029,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 2.45,
-            "games": 277,
-            "winRate": 45.49
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -41275,11 +38039,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 2.27,
-            "games": 257,
-            "winRate": 49.03
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -41288,11 +38048,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": 9000,
-          "metric": {
-            "pickRate": 2,
-            "games": 226,
-            "winRate": 51.33
-          }
+          "metric": null
         }
       ]
     },
@@ -41817,11 +38573,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 67.54,
-          "games": 5888,
-          "winRate": 46.26
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -41846,11 +38598,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 1.85,
-          "games": 161,
-          "winRate": 53.42
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -41875,11 +38623,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 1.66,
-          "games": 145,
-          "winRate": 46.9
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -41904,11 +38648,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 1.62,
-          "games": 141,
-          "winRate": 41.13
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -41933,11 +38673,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 1.61,
-          "games": 140,
-          "winRate": 44.29
-        }
+        "metric": null
       }
     ]
   },
@@ -41945,8 +38681,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60026",
     "key": "zilean",
     "name": "时光守护者",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/zilean/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/zilean/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 52,
     "tier": 5,
     "championMetrics": {
@@ -41960,38 +38696,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
           }
         ],
-        "metric": {
-          "pickRate": 23.7,
-          "games": 2257,
-          "winRate": 45.19
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 22.02,
-          "games": 2097,
-          "winRate": 45.97
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -42006,11 +38734,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773070"
           ],
           "totalPrice": 1025,
-          "metric": {
-            "pickRate": 5.86,
-            "games": 419,
-            "winRate": 48.45
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -42018,11 +38742,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773070"
           ],
           "totalPrice": 1100,
-          "metric": {
-            "pickRate": 5.45,
-            "games": 390,
-            "winRate": 45.38
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -42031,22 +38751,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773020"
           ],
           "totalPrice": 1100,
-          "metric": {
-            "pickRate": 63.45,
-            "games": 4030,
-            "winRate": 45.33
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773158"
           ],
           "totalPrice": 1000,
-          "metric": {
-            "pickRate": 27.65,
-            "games": 1756,
-            "winRate": 46.36
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -42057,11 +38769,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 3.44,
-            "games": 275,
-            "winRate": 44.73
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -42070,11 +38778,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773165"
           ],
           "totalPrice": 7395,
-          "metric": {
-            "pickRate": 2.11,
-            "games": 169,
-            "winRate": 43.79
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -42083,11 +38787,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 1.95,
-            "games": 156,
-            "winRate": 41.67
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -42096,11 +38796,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773135"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 1.85,
-            "games": 148,
-            "winRate": 45.27
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -42109,11 +38805,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773135"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 1.79,
-            "games": 143,
-            "winRate": 39.16
-          }
+          "metric": null
         }
       ]
     },
@@ -42638,11 +39330,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 66.7,
-          "games": 4760,
-          "winRate": 44.31
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -42667,11 +39355,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.45,
-          "games": 175,
-          "winRate": 45.14
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -42696,11 +39380,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.41,
-          "games": 172,
-          "winRate": 55.81
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -42725,11 +39405,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.38,
-          "games": 170,
-          "winRate": 46.47
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -42754,11 +39430,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.28,
-          "games": 163,
-          "winRate": 47.85
-        }
+        "metric": null
       }
     ]
   },
@@ -42766,8 +39438,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60053",
     "key": "blitzcrank",
     "name": "蒸汽机器人",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/blitzcrank/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/blitzcrank/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 53,
     "tier": 5,
     "championMetrics": {
@@ -42781,38 +39453,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 57.72,
-          "games": 6887,
-          "winRate": 47.23
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerDot",
             "name": "引燃",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerDot.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerDot.png"
           }
         ],
-        "metric": {
-          "pickRate": 11.93,
-          "games": 1423,
-          "winRate": 46.24
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -42827,22 +39491,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773132"
           ],
           "totalPrice": 1265,
-          "metric": {
-            "pickRate": 7.34,
-            "games": 649,
-            "winRate": 47.46
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773010"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 3.63,
-            "games": 321,
-            "winRate": 50.16
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -42851,22 +39507,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773111"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 34.72,
-            "games": 2743,
-            "winRate": 49.18
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773020"
           ],
           "totalPrice": 1100,
-          "metric": {
-            "pickRate": 22.52,
-            "games": 1779,
-            "winRate": 43.45
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -42877,11 +39525,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773065"
           ],
           "totalPrice": 8700,
-          "metric": {
-            "pickRate": 1.44,
-            "games": 141,
-            "winRate": 48.23
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -42890,11 +39534,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773065"
           ],
           "totalPrice": 8700,
-          "metric": {
-            "pickRate": 1.2,
-            "games": 117,
-            "winRate": 53.85
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -42903,11 +39543,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773065"
           ],
           "totalPrice": 7925,
-          "metric": {
-            "pickRate": 1.12,
-            "games": 109,
-            "winRate": 43.12
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -42916,11 +39552,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773065"
           ],
           "totalPrice": 7925,
-          "metric": {
-            "pickRate": 1.06,
-            "games": 103,
-            "winRate": 43.69
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -42929,11 +39561,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773065"
           ],
           "totalPrice": 7975,
-          "metric": {
-            "pickRate": 1,
-            "games": 98,
-            "winRate": 53.06
-          }
+          "metric": null
         }
       ]
     },
@@ -43458,11 +40086,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 70.6,
-          "games": 6607,
-          "winRate": 46.59
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -43487,11 +40111,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.44,
-          "games": 228,
-          "winRate": 50.88
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -43516,11 +40136,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "W"
         ],
-        "metric": {
-          "pickRate": 1.83,
-          "games": 171,
-          "winRate": 50.88
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -43545,11 +40161,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 1.76,
-          "games": 165,
-          "winRate": 41.82
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -43574,11 +40186,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "W"
         ],
-        "metric": {
-          "pickRate": 1.5,
-          "games": 140,
-          "winRate": 47.14
-        }
+        "metric": null
       }
     ]
   },
@@ -43586,8 +40194,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60028",
     "key": "evelynn",
     "name": "痛苦之拥",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/evelynn/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/evelynn/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 54,
     "tier": 5,
     "championMetrics": {
@@ -43601,38 +40209,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 55.14,
-          "games": 3264,
-          "winRate": 41.33
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerDot",
             "name": "引燃",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerDot.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerDot.png"
           }
         ],
-        "metric": {
-          "pickRate": 12,
-          "games": 710,
-          "winRate": 41.41
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -43647,11 +40247,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773108"
           ],
           "totalPrice": 1145,
-          "metric": {
-            "pickRate": 11.66,
-            "games": 521,
-            "winRate": 42.61
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -43659,11 +40255,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773108"
           ],
           "totalPrice": 1220,
-          "metric": {
-            "pickRate": 6.76,
-            "games": 302,
-            "winRate": 36.42
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -43672,22 +40264,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773020"
           ],
           "totalPrice": 1100,
-          "metric": {
-            "pickRate": 85.38,
-            "games": 3517,
-            "winRate": 42.25
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773117"
           ],
           "totalPrice": 1000,
-          "metric": {
-            "pickRate": 4.73,
-            "games": 195,
-            "winRate": 40.51
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -43698,11 +40282,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": 9400,
-          "metric": {
-            "pickRate": 4.56,
-            "games": 224,
-            "winRate": 39.73
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -43711,11 +40291,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773135"
           ],
           "totalPrice": 8695,
-          "metric": {
-            "pickRate": 4.22,
-            "games": 207,
-            "winRate": 39.61
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -43724,11 +40300,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": 9400,
-          "metric": {
-            "pickRate": 3.22,
-            "games": 158,
-            "winRate": 58.86
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -43737,11 +40309,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773135"
           ],
           "totalPrice": 8295,
-          "metric": {
-            "pickRate": 3.18,
-            "games": 156,
-            "winRate": 34.62
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -43750,11 +40318,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773135"
           ],
           "totalPrice": 8295,
-          "metric": {
-            "pickRate": 2.89,
-            "games": 142,
-            "winRate": 48.59
-          }
+          "metric": null
         }
       ]
     },
@@ -44279,11 +40843,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 72.27,
-          "games": 3420,
-          "winRate": 43.74
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -44308,11 +40868,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 3.02,
-          "games": 143,
-          "winRate": 44.06
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -44337,11 +40893,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.24,
-          "games": 106,
-          "winRate": 37.74
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -44366,11 +40918,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 1.46,
-          "games": 69,
-          "winRate": 50.72
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -44395,11 +40943,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "W"
         ],
-        "metric": {
-          "pickRate": 1.44,
-          "games": 68,
-          "winRate": 42.65
-        }
+        "metric": null
       }
     ]
   },
@@ -44407,8 +40951,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60055",
     "key": "katarina",
     "name": "不祥之刃",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/katarina/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/katarina/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 55,
     "tier": 5,
     "championMetrics": {
@@ -44422,38 +40966,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 65.26,
-          "games": 7049,
-          "winRate": 44.84
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerDot",
             "name": "引燃",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerDot.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerDot.png"
           }
         ],
-        "metric": {
-          "pickRate": 15.67,
-          "games": 1693,
-          "winRate": 45.95
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -44467,22 +41003,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773145"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 33.66,
-            "games": 2751,
-            "winRate": 44.31
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773144"
           ],
           "totalPrice": 1400,
-          "metric": {
-            "pickRate": 9.13,
-            "games": 746,
-            "winRate": 45.98
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -44491,22 +41019,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773020"
           ],
           "totalPrice": 1100,
-          "metric": {
-            "pickRate": 83.96,
-            "games": 6606,
-            "winRate": 44.4
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773111"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 7.09,
-            "games": 558,
-            "winRate": 46.77
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -44517,11 +41037,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773151"
           ],
           "totalPrice": 8860,
-          "metric": {
-            "pickRate": 6.21,
-            "games": 562,
-            "winRate": 46.62
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -44530,11 +41046,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": 9800,
-          "metric": {
-            "pickRate": 4.8,
-            "games": 435,
-            "winRate": 45.29
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -44543,11 +41055,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": 9260,
-          "metric": {
-            "pickRate": 3.14,
-            "games": 284,
-            "winRate": 48.94
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -44556,11 +41064,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773157"
           ],
           "totalPrice": 9220,
-          "metric": {
-            "pickRate": 2.94,
-            "games": 266,
-            "winRate": 46.24
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -44569,11 +41073,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773128"
           ],
           "totalPrice": 9060,
-          "metric": {
-            "pickRate": 2.41,
-            "games": 218,
-            "winRate": 45.87
-          }
+          "metric": null
         }
       ]
     },
@@ -45098,11 +41598,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 73.31,
-          "games": 6260,
-          "winRate": 45.65
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -45127,11 +41623,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.65,
-          "games": 226,
-          "winRate": 41.15
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -45156,11 +41648,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.23,
-          "games": 190,
-          "winRate": 40.53
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -45185,11 +41673,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "W"
         ],
-        "metric": {
-          "pickRate": 1.48,
-          "games": 126,
-          "winRate": 43.65
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -45214,11 +41698,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "W"
         ],
-        "metric": {
-          "pickRate": 1.45,
-          "games": 124,
-          "winRate": 49.19
-        }
+        "metric": null
       }
     ]
   },
@@ -45226,8 +41706,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60016",
     "key": "soraka",
     "name": "众星之子",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/soraka/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/soraka/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 56,
     "tier": 5,
     "championMetrics": {
@@ -45241,38 +41721,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHeal.png"
           }
         ],
-        "metric": {
-          "pickRate": 33.3,
-          "games": 3270,
-          "winRate": 45.72
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerMana",
             "name": "清晰术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerMana.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerMana.png"
           }
         ],
-        "metric": {
-          "pickRate": 15.11,
-          "games": 1484,
-          "winRate": 43.53
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -45286,11 +41758,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773173"
           ],
           "totalPrice": 1100,
-          "metric": {
-            "pickRate": 8.23,
-            "games": 582,
-            "winRate": 41.07
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -45298,11 +41766,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773010"
           ],
           "totalPrice": 1380,
-          "metric": {
-            "pickRate": 6.26,
-            "games": 443,
-            "winRate": 47.63
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -45311,22 +41775,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773158"
           ],
           "totalPrice": 1000,
-          "metric": {
-            "pickRate": 61.21,
-            "games": 3820,
-            "winRate": 45.03
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773009"
           ],
           "totalPrice": 1000,
-          "metric": {
-            "pickRate": 12.05,
-            "games": 752,
-            "winRate": 42.02
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -45337,11 +41793,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773083"
           ],
           "totalPrice": 6750,
-          "metric": {
-            "pickRate": 1.02,
-            "games": 90,
-            "winRate": 53.33
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -45350,11 +41802,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773504"
           ],
           "totalPrice": 5950,
-          "metric": {
-            "pickRate": 0.85,
-            "games": 75,
-            "winRate": 40
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -45363,11 +41811,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773504"
           ],
           "totalPrice": 7850,
-          "metric": {
-            "pickRate": 0.78,
-            "games": 69,
-            "winRate": 53.62
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -45376,11 +41820,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773083"
           ],
           "totalPrice": 7850,
-          "metric": {
-            "pickRate": 0.69,
-            "games": 61,
-            "winRate": 55.74
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -45389,11 +41829,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773084"
           ],
           "totalPrice": 5950,
-          "metric": {
-            "pickRate": 0.66,
-            "games": 58,
-            "winRate": 53.45
-          }
+          "metric": null
         }
       ]
     },
@@ -45918,11 +42354,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 52.16,
-          "games": 3100,
-          "winRate": 43.94
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -45947,11 +42379,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 4.61,
-          "games": 274,
-          "winRate": 43.43
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -45976,11 +42404,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "Q",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.24,
-          "games": 133,
-          "winRate": 43.61
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -46005,11 +42429,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.04,
-          "games": 121,
-          "winRate": 42.98
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -46034,11 +42454,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 1.94,
-          "games": 115,
-          "winRate": 57.39
-        }
+        "metric": null
       }
     ]
   },
@@ -46046,8 +42462,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60020",
     "key": "nunu",
     "name": "雪原双子",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/nunu/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/nunu/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 57,
     "tier": 5,
     "championMetrics": {
@@ -46061,38 +42477,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 51.47,
-          "games": 4393,
-          "winRate": 42.32
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
           }
         ],
-        "metric": {
-          "pickRate": 19.02,
-          "games": 1623,
-          "winRate": 40.73
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -46107,22 +42515,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "771052"
           ],
           "totalPrice": 1295,
-          "metric": {
-            "pickRate": 21.43,
-            "games": 1353,
-            "winRate": 41.17
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773024"
           ],
           "totalPrice": 1350,
-          "metric": {
-            "pickRate": 9.49,
-            "games": 599,
-            "winRate": 39.57
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -46131,22 +42531,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773020"
           ],
           "totalPrice": 1100,
-          "metric": {
-            "pickRate": 30.58,
-            "games": 1955,
-            "winRate": 40.72
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773111"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 28.8,
-            "games": 1841,
-            "winRate": 44.38
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -46157,11 +42549,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773151"
           ],
           "totalPrice": 8700,
-          "metric": {
-            "pickRate": 2.19,
-            "games": 152,
-            "winRate": 44.74
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -46170,11 +42558,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773065"
           ],
           "totalPrice": 8550,
-          "metric": {
-            "pickRate": 2.17,
-            "games": 151,
-            "winRate": 47.02
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -46183,11 +42567,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773151"
           ],
           "totalPrice": 8700,
-          "metric": {
-            "pickRate": 1.79,
-            "games": 124,
-            "winRate": 46.77
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -46196,11 +42576,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773135"
           ],
           "totalPrice": 8695,
-          "metric": {
-            "pickRate": 1.68,
-            "games": 117,
-            "winRate": 35.04
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -46209,11 +42585,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": 9100,
-          "metric": {
-            "pickRate": 1.4,
-            "games": 97,
-            "winRate": 36.08
-          }
+          "metric": null
         }
       ]
     },
@@ -46738,11 +43110,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 49.91,
-          "games": 2580,
-          "winRate": 42.4
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -46767,11 +43135,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.63,
-          "games": 136,
-          "winRate": 39.71
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -46796,11 +43160,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.59,
-          "games": 134,
-          "winRate": 37.31
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -46825,11 +43185,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "Q",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.51,
-          "games": 130,
-          "winRate": 40
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -46854,11 +43210,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "Q",
           "E"
         ],
-        "metric": {
-          "pickRate": 2.36,
-          "games": 122,
-          "winRate": 45.08
-        }
+        "metric": null
       }
     ]
   },
@@ -46866,8 +43218,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60064",
     "key": "leesin",
     "name": "盲僧",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/leesin/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/leesin/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 58,
     "tier": 5,
     "championMetrics": {
@@ -46881,38 +43233,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 73.8,
-          "games": 7238,
-          "winRate": 40.48
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerDot",
             "name": "引燃",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerDot.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerDot.png"
           }
         ],
-        "metric": {
-          "pickRate": 9.04,
-          "games": 887,
-          "winRate": 40.7
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -46926,11 +43270,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773134"
           ],
           "totalPrice": 1337,
-          "metric": {
-            "pickRate": 15.19,
-            "games": 1129,
-            "winRate": 39.24
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -46938,11 +43278,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "771037"
           ],
           "totalPrice": 1275,
-          "metric": {
-            "pickRate": 7.98,
-            "games": 593,
-            "winRate": 43
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -46951,22 +43287,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773111"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 63.53,
-            "games": 3978,
-            "winRate": 41.78
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773047"
           ],
           "totalPrice": 1000,
-          "metric": {
-            "pickRate": 18.6,
-            "games": 1165,
-            "winRate": 39.48
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -46977,11 +43305,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773071"
           ],
           "totalPrice": 9928,
-          "metric": {
-            "pickRate": 7.4,
-            "games": 484,
-            "winRate": 40.7
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -46990,11 +43314,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773071"
           ],
           "totalPrice": 9928,
-          "metric": {
-            "pickRate": 6.92,
-            "games": 453,
-            "winRate": 42.16
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -47003,11 +43323,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773156"
           ],
           "totalPrice": 9500,
-          "metric": {
-            "pickRate": 2.38,
-            "games": 156,
-            "winRate": 36.54
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -47016,11 +43332,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773071"
           ],
           "totalPrice": 7500,
-          "metric": {
-            "pickRate": 2.29,
-            "games": 150,
-            "winRate": 35.33
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -47029,11 +43341,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773078"
           ],
           "totalPrice": 9928,
-          "metric": {
-            "pickRate": 1.96,
-            "games": 128,
-            "winRate": 41.41
-          }
+          "metric": null
         }
       ]
     },
@@ -47558,11 +43866,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 65.39,
-          "games": 4223,
-          "winRate": 41.35
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -47587,11 +43891,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "W"
         ],
-        "metric": {
-          "pickRate": 3.28,
-          "games": 212,
-          "winRate": 42.92
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -47616,11 +43916,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.62,
-          "games": 169,
-          "winRate": 44.97
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -47645,11 +43941,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "E",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.51,
-          "games": 162,
-          "winRate": 40.12
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -47674,11 +43966,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.15,
-          "games": 139,
-          "winRate": 38.85
-        }
+        "metric": null
       }
     ]
   },
@@ -47686,8 +43974,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60035",
     "key": "shaco",
     "name": "恶魔小丑",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/shaco/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/shaco/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 59,
     "tier": 5,
     "championMetrics": {
@@ -47701,38 +43989,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 47.14,
-          "games": 5382,
-          "winRate": 39.59
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerDot",
             "name": "引燃",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerDot.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerDot.png"
           }
         ],
-        "metric": {
-          "pickRate": 19.77,
-          "games": 2257,
-          "winRate": 40.36
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -47746,11 +44026,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773134"
           ],
           "totalPrice": 1337,
-          "metric": {
-            "pickRate": 12.58,
-            "games": 1052,
-            "winRate": 37.93
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -47759,11 +44035,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "771052"
           ],
           "totalPrice": 1345,
-          "metric": {
-            "pickRate": 3.77,
-            "games": 315,
-            "winRate": 43.81
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -47772,22 +44044,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773006"
           ],
           "totalPrice": 900,
-          "metric": {
-            "pickRate": 39.86,
-            "games": 2782,
-            "winRate": 39.47
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773020"
           ],
           "totalPrice": 1100,
-          "metric": {
-            "pickRate": 26.52,
-            "games": 1851,
-            "winRate": 42.46
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -47798,11 +44062,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773035"
           ],
           "totalPrice": 8800,
-          "metric": {
-            "pickRate": 2.45,
-            "games": 220,
-            "winRate": 35.91
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -47811,11 +44071,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773031"
           ],
           "totalPrice": 9500,
-          "metric": {
-            "pickRate": 1.5,
-            "games": 135,
-            "winRate": 37.04
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -47824,11 +44080,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773031"
           ],
           "totalPrice": 8800,
-          "metric": {
-            "pickRate": 1.32,
-            "games": 119,
-            "winRate": 39.5
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -47837,11 +44089,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773035"
           ],
           "totalPrice": 8800,
-          "metric": {
-            "pickRate": 1.03,
-            "games": 93,
-            "winRate": 31.18
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -47850,11 +44098,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": 9300,
-          "metric": {
-            "pickRate": 1.03,
-            "games": 93,
-            "winRate": 36.56
-          }
+          "metric": null
         }
       ]
     },
@@ -48379,11 +44623,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "Q",
           "Q"
         ],
-        "metric": {
-          "pickRate": 47.71,
-          "games": 1783,
-          "winRate": 42.23
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -48408,11 +44648,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "Q"
         ],
-        "metric": {
-          "pickRate": 2.92,
-          "games": 109,
-          "winRate": 38.53
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -48437,11 +44673,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "Q",
           "Q"
         ],
-        "metric": {
-          "pickRate": 2.84,
-          "games": 106,
-          "winRate": 42.45
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -48466,11 +44698,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "Q"
         ],
-        "metric": {
-          "pickRate": 2.76,
-          "games": 103,
-          "winRate": 45.63
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -48495,11 +44723,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "Q",
           "Q"
         ],
-        "metric": {
-          "pickRate": 2.62,
-          "games": 98,
-          "winRate": 46.94
-        }
+        "metric": null
       }
     ]
   },
@@ -48507,8 +44731,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60076",
     "key": "nidalee",
     "name": "狂野女猎手",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/nidalee/build?region=global&tier=all&patch=16.16",
-    "patch": "16.16",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/nidalee/build?region=global&tier=all&patch=16.17",
+    "patch": "16.17",
     "rank": 60,
     "tier": 5,
     "championMetrics": {
@@ -48522,38 +44746,30 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
           }
         ],
-        "metric": {
-          "pickRate": 48.98,
-          "games": 5716,
-          "winRate": 39.98
-        }
+        "metric": null
       },
       {
         "spells": [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.16.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
           }
         ],
-        "metric": {
-          "pickRate": 11.27,
-          "games": 1315,
-          "winRate": 40.15
-        }
+        "metric": null
       }
     ],
     "runes": {
@@ -48569,22 +44785,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773070"
           ],
           "totalPrice": 1370,
-          "metric": {
-            "pickRate": 20.48,
-            "games": 1801,
-            "winRate": 38.53
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773010"
           ],
           "totalPrice": 1200,
-          "metric": {
-            "pickRate": 7.68,
-            "games": 675,
-            "winRate": 40.89
-          }
+          "metric": null
         }
       ],
       "boots": [
@@ -48593,22 +44801,14 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773020"
           ],
           "totalPrice": 1100,
-          "metric": {
-            "pickRate": 84.64,
-            "games": 7518,
-            "winRate": 39.9
-          }
+          "metric": null
         },
         {
           "itemIds": [
             "773158"
           ],
           "totalPrice": 1000,
-          "metric": {
-            "pickRate": 10.3,
-            "games": 915,
-            "winRate": 37.7
-          }
+          "metric": null
         }
       ],
       "core": [
@@ -48619,11 +44819,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 3.16,
-            "games": 308,
-            "winRate": 37.66
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -48632,11 +44828,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": 9000,
-          "metric": {
-            "pickRate": 2.14,
-            "games": 209,
-            "winRate": 31.1
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -48646,11 +44838,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 1.54,
-            "games": 150,
-            "winRate": 40.67
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -48659,11 +44847,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 1.53,
-            "games": 149,
-            "winRate": 35.57
-          }
+          "metric": null
         },
         {
           "itemIds": [
@@ -48672,11 +44856,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773089"
           ],
           "totalPrice": null,
-          "metric": {
-            "pickRate": 1.4,
-            "games": 137,
-            "winRate": 40.15
-          }
+          "metric": null
         }
       ]
     },
@@ -49201,11 +45381,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 54.71,
-          "games": 5120,
-          "winRate": 41.21
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -49230,11 +45406,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 6.6,
-          "games": 618,
-          "winRate": 37.22
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -49259,11 +45431,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 2.1,
-          "games": 197,
-          "winRate": 38.07
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -49288,11 +45456,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 1.7,
-          "games": 159,
-          "winRate": 40.88
-        }
+        "metric": null
       },
       {
         "priority": [
@@ -49317,11 +45481,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           "W",
           "W"
         ],
-        "metric": {
-          "pickRate": 1.68,
-          "games": 157,
-          "winRate": 39.49
-        }
+        "metric": null
       }
     ]
   }

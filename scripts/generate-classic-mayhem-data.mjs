@@ -328,6 +328,27 @@ function formatFormulaPart(part, context, issues, seen) {
   if (!part || typeof part !== "object") return null;
   const type = part.__type ?? "unknown";
 
+  // CommunityDragon 16.17 exposes the new character-level breakpoint part
+  // with hashed field/type names. Its values reference SpellDataValue names,
+  // so normalize that public structure before using the regular formatter.
+  if (type === "{4ce08984}") {
+    const namedValue = (value, fallback = null) => {
+      const direct = finiteNumber(value);
+      if (direct !== null) return direct;
+      const entry = context.dataValues.get(String(value ?? "").toLowerCase());
+      return finiteNumber(entry?.values?.[0]) ?? fallback;
+    };
+    return formatCharacterLevelBreakpoints({
+      mLevel1Value: namedValue(part["{91d404a5}"]),
+      mInitialBonusPerLevel: namedValue(part["{bbd778a2}"], 0),
+      mBreakpoints: (part["{9823b29a}"] ?? []).map((entry) => ({
+        mLevel: entry.level,
+        mAdditionalBonusAtThisLevel: namedValue(entry["{ae9b464d}"], 0),
+        mBonusPerLevelAtAndAfter: namedValue(entry["{b0d8b2ac}"], 0),
+      })),
+    });
+  }
+
   if (type === "NamedDataValueCalculationPart") {
     const entry = context.dataValues.get(String(part.mDataValue).toLowerCase());
     if (entry) return formatValueSeries(entry.values);

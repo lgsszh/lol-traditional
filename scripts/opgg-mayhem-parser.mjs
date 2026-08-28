@@ -1,6 +1,47 @@
 const activeSkillKeys = new Set(["Q", "W", "E"]);
 const allSkillKeys = new Set(["Q", "W", "E", "R"]);
 
+function validateMetric(metric, label) {
+  if (
+    !Number.isFinite(metric.pickRate)
+    || !Number.isInteger(metric.games)
+    || !Number.isFinite(metric.winRate)
+    || metric.games <= 0
+    || metric.pickRate < 0
+    || metric.pickRate > 100
+    || metric.winRate < 0
+    || metric.winRate > 100
+  ) {
+    throw new Error(`${label}: invalid metric ${JSON.stringify(metric)}`);
+  }
+  return metric;
+}
+
+export function parseOpggMetric(row, label) {
+  const cells = row.find("td");
+  const pickText = cells.eq(-2).text().replace(/\s+/g, "");
+  const winText = cells.eq(-1).text().replace(/\s+/g, "");
+  const metricText = `${pickText}${winText}`;
+  const pickMatch = pickText.match(/(\d+(?:\.\d+)?)%/);
+  const gamesMatch = pickText.match(/([\d,]+)场/);
+  const winMatch = winText.match(/(\d+(?:\.\d+)?)%/);
+
+  // OP.GG 16.17 keeps the ordered recommendation rows but omits all three
+  // statistics from their server-rendered HTML. Preserve the sourced order and
+  // expose no metric rather than inventing values. A partially rendered metric
+  // remains a contract failure because it may indicate a real DOM change.
+  if (!/[\d,.]+%|[\d,]+场/.test(metricText)) return null;
+  if (!pickMatch || !gamesMatch || !winMatch) {
+    const compact = row.text().replace(/\s+/g, "");
+    throw new Error(`${label}: cannot parse metric row "${compact.slice(0, 160)}"`);
+  }
+  return validateMetric({
+    pickRate: Number(pickMatch[1]),
+    games: Number(gamesMatch[1].replace(/,/g, "")),
+    winRate: Number(winMatch[1]),
+  }, label);
+}
+
 function skillKey(value) {
   const key = String(value ?? "").trim();
   return allSkillKeys.has(key) ? key : null;

@@ -5,7 +5,7 @@
 
 面向英雄联盟怀旧服（Classic）的玩法攻略与构筑工作台：63 位经典
 英雄、251 套按 S3（2012–2013）社区攻略考据的完整玩法方案、152 件
-经典装备、50 枚符文、56 点天赋和 16 个召唤师技能；并提供使用
+经典装备、59 枚符文、56 点天赋和 16 个召唤师技能；并提供使用
 现代英雄技能、经典地图与装备的「海克斯大乱斗 · 经典模式版」攻略。
 无需登录，打开公开网址即可使用。
 
@@ -61,7 +61,7 @@ npm run dev
 | `npm run build:pages` | GitHub Pages 静态导出（CI 设置环境变量） |
 | `npm run data:update` | 重新抓取 OP.GG Classic、现代技能与海斗模式池并更新快照 |
 | `npm run data:check` | 在线重新生成并确认仓库快照没有漂移 |
-| `npm run classic:catalog:update` | 更新 OP.GG 的 50 符文／56 天赋／16 召唤师技能目录 |
+| `npm run classic:catalog:update` | 更新 OP.GG 的 59 符文／56 天赋／16 召唤师技能目录 |
 | `npm run classic:catalog:check` | 在线校验 OP.GG 经典目录快照 |
 | `npm run mayhem:update` | 更新现代技能、两套强化池与 60 英雄 OP.GG 统计 |
 | `npm run mayhem:check` | 在线重新生成并校验全部怀旧海斗快照 |

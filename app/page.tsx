@@ -59,7 +59,7 @@ const workbenchNavigation: ReadonlyArray<{
   badge: string;
   description: string;
 }> = [
-  { id: "runes", label: "符文模拟器", shortLabel: "符文", badge: "50", description: "30 格经典符文页" },
+  { id: "runes", label: "符文模拟器", shortLabel: "符文", badge: "59", description: "30 格经典符文页" },
   { id: "masteries", label: "天赋模拟器", shortLabel: "天赋", badge: "56", description: "30 点完整天赋树" },
   { id: "build", label: "技能与出装", shortLabel: "构筑", badge: "152", description: "玩法、技能与装备" },
   { id: "mayhem", label: "怀旧海斗", shortLabel: "怀旧海斗", badge: "188", description: "OP.GG 每日同步" },
@@ -1169,7 +1169,7 @@ export default function Home() {
               <p>
                 {view === "mayhem"
                   ? "现代英雄技能 + 经典地图与装备 + KIWI_JADE 独立强化符文池"
-                  : "完整经典目录已载入：符文 50 · 天赋 56 · 召唤师技能 16 · 装备 152"}
+                  : "完整经典目录已载入：符文 59 · 天赋 56 · 召唤师技能 16 · 装备 152"}
               </p>
             </div>
             <div className="hero-actions">
@@ -1743,7 +1743,7 @@ export default function Home() {
                 </div>
                 <aside className={`ai-status ${aiState}`}>
                   <h4>数据校验清单</h4>
-                  {["英雄与位置", "50 个符文目录", "56 节点天赋树", "16 个召唤师技能", "152 件经典装备"].map((label, index) => <div key={label}><i>{aiState === "ready" || (aiState === "working" && index < 3) ? "✓" : "○"}</i><span>{label}</span></div>)}
+                  {["英雄与位置", "59 个符文目录", "56 节点天赋树", "16 个召唤师技能", "152 件经典装备"].map((label, index) => <div key={label}><i>{aiState === "ready" || (aiState === "working" && index < 3) ? "✓" : "○"}</i><span>{label}</span></div>)}
                   <p>{aiState === "ready" ? "方案已写入，可到各模拟器继续手动微调。" : "生成过程只读取本站已校验的 Classic 数据快照，不会要求登录。"}</p>
                 </aside>
               </div>
@@ -1827,7 +1827,7 @@ export default function Home() {
                 </section>
               )}
               <div className="source-strip">
-                <a href="https://op.gg/zh-cn/lol/classic/runes" target="_blank" rel="noreferrer"><b>OP</b><span>经典符文模拟器<small>50 个符文 · 9/9/9/3</small></span></a>
+                <a href="https://op.gg/zh-cn/lol/classic/runes" target="_blank" rel="noreferrer"><b>OP</b><span>经典符文模拟器<small>59 个符文 · 9/9/9/3</small></span></a>
                 <a href="https://op.gg/zh-cn/lol/classic/masteries" target="_blank" rel="noreferrer"><b>OP</b><span>经典天赋模拟器<small>56 个节点 · 30 点</small></span></a>
                 <a href="https://op.gg/zh-cn/lol/classic/items" target="_blank" rel="noreferrer"><b>OP</b><span>经典装备目录<small>152 件 · 6 个分类</small></span></a>
               </div>

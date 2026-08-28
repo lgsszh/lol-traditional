@@ -88,7 +88,7 @@ export type OpggMayhemItem = {
 export type OpggItemRecommendation = {
   itemIds: string[];
   totalPrice: number | null;
-  metric: OpggMetric;
+  metric: OpggMetric | null;
 };
 
 export type OpggAugmentRecommendation = {
@@ -112,13 +112,13 @@ export type OpggMayhemChampionBuild = {
   augments: OpggAugmentRecommendation[];
   summonerSets: Array<{
     spells: Array<{ key: string; name: string; icon: string }>;
-    metric: OpggMetric;
+    metric: OpggMetric | null;
   }>;
   runes: { status: "unavailable"; reason: string };
   skillBuilds: Array<{
     priority: Array<"Q" | "W" | "E">;
     levelSequence: Array<"Q" | "W" | "E" | "R">;
-    metric: OpggMetric;
+    metric: OpggMetric | null;
   }>;
   items: {
     starting: OpggItemRecommendation[];

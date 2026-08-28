@@ -14,10 +14,10 @@ import {
 } from "../app/classic-catalog-opgg.generated.ts";
 
 test("经典目录使用 OP.GG 原始字段，并隐藏其内部空白符文标题", () => {
-  assert.equal(classicOpggRunes.length, 50);
+  assert.equal(classicOpggRunes.length, 59);
   assert.equal(classicOpggMasteries.length, 56);
   assert.equal(classicOpggSpells.length, 16);
-  assert.equal(classicOpggCatalogSnapshot.runes.length, 50);
+  assert.equal(classicOpggCatalogSnapshot.runes.length, 59);
   assert.equal(classicOpggCatalogSnapshot.masteries.length, 56);
   assert.equal(classicOpggCatalogSnapshot.spells.length, 16);
 
@@ -74,7 +74,7 @@ test("OP.GG 经典目录快照已纳入每日生成与部署提交", async () =>
   assert.match(packageSource, /classic:catalog:update/);
   assert.match(packageSource, /classic:catalog:check/);
   assert.match(workflowSource, /app\/classic-catalog-opgg\.generated\.ts/);
-  assert.match(generatorSource, /expectedCount:\s*50/);
+  assert.match(generatorSource, /expectedCount:\s*59/);
   assert.match(generatorSource, /expectedCount:\s*56/);
   assert.match(generatorSource, /expectedCount:\s*16/);
   assert.match(generatorSource, /--check/);
