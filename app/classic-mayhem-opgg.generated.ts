@@ -1,8 +1,8 @@
-// Generated from OP.GG ARAM Mayhem Classic-ish 16.17. Do not edit manually.
-export const OP_GG_MAYHEM_PATCH = "16.17";
-export const OP_GG_MAYHEM_ASSET_PATCH = "16.17.1";
+// Generated from OP.GG ARAM Mayhem Classic-ish 16.19. Do not edit manually.
+export const OP_GG_MAYHEM_PATCH = "16.19";
+export const OP_GG_MAYHEM_ASSET_PATCH = "16.19.1";
 export const OP_GG_MAYHEM_SOURCE_URL = "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic";
-export const OP_GG_MAYHEM_SNAPSHOT_HASH = "272e72e4091184828aa62e07396a4f057485058acbaff2a54f4e03ac733c4b81";
+export const OP_GG_MAYHEM_SNAPSHOT_HASH = "19c605dd128621b958dcf926bffa97ee17c60a5e38d032ff00221116a1b78a10";
 export const MAYHEM_STARTING_GOLD = 1400;
 export const MAYHEM_HAS_JUNGLE_ROLE = false;
 
@@ -18,14 +18,14 @@ export const opggMayhemItems: OpggMayhemItem[] = [
   {
     "id": "773040",
     "name": "炽天使之拥",
-    "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/item/773040.png",
+    "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/item/773040.png",
     "price": null,
     "tags": []
   },
   {
     "id": "773042",
     "name": "魔切",
-    "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/item/773042.png",
+    "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/item/773042.png",
     "price": null,
     "tags": []
   }
@@ -82,8 +82,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60010",
     "key": "kayle",
     "name": "正义天使",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/kayle/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/kayle/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 1,
     "tier": 1,
     "championMetrics": {
@@ -97,12 +97,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -112,12 +112,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -125,7 +125,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -838,8 +838,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60096",
     "key": "kogmaw",
     "name": "深渊巨口",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/kogmaw/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/kogmaw/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 2,
     "tier": 1,
     "championMetrics": {
@@ -853,12 +853,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -868,12 +868,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -881,7 +881,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -1594,8 +1594,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60067",
     "key": "vayne",
     "name": "暗夜猎手",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/vayne/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/vayne/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 3,
     "tier": 1,
     "championMetrics": {
@@ -1609,12 +1609,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -1624,12 +1624,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -1637,7 +1637,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -2350,8 +2350,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60036",
     "key": "drmundo",
     "name": "祖安狂人",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/drmundo/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/drmundo/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 4,
     "tier": 1,
     "championMetrics": {
@@ -2365,12 +2365,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -2380,12 +2380,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -2393,7 +2393,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -3107,8 +3107,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60015",
     "key": "sivir",
     "name": "战争女神",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/sivir/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/sivir/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 5,
     "tier": 1,
     "championMetrics": {
@@ -3122,12 +3122,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -3137,12 +3137,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -3150,7 +3150,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -3863,8 +3863,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60022",
     "key": "ashe",
     "name": "寒冰射手",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/ashe/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/ashe/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 6,
     "tier": 2,
     "championMetrics": {
@@ -3878,12 +3878,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -3893,12 +3893,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -3906,7 +3906,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -4619,8 +4619,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60063",
     "key": "brand",
     "name": "复仇焰魂",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/brand/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/brand/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 7,
     "tier": 2,
     "championMetrics": {
@@ -4634,12 +4634,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -4649,12 +4649,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -4662,7 +4662,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -5378,8 +5378,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60045",
     "key": "veigar",
     "name": "邪恶小法师",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/veigar/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/veigar/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 8,
     "tier": 2,
     "championMetrics": {
@@ -5393,12 +5393,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -5408,12 +5408,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -5421,7 +5421,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -6135,8 +6135,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60027",
     "key": "singed",
     "name": "炼金术士",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/singed/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/singed/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 9,
     "tier": 2,
     "championMetrics": {
@@ -6150,12 +6150,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -6165,12 +6165,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -6178,7 +6178,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -6891,8 +6891,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60021",
     "key": "missfortune",
     "name": "赏金猎人",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/missfortune/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/missfortune/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 10,
     "tier": 2,
     "championMetrics": {
@@ -6906,12 +6906,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -6921,12 +6921,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -6934,7 +6934,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -7647,8 +7647,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60037",
     "key": "sona",
     "name": "琴瑟仙女",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/sona/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/sona/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 11,
     "tier": 2,
     "championMetrics": {
@@ -7662,12 +7662,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHeal.png"
           }
         ],
         "metric": null
@@ -7677,12 +7677,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerMana",
             "name": "清晰术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerMana.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerMana.png"
           }
         ],
         "metric": null
@@ -7690,7 +7690,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -7754,7 +7754,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773084",
             "773504"
           ],
-          "totalPrice": 5950,
+          "totalPrice": 5550,
           "metric": null
         },
         {
@@ -7763,7 +7763,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773092",
             "773084"
           ],
-          "totalPrice": 5350,
+          "totalPrice": 4950,
           "metric": null
         },
         {
@@ -8406,8 +8406,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60014",
     "key": "sion",
     "name": "亡灵战神",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/sion/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/sion/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 12,
     "tier": 2,
     "championMetrics": {
@@ -8421,12 +8421,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -8436,12 +8436,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHeal.png"
           }
         ],
         "metric": null
@@ -8449,7 +8449,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -9163,8 +9163,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60017",
     "key": "teemo",
     "name": "迅捷斥候",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/teemo/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/teemo/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 13,
     "tier": 2,
     "championMetrics": {
@@ -9178,12 +9178,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -9193,12 +9193,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -9206,7 +9206,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -9920,8 +9920,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60018",
     "key": "tristana",
     "name": "麦林炮手",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/tristana/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/tristana/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 14,
     "tier": 2,
     "championMetrics": {
@@ -9935,12 +9935,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -9950,12 +9950,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -9963,7 +9963,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -10676,8 +10676,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60012",
     "key": "alistar",
     "name": "牛头酋长",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/alistar/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/alistar/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 15,
     "tier": 2,
     "championMetrics": {
@@ -10691,12 +10691,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -10706,12 +10706,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHeal.png"
           }
         ],
         "metric": null
@@ -10719,7 +10719,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -11433,8 +11433,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60099",
     "key": "lux",
     "name": "光辉女郎",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/lux/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/lux/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 16,
     "tier": 2,
     "championMetrics": {
@@ -11448,12 +11448,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -11463,12 +11463,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -11476,7 +11476,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -12189,8 +12189,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60044",
     "key": "taric",
     "name": "瓦洛兰之盾",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/taric/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/taric/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 17,
     "tier": 3,
     "championMetrics": {
@@ -12204,12 +12204,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -12219,12 +12219,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHeal.png"
           }
         ],
         "metric": null
@@ -12232,7 +12232,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -12946,8 +12946,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60029",
     "key": "twitch",
     "name": "瘟疫之源",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/twitch/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/twitch/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 18,
     "tier": 3,
     "championMetrics": {
@@ -12961,12 +12961,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -12976,12 +12976,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -12989,7 +12989,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -13702,8 +13702,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60103",
     "key": "ahri",
     "name": "九尾妖狐",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/ahri/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/ahri/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 19,
     "tier": 3,
     "championMetrics": {
@@ -13717,12 +13717,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -13732,12 +13732,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerDot",
             "name": "引燃",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerDot.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerDot.png"
           }
         ],
         "metric": null
@@ -13745,7 +13745,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -14460,8 +14460,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60089",
     "key": "leona",
     "name": "曙光女神",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/leona/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/leona/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 20,
     "tier": 3,
     "championMetrics": {
@@ -14475,12 +14475,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -14490,12 +14490,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHeal.png"
           }
         ],
         "metric": null
@@ -14503,7 +14503,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -15217,8 +15217,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60032",
     "key": "amumu",
     "name": "殇之木乃伊",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/amumu/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/amumu/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 21,
     "tier": 3,
     "championMetrics": {
@@ -15232,12 +15232,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -15247,12 +15247,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHeal.png"
           }
         ],
         "metric": null
@@ -15260,7 +15260,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -15973,8 +15973,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60013",
     "key": "ryze",
     "name": "符文法师",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/ryze/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/ryze/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 22,
     "tier": 3,
     "championMetrics": {
@@ -15988,12 +15988,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -16003,12 +16003,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -16016,7 +16016,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -16731,8 +16731,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60074",
     "key": "heimerdinger",
     "name": "大发明家",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/heimerdinger/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/heimerdinger/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 23,
     "tier": 3,
     "championMetrics": {
@@ -16746,12 +16746,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -16761,12 +16761,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -16774,7 +16774,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -17490,8 +17490,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60001",
     "key": "annie",
     "name": "黑暗之女",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/annie/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/annie/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 24,
     "tier": 3,
     "championMetrics": {
@@ -17505,12 +17505,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -17520,12 +17520,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerDot",
             "name": "引燃",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerDot.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerDot.png"
           }
         ],
         "metric": null
@@ -17533,7 +17533,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -18248,8 +18248,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60090",
     "key": "malzahar",
     "name": "虚空先知",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/malzahar/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/malzahar/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 25,
     "tier": 3,
     "championMetrics": {
@@ -18263,12 +18263,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -18278,12 +18278,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -18291,7 +18291,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -19007,8 +19007,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60009",
     "key": "fiddlesticks",
     "name": "远古恐惧",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/fiddlesticks/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/fiddlesticks/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 26,
     "tier": 3,
     "championMetrics": {
@@ -19022,12 +19022,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -19037,12 +19037,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHeal.png"
           }
         ],
         "metric": null
@@ -19050,7 +19050,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -19766,8 +19766,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60054",
     "key": "malphite",
     "name": "熔岩巨兽",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/malphite/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/malphite/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 27,
     "tier": 3,
     "championMetrics": {
@@ -19781,12 +19781,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -19796,12 +19796,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerDot",
             "name": "引燃",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerDot.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerDot.png"
           }
         ],
         "metric": null
@@ -19809,7 +19809,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -20523,8 +20523,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60062",
     "key": "monkeyking",
     "name": "齐天大圣",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/monkeyking/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/monkeyking/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 28,
     "tier": 3,
     "championMetrics": {
@@ -20538,12 +20538,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -20553,12 +20553,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHeal.png"
           }
         ],
         "metric": null
@@ -20566,7 +20566,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -21279,8 +21279,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60038",
     "key": "kassadin",
     "name": "虚空行者",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/kassadin/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/kassadin/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 29,
     "tier": 3,
     "championMetrics": {
@@ -21294,12 +21294,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -21309,12 +21309,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerDot",
             "name": "引燃",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerDot.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerDot.png"
           }
         ],
         "metric": null
@@ -21322,7 +21322,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -22037,8 +22037,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60042",
     "key": "corki",
     "name": "英勇投弹手",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/corki/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/corki/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 30,
     "tier": 3,
     "championMetrics": {
@@ -22052,12 +22052,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -22067,12 +22067,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -22080,7 +22080,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -22793,8 +22793,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60002",
     "key": "olaf",
     "name": "狂战士",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/olaf/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/olaf/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 31,
     "tier": 3,
     "championMetrics": {
@@ -22808,12 +22808,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -22823,12 +22823,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -22836,7 +22836,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -23549,8 +23549,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60024",
     "key": "jax",
     "name": "武器大师",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/jax/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/jax/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 32,
     "tier": 4,
     "championMetrics": {
@@ -23564,12 +23564,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -23579,12 +23579,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHeal.png"
           }
         ],
         "metric": null
@@ -23592,7 +23592,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -24304,8 +24304,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60030",
     "key": "karthus",
     "name": "死亡颂唱者",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/karthus/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/karthus/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 33,
     "tier": 4,
     "championMetrics": {
@@ -24319,12 +24319,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -24334,12 +24334,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHeal.png"
           }
         ],
         "metric": null
@@ -24347,7 +24347,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -25063,8 +25063,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60040",
     "key": "janna",
     "name": "风暴之怒",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/janna/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/janna/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 34,
     "tier": 4,
     "championMetrics": {
@@ -25078,12 +25078,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHeal.png"
           }
         ],
         "metric": null
@@ -25093,12 +25093,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -25106,7 +25106,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -25822,8 +25822,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60079",
     "key": "gragas",
     "name": "酒桶",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/gragas/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/gragas/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 35,
     "tier": 4,
     "championMetrics": {
@@ -25837,12 +25837,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -25852,12 +25852,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHeal.png"
           }
         ],
         "metric": null
@@ -25865,7 +25865,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -26578,8 +26578,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60086",
     "key": "garen",
     "name": "德玛西亚之力",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/garen/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/garen/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 36,
     "tier": 4,
     "championMetrics": {
@@ -26593,12 +26593,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -26608,12 +26608,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -26621,7 +26621,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -27333,8 +27333,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60075",
     "key": "nasus",
     "name": "沙漠死神",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/nasus/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/nasus/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 37,
     "tier": 4,
     "championMetrics": {
@@ -27348,12 +27348,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -27363,12 +27363,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -27376,7 +27376,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -28088,8 +28088,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60059",
     "key": "jarvaniv",
     "name": "德玛西亚皇子",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/jarvaniv/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/jarvaniv/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 38,
     "tier": 4,
     "championMetrics": {
@@ -28103,12 +28103,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -28118,12 +28118,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHeal.png"
           }
         ],
         "metric": null
@@ -28131,7 +28131,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -28844,8 +28844,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60004",
     "key": "twistedfate",
     "name": "卡牌大师",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/twistedfate/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/twistedfate/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 39,
     "tier": 4,
     "championMetrics": {
@@ -28859,12 +28859,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -28874,12 +28874,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -28887,7 +28887,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -29600,8 +29600,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60072",
     "key": "skarner",
     "name": "上古领主",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/skarner/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/skarner/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 40,
     "tier": 4,
     "championMetrics": {
@@ -29615,12 +29615,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -29630,12 +29630,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHeal.png"
           }
         ],
         "metric": null
@@ -29643,7 +29643,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -30358,8 +30358,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60034",
     "key": "anivia",
     "name": "冰晶凤凰",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/anivia/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/anivia/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 41,
     "tier": 4,
     "championMetrics": {
@@ -30373,12 +30373,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -30388,12 +30388,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -30401,7 +30401,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -31116,8 +31116,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60080",
     "key": "pantheon",
     "name": "不屈之枪",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/pantheon/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/pantheon/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 42,
     "tier": 4,
     "championMetrics": {
@@ -31131,12 +31131,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -31146,12 +31146,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerDot",
             "name": "引燃",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerDot.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerDot.png"
           }
         ],
         "metric": null
@@ -31159,7 +31159,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -31873,8 +31873,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60041",
     "key": "gangplank",
     "name": "海洋之灾",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/gangplank/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/gangplank/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 43,
     "tier": 4,
     "championMetrics": {
@@ -31888,12 +31888,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -31903,12 +31903,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerDot",
             "name": "引燃",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerDot.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerDot.png"
           }
         ],
         "metric": null
@@ -31916,7 +31916,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -32628,8 +32628,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60031",
     "key": "chogath",
     "name": "虚空恐惧",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/chogath/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/chogath/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 44,
     "tier": 4,
     "championMetrics": {
@@ -32643,12 +32643,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -32658,12 +32658,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHeal.png"
           }
         ],
         "metric": null
@@ -32671,7 +32671,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -33384,8 +33384,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60011",
     "key": "masteryi",
     "name": "无极剑圣",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/masteryi/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/masteryi/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 45,
     "tier": 4,
     "championMetrics": {
@@ -33399,12 +33399,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -33414,12 +33414,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -33427,7 +33427,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -34140,8 +34140,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60033",
     "key": "rammus",
     "name": "披甲龙龟",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/rammus/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/rammus/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 46,
     "tier": 4,
     "championMetrics": {
@@ -34155,12 +34155,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -34170,12 +34170,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -34183,7 +34183,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -34897,8 +34897,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60019",
     "key": "warwick",
     "name": "祖安怒兽",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/warwick/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/warwick/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 47,
     "tier": 4,
     "championMetrics": {
@@ -34912,12 +34912,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -34927,12 +34927,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHeal.png"
           }
         ],
         "metric": null
@@ -34940,7 +34940,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -35652,8 +35652,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60117",
     "key": "lulu",
     "name": "仙灵女巫",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/lulu/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/lulu/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 48,
     "tier": 4,
     "championMetrics": {
@@ -35667,12 +35667,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHeal.png"
           }
         ],
         "metric": null
@@ -35682,12 +35682,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -35695,7 +35695,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -36411,8 +36411,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60023",
     "key": "tryndamere",
     "name": "蛮族之王",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/tryndamere/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/tryndamere/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 49,
     "tier": 4,
     "championMetrics": {
@@ -36426,12 +36426,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -36441,12 +36441,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -36454,7 +36454,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -37166,8 +37166,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60081",
     "key": "ezreal",
     "name": "探险家",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/ezreal/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/ezreal/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 50,
     "tier": 4,
     "championMetrics": {
@@ -37181,12 +37181,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -37196,12 +37196,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerBarrier",
             "name": "屏障",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerBarrier.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerBarrier.png"
           }
         ],
         "metric": null
@@ -37209,7 +37209,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -37923,8 +37923,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60025",
     "key": "morgana",
     "name": "堕落天使",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/morgana/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/morgana/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 51,
     "tier": 4,
     "championMetrics": {
@@ -37938,12 +37938,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -37953,12 +37953,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -37966,7 +37966,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -38681,8 +38681,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60026",
     "key": "zilean",
     "name": "时光守护者",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/zilean/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/zilean/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 52,
     "tier": 5,
     "championMetrics": {
@@ -38696,12 +38696,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -38711,12 +38711,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -38724,7 +38724,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -39438,8 +39438,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60053",
     "key": "blitzcrank",
     "name": "蒸汽机器人",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/blitzcrank/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/blitzcrank/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 53,
     "tier": 5,
     "championMetrics": {
@@ -39453,12 +39453,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -39468,12 +39468,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerDot",
             "name": "引燃",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerDot.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerDot.png"
           }
         ],
         "metric": null
@@ -39481,7 +39481,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -40194,8 +40194,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60028",
     "key": "evelynn",
     "name": "痛苦之拥",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/evelynn/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/evelynn/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 54,
     "tier": 5,
     "championMetrics": {
@@ -40209,12 +40209,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -40224,12 +40224,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerDot",
             "name": "引燃",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerDot.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerDot.png"
           }
         ],
         "metric": null
@@ -40237,7 +40237,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -40951,8 +40951,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60055",
     "key": "katarina",
     "name": "不祥之刃",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/katarina/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/katarina/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 55,
     "tier": 5,
     "championMetrics": {
@@ -40966,12 +40966,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -40981,12 +40981,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerDot",
             "name": "引燃",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerDot.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerDot.png"
           }
         ],
         "metric": null
@@ -40994,7 +40994,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -41706,8 +41706,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60016",
     "key": "soraka",
     "name": "众星之子",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/soraka/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/soraka/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 56,
     "tier": 5,
     "championMetrics": {
@@ -41721,12 +41721,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHeal.png"
           }
         ],
         "metric": null
@@ -41736,12 +41736,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerMana",
             "name": "清晰术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerMana.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerMana.png"
           }
         ],
         "metric": null
@@ -41749,7 +41749,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -41792,7 +41792,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773084",
             "773083"
           ],
-          "totalPrice": 6750,
+          "totalPrice": 6350,
           "metric": null
         },
         {
@@ -41801,7 +41801,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773084",
             "773504"
           ],
-          "totalPrice": 5950,
+          "totalPrice": 5550,
           "metric": null
         },
         {
@@ -41810,7 +41810,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773083",
             "773504"
           ],
-          "totalPrice": 7850,
+          "totalPrice": 7450,
           "metric": null
         },
         {
@@ -41819,7 +41819,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773504",
             "773083"
           ],
-          "totalPrice": 7850,
+          "totalPrice": 7450,
           "metric": null
         },
         {
@@ -41828,7 +41828,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
             "773504",
             "773084"
           ],
-          "totalPrice": 5950,
+          "totalPrice": 5550,
           "metric": null
         }
       ]
@@ -42462,8 +42462,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60020",
     "key": "nunu",
     "name": "雪原双子",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/nunu/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/nunu/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 57,
     "tier": 5,
     "championMetrics": {
@@ -42477,12 +42477,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -42492,12 +42492,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -42505,7 +42505,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -43218,8 +43218,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60064",
     "key": "leesin",
     "name": "盲僧",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/leesin/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/leesin/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 58,
     "tier": 5,
     "championMetrics": {
@@ -43233,12 +43233,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -43248,12 +43248,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerDot",
             "name": "引燃",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerDot.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerDot.png"
           }
         ],
         "metric": null
@@ -43261,7 +43261,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -43974,8 +43974,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60035",
     "key": "shaco",
     "name": "恶魔小丑",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/shaco/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/shaco/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 59,
     "tier": 5,
     "championMetrics": {
@@ -43989,12 +43989,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -44004,12 +44004,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerDot",
             "name": "引燃",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerDot.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerDot.png"
           }
         ],
         "metric": null
@@ -44017,7 +44017,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [
@@ -44731,8 +44731,8 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     "classicId": "60076",
     "key": "nidalee",
     "name": "狂野女猎手",
-    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/nidalee/build?region=global&tier=all&patch=16.17",
-    "patch": "16.17",
+    "sourceUrl": "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic/nidalee/build?region=global&tier=all&patch=16.19",
+    "patch": "16.19",
     "rank": 60,
     "tier": 5,
     "championMetrics": {
@@ -44746,12 +44746,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -44761,12 +44761,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.17.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -44774,7 +44774,7 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
     ],
     "runes": {
       "status": "unavailable",
-      "reason": "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。"
+      "reason": "OP.GG 当前显示“暂无数据。”；不使用峡谷符文或人工预设替代。"
     },
     "items": {
       "starting": [

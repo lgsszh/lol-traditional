@@ -1,6 +1,15 @@
 const activeSkillKeys = new Set(["Q", "W", "E"]);
 const allSkillKeys = new Set(["Q", "W", "E", "R"]);
 
+export function parseUnavailableRunes($, section, championName) {
+  const messages = section.find("p").filter((_, element) =>
+    /^(?:数据未找到|暂无数据)[。.!！]?$/.test($(element).text().trim()));
+  if (section.length !== 1 || messages.length !== 1 || section.find("table").length !== 0) {
+    throw new Error(`${championName}: OP.GG rune availability changed; parser review is required`);
+  }
+  return messages.text().trim();
+}
+
 function validateMetric(metric, label) {
   if (
     !Number.isFinite(metric.pickRate)

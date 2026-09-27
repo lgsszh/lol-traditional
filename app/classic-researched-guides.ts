@@ -1,8 +1,9 @@
 // 本文件由 S3（2012–2013 赛季）社区攻略研究整理生成：每套玩法的出门装、
-// 符文、天赋、召唤师技能、加点、分档回城路线与六格出装均来自 sourceUrls 中的
-// 原始攻略，并按 OP.GG Classic 16.15 装备目录校正名称与价格（出门装 ≤ 475 金）。
+// 符文、天赋、召唤师技能、加点、分档回城路线与六格出装按 sourceUrls 及 sourceNote
+// 整理；适配方案会明确区分原始装备依据与站内建议（出门装 ≤ 475 金）。
 // 生成脚本会同步校验装备 ID、召唤师技能 ID 与符文 ID，请勿手工改写 ID。
 import type { ChampionArchetype, ClassicChampion } from "./classic-data.ts";
+import { classicRuneGroups, runePresetIds } from "./classic-data.ts";
 
 export type ResearchedGuideItem = { itemId: string; quantity: number; note?: string };
 export type ResearchedRecallStep = { gold: string; title: string; items: ResearchedGuideItem[]; purpose: string };
@@ -43,7 +44,49 @@ const g = (itemId: string, quantity = 1, note?: string): ResearchedGuideItem => 
   ...(note ? { note } : {}),
 });
 
+// 扩容攻略仅将已核对的历史装备路线作为来源；符文、天赋及回城分档
+// 是本站对当前 Classic 目录的适配，明确标注，不能冒充原文逐格数据。
+function adaptedClassicProfile(
+  name: string, lane: ClassicChampion["lane"], archetype: ChampionArchetype,
+  coreItems: string[], skillOrder: ClassicChampion["spellOrder"],
+  sourceSlug: string, gamePlan: [string, string, string],
+): ResearchedProfile {
+  const runePreset = runePresetIds[archetype];
+  const opening = lane === "打野" ? [g("771039"), g("772003", 5)]
+    : lane === "辅助" ? [g("771004"), g("772044", 2), g("772003", 2)]
+    : [g("771001"), g("772003", 3)];
+  return {
+    id: "historical-adapted", name, lane, archetype, style: "历史路线／Classic 适配",
+    summary: `${name}：按历史攻略的装备方向整理；符文、天赋、回城分档和加点为站内适配建议。`,
+    tags: ["历史来源", "站内适配"],
+    masteryPreset: archetype === "tank" ? "防御 21 / 通用 9" : archetype === "support" ? "通用 21 / 防御 9" : "攻击 21 / 防御 9",
+    runePreset,
+    runeSummary: classicRuneGroups.map(group => `${group.runes.find(rune => rune.id === runePreset[group.id])!.name}×${group.cap}`).join("／"),
+    opening, early: [g("771001"), g(coreItems[1])],
+    spells: ["74", lane === "打野" ? "711" : lane === "辅助" ? "73" : lane === "上路" ? "712" : "714"],
+    skillOrder, coreItems, situationalItems: ["773026", "773102", "773143"],
+    recallPlan: [
+      { gold: "300–699", title: "鞋与补给", items: [g("771001"), g("772003", 2)], purpose: "按已有装备补充移速与续航，保留大件预算。" },
+      { gold: "700–1499", title: "升级鞋子", items: [g(coreItems[0])], purpose: "余额不足时先购买合成组件；按对线伤害类型选鞋。" },
+      { gold: "1500–2999", title: "首件核心路线", items: [g(coreItems[1])], purpose: "参考合成树逐步购买，列表为合成目标而非一次全买。" },
+      { gold: "3000+", title: "后续核心路线", items: [g(coreItems[2]), g(coreItems[3])], purpose: "按当前余额和对方阵容逐件完成，不代表合计价格。" },
+    ],
+    gamePlan,
+    sourceUrls: [`https://www.mobafire.com/league-of-legends/build/${sourceSlug}`],
+    sourceNote: "历史攻略支持装备方向；名称和 ID 按当前 OP.GG Classic 映射。符文、天赋、出门预算、回城分档、加点和情境替换为本站适配，不代表原文逐项推荐或 OP.GG 胜率统计。旧文嵌入的现代技能卡片不作为经典技能数值来源。",
+  };
+}
+
 export const researchedProfiles: Partial<Record<ClassicChampion["key"], ResearchedProfile[]>> = {
+  Galio: [adaptedClassicProfile("圣杯时光法坦", "中路", "mage", ["773111", "773174", "773027", "773089", "773026", "773116"], ["Q", "E", "W"], "galio-the-savior-of-mid-lane-284310", ["用 Q、E 处理兵线，避免连续施法耗空法力。", "圣杯与时光路线兼顾续航和承伤，围绕队友找大招角度。", "等敌方打断技能交出后再引导群体嘲讽。"] )],
+  XinZhao: [adaptedClassicProfile("魔像黑切开团", "打野", "jungler", ["773047", "773207", "773071", "773068", "773143", "773190"], ["E", "Q", "W"], "xin-zhao-ill-make-a-man-out-of-you-347114", ["打野刀补给起手，利用三重爪击配合线上控制。", "魔像提供承伤，黑切支持持续近身输出。", "突进后用大招分隔敌方阵型，避免脱离队友单人深入。"] )],
+  Poppy: [adaptedClassicProfile("三相破败追击", "上路", "fighter", ["773111", "773078", "773153", "773087", "773143", "773102"], ["Q", "E", "W"], "poppy-solo-top-the-path-to-pownage-296182", ["保住补刀，找靠墙目标用 E 接 Q 换血。", "耀光过渡三相，破败帮助追击。", "经典外交豁免选择合适目标后切入，保留位移寻找地形。"] )],
+  Shyvana: [adaptedClassicProfile("智慧末刃冰锤半肉", "上路", "fighter", ["773047", "773091", "773022", "773153", "773068", "773005"], ["W", "Q", "E"], "s3-ranked-top-shyvana-322182", ["用 W 控制换血距离，Q 穿插普攻。", "智慧末刃与冰锤提供持续近身输出和黏人能力。", "龙形态找侧翼切入，按敌方伤害调整防御格。"] )],
+  Graves: [adaptedClassicProfile("经典下路饮血暴击", "下路", "marksman", ["773006", "773072", "773046", "773035", "773031", "773022"], ["Q", "E", "W"], "hoodstompgravesgg-331705", ["经典男枪走下路，利用 Q 爆发配合辅助换血。", "饮血续航后接攻速暴击，烟幕限制对手视野。", "保留 E 调整输出位置，对方护甲增加时优先轻语。"] )],
+  Fizz: [adaptedClassicProfile("巫妖法强爆发", "中路", "mage", ["773020", "773100", "773089", "773135", "773157", "773001"], ["E", "W", "Q"], "updated-for-season-3-fizz-ap-burst-guide-149446", ["控制蓝量，E 留作规避伤害或撤退。", "巫妖成型后技能间穿插普攻，寻找落单目标。", "从侧翼跟进队友，沙漏与 E 分开使用延长存活。"] )],
+  Nautilus: [adaptedClassicProfile("魔像全坦控制", "打野", "tank", ["773117", "773207", "773083", "773143", "773102", "773110"], ["W", "E", "Q"], "flooding-the-jungle-a-full-tank-jungle-nautilus-guide-345990", ["护盾配合普攻清野，抓人前确认队友可跟进。", "魔像与生命装备支撑开团，不盲目追求伤害。", "轮换普攻控制不同目标，用大招威胁敌方核心或保护后排。"] )],
+  Fiora: [adaptedClassicProfile("幽梦九头蛇剑舞", "上路", "fighter", ["773111", "773142", "773153", "773074", "773071", "773072"], ["W", "E", "Q"], "fiora-the-true-swords-women-that-never-dies-season-3-272917", ["经典劳伦特心眼刀应对普攻，双段 Q 用于追击。", "用九头蛇清线并结合装备主动进行短时间爆发。", "等敌方关键控制交出后切入，利用利刃华尔兹输出。"] )],
+  Nami: [adaptedClassicProfile("眼石团队保护", "辅助", "support", ["773158", "772045", "773190", "773107", "773069", "773092"], ["W", "E", "Q"], "control-the-tides-with-nami-339159", ["用 W 弹射兼顾消耗和恢复，E 配合射手换血。", "优先视野与团队主动装，在河道推进前和队友同行。", "用大招反手或衔接队友控制，Q 留给可预测的位移落点。"] )],
   Ahri: [
     {
       id: "dfg-burst",

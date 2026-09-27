@@ -4,8 +4,10 @@ import {
   classicOpggSpells,
 } from "./classic-catalog-opgg.generated.ts";
 
-export const CLASSIC_PATCH = "16.16";
-export const CLASSIC_ASSET_BASE = `https://opgg-static.akamaized.net/meta/images/lol/${CLASSIC_PATCH}/classic`;
+const catalogAsset = classicOpggRunes[0].imageUrl.match(/^(https:\/\/opgg-static\.akamaized\.net\/meta\/images\/lol\/([^/]+)\/classic(?:\/releases\/[a-f0-9]{64})?)\//);
+if (!catalogAsset) throw new Error("Classic catalog has no valid versioned asset URL");
+export const CLASSIC_PATCH = catalogAsset[2];
+export const CLASSIC_ASSET_BASE = catalogAsset[1];
 
 export type ChampionArchetype = "mage" | "fighter" | "jungler" | "marksman" | "tank" | "support";
 
@@ -212,6 +214,15 @@ export const classicChampions: ClassicChampion[] = [
   champion("60084", "Akali", "阿卡丽", "暗影之拳", "中路", "刺客", "mage", "#b65a73", ["Q", "E", "W"]),
   champion("60085", "Kennen", "凯南", "狂暴之心", "上路", "法师", "mage", "#8c72c7", ["Q", "W", "E"]),
   champion("60098", "Shen", "慎", "暮光之眼", "上路", "坦克", "tank", "#668ba3", ["Q", "E", "W"]),
+  champion("60003", "Galio", "加里奥", "哨兵之殇", "中路", "法师", "mage", "#8c9d8c", ["Q", "E", "W"]),
+  champion("60005", "XinZhao", "赵信", "德邦总管", "打野", "战士", "jungler", "#b59055", ["E", "Q", "W"]),
+  champion("60078", "Poppy", "波比", "钢铁大使", "上路", "战士", "fighter", "#789ebf", ["Q", "E", "W"]),
+  champion("60102", "Shyvana", "希瓦娜", "龙血武姬", "上路", "战士", "fighter", "#ac5969", ["W", "Q", "E"]),
+  champion("60104", "Graves", "格雷福斯", "法外狂徒", "下路", "射手", "marksman", "#a47d5e", ["Q", "E", "W"]),
+  champion("60105", "Fizz", "菲兹", "潮汐海灵", "中路", "刺客", "mage", "#55abc2", ["E", "W", "Q"]),
+  champion("60111", "Nautilus", "诺提勒斯", "深海泰坦", "打野", "坦克", "tank", "#688a85", ["W", "E", "Q"]),
+  champion("60114", "Fiora", "菲奥娜", "无双剑姬", "上路", "战士", "fighter", "#b36786", ["W", "E", "Q"]),
+  champion("60267", "Nami", "娜美", "唤潮鲛姬", "辅助", "辅助", "support", "#57b3a6", ["W", "E", "Q"]),
 ];
 
 export const championIcon = (champion: ClassicChampion) =>

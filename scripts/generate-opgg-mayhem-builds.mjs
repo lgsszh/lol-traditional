@@ -21,6 +21,7 @@ import {
   parseOpggAugmentGroups,
   parseOpggMetric,
   parseOpggSkillBuild,
+  parseUnavailableRunes,
 } from "./opgg-mayhem-parser.mjs";
 
 const outputPath = new URL("../app/classic-mayhem-opgg.generated.ts", import.meta.url);
@@ -276,11 +277,7 @@ function parseBuildPage(html, rosterEntry, ranking, patch, itemMap, modeItemMap)
   if (runeSections.length !== 1) {
     throw new Error(`${ranking.name}: expected one rune section, received ${runeSections.length}`);
   }
-  const unavailableRuneMessages = runeSections.find("p.text-sm.text-gray-400")
-    .filter((_, element) => $(element).text().trim() === "数据未找到");
-  if (unavailableRuneMessages.length !== 1 || runeSections.find("table").length !== 0) {
-    throw new Error(`${ranking.name}: OP.GG rune availability changed; parser review is required`);
-  }
+  const unavailableRuneMessage = parseUnavailableRunes($, runeSections, ranking.name);
 
   return {
     classicId: rosterEntry.classicId,
@@ -298,7 +295,7 @@ function parseBuildPage(html, rosterEntry, ranking, patch, itemMap, modeItemMap)
     summonerSets,
     runes: {
       status: "unavailable",
-      reason: "OP.GG 当前显示“数据未找到”；不使用峡谷符文或人工预设替代。",
+      reason: `OP.GG 当前显示“${unavailableRuneMessage}”；不使用峡谷符文或人工预设替代。`,
     },
     items: { starting, boots, core },
   };

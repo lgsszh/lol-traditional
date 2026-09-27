@@ -5,7 +5,19 @@ import {
   parseOpggAugmentGroups,
   parseOpggMetric,
   parseOpggSkillBuild,
+  parseUnavailableRunes,
 } from "../scripts/opgg-mayhem-parser.mjs";
+
+test("符文空状态兼容新版文案，但不能吞掉真实表格或未知内容", () => {
+  for (const message of ["数据未找到", "暂无数据。", "暂无数据"]) {
+    const $ = load(`<section><p class="new-style">${message}</p></section>`);
+    assert.equal(parseUnavailableRunes($, $("section"), "阿狸"), message);
+  }
+  for (const content of ["<p>加载失败</p>", "<p>暂无数据。</p><table></table>", "<p>暂无数据。</p><p>暂无数据。</p>", ""]) {
+    const $ = load(`<section>${content}</section>`);
+    assert.throws(() => parseUnavailableRunes($, $("section"), "阿狸"), /parser review/);
+  }
+});
 
 function skillRow(priority, levelSequence) {
   const priorityHtml = priority.map((key) =>

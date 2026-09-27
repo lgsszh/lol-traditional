@@ -19,8 +19,8 @@ const groupLabels = {
 const html = await fetchText(sourceUrl, "OP.GG Classic 装备目录");
 const payload = decodeNextPayload(html);
 const entries = JSON.parse(extractBalancedArray(payload, '"entries":'));
-if (!Array.isArray(entries) || entries.length !== 152) {
-  throw new Error(`Expected 152 item entries, received ${entries?.length ?? 0}`);
+if (!Array.isArray(entries) || entries.length !== 154) {
+  throw new Error(`Expected 154 item entries, received ${entries?.length ?? 0}`);
 }
 
 const items = entries.map((entry) => {

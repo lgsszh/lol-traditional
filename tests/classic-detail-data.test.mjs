@@ -16,8 +16,8 @@ test("全部经典英雄均包含被动与 Q/W/E/R 详情", () => {
     const skillSet = classicChampionSkills.find((entry) => entry.championId === champion.classicId);
     assert.ok(skillSet, `${champion.name}缺少技能资料`);
     assert.ok(Array.isArray(champion.aliases), `${champion.name}常用外号字段无效`);
-    assert.match(skillSet.portrait, new RegExp(`/classic/v1/champion-icons/${champion.classicId}\\.png$`));
-    assert.match(skillSet.classicSplash, /\/classic\/assets\/characters\/[^/]+\/skins\/(?:base|skin\d+)\/images\//);
+    assert.match(skillSet.portrait, new RegExp(`/classic/(?:releases/[a-f0-9]{64}/)?v1/champion-icons/${champion.classicId}\\.png$`));
+    assert.match(skillSet.classicSplash, /\/classic\/(?:releases\/[a-f0-9]{64}\/)?assets\/characters\/[^/]+\/skins\/(?:base|skin\d+)\/images\//);
     assert.ok(skillSet.classicSplashName.trim(), `${champion.name}缺少经典原画名称`);
     assert.deepEqual(skillSet.abilities.map((ability) => ability.key), ["P", "Q", "W", "E", "R"]);
     for (const ability of skillSet.abilities) {
@@ -25,7 +25,7 @@ test("全部经典英雄均包含被动与 Q/W/E/R 详情", () => {
       assert.ok(ability.description.trim(), `${champion.name} ${ability.key} 缺少说明`);
       assert.match(
         ability.icon,
-        /^https:\/\/opgg-static\.akamaized\.net\/.*\/classic\/assets\/(?:ux\/jade\/s3icons|characters\/[^/]+\/hud\/icons2d)\//,
+        /^https:\/\/opgg-static\.akamaized\.net\/.*\/classic\/(?:releases\/[a-f0-9]{64}\/)?assets\/(?:ux\/jade\/s3icons|characters\/[^/]+\/hud\/icons2d)\//,
       );
       if (ability.key !== "P") {
         assert.ok(ability.numericDetail?.trim(), `${champion.name} ${ability.key} 缺少完整技能数值`);
@@ -34,6 +34,22 @@ test("全部经典英雄均包含被动与 Q/W/E/R 详情", () => {
       }
     }
   }
+});
+
+test("16.19 扩容英雄、装备和潘森被动均有真实数据", () => {
+  const additions = { Galio: "60003", XinZhao: "60005", Poppy: "60078", Shyvana: "60102", Graves: "60104", Fizz: "60105", Nautilus: "60111", Fiora: "60114", Nami: "60267" };
+  for (const [key, id] of Object.entries(additions)) {
+    assert.equal(classicChampions.find(champion => champion.key === key)?.classicId, id);
+    assert.equal(classicChampionSkills.find(champion => champion.championId === id)?.abilities.length, 5);
+    assert.ok(classicBuildGuides[id].some(guide => guide.sourceNote.includes("站") && guide.sourceUrls.some(url => url.includes("mobafire.com"))));
+  }
+  assert.equal(classicChampions.find(champion => champion.key === "Graves")?.lane, "下路");
+  assert.equal(classicItems.find(item => item.id === "773161")?.name, "月华咒刃");
+  assert.equal(classicItems.find(item => item.id === "773162")?.name, "斗篷与短剑");
+  const passive = classicChampionSkills.find(champion => champion.championId === "60080").abilities[0];
+  assert.match(passive.description, /4次/);
+  assert.equal(passive.numericVersion, "3.15.5");
+  assert.doesNotMatch(passive.description, /@|{{/);
 });
 
 test("全部英雄优先使用名称含经典的皮肤，并保留 OP.GG 默认原画", () => {
@@ -184,9 +200,9 @@ test("经典装备分类与 OP.GG 目录数量一致", () => {
     基础装备: 21,
     鞋子: 8,
     史诗装备: 33,
-    传说装备: 71,
+    传说装备: 73,
   };
-  assert.equal(classicItems.length, 152);
+  assert.equal(classicItems.length, 154);
   for (const [category, expected] of Object.entries(expectedCounts)) {
     assert.equal(
       classicItems.filter((item) => item.category === category).length,
@@ -199,16 +215,16 @@ test("经典装备分类与 OP.GG 目录数量一致", () => {
 test("经典装备属性筛选数量与同步快照一致", () => {
   const expectedCounts = {
     damage: 41,
-    "critical-strike": 13,
-    "attack-speed": 21,
+    "critical-strike": 14,
+    "attack-speed": 22,
     "on-hit": 24,
     "armor-penetration": 4,
-    "spell-damage": 42,
+    "spell-damage": 43,
     mana: 36,
     "magic-penetration": 5,
     health: 52,
-    armor: 24,
-    "magic-resistance": 21,
+    armor: 25,
+    "magic-resistance": 22,
     "cooldown-reduction": 25,
     movement: 21,
     "life-steal": 15,
@@ -222,7 +238,7 @@ test("经典装备属性筛选数量与同步快照一致", () => {
   }
 });
 
-test("152 件装备均有合法且双向一致的合成关系", () => {
+test("全部装备均有合法且双向一致的合成关系", () => {
   const itemIds = new Set(classicItems.map((item) => item.id));
   assert.equal(Object.keys(classicItemRecipes).length, classicItems.length);
 

@@ -139,7 +139,7 @@ async function fetchChampion(champion) {
   // so validate the champion-owned Classic splash shape without assuming the
   // storage folder name.
   const isClassicSplash = (imageUrl) =>
-    /\/classic\/assets\/characters\/[^/]+\/skins\/(?:base|skin\d+)\/images\//.test(imageUrl || "");
+    /\/classic\/(?:releases\/[a-f0-9]{64}\/)?assets\/characters\/[^/]+\/skins\/(?:base|skin\d+)\/images\//.test(imageUrl || "");
   if (!isClassicSplash(defaultSkin.imageUrl)) {
     throw new Error(`${champion.key}: OP.GG default skin is not a Classic base splash`);
   }
@@ -202,9 +202,16 @@ async function fetchChampion(champion) {
       // but OP.GG's Classic ability card is still authoritative public data.
       // Preserve it in the same detail channel instead of leaving every one of
       // the 60 passives blank.
+      const unresolved = /{{|}}|@[a-z0-9_.]+/i;
+      const description = unresolved.test(ability.description || "") && index === 0
+        ? historicalChampion.passive?.description
+        : ability.description;
+      if (!description || unresolved.test(description)) {
+        throw new Error(`${champion.key} ${ability.key}: unresolved source description`);
+      }
       let detailText = historicalSpell
         ? numericDetail(historicalSpell)
-        : `技能文本：${ability.description}`;
+        : `技能文本：${description}${description !== ability.description ? "\n文本来源：Riot Data Dragon 3.15.5（OP.GG 当前文本含未解析变量）。" : ""}`;
       if (!/\d/.test(detailText)) {
         detailText += "\n数值说明：OP.GG Classic 与 Riot 3.15.5 公开字段未提供独立固定数值；不使用其他版本或人工估值补写。";
       }
@@ -214,7 +221,7 @@ async function fetchChampion(champion) {
       return {
         key: ability.key,
         name: ability.name,
-        description: ability.description,
+        description,
         icon: ability.imageUrl,
         cooldown: ability.cooldown,
         cost: ability.cost,

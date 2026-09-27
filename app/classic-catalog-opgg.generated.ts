@@ -99,7 +99,7 @@ export const classicOpggRunes = [
     "identifier": "775251",
     "title": "暴击几率印记",
     "description": "+1%暴击几率",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/r_3_3.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/r_3_3.project_jade.png",
     "group": {
       "key": "runes-marks",
       "label": null
@@ -112,7 +112,7 @@ export const classicOpggRunes = [
     "identifier": "775249",
     "title": "暴击伤害印记",
     "description": "+2%暴击伤害",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/r_1_3.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/r_1_3.project_jade.png",
     "group": {
       "key": "runes-marks",
       "label": null
@@ -125,7 +125,7 @@ export const classicOpggRunes = [
     "identifier": "775246",
     "title": "成长攻击力印记",
     "description": "每级+0.15攻击力(18级+2.7)",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/r_2_3.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/r_2_3.project_jade.png",
     "group": {
       "key": "runes-marks",
       "label": null
@@ -138,7 +138,7 @@ export const classicOpggRunes = [
     "identifier": "775253",
     "title": "穿甲印记",
     "description": "+1.25穿甲",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/r_1_3.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/r_1_3.project_jade.png",
     "group": {
       "key": "runes-marks",
       "label": null
@@ -151,7 +151,7 @@ export const classicOpggRunes = [
     "identifier": "775257",
     "title": "初级护甲印记",
     "description": "+0.8护甲",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/r_1_2.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/r_1_2.project_jade.png",
     "group": {
       "key": "runes-marks",
       "label": null
@@ -164,7 +164,7 @@ export const classicOpggRunes = [
     "identifier": "775265",
     "title": "初级冷却缩减印记",
     "description": "0.3%冷却缩减",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/r_1_2.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/r_1_2.project_jade.png",
     "group": {
       "key": "runes-marks",
       "label": null
@@ -177,7 +177,7 @@ export const classicOpggRunes = [
     "identifier": "775255",
     "title": "初级生命值印记",
     "description": "+3生命值",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/r_3_2.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/r_3_2.project_jade.png",
     "group": {
       "key": "runes-marks",
       "label": null
@@ -190,7 +190,7 @@ export const classicOpggRunes = [
     "identifier": "775267",
     "title": "初级法术强度印记",
     "description": "+0.7法术强度",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/r_3_2.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/r_3_2.project_jade.png",
     "group": {
       "key": "runes-marks",
       "label": null
@@ -203,7 +203,7 @@ export const classicOpggRunes = [
     "identifier": "775273",
     "title": "法术穿透印记",
     "description": "+1法术穿透",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/r_1_3.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/r_1_3.project_jade.png",
     "group": {
       "key": "runes-marks",
       "label": null
@@ -216,7 +216,7 @@ export const classicOpggRunes = [
     "identifier": "775245",
     "title": "攻击力印记",
     "description": "+1攻击力",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/r_1_3.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/r_1_3.project_jade.png",
     "group": {
       "key": "runes-marks",
       "label": null
@@ -229,7 +229,7 @@ export const classicOpggRunes = [
     "identifier": "775247",
     "title": "攻击速度印记",
     "description": "+1.7%攻击速度",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/r_3_3.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/r_3_3.project_jade.png",
     "group": {
       "key": "runes-marks",
       "label": null
@@ -255,7 +255,7 @@ export const classicOpggRunes = [
     "identifier": "775318",
     "title": "成长护甲符印",
     "description": "每级+0.17护甲(18级+3.06)",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/y_2_3.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/y_2_3.project_jade.png",
     "group": {
       "key": "runes-seals",
       "label": null
@@ -268,7 +268,7 @@ export const classicOpggRunes = [
     "identifier": "775316",
     "title": "成长生命值符印",
     "description": "每级+1.3生命值(18级+23.4)",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/y_2_3.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/y_2_3.project_jade.png",
     "group": {
       "key": "runes-seals",
       "label": null
@@ -281,7 +281,7 @@ export const classicOpggRunes = [
     "identifier": "775311",
     "title": "初级暴击几率符印",
     "description": "+0.45%暴击几率",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/y_3_2.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/y_3_2.project_jade.png",
     "group": {
       "key": "runes-seals",
       "label": null
@@ -294,7 +294,7 @@ export const classicOpggRunes = [
     "identifier": "775309",
     "title": "初级暴击伤害符印",
     "description": "+0.7%暴击伤害",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/y_2_2.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/y_2_2.project_jade.png",
     "group": {
       "key": "runes-seals",
       "label": null
@@ -307,7 +307,7 @@ export const classicOpggRunes = [
     "identifier": "775307",
     "title": "初级攻击速度符印",
     "description": "+0.8%攻击速度",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/y_3_2.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/y_3_2.project_jade.png",
     "group": {
       "key": "runes-seals",
       "label": null
@@ -320,7 +320,7 @@ export const classicOpggRunes = [
     "identifier": "775319",
     "title": "初级魔法抗性符印",
     "description": "+0.75魔法抗性",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/y_3_2.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/y_3_2.project_jade.png",
     "group": {
       "key": "runes-seals",
       "label": null
@@ -332,8 +332,8 @@ export const classicOpggRunes = [
     "runeId": "seal-energy-regen",
     "identifier": "775369",
     "title": "能量回复符印",
-    "description": "+0.7能量回复",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/y_1_3.project_jade.png",
+    "description": "+0.7能量回复/5秒",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/y_1_3.project_jade.png",
     "group": {
       "key": "runes-seals",
       "label": null
@@ -346,7 +346,7 @@ export const classicOpggRunes = [
     "identifier": "775331",
     "title": "法力回复符印",
     "description": "+0.4法力回复/5秒",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/y_3_3.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/y_3_3.project_jade.png",
     "group": {
       "key": "runes-seals",
       "label": null
@@ -359,7 +359,7 @@ export const classicOpggRunes = [
     "identifier": "775317",
     "title": "护甲符印",
     "description": "+1护甲",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/y_1_3.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/y_1_3.project_jade.png",
     "group": {
       "key": "runes-seals",
       "label": null
@@ -372,7 +372,7 @@ export const classicOpggRunes = [
     "identifier": "775403",
     "title": "金币符印",
     "description": "+0.25金币/10秒",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/y_3_3.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/y_3_3.project_jade.png",
     "group": {
       "key": "runes-seals",
       "label": null
@@ -398,7 +398,7 @@ export const classicOpggRunes = [
     "identifier": "775321",
     "title": "生命回复符印",
     "description": "+0.5生命回复/5秒",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/y_1_3.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/y_1_3.project_jade.png",
     "group": {
       "key": "runes-seals",
       "label": null
@@ -411,7 +411,7 @@ export const classicOpggRunes = [
     "identifier": "775315",
     "title": "生命值符印",
     "description": "+8生命值",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/y_3_3.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/y_3_3.project_jade.png",
     "group": {
       "key": "runes-seals",
       "label": null
@@ -424,7 +424,7 @@ export const classicOpggRunes = [
     "identifier": "775298",
     "title": "成长法术强度雕纹",
     "description": "每级+0.2法术强度(18级+3.6)",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/b_4_3.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/b_4_3.project_jade.png",
     "group": {
       "key": "runes-glyphs",
       "label": null
@@ -437,7 +437,7 @@ export const classicOpggRunes = [
     "identifier": "775296",
     "title": "成长冷却缩减雕纹",
     "description": "每级0.1%冷却缩减(18级1.8%)",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/b_1_3.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/b_1_3.project_jade.png",
     "group": {
       "key": "runes-glyphs",
       "label": null
@@ -450,7 +450,7 @@ export const classicOpggRunes = [
     "identifier": "775290",
     "title": "成长魔法抗性雕纹",
     "description": "每级+0.2魔法抗性(18级+3.6)",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/b_4_3.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/b_4_3.project_jade.png",
     "group": {
       "key": "runes-glyphs",
       "label": null
@@ -463,7 +463,7 @@ export const classicOpggRunes = [
     "identifier": "775279",
     "title": "初级暴击伤害雕纹",
     "description": "+0.7%暴击伤害",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/b_2_2.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/b_2_2.project_jade.png",
     "group": {
       "key": "runes-glyphs",
       "label": null
@@ -476,7 +476,7 @@ export const classicOpggRunes = [
     "identifier": "775277",
     "title": "初级攻击速度雕纹",
     "description": "+0.8%攻击速度",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/b_3_2.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/b_3_2.project_jade.png",
     "group": {
       "key": "runes-glyphs",
       "label": null
@@ -489,7 +489,7 @@ export const classicOpggRunes = [
     "identifier": "775287",
     "title": "初级护甲雕纹",
     "description": "+0.8护甲",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/b_1_2.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/b_1_2.project_jade.png",
     "group": {
       "key": "runes-glyphs",
       "label": null
@@ -502,7 +502,7 @@ export const classicOpggRunes = [
     "identifier": "775285",
     "title": "初级生命值雕纹",
     "description": "+3生命值",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/b_4_2.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/b_4_2.project_jade.png",
     "group": {
       "key": "runes-glyphs",
       "label": null
@@ -515,7 +515,7 @@ export const classicOpggRunes = [
     "identifier": "775371",
     "title": "能量值雕纹",
     "description": "+2.3能量",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/b_1_3.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/b_1_3.project_jade.png",
     "group": {
       "key": "runes-glyphs",
       "label": null
@@ -528,7 +528,7 @@ export const classicOpggRunes = [
     "identifier": "775301",
     "title": "初级法力回复雕纹",
     "description": "+0.33法力回复/5秒",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/b_3_2.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/b_3_2.project_jade.png",
     "group": {
       "key": "runes-glyphs",
       "label": null
@@ -541,7 +541,7 @@ export const classicOpggRunes = [
     "identifier": "775299",
     "title": "法力值雕纹",
     "description": "+12法力值",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/b_1_3.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/b_1_3.project_jade.png",
     "group": {
       "key": "runes-glyphs",
       "label": null
@@ -554,7 +554,7 @@ export const classicOpggRunes = [
     "identifier": "775297",
     "title": "法术强度雕纹",
     "description": "+1.2法术强度",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/b_3_3.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/b_3_3.project_jade.png",
     "group": {
       "key": "runes-glyphs",
       "label": null
@@ -566,7 +566,7 @@ export const classicOpggRunes = [
     "runeId": "glyph-blank",
     "identifier": "776295",
     "title": "空白符文",
-    "description": "0.64%冷却缩减",
+    "description": "0.66%冷却缩减",
     "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jaderunes/b_1_3.project_jade.png",
     "group": {
       "key": "runes-glyphs",
@@ -579,8 +579,8 @@ export const classicOpggRunes = [
     "runeId": "glyph-cdr",
     "identifier": "775295",
     "title": "冷却缩减雕纹",
-    "description": "0.8%冷却缩减",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/b_1_3.project_jade.png",
+    "description": "0.83%冷却缩减",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/b_1_3.project_jade.png",
     "group": {
       "key": "runes-glyphs",
       "label": null
@@ -593,7 +593,7 @@ export const classicOpggRunes = [
     "identifier": "775289",
     "title": "魔法抗性雕纹",
     "description": "+1.4魔法抗性",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/b_3_3.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/b_3_3.project_jade.png",
     "group": {
       "key": "runes-glyphs",
       "label": null
@@ -606,7 +606,7 @@ export const classicOpggRunes = [
     "identifier": "775406",
     "title": "百分比生命值精华",
     "description": "+1.5%百分比生命值",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/bl_3_3.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/bl_3_3.project_jade.png",
     "group": {
       "key": "runes-quintessences",
       "label": null
@@ -619,7 +619,7 @@ export const classicOpggRunes = [
     "identifier": "775339",
     "title": "暴击伤害精华",
     "description": "+4.5%暴击伤害",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/bl_1_3.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/bl_1_3.project_jade.png",
     "group": {
       "key": "runes-quintessences",
       "label": null
@@ -632,7 +632,7 @@ export const classicOpggRunes = [
     "identifier": "775357",
     "title": "法术强度精华",
     "description": "+5法术强度",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/bl_3_3.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/bl_3_3.project_jade.png",
     "group": {
       "key": "runes-quintessences",
       "label": null
@@ -645,7 +645,7 @@ export const classicOpggRunes = [
     "identifier": "775409",
     "title": "法术吸血精华",
     "description": "+2%法术吸血",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/bl_4_3.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/bl_4_3.project_jade.png",
     "group": {
       "key": "runes-quintessences",
       "label": null
@@ -658,7 +658,7 @@ export const classicOpggRunes = [
     "identifier": "775335",
     "title": "攻击力精华",
     "description": "+2.25攻击力",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/bl_1_3.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/bl_1_3.project_jade.png",
     "group": {
       "key": "runes-quintessences",
       "label": null
@@ -671,7 +671,7 @@ export const classicOpggRunes = [
     "identifier": "775337",
     "title": "攻击速度精华",
     "description": "+4.5%攻击速度",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/bl_3_3.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/bl_3_3.project_jade.png",
     "group": {
       "key": "runes-quintessences",
       "label": null
@@ -684,7 +684,7 @@ export const classicOpggRunes = [
     "identifier": "775347",
     "title": "护甲精华",
     "description": "+4.3护甲",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/bl_1_3.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/bl_1_3.project_jade.png",
     "group": {
       "key": "runes-quintessences",
       "label": null
@@ -697,7 +697,7 @@ export const classicOpggRunes = [
     "identifier": "775367",
     "title": "金币精华",
     "description": "+1金币/10秒",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/bl_4_3.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/bl_4_3.project_jade.png",
     "group": {
       "key": "runes-quintessences",
       "label": null
@@ -710,7 +710,7 @@ export const classicOpggRunes = [
     "identifier": "775368",
     "title": "经验值精华",
     "description": "+2%经验获取",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/bl_2_3.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/bl_2_3.project_jade.png",
     "group": {
       "key": "runes-quintessences",
       "label": null
@@ -723,7 +723,7 @@ export const classicOpggRunes = [
     "identifier": "775373",
     "title": "能量回复精华",
     "description": "+1.8能量回复/5秒",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/bl_2_3.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/bl_2_3.project_jade.png",
     "group": {
       "key": "runes-quintessences",
       "label": null
@@ -736,7 +736,7 @@ export const classicOpggRunes = [
     "identifier": "775374",
     "title": "能量值精华",
     "description": "+6能量",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/bl_3_3.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/bl_3_3.project_jade.png",
     "group": {
       "key": "runes-quintessences",
       "label": null
@@ -749,7 +749,7 @@ export const classicOpggRunes = [
     "identifier": "775355",
     "title": "冷却缩减精华",
     "description": "2.5%冷却缩减",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/bl_1_3.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/bl_1_3.project_jade.png",
     "group": {
       "key": "runes-quintessences",
       "label": null
@@ -761,8 +761,8 @@ export const classicOpggRunes = [
     "runeId": "quint-health-regen",
     "identifier": "775351",
     "title": "生命回复精华",
-    "description": "+1.3生命回复/5秒",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/bl_1_3.project_jade.png",
+    "description": "+3生命回复/5秒",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/bl_1_3.project_jade.png",
     "group": {
       "key": "runes-quintessences",
       "label": null
@@ -775,7 +775,7 @@ export const classicOpggRunes = [
     "identifier": "775359",
     "title": "法力值精华",
     "description": "+38法力值",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/bl_1_3.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/bl_1_3.project_jade.png",
     "group": {
       "key": "runes-quintessences",
       "label": null
@@ -827,7 +827,7 @@ export const classicOpggRunes = [
     "identifier": "775412",
     "title": "生命偷取精华",
     "description": "+1.5%生命偷取",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/bl_1_3.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/bl_1_3.project_jade.png",
     "group": {
       "key": "runes-quintessences",
       "label": null
@@ -840,7 +840,7 @@ export const classicOpggRunes = [
     "identifier": "775345",
     "title": "生命值精华",
     "description": "+26生命值",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/bl_3_3.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/bl_3_3.project_jade.png",
     "group": {
       "key": "runes-quintessences",
       "label": null
@@ -853,7 +853,7 @@ export const classicOpggRunes = [
     "identifier": "775365",
     "title": "移动速度精华",
     "description": "+1.5%移动速度",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jaderunes/bl_3_3.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jaderunes/bl_3_3.project_jade.png",
     "group": {
       "key": "runes-quintessences",
       "label": null
@@ -868,7 +868,7 @@ export const classicOpggMasteries = [
     "identifier": "511",
     "title": "召唤师的愤怒",
     "description": "强化召唤师技能：【虚弱】、【引燃】、【幽灵疾步】、【战意激增】、【战争图腾】和【晋升】",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/511_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/511_on.png",
     "group": {
       "key": "masteries-offense",
       "label": "进攻"
@@ -880,7 +880,7 @@ export const classicOpggMasteries = [
     "identifier": "512",
     "title": "狂怒",
     "description": "每级获得+1%攻击速度",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/512_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/512_on.png",
     "group": {
       "key": "masteries-offense",
       "label": "进攻"
@@ -892,7 +892,7 @@ export const classicOpggMasteries = [
     "identifier": "513",
     "title": "巫术",
     "description": "每级获得+1%冷却缩减",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/513_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/513_on.png",
     "group": {
       "key": "masteries-offense",
       "label": "进攻"
@@ -904,7 +904,7 @@ export const classicOpggMasteries = [
     "identifier": "514",
     "title": "屠夫",
     "description": "普通攻击对小兵和野怪造成2/4额外伤害",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/514_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/514_on.png",
     "group": {
       "key": "masteries-offense",
       "label": "进攻"
@@ -916,7 +916,7 @@ export const classicOpggMasteries = [
     "identifier": "522",
     "title": "致命",
     "description": "每级获得+0.166/0.333/0.498/0.664攻击力",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/522_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/522_on.png",
     "group": {
       "key": "masteries-offense",
       "label": "进攻"
@@ -928,7 +928,7 @@ export const classicOpggMasteries = [
     "identifier": "523",
     "title": "爆裂",
     "description": "每级获得+0.25/0.5/0.75/1法术强度",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/523_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/523_on.png",
     "group": {
       "key": "masteries-offense",
       "label": "进攻"
@@ -940,7 +940,7 @@ export const classicOpggMasteries = [
     "identifier": "524",
     "title": "摧毁",
     "description": "对防御塔造成的伤害提高5%",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/524_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/524_on.png",
     "group": {
       "key": "masteries-offense",
       "label": "进攻"
@@ -952,7 +952,7 @@ export const classicOpggMasteries = [
     "identifier": "531",
     "title": "浩劫",
     "description": "造成的伤害提高0.67%/1.33%/2%",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/531_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/531_on.png",
     "group": {
       "key": "masteries-offense",
       "label": "进攻"
@@ -964,7 +964,7 @@ export const classicOpggMasteries = [
     "identifier": "532",
     "title": "武器专家",
     "description": "+8%护甲穿透",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/532_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/532_on.png",
     "group": {
       "key": "masteries-offense",
       "label": "进攻"
@@ -976,7 +976,7 @@ export const classicOpggMasteries = [
     "identifier": "533",
     "title": "奥术知识",
     "description": "+8%法术穿透",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/533_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/533_on.png",
     "group": {
       "key": "masteries-offense",
       "label": "进攻"
@@ -988,7 +988,7 @@ export const classicOpggMasteries = [
     "identifier": "541",
     "title": "致命",
     "description": "+2.5%/5%暴击伤害(近战为5%/10%)",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/541_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/541_on.png",
     "group": {
       "key": "masteries-offense",
       "label": "进攻"
@@ -1000,7 +1000,7 @@ export const classicOpggMasteries = [
     "identifier": "542",
     "title": "蛮横之力",
     "description": "+1.5/3攻击力",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/542_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/542_on.png",
     "group": {
       "key": "masteries-offense",
       "label": "进攻"
@@ -1012,7 +1012,7 @@ export const classicOpggMasteries = [
     "identifier": "543",
     "title": "思想之力",
     "description": "+2/4/6法术强度",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/543_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/543_on.png",
     "group": {
       "key": "masteries-offense",
       "label": "进攻"
@@ -1024,7 +1024,7 @@ export const classicOpggMasteries = [
     "identifier": "544",
     "title": "咒剑",
     "description": "普通攻击会造成相当于5%法术强度的魔法伤害",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/544_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/544_on.png",
     "group": {
       "key": "masteries-offense",
       "label": "进攻"
@@ -1036,7 +1036,7 @@ export const classicOpggMasteries = [
     "identifier": "551",
     "title": "狂暴",
     "description": "在一次暴击命中后获得持续2秒的10%攻击速度",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/551_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/551_on.png",
     "group": {
       "key": "masteries-offense",
       "label": "进攻"
@@ -1048,7 +1048,7 @@ export const classicOpggMasteries = [
     "identifier": "552",
     "title": "切割",
     "description": "+2/4/6穿甲",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/552_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/552_on.png",
     "group": {
       "key": "masteries-offense",
       "label": "进攻"
@@ -1060,7 +1060,7 @@ export const classicOpggMasteries = [
     "identifier": "553",
     "title": "高阶法师",
     "description": "法术强度提升1.25%/2.5%/3.75%/5%",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/553_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/553_on.png",
     "group": {
       "key": "masteries-offense",
       "label": "进攻"
@@ -1072,7 +1072,7 @@ export const classicOpggMasteries = [
     "identifier": "562",
     "title": "死神",
     "description": "对生命值低于50%的目标造成伤害提高5%",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/562_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/562_on.png",
     "group": {
       "key": "masteries-offense",
       "label": "进攻"
@@ -1084,7 +1084,7 @@ export const classicOpggMasteries = [
     "identifier": "611",
     "title": "召唤师的决断",
     "description": "强化召唤师技能：【净化】、【治疗术】、【惩戒】、【屏障】和【强化要塞】",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/611_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/611_on.png",
     "group": {
       "key": "masteries-defense",
       "label": "防御"
@@ -1096,7 +1096,7 @@ export const classicOpggMasteries = [
     "identifier": "612",
     "title": "坚韧",
     "description": "根据已损失生命值，获得最多+2/4/6生命回复/5秒",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/612_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/612_on.png",
     "group": {
       "key": "masteries-defense",
       "label": "防御"
@@ -1108,7 +1108,7 @@ export const classicOpggMasteries = [
     "identifier": "613",
     "title": "耐久",
     "description": "每级获得+1.5/3/4.5/6生命值",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/613_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/613_on.png",
     "group": {
       "key": "masteries-defense",
       "label": "防御"
@@ -1120,7 +1120,7 @@ export const classicOpggMasteries = [
     "identifier": "614",
     "title": "韧化皮肤",
     "description": "受到的野怪伤害减少1/2",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/614_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/614_on.png",
     "group": {
       "key": "masteries-defense",
       "label": "防御"
@@ -1132,7 +1132,7 @@ export const classicOpggMasteries = [
     "identifier": "621",
     "title": "坚硬",
     "description": "+2/4/6护甲",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/621_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/621_on.png",
     "group": {
       "key": "masteries-defense",
       "label": "防御"
@@ -1144,7 +1144,7 @@ export const classicOpggMasteries = [
     "identifier": "622",
     "title": "抵抗",
     "description": "+2/4/6魔法抗性",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/622_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/622_on.png",
     "group": {
       "key": "masteries-defense",
       "label": "防御"
@@ -1156,7 +1156,7 @@ export const classicOpggMasteries = [
     "identifier": "624",
     "title": "刃甲",
     "description": "对攻击你的敌方野怪造成6伤害",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/624_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/624_on.png",
     "group": {
       "key": "masteries-defense",
       "label": "防御"
@@ -1168,7 +1168,7 @@ export const classicOpggMasteries = [
     "identifier": "631",
     "title": "不屈",
     "description": "受到敌方英雄的伤害减少1/2",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/631_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/631_on.png",
     "group": {
       "key": "masteries-defense",
       "label": "防御"
@@ -1180,7 +1180,7 @@ export const classicOpggMasteries = [
     "identifier": "632",
     "title": "无情",
     "description": "受到的减速效果降低7.5%/15%",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/632_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/632_on.png",
     "group": {
       "key": "masteries-defense",
       "label": "防御"
@@ -1192,7 +1192,7 @@ export const classicOpggMasteries = [
     "identifier": "633",
     "title": "老兵伤痕",
     "description": "+30生命值",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/633_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/633_on.png",
     "group": {
       "key": "masteries-defense",
       "label": "防御"
@@ -1204,7 +1204,7 @@ export const classicOpggMasteries = [
     "identifier": "634",
     "title": "护卫",
     "description": "受到防御塔的伤害降低5%",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/634_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/634_on.png",
     "group": {
       "key": "masteries-defense",
       "label": "防御"
@@ -1216,7 +1216,7 @@ export const classicOpggMasteries = [
     "identifier": "641",
     "title": "格挡",
     "description": "受到英雄普通攻击的伤害减少3",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/641_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/641_on.png",
     "group": {
       "key": "masteries-defense",
       "label": "防御"
@@ -1228,7 +1228,7 @@ export const classicOpggMasteries = [
     "identifier": "642",
     "title": "顽强",
     "description": "受到控制效果的持续时间减少5%/10%/15%",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/642_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/642_on.png",
     "group": {
       "key": "masteries-defense",
       "label": "防御"
@@ -1240,7 +1240,7 @@ export const classicOpggMasteries = [
     "identifier": "643",
     "title": "主宰",
     "description": "最大生命值提升1.5%/2.75%/4%",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/643_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/643_on.png",
     "group": {
       "key": "masteries-defense",
       "label": "防御"
@@ -1252,7 +1252,7 @@ export const classicOpggMasteries = [
     "identifier": "651",
     "title": "卫士",
     "description": "附近每有一名敌方英雄，获得+1护甲和魔法抗性",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/651_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/651_on.png",
     "group": {
       "key": "masteries-defense",
       "label": "防御"
@@ -1264,7 +1264,7 @@ export const classicOpggMasteries = [
     "identifier": "652",
     "title": "传奇装甲",
     "description": "使额外护甲和魔法抗性提升+2%/4%/6%",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/652_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/652_on.png",
     "group": {
       "key": "masteries-defense",
       "label": "防御"
@@ -1276,7 +1276,7 @@ export const classicOpggMasteries = [
     "identifier": "653",
     "title": "精心照料",
     "description": "阵亡时间缩短10%",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/653_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/653_on.png",
     "group": {
       "key": "masteries-defense",
       "label": "防御"
@@ -1288,7 +1288,7 @@ export const classicOpggMasteries = [
     "identifier": "654",
     "title": "坚固装甲",
     "description": "受到的暴击伤害降低10%",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/654_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/654_on.png",
     "group": {
       "key": "masteries-defense",
       "label": "防御"
@@ -1300,7 +1300,7 @@ export const classicOpggMasteries = [
     "identifier": "662",
     "title": "荣誉守卫",
     "description": "受到所有来源的伤害降低3%",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/662_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/662_on.png",
     "group": {
       "key": "masteries-defense",
       "label": "防御"
@@ -1312,7 +1312,7 @@ export const classicOpggMasteries = [
     "identifier": "711",
     "title": "召唤师的感悟",
     "description": "强化召唤师技能：【传送】、【闪现】、【清晰术】、【重生】和【洞察】。",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/711_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/711_on.png",
     "group": {
       "key": "masteries-utility",
       "label": "通用"
@@ -1324,7 +1324,7 @@ export const classicOpggMasteries = [
     "identifier": "712",
     "title": "漫游",
     "description": "非战斗状态获得+0.66%/1.33%/2%移动速度",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/712_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/712_on.png",
     "group": {
       "key": "masteries-utility",
       "label": "通用"
@@ -1336,7 +1336,7 @@ export const classicOpggMasteries = [
     "identifier": "713",
     "title": "冥想",
     "description": "+1/2/3法力回复/5秒",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/713_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/713_on.png",
     "group": {
       "key": "masteries-utility",
       "label": "通用"
@@ -1348,7 +1348,7 @@ export const classicOpggMasteries = [
     "identifier": "714",
     "title": "改良回城",
     "description": "回城的施放时间缩短1秒",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/714_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/714_on.png",
     "group": {
       "key": "masteries-utility",
       "label": "通用"
@@ -1360,7 +1360,7 @@ export const classicOpggMasteries = [
     "identifier": "721",
     "title": "斥候",
     "description": "守卫在放置后的3秒内获得25%额外视野距离",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/721_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/721_on.png",
     "group": {
       "key": "masteries-utility",
       "label": "通用"
@@ -1372,7 +1372,7 @@ export const classicOpggMasteries = [
     "identifier": "722",
     "title": "智囊",
     "description": "召唤师技能冷却时间缩短4%/7%/10%",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/722_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/722_on.png",
     "group": {
       "key": "masteries-utility",
       "label": "通用"
@@ -1384,7 +1384,7 @@ export const classicOpggMasteries = [
     "identifier": "723",
     "title": "精神扩张",
     "description": "每级获得+4/7/10法力值",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/723_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/723_on.png",
     "group": {
       "key": "masteries-utility",
       "label": "通用"
@@ -1396,7 +1396,7 @@ export const classicOpggMasteries = [
     "identifier": "724",
     "title": "巧匠",
     "description": "主动装备的冷却时间缩短7.5%/15%",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/724_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/724_on.png",
     "group": {
       "key": "masteries-utility",
       "label": "通用"
@@ -1408,7 +1408,7 @@ export const classicOpggMasteries = [
     "identifier": "731",
     "title": "贪婪",
     "description": "每10秒额外获得+0.5/1/1.5/2金币",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/731_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/731_on.png",
     "group": {
       "key": "masteries-utility",
       "label": "通用"
@@ -1420,7 +1420,7 @@ export const classicOpggMasteries = [
     "identifier": "732",
     "title": "符能亲和",
     "description": "中立野怪增益的持续时间延长20%",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/732_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/732_on.png",
     "group": {
       "key": "masteries-utility",
       "label": "通用"
@@ -1432,7 +1432,7 @@ export const classicOpggMasteries = [
     "identifier": "733",
     "title": "吸血习性",
     "description": "+1%/2%/3%生命偷取和法术吸血",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/733_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/733_on.png",
     "group": {
       "key": "masteries-utility",
       "label": "通用"
@@ -1444,7 +1444,7 @@ export const classicOpggMasteries = [
     "identifier": "734",
     "title": "饼干师傅",
     "description": "开局获得一块回复饼干，在10秒内持续回复80生命值和50法力值",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/734_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/734_on.png",
     "group": {
       "key": "masteries-utility",
       "label": "通用"
@@ -1456,7 +1456,7 @@ export const classicOpggMasteries = [
     "identifier": "741",
     "title": "财富",
     "description": "将初始金币提升40/75",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/741_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/741_on.png",
     "group": {
       "key": "masteries-utility",
       "label": "通用"
@@ -1468,7 +1468,7 @@ export const classicOpggMasteries = [
     "identifier": "742",
     "title": "觉悟",
     "description": "获得的经验值提升1.25%/2.5%/3.75%/5%",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/742_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/742_on.png",
     "group": {
       "key": "masteries-utility",
       "label": "通用"
@@ -1480,7 +1480,7 @@ export const classicOpggMasteries = [
     "identifier": "743",
     "title": "精魄之力",
     "description": "每拥有400法力值，则获得最多+1/2/3生命回复/5秒",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/743_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/743_on.png",
     "group": {
       "key": "masteries-utility",
       "label": "通用"
@@ -1492,7 +1492,7 @@ export const classicOpggMasteries = [
     "identifier": "744",
     "title": "探索者",
     "description": "开局获得一个探索者守卫。",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/744_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/744_on.png",
     "group": {
       "key": "masteries-utility",
       "label": "通用"
@@ -1504,7 +1504,7 @@ export const classicOpggMasteries = [
     "identifier": "751",
     "title": "探云手",
     "description": "每次用普通攻击命中敌方英雄可获得5金币(近战)或3金币(远程)，冷却时间5秒",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/751_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/751_on.png",
     "group": {
       "key": "masteries-utility",
       "label": "通用"
@@ -1516,7 +1516,7 @@ export const classicOpggMasteries = [
     "identifier": "752",
     "title": "智谋",
     "description": "+2%/4%/6%冷却缩减",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/752_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/752_on.png",
     "group": {
       "key": "masteries-utility",
       "label": "通用"
@@ -1528,7 +1528,7 @@ export const classicOpggMasteries = [
     "identifier": "762",
     "title": "灵敏",
     "description": "移动速度提升3%",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/loadouts/jademasteries/762_on.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/loadouts/jademasteries/762_on.png",
     "group": {
       "key": "masteries-utility",
       "label": "通用"
@@ -1543,7 +1543,7 @@ export const classicOpggSpells = [
     "identifier": "74",
     "title": "闪现",
     "description": "使你朝着你的指针位置瞬间传送一小段距离。召唤师的感悟：【闪现】的冷却时间缩短15秒。",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/ux/jade/s3icons/samesized/s3_summoner_flash.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/ux/jade/s3icons/samesized/s3_summoner_flash.project_jade.png",
     "group": null,
     "facts": [
       {
@@ -1557,7 +1557,7 @@ export const classicOpggSpells = [
     "identifier": "714",
     "title": "引燃",
     "description": "对目标敌方英雄造成持续真实伤害并在持续期间降低目标受到的治疗效果。召唤师的愤怒：当【引燃】处于冷却阶段时，获得5法术强度和攻击力。",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/ux/jade/s3icons/samesized/s3_summonerignite.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/ux/jade/s3icons/samesized/s3_summonerignite.project_jade.png",
     "group": null,
     "facts": [
       {
@@ -1571,7 +1571,7 @@ export const classicOpggSpells = [
     "identifier": "712",
     "title": "传送",
     "description": "短暂引导后，将英雄传送到友方小兵、防御塔或守卫旁边。召唤师的感悟：【传送】的引导时间缩短。",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/ux/jade/s3icons/samesized/s3_summoner_teleport.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/ux/jade/s3icons/samesized/s3_summoner_teleport.project_jade.png",
     "group": null,
     "facts": [
       {
@@ -1585,7 +1585,7 @@ export const classicOpggSpells = [
     "identifier": "711",
     "title": "惩戒",
     "description": "对目标敌方小兵或宠物造成真实伤害。召唤师的决断：每次施放【惩戒】可获得10金币。",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/ux/jade/s3icons/samesized/s3_summoner_smite.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/ux/jade/s3icons/samesized/s3_summoner_smite.project_jade.png",
     "group": null,
     "facts": [
       {
@@ -1599,7 +1599,7 @@ export const classicOpggSpells = [
     "identifier": "76",
     "title": "幽灵疾步",
     "description": "期间获得移动速度并无视单位的碰撞体积。召唤师的愤怒：【幽灵疾步】提供的额外移动速度得到提升。",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/ux/jade/s3icons/samesized/s3_summoner_haste.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/ux/jade/s3icons/samesized/s3_summoner_haste.project_jade.png",
     "group": null,
     "facts": [
       {
@@ -1613,7 +1613,7 @@ export const classicOpggSpells = [
     "identifier": "73",
     "title": "虚弱",
     "description": "使目标英雄减速，并降低其攻击速度和造成的伤害。召唤师的愤怒：【虚弱】还会使目标的护甲和魔法抗性降低10。",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/ux/jade/s3icons/samesized/s3_summoner_exhaust.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/ux/jade/s3icons/samesized/s3_summoner_exhaust.project_jade.png",
     "group": null,
     "facts": [
       {
@@ -1627,7 +1627,7 @@ export const classicOpggSpells = [
     "identifier": "71",
     "title": "净化",
     "description": "移除身上的所有限制效果和召唤师技能的减益效果，并在短时间内缩短新受到限制效果的持续时间。召唤师的决断：延长韧性增益的持续时间。",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/ux/jade/s3icons/samesized/s3_summoner_boost.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/ux/jade/s3icons/samesized/s3_summoner_boost.project_jade.png",
     "group": null,
     "facts": [
       {
@@ -1641,7 +1641,7 @@ export const classicOpggSpells = [
     "identifier": "75",
     "title": "洞察",
     "description": "在短时间内将地图上任意一块区域显形给你的队伍。召唤师的感悟：被【洞察】显形的单位将持续可见5秒。",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/ux/jade/s3icons/samesized/s3_summoner_clairvoyance.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/ux/jade/s3icons/samesized/s3_summoner_clairvoyance.project_jade.png",
     "group": null,
     "facts": [
       {
@@ -1655,7 +1655,7 @@ export const classicOpggSpells = [
     "identifier": "77",
     "title": "治疗术",
     "description": "为你的英雄及附近的友军回复生命值。召唤师的决断：每级获得5生命值。",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/ux/jade/s3icons/samesized/s3_summoner_heal.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/ux/jade/s3icons/samesized/s3_summoner_heal.project_jade.png",
     "group": null,
     "facts": [
       {
@@ -1669,7 +1669,7 @@ export const classicOpggSpells = [
     "identifier": "721",
     "title": "屏障",
     "description": "获得一个短时长的护盾。召唤师的决断：【屏障】的护盾效果提升。",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/ux/jade/s3icons/samesized/s3_summonerbarrier.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/ux/jade/s3icons/samesized/s3_summonerbarrier.project_jade.png",
     "group": null,
     "facts": [
       {
@@ -1682,8 +1682,8 @@ export const classicOpggSpells = [
   {
     "identifier": "713",
     "title": "清晰术",
-    "description": "为附近所有的友方英雄回复法力值。召唤师的感悟：多回复25%法力值。",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/ux/jade/s3icons/samesized/s3_summonermana.project_jade.png",
+    "description": "回复你和友方英雄们的法力值。召唤师的感悟：回复更多法力值。",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/ux/jade/s3icons/samesized/s3_summonermana.project_jade.png",
     "group": null,
     "facts": [
       {
@@ -1697,7 +1697,7 @@ export const classicOpggSpells = [
     "identifier": "705",
     "title": "强化要塞",
     "description": "使所有友方防御塔免疫伤害，并使防御塔的攻击速度加快100%，持续6秒。召唤师的决断：防御塔会对目标周围造成溅射伤害。",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/ux/jade/s3icons/samesized/s3_summoner_fortify.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/ux/jade/s3icons/samesized/s3_summoner_fortify.project_jade_16_18.png",
     "group": null,
     "facts": [
       {
@@ -1711,7 +1711,7 @@ export const classicOpggSpells = [
     "identifier": "709",
     "title": "战争图腾",
     "description": "召唤一个临时信标，提升范围内友军的攻击力。召唤师的愤怒：【战争图腾】额外提供法术强度。",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/ux/jade/s3icons/samesized/s3_summoner_rally.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/ux/jade/s3icons/samesized/s3_summoner_rally.project_jade_16_18.png",
     "group": null,
     "facts": [
       {
@@ -1725,7 +1725,7 @@ export const classicOpggSpells = [
     "identifier": "716",
     "title": "战意激增",
     "description": "暂时强化你的英雄，在持续时间内提升攻击速度和法术强度。召唤师的愤怒：将该攻击速度加成提升5%，该法术强度加成提升10%。",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/ux/jade/s3icons/samesized/s3_summoner_battlecry.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/ux/jade/s3icons/samesized/s3_summoner_battlecry.project_jade.png",
     "group": null,
     "facts": [
       {
@@ -1739,7 +1739,7 @@ export const classicOpggSpells = [
     "identifier": "720",
     "title": "晋升",
     "description": "晋升一名小兵，使其获得额外属性和强化光环，并且它在击杀单位后获取的金币将共享给为其施放晋升的召唤师。召唤师的愤怒：攻城骑士的额外攻击力光环也会影响英雄。",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/ux/jade/s3icons/samesized/38.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/ux/jade/s3icons/samesized/38.project_jade_16_18.png",
     "group": null,
     "facts": [
       {
@@ -1753,7 +1753,7 @@ export const classicOpggSpells = [
     "identifier": "777",
     "title": "重生",
     "description": "立刻在本队的召唤师平台上复活你的英雄，并暂时提升英雄的移动速度。召唤师的感悟：【重生】会为使用者临时提供220-560生命值。",
-    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.17/classic/assets/ux/jade/s3icons/samesized/s3_summoner_revive.project_jade.png",
+    "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/ux/jade/s3icons/samesized/s3_summoner_revive.project_jade.png",
     "group": null,
     "facts": [
       {

@@ -10,11 +10,11 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 export const metadata: Metadata = {
   metadataBase,
   title: "英雄联盟怀旧服攻略介绍 — 5v5 与怀旧海斗攻略",
-  description: "无需登录：63 位经典英雄、251 套 S3 考据玩法方案，以及现代技能搭配经典地图、装备与强化符文的怀旧海斗攻略。",
+  description: "无需登录：72 位经典英雄、278 套 S3 考据玩法方案，以及现代技能搭配经典地图、装备与强化符文的怀旧海斗攻略。",
   icons: { icon: `${basePath}/favicon.svg` },
   openGraph: {
     title: "英雄联盟怀旧服攻略介绍",
-    description: "251 套 S3 考据玩法与怀旧海斗攻略：现代英雄技能、经典装备、KIWI_JADE 强化符文全覆盖。",
+    description: "278 套 S3 考据玩法与怀旧海斗攻略：现代英雄技能、经典装备、KIWI_JADE 强化符文全覆盖。",
     type: "website",
     images: [{ url: "og-public.jpg", width: 1200, height: 630, alt: "英雄联盟怀旧服攻略介绍" }],
   },

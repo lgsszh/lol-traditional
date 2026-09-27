@@ -355,6 +355,7 @@ export const classicItemRecipes: Record<string, ClassicItemRecipe> = {
       "773026",
       "773064",
       "773140",
+      "773161",
       "773211"
     ],
     "componentTotal": 0,
@@ -1011,9 +1012,9 @@ export const classicItemRecipes: Record<string, ClassicItemRecipe> = {
     ],
     "into": [],
     "componentTotal": 1475,
-    "combineCost": 1175,
+    "combineCost": 775,
     "source": "Riot Data Dragon 3.7.9",
-    "note": "配方来自同名历史版本；总价以 OP.GG Classic 16.15 的 2650 金币为准。"
+    "note": "配方来自同名历史版本；总价以 OP.GG Classic 16.15 的 2250 金币为准。"
   },
   "773085": {
     "from": [
@@ -1591,6 +1592,25 @@ export const classicItemRecipes: Record<string, ClassicItemRecipe> = {
     "source": "Riot Data Dragon 3.7.9",
     "note": ""
   },
+  "773161": {
+    "from": [
+      "773191",
+      "771057"
+    ],
+    "into": [],
+    "componentTotal": 1880,
+    "combineCost": 720,
+    "source": "Riot Data Dragon 3.12.2",
+    "note": ""
+  },
+  "773162": {
+    "from": [],
+    "into": [],
+    "componentTotal": 0,
+    "combineCost": 1330,
+    "source": "OP.GG Classic 16.15",
+    "note": ""
+  },
   "773165": {
     "from": [
       "773098",
@@ -1665,7 +1685,8 @@ export const classicItemRecipes: Record<string, ClassicItemRecipe> = {
       "771029"
     ],
     "into": [
-      "773157"
+      "773157",
+      "773161"
     ],
     "componentTotal": 1035,
     "combineCost": 125,

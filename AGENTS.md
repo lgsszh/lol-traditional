@@ -57,12 +57,12 @@ status labels:
 
 ## 项目现状与工程约定
 
-### 二、项目现状（v0.7.4）
+### 二、项目现状（v0.7.5）
 
 - 站点名：**英雄联盟怀旧服攻略介绍**（原 RIFT//LAB，已全量更名；代码/测试中不允许再出现 RIFT//LAB 字样，rendered-html 测试会拦截）。
 - 线上地址：https://lgsszh.github.io/lol-traditional/ （GitHub Pages，项目页）。
-- 内容规模：63 位英雄、251 套 S3（2012–2013）考据玩法方案、152 件装备、59 符文、56 天赋、16 召唤师技能；另有 60 英雄 OP.GG 怀旧海斗攻略、2700 条分品质强化推荐、300 套技能加点与 188 个 KIWI_JADE 强化符文。
-- 版本：package.json `0.7.4`；已发布 Git 标签截至 v0.7.3，本次改动发布后应新增 v0.7.4。
+- 内容规模：72 位英雄、278 套 S3（2012–2013）考据玩法方案、154 件装备、59 符文、56 天赋、16 召唤师技能；另有 60 英雄 OP.GG 怀旧海斗攻略、2700 条分品质强化推荐、300 套技能加点与 188 个 KIWI_JADE 强化符文。
+- 版本：package.json `0.7.5`；已发布 Git 标签截至 v0.7.4，本次改动发布后应新增 v0.7.5。
 - 界面：OP.GG 风格蓝色系（强调色 `#5383e8`），每个英雄保留专属主题色（`--champion-accent`，来自 classic-data 的 accent 字段，不要统一掉）。
 - 英雄直达链接：`#champion=<key小写>`（如 `#champion=ezreal`）直接打开该英雄出装页；`#build=` 是完整构筑分享链接，两者互斥，别破坏。
 
@@ -85,9 +85,9 @@ status labels:
 
 | 文件 | 性质 | 说明 |
 | --- | --- | --- |
-| app/classic-data.ts | 手写 | 63 英雄目录（classicId/key/分路/职业/原型/外号/主题色/默认加点）、符文/天赋/召唤师技能目录、**5 套天赋预设**（攻21防9、攻21通9、防21通9、防21攻9、通21防9，均为合法 30 点）、runePresetIds |
-| app/classic-researched-guides.ts | 生成后手维护 | 116 套 S3 考据玩法（每套含逐格符文页 runePreset、天赋预设、召唤师技能、加点、≤475 金出门装、4 档回城路线、六格出装、前中后期打法、来源 URL）。**装备/符文/技能全部用 ID，不要手改 ID**；新增方案照现有结构写并跑测试验证 |
-| app/classic-build-guides.ts | 手写 | 方案组装逻辑：primary（primaryOverrides）+ researched + specialProfiles（潘森水晶瓶、蓝EZ、韩式/传统薇恩、AD豹女、攻速提莫、代理炼金、剑圣暴击/攻速）+ safeProfile，按 name-lane-style 去重 → 251 套 |
+| app/classic-data.ts | 手写 | 72 英雄目录（classicId/key/分路/职业/原型/外号/主题色/默认加点）、符文/天赋/召唤师技能目录、**5 套天赋预设**（攻21防9、攻21通9、防21通9、防21攻9、通21防9，均为合法 30 点）、runePresetIds |
+| app/classic-researched-guides.ts | 生成后手维护 | 125 套历史来源与 Classic 适配玩法（每套含逐格符文页 runePreset、天赋预设、召唤师技能、加点、≤475 金出门装、4 档回城路线、六格出装、前中后期打法、来源 URL）。**装备/符文/技能全部用 ID，不要手改 ID**；新增方案照现有结构写并跑测试验证 |
+| app/classic-build-guides.ts | 手写 | 方案组装逻辑：primary（primaryOverrides）+ researched + specialProfiles（潘森水晶瓶、蓝EZ、韩式/传统薇恩、AD豹女、攻速提莫、代理炼金、剑圣暴击/攻速）+ safeProfile，按 name-lane-style 去重 → 278 套 |
 | app/*.generated.ts（8 个）+ public/classic-cache/ | 机器生成 | **绝不手改**，由 `npm run data:update` / `assets:update` 再生；怀旧海斗完整构筑与轻量排行摘要必须同批生成 |
 | app/classic-mayhem-runtime.ts + public/classic-data/mayhem/ | 加载器 + 机器生成 | 怀旧海斗按英雄拆分的运行时数据；当前英雄按需加载，完整 188 项强化池只在打开图鉴时加载。JSON 由 `scripts/export-mayhem-runtime.mjs` 生成，**绝不手改** |
 | app/page.tsx | 手写 | 主页面（约 1600 行，拆分是已知的将来任务）；ChampionAbilityPanel / ItemDetailPanel / HelpDrawer / OnboardingGuide 已拆到 app/components/（后两个懒加载） |
