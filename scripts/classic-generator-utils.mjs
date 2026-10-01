@@ -53,14 +53,36 @@ export function isRetryableHttpStatus(status) {
   return status === 408 || status === 425 || status === 429 || status >= 500;
 }
 
-export async function fetchText(url, label, attempts = 4) {
+export function retryAfterMilliseconds(value, now = Date.now()) {
+  if (!value?.trim()) return 0;
+  const seconds = Number(value);
+  if (Number.isFinite(seconds)) return seconds >= 0 ? seconds * 1000 : 0;
+  const date = Date.parse(value);
+  return Number.isFinite(date) ? Math.max(0, date - now) : 0;
+}
+
+function isDataDragonJson(url) {
+  const parsed = new URL(url);
+  return parsed.protocol === "https:"
+    && parsed.hostname === "ddragon.leagueoflegends.com"
+    && /^\/cdn\/\d+\.\d+\.\d+\/data\/[a-z]{2}_[A-Z]{2}\/.*\.json$/.test(parsed.pathname);
+}
+
+export async function fetchText(url, label, attempts = 4, { wait = sleep } = {}) {
   let lastError;
+  const dataDragonJson = isDataDragonJson(url);
+  let bypassErrorCache = false;
   for (let attempt = 1; attempt <= attempts; attempt += 1) {
     try {
-      const response = await fetch(url, {
+      const requestUrl = new URL(url);
+      if (bypassErrorCache) {
+        requestUrl.searchParams.set("sync_retry", `${Date.now()}-${attempt}`);
+      }
+      const response = await fetch(requestUrl.href, {
         headers: {
           "accept-language": "zh-CN,zh;q=0.9,en;q=0.7",
           "user-agent": "lol-traditional-data-sync/0.6 (+https://github.com/lgsszh/lol-traditional)",
+          ...(bypassErrorCache ? { "cache-control": "no-cache" } : {}),
         },
         signal: AbortSignal.timeout(30_000),
       });
@@ -68,19 +90,22 @@ export async function fetchText(url, label, attempts = 4) {
         const error = new Error(`HTTP ${response.status}`);
         error.status = response.status;
         error.retryable = isRetryableHttpStatus(response.status);
-        const retryAfter = Number(response.headers.get("retry-after"));
-        error.retryAfter = Number.isFinite(retryAfter) ? retryAfter * 1000 : 0;
+        error.retryAfter = retryAfterMilliseconds(response.headers.get("retry-after"));
+        // Retry the exact patch/locale; only the CDN cache key may change.
+        if (dataDragonJson && error.retryable) bypassErrorCache = true;
         throw error;
       }
       return await response.text();
     } catch (error) {
       lastError = error;
-      if (error.retryable === false) break;
+      if (error.retryable === false || error.retryAfter > 60_000) break;
       if (attempt < attempts) {
-        const backoff = Math.min(8_000, 750 * (2 ** (attempt - 1)));
+        const backoff = dataDragonJson
+          ? Math.min(24_000, 1_500 * (2 ** (attempt - 1)))
+          : Math.min(8_000, 750 * (2 ** (attempt - 1)));
         const delay = Math.max(error.retryAfter || 0, backoff + Math.floor(Math.random() * 350));
         console.warn(`${label}: retry ${attempt + 1}/${attempts} in ${delay}ms (${error.message})`);
-        await sleep(delay);
+        await wait(delay);
       }
     }
   }
@@ -91,26 +116,15 @@ export async function fetchText(url, label, attempts = 4) {
   throw finalError;
 }
 
-export async function fetchJson(url, label) {
-  let lastError;
-  for (let attempt = 1; attempt <= 4; attempt += 1) {
-    try {
-      return JSON.parse(await fetchText(url, label, 1));
-    } catch (error) {
-      lastError = error;
-      if (error.retryable === false) break;
-      if (attempt < 4) {
-        const delay = Math.min(8_000, 750 * (2 ** (attempt - 1)));
-        console.warn(`${label}: JSON retry ${attempt + 1}/4 in ${delay}ms (${error.message})`);
-        await sleep(delay);
-      }
-    }
+export async function fetchJson(url, label, options = {}) {
+  const body = await fetchText(url, label, isDataDragonJson(url) ? 5 : 4, options);
+  try {
+    return JSON.parse(body);
+  } catch (cause) {
+    const error = new Error(`${label}: invalid JSON response`, { cause });
+    error.retryable = false;
+    throw error;
   }
-  const finalError = new Error(`${label}: ${lastError?.message || lastError}`);
-  finalError.status = lastError?.status;
-  finalError.retryAfter = lastError?.retryAfter || 0;
-  finalError.retryable = lastError?.retryable !== false;
-  throw finalError;
 }
 
 export async function writeOrCheck(outputPath, output, label) {
