@@ -441,15 +441,6 @@ export const classicAssetManifest = {
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jaderunes/bl_3_3.project_jade.png": "/classic-cache/6a6e273cee835b2cfcbac5e1.png",
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jaderunes/r_3_3.project_jade.png": "/classic-cache/b3780cd6f6d39d1fcececa08.png",
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jaderunes/y_1_3.project_jade.png": "/classic-cache/7c28bb5d1beae16994120b1a.png",
-  "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/item/773040.png": "/classic-cache/1605d88789a3b232ce937a5b.png",
-  "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/item/773042.png": "/classic-cache/8d21a056e08947ed45ab2aad.png",
-  "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerBarrier.png": "/classic-cache/df5987d7f0e0b49f067bb47c.png",
-  "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerDot.png": "/classic-cache/b4922fa31a36150c302f306a.png",
-  "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png": "/classic-cache/79dda3124ea02f42ab37d5d7.png",
-  "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png": "/classic-cache/f0a1db82b27bf16302debae4.png",
-  "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHeal.png": "/classic-cache/6b057d4977cb176e6c275146.png",
-  "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerMana.png": "/classic-cache/5b9bf8be64791d8976decd39.png",
-  "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png": "/classic-cache/0a7dd3dd21cfe64ab2cef52d.png",
   "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/characters/jade_ahri/skins/base/images/jade_ahri_splash_centered_0.project_jade.jpg": "/classic-cache/d29e3641a6f871772c88f7ff.jpg",
   "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/characters/jade_ahri/skins/skin301/images/jade_ahri_splash_centered_301.project_jade.jpg": "/classic-cache/d4017e05b6ed1bf16b4a32d6.jpg",
   "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/characters/jade_akali/skins/base/images/jade_akali_splash_centered_0.project_jade.jpg": "/classic-cache/ba19b6b218dca3c328f1d9b8.jpg",
@@ -1291,6 +1282,15 @@ export const classicAssetManifest = {
   "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/v1/champion-icons/60114.png": "/classic-cache/7e70c3ef2ac823d526785d27.png",
   "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/v1/champion-icons/60117.png": "/classic-cache/f1fcf490781fea16ba81976a.png",
   "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/v1/champion-icons/60267.png": "/classic-cache/0a2d0d7508e22d6a7aec929b.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/item/773040.png": "/classic-cache/7b686d4cfa0cb6a9945b6c3f.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/item/773042.png": "/classic-cache/0591798b25c36eb1c69d2618.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerBarrier.png": "/classic-cache/3eaaad30dc11944b65247edb.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerDot.png": "/classic-cache/ec084a3ce2b66528a4285021.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png": "/classic-cache/e7f5f4ebc0a6f9dd264b661a.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png": "/classic-cache/27ba6923c92d2be3dedb598a.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHeal.png": "/classic-cache/2ef696311ac15b06a126d6d9.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerMana.png": "/classic-cache/c7790969a90632e1da9c5dcb.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png": "/classic-cache/1708721740712700183ad20b.png",
   "https://raw.communitydragon.org/16.20/game/assets/maps/particles/kiwi/magicmissile_small.png": "/classic-cache/6ee0b901e7ba351cd88f18df.png",
   "https://raw.communitydragon.org/16.20/game/assets/ux/cherry/augments/icons/adapt_small.png": "/classic-cache/17781eec053c7a92a4057bee.png",
   "https://raw.communitydragon.org/16.20/game/assets/ux/cherry/augments/icons/allforyou_small.png": "/classic-cache/6b312b165167d1f14ed5fb86.png",
@@ -4984,78 +4984,6 @@ export const classicAssetAudit = {
     "sha256": "a4aa277ef44abcc3f98b568b3925bac57638ec2b5d1e194f6ec07fb5af7d981f",
     "labels": [
       "次级护甲符印"
-    ]
-  },
-  "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/item/773040.png": {
-    "path": "/classic-cache/1605d88789a3b232ce937a5b.png",
-    "bytes": 6586,
-    "sha256": "80bbf4e486d5c8e7996677dc9975666bade69ac942d8ba1eada1a4508baac231",
-    "labels": [
-      "炽天使之拥"
-    ]
-  },
-  "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/item/773042.png": {
-    "path": "/classic-cache/8d21a056e08947ed45ab2aad.png",
-    "bytes": 6457,
-    "sha256": "476b131d1c1b47bac1aa4fed3e6d0b3948244cc5fd80b71395ee129d2d32af71",
-    "labels": [
-      "魔切"
-    ]
-  },
-  "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerBarrier.png": {
-    "path": "/classic-cache/df5987d7f0e0b49f067bb47c.png",
-    "bytes": 6401,
-    "sha256": "a0cf7b08cdd6d852d325bc9124e05f0e2c55aac340e50665c385755dfa86fbc0",
-    "labels": [
-      "屏障怀旧海斗召唤师技能"
-    ]
-  },
-  "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerDot.png": {
-    "path": "/classic-cache/b4922fa31a36150c302f306a.png",
-    "bytes": 5799,
-    "sha256": "958db3407c83a9499a5e464c2e37df59c6544590dcd3d822965a83740303b9af",
-    "labels": [
-      "引燃怀旧海斗召唤师技能"
-    ]
-  },
-  "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerFlash.png": {
-    "path": "/classic-cache/79dda3124ea02f42ab37d5d7.png",
-    "bytes": 6403,
-    "sha256": "1272fe7b3275c0afc872a6aaa6b65e27d41572d57f9ce19b9ed81b79aa5eb2aa",
-    "labels": [
-      "闪现怀旧海斗召唤师技能"
-    ]
-  },
-  "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHaste.png": {
-    "path": "/classic-cache/f0a1db82b27bf16302debae4.png",
-    "bytes": 5066,
-    "sha256": "9ce3605a1480f16453ff8230fa61e87cedca91e8a5c6217445c82eaf53884484",
-    "labels": [
-      "幽灵疾步怀旧海斗召唤师技能"
-    ]
-  },
-  "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerHeal.png": {
-    "path": "/classic-cache/6b057d4977cb176e6c275146.png",
-    "bytes": 5673,
-    "sha256": "ccebc4b0554572a041b2b5014f25a84d7265c371e97448a516765aaad651dc55",
-    "labels": [
-      "治疗术怀旧海斗召唤师技能"
-    ]
-  },
-  "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerMana.png": {
-    "path": "/classic-cache/5b9bf8be64791d8976decd39.png",
-    "bytes": 5860,
-    "sha256": "b312643034bb3855d1211884b31f254f00281b71afa39df94dae3c20e51b0d1e",
-    "labels": [
-      "清晰术怀旧海斗召唤师技能"
-    ]
-  },
-  "https://opgg-static.akamaized.net/meta/images/lol/16.19.1/spell/SummonerSnowball.png": {
-    "path": "/classic-cache/0a7dd3dd21cfe64ab2cef52d.png",
-    "bytes": 4799,
-    "sha256": "0e2deaacd7cba5e9aee37e35aa91ac6ea69731d60689ed83c8e87fefb0115dbb",
-    "labels": [
-      "标记怀旧海斗召唤师技能"
     ]
   },
   "https://opgg-static.akamaized.net/meta/images/lol/16.19/classic/releases/a270fead25410b38e8db2eb88cb7caf2e1eb66086932e250311dd82fda0b87b8/assets/characters/jade_ahri/skins/base/images/jade_ahri_splash_centered_0.project_jade.jpg": {
@@ -11821,6 +11749,78 @@ export const classicAssetAudit = {
     "sha256": "55f64296202e9aed92c8bc4b9dba51665d6109f69eb35e3580a77ba04530c2a6",
     "labels": [
       "娜美头像"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/item/773040.png": {
+    "path": "/classic-cache/7b686d4cfa0cb6a9945b6c3f.png",
+    "bytes": 6586,
+    "sha256": "80bbf4e486d5c8e7996677dc9975666bade69ac942d8ba1eada1a4508baac231",
+    "labels": [
+      "炽天使之拥"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/item/773042.png": {
+    "path": "/classic-cache/0591798b25c36eb1c69d2618.png",
+    "bytes": 6457,
+    "sha256": "476b131d1c1b47bac1aa4fed3e6d0b3948244cc5fd80b71395ee129d2d32af71",
+    "labels": [
+      "魔切"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerBarrier.png": {
+    "path": "/classic-cache/3eaaad30dc11944b65247edb.png",
+    "bytes": 6401,
+    "sha256": "a0cf7b08cdd6d852d325bc9124e05f0e2c55aac340e50665c385755dfa86fbc0",
+    "labels": [
+      "屏障怀旧海斗召唤师技能"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerDot.png": {
+    "path": "/classic-cache/ec084a3ce2b66528a4285021.png",
+    "bytes": 5799,
+    "sha256": "958db3407c83a9499a5e464c2e37df59c6544590dcd3d822965a83740303b9af",
+    "labels": [
+      "引燃怀旧海斗召唤师技能"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png": {
+    "path": "/classic-cache/e7f5f4ebc0a6f9dd264b661a.png",
+    "bytes": 6403,
+    "sha256": "1272fe7b3275c0afc872a6aaa6b65e27d41572d57f9ce19b9ed81b79aa5eb2aa",
+    "labels": [
+      "闪现怀旧海斗召唤师技能"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png": {
+    "path": "/classic-cache/27ba6923c92d2be3dedb598a.png",
+    "bytes": 5066,
+    "sha256": "9ce3605a1480f16453ff8230fa61e87cedca91e8a5c6217445c82eaf53884484",
+    "labels": [
+      "幽灵疾步怀旧海斗召唤师技能"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHeal.png": {
+    "path": "/classic-cache/2ef696311ac15b06a126d6d9.png",
+    "bytes": 5673,
+    "sha256": "ccebc4b0554572a041b2b5014f25a84d7265c371e97448a516765aaad651dc55",
+    "labels": [
+      "治疗术怀旧海斗召唤师技能"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerMana.png": {
+    "path": "/classic-cache/c7790969a90632e1da9c5dcb.png",
+    "bytes": 5860,
+    "sha256": "b312643034bb3855d1211884b31f254f00281b71afa39df94dae3c20e51b0d1e",
+    "labels": [
+      "清晰术怀旧海斗召唤师技能"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png": {
+    "path": "/classic-cache/1708721740712700183ad20b.png",
+    "bytes": 4799,
+    "sha256": "0e2deaacd7cba5e9aee37e35aa91ac6ea69731d60689ed83c8e87fefb0115dbb",
+    "labels": [
+      "标记怀旧海斗召唤师技能"
     ]
   },
   "https://raw.communitydragon.org/16.20/game/assets/maps/particles/kiwi/magicmissile_small.png": {
