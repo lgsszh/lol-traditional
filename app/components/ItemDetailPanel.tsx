@@ -3,6 +3,7 @@
 import { classicItemRecipes } from "../classic-item-recipes.generated";
 import { classicItems, type ClassicItem } from "../classic-items.generated";
 import { localAssetUrl } from "../classic-assets";
+import { CLASSIC_PATCH } from "../classic-data";
 
 type Props = {
   itemId: string;
@@ -139,8 +140,8 @@ export default function ItemDetailPanel({ itemId, activeSlot, onInspect, onEquip
       </section>
 
       <footer>
-        <small>说明、分类、图标与总价：OP.GG Classic 16.15</small>
-        <small>配方：{recipe?.source || "OP.GG Classic 16.15"}</small>
+        <small>说明、分类、图标与总价：OP.GG Classic {CLASSIC_PATCH}</small>
+        <small>配方：{recipe?.source || `OP.GG Classic ${CLASSIC_PATCH}`}</small>
         <button onClick={() => onEquip(item.id)}>装备到第 {activeSlot + 1} 格</button>
       </footer>
     </aside>

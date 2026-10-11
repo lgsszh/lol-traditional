@@ -20,7 +20,7 @@ const CATALOGS = {
     kind: "runes",
     label: "符文",
     url: "https://op.gg/zh-cn/lol/classic/runes/catalog",
-    expectedCount: 59,
+    expectedCount: classicRuneGroups.reduce((sum, group) => sum + group.runes.length, 0),
   },
   masteries: {
     kind: "masteries",
@@ -51,6 +51,7 @@ const OP_GG_RUNE_IDS = {
   "mark-magic-pen": "775273",
   "mark-attack": "775245",
   "mark-as": "775247",
+  "mark-as-ppr": "777247",
   "mark-blank": "776247",
   "seal-armor-scaling": "775318",
   "seal-health-scaling": "775316",
@@ -61,6 +62,7 @@ const OP_GG_RUNE_IDS = {
   "seal-energy-regen": "775369",
   "seal-mana-regen": "775331",
   "seal-armor": "775317",
+  "seal-armor-ppr": "777317",
   "seal-gold": "775403",
   "seal-blank": "776317",
   "seal-health-regen": "775321",
@@ -79,6 +81,7 @@ const OP_GG_RUNE_IDS = {
   "glyph-blank": "776295",
   "glyph-cdr": "775295",
   "glyph-mr": "775289",
+  "glyph-mr-ppr": "777289",
   "quint-health-percent": "775406",
   "quint-crit-damage": "775339",
   "quint-ap": "775357",
@@ -98,6 +101,7 @@ const OP_GG_RUNE_IDS = {
   "quint-blank-cdr": "776355",
   "quint-life-steal": "775412",
   "quint-health": "775345",
+  "quint-health-ppr": "777345",
   "quint-move": "775365",
 };
 

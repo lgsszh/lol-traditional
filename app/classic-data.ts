@@ -22,6 +22,7 @@ export type ClassicChampion = {
   archetype: ChampionArchetype;
   accent: string;
   spellOrder: ["Q" | "W" | "E", "Q" | "W" | "E", "Q" | "W" | "E"];
+  skillRules?: { basicMaxRank: 5 | 6; ultimate: "standard" | "innate" };
 };
 
 export const championAliases: Record<string, string[]> = {
@@ -88,6 +89,8 @@ export const championAliases: Record<string, string[]> = {
   Akali: [],
   Kennen: [],
   Shen: [],
+  Irelia: ["刀妹"],
+  Caitlyn: ["女警"],
 };
 
 export type ClassicRune = {
@@ -223,6 +226,11 @@ export const classicChampions: ClassicChampion[] = [
   champion("60111", "Nautilus", "诺提勒斯", "深海泰坦", "打野", "坦克", "tank", "#688a85", ["W", "E", "Q"]),
   champion("60114", "Fiora", "菲奥娜", "无双剑姬", "上路", "战士", "fighter", "#b36786", ["W", "E", "Q"]),
   champion("60267", "Nami", "娜美", "唤潮鲛姬", "辅助", "辅助", "support", "#57b3a6", ["W", "E", "Q"]),
+  champion("60039", "Irelia", "艾瑞莉娅", "刀锋意志", "上路", "战士", "fighter", "#65b8b1", ["W", "E", "Q"]),
+  { ...champion("60043", "Karma", "卡尔玛", "天启者", "辅助", "辅助", "support", "#69b995", ["E", "Q", "W"]), skillRules: { basicMaxRank: 6, ultimate: "innate" } },
+  champion("60051", "Caitlyn", "凯特琳", "皮城女警", "下路", "射手", "marksman", "#ad88c6", ["Q", "W", "E"]),
+  champion("60133", "Quinn", "奎因", "德玛西亚之翼", "上路", "射手", "marksman", "#8199cc", ["Q", "E", "W"]),
+  champion("60266", "Aatrox", "亚托克斯", "暗裔剑魔", "上路", "战士", "fighter", "#bd5b64", ["E", "W", "Q"]),
 ];
 
 export const championIcon = (champion: ClassicChampion) =>
@@ -260,6 +268,7 @@ const classicRuneGroupsEditorial: ClassicRuneGroup[] = [
       rune("mark-magic-pen", "法术穿透印记", "法", "法术穿透", "+1法术穿透", 1, "r_1_3"),
       rune("mark-attack", "攻击力印记", "攻", "攻击力", "+1攻击力", 1, "r_1_3"),
       rune("mark-as", "攻击速度印记", "速", "攻击速度", "+1.7%攻击速度", 1.7, "r_3_3"),
+      rune("mark-as-ppr", "攻击速度印记", "速", "攻击速度", "+1.7%攻击速度", 1.7, "ppr_mark"),
       rune("mark-blank", "次级攻击速度印记", "速", "攻击速度", "+1.1%攻击速度", 1.1, "r_3_3"),
     ],
   },
@@ -278,6 +287,7 @@ const classicRuneGroupsEditorial: ClassicRuneGroup[] = [
       rune("seal-energy-regen", "能量回复符印", "能", "能量回复", "+0.7能量回复", 0.7, "y_1_3"),
       rune("seal-mana-regen", "法力回复符印", "蓝", "法力回复/5秒", "+0.4法力回复/5秒", 0.4, "y_3_3"),
       rune("seal-armor", "护甲符印", "甲", "护甲", "+1护甲", 1, "y_1_3"),
+      rune("seal-armor-ppr", "护甲符印", "甲", "护甲", "+1护甲", 1, "ppr_seal"),
       rune("seal-gold", "金币符印", "金", "金币/10秒", "+0.25金币/10秒", 0.25, "y_3_3"),
       rune("seal-blank", "次级护甲符印", "甲", "护甲", "+0.65护甲", 0.65, "y_1_3"),
       rune("seal-health-regen", "生命回复符印", "回", "生命回复/5秒", "+0.5生命回复/5秒", 0.5, "y_1_3"),
@@ -304,6 +314,7 @@ const classicRuneGroupsEditorial: ClassicRuneGroup[] = [
       rune("glyph-blank", "次级冷却缩减雕纹", "冷", "冷却缩减", "+0.5%冷却缩减", 0.5, "b_1_3"),
       rune("glyph-cdr", "冷却缩减雕纹", "冷", "冷却缩减", "+0.8%冷却缩减", 0.8, "b_1_3"),
       rune("glyph-mr", "魔法抗性雕纹", "抗", "魔法抗性", "+1.4魔法抗性", 1.4, "b_3_3"),
+      rune("glyph-mr-ppr", "魔法抗性雕纹", "抗", "魔法抗性", "+1.4魔法抗性", 1.4, "ppr_glyph"),
     ],
   },
   {
@@ -331,6 +342,7 @@ const classicRuneGroupsEditorial: ClassicRuneGroup[] = [
       rune("quint-blank-cdr", "次级冷却缩减精华", "冷", "冷却缩减", "+1.7%冷却缩减", 1.7, "bl_3_3"),
       rune("quint-life-steal", "生命偷取精华", "吸", "生命偷取", "+1.5%生命偷取", 1.5, "bl_1_3"),
       rune("quint-health", "生命值精华", "生", "生命值", "+26生命值", 26, "bl_3_3"),
+      rune("quint-health-ppr", "生命值精华", "生", "生命值", "+26生命值", 26, "ppr_quint"),
       rune("quint-move", "移动速度精华", "移", "移动速度", "+1.5%移动速度", 1.5, "bl_3_3"),
     ],
   },
@@ -550,11 +562,32 @@ export const defaultSpellsFor = (champion: ClassicChampion): [string, string] =>
   return ["74", "714"];
 };
 
-export const skillPlanFor = (order: ClassicChampion["spellOrder"]) => {
-  const template = ["Q", "W", "E", "Q", "Q", "R", "Q", "W", "Q", "W", "R", "W", "W", "E", "E", "R", "E", "E"];
-  const mapping = { Q: order[0], W: order[1], E: order[2], R: "R" } as const;
-  return template.map((skill) => mapping[skill as keyof typeof mapping]);
+export const classicSkillRulesFor = (champion?: ClassicChampion) =>
+  champion?.skillRules || { basicMaxRank: 5, ultimate: "standard" as const };
+
+export const skillPlanFor = (order: ClassicChampion["spellOrder"], champion?: ClassicChampion) => {
+  const rules = classicSkillRulesFor(champion);
+  const counts: Record<string, number> = { Q: 0, W: 0, E: 0, R: 0 };
+  return Array.from({ length: 18 }, (_, index) => {
+    const level = index + 1;
+    const skill = rules.ultimate === "standard" && [6, 11, 16].includes(level) ? "R"
+      : index < 3 ? order[index]
+        : order.find(key => counts[key] < Math.min(rules.basicMaxRank, Math.ceil(level / 2)))!;
+    counts[skill] += 1;
+    return skill;
+  });
 };
+
+export function isValidSkillPlan(value: unknown, champion?: ClassicChampion): value is string[] {
+  if (!Array.isArray(value) || value.length !== 18 || value.some(skill => !["Q", "W", "E", "R"].includes(skill))) return false;
+  const rules = classicSkillRulesFor(champion);
+  const counts: Record<string, number> = { Q: 0, W: 0, E: 0, R: 0 };
+  return value.every((skill, index) => {
+    counts[skill] += 1;
+    if (skill === "R") return rules.ultimate === "standard" && [6, 11, 16].includes(index + 1) && counts.R <= 3;
+    return counts[skill] <= Math.min(rules.basicMaxRank, Math.ceil((index + 1) / 2));
+  });
+}
 
 export const classicItemCategories = ["全部", "出门装备", "消耗品", "基础装备", "鞋子", "史诗装备", "传说装备"] as const;
 

@@ -14,10 +14,11 @@ import {
 } from "../app/classic-catalog-opgg.generated.ts";
 
 test("经典目录使用 OP.GG 原始字段，并隐藏其内部空白符文标题", () => {
-  assert.equal(classicOpggRunes.length, 59);
+  const localRuneCount = classicRuneGroups.reduce((sum, group) => sum + group.runes.length, 0);
+  assert.equal(classicOpggRunes.length, localRuneCount);
   assert.equal(classicOpggMasteries.length, 56);
   assert.equal(classicOpggSpells.length, 16);
-  assert.equal(classicOpggCatalogSnapshot.runes.length, 59);
+  assert.equal(classicOpggCatalogSnapshot.runes.length, localRuneCount);
   assert.equal(classicOpggCatalogSnapshot.masteries.length, 56);
   assert.equal(classicOpggCatalogSnapshot.spells.length, 16);
 
@@ -74,8 +75,24 @@ test("OP.GG 经典目录快照已纳入每日生成与部署提交", async () =>
   assert.match(packageSource, /classic:catalog:update/);
   assert.match(packageSource, /classic:catalog:check/);
   assert.match(workflowSource, /app\/classic-catalog-opgg\.generated\.ts/);
-  assert.match(generatorSource, /expectedCount:\s*59/);
+  assert.match(generatorSource, /expectedCount:\s*classicRuneGroups\.reduce/);
   assert.match(generatorSource, /expectedCount:\s*56/);
   assert.match(generatorSource, /expectedCount:\s*16/);
   assert.match(generatorSource, /--check/);
+});
+
+test("16.20 新增 PPR 符文保留独立 ID、分组、数值和图标", () => {
+  const additions = [
+    ["mark-as-ppr", "777247", "runes-marks", "+1.7%攻击速度"],
+    ["seal-armor-ppr", "777317", "runes-seals", "+1护甲"],
+    ["glyph-mr-ppr", "777289", "runes-glyphs", "+1.4魔法抗性"],
+    ["quint-health-ppr", "777345", "runes-quintessences", "+26生命值"],
+  ];
+  for (const [localId, remoteId, group, value] of additions) {
+    const rune = classicOpggRunes.find(entry => entry.runeId === localId);
+    assert.equal(rune?.identifier, remoteId);
+    assert.equal(rune?.group.key, group);
+    assert.equal(rune?.description, value);
+    assert.match(rune?.imageUrl || "", /ppr_(mark|seal|glyph|quint)\.project_jade_16_20\.png$/);
+  }
 });

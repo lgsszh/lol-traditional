@@ -3,9 +3,9 @@
 [![Deploy](https://github.com/lgsszh/lol-traditional/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/lgsszh/lol-traditional/actions/workflows/deploy-pages.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-面向英雄联盟怀旧服（Classic）的玩法攻略与构筑工作台：72 位经典
-英雄、278 套按 S3（2012–2013）社区攻略考据的完整玩法方案、154 件
-经典装备、59 枚符文、56 点天赋和 16 个召唤师技能；并提供使用
+面向英雄联盟怀旧服（Classic）的玩法攻略与构筑工作台：77 位经典
+英雄、293 套按 S3（2012–2013）社区攻略考据的完整玩法方案、154 件
+经典装备、63 枚符文、56 点天赋和 16 个召唤师技能；并提供使用
 现代英雄技能、经典地图与装备的「海克斯大乱斗 · 经典模式版」攻略。
 无需登录，打开公开网址即可使用。
 
@@ -17,7 +17,7 @@
 ## 功能特性
 
 - **海克斯大乱斗 · 经典模式版**：仅展示 OP.GG 当前公开排名统计的
-  60 位英雄，使用 Riot 16.16.1 / CommunityDragon 16.16 现代技能、可公开数值与基础／
+  60 位英雄，使用 Riot 16.20.1 / CommunityDragon 16.20 现代技能、可公开数值与基础／
   成长属性；客户端未能静态展开的公式明确标为“部分”，不补猜数值。
   模式搭配经典装备，独立按 1400 金出门预算校验，不包含
   峡谷分路、打野或惩戒；
@@ -26,7 +26,7 @@
   胜率、选用率、每个品质前 15 个强化、前 5 套技能加点、召唤师
   技能、出门装、鞋子和核心装备均来自 OP.GG Classic-ish 每日快照；
   OP.GG 未提供的普通符文区不会显示，也不会用峡谷符文或人工方案替代。
-- **278 套完整玩法方案**：每位英雄至少 3 套（主流派、S3 考据研究
+- **293 套完整玩法方案**：每位英雄至少 3 套（主流派、S3 考据研究
   流派、特色流派与稳健路线）。每套方案包含出门装（≤475 金校验）、
   按金币分档的回城购买路线、六格成装与备选、召唤师技能、逐格符文
   页、30 点天赋预设、18 级技能加点和前中后期打法说明，并标注原始
@@ -61,7 +61,7 @@ npm run dev
 | `npm run build:pages` | GitHub Pages 静态导出（CI 设置环境变量） |
 | `npm run data:update` | 重新抓取 OP.GG Classic、现代技能与海斗模式池并更新快照 |
 | `npm run data:check` | 在线重新生成并确认仓库快照没有漂移 |
-| `npm run classic:catalog:update` | 更新 OP.GG 的 59 符文／56 天赋／16 召唤师技能目录 |
+| `npm run classic:catalog:update` | 更新 OP.GG 的 63 符文／56 天赋／16 召唤师技能目录 |
 | `npm run classic:catalog:check` | 在线校验 OP.GG 经典目录快照 |
 | `npm run mayhem:update` | 更新现代技能、两套强化池与 60 英雄 OP.GG 统计 |
 | `npm run mayhem:check` | 在线重新生成并校验全部怀旧海斗快照 |
@@ -72,13 +72,14 @@ npm run dev
 ## 数据来源与校验
 
 - 英雄、装备、符文、天赋、召唤师技能目录与图像：OP.GG Classic
-  16.16 每日快照；经典完整技能公式：Riot Data Dragon 3.15.5。
+  16.20 每日快照；经典完整技能公式通常使用 Riot Data Dragon 3.15.5，
+  重做前卡尔玛按 OP.GG 形态使用 0.154.3（Q/W/E 各六级、R 自动获得）。
 - 怀旧海斗现代技能、基础与成长属性、公开公式：Riot Data Dragon
-  16.16.1 与 CommunityDragon 16.16 同补丁客户端数据；新版海斗 `KIWI`、
+  16.20.1 与 CommunityDragon 16.20 同补丁客户端数据；新版海斗 `KIWI`、
   怀旧海斗 `KIWI_JADE` 模式池及强化名称／品质／图标／公开效果：
-  CommunityDragon 16.16 客户端导出。
+  CommunityDragon 16.20 客户端导出。
 - 怀旧海斗逐英雄排名、胜率、选用率、强化顺序、召唤师技能、技能
-  加点、出门装、鞋子和核心装备：OP.GG Classic-ish 16.16。同步
+  加点、出门装、鞋子和核心装备：OP.GG Classic-ish 16.20。同步
   保留页面显示值和场次，不自行推算或修正 OP.GG 的统计。
 - 玩法方案：Mobafire / MetaSRC Classic 等 2012–2013 攻略逐英雄
   考据（见每套方案内的来源链接），装备名称与价格按当前目录校正。
@@ -104,7 +105,7 @@ Windows 本地发布统一使用 `npm run network:git-push -- origin <分支或�
 app/                        页面、组件与数据模块
   classic-data.ts           英雄／符文／天赋／召唤师技能目录
   classic-build-guides.ts   玩法方案组装与校验逻辑
-  classic-researched-guides.ts  125 套历史来源与 Classic 适配玩法数据（带来源）
+  classic-researched-guides.ts  130 套历史来源与 Classic 适配玩法数据（带来源）
   classic-catalog-opgg.generated.ts  经典符文／天赋／召唤师技能快照
   classic-mayhem.generated.ts   现代技能与两套海斗强化快照
   classic-mayhem-opgg.generated.ts  60 英雄 OP.GG 怀旧海斗统计

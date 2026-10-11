@@ -1,5 +1,6 @@
 import { readFile } from "node:fs/promises";
 import { fetchJson, writeOrCheck } from "./classic-generator-utils.mjs";
+import { spellBaseCostValues } from "./spell-resource-values.mjs";
 
 const outputPath = new URL("../app/classic-mayhem.generated.ts", import.meta.url);
 const classicDataPath = new URL("../app/classic-data.ts", import.meta.url);
@@ -241,6 +242,8 @@ function collectSpellContext(resources, maxRank = 1) {
   for (const [resourceIndex, resource] of resources.filter(Boolean).entries()) {
     const spell = resource.mSpell ?? resource;
     if (resourceIndex === 0) {
+      const baseCost = spellBaseCostValues(spell, maxRank);
+      if (baseCost) dataValues.set("basecost", { name: "BaseCost", values: baseCost });
       for (const [name, rawValues] of [
         ["AmmoRechargeTime", spell.mAmmoRechargeTime],
         ["MaxAmmo", spell.mMaxAmmo],

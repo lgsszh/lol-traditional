@@ -11,6 +11,7 @@ import {
   type ResearchedMasteryPreset,
   type ResearchedRunePreset,
 } from "./classic-researched-guides.ts";
+import { classicItems } from "./classic-items.generated.ts";
 
 export type ClassicGuideItem = {
   itemId: string;
@@ -476,7 +477,7 @@ function safeProfile(champion: ClassicChampion): GuideProfile {
 
 function finalBuild(archetype: ChampionArchetype) {
   const starts = new Set(["771054", "771055", "771056", "771039", "772049"]);
-  const boots = new Set(["771001", "773006", "773020", "773047", "773111", "773158"]);
+  const boots = new Set(classicItems.filter(item => item.category === "鞋子").map(item => item.id));
   const result = classicBuildPresets[archetype].filter((id) => !starts.has(id) && !boots.has(id));
   const preferredBoot = archetype === "mage" ? "773020"
     : archetype === "marksman" || archetype === "jungler" ? "773006"
@@ -555,6 +556,12 @@ function createVariant(
 }
 
 const primaryOverrides: Partial<Record<ClassicChampion["key"], Partial<GuideProfile>>> = {
+  Karma: {
+    name: "折扇团队保护",
+    style: "护盾／团队主动装",
+    summary: "以经典折扇治疗、灵魂护盾和梵咒保护队友，单鞋配团队主动装备；此为站内规则适配，非 OP.GG 出装统计。",
+    tags: ["护盾", "治疗", "团队保护"],
+  },
   Pantheon: {
     name: "上路穿甲",
     style: "AD 穿甲／支援",

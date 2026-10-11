@@ -1,4 +1,5 @@
 import { classicChampions } from "../app/classic-data.ts";
+import { classicNumericVersion, validateHistoricalForm } from "./classic-skill-source.mjs";
 import {
   decodeNextPayload,
   extractBalancedObject,
@@ -10,7 +11,6 @@ import {
 
 const outputPath = new URL("../app/classic-skills.generated.ts", import.meta.url);
 const specialSlugs = { MonkeyKing: "wukong" };
-const numericVersion = "3.15.5";
 const statLabels = {
   attackdamage: "总攻击力",
   bonusattackdamage: "额外攻击力",
@@ -41,6 +41,7 @@ function stripMarkup(value) {
 }
 
 function scalingLabel(variable) {
+  if (!variable.link) return "（动态数值未在旧版接口公开）";
   const coefficients = Array.isArray(variable.coeff) ? variable.coeff : [variable.coeff];
   const values = coefficients.map((value) => {
     const percentage = Number(value) * 100;
@@ -92,6 +93,14 @@ function numericDetail(spell) {
     patterns.forEach((pattern) => { tooltip = tooltip.replace(pattern, value); });
   }
   for (const variable of spell.vars || []) {
+    // A ratio inside an existing percent sign is a percentage-point formula,
+    // not the usual damage ratio (e.g. old Karma's Q healing amplification).
+    const percentPattern = new RegExp(`{{\\s*${variable.key}\\s*}}%`, "gi");
+    if (variable.link === "spelldamage" && percentPattern.test(tooltip)) {
+      const coefficients = Array.isArray(variable.coeff) ? variable.coeff : [variable.coeff];
+      const points = coefficients.map(value => Number((Number(value) * 100).toFixed(3))).join("/");
+      tooltip = tooltip.replace(percentPattern, `每100法术强度增加${points}个百分点`);
+    }
     tooltip = tooltip.replace(
       new RegExp(`{{\\s*${variable.key}\\s*}}`, "gi"),
       scalingLabel(variable),
@@ -101,6 +110,7 @@ function numericDetail(spell) {
 }
 
 async function fetchChampion(champion) {
+  const numericVersion = classicNumericVersion(champion.key);
   const slug = championSlug(champion.key);
   const sourceUrl = `https://op.gg/zh-cn/lol/classic/champions/${slug}`;
   const [html, historical] = await Promise.all([
@@ -122,6 +132,7 @@ async function fetchChampion(champion) {
   if (!historicalChampion || historicalChampion.spells?.length !== 4) {
     throw new Error(`${champion.key}: missing ${numericVersion} numeric data`);
   }
+  validateHistoricalForm(champion.key, detail, historicalChampion);
   // OP.GG exposes two distinct historical concepts:
   // - a skin whose localized name contains "经典";
   // - exactly one card marked "默认" (`isBase: true`).
@@ -170,6 +181,7 @@ async function fetchChampion(champion) {
     championId: champion.classicId,
     championName: champion.name,
     sourceUrl,
+    numericSourceLabel: `Riot Data Dragon ${numericVersion}${numericVersion !== "3.15.5" ? "（对应重做前技能形态）" : ""}`,
     portrait: detail.imageUrl,
     classicSplash: primarySkin.imageUrl,
     classicSplashName: primarySkin.name,
@@ -211,9 +223,9 @@ async function fetchChampion(champion) {
       }
       let detailText = historicalSpell
         ? numericDetail(historicalSpell)
-        : `技能文本：${description}${description !== ability.description ? "\n文本来源：Riot Data Dragon 3.15.5（OP.GG 当前文本含未解析变量）。" : ""}`;
+        : `技能文本：${description}${description !== ability.description ? `\n文本来源：Riot Data Dragon ${numericVersion}（OP.GG 当前文本含未解析变量）。` : ""}`;
       if (!/\d/.test(detailText)) {
-        detailText += "\n数值说明：OP.GG Classic 与 Riot 3.15.5 公开字段未提供独立固定数值；不使用其他版本或人工估值补写。";
+        detailText += `\n数值说明：OP.GG Classic 与 Riot ${numericVersion} 公开字段未提供独立固定数值；不使用其他版本或人工估值补写。`;
       }
       if (detailText && /{{|}}|@[a-z0-9_.]+/i.test(detailText)) {
         throw new Error(`${champion.key} ${ability.key}: unresolved numeric placeholder`);
@@ -249,7 +261,7 @@ records.sort((left, right) =>
   classicChampions.findIndex((champion) => champion.classicId === left.championId)
   - classicChampions.findIndex((champion) => champion.classicId === right.championId));
 
-const output = `// Generated from OP.GG Classic 16.15 and Riot Data Dragon ${numericVersion}. Do not edit manually.
+const output = `// Generated from OP.GG Classic and version-matched Riot Data Dragon historical forms. Do not edit manually.
 export type ClassicAbilityKey = "P" | "Q" | "W" | "E" | "R";
 
 export type ClassicAbility = {
@@ -268,6 +280,7 @@ export type ClassicChampionSkillSet = {
   championId: string;
   championName: string;
   sourceUrl: string;
+  numericSourceLabel: string;
   portrait: string;
   classicSplash: string;
   classicSplashName: string;

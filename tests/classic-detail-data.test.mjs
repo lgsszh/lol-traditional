@@ -7,6 +7,7 @@ import { classicItemRecipes } from "../app/classic-item-recipes.generated.ts";
 import { classicChampionSkills } from "../app/classic-skills.generated.ts";
 import { classicBuildGuides } from "../app/classic-build-guides.ts";
 import { classicAssetAudit, classicAssetManifest } from "../app/classic-assets.generated.ts";
+import { classicNumericVersion } from "../scripts/classic-skill-source.mjs";
 
 test("全部经典英雄均包含被动与 Q/W/E/R 详情", () => {
   assert.equal(classicChampionSkills.length, classicChampions.length);
@@ -29,15 +30,15 @@ test("全部经典英雄均包含被动与 Q/W/E/R 详情", () => {
       );
       if (ability.key !== "P") {
         assert.ok(ability.numericDetail?.trim(), `${champion.name} ${ability.key} 缺少完整技能数值`);
-        assert.equal(ability.numericVersion, "3.15.5");
+        assert.equal(ability.numericVersion, classicNumericVersion(champion.key));
         assert.doesNotMatch(ability.numericDetail, /{{|}}|@[a-z0-9_.]+/i);
       }
     }
   }
 });
 
-test("16.19 扩容英雄、装备和潘森被动均有真实数据", () => {
-  const additions = { Galio: "60003", XinZhao: "60005", Poppy: "60078", Shyvana: "60102", Graves: "60104", Fizz: "60105", Nautilus: "60111", Fiora: "60114", Nami: "60267" };
+test("16.19/16.20 扩容英雄、装备和潘森被动均有真实数据", () => {
+  const additions = { Galio: "60003", XinZhao: "60005", Poppy: "60078", Shyvana: "60102", Graves: "60104", Fizz: "60105", Nautilus: "60111", Fiora: "60114", Nami: "60267", Irelia: "60039", Karma: "60043", Caitlyn: "60051", Quinn: "60133", Aatrox: "60266" };
   for (const [key, id] of Object.entries(additions)) {
     assert.equal(classicChampions.find(champion => champion.key === key)?.classicId, id);
     assert.equal(classicChampionSkills.find(champion => champion.championId === id)?.abilities.length, 5);
@@ -219,7 +220,7 @@ test("经典装备属性筛选数量与同步快照一致", () => {
     "attack-speed": 22,
     "on-hit": 24,
     "armor-penetration": 4,
-    "spell-damage": 43,
+    "spell-damage": 42,
     mana: 36,
     "magic-penetration": 5,
     health: 52,
@@ -236,6 +237,19 @@ test("经典装备属性筛选数量与同步快照一致", () => {
       `${tag}筛选数量应与同步快照一致`,
     );
   }
+});
+
+test("完整六格方案最多一件鞋子，女妖面纱按上游标签不归入法强装备", () => {
+  const boots = new Set(classicItems.filter(item => item.category === "鞋子").map(item => item.id));
+  for (const variants of Object.values(classicBuildGuides)) {
+    for (const variant of variants) {
+      assert.ok(variant.coreItems.filter(id => boots.has(id)).length <= 1, `${variant.id} 不可同时推荐多双鞋`);
+    }
+  }
+  const banshee = classicItems.find(item => item.id === "773102");
+  assert.ok(banshee);
+  assert.equal(banshee.tags.includes("spell-damage"), false);
+  assert.doesNotMatch(banshee.description, /\d+\s*法术强度/);
 });
 
 test("全部装备均有合法且双向一致的合成关系", () => {

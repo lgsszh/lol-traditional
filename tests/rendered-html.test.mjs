@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
+import { classicChampions, classicRuneGroups } from "../app/classic-data.ts";
 
 async function render() {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
@@ -20,8 +21,9 @@ test("server renders the complete Classic builder", async () => {
   assert.doesNotMatch(html, /RIFT\/\/LAB/);
   assert.match(html, /经典符文模拟器/);
   assert.match(html, /天赋模拟器/);
-  assert.match(html, /72 英雄 · 16 技能/);
-  assert.match(html, /符文 59 · 天赋 56 · 召唤师技能 16 · 装备 154/);
+  assert.ok(html.includes(`${classicChampions.length} 英雄 · 16 技能`));
+  const runeCount = classicRuneGroups.reduce((sum, group) => sum + group.runes.length, 0);
+  assert.ok(html.includes(`符文 ${runeCount} · 天赋 56 · 召唤师技能 16 · 装备 154`));
   assert.match(html, /OP\.GG 原画/);
   assert.match(html, /阵容方案/);
   assert.match(html, /使用帮助/);

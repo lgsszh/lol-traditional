@@ -40,6 +40,11 @@ const items = entries.map((entry) => {
   };
 });
 
+const patch = items[0].icon.match(/\/lol\/([^/]+)\/classic\//)?.[1];
+if (!patch || items.some(item => !item.icon.includes(`/lol/${patch}/classic/`))) {
+  throw new Error("Classic item image versions are missing or inconsistent");
+}
+
 const output = `export type ClassicItem = {
   id: string;
   name: string;
@@ -50,7 +55,7 @@ const output = `export type ClassicItem = {
   tags: string[];
 };
 
-// Generated from the OP.GG Classic 16.15 catalog (${items.length} entries). Do not edit manually.
+// Generated from the OP.GG Classic ${patch} catalog (${items.length} entries). Do not edit manually.
 export const classicItems: ClassicItem[] = ${JSON.stringify(items, null, 2)};
 `;
 

@@ -30,6 +30,8 @@ import {
   runeBoardBackground,
   runePresetIds,
   skillPlanFor,
+  isValidSkillPlan,
+  classicSkillRulesFor,
   type ClassicChampion,
   type ClassicMastery,
   type ClassicRuneGroup,
@@ -52,6 +54,7 @@ import { opggMayhemRankingSummary } from "./classic-mayhem-ranking.generated";
 type WorkbenchView = "runes" | "masteries" | "build" | "mayhem" | "ai";
 type RuneCounts = Record<string, number>;
 type MasteryRanks = Record<string, number>;
+const runeCatalogCount = classicRuneGroups.reduce((sum, group) => sum + group.runes.length, 0);
 const workbenchNavigation: ReadonlyArray<{
   id: WorkbenchView;
   label: string;
@@ -59,7 +62,7 @@ const workbenchNavigation: ReadonlyArray<{
   badge: string;
   description: string;
 }> = [
-  { id: "runes", label: "符文模拟器", shortLabel: "符文", badge: "59", description: "30 格经典符文页" },
+  { id: "runes", label: "符文模拟器", shortLabel: "符文", badge: String(runeCatalogCount), description: "30 格经典符文页" },
   { id: "masteries", label: "天赋模拟器", shortLabel: "天赋", badge: "56", description: "30 点完整天赋树" },
   { id: "build", label: "技能与出装", shortLabel: "构筑", badge: "154", description: "玩法、技能与装备" },
   { id: "mayhem", label: "怀旧海斗", shortLabel: "怀旧海斗", badge: "188", description: "OP.GG 每日同步" },
@@ -433,16 +436,6 @@ function sanitizeMasteryRanks(value: unknown): MasteryRanks {
   return next;
 }
 
-function isValidSkillPlan(value: unknown): value is string[] {
-  if (!Array.isArray(value) || value.length !== 18 || value.some((skill) => !["Q", "W", "E", "R"].includes(skill))) return false;
-  const counts: Record<string, number> = { Q: 0, W: 0, E: 0, R: 0 };
-  return value.every((skill, index) => {
-    counts[skill] += 1;
-    if (skill === "R") return [6, 11, 16].includes(index + 1) && counts.R <= 3;
-    return counts[skill] <= 5 && counts[skill] <= Math.ceil((index + 1) / 2);
-  });
-}
-
 export default function Home() {
   const [view, setView] = useState<WorkbenchView>("runes");
   const [selectedChampion, setSelectedChampion] = useState(classicChampions[0]);
@@ -470,7 +463,7 @@ export default function Home() {
   const [itemSearch, setItemSearch] = useState("");
   const [inspectedItem, setInspectedItem] = useState(classicBuildGuides[classicChampions[0].classicId][0].coreItems[0]);
   const [inspectedAbility, setInspectedAbility] = useState<ClassicAbilityKey>("Q");
-  const [skillPlan, setSkillPlan] = useState<string[]>(skillPlanFor(classicChampions[0].spellOrder));
+  const [skillPlan, setSkillPlan] = useState<string[]>(skillPlanFor(classicChampions[0].spellOrder, classicChampions[0]));
   const [prompt, setPrompt] = useState("对线稳定，使用完整经典符文与 30 点天赋；给出两件备选装备。");
   const [aiState, setAiState] = useState<"idle" | "working" | "ready">("idle");
   const [aiProfile, setAiProfile] = useState<AiProfileId>("balanced");
@@ -587,7 +580,7 @@ export default function Home() {
         setSelectedSpells([...linkedGuide.spellIds]);
         setItems([...linkedGuide.coreItems]);
         setInspectedItem(linkedGuide.coreItems[0]);
-        setSkillPlan(skillPlanFor(linkedGuide.skillOrder));
+        setSkillPlan(skillPlanFor(linkedGuide.skillOrder, linkedChampion));
         setView("build");
       }
       const saved = linkedChampion ? null
@@ -614,7 +607,7 @@ export default function Home() {
           : defaultSpellsFor(champion));
         setItems(safeItems);
         setInspectedItem(safeItems[0]);
-        setSkillPlan(isValidSkillPlan(record.skillPlan) ? record.skillPlan : skillPlanFor(champion.spellOrder));
+        setSkillPlan(isValidSkillPlan(record.skillPlan, champion) ? record.skillPlan : skillPlanFor(champion.spellOrder, champion));
       }
       setSharedBuildLoaded(hasSharedBuild);
       if (!hasSharedBuild && !linkedChampion && !localStorage.getItem(GUIDE_STORAGE_KEY)) setGuideOpen(true);
@@ -717,7 +710,7 @@ export default function Home() {
       setItems([...targetGuide.coreItems]);
       setInspectedItem(targetGuide.coreItems[0]);
       setInspectedAbility("Q");
-      setSkillPlan(skillPlanFor(targetGuide.skillOrder));
+      setSkillPlan(skillPlanFor(targetGuide.skillOrder, champion));
       setAiState("idle");
       setAiRecommendation(null);
       setPendingChampionId(null);
@@ -749,7 +742,7 @@ export default function Home() {
     setItems([...guide.coreItems]);
     setInspectedItem(guide.coreItems[0]);
     setInspectedAbility("Q");
-    setSkillPlan(skillPlanFor(guide.skillOrder));
+    setSkillPlan(skillPlanFor(guide.skillOrder, selectedChampion));
     setActiveItemSlot(0);
     setAiState("idle");
     setAiRecommendation(null);
@@ -813,22 +806,20 @@ export default function Home() {
   const changeSkill = (levelIndex: number, skill: string) => {
     setInspectedAbility(skill as ClassicAbilityKey);
     const level = levelIndex + 1;
+    const rules = classicSkillRulesFor(selectedChampion);
+    if (skill === "R" && rules.ultimate === "innate") {
+      showToast("经典卡尔玛的梵咒在 1 级自动获得，不消耗技能点");
+      return;
+    }
     if (skill === "R" && ![6, 11, 16].includes(level)) {
       showToast("经典规则：终极技能只能在 6、11、16 级学习");
       return;
     }
     setSkillPlan((current) => {
       const next = current.map((entry, index) => index === levelIndex ? skill : entry);
-      const counts = { Q: 0, W: 0, E: 0, R: 0 };
-      for (let index = 0; index < next.length; index += 1) {
-        const selected = next[index] as keyof typeof counts;
-        counts[selected] += 1;
-        if (selected === "R" && ![6, 11, 16].includes(index + 1)) return current;
-        if (selected !== "R" && counts[selected] > Math.ceil((index + 1) / 2)) {
-          showToast(`${index + 1} 级时不能学习该技能的下一等级`);
-          return current;
-        }
-        if (counts[selected] > (selected === "R" ? 3 : 5)) return current;
+      if (!isValidSkillPlan(next, selectedChampion)) {
+        showToast(`加点须满足等级限制：Q/W/E 最多 ${rules.basicMaxRank} 点${rules.ultimate === "innate" ? "，R 自动获得" : "，R 在 6/11/16 级学习"}`);
+        return current;
       }
       return next;
     });
@@ -958,7 +949,7 @@ export default function Home() {
       setSelectedSpells([...finalSpells]);
       setItems([...generatedItems]);
       setInspectedItem(generatedItems[0]);
-      setSkillPlan(skillPlanFor(guide.skillOrder));
+      setSkillPlan(skillPlanFor(guide.skillOrder, selectedChampion));
       const preferredTags = intent.wantTags.length
         ? intent.wantTags
         : aiProfile === "defensive"
@@ -1169,7 +1160,7 @@ export default function Home() {
               <p>
                 {view === "mayhem"
                   ? "现代英雄技能 + 经典地图与装备 + KIWI_JADE 独立强化符文池"
-                  : "完整经典目录已载入：符文 59 · 天赋 56 · 召唤师技能 16 · 装备 154"}
+                  : `完整经典目录已载入：符文 ${runeCatalogCount} · 天赋 56 · 召唤师技能 16 · 装备 154`}
               </p>
             </div>
             <div className="hero-actions">
@@ -1432,7 +1423,7 @@ export default function Home() {
                       <span><b>符文</b>{selectedGuide.runeSummary}</span>
                       <span><b>天赋</b>{selectedGuide.masteryPreset}</span>
                       <span><b>召唤师技能</b>{selectedGuide.spellIds.map((id) => classicSpells.find((spell) => spell.id === id)?.name).join(" + ")}</span>
-                      <span><b>加点</b>{selectedGuide.skillOrder[0]} → {selectedGuide.skillOrder[1]} → {selectedGuide.skillOrder[2]}（R 优先）</span>
+                      <span><b>加点</b>{selectedGuide.skillOrder[0]} → {selectedGuide.skillOrder[1]} → {selectedGuide.skillOrder[2]}（{classicSkillRulesFor(selectedChampion).ultimate === "innate" ? "Q/W/E 各六级，R 自动获得" : "R 优先"}）</span>
                     </div>
                   </div>
                   <div className="opening-groups">
@@ -1575,10 +1566,11 @@ export default function Home() {
                   {(["Q", "W", "E", "R"] as const).map((skill) => (
                     <div className={`skill-row skill-${skill.toLowerCase()}`} key={skill}>
                       <button className="skill-key" onClick={() => setInspectedAbility(skill)} aria-label={`查看${skill}技能详情`}>{skill}</button>
-                      {skillPlan.map((selected, index) => <button key={index} className={selected === skill ? "selected" : ""} onClick={() => changeSkill(index, skill)} aria-label={`${index + 1}级选择${skill}`}>{selected === skill ? "●" : ""}</button>)}
+                      {skillPlan.map((selected, index) => <button key={index} className={selected === skill ? "selected" : ""} disabled={skill === "R" && classicSkillRulesFor(selectedChampion).ultimate === "innate"} onClick={() => changeSkill(index, skill)} aria-label={skill === "R" && classicSkillRulesFor(selectedChampion).ultimate === "innate" ? "R 在1级自动获得，不消耗技能点" : `${index + 1}级选择${skill}`}>{skill === "R" && classicSkillRulesFor(selectedChampion).ultimate === "innate" && index === 0 ? "自动" : selected === skill ? "●" : ""}</button>)}
                     </div>
                   ))}
                 </div>
+                {classicSkillRulesFor(selectedChampion).ultimate === "innate" && <p className="selector-hint">经典卡尔玛：Q/W/E 各可升至 6 级；R 在 1 级自动获得，不消耗技能点。此规则不用于现代怀旧海斗。</p>}
               </section>
 
               <section className="build-section">
@@ -1743,7 +1735,7 @@ export default function Home() {
                 </div>
                 <aside className={`ai-status ${aiState}`}>
                   <h4>数据校验清单</h4>
-                  {["英雄与位置", "59 个符文目录", "56 节点天赋树", "16 个召唤师技能", "154 件经典装备"].map((label, index) => <div key={label}><i>{aiState === "ready" || (aiState === "working" && index < 3) ? "✓" : "○"}</i><span>{label}</span></div>)}
+                  {["英雄与位置", `${runeCatalogCount} 个符文目录`, "56 节点天赋树", "16 个召唤师技能", "154 件经典装备"].map((label, index) => <div key={label}><i>{aiState === "ready" || (aiState === "working" && index < 3) ? "✓" : "○"}</i><span>{label}</span></div>)}
                   <p>{aiState === "ready" ? "方案已写入，可到各模拟器继续手动微调。" : "生成过程只读取本站已校验的 Classic 数据快照，不会要求登录。"}</p>
                 </aside>
               </div>
@@ -1827,7 +1819,7 @@ export default function Home() {
                 </section>
               )}
               <div className="source-strip">
-                <a href="https://op.gg/zh-cn/lol/classic/runes" target="_blank" rel="noreferrer"><b>OP</b><span>经典符文模拟器<small>59 个符文 · 9/9/9/3</small></span></a>
+                <a href="https://op.gg/zh-cn/lol/classic/runes" target="_blank" rel="noreferrer"><b>OP</b><span>经典符文模拟器<small>{runeCatalogCount} 个符文 · 9/9/9/3</small></span></a>
                 <a href="https://op.gg/zh-cn/lol/classic/masteries" target="_blank" rel="noreferrer"><b>OP</b><span>经典天赋模拟器<small>56 个节点 · 30 点</small></span></a>
                 <a href="https://op.gg/zh-cn/lol/classic/items" target="_blank" rel="noreferrer"><b>OP</b><span>经典装备目录<small>154 件 · 6 个分类</small></span></a>
               </div>

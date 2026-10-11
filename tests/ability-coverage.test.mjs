@@ -59,6 +59,13 @@ test("关键被动的隐藏冷却与作用范围不得在生成时丢失", () =>
   assert.match(gragasPassive?.cooldown || "", /12\/10\/8\/6（英雄等级1\/6\/11\/16）/);
 });
 
+test("现代奎因 R 的实际三阶消耗完整解析且满级为零", () => {
+  const ability = liveClassicChampions.find(champion => champion.key === "Quinn")?.abilities.find(ability => ability.key === "R");
+  assert.equal(ability?.cost, "50/25/0");
+  assert.match(ability?.numericDetail || "", /法力消耗=50\/25\/0/);
+  assert.deepEqual(ability?.unresolvedTokens, []);
+});
+
 test("03 与 04 共用可切换等级和装备的技能面板", async () => {
   const source = await import("node:fs/promises").then(({ readFile }) =>
     readFile(new URL("../app/components/ChampionAbilityPanel.tsx", import.meta.url), "utf8"));
