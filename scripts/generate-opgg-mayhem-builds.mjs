@@ -20,8 +20,10 @@ import {
 import {
   parseOpggAugmentGroups,
   parseOpggMetric,
+  parseOpggRootPatch,
   parseOpggSkillBuild,
   parseUnavailableRunes,
+  validateOpggChampionPageIdentity,
 } from "./opgg-mayhem-parser.mjs";
 
 const outputPath = new URL("../app/classic-mayhem-opgg.generated.ts", import.meta.url);
@@ -100,27 +102,7 @@ function tableByCaption($, caption) {
 }
 
 function validateChampionPageIdentity($, ranking, patch, tab) {
-  const expectedCanonical = `${modeUrl}/${ranking.key}/${tab}`;
-  const canonical = $("link[rel='canonical']").attr("href");
-  const title = $("title").text().trim();
-  const hasModeTitle = title.includes("ARAM: Mayhem Classic-ish")
-    || title.includes("海克斯大乱斗 经典模式版");
-  const html = $.html();
-  const hasPatchEvidence = html.includes(`Ver: ${patch}`)
-    || html.includes(`/lol/${patch}.`)
-    || html.includes(`&quot;patch&quot;:&quot;${patch}&quot;`)
-    || html.includes(`\\"patch\\":\\"${patch}\\"`);
-  if (
-    canonical !== expectedCanonical
-    || !title.includes(ranking.name)
-    || !hasModeTitle
-    || !hasPatchEvidence
-  ) {
-    throw new Error(
-      `${ranking.name}: unexpected ${tab} identity `
-      + `(canonical=${canonical || "missing"}, title=${title || "missing"}, patch=${hasPatchEvidence})`,
-    );
-  }
+  validateOpggChampionPageIdentity($, ranking, patch, tab, modeUrl);
 }
 
 function mapWithConcurrency(items, limit, mapper) {
@@ -418,21 +400,7 @@ function parseRootPage(html) {
       + `received ${rankings.length}`,
     );
   }
-  const patch = rootPayload.match(/"query":\{"region":"global","tier":"all","patch":"(\d+\.\d+)"/)?.[1]
-    || rootPayload.match(/"patch":"(\d+\.\d+)"/)?.[1];
-  if (!patch) throw new Error("Cannot determine OP.GG ARAM Mayhem Classic-ish patch");
-  const assetPatch = html.match(/\/meta\/images\/lol\/(\d+\.\d+\.\d+)\/champion\//)?.[1];
-  if (!assetPatch || !assetPatch.startsWith(`${patch}.`)) {
-    throw new Error(`Unexpected OP.GG asset patch ${assetPatch || "(missing)"} for statistics patch ${patch}`);
-  }
-  const [opggMajor, opggMinor] = patch.split(".").map(Number);
-  const [liveMajor, liveMinor] = LIVE_DATA_PATCH.split(".").map(Number);
-  if (opggMajor !== liveMajor || opggMinor > liveMinor) {
-    throw new Error(
-      `Cross-source patch mismatch: OP.GG ${patch}/${assetPatch}, `
-      + `CommunityDragon ${CLASSIC_MAYHEM_PATCH}, Data Dragon ${LIVE_DATA_PATCH}`,
-    );
-  }
+  const { patch, assetPatch } = parseOpggRootPatch(html, rootPayload, LIVE_DATA_PATCH, CLASSIC_MAYHEM_PATCH);
   return { rankings, patch, assetPatch };
 }
 

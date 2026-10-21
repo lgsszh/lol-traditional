@@ -355,11 +355,12 @@ test("OP.GG 怀旧海斗快照仅覆盖当前有排名统计的英雄", () => {
 });
 
 test("怀旧海斗页面不再复用峡谷方案或启发式推荐，并纳入每日同步", async () => {
-  const [pageSource, componentSource, styleSource, generatorSource, workflowSource, packageSource] = await Promise.all([
+  const [pageSource, componentSource, styleSource, generatorSource, parserSource, workflowSource, packageSource] = await Promise.all([
     readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/components/ClassicMayhemGuide.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/globals.css", import.meta.url), "utf8"),
     readFile(new URL("../scripts/generate-opgg-mayhem-builds.mjs", import.meta.url), "utf8"),
+    readFile(new URL("../scripts/opgg-mayhem-parser.mjs", import.meta.url), "utf8"),
     readFile(new URL("../.github/workflows/sync-classic-data.yml", import.meta.url), "utf8"),
     readFile(new URL("../package.json", import.meta.url), "utf8"),
   ]);
@@ -404,7 +405,8 @@ test("怀旧海斗页面不再复用峡谷方案或启发式推荐，并纳入�
   assert.match(generatorSource, /Smite is not legal/);
   assert.match(generatorSource, /rankings\.length < preservedCount/);
   assert.match(generatorSource, /localRoster\.filter\(\(entry\) => rankingById\.has\(entry\.riotId\)\)/);
-  assert.match(generatorSource, /海克斯大乱斗 经典模式版/);
+  assert.match(generatorSource, /validateOpggChampionPageIdentity\(\$, ranking, patch, tab, modeUrl\)/);
+  assert.match(parserSource, /海克斯大乱斗 经典模式版/);
   assert.match(generatorSource, /!\[1, 4, 8\]\.includes\(Number\(entry\.rareity\)\)/);
   assert.match(generatorSource, /statisticsUnavailable/);
   assert.match(generatorSource, /preserving the verified/);

@@ -1,5 +1,84 @@
+import { decodeNextPayload } from "./classic-generator-utils.mjs";
+
 const activeSkillKeys = new Set(["Q", "W", "E"]);
 const allSkillKeys = new Set(["Q", "W", "E", "R"]);
+
+function statisticsPatches(payload) {
+  return [...payload.matchAll(/"query"\s*:\s*/g)]
+    .map((match) => match.index + match[0].length)
+    .filter((start) => payload[start] === "{")
+    .map((start) => JSON.parse(extractBalancedObjectAt(payload, start, "OP.GG statistics query")))
+    .filter((query) => query.region === "global" && query.tier === "all")
+    .map((query) => query.patch);
+}
+
+export function parseOpggRootPatch(html, payload, livePatch, communityPatch) {
+  const patches = [...new Set(statisticsPatches(payload))];
+  const patch = patches[0];
+  if (patches.length !== 1 || !/^\d+\.\d+$/.test(patch)) {
+    throw new Error("Cannot determine an unambiguous OP.GG statistics patch");
+  }
+  const title = html.match(/<title[^>]*>(.*?)<\/title>/s)?.[1] || "";
+  const titlePatches = [...title.matchAll(/\b\d+\.\d+\b/g)].map((match) => match[0]);
+  if (titlePatches.length !== 1 || titlePatches[0] !== patch) {
+    throw new Error(`OP.GG title statistics patch does not match query ${patch}`);
+  }
+  const assetPatches = [...new Set(
+    [...html.matchAll(/\/meta\/images\/lol\/([^/]+)\/champion\//g)].map((match) => match[1]),
+  )];
+  const assetPatch = assetPatches[0];
+  if (assetPatches.length !== 1 || !/^\d+\.\d+\.\d+$/.test(assetPatch)) {
+    throw new Error(`Missing, unknown or mixed OP.GG champion asset versions: ${assetPatches.join(",")}`);
+  }
+  const metadataPatches = [...new Set(
+    [...payload.matchAll(/"metaLatestVersion":([^,}\]]+)/g)].map((match) => JSON.parse(match[1])),
+  )];
+  const metadataPatch = metadataPatches[0];
+  const assetMajorMinor = assetPatch.split(".").slice(0, 2).join(".");
+  if (metadataPatches.length > 1
+    || (metadataPatches.length === 1 && metadataPatch !== assetMajorMinor)
+    || (assetMajorMinor !== patch && metadataPatch !== assetMajorMinor)) {
+    throw new Error(`OP.GG asset metadata does not confirm ${assetPatch} for statistics patch ${patch}`);
+  }
+  const [opggMajor, opggMinor] = patch.split(".").map(Number);
+  const [assetMajor, assetMinor] = assetMajorMinor.split(".").map(Number);
+  if (assetMajor > opggMajor || (assetMajor === opggMajor && assetMinor > opggMinor)) {
+    throw new Error(`Unexpected OP.GG asset patch ${assetPatch || "(missing)"} for statistics patch ${patch}`);
+  }
+  if (![livePatch, communityPatch].every((sourcePatch) => {
+    if (!/^\d+\.\d+(?:\.\d+)?$/.test(sourcePatch)) return false;
+    const [major, minor] = sourcePatch.split(".").map(Number);
+    return opggMajor === major && opggMinor <= minor;
+  })) {
+    throw new Error(
+      `Cross-source patch mismatch: OP.GG ${patch}/${assetPatch}, `
+      + `CommunityDragon ${communityPatch}, Data Dragon ${livePatch}`,
+    );
+  }
+  return { patch, assetPatch };
+}
+
+export function validateOpggChampionPageIdentity($, ranking, patch, tab, modeUrl) {
+  const expectedCanonical = `${modeUrl}/${ranking.key}/${tab}`;
+  const canonical = $("link[rel='canonical']").attr("href");
+  const title = $("title").text().trim();
+  const hasModeTitle = title.includes("ARAM: Mayhem Classic-ish")
+    || title.includes("海克斯大乱斗 经典模式版");
+  const html = $.html();
+  const visibleBody = $("body").clone();
+  visibleBody.find("script, style, noscript, template").remove();
+  const patches = [
+    ...statisticsPatches(decodeNextPayload(html)),
+    ...[...visibleBody.text().matchAll(/Ver:\s*(\d+\.\d+)\b/g)].map((match) => match[1]),
+  ];
+  const hasPatchEvidence = patches.length > 0 && patches.every((entry) => entry === patch);
+  if (canonical !== expectedCanonical || !title.includes(ranking.name) || !hasModeTitle || !hasPatchEvidence) {
+    throw new Error(
+      `${ranking.name}: unexpected ${tab} identity `
+      + `(canonical=${canonical || "missing"}, title=${title || "missing"}, patch=${hasPatchEvidence})`,
+    );
+  }
+}
 
 export function parseUnavailableRunes($, section, championName) {
   const messages = section.find("p").filter((_, element) =>
