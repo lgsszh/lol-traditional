@@ -1,8 +1,8 @@
 // Generated from OP.GG ARAM Mayhem Classic-ish 16.21. Do not edit manually.
 export const OP_GG_MAYHEM_PATCH = "16.21";
-export const OP_GG_MAYHEM_ASSET_PATCH = "16.20.1";
+export const OP_GG_MAYHEM_ASSET_PATCH = "16.21.1";
 export const OP_GG_MAYHEM_SOURCE_URL = "https://op.gg/zh-cn/lol/modes/aram-mayhem-classic";
-export const OP_GG_MAYHEM_SNAPSHOT_HASH = "725be3a25ab3939b79034d527e62e4848dcf90b5c41fd59c3d616b427741cd2e";
+export const OP_GG_MAYHEM_SNAPSHOT_HASH = "4a2730846302c9aae612fc072bb01287d8bb1b6f1ae2144ff71efcaebe19ef7d";
 export const MAYHEM_STARTING_GOLD = 1400;
 export const MAYHEM_HAS_JUNGLE_ROLE = false;
 
@@ -18,14 +18,14 @@ export const opggMayhemItems: OpggMayhemItem[] = [
   {
     "id": "773040",
     "name": "炽天使之拥",
-    "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/item/773040.png",
+    "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/item/773040.png",
     "price": null,
     "tags": []
   },
   {
     "id": "773042",
     "name": "魔切",
-    "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/item/773042.png",
+    "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/item/773042.png",
     "price": null,
     "tags": []
   }
@@ -97,12 +97,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -112,12 +112,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -853,12 +853,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -868,12 +868,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -1609,12 +1609,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -1624,12 +1624,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -2365,12 +2365,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -2380,12 +2380,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -3122,12 +3122,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -3137,12 +3137,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -3878,12 +3878,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -3893,12 +3893,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -4634,12 +4634,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -4649,12 +4649,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -5393,12 +5393,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -5408,12 +5408,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -6150,12 +6150,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -6165,12 +6165,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -6906,12 +6906,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -6921,12 +6921,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -7662,12 +7662,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHeal.png"
           }
         ],
         "metric": null
@@ -7677,12 +7677,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerMana",
             "name": "清晰术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerMana.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerMana.png"
           }
         ],
         "metric": null
@@ -8421,12 +8421,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -8436,12 +8436,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHeal.png"
           }
         ],
         "metric": null
@@ -9178,12 +9178,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -9193,12 +9193,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -9935,12 +9935,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -9950,12 +9950,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -10691,12 +10691,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -10706,12 +10706,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHeal.png"
           }
         ],
         "metric": null
@@ -11448,12 +11448,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -11463,12 +11463,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -12204,12 +12204,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -12219,12 +12219,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHeal.png"
           }
         ],
         "metric": null
@@ -12961,12 +12961,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -12976,12 +12976,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -13717,12 +13717,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -13732,12 +13732,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerDot",
             "name": "引燃",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerDot.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerDot.png"
           }
         ],
         "metric": null
@@ -14475,12 +14475,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -14490,12 +14490,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHeal.png"
           }
         ],
         "metric": null
@@ -15232,12 +15232,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -15247,12 +15247,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHeal.png"
           }
         ],
         "metric": null
@@ -15988,12 +15988,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -16003,12 +16003,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -16746,12 +16746,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -16761,12 +16761,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -17505,12 +17505,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -17520,12 +17520,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerDot",
             "name": "引燃",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerDot.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerDot.png"
           }
         ],
         "metric": null
@@ -18263,12 +18263,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -18278,12 +18278,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -19022,12 +19022,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -19037,12 +19037,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHeal.png"
           }
         ],
         "metric": null
@@ -19781,12 +19781,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -19796,12 +19796,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerDot",
             "name": "引燃",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerDot.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerDot.png"
           }
         ],
         "metric": null
@@ -20538,12 +20538,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -20553,12 +20553,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHeal.png"
           }
         ],
         "metric": null
@@ -21294,12 +21294,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -21309,12 +21309,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerDot",
             "name": "引燃",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerDot.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerDot.png"
           }
         ],
         "metric": null
@@ -22052,12 +22052,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -22067,12 +22067,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -22808,12 +22808,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -22823,12 +22823,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -23564,12 +23564,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -23579,12 +23579,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHeal.png"
           }
         ],
         "metric": null
@@ -24319,12 +24319,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -24334,12 +24334,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHeal.png"
           }
         ],
         "metric": null
@@ -25078,12 +25078,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHeal.png"
           }
         ],
         "metric": null
@@ -25093,12 +25093,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -25837,12 +25837,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -25852,12 +25852,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHeal.png"
           }
         ],
         "metric": null
@@ -26593,12 +26593,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -26608,12 +26608,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -27348,12 +27348,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -27363,12 +27363,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -28103,12 +28103,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -28118,12 +28118,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHeal.png"
           }
         ],
         "metric": null
@@ -28859,12 +28859,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -28874,12 +28874,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -29615,12 +29615,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -29630,12 +29630,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHeal.png"
           }
         ],
         "metric": null
@@ -30373,12 +30373,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -30388,12 +30388,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -31131,12 +31131,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -31146,12 +31146,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerDot",
             "name": "引燃",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerDot.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerDot.png"
           }
         ],
         "metric": null
@@ -31888,12 +31888,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -31903,12 +31903,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerDot",
             "name": "引燃",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerDot.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerDot.png"
           }
         ],
         "metric": null
@@ -32643,12 +32643,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -32658,12 +32658,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHeal.png"
           }
         ],
         "metric": null
@@ -33399,12 +33399,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -33414,12 +33414,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -34155,12 +34155,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -34170,12 +34170,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -34912,12 +34912,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -34927,12 +34927,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHaste.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHeal.png"
           }
         ],
         "metric": null
@@ -35667,12 +35667,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHeal.png"
           }
         ],
         "metric": null
@@ -35682,12 +35682,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -36426,12 +36426,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -36441,12 +36441,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -37181,12 +37181,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -37196,12 +37196,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerBarrier",
             "name": "屏障",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerBarrier.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerBarrier.png"
           }
         ],
         "metric": null
@@ -37938,12 +37938,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -37953,12 +37953,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -38696,12 +38696,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -38711,12 +38711,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -39453,12 +39453,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -39468,12 +39468,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerDot",
             "name": "引燃",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerDot.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerDot.png"
           }
         ],
         "metric": null
@@ -40209,12 +40209,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -40224,12 +40224,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerDot",
             "name": "引燃",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerDot.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerDot.png"
           }
         ],
         "metric": null
@@ -40966,12 +40966,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -40981,12 +40981,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerDot",
             "name": "引燃",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerDot.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerDot.png"
           }
         ],
         "metric": null
@@ -41721,12 +41721,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHeal",
             "name": "治疗术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHeal.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHeal.png"
           }
         ],
         "metric": null
@@ -41736,12 +41736,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerMana",
             "name": "清晰术",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerMana.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerMana.png"
           }
         ],
         "metric": null
@@ -42477,12 +42477,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -42492,12 +42492,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null
@@ -43233,12 +43233,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -43248,12 +43248,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerDot",
             "name": "引燃",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerDot.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerDot.png"
           }
         ],
         "metric": null
@@ -43989,12 +43989,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -44004,12 +44004,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerDot",
             "name": "引燃",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerDot.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerDot.png"
           }
         ],
         "metric": null
@@ -44746,12 +44746,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerSnowball",
             "name": "标记",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerSnowball.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerSnowball.png"
           }
         ],
         "metric": null
@@ -44761,12 +44761,12 @@ export const opggMayhemChampionBuilds: OpggMayhemChampionBuild[] = [
           {
             "key": "SummonerFlash",
             "name": "闪现",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerFlash.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerFlash.png"
           },
           {
             "key": "SummonerHaste",
             "name": "幽灵疾步",
-            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20.1/spell/SummonerHaste.png"
+            "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21.1/spell/SummonerHaste.png"
           }
         ],
         "metric": null

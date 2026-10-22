@@ -231,6 +231,11 @@ export const classicChampions: ClassicChampion[] = [
   champion("60051", "Caitlyn", "凯特琳", "皮城女警", "下路", "射手", "marksman", "#ad88c6", ["Q", "W", "E"]),
   champion("60133", "Quinn", "奎因", "德玛西亚之翼", "上路", "射手", "marksman", "#8199cc", ["Q", "E", "W"]),
   champion("60266", "Aatrox", "亚托克斯", "暗裔剑魔", "上路", "战士", "fighter", "#bd5b64", ["E", "W", "Q"]),
+  // These roles, priorities and colors are site editorial defaults, not OP.GG rankings.
+  champion("60082", "Mordekaiser", "莫德凯撒", "金属大师", "中路", "法师", "mage", "#728d91", ["E", "Q", "W"]),
+  champion("60083", "Yorick", "约里克", "掘墓者", "上路", "战士", "fighter", "#8c9965", ["E", "W", "Q"]),
+  champion("60120", "Hecarim", "赫卡里姆", "战争之影", "打野", "战士", "jungler", "#52afa9", ["Q", "E", "W"]),
+  champion("60236", "Lucian", "卢锡安", "圣枪游侠", "下路", "射手", "marksman", "#c5a778", ["Q", "E", "W"]),
 ];
 
 export const championIcon = (champion: ClassicChampion) =>

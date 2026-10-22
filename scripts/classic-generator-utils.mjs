@@ -68,7 +68,7 @@ function isDataDragonJson(url) {
     && /^\/cdn\/\d+\.\d+\.\d+\/data\/[a-z]{2}_[A-Z]{2}\/.*\.json$/.test(parsed.pathname);
 }
 
-export async function fetchText(url, label, attempts = 4, { wait = sleep } = {}) {
+export async function fetchText(url, label, attempts = 4, { wait = sleep, requestTimeoutMs = 30_000 } = {}) {
   let lastError;
   const dataDragonJson = isDataDragonJson(url);
   let bypassErrorCache = false;
@@ -84,7 +84,7 @@ export async function fetchText(url, label, attempts = 4, { wait = sleep } = {})
           "user-agent": "lol-traditional-data-sync/0.6 (+https://github.com/lgsszh/lol-traditional)",
           ...(bypassErrorCache ? { "cache-control": "no-cache" } : {}),
         },
-        signal: AbortSignal.timeout(30_000),
+        signal: AbortSignal.timeout(requestTimeoutMs),
       });
       if (!response.ok) {
         const error = new Error(`HTTP ${response.status}`);

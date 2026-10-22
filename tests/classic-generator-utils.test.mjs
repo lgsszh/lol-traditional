@@ -106,3 +106,24 @@ test("CommunityDragon 版本选择保留多个按新到旧的补丁候选", asyn
   assert.match(generator, /error\.status !== 404/);
   assert.match(generator, /trying the previous patch/);
 });
+
+test("大型字符串表可指定有界60秒传输预算，普通请求保持30秒", async () => {
+  const originalFetch = globalThis.fetch;
+  const originalTimeout = AbortSignal.timeout;
+  const timeouts = [];
+  const requests = [];
+  AbortSignal.timeout = milliseconds => { timeouts.push(milliseconds); return originalTimeout(milliseconds); };
+  globalThis.fetch = async request => { requests.push(request); return Response.json({ entries: {} }); };
+  try {
+    const url = "https://raw.communitydragon.org/16.21/game/zh_cn/data/menu/en_us/lol.stringtable.json";
+    await fetchJson(url, "large table", { requestTimeoutMs: 60_000 });
+    await fetchJson("https://example.invalid/small.json", "normal data");
+    await fetchJson("https://ddragon.leagueoflegends.com/cdn/3.15.5/data/zh_CN/champion/Lucian.json", "Riot");
+    await fetchJson("https://op.gg/zh-cn/lol/classic/champions/lucian", "OP.GG");
+    assert.deepEqual(timeouts, [60_000, 30_000, 30_000, 30_000]);
+    assert.equal(requests[0], url);
+  } finally {
+    globalThis.fetch = originalFetch;
+    AbortSignal.timeout = originalTimeout;
+  }
+});

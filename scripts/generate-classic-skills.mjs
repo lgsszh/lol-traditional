@@ -1,5 +1,5 @@
 import { classicChampions } from "../app/classic-data.ts";
-import { classicNumericVersion, validateHistoricalForm } from "./classic-skill-source.mjs";
+import { classicNumericVersion, validateHistoricalForm, classicSourceBoundary } from "./classic-skill-source.mjs";
 import {
   decodeNextPayload,
   extractBalancedObject,
@@ -40,14 +40,16 @@ function stripMarkup(value) {
     .trim();
 }
 
-function scalingLabel(variable) {
+function scalingLabel(variable, ambiguousAttackDamage = false) {
   if (!variable.link) return "（动态数值未在旧版接口公开）";
   const coefficients = Array.isArray(variable.coeff) ? variable.coeff : [variable.coeff];
   const values = coefficients.map((value) => {
     const percentage = Number(value) * 100;
     return `${Number.isInteger(percentage) ? percentage : percentage.toFixed(1)}%`;
   }).join(" / ");
-  return `${values}${statLabels[variable.link] || variable.link || "属性加成"}`;
+  const label = ambiguousAttackDamage && variable.link === "attackdamage"
+    ? "攻击力（口径未确认）" : statLabels[variable.link] || variable.link || "属性加成";
+  return `${values}${label}`;
 }
 
 function normalizedLegacySequence(value) {
@@ -103,7 +105,7 @@ function numericDetail(spell) {
     }
     tooltip = tooltip.replace(
       new RegExp(`{{\\s*${variable.key}\\s*}}`, "gi"),
-      scalingLabel(variable),
+      scalingLabel(variable, /额外攻击力/.test(spell.tooltip || "")),
     );
   }
   return stripMarkup(cleanLegacyTokens(tooltip));
@@ -230,6 +232,9 @@ async function fetchChampion(champion) {
       if (detailText && /{{|}}|@[a-z0-9_.]+/i.test(detailText)) {
         throw new Error(`${champion.key} ${ability.key}: unresolved numeric placeholder`);
       }
+      const boundary = classicSourceBoundary(champion.key, ability, historicalSpell,
+        historicalSpell?.resource ? numericDetail({ ...historicalSpell, tooltip: historicalSpell.resource }) : "");
+      if (boundary.notes.length) detailText += `\n${boundary.notes.join("\n")}`;
       return {
         key: ability.key,
         name: ability.name,
@@ -240,6 +245,7 @@ async function fetchChampion(champion) {
         range: ability.range,
         numericDetail: detailText,
         numericVersion,
+        ...(boundary.rankValuesUnconfirmed ? { rankValuesUnconfirmed: true } : {}),
       };
     }),
   };
@@ -274,6 +280,7 @@ export type ClassicAbility = {
   range: string | null;
   numericDetail: string | null;
   numericVersion: string | null;
+  rankValuesUnconfirmed?: boolean;
 };
 
 export type ClassicChampionSkillSet = {

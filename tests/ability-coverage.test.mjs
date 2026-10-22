@@ -41,6 +41,9 @@ function assertAbilitySet(label, champions, { requireStatus = false } = {}) {
 }
 
 test("03 与 04 的全部技能均有来源、说明和独立数值明细", () => {
+  assert.equal(classicChampionSkills.flatMap(champion => champion.abilities).length, 405);
+  assert.equal(liveClassicChampions.flatMap(champion => champion.abilities).length, 405);
+  assert.ok(liveClassicChampions.every(champion => champion.abilities.every(ability => !ability.rankValuesUnconfirmed)), "经典历史来源边界不得污染现代技能数据");
   assertAbilitySet("03", classicChampionSkills);
   assertAbilitySet("04", liveClassicChampions, { requireStatus: true });
 });
@@ -74,4 +77,11 @@ test("03 与 04 共用可切换等级和装备的技能面板", async () => {
   assert.match(source, /max="18"/);
   assert.match(source, /equippedItems/);
   assert.match(source, /仅合计商店说明中的固定面板属性/);
+  assert.match(source, /ability\.rankValuesUnconfirmed/);
+  assert.match(source, /OP.GG 原始字段，等级对应未确认/);
+  assert.ok(source.indexOf("OP.GG 原始字段，等级对应未确认") < source.indexOf("{showNumericDetail &&"), "未确认提示应紧邻原始指标，不埋在公式之后");
+  assert.match(source, /!ability\.rankValuesUnconfirmed && \(ability\.cooldown/);
+  assert.match(source, /当前资源上限：/);
+  assert.match(source, /资源类型以所选技能来源为准/);
+  assert.doesNotMatch(source, /当前法力\/能量上限/);
 });

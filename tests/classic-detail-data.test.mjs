@@ -53,6 +53,23 @@ test("16.19/16.20 扩容英雄、装备和潘森被动均有真实数据", () =>
   assert.doesNotMatch(passive.description, /@|{{/);
 });
 
+test("16.21 新增四英雄使用真实 Classic 身份并覆盖经典方案", () => {
+  const additions = {
+    Mordekaiser: ["60082", "莫德凯撒", "金属大师"],
+    Yorick: ["60083", "约里克", "掘墓者"],
+    Hecarim: ["60120", "赫卡里姆", "战争之影"],
+    Lucian: ["60236", "卢锡安", "圣枪游侠"],
+  };
+  assert.equal(classicChampions.length, 81);
+  for (const [key, [id, name, title]] of Object.entries(additions)) {
+    const champion = classicChampions.find(entry => entry.key === key);
+    assert.deepEqual([champion?.classicId, champion?.name, champion?.title], [id, name, title]);
+    assert.equal(classicChampionSkills.find(entry => entry.championId === id)?.abilities.length, 5);
+    assert.ok(classicBuildGuides[id]?.length >= 3, `${key} 缺少三套合法方案`);
+    assert.ok(classicBuildGuides[id].some(guide => guide.sourceUrls.some(url => url.includes("mobafire.com"))), `${key} 缺少历史社区来源`);
+  }
+});
+
 test("全部英雄优先使用名称含经典的皮肤，并保留 OP.GG 默认原画", () => {
   const compactName = (value) => value.replace(/\s+/g, "");
   const ahri = classicChampionSkills.find((entry) => entry.championId === "60103");

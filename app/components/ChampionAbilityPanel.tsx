@@ -37,6 +37,7 @@ export type AbilityPanelSkillSet = {
     cost: string | null;
     range: string | null;
     numericDetail: string | null;
+    rankValuesUnconfirmed?: boolean;
     numericVersion: string | null;
     numericStatus?: "available" | "partial" | "unavailable";
   }>;
@@ -226,6 +227,12 @@ export default function ChampionAbilityPanel({
           <div><dt>技能消耗</dt><dd>{valueLabel(ability.cost, "无消耗")}</dd></div>
           <div><dt>施法距离</dt><dd>{valueLabel(ability.range, "自身／被动")}</dd></div>
         </dl>
+        {ability.rankValuesUnconfirmed && (
+          <div className="ability-rank-note">
+            <b>等级未确认</b>
+            <span>OP.GG 原始字段，等级对应未确认；请参阅下方来源边界，不按旧版技能等级套用。</span>
+          </div>
+        )}
         {showNumericDetail && (
           <section className="ability-numeric">
             <header>
@@ -243,7 +250,7 @@ export default function ChampionAbilityPanel({
             ))}
           </section>
         )}
-        {(ability.cooldown?.includes("/") || ability.cost?.includes("/")) && (
+        {!ability.rankValuesUnconfirmed && (ability.cooldown?.includes("/") || ability.cost?.includes("/")) && (
           <div className="ability-rank-note">
             <b>等级数值说明</b>
             <span>斜杠分隔的数值按技能等级由低到高排列。</span>
@@ -298,7 +305,7 @@ export default function ChampionAbilityPanel({
             </div>
             <p>
               装备档仅合计商店说明中的固定面板属性；层数、光环、命中触发和敌方抗性等条件效果不冒充常驻数值。
-              当前法力/能量上限：{formattedStat(panelStats.resource)}。
+              当前资源上限：{formattedStat(panelStats.resource)}；资源类型以所选技能来源为准。
             </p>
           </section>
         )}

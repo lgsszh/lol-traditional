@@ -11,6 +11,7 @@ export type ClassicAbility = {
   range: string | null;
   numericDetail: string | null;
   numericVersion: string | null;
+  rankValuesUnconfirmed?: boolean;
 };
 
 export type ClassicChampionSkillSet = {
@@ -56,8 +57,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "阿狸",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/ahri",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60103.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_ahri/skins/skin301/images/jade_ahri_splash_centered_301.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60103.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_ahri/skins/skin301/images/jade_ahri_splash_centered_301.project_jade.jpg",
     "classicSplashName": "经典 阿狸",
     "classicSplashId": "60103301",
     "classicSplashIsDefault": false,
@@ -65,14 +66,14 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60103301",
         "name": "经典 阿狸",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_ahri/skins/skin301/images/jade_ahri_splash_centered_301.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_ahri/skins/skin301/images/jade_ahri_splash_centered_301.project_jade.jpg",
         "kind": "classic",
         "isDefault": false
       },
       {
         "id": "60103000",
         "name": "九尾妖狐",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_ahri/skins/base/images/jade_ahri_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_ahri/skins/base/images/jade_ahri_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -99,7 +100,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "摄魂夺魄",
         "description": "每当用技能命中敌人时获得一层摄魂夺魄的充能。达到9层充能后，下一个技能会回复阿狸的生命值。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/ahri_souleater.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/ahri_souleater.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -110,45 +111,49 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "欺诈宝珠",
         "description": "阿狸放出并收回她的宝珠，在放出时会沿途对敌人造成魔法伤害，在收回时则会沿途对敌人造成真实伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/ahri_orbofdeception.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/ahri_orbofdeception.project_jade.png",
         "cooldown": "7",
         "cost": "70 / 75 / 80 / 85 / 90 / 95",
         "range": "970",
-        "numericDetail": "阿狸放出宝珠，造成40/65/90/115/140(+32.5%法术强度)点魔法伤害，随后将其收回，造成40/65/90/115/140(+32.5%法术强度)点真实伤害。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "阿狸放出宝珠，造成40/65/90/115/140(+32.5%法术强度)点魔法伤害，随后将其收回，造成40/65/90/115/140(+32.5%法术强度)点真实伤害。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为70/75/80/85/90。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "妖异狐火",
         "description": "阿狸放出三团狐火，锁定附近的敌人进行攻击。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/ahri_foxfire.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/ahri_foxfire.project_jade.png",
         "cooldown": "9 / 8 / 7 / 6 / 5 / 4",
         "cost": "50",
         "range": "700",
-        "numericDetail": "阿狸放出三团狐火，狐火会锁定附近的三名敌人（英雄优先）进行攻击，造成40/65/90/115/140(+40%法术强度)魔法伤害。\n\n在命中同一目标时，额外的狐火会造成30%的伤害，最多对同一目标造成（数值未在旧版接口公开）伤害。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "阿狸放出三团狐火，狐火会锁定附近的三名敌人（英雄优先）进行攻击，造成40/65/90/115/140(+40%法术强度)魔法伤害。\n\n在命中同一目标时，额外的狐火会造成30%的伤害，最多对同一目标造成（数值未在旧版接口公开）伤害。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为9/8/7/6/5。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "E",
         "name": "魅惑妖术",
         "description": "阿狸献出红唇热吻，对命中的第一个敌人造成伤害和魅惑效果。该敌人所受的来自阿狸技能的伤害也会提升。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/ahri_charm.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/ahri_charm.project_jade.png",
         "cooldown": "12",
         "cost": "50 / 65 / 80 / 95 / 110 / 125",
         "range": "975",
-        "numericDetail": "阿狸献出红唇热吻，对命中的第一个敌人造成60/90/120/150/180(+35%法术强度)魔法伤害并将目标魅惑，让目标意乱情迷地走向阿狸。魅惑效果持续1/1.25/1.5/1.75/2秒。\n\n阿狸对被魅惑的敌人所造成的魔法伤害会提高20%，持续6秒。这个效果也会提升欺诈宝珠的真实伤害。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "阿狸献出红唇热吻，对命中的第一个敌人造成60/90/120/150/180(+35%法术强度)魔法伤害并将目标魅惑，让目标意乱情迷地走向阿狸。魅惑效果持续1/1.25/1.5/1.75/2秒。\n\n阿狸对被魅惑的敌人所造成的魔法伤害会提高20%，持续6秒。这个效果也会提升欺诈宝珠的真实伤害。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为85。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "灵魄突袭",
         "description": "阿狸向前猛冲，并放出元气弹，对周围的3个敌人（英雄优先）造成伤害。灵魄突袭在进入冷却以前最多可被施放三次。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/ahri_spiritrush.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/ahri_spiritrush.project_jade.png",
         "cooldown": "120 / 100 / 80 / 60 / 40 / 20",
         "cost": "100",
         "range": "450",
-        "numericDetail": "阿狸像妖魅一般向前冲锋，并向周围的3名敌人（英雄优先）发射元气弹，造成70/110/150(+30%法术强度)点魔法伤害。灵魄突袭可以在进入冷却阶段前的10秒内被施放最多3次。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "阿狸像妖魅一般向前冲锋，并向周围的3名敌人（英雄优先）发射元气弹，造成70/110/150(+30%法术强度)点魔法伤害。灵魄突袭可以在进入冷却阶段前的10秒内被施放最多3次。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶冷却为110/95/80。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       }
     ]
   },
@@ -157,8 +162,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "贾克斯",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/jax",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60024.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_jax/skins/skin301/images/jade_jax_splash_centered_301.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60024.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_jax/skins/skin301/images/jade_jax_splash_centered_301.project_jade.jpg",
     "classicSplashName": "经典 贾克斯",
     "classicSplashId": "60024301",
     "classicSplashIsDefault": false,
@@ -166,14 +171,14 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60024301",
         "name": "经典 贾克斯",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_jax/skins/skin301/images/jade_jax_splash_centered_301.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_jax/skins/skin301/images/jade_jax_splash_centered_301.project_jade.jpg",
         "kind": "classic",
         "isDefault": false
       },
       {
         "id": "60024000",
         "name": "武器大师",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_jax/skins/base/images/jade_jax_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_jax/skins/base/images/jade_jax_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -200,7 +205,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "武器专精",
         "description": "贾克斯会基于装备提供的额外攻击力和法术强度获得额外生命值。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/jax_masterofarms.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/jax_masterofarms.project_jade_16_18.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -211,7 +216,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "跳斩",
         "description": "贾克斯跃起猛击。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/jax_relentlessassault.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/jax_relentlessassault.project_jade_16_18.png",
         "cooldown": "17 / 14 / 11 / 8 / 5",
         "cost": "65",
         "range": "700",
@@ -222,7 +227,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "W",
         "name": "蓄力一击",
         "description": "贾克斯的下一次攻击或跳斩造成额外伤害，并对附近的敌人造成伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/jax_empower.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/jax_empower.project_jade_16_18.png",
         "cooldown": "7 / 6 / 5 / 4 / 3",
         "cost": "35",
         "range": "300",
@@ -233,18 +238,19 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "E",
         "name": "反击风暴",
         "description": "贾克斯进入防御姿态，能够躲闪掉一切即将到来的攻击，并减少来自群体技能的伤害。随后他会晕眩周围的敌人并对其造成伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/jax_disarm.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/jax_disarm.project_jade_16_18.png",
         "cooldown": "18 / 16 / 14 / 12 / 10 / 8",
         "cost": "70 / 75 / 80 / 85 / 90 / 95",
         "range": "300",
-        "numericDetail": "贾克斯进入一个最多持续2秒的防御姿态，能够躲闪掉一切即将到来的普通攻击，并且减少25%来自范围技能的伤害。\n\n2秒之后，或再次激活此技能后，贾克斯会将周围的敌人打晕1秒，并对他们造成50/75/100/125/150(+50%额外攻击力)点物理伤害。\n\n贾克斯每躲掉一次攻击，则反击风暴的伤害值提升20%(最多可提升100%的伤害)。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "贾克斯进入一个最多持续2秒的防御姿态，能够躲闪掉一切即将到来的普通攻击，并且减少25%来自范围技能的伤害。\n\n2秒之后，或再次激活此技能后，贾克斯会将周围的敌人打晕1秒，并对他们造成50/75/100/125/150(+50%额外攻击力)点物理伤害。\n\n贾克斯每躲掉一次攻击，则反击风暴的伤害值提升20%(最多可提升100%的伤害)。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为18/16/14/12/10。不将原始字段直接套用为旧版逐级数值。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为70/75/80/85/90。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "无情连打",
         "description": "贾克斯每次攻击时获得攻击速度。每第三次连续攻击造成额外伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/jax_coupdegrace.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/jax_coupdegrace.project_jade_16_18.png",
         "cooldown": null,
         "cost": "0",
         "range": "400",
@@ -258,8 +264,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "李青",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/lee-sin",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60064.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_leesin/skins/skin301/images/jade_leesin_splash_centered_301.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60064.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_leesin/skins/skin301/images/jade_leesin_splash_centered_301.project_jade.jpg",
     "classicSplashName": "经典 李青",
     "classicSplashId": "60064301",
     "classicSplashIsDefault": false,
@@ -267,14 +273,14 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60064301",
         "name": "经典 李青",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_leesin/skins/skin301/images/jade_leesin_splash_centered_301.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_leesin/skins/skin301/images/jade_leesin_splash_centered_301.project_jade.jpg",
         "kind": "classic",
         "isDefault": false
       },
       {
         "id": "60064000",
         "name": "盲僧",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_leesin/skins/base/images/jade_leesin_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_leesin/skins/base/images/jade_leesin_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -301,7 +307,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "疾风骤雨",
         "description": "在李青使用一次技能后，他的下几次攻击会获得攻速加成，且回复能量。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/leesinpassive.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/leesinpassive.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -312,18 +318,19 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "天音波/回音击",
         "description": "天音波：李青发出刺耳的声波定位敌人，对首个敌人造成物理伤害。如果天音波击中敌人，李青可施放回音击。 回音击：李青冲向被天音波击中的敌人，造成基于该目标已损失生命值的额外伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/blindmonkqone.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/blindmonkqone.project_jade.png",
         "cooldown": "11 / 10 / 9 / 8 / 7 / 6",
         "cost": "50",
         "range": "1100",
-        "numericDetail": "天音波：李青发出刺耳的声波定位敌人，对首个敌人造成50/80/110/140/170(+90%额外攻击力)物理伤害。如果天音波击中敌人，李青在接下来3秒可施放回音击。\n\n回音击：李青冲向被天音波击中的敌人，造成50/80/110/140/170(+90%额外攻击力)物理伤害并附加敌人损失生命值8%的伤害。（对野怪最多附加400点伤害）。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "天音波：李青发出刺耳的声波定位敌人，对首个敌人造成50/80/110/140/170(+90%额外攻击力)物理伤害。如果天音波击中敌人，李青在接下来3秒可施放回音击。\n\n回音击：李青冲向被天音波击中的敌人，造成50/80/110/140/170(+90%额外攻击力)物理伤害并附加敌人损失生命值8%的伤害。（对野怪最多附加400点伤害）。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为11/10/9/8/7。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "金钟罩/铁布衫",
         "description": "金钟罩：李青冲向一个目标友军，为二者提供护盾值。在使用金钟罩后，李青可以施放铁布衫。 铁布衫：李青艰苦卓绝的训练让他能在战斗中激发潜能，从而获得生命偷取、技能吸血和护甲。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/blindmonkwone.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/blindmonkwone.project_jade.png",
         "cooldown": "9",
         "cost": "50",
         "range": "700",
@@ -334,7 +341,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "E",
         "name": "天雷破/摧筋断骨",
         "description": "天雷破：李青猛击地面，施放冲击波，造成魔法伤害并使命中的敌方单位显形。如果天雷破击中敌人，李青可以在接下来的3秒内施放摧筋断骨。 摧筋断骨：李青致残被天雷破显形的敌人们，降低其的移动速度和攻击速度，持续4秒。持续期间内，受影响单位的移动速度和攻击速度会逐渐恢复正常。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/blindmonkeone.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/blindmonkeone.project_jade.png",
         "cooldown": "10",
         "cost": "50",
         "range": "425",
@@ -345,7 +352,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "R",
         "name": "猛龙摆尾",
         "description": "李青用强力的回旋踢击退敌方英雄，对目标以及被目标撞到的所有敌人造成物理伤害。被目标撞到的敌人会被短暂击飞。这项技艺是春哥教他的，不过李青不能将玩家的英雄踢到地图外面去。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/blindmonkr.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/blindmonkr.project_jade.png",
         "cooldown": "90 / 75 / 60",
         "cost": "0",
         "range": "375",
@@ -359,8 +366,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "艾希",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/ashe",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60022.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_ashe/skins/base/images/jade_ashe_splash_centered_0.project_jade_16_16.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60022.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_ashe/skins/base/images/jade_ashe_splash_centered_0.project_jade_16_16.jpg",
     "classicSplashName": "寒冰射手",
     "classicSplashId": "60022000",
     "classicSplashIsDefault": true,
@@ -368,7 +375,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60022000",
         "name": "寒冰射手",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_ashe/skins/base/images/jade_ashe_splash_centered_0.project_jade_16_16.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_ashe/skins/base/images/jade_ashe_splash_centered_0.project_jade_16_16.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -395,7 +402,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "射手专注",
         "description": "艾希在脱离战斗时会积累 全神贯注 层数。当艾希拥有100层 全神贯注 时，她的下一次攻击必定暴击。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/ashe_bullseye.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/ashe_bullseye.project_jade_16_18.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -406,7 +413,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "冰霜射击",
         "description": "技能激活时，艾希的每次普通攻击都会使目标减速。每次攻击都会消耗法力值。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/ashe_icearrow.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/ashe_icearrow.project_jade_16_18.png",
         "cooldown": "1",
         "cost": "0",
         "range": "400",
@@ -417,7 +424,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "W",
         "name": "万箭齐发",
         "description": "艾希向前方锥形范围射出7支箭，对敌人造成额外伤害。万箭齐发也会施加艾希当前等级的冰霜射击。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/ashe_volley.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/ashe_volley.project_jade_16_18.png",
         "cooldown": "16 / 13 / 10 / 7 / 4",
         "cost": "60",
         "range": "1250",
@@ -428,7 +435,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "E",
         "name": "鹰击长空",
         "description": "艾希每次击杀单位都会获得额外金币。艾希可以激活技能，派遣她的猎鹰之灵去执行侦查任务。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/ashe_hawkshot.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/ashe_hawkshot.project_jade.png",
         "cooldown": "60",
         "cost": "0",
         "range": "2500 / 3250 / 4000 / 4750 / 5500",
@@ -439,12 +446,13 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "R",
         "name": "魔法水晶箭",
         "description": "艾希射出一支沿直线飞行的魔法水晶箭。如果水晶箭命中了一名敌方英雄，则对该英雄造成伤害和晕眩效果，晕眩时长取决于水晶箭的飞行距离，最多持续3.5秒。此外，附近的敌方单位会受到伤害并减速。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/ashe_enchantedarrow.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/ashe_enchantedarrow.project_jade_16_18.png",
         "cooldown": "100 / 90 / 80 / 60",
         "cost": "150",
         "range": "25000",
-        "numericDetail": "艾希向前方射出魔法水晶箭。击中敌方英雄时造成250/425/600(+100%法术强度)魔法伤害并晕眩此目标，最多3.5秒，晕眩时间取决于飞行距离。同时对该英雄附近的敌人造成一半伤害并减速50%，持续3秒。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "艾希向前方射出魔法水晶箭。击中敌方英雄时造成250/425/600(+100%法术强度)魔法伤害并晕眩此目标，最多3.5秒，晕眩时间取决于飞行距离。同时对该英雄附近的敌人造成一半伤害并减速50%，持续3秒。\n来源边界：OP.GG Classic 原始冷却含4项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶冷却为100/90/80。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       }
     ]
   },
@@ -453,8 +461,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "迦娜",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/janna",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60040.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_janna/skins/base/images/jade_janna_splash_centered_0.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60040.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_janna/skins/base/images/jade_janna_splash_centered_0.project_jade.jpg",
     "classicSplashName": "风暴之怒",
     "classicSplashId": "60040000",
     "classicSplashIsDefault": true,
@@ -462,7 +470,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60040000",
         "name": "风暴之怒",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_janna/skins/base/images/jade_janna_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_janna/skins/base/images/jade_janna_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -489,7 +497,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "顺风而行",
         "description": "迦娜和她的友方英雄获得移动速度提升。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/janna_tailwind.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/janna_tailwind.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -500,7 +508,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "飓风呼啸",
         "description": "迦娜改变气压和温度，在目标区域召唤小型风暴，对沿途的所有单位造成伤害和击飞效果。召唤风暴时，迦娜可以再次使用此技能来立刻施放风暴，造成的伤害取决于蓄力时间的长短。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/janna_howlinggale.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/janna_howlinggale.project_jade_16_18.png",
         "cooldown": "14 / 13 / 12 / 11 / 10",
         "cost": "90 / 105 / 120 / 135 / 150",
         "range": "1075",
@@ -511,7 +519,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "W",
         "name": "和风守护",
         "description": "迦娜召唤出一个空气元素灵体，被动地提升她的移动速度，并使她能够穿越单位。她也可以主动激活这个技能，对一个敌人造成伤害和减速效果。该技能冷却期间将失去被动效果。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/janna_zephyr.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/janna_zephyr.project_jade_16_18.png",
         "cooldown": "12 / 11 / 10 / 9 / 8",
         "cost": "40 / 50 / 60 / 70 / 80",
         "range": "-1",
@@ -522,7 +530,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "E",
         "name": "风暴之眼",
         "description": "迦娜制造出一阵防御性的气旋，来为目标友军或防御塔吸收即将到来的伤害，并提高目标的攻击力。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/janna_eyeofthestorm.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/janna_eyeofthestorm.project_jade.png",
         "cooldown": "10",
         "cost": "70 / 80 / 90 / 100 / 110",
         "range": "800",
@@ -533,12 +541,13 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "R",
         "name": "复苏季风",
         "description": "迦娜召唤魔法风暴围绕自己，将敌人击退。唤出风暴后会刮起治愈之风，在持续时间内为附近的友军回复生命值。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/janna_reapthewhirlwind.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/janna_reapthewhirlwind.project_jade.png",
         "cooldown": "150 / 135 / 120 / 105 / 90 / 75",
         "cost": "200 / 275 / 350 / 425 / 500 / 575",
         "range": "725",
-        "numericDetail": "迦娜召唤风之力，将敌人击退，并且每秒为周围的友军回复70/110/150(+35%法术强度)生命值，持续4秒。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "迦娜召唤风之力，将敌人击退，并且每秒为周围的友军回复70/110/150(+35%法术强度)生命值，持续4秒。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶冷却为150/135/120。不将原始字段直接套用为旧版逐级数值。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶消耗为100。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       }
     ]
   },
@@ -547,8 +556,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "薇恩",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/vayne",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60067.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_vayne/skins/base/images/jade_vayne_splash_centered_0.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60067.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_vayne/skins/base/images/jade_vayne_splash_centered_0.project_jade.jpg",
     "classicSplashName": "暗夜猎手",
     "classicSplashId": "60067000",
     "classicSplashIsDefault": true,
@@ -556,7 +565,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60067000",
         "name": "暗夜猎手",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_vayne/skins/base/images/jade_vayne_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_vayne/skins/base/images/jade_vayne_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -583,7 +592,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "暗夜猎手",
         "description": "薇恩毫不留情地猎杀世间邪恶。向附近敌方英雄移动时获得额外移动速度。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/vayne_nighthunter.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/vayne_nighthunter.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -594,7 +603,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "闪避突袭",
         "description": "薇恩翻滚到合适位置，为下次攻击做好准备。她的下次攻击造成额外伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/vayne_tumble.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/vayne_tumble.project_jade.png",
         "cooldown": "6 / 5 / 4 / 3 / 2",
         "cost": "30",
         "range": "300",
@@ -605,7 +614,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "W",
         "name": "圣银弩箭",
         "description": "薇恩用稀有金属制作弩箭，让邪恶敌人中毒。对同一目标的第3次攻击或技能施放会对其造成真实伤害，数值相当于目标最大生命值的一定百分比。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/vayne_silveredbolts.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/vayne_silveredbolts.project_jade.png",
         "cooldown": null,
         "cost": "0",
         "range": "750",
@@ -616,7 +625,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "E",
         "name": "恶魔审判",
         "description": "薇恩从背后拿出重弩，朝目标发射巨箭，对目标造成伤害并将其击退。如果在击退过程中撞上了地形，则目标被巨箭刺穿，受到额外伤害和晕眩效果。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/vayne_condemn.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/vayne_condemn.project_jade.png",
         "cooldown": "20 / 18 / 16 / 14 / 12",
         "cost": "90",
         "range": "550",
@@ -627,7 +636,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "R",
         "name": "终极时刻",
         "description": "薇恩准备进行史诗般的对决，她的攻击力得到提高，并能在【闪避突袭】之后进入隐形状态，且【暗夜猎手】(被动)生效时的加速效果得到显著提升。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/vayne_inquisition.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/vayne_inquisition.project_jade.png",
         "cooldown": "100 / 85 / 70",
         "cost": "80",
         "range": "1",
@@ -641,8 +650,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "塔里克",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/taric",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60044.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_taric/skins/skin301/images/jade_taric_splash_centered_301.project_jade_16_16.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60044.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_taric/skins/skin301/images/jade_taric_splash_centered_301.project_jade_16_16.jpg",
     "classicSplashName": "经典 塔里克",
     "classicSplashId": "60044301",
     "classicSplashIsDefault": false,
@@ -650,14 +659,14 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60044301",
         "name": "经典 塔里克",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_taric/skins/skin301/images/jade_taric_splash_centered_301.project_jade_16_16.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_taric/skins/skin301/images/jade_taric_splash_centered_301.project_jade_16_16.jpg",
         "kind": "classic",
         "isDefault": false
       },
       {
         "id": "60044000",
         "name": "宝石骑士",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_taric/skins/base/images/jade_taric_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_taric/skins/base/images/jade_taric_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -684,7 +693,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "宝石工艺",
         "description": "塔里克喜欢在所有武器上镶嵌魔法宝石，使他的普通攻击根据他的最大法力值造成额外魔法伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/taric_gemcraft.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/taric_gemcraft.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -695,18 +704,19 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "神圣洗礼",
         "description": "塔里克召唤大地之力，治疗一名友军和自身。塔里克只为自身进行治疗时，治疗效果会变得更强。此外，塔里克的普通攻击会缩短神圣洗礼‌的冷却时间。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/taric_imbue.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/taric_imbue.project_jade.png",
         "cooldown": "20 / 19 / 18 / 17 / 16 / 15",
         "cost": "80 / 95 / 110 / 125 / 140 / 60",
         "range": "750",
-        "numericDetail": "主动效果： 塔里克召唤大地能量同时治疗友军和自己 60/100/140/180/220(+30%法术强度)点生命值。若只有塔里克自己受到治疗，则效果提高 40%，回复 84/140/196/252/308(+42%法术强度)点生命值。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "主动效果： 塔里克召唤大地能量同时治疗友军和自己 60/100/140/180/220(+30%法术强度)点生命值。若只有塔里克自己受到治疗，则效果提高 40%，回复 84/140/196/252/308(+42%法术强度)点生命值。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为18/17/16/15/14。不将原始字段直接套用为旧版逐级数值。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为60/80/100/120/140。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "宝石护盾‌",
         "description": "塔里克受到坚韧光环的守护，提高自身及附近友方英雄的护甲。他可以选择粉碎环绕在身边的魔法石块，对附近敌人造成伤害并降低其护甲，同时自身在短时间内失去部分护甲。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/taric_shatter.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/taric_shatter.project_jade.png",
         "cooldown": "10",
         "cost": "50",
         "range": "400",
@@ -717,18 +727,19 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "E",
         "name": "炫光",
         "description": "塔里克从镶有宝石的护盾中射出一颗灿烂的棱彩光球，晕眩目标，并根据他与目标相隔的距离造成伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/taric_dazzle.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/taric_dazzle.project_jade.png",
         "cooldown": "14 / 13 / 12 / 11 / 10 / 9",
         "cost": "75",
         "range": "650",
-        "numericDetail": "塔里克向目标敌军放射出一团炫目的光球，对其造成1.2/1.3/1.4/1.5/1.6秒的晕眩效果，以及40/70/100/130/160(+20%法术强度)点到80/140/200/260/320(+40%法术强度)点之间的魔法伤害。塔里克离目标越近，眩光的伤害就会越高。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "塔里克向目标敌军放射出一团炫目的光球，对其造成1.2/1.3/1.4/1.5/1.6秒的晕眩效果，以及40/70/100/130/160(+20%法术强度)点到80/140/200/260/320(+40%法术强度)点之间的魔法伤害。塔里克离目标越近，眩光的伤害就会越高。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为18/17/16/15/14。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "辉耀",
         "description": "塔里克挥锤猛砸地面，对附近的敌人造成伤害。在接下来的一段时间里，塔里克的宝石会释放能量，为自己和友军提供额外的攻击力和法术强度",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/taric_radiance.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/taric_radiance.project_jade.png",
         "cooldown": "60",
         "cost": "100",
         "range": "400",
@@ -742,8 +753,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "艾尼维亚",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/anivia",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60034.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_anivia/skins/base/images/jade_anivia_splash_centered_0.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60034.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_anivia/skins/base/images/jade_anivia_splash_centered_0.project_jade.jpg",
     "classicSplashName": "冰晶凤凰",
     "classicSplashId": "60034000",
     "classicSplashIsDefault": true,
@@ -751,7 +762,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60034000",
         "name": "冰晶凤凰",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_anivia/skins/base/images/jade_anivia_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_anivia/skins/base/images/jade_anivia_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -778,7 +789,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "寒霜涅槃",
         "description": "在濒临死亡的时候，艾尼维亚将会变成一枚凤凰蛋。如果凤凰蛋没有被击破，艾尼维亚就会闪亮重生。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/anivia_rebirth.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/anivia_rebirth.project_jade_16_18.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -789,40 +800,43 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "寒冰闪耀",
         "description": "艾尼维亚挥动翅膀聚集空气，制造一枚冰晶向目标区域施放，冰冻并伤害路径上的所有敌人。当冰晶爆裂时，它会晕眩并伤害一定范围内的所有敌人。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/anivia_frigidorb.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/anivia_frigidorb.project_jade_16_18.png",
         "cooldown": "12 / 11 / 10 / 9 / 8 / 7",
         "cost": "80 / 100 / 120 / 140 / 160 / 180",
         "range": "1075",
-        "numericDetail": "一枚巨大的冰块飞向目标区域，对沿途的敌人们造成60/90/120/150/180(+50%法术强度)点魔法伤害以及冰冻效果，使他们的移动速度减少20%。\n\n在飞到范围的终点时，或艾尼维亚再次施放此技能时，冰块会爆炸，对小范围内的敌人造成60/90/120/150/180(+50%法术强度)点魔法伤害和1秒的晕眩效果。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "一枚巨大的冰块飞向目标区域，对沿途的敌人们造成60/90/120/150/180(+50%法术强度)点魔法伤害以及冰冻效果，使他们的移动速度减少20%。\n\n在飞到范围的终点时，或艾尼维亚再次施放此技能时，冰块会爆炸，对小范围内的敌人造成60/90/120/150/180(+50%法术强度)点魔法伤害和1秒的晕眩效果。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为12/11/10/9/8。不将原始字段直接套用为旧版逐级数值。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为80/100/120/140/160。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "寒冰屏障",
         "description": "艾尼维亚利用空气中的湿气，召唤出一道不可穿越的冰之墙来阻挡所有移动。该墙持续很短一段时间后就会融化。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/anivia_crystallize.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/anivia_crystallize.project_jade_16_18.png",
         "cooldown": "25",
         "cost": "70 / 90 / 110 / 130 / 150 / 170",
         "range": "1000",
-        "numericDetail": "艾尼维亚召唤出一道宽400/500/600/700/800的无法通过的冰墙，来阻挡所有人的移动。冰墙会在融化前持续5秒。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "艾尼维亚召唤出一道宽400/500/600/700/800的无法通过的冰墙，来阻挡所有人的移动。冰墙会在融化前持续5秒。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为70/90/110/130/150。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "E",
         "name": "霜寒刺骨",
         "description": "艾尼维亚扇动双翅，朝她的目标喷射出一股刺骨的强风，造成中等伤害。如果目标已被冰冻效果减速，则受到该技能双倍的伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/anivia_deepfreeze.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/anivia_deepfreeze.project_jade_16_18.png",
         "cooldown": "5",
         "cost": "50 / 60 / 70 / 80 / 90 / 100",
         "range": "650",
-        "numericDetail": "艾尼维亚用刺骨寒风轰击敌人，造成 55/85/115/145/175(+50%法术强度)魔法伤害。如果目标已被寒冰闪耀和冰川风暴所减速，那么该技能会对目标造成双倍伤害。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "艾尼维亚用刺骨寒风轰击敌人，造成 55/85/115/145/175(+50%法术强度)魔法伤害。如果目标已被寒冰闪耀和冰川风暴所减速，那么该技能会对目标造成双倍伤害。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为50/60/70/80/90。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "冰川风暴",
         "description": "艾尼维亚召唤出一朵夹杂着冰块和冰雹的雨云，对敌人造成伤害和减速。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/anivia_glacialstorm.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/anivia_glacialstorm.project_jade_16_18.png",
         "cooldown": "6",
         "cost": "75",
         "range": "625",
@@ -836,8 +850,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "卡特琳娜",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/katarina",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60055.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_katarina/skins/skin301/images/jade_katarina_splash_centered_301.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60055.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_katarina/skins/skin301/images/jade_katarina_splash_centered_301.project_jade.jpg",
     "classicSplashName": "经典 卡特琳娜",
     "classicSplashId": "60055301",
     "classicSplashIsDefault": false,
@@ -845,14 +859,14 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60055301",
         "name": "经典 卡特琳娜",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_katarina/skins/skin301/images/jade_katarina_splash_centered_301.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_katarina/skins/skin301/images/jade_katarina_splash_centered_301.project_jade.jpg",
         "kind": "classic",
         "isDefault": false
       },
       {
         "id": "60055000",
         "name": "不祥之刃",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_katarina/skins/base/images/jade_katarina_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_katarina/skins/base/images/jade_katarina_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -879,7 +893,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "贪婪",
         "description": "参与击杀英雄和助攻可缩短卡特琳娜的技能冷却时间。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/katarina_voracity2.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/katarina_voracity2.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -890,18 +904,19 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "弹射之刃",
         "description": "卡特琳娜投掷一把匕首，在敌人之间弹跳，造成魔法伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/katarina_bouncingblade.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/katarina_bouncingblade.project_jade.png",
         "cooldown": "10 / 9.5 / 9 / 8.5 / 8 / 7",
         "cost": "0",
         "range": "675",
-        "numericDetail": "卡特琳娜投掷一把匕首，造成60/85/110/135/160(+45%法术强度)魔法伤害。匕首会弹射4个最近的敌人，每次弹射会减少10%的伤害。\n\n被击中的敌人会被标记4秒。卡特琳娜的普通攻击或者技能会消耗掉印记，造成15/30/45/60/75(+15%法术强度)点额外魔法伤害。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "卡特琳娜投掷一把匕首，造成60/85/110/135/160(+45%法术强度)魔法伤害。匕首会弹射4个最近的敌人，每次弹射会减少10%的伤害。\n\n被击中的敌人会被标记4秒。卡特琳娜的普通攻击或者技能会消耗掉印记，造成15/30/45/60/75(+15%法术强度)点额外魔法伤害。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为10/9.5/9/8.5/8。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "不祥之刃",
         "description": "卡特琳娜将她的双刃环绕自身挥舞，从而对区域内的所有敌人造成魔法伤害。如果此技能命中了一个敌方英雄，那么卡特琳娜就会获得短时间内持续的爆发性移动速度。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/katarina_killerinstincts.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/katarina_killerinstincts.project_jade.png",
         "cooldown": "4",
         "cost": "0",
         "range": "400",
@@ -912,7 +927,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "E",
         "name": "瞬步",
         "description": "卡特琳娜瞬间移动到目标位置，并在数秒内降低受到的敌方伤害。如果目标是敌人，则会造成伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/katarina_shunpo.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/katarina_shunpo.project_jade.png",
         "cooldown": "12 / 10.5 / 9 / 7.5 / 6",
         "cost": "0",
         "range": "725",
@@ -923,7 +938,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "R",
         "name": "死亡莲华",
         "description": "卡特琳娜化身为一道剑刃飓风，以无与伦比的速度对周围敌方英雄们投掷匕首，从而造成巨量魔法伤害并施加重伤效果。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/katarina_deathlotus.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/katarina_deathlotus.project_jade.png",
         "cooldown": "60 / 52.5 / 45",
         "cost": "0",
         "range": "550",
@@ -937,8 +952,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "黑默丁格",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/heimerdinger",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60074.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_heimerdinger/skins/skin301/images/jade_heimerdinger_splash_centered_301.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60074.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_heimerdinger/skins/skin301/images/jade_heimerdinger_splash_centered_301.project_jade.jpg",
     "classicSplashName": "经典 黑默丁格",
     "classicSplashId": "60074301",
     "classicSplashIsDefault": false,
@@ -946,14 +961,14 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60074301",
         "name": "经典 黑默丁格",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_heimerdinger/skins/skin301/images/jade_heimerdinger_splash_centered_301.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_heimerdinger/skins/skin301/images/jade_heimerdinger_splash_centered_301.project_jade.jpg",
         "kind": "classic",
         "isDefault": false
       },
       {
         "id": "60074000",
         "name": "大发明家",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_heimerdinger/skins/base/images/jade_heimerdinger_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_heimerdinger/skins/base/images/jade_heimerdinger_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -980,7 +995,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "科技魔法修复机器人",
         "description": "黑默丁格为周围的友军炮台、防御塔和英雄提供生命回复加成。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/heimerdinger_techmaturgicalrepairbots.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/heimerdinger_techmaturgicalrepairbots.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -991,45 +1006,49 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "H-28G进化炮台",
         "description": "黑默丁格部署一座机枪炮台。随着该技能等级提升，炮台会获得新的能力。（炮台对防御塔仅造成一半伤害。）",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/heimerdinger_h28gevolutionturret.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/heimerdinger_h28gevolutionturret.project_jade.png",
         "cooldown": "1",
         "cost": "70 / 80 / 90 / 100 / 110 / 120",
         "range": "350",
-        "numericDetail": "黑默丁格在目标地点放置一座炮台。炮台会优先攻击黑默丁格的目标，以及正在攻击黑默丁格的敌人。炮台的生命值会随着黑默丁格的等级的提高而提高，并且在黑默丁格远离炮台时，炮台会进入休眠模式。黑默丁格每24/23/22/21/20秒生产一套炮台配置，并能同时持有1/1/2/2/3套配置。\n\nH-28G进化炮台属性\n生命值： 150/175/200/225/250/275/300/325/350/375/400/425/450/475/500/525/550/575\n攻击—加农炮：每次攻击造成15/22/29/36/42(+12.5%法术强度)魔法伤害。\n攻击—激光：每过12/12/12/12/12秒，对一条线上的敌人造成50/75/100/125/150(+50%法术强度)魔法伤害。\n炮台的放置数量上限：3",
-        "numericVersion": "3.15.5"
+        "numericDetail": "黑默丁格在目标地点放置一座炮台。炮台会优先攻击黑默丁格的目标，以及正在攻击黑默丁格的敌人。炮台的生命值会随着黑默丁格的等级的提高而提高，并且在黑默丁格远离炮台时，炮台会进入休眠模式。黑默丁格每24/23/22/21/20秒生产一套炮台配置，并能同时持有1/1/2/2/3套配置。\n\nH-28G进化炮台属性\n生命值： 150/175/200/225/250/275/300/325/350/375/400/425/450/475/500/525/550/575\n攻击—加农炮：每次攻击造成15/22/29/36/42(+12.5%法术强度)魔法伤害。\n攻击—激光：每过12/12/12/12/12秒，对一条线上的敌人造成50/75/100/125/150(+50%法术强度)魔法伤害。\n炮台的放置数量上限：3\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为20。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "海克斯科技微型导弹",
         "description": "黑默丁格发射数枚长程导弹，瞄准离黑默丁格最近的敌人。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/heimerdinger_hextechmicrorockets.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/heimerdinger_hextechmicrorockets.project_jade.png",
         "cooldown": "10",
         "cost": "60 / 75 / 90 / 105 / 120 / 135",
         "range": "950",
-        "numericDetail": "黑默丁格以鼠标悬停处为焦点，呈扇形发射5枚导弹。每枚导弹造成60/90/120/150/180(+45%法术强度)魔法伤害。敌方单位可以被1枚以上的导弹命中，但额外导弹的伤害值会降低：\n\n英雄和野怪：12/18/24/30/36(+12%法术强度)魔法伤害，最多受到108/162/216/270/324(+93%法术强度)魔法伤害。\n小兵：基础伤害值的60%。\n\n焦点越靠近黑默丁格，导弹就会越分散。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "黑默丁格以鼠标悬停处为焦点，呈扇形发射5枚导弹。每枚导弹造成60/90/120/150/180(+45%法术强度)魔法伤害。敌方单位可以被1枚以上的导弹命中，但额外导弹的伤害值会降低：\n\n英雄和野怪：12/18/24/30/36(+12%法术强度)魔法伤害，最多受到108/162/216/270/324(+93%法术强度)魔法伤害。\n小兵：基础伤害值的60%。\n\n焦点越靠近黑默丁格，导弹就会越分散。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为70/80/90/100/110。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "E",
         "name": "CH-1震荡手雷",
         "description": "黑默丁格朝一个位置掷出一颗手雷，对敌方单位造成伤害，并对直接命中的敌人造成晕眩效果，对附近单位造成致盲。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/heimerdinger_ch1concussiongrenade.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/heimerdinger_ch1concussiongrenade.project_jade.png",
         "cooldown": "13 / 12 / 11 / 10 / 9 / 8",
         "cost": "80 / 90 / 100 / 110 / 120",
         "range": "920",
-        "numericDetail": "黑默丁格向目标区域投掷震荡手雷，对爆炸范围内的所有敌方单位造成60/100/140/180/220 (+60%法术强度)魔法伤害和35%减速效果，减速持续2秒。位于爆炸区域中心的敌人还会被晕眩1.25秒。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "黑默丁格向目标区域投掷震荡手雷，对爆炸范围内的所有敌方单位造成60/100/140/180/220 (+60%法术强度)魔法伤害和35%减速效果，减速持续2秒。位于爆炸区域中心的敌人还会被晕眩1.25秒。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为18/16/14/12/10。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "升级！！！",
         "description": "被动/主动：被动提升冷却缩减。激活后为所有已激活的进化炮台回复生命值，并让它们在短时间内发射能降低目标移动速度的冰霜射击。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/heimerdinger_upgrade.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/heimerdinger_upgrade.project_jade.png",
         "cooldown": "120 / 105 / 90 / 75 / 60 / 45",
         "cost": "90",
         "range": "1",
-        "numericDetail": "让下一次基础技能免费施放，并提供强化效果。再次激活就可取消。\n\nH-28Q尖端炮台：放置一座炮台，它的加农炮可以造成90/110/130(+33%法术强度)魔法伤害，并且它的激光枪可以造成225/300/375(+80%法术强度)魔法伤害，持续8秒。它拥有溅射伤害，免疫控制效果，它的攻击可以使目标减速25%，并且它不会算在炮台限制里。\n\n海克斯导弹集群：发射4波导弹，每波导弹造成135/180/225(+45% / 45% / 45%法术强度)魔法伤害。被多发导弹命中的英雄和野怪所受的伤害会降低，所受的最大伤害值为500/690/865(+183%法术强度)。\n\nCH-3X闪电手雷：发射一颗能够弹跳3次的手雷，造成150/200/250(+60%法术强度)魔法伤害。晕眩和减速的范围都得到提升，且减速效果增强至80%。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "让下一次基础技能免费施放，并提供强化效果。再次激活就可取消。\n\nH-28Q尖端炮台：放置一座炮台，它的加农炮可以造成90/110/130(+33%法术强度)魔法伤害，并且它的激光枪可以造成225/300/375(+80%法术强度)魔法伤害，持续8秒。它拥有溅射伤害，免疫控制效果，它的攻击可以使目标减速25%，并且它不会算在炮台限制里。\n\n海克斯导弹集群：发射4波导弹，每波导弹造成135/180/225(+45% / 45% / 45%法术强度)魔法伤害。被多发导弹命中的英雄和野怪所受的伤害会降低，所受的最大伤害值为500/690/865(+183%法术强度)。\n\nCH-3X闪电手雷：发射一颗能够弹跳3次的手雷，造成150/200/250(+60%法术强度)魔法伤害。晕眩和减速的范围都得到提升，且减速效果增强至80%。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶冷却为100/85/70。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       }
     ]
   },
@@ -1038,8 +1057,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "嘉文四世",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/jarvan-iv",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60059.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_jarvaniv/skins/base/images/jade_jarvaniv_splash_centered_0.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60059.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_jarvaniv/skins/base/images/jade_jarvaniv_splash_centered_0.project_jade.jpg",
     "classicSplashName": "德玛西亚皇子",
     "classicSplashId": "60059000",
     "classicSplashIsDefault": true,
@@ -1047,7 +1066,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60059000",
         "name": "德玛西亚皇子",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_jarvaniv/skins/base/images/jade_jarvaniv_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_jarvaniv/skins/base/images/jade_jarvaniv_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -1074,7 +1093,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "战争律动",
         "description": "嘉文四世对一名敌人发起的第一次普攻会造成基于目标当前生命值的额外物理伤害。这个效果在数秒内无法重复作用于同一目标。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/jarvaniv_martialcadence.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/jarvaniv_martialcadence.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -1085,18 +1104,19 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "巨龙撞击",
         "description": "嘉文四世的长矛穿透敌人，对它途经的所有敌人造成物理伤害和护甲击碎效果。此外，该技能还会将嘉文四世引向德邦军旗，并击飞他途经的所有敌人。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/jarvaniv_dragonstrike.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/jarvaniv_dragonstrike.project_jade.png",
         "cooldown": "10 / 9 / 8 / 7 / 6",
         "cost": "45 / 50 / 55 / 60 / 65 / 70",
         "range": "770",
-        "numericDetail": "用嘉文四世的长矛穿透敌人，造成70/115/160/205/250(+110.0%额外攻击力)物理伤害，减少路径上所有敌人10/14/18/22/26%的护甲，持续3秒。\n\n如果该技能指向德邦军旗，则嘉文四世会被引向军旗，并击飞沿途的所有敌人。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "用嘉文四世的长矛穿透敌人，造成70/115/160/205/250(+110.0%额外攻击力)物理伤害，减少路径上所有敌人10/14/18/22/26%的护甲，持续3秒。\n\n如果该技能指向德邦军旗，则嘉文四世会被引向军旗，并击飞沿途的所有敌人。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为45/50/55/60/65。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "黄金圣盾",
         "description": "嘉文四世召唤古德玛西亚列王保护自己，提供护盾吸收伤害并减速附近敌人。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/jarvaniv_goldenaegis.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/jarvaniv_goldenaegis.project_jade.png",
         "cooldown": "20 / 18 / 16 / 14 / 12",
         "cost": "45 / 50 / 55 / 60 / 65",
         "range": "500",
@@ -1107,23 +1127,25 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "E",
         "name": "德邦军旗",
         "description": "嘉文四世携带着德玛西亚的骄傲，能被动地给予他额外的攻击速度和护甲。激活德邦军旗会使嘉文四世放置一面德玛西亚军旗，在军旗的着陆点造成魔法伤害，并强化军旗附近的队友们的攻击速度。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/jarvaniv_demacianstandard.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/jarvaniv_demacianstandard.project_jade_16_18.png",
         "cooldown": "13",
         "cost": "55 / 60 / 65 / 70 / 75 / 80",
         "range": "860",
-        "numericDetail": "被动：获得10/13/16/19/22%攻击速度加成和10/13/16/19/22护甲。\n\n主动：投掷一柄德邦军旗，对敌人造成60/105/150/195/240(+80%法术强度)魔法伤害，并使附近友军获得被动效果同样数值的攻速，持续8秒。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "被动：获得10/13/16/19/22%攻击速度加成和10/13/16/19/22护甲。\n\n主动：投掷一柄德邦军旗，对敌人造成60/105/150/195/240(+80%法术强度)魔法伤害，并使附近友军获得被动效果同样数值的攻速，持续8秒。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为55。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "天崩地裂",
         "description": "嘉文四世勇猛地跃向目标敌方英雄，对其造成物理伤害，并在敌人周围形成环形障碍，持续数秒。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/jarvaniv_cataclysm.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/jarvaniv_cataclysm.project_jade.png",
         "cooldown": "120 / 105 / 90 / 8 / 5",
         "cost": "100 / 125 / 150 / 100",
         "range": "650 / 700",
-        "numericDetail": "勇猛地跃向敌人，造成200/325/450(+150%额外攻击力)物理伤害，并在目标周围形成环形障碍，持续3.5秒。\n\n再次激活，将使障碍倒塌。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "勇猛地跃向敌人，造成200/325/450(+150%额外攻击力)物理伤害，并在目标周围形成环形障碍，持续3.5秒。\n\n再次激活，将使障碍倒塌。\n来源边界：OP.GG Classic 原始冷却含5项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶冷却为120/105/90。不将原始字段直接套用为旧版逐级数值。\n来源边界：OP.GG Classic 原始消耗含4项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶消耗为100/125/150。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       }
     ]
   },
@@ -1132,8 +1154,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "盖伦",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/garen",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60086.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_garen/skins/skin301/images/jade_garen_splash_centered_301.project_jade_16_16.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60086.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_garen/skins/skin301/images/jade_garen_splash_centered_301.project_jade_16_16.jpg",
     "classicSplashName": "经典 盖伦",
     "classicSplashId": "60086301",
     "classicSplashIsDefault": false,
@@ -1141,14 +1163,14 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60086301",
         "name": "经典 盖伦",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_garen/skins/skin301/images/jade_garen_splash_centered_301.project_jade_16_16.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_garen/skins/skin301/images/jade_garen_splash_centered_301.project_jade_16_16.jpg",
         "kind": "classic",
         "isDefault": false
       },
       {
         "id": "60086000",
         "name": "德玛西亚之力",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_garen/skins/base/images/jade_garen_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_garen/skins/base/images/jade_garen_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -1175,7 +1197,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "坚韧",
         "description": "如果盖伦近期没有受到伤害或者被敌方技能命中，那么他会每秒回复若干百分比的总生命值。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/garen_perseverance.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/garen_perseverance.project_jade_16_18.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -1186,7 +1208,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "致命打击",
         "description": "盖伦的移动速度获得爆发性提升，同时移除身上的所有减速效果。他的下次攻击将打击敌人的要害部位，造成额外伤害并将目标沉默。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/garen_decisivestrike.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/garen_decisivestrike.project_jade_16_18.png",
         "cooldown": "8",
         "cost": "0",
         "range": "300",
@@ -1197,34 +1219,37 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "W",
         "name": "勇气",
         "description": "盖伦用他的大剑表演死亡之舞，在持续期间内对周围的敌方单位造成伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/garen_commandingpresence.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/garen_commandingpresence.project_jade_16_18.png",
         "cooldown": "24 / 23 / 22 / 21 / 20 / 12",
         "cost": "0",
         "range": null,
-        "numericDetail": "被动：盖伦的额外护甲和魔法抗性（来自符文、天赋和装备）提高20%。\n\n主动：盖伦获得一个持续2/3/4/5/6秒的防御护盾，减少即将到来的30%的伤害，并获得30%控制效果减免。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "被动：盖伦的额外护甲和魔法抗性（来自符文、天赋和装备）提高20%。\n\n主动：盖伦获得一个持续2/3/4/5/6秒的防御护盾，减少即将到来的30%的伤害，并获得30%控制效果减免。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为24/23/22/21/20。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "E",
         "name": "审判",
         "description": "盖伦快速地旋转身体挥舞大剑，并对邻近敌人造成物理伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/garen_keepingthepeace.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/garen_keepingthepeace.project_jade_16_18.png",
         "cooldown": "13 / 12 / 11 / 10 / 9 / 6",
         "cost": "0",
         "range": "325",
-        "numericDetail": "盖伦快速地旋舞大剑，每秒对周围敌方造成 20/45/70/95/120 加上他总攻击力的70/80/90/100/110%(+（数值未在旧版接口公开）)的物理伤害，持续 3 秒。盖伦在旋转时会无视单位的碰撞体积，但在直接越过单位时，移动速度会减慢 20%。\n\n审判可以暴击，并造成额外伤害。\n审判对小兵的伤害会减少25%。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "盖伦快速地旋舞大剑，每秒对周围敌方造成 20/45/70/95/120 加上他总攻击力的70/80/90/100/110%(+（数值未在旧版接口公开）)的物理伤害，持续 3 秒。盖伦在旋转时会无视单位的碰撞体积，但在直接越过单位时，移动速度会减慢 20%。\n\n审判可以暴击，并造成额外伤害。\n审判对小兵的伤害会减少25%。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为13/12/11/10/9。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "德玛西亚正义",
         "description": "盖伦召唤德玛西亚之力，试图处决一名敌方英雄。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/garen_justice.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/garen_justice.project_jade_16_18.png",
         "cooldown": "140 / 110 / 80 / 50 / 20 / -10",
         "cost": "0",
         "range": "400",
-        "numericDetail": "盖伦召唤德玛西亚之力，试图斩杀一名敌方英雄，目标损失的生命越多，则此技能造成的伤害越高。造成175/350/525魔法伤害，敌人每失去3.5/3/2.5生命值就会多承受1伤害。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "盖伦召唤德玛西亚之力，试图斩杀一名敌方英雄，目标损失的生命越多，则此技能造成的伤害越高。造成175/350/525魔法伤害，敌人每失去3.5/3/2.5生命值就会多承受1伤害。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶冷却为160/120/80。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       }
     ]
   },
@@ -1233,8 +1258,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "莫甘娜",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/morgana",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60025.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_morgana/skins/skin301/images/jade_morgana_splash_centered_301.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60025.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_morgana/skins/skin301/images/jade_morgana_splash_centered_301.project_jade.jpg",
     "classicSplashName": "经典 莫甘娜",
     "classicSplashId": "60025301",
     "classicSplashIsDefault": false,
@@ -1242,14 +1267,14 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60025301",
         "name": "经典 莫甘娜",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_morgana/skins/skin301/images/jade_morgana_splash_centered_301.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_morgana/skins/skin301/images/jade_morgana_splash_centered_301.project_jade.jpg",
         "kind": "classic",
         "isDefault": false
       },
       {
         "id": "60025000",
         "name": "堕落天使",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_morgana/skins/base/images/jade_morgana_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_morgana/skins/base/images/jade_morgana_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -1276,7 +1301,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "灵魂吸取",
         "description": "莫甘娜拥有法术吸血效果，在技能造成伤害时回复自身生命值。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/morgana_empathize.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/morgana_empathize.project_jade_16_18.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -1287,40 +1312,43 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "暗之禁锢",
         "description": "莫甘娜放出一个黑暗魔法球。击中一个敌方目标后，魔法球将造成魔法伤害，并将该目标暂时定在原地。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/morgana_darkbinding.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/morgana_darkbinding.project_jade_16_18.png",
         "cooldown": "11",
         "cost": "50 / 60 / 70 / 80 / 90 / 100",
         "range": "1175",
-        "numericDetail": "向目标区域射出一枚充满暗黑能量的飞弹，将第一个碰到的敌人束缚2/2.25/2.5/2.75/3秒，造成 80/135/190/245/300(+90%法术强度)点魔法伤害。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "向目标区域射出一枚充满暗黑能量的飞弹，将第一个碰到的敌人束缚2/2.25/2.5/2.75/3秒，造成 80/135/190/245/300(+90%法术强度)点魔法伤害。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为50/60/70/80/90。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "痛苦腐蚀",
         "description": "莫甘娜诅咒一大片区域，对区域内的敌人持续造成伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/morgana_tormentedsoil.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/morgana_tormentedsoil.project_jade_16_18.png",
         "cooldown": "12",
         "cost": "80 / 100 / 120 / 140 / 160 / 180",
         "range": "900",
-        "numericDetail": "诅咒一块区域，持续5秒。区域内的敌人每秒都将受到24/38/52/66/80(+22%法术强度)到36/57/78/99/120 (+33%法术强度)魔法伤害，这个伤害取决于敌人已损失的生命值。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "诅咒一块区域，持续5秒。区域内的敌人每秒都将受到24/38/52/66/80(+22%法术强度)到36/57/78/99/120 (+33%法术强度)魔法伤害，这个伤害取决于敌人已损失的生命值。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为70/85/100/115/130。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "E",
         "name": "黑暗之盾",
         "description": "为友方英雄施放保护盾，吸收魔法伤害并阻挡限制效果，直到护盾被击穿或消失。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/morgana_blackshield.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/morgana_blackshield.project_jade_16_18.png",
         "cooldown": "23 / 21 / 19 / 17 / 15 / 16",
         "cost": "50",
         "range": "750",
-        "numericDetail": "为友军英雄施放保护盾，持续5秒。保护盾会吸收95/160/225/290/355(+70%法术强度)魔法伤害，并在护盾被打破前阻挡限制技能。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "为友军英雄施放保护盾，持续5秒。保护盾会吸收95/160/225/290/355(+70%法术强度)魔法伤害，并在护盾被打破前阻挡限制技能。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为23/21/19/17/15。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "灵魂镣铐",
         "description": "用能量拴住附近的敌方英雄，对其造成初始伤害和减速效果；一段时间后，仍然留在莫甘娜身边的敌人会再次受到伤害和晕眩。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/morgana_purgatory.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/morgana_purgatory.project_jade_16_18.png",
         "cooldown": "120",
         "cost": "100",
         "range": "625",
@@ -1334,8 +1362,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "萨科",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/shaco",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60035.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_shaco/skins/base/images/jade_shaco_splash_centered_0.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60035.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_shaco/skins/base/images/jade_shaco_splash_centered_0.project_jade.jpg",
     "classicSplashName": "恶魔小丑",
     "classicSplashId": "60035000",
     "classicSplashIsDefault": true,
@@ -1343,7 +1371,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60035000",
         "name": "恶魔小丑",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_shaco/skins/base/images/jade_shaco_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_shaco/skins/base/images/jade_shaco_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -1370,7 +1398,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "背刺",
         "description": "萨科从目标背后发起的攻击和技能会造成额外伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/shaco_carefulstrikes.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/shaco_carefulstrikes.project_jade_16_18.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -1381,18 +1409,19 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "欺诈魔术",
         "description": "萨科进入隐形状态并传送到目标位置。他的下一次攻击必定暴击。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/shaco_maniacalcloak2.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/shaco_maniacalcloak2.project_jade_16_18.png",
         "cooldown": "11",
         "cost": "90 / 80 / 70 / 60 / 50 / 40",
         "range": "400",
-        "numericDetail": "萨科立即进入持续3.5秒的隐形状态，并传送到目标区域。\n\n在接下来的六秒内，他的下一次普通攻击将必定暴击，造成140/160/180/200/220%的伤害（常规的暴击会造成200%的伤害）。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "萨科立即进入持续3.5秒的隐形状态，并传送到目标区域。\n\n在接下来的六秒内，他的下一次普通攻击将必定暴击，造成140/160/180/200/220%的伤害（常规的暴击会造成200%的伤害）。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为90/80/70/60/50。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "惊吓魔盒",
         "description": "萨科在目标位置放置一个会动的惊吓魔盒。魔盒以隐形状态埋伏，在有敌人靠近时恐惧附近的敌方单位，并发动攻击。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/shaco_deathward.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/shaco_deathward.project_jade_16_18.png",
         "cooldown": "16",
         "cost": "50 / 55 / 60 / 65 / 70",
         "range": "425",
@@ -1403,7 +1432,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "E",
         "name": "双面毒刃",
         "description": "萨科的毒刃会在攻击时被动施加毒药，使目标减速，并降低小兵的命中率。他还可以掷出毒刃，对目标造成伤害并施加毒药效果。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/shaco_incrediblyprecise.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/shaco_incrediblyprecise.project_jade_16_18.png",
         "cooldown": "8",
         "cost": "50 / 55 / 60 / 65 / 70",
         "range": "625",
@@ -1414,12 +1443,13 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "R",
         "name": "幻像",
         "description": "萨科在身边制造一个分身，攻击附近的敌人。分身会在阵亡时爆炸，对附近敌人造成伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/shaco_hallucinogenbomb.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/shaco_hallucinogenbomb.project_jade_16_18.png",
         "cooldown": "100 / 90 / 80 / 10",
         "cost": "100 / 75",
         "range": "200",
-        "numericDetail": "萨科制造一个自己的幻像，幻像最多可持续18秒。幻像拥有本体75%的攻击（对防御塔造成一半伤害），承受50%额外伤害。\n\n幻像在死亡时会爆炸，对周围的敌人造成300/450/600(+100%法术强度)魔法伤害。\n\n你可以通过按住ALT键不放，然后点击鼠标右键的方式，或者重新激活此技能的方式来控制镜像。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "萨科制造一个自己的幻像，幻像最多可持续18秒。幻像拥有本体75%的攻击（对防御塔造成一半伤害），承受50%额外伤害。\n\n幻像在死亡时会爆炸，对周围的敌人造成300/450/600(+100%法术强度)魔法伤害。\n\n你可以通过按住ALT键不放，然后点击鼠标右键的方式，或者重新激活此技能的方式来控制镜像。\n来源边界：OP.GG Classic 原始冷却含4项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶冷却为100/90/80。不将原始字段直接套用为旧版逐级数值。\n来源边界：OP.GG Classic 原始消耗含2项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶消耗为100。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       }
     ]
   },
@@ -1428,8 +1458,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "布兰德",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/brand",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60063.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_brand/skins/base/images/jade_brand_splash_centered_0.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60063.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_brand/skins/base/images/jade_brand_splash_centered_0.project_jade.jpg",
     "classicSplashName": "复仇焰魂",
     "classicSplashId": "60063000",
     "classicSplashIsDefault": true,
@@ -1437,7 +1467,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60063000",
         "name": "复仇焰魂",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_brand/skins/base/images/jade_brand_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_brand/skins/base/images/jade_brand_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -1464,7 +1494,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "炽热之焰",
         "description": "布兰德的技能会对他的目标施加【烈焰焚身】效果，造成目标一部分最大生命值的魔法伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/brandblaze.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/brandblaze.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -1475,7 +1505,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "火焰烙印",
         "description": "布兰德向前方放出一团可造成魔法伤害的火球。如果目标带有烈焰焚身效果，则火焰烙印将使目标晕眩。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/brandsear.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/brandsear.project_jade.png",
         "cooldown": "8 / 7.5 / 7 / 6.5 / 6",
         "cost": "50",
         "range": "1050",
@@ -1486,7 +1516,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "W",
         "name": "烈焰之柱",
         "description": "在短暂的延迟后，布兰德会在目标区域创造一根烈焰之柱，对范围内的敌方单位造成魔法伤害。带有烈焰焚身效果的单位会受到额外伤害",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/brandpillarofflame.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/brandpillarofflame.project_jade.png",
         "cooldown": "10",
         "cost": "70 / 75 / 80 / 85 / 90",
         "range": "900",
@@ -1497,18 +1527,19 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "E",
         "name": "烈火燃烧",
         "description": "布兰德在目标身上引发一阵强力爆裂，对其造成魔法伤害。如果目标带有烈焰焚身效果，则烈火燃烧还会扩散至目标附近的敌人。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/brandconflagration.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/brandconflagration.project_jade.png",
         "cooldown": "12 / 11 / 10 / 9 / 8",
         "cost": "70 / 75 / 80 / 85 / 90 / 95",
         "range": "625",
-        "numericDetail": "布兰德引爆目标，对其造成70/105/140/175/210(+55.0%法术强度)魔法伤害。\n\n炽热之焰：如果目标已被点燃，烈火燃烧将会扩散到附近敌人并造成伤害。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "布兰德引爆目标，对其造成70/105/140/175/210(+55.0%法术强度)魔法伤害。\n\n炽热之焰：如果目标已被点燃，烈火燃烧将会扩散到附近敌人并造成伤害。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为70/75/80/85/90。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "烈焰风暴",
         "description": "布兰德释放一颗破坏力极强的火焰之种，每次弹跳时造成魔法伤害。如果目标带有烈焰焚身效果，则烈焰风暴的下一次弹跳会优先选择该英雄。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/brandpyroclasm.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/brandpyroclasm.project_jade.png",
         "cooldown": "105 / 90 / 75",
         "cost": "100",
         "range": "750",
@@ -1522,8 +1553,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "伊芙琳",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/evelynn",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60028.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_evelynn/skins/skin301/images/jade_evelynn_splash_centered_301.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60028.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_evelynn/skins/skin301/images/jade_evelynn_splash_centered_301.project_jade.jpg",
     "classicSplashName": "经典 伊芙琳",
     "classicSplashId": "60028301",
     "classicSplashIsDefault": false,
@@ -1531,14 +1562,14 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60028301",
         "name": "经典 伊芙琳",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_evelynn/skins/skin301/images/jade_evelynn_splash_centered_301.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_evelynn/skins/skin301/images/jade_evelynn_splash_centered_301.project_jade.jpg",
         "kind": "classic",
         "isDefault": false
       },
       {
         "id": "60028000",
         "name": "寡妇制造者",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_evelynn/skins/base/images/jade_evelynn_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_evelynn/skins/base/images/jade_evelynn_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -1565,7 +1596,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "暗影迷踪",
         "description": "脱离战斗后，伊芙琳会进入伪装状态，只会被附近的敌方英雄或真实视野看见。在潜行状态下，她会快速回复法力值。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/evelynn_shadowwalk.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/evelynn_shadowwalk.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -1576,18 +1607,19 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "憎恨之刺",
         "description": "伊芙琳发射一列尖刺穿过敌人，对沿途的所有敌方单位造成伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/evelynn_onlyhelltopay.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/evelynn_onlyhelltopay.project_jade_16_18.png",
         "cooldown": "1.5",
         "cost": "16 / 22 / 28 / 34 / 40 / 46",
         "range": "525",
-        "numericDetail": "伊芙琳发射一列憎恨之刺来穿过一名附近的敌人，对沿途的所有敌人造成40/60/80/100/120(+45%法术强度)(+40%额外攻击力)魔法伤害。\n\n憎恨之刺会优先以伊芙琳正在攻击的敌人为目标。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "伊芙琳发射一列憎恨之刺来穿过一名附近的敌人，对沿途的所有敌人造成40/60/80/100/120(+45%法术强度)(+40%额外攻击力)魔法伤害。\n\n憎恨之刺会优先以伊芙琳正在攻击的敌人为目标。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为16/22/28/34/40。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "暗潮汹涌",
         "description": "伊芙琳的技能命中敌方英雄时，被动提升她的移动速度。主动施放后，伊芙琳会解除自身受到的减速效果，并在短时间内大幅提升移动速度。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/evelynn_readytobetray.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/evelynn_readytobetray.project_jade_16_18.png",
         "cooldown": "20",
         "cost": "40",
         "range": null,
@@ -1598,23 +1630,25 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "E",
         "name": "狂袭",
         "description": "伊芙琳连续她的斩击目标两次，每一次都会造成伤害。随后，她会在短时间内获得额外攻击速度。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/evelynn_ravage.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/evelynn_ravage.project_jade_16_18.png",
         "cooldown": "9",
         "cost": "50 / 55 / 60 / 65 / 70 / 75",
         "range": "225",
-        "numericDetail": "伊芙琳猛击一个目标2次，每一击都会造成35/55/75/95/115(+50%法术强度)(+40%额外攻击力)魔法伤害。随后，伊芙琳会获得60/75/90/105/120%的攻击速度加成，持续3秒。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "伊芙琳猛击一个目标2次，每一击都会造成35/55/75/95/115(+50%法术强度)(+40%额外攻击力)魔法伤害。随后，伊芙琳会获得60/75/90/105/120%的攻击速度加成，持续3秒。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为50/55/60/65/70。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "痛苦之拥",
         "description": "伊芙琳从地下召唤尖刺，对区域内的敌人造成伤害并施加减速效果。随后，她会根据命中的敌方英雄数量获得护盾。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/evelynn_agonysembrace.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/evelynn_agonysembrace.project_jade.png",
         "cooldown": "150 / 120 / 90 / 60 / 30",
         "cost": "100",
         "range": "650",
-        "numericDetail": "伊芙琳刺穿目标区域的所有敌人，造成相当于他们当前生命值的15/20/25(+1%法术强度)%的魔法伤害，并减少他们30/50/70%的移动速度，减速效果持续2秒。\n\n伊芙琳会汲取他们的痛苦，每击中一名英雄，就会获得一个150/225/300点生命值的护盾，最多可持续6秒。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "伊芙琳刺穿目标区域的所有敌人，造成相当于他们当前生命值的15/20/25(+1%法术强度)%的魔法伤害，并减少他们30/50/70%的移动速度，减速效果持续2秒。\n\n伊芙琳会汲取他们的痛苦，每击中一名英雄，就会获得一个150/225/300点生命值的护盾，最多可持续6秒。\n来源边界：OP.GG Classic 原始冷却含5项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶冷却为150/120/90。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       }
     ]
   },
@@ -1623,8 +1657,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "拉克丝",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/lux",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60099.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_lux/skins/base/images/jade_lux_splash_centered_0.project_jade_16_16.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60099.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_lux/skins/base/images/jade_lux_splash_centered_0.project_jade_16_16.jpg",
     "classicSplashName": "光辉女郎",
     "classicSplashId": "60099000",
     "classicSplashIsDefault": true,
@@ -1632,7 +1666,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60099000",
         "name": "光辉女郎",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_lux/skins/base/images/jade_lux_splash_centered_0.project_jade_16_16.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_lux/skins/base/images/jade_lux_splash_centered_0.project_jade_16_16.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -1659,7 +1693,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "光芒四射",
         "description": "拉克丝的伤害类技能会将能量注入敌人的体内。拉克丝的下一次攻击将会点燃这股能量，以对目标造成额外魔法伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/luxilluminatingfraulein.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/luxilluminatingfraulein.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -1670,7 +1704,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "光之束缚",
         "description": "拉克丝释放一个光球，束缚并伤害最多两个敌方单位。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/luxcrashingblitz2.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/luxcrashingblitz2.project_jade.png",
         "cooldown": "15 / 14 / 13 / 12 / 11",
         "cost": "50 / 60 / 70 / 80 / 90",
         "range": "1175",
@@ -1681,7 +1715,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "W",
         "name": "曲光屏障",
         "description": "拉克丝掷出她的魔杖，被触及的友方单位会被光芒缠绕，保护其免受敌方伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/luxprismawrap.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/luxprismawrap.project_jade.png",
         "cooldown": "14 / 13 / 12 / 11 / 10",
         "cost": "60",
         "range": "1150",
@@ -1692,7 +1726,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "E",
         "name": "透光奇点",
         "description": "向指定区域释放一道不规则的扭曲之光，减速附近的敌人。拉克丝可随后将其引爆，对范围内敌人造成伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/luxlightstrikekugel.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/luxlightstrikekugel.project_jade.png",
         "cooldown": "10",
         "cost": "70 / 85 / 100 / 115 / 130",
         "range": "1000",
@@ -1703,12 +1737,13 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "R",
         "name": "终极闪光",
         "description": "短暂蓄力后，拉克丝发射一束光能射线，对射线内的所有目标造成伤害。此外，该技能会触发拉克丝的被动技能，并刷新光芒四射减益效果的持续时间。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/luxfinalefunkeln.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/luxfinalefunkeln.project_jade_16_18.png",
         "cooldown": "80 / 60 / 40 / 20 / 0 / -20",
         "cost": "100",
         "range": "3340",
-        "numericDetail": "拉克丝引导一束耀目的光能射线，对一条直线上的所有敌人造成300/400/500(+75%法术强度)魔法伤害。终极闪光还会引燃并刷新目标身上的光芒四射效果。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "拉克丝引导一束耀目的光能射线，对一条直线上的所有敌人造成300/400/500(+75%法术强度)魔法伤害。终极闪光还会引燃并刷新目标身上的光芒四射效果。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶冷却为80/65/50。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       }
     ]
   },
@@ -1717,8 +1752,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "普朗克",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/gangplank",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60041.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_gangplank/skins/skin301/images/jade_gangplank_splash_centered_301.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60041.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_gangplank/skins/skin301/images/jade_gangplank_splash_centered_301.project_jade.jpg",
     "classicSplashName": "经典 2009 普朗克",
     "classicSplashId": "60041301",
     "classicSplashIsDefault": false,
@@ -1726,14 +1761,14 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60041301",
         "name": "经典 2009 普朗克",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_gangplank/skins/skin301/images/jade_gangplank_splash_centered_301.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_gangplank/skins/skin301/images/jade_gangplank_splash_centered_301.project_jade.jpg",
         "kind": "classic",
         "isDefault": false
       },
       {
         "id": "60041000",
         "name": "海洋之灾",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_gangplank/skins/base/images/jade_gangplank_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_gangplank/skins/base/images/jade_gangplank_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -1760,7 +1795,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "浸酒之刃",
         "description": "普朗克的攻击会施加中毒效果，每秒造成魔法伤害，伤害会随等级提升。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/gangplank_grogsoakedblade.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/gangplank_grogsoakedblade.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -1771,18 +1806,19 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "枪火谈判",
         "description": "普朗克用手枪瞄准并射击一个敌方单位。如果枪火谈判击杀了目标，则普朗克获得额外金币，并返还一半法力消耗。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/gangplank_parley.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/gangplank_parley.project_jade_16_18.png",
         "cooldown": "5",
         "cost": "50 / 55 / 60 / 65 / 70 / 75",
         "range": "625",
-        "numericDetail": "用手枪瞄准敌人发出猛烈一击，造成20/45/70/95/120(+100%总攻击力)物理伤害。若杀死目标则获得4/5/6/7/8额外金钱并返还一半的法力消耗。\n\n此技能可以附加暴击或其他攻击特效。\n\n已掠夺的金钱总额：（动态数值未在旧版接口公开）",
-        "numericVersion": "3.15.5"
+        "numericDetail": "用手枪瞄准敌人发出猛烈一击，造成20/45/70/95/120(+100%总攻击力)物理伤害。若杀死目标则获得4/5/6/7/8额外金钱并返还一半的法力消耗。\n\n此技能可以附加暴击或其他攻击特效。\n\n已掠夺的金钱总额：（动态数值未在旧版接口公开）\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为50/55/60/65/70。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "坏血病疗法",
         "description": "普朗克吃掉大量柑橘类水果，解除自身所有控制效果并回复生命值。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/gangplank_removescurvy.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/gangplank_removescurvy.project_jade_16_18.png",
         "cooldown": "22 / 21 / 20 / 19 / 18",
         "cost": "65",
         "range": "20",
@@ -1793,7 +1829,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "E",
         "name": "鼓舞士气",
         "description": "普朗克朝空中鸣枪，为附近友方英雄提升攻击力和移动速度。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/gangplank_raisemorale.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/gangplank_raisemorale.project_jade.png",
         "cooldown": "20",
         "cost": "50 / 55 / 60 / 65 / 70",
         "range": "1200",
@@ -1804,12 +1840,13 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "R",
         "name": "加农炮幕",
         "description": "普朗克命令战舰对地图上的任意区域进行炮击，从而对敌人们造成减速和持续伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/gangplank_cannonbarrage.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/gangplank_cannonbarrage.project_jade_16_18.png",
         "cooldown": "120 / 115 / 110 / 120",
         "cost": "100",
         "range": "20000",
-        "numericDetail": "召唤海盗船炮击目标区域7秒，在此期间对区域内敌人减速25%。加农炮雨点般散落该区域，每发炮弹造成75/120/165(+20%法术强度)魔法伤害。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "召唤海盗船炮击目标区域7秒，在此期间对区域内敌人减速25%。加农炮雨点般散落该区域，每发炮弹造成75/120/165(+20%法术强度)魔法伤害。\n来源边界：OP.GG Classic 原始冷却含4项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶冷却为120/115/110。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       }
     ]
   },
@@ -1818,8 +1855,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "安妮",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/annie",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60001.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_annie/skins/skin301/images/jade_annie_splash_centered_301.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60001.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_annie/skins/skin301/images/jade_annie_splash_centered_301.project_jade.jpg",
     "classicSplashName": "经典 安妮",
     "classicSplashId": "60001301",
     "classicSplashIsDefault": false,
@@ -1827,14 +1864,14 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60001301",
         "name": "经典 安妮",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_annie/skins/skin301/images/jade_annie_splash_centered_301.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_annie/skins/skin301/images/jade_annie_splash_centered_301.project_jade.jpg",
         "kind": "classic",
         "isDefault": false
       },
       {
         "id": "60001000",
         "name": "黑暗之女",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_annie/skins/base/images/jade_annie_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_annie/skins/base/images/jade_annie_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -1861,7 +1898,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "嗜火",
         "description": "安妮的伤害类技能会不时地晕眩她的目标。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_annie/hud/icons2d/jade_annie_passive.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_annie/hud/icons2d/jade_annie_passive.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -1872,29 +1909,31 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "碎裂之火",
         "description": "安妮掷出一颗注入了法力值的火球，对目标造成魔法伤害。如果目标死于碎裂之火，则碎裂之火消耗的法力值会返还给安妮。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_annie/hud/icons2d/jade_annie_q.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_annie/hud/icons2d/jade_annie_q.project_jade.png",
         "cooldown": "4",
         "cost": "60 / 65 / 70 / 75 / 80 / 85",
         "range": "625",
-        "numericDetail": "造成85/125/165/205/245(+70%法术强度)魔法伤害。如果目标死于碎裂之火，则返还法力值。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "造成85/125/165/205/245(+70%法术强度)魔法伤害。如果目标死于碎裂之火，则返还法力值。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为60/65/70/75/80。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "焚烧",
         "description": "安妮向锥形区域施放一道烈焰，对区域内的所有敌人造成伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_annie/hud/icons2d/jade_annie_w.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_annie/hud/icons2d/jade_annie_w.project_jade.png",
         "cooldown": "8",
         "cost": "70 / 80 / 90 / 100 / 110 / 120",
         "range": "600",
-        "numericDetail": "向锥形区域施放一道烈焰，对区域内的所有敌人造成80/130/180/230/280(+75%法术强度)魔法伤害。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "向锥形区域施放一道烈焰，对区域内的所有敌人造成80/130/180/230/280(+75%法术强度)魔法伤害。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为70/80/90/100/110。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "E",
         "name": "熔岩护盾",
         "description": "提升安妮的护甲和魔法抗性，并对使用普通攻击命中安妮的敌人造成伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_annie/hud/icons2d/jade_annie_e.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_annie/hud/icons2d/jade_annie_e.project_jade.png",
         "cooldown": "10",
         "cost": "20",
         "range": "800",
@@ -1905,7 +1944,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "R",
         "name": "提伯斯之怒",
         "description": "安妮召唤地狱火泰迪：提伯斯为其作战，对目标区域造成伤害，提伯斯也会攻击和烧伤站在它周围的敌人。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_annie/hud/icons2d/jade_annie_r1.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_annie/hud/icons2d/jade_annie_r1.project_jade.png",
         "cooldown": "120",
         "cost": "100",
         "range": "600",
@@ -1919,8 +1958,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "古拉加斯",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/gragas",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60079.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_gragas/skins/base/images/jade_gragas_splash_centered_0.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60079.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_gragas/skins/base/images/jade_gragas_splash_centered_0.project_jade.jpg",
     "classicSplashName": "酒桶",
     "classicSplashId": "60079000",
     "classicSplashIsDefault": true,
@@ -1928,7 +1967,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60079000",
         "name": "酒桶",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_gragas/skins/base/images/jade_gragas_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_gragas/skins/base/images/jade_gragas_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -1955,7 +1994,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "欢乐时光",
         "description": "古拉加斯每次使用技能后都会喝一小杯，从而回复些许生命值。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/gragaspassiveheal.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/gragaspassiveheal.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -1966,18 +2005,19 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "滚动酒桶",
         "description": "古拉加斯投掷一个酒桶，它会在短暂延迟后爆炸，从而对敌人造成伤害和攻速减缓效果。再次施放可提前引爆该酒桶。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/gragasbarrelroll.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/gragasbarrelroll.project_jade.png",
         "cooldown": "12.5 / 11.5 / 10.5 / 9.5 / 8.5 / 7.5",
         "cost": "80 / 90 / 100 / 110 / 120 / 130",
         "range": "1100",
-        "numericDetail": "古拉加斯将酒桶滚到目标地点，可以主动引爆或在到达目标地点5秒后自行爆炸，造成85/135/185/235/285(+90%法术强度)魔法伤害，并将他们的攻速减少20/25/30/35/40%，持续3秒。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "古拉加斯将酒桶滚到目标地点，可以主动引爆或在到达目标地点5秒后自行爆炸，造成85/135/185/235/285(+90%法术强度)魔法伤害，并将他们的攻速减少20/25/30/35/40%，持续3秒。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为11/10/9/8/7。不将原始字段直接套用为旧版逐级数值。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为80/90/100/110/120。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "醉酒狂暴",
         "description": "古拉加斯畅饮他的佳酿，从而回复法力值。随后他获得持续数秒的攻击力和伤害减免。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/gragasdrunkenrage.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/gragasdrunkenrage.project_jade.png",
         "cooldown": "30",
         "cost": "0",
         "range": "20",
@@ -1988,7 +2028,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "E",
         "name": "肉弹冲击",
         "description": "古拉加斯向前冲锋，从而撞击碰到的第一个敌人，对附近敌人们造成伤害和减速。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/gragasbodyslam.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/gragasbodyslam.project_jade.png",
         "cooldown": "7",
         "cost": "75",
         "range": "600",
@@ -1999,12 +2039,13 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "R",
         "name": "爆破酒桶",
         "description": "古拉加斯猛抛他的酒桶，从而造成伤害并将敌人们从爆炸中心击退。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/gragasexplosivecask.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/gragasexplosivecask.project_jade.png",
         "cooldown": "130 / 115 / 100 / 85 / 70 / 55",
         "cost": "100 / 125 / 150 / 175 / 200 / 225",
         "range": "1000",
-        "numericDetail": "古拉加斯向目标区域投掷他的酒桶。落地后，给所有它撞到的敌人造成200/325/450(+100%法术强度)点魔法伤害，并且击退他们。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "古拉加斯向目标区域投掷他的酒桶。落地后，给所有它撞到的敌人造成200/325/450(+100%法术强度)点魔法伤害，并且击退他们。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶冷却为100/90/80。不将原始字段直接套用为旧版逐级数值。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶消耗为100/125/150。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       }
     ]
   },
@@ -2013,8 +2054,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "崔斯特",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/twisted-fate",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60004.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_twistedfate/skins/skin301/images/jade_twistedfate_splash_centered_301.project_jade_16_16.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60004.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_twistedfate/skins/skin301/images/jade_twistedfate_splash_centered_301.project_jade_16_16.jpg",
     "classicSplashName": "经典 崔斯特",
     "classicSplashId": "60004301",
     "classicSplashIsDefault": false,
@@ -2022,14 +2063,14 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60004301",
         "name": "经典 崔斯特",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_twistedfate/skins/skin301/images/jade_twistedfate_splash_centered_301.project_jade_16_16.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_twistedfate/skins/skin301/images/jade_twistedfate_splash_centered_301.project_jade_16_16.jpg",
         "kind": "classic",
         "isDefault": false
       },
       {
         "id": "60004000",
         "name": "卡牌大师",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_twistedfate/skins/base/images/jade_twistedfate_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_twistedfate/skins/base/images/jade_twistedfate_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -2056,7 +2097,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "灌铅骰子",
         "description": "崔斯特与友军每次击杀可额外获得金币。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/twistedfate_sealfate.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/twistedfate_sealfate.project_jade_16_18.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -2067,45 +2108,49 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "万能牌",
         "description": "崔斯特扔出三张卡牌，卡牌会对它们途经的每个敌方单位造成伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/twistedfate_powercard.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/twistedfate_powercard.project_jade_16_18.png",
         "cooldown": "6",
         "cost": "60 / 70 / 80 / 90 / 100 / 110",
         "range": "10000",
-        "numericDetail": "扔出三张卡牌，对它们沿途的敌人造成60/110/160/210/260(+65%法术强度)点魔法伤害。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "扔出三张卡牌，对它们沿途的敌人造成60/110/160/210/260(+65%法术强度)点魔法伤害。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为60/70/80/90/100。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "选牌",
         "description": "崔斯特挑选一张魔法卡牌，并用在他的下次攻击，从而造成额外效果。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/twistedfate_fatesgambit.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/twistedfate_fatesgambit.project_jade_16_18.png",
         "cooldown": "6",
         "cost": "40 / 55 / 70 / 85 / 100 / 75",
         "range": "200",
-        "numericDetail": "点击技能开始洗牌，再次点击选择一张牌，选牌后下次攻击附加卡牌特效。\n蓝色卡牌对目标造成40/60/80/100/120(+100%总攻击力)(+40%法术强度)魔法伤害，并回复50/75/100/125/150法力值。\n红色卡牌对目标及目标周围的敌方单位造成30/45/60/75/90(+100%总攻击力)(+40%法术强度)魔法伤害并减速30/35/40/45/50%，持续2.5秒。\n金色卡牌对目标造成15/22.5/30/37.5/45(+100%总攻击力)(+40%法术强度)魔法伤害并晕眩目标，持续1/1.25/1.5/1.75/2秒。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "点击技能开始洗牌，再次点击选择一张牌，选牌后下次攻击附加卡牌特效。\n蓝色卡牌对目标造成40/60/80/100/120(+100%总攻击力)(+40%法术强度)魔法伤害，并回复50/75/100/125/150法力值。\n红色卡牌对目标及目标周围的敌方单位造成30/45/60/75/90(+100%总攻击力)(+40%法术强度)魔法伤害并减速30/35/40/45/50%，持续2.5秒。\n金色卡牌对目标造成15/22.5/30/37.5/45(+100%总攻击力)(+40%法术强度)魔法伤害并晕眩目标，持续1/1.25/1.5/1.75/2秒。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为40/55/70/85/100。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "E",
         "name": "传送之门",
         "description": "引导结束后，崔斯特传送至任意目标位置。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/twistedfate_premonition.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/twistedfate_premonition.project_jade_16_18.png",
         "cooldown": "135 / 120 / 105 / 90 / 75 / 60",
         "cost": "80",
         "range": "20000",
-        "numericDetail": "被动：每4次攻击，崔斯特造成额外的55/80/105/130/155(+40%法术强度)魔法伤害。\n\n此外，他的攻击速度增加10/15/20/25/30%。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "被动：每4次攻击，崔斯特造成额外的55/80/105/130/155(+40%法术强度)魔法伤害。\n\n此外，他的攻击速度增加10/15/20/25/30%。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为20。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "命运",
         "description": "崔斯特为敌人算卜命运，短时间内显示所有敌方英雄的位置并使其减速。在此期间，传送之门的引导时间也会缩短。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/destiny_temp.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/destiny_temp.project_jade.png",
         "cooldown": "180 / 150 / 120 / 90 / 60 / 30",
         "cost": "150 / 125 / 100 / 75 / 50 / 25",
         "range": "20000",
-        "numericDetail": "显示地图上所有敌方英雄（包括潜行状态下）的位置，持续6/8/10秒。\n\n当命运技能被激活，再次使用该技能可以在引导1.5秒后将崔斯特传送到5500码以内的任何地方。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "显示地图上所有敌方英雄（包括潜行状态下）的位置，持续6/8/10秒。\n\n当命运技能被激活，再次使用该技能可以在引导1.5秒后将崔斯特传送到5500码以内的任何地方。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶冷却为180/150/120。不将原始字段直接套用为旧版逐级数值。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶消耗为150/125/100。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       }
     ]
   },
@@ -2114,8 +2159,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "奈德丽",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/nidalee",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60076.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_nidalee/skins/skin301/images/jade_nidalee_splash_centered_301.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60076.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_nidalee/skins/skin301/images/jade_nidalee_splash_centered_301.project_jade.jpg",
     "classicSplashName": "经典 奈德丽",
     "classicSplashId": "60076301",
     "classicSplashIsDefault": false,
@@ -2123,14 +2168,14 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60076301",
         "name": "经典 奈德丽",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_nidalee/skins/skin301/images/jade_nidalee_splash_centered_301.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_nidalee/skins/skin301/images/jade_nidalee_splash_centered_301.project_jade.jpg",
         "kind": "classic",
         "isDefault": false
       },
       {
         "id": "60076000",
         "name": "狂野女猎手",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_nidalee/skins/base/images/jade_nidalee_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_nidalee/skins/base/images/jade_nidalee_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -2157,7 +2202,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "寻觅",
         "description": "穿过草丛移动时会提升奈德丽的移动速度。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/nidalee_ontheprowl.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/nidalee_ontheprowl.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -2168,40 +2213,43 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "标枪投掷/推倒",
         "description": "人类形态下，奈德丽向她的目标投掷标枪，标枪会随着飞行距离造成额外伤害。美洲狮形态下，她的下一次攻击会试图对目标造成致命伤害，目标的生命值越低，造成的伤害越大。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/nidalee_javelinthrow.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/nidalee_javelinthrow.project_jade.png",
         "cooldown": "6",
         "cost": "50 / 60 / 70 / 80 / 90 / 75",
         "range": "1500",
-        "numericDetail": "人类形态：奈德丽投掷她的标枪，撞击目标造成 55/95/140/185/230(+65%法术强度)点魔法伤害。如果标枪投掷的行驶距离超过了奈德丽的攻击距离，那么标枪的伤害就会增长，在最远距离处的伤害可达137/237/350/462/575(+162.5%法术强度)魔法伤害（最小伤害值的250%）。\n\n美洲狮形态：奈德丽下次攻击将产生额外伤害，她的敌人生命值越低，造成伤害越大。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "人类形态：奈德丽投掷她的标枪，撞击目标造成 55/95/140/185/230(+65%法术强度)点魔法伤害。如果标枪投掷的行驶距离超过了奈德丽的攻击距离，那么标枪的伤害就会增长，在最远距离处的伤害可达137/237/350/462/575(+162.5%法术强度)魔法伤害（最小伤害值的250%）。\n\n美洲狮形态：奈德丽下次攻击将产生额外伤害，她的敌人生命值越低，造成伤害越大。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为50/60/70/80/90。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "丛林伏击/猛扑",
         "description": "人类形态下，奈德丽为粗心大意的对手布置一个伤害陷阱，在被踩到后，对目标造成伤害、显形并削减其护甲与魔法抗性。美洲狮形态下，奈德丽向前跃击，在落地时造成少量伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/nidalee_bushwhack.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/nidalee_bushwhack.project_jade.png",
         "cooldown": "18",
         "cost": "60 / 75 / 90 / 105 / 120 / 55",
         "range": "900",
-        "numericDetail": "人类形态：奈德丽放置一个陷阱，能够在2秒的持续时间里给不幸踩中陷阱的目标造成总共80/125/170/215/260(+40%法术强度)点魔法伤害，并将目标暴露，减低其20/25/30/35/40%的护甲和魔法抗性，持续8秒。陷阱最多持续4分钟。\n\n美洲狮形态：奈德丽向前突进，落地时对周围的敌人造成魔法伤害。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "人类形态：奈德丽放置一个陷阱，能够在2秒的持续时间里给不幸踩中陷阱的目标造成总共80/125/170/215/260(+40%法术强度)点魔法伤害，并将目标暴露，减低其20/25/30/35/40%的护甲和魔法抗性，持续8秒。陷阱最多持续4分钟。\n\n美洲狮形态：奈德丽向前突进，落地时对周围的敌人造成魔法伤害。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为60/75/90/105/120。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "E",
         "name": "野性奔腾/挥击",
         "description": "人类形态下，奈德丽引导美洲狮的灵魂治疗友方单位，并且短暂提升其攻击速度。美洲狮形态下，她对面前的敌人们发动快速爪击。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/nidalee_primalsurge.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/nidalee_primalsurge.project_jade.png",
         "cooldown": "10",
         "cost": "60 / 80 / 100 / 120 / 140 / 75",
         "range": "575",
-        "numericDetail": "人类形态：奈德丽治疗友方英雄50/85/120/155/190(+70%法术强度)点生命值，并提升他们20/30/40/50/60%攻击速度，持续7秒。\n\n美洲狮形态：奈德丽挥击她面前的敌人。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "人类形态：奈德丽治疗友方英雄50/85/120/155/190(+70%法术强度)点生命值，并提升他们20/30/40/50/60%攻击速度，持续7秒。\n\n美洲狮形态：奈德丽挥击她面前的敌人。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为60/80/100/120/140。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "美洲狮形态",
         "description": "奈德丽转变成美洲狮形态，获得全新技能并提高移动速度。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/nidalee_aspectofthecougar.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/nidalee_aspectofthecougar.project_jade.png",
         "cooldown": "4",
         "cost": "0",
         "range": "20",
@@ -2215,8 +2263,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "奥拉夫",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/olaf",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60002.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_olaf/skins/base/images/jade_olaf_splash_centered_0.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60002.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_olaf/skins/base/images/jade_olaf_splash_centered_0.project_jade.jpg",
     "classicSplashName": "狂战士",
     "classicSplashId": "60002000",
     "classicSplashIsDefault": true,
@@ -2224,7 +2272,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60002000",
         "name": "狂战士",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_olaf/skins/base/images/jade_olaf_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_olaf/skins/base/images/jade_olaf_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -2251,7 +2299,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "狂战之怒",
         "description": "奥拉夫的攻击速度会随着他的生命值减少而提升。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/olaf_passive.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/olaf_passive.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -2262,7 +2310,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "逆流",
         "description": "奥拉夫将一柄战斧投至目标区域，对它途经的单位们造成伤害，并降低其移动速度。如果奥拉夫捡起该战斧，则该技能冷却时间会缩短。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/olafaxethrow.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/olafaxethrow.project_jade.png",
         "cooldown": "8",
         "cost": "55 / 60 / 65 / 70 / 75",
         "range": "1000",
@@ -2273,7 +2321,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "W",
         "name": "残暴打击",
         "description": "奥拉夫基于自身的生命值提升攻击力，且生命偷取和法术吸血提升。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/olafviciousstrikes.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/olafviciousstrikes.project_jade.png",
         "cooldown": "12",
         "cost": "40 / 45 / 50 / 55 / 60",
         "range": "700",
@@ -2284,18 +2332,18 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "E",
         "name": "鲁莽挥击",
         "description": "奥拉夫以破釜沉舟之势发动进攻，对目标和自身造成真实伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/olafrecklessswing.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/olafrecklessswing.project_jade_16_18.png",
         "cooldown": "9 / 8 / 7 / 6 / 5",
         "cost": "0",
         "range": "325",
-        "numericDetail": "奥拉夫狂野地挥舞他的双斧，对他的目标造成70/115/160/205/250(+40%总攻击力)真实伤害。这个技能的消耗相当于此技能所造成伤害的30%，但如果此技能将目标击杀，则会返还一半的施法消耗。\n\n普通攻击会减少鲁莽挥击1秒冷却时间。",
+        "numericDetail": "奥拉夫狂野地挥舞他的双斧，对他的目标造成70/115/160/205/250(+40%总攻击力)真实伤害。这个技能的消耗相当于此技能所造成伤害的30%，但如果此技能将目标击杀，则会返还一半的施法消耗。\n\n普通攻击会减少鲁莽挥击1秒冷却时间。\n来源边界：OP.GG Classic 原始消耗为0；Riot Data Dragon 3.15.5 的历史资源说明为“消耗生命值”。两者来源不同，不能将0解释为不消耗生命，也不将历史消耗视为已验证的当前 Classic 消耗。",
         "numericVersion": "3.15.5"
       },
       {
         "key": "R",
         "name": "诸神黄昏",
         "description": "奥拉夫暂时免疫控制技能，且获得额外护甲、魔法抗性和穿甲。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/olafragnarok.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/olafragnarok.project_jade.png",
         "cooldown": "100",
         "cost": "100 / 75 / 50",
         "range": "400",
@@ -2309,8 +2357,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "辛吉德",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/singed",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60027.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_singed/skins/base/images/jade_singed_splash_centered_0.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60027.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_singed/skins/base/images/jade_singed_splash_centered_0.project_jade.jpg",
     "classicSplashName": "炼金术士",
     "classicSplashId": "60027000",
     "classicSplashIsDefault": true,
@@ -2318,7 +2366,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60027000",
         "name": "炼金术士",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_singed/skins/base/images/jade_singed_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_singed/skins/base/images/jade_singed_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -2345,7 +2393,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "强化壁垒",
         "description": "基于辛吉德的最大法力值来提升他的生命值。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/singed_empoweredbulwark.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/singed_empoweredbulwark.project_jade_16_18.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -2356,7 +2404,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "剧毒踪迹",
         "description": "辛吉德在身后留下剧毒踪迹，对经过踪迹的敌人造成持续伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/singed_acidspray.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/singed_acidspray.project_jade_16_18.png",
         "cooldown": null,
         "cost": "13",
         "range": "20",
@@ -2367,7 +2415,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "W",
         "name": "强力粘胶",
         "description": "将一瓶强力粘合剂扔到地上，对走过的敌人造成减速。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/chemman_megaadhesive.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/chemman_megaadhesive.project_jade_16_18.png",
         "cooldown": "14",
         "cost": "70 / 80 / 90 / 100 / 110",
         "range": "1000",
@@ -2378,18 +2426,19 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "E",
         "name": "过肩摔",
         "description": "对目标敌方单位造成伤害，并将其投掷到辛吉德身后的空中。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/singed_fling.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/singed_fling.project_jade_16_18.png",
         "cooldown": "10",
         "cost": "100 / 110 / 120 / 130 / 140 / 150",
         "range": "125",
-        "numericDetail": "辛吉德将一名敌人投掷到自己身后，造成80/125/170/215/260(+75%法术强度)魔法伤害。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "辛吉德将一名敌人投掷到自己身后，造成80/125/170/215/260(+75%法术强度)魔法伤害。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为100/110/120/130/140。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "疯狂药剂",
         "description": "辛吉德喝下精心炮制的化学药剂，大幅提高战斗属性。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/singed_chemicalrage.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/singed_chemicalrage.project_jade_16_18.png",
         "cooldown": "100",
         "cost": "150",
         "range": "20",
@@ -2403,8 +2452,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "瑞兹",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/ryze",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60013.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_ryze/skins/skin301/images/jade_ryze_splash_centered_301.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60013.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_ryze/skins/skin301/images/jade_ryze_splash_centered_301.project_jade.jpg",
     "classicSplashName": "经典 瑞兹",
     "classicSplashId": "60013301",
     "classicSplashIsDefault": false,
@@ -2412,14 +2461,14 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60013301",
         "name": "经典 瑞兹",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_ryze/skins/skin301/images/jade_ryze_splash_centered_301.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_ryze/skins/skin301/images/jade_ryze_splash_centered_301.project_jade.jpg",
         "kind": "classic",
         "isDefault": false
       },
       {
         "id": "60013000",
         "name": "流浪法师",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_ryze/skins/base/images/jade_ryze_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_ryze/skins/base/images/jade_ryze_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -2446,7 +2495,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "奥术专精",
         "description": "瑞兹的技能会减少其他所有技能的冷却时间。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/ryze_spellstrike.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/ryze_spellstrike.project_jade_16_18.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -2457,7 +2506,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "超负荷",
         "description": "被动 ：瑞兹永久获得冷却缩减。 主动 ：瑞兹释放一个能量法球，对目标造成 魔法伤害 。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/ryze_overload.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/ryze_overload.project_jade_16_18.png",
         "cooldown": "3.5",
         "cost": "60",
         "range": "600",
@@ -2468,34 +2517,37 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "W",
         "name": "符文禁锢",
         "description": "瑞兹用魔法控制一名敌人，将其 禁锢 并造成 魔法伤害 。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/ryze_poweroverwhelming.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/ryze_poweroverwhelming.project_jade_16_18.png",
         "cooldown": "14",
         "cost": "60 / 70 / 80 / 90 / 100 / 110",
         "range": "615",
-        "numericDetail": "将敌人禁锢0.75/1/1.25/1.5/1.75秒，并造成60/95/130/165/200(+60%法术强度)加上瑞兹4.5%的最大法力值(+4.5%法力值)的魔法伤害。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "将敌人禁锢0.75/1/1.25/1.5/1.75秒，并造成60/95/130/165/200(+60%法术强度)加上瑞兹4.5%的最大法力值(+4.5%法力值)的魔法伤害。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为60/70/80/90/100。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "E",
         "name": "法术涌动",
         "description": "瑞兹发射一道混乱魔法能量，可在敌人之间弹跳，造成 魔法伤害 并降低其 魔法抗性 。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/ryze_lightningflux.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/ryze_lightningflux.project_jade_16_18.png",
         "cooldown": "14",
         "cost": "60 / 70 / 80 / 90 / 100 / 110",
         "range": "615",
-        "numericDetail": "释放一个法球，在敌人或自己之间弹跳，最多弹跳5次。\n\n每次弹跳造成50/70/90/110/130(+35%法术强度)加上瑞兹1%(+1%法力值)的最大法力值的魔法伤害，并减少目标12/15/18/21/24魔法抗性，减抗效果持续5秒。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "释放一个法球，在敌人或自己之间弹跳，最多弹跳5次。\n\n每次弹跳造成50/70/90/110/130(+35%法术强度)加上瑞兹1%(+1%法力值)的最大法力值的魔法伤害，并减少目标12/15/18/21/24魔法抗性，减抗效果持续5秒。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为60/70/80/90/100。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "绝望之力",
         "description": "瑞兹暂时释放全部力量，短时间内使所有技能获得 范围伤害 、 法术吸血 和 移动速度 提升。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/ryze_desperatepower.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/ryze_desperatepower.project_jade_16_18.png",
         "cooldown": "70 / 60 / 50 / 40 / 30 / 20",
         "cost": "0",
         "range": "3000",
-        "numericDetail": "瑞兹引导无边的奥术能量，增加15/20/25%法术吸血，80的移动速度，并使他的法术产生50%的范围伤害，持续5/6/7秒。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "瑞兹引导无边的奥术能量，增加15/20/25%法术吸血，80的移动速度，并使他的法术产生50%的范围伤害，持续5/6/7秒。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶冷却为70/60/50。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       }
     ]
   },
@@ -2504,8 +2556,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "崔丝塔娜",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/tristana",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60018.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_tristana/skins/skin301/images/jade_tristana_splash_centered_301.project_jade_16_16.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60018.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_tristana/skins/skin301/images/jade_tristana_splash_centered_301.project_jade_16_16.jpg",
     "classicSplashName": "经典 崔丝塔娜",
     "classicSplashId": "60018301",
     "classicSplashIsDefault": false,
@@ -2513,14 +2565,14 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60018301",
         "name": "经典 崔丝塔娜",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_tristana/skins/skin301/images/jade_tristana_splash_centered_301.project_jade_16_16.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_tristana/skins/skin301/images/jade_tristana_splash_centered_301.project_jade_16_16.jpg",
         "kind": "classic",
         "isDefault": false
       },
       {
         "id": "60018000",
         "name": "麦林炮手",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_tristana/skins/base/images/jade_tristana_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_tristana/skins/base/images/jade_tristana_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -2547,7 +2599,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "瞄准",
         "description": "崔丝塔娜的攻击距离随等级提升。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/tristana_drawabead.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/tristana_drawabead.project_jade_16_18.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -2558,18 +2610,19 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "急速射击",
         "description": "崔丝塔娜迅速开火，短时间内提升攻击速度。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/tristana_headshot.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/tristana_headshot.project_jade_16_18.png",
         "cooldown": "20",
         "cost": "50 / 60 / 70 / 80 / 90 / 100",
         "range": "20",
-        "numericDetail": "提升崔丝塔娜攻击速度 30/45/60/75/90% 持续7秒。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "提升崔丝塔娜攻击速度 30/45/60/75/90% 持续7秒。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为50。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "火箭跳跃",
         "description": "崔丝塔娜朝地面开火，将自己弹射至目标区位置，落地时造成伤害并减速周围敌人。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/tristana_rendingshot.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/tristana_rendingshot.project_jade_16_18.png",
         "cooldown": "22 / 20 / 18 / 16 / 14",
         "cost": "80",
         "range": "900",
@@ -2580,18 +2633,19 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "E",
         "name": "爆炸射击",
         "description": "崔丝塔娜击杀一个单位时，她的炮弹会爆炸成弹片，对周围敌人造成伤害。可主动施放，对目标单位造成持续伤害，并减少其受到的治疗效果。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/tristana_explosiveshot.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/tristana_explosiveshot.project_jade_16_18.png",
         "cooldown": "16",
         "cost": "50 / 60 / 70 / 80 / 90 / 100",
         "range": "550",
-        "numericDetail": "被动：当敌人被崔丝塔娜击杀时会爆炸，对附近敌人造成50/75/100/125/150(+25%法术强度)魔法伤害。\n\n主动：爆炸射击撕裂目标，在5秒内减少目标50%治疗和生命回复，并持续造成一共110/150/190/230/270(+100%法术强度)魔法伤害。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "被动：当敌人被崔丝塔娜击杀时会爆炸，对附近敌人造成50/75/100/125/150(+25%法术强度)魔法伤害。\n\n主动：爆炸射击撕裂目标，在5秒内减少目标50%治疗和生命回复，并持续造成一共110/150/190/230/270(+100%法术强度)魔法伤害。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为50/60/70/80/90。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "毁灭射击",
         "description": "崔丝塔娜装填一颗巨型炮弹，朝敌方单位发射。造成魔法伤害并将目标击退。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/tristana_bustershot.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/tristana_bustershot.project_jade_16_18.png",
         "cooldown": "60",
         "cost": "100",
         "range": "550",
@@ -2605,8 +2659,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "泰达米尔",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/tryndamere",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60023.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_tryndamere/skins/base/images/jade_tryndamere_splash_centered_0.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60023.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_tryndamere/skins/base/images/jade_tryndamere_splash_centered_0.project_jade.jpg",
     "classicSplashName": "蛮族之王",
     "classicSplashId": "60023000",
     "classicSplashIsDefault": true,
@@ -2614,7 +2668,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60023000",
         "name": "蛮族之王",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_tryndamere/skins/base/images/jade_tryndamere_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_tryndamere/skins/base/images/jade_tryndamere_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -2641,7 +2695,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "战斗狂怒",
         "description": "泰达米尔获得额外的暴击几率，这个加成基于他的已损失生命值而提升。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/tryndamere_fury.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/tryndamere_fury.project_jade_16_18.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -2652,18 +2706,19 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "嗜血杀戮",
         "description": "泰达米尔对战斗极度饥渴，在击杀敌人和造成暴击时可获得怒气，怒气可提高其攻击力和暴击伤害。他可施放“嗜血杀戮”来消耗怒气并治疗自己。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/tryndamere_bloodlust.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/tryndamere_bloodlust.project_jade_16_18.png",
         "cooldown": "14 / 12.5 / 11 / 9.5 / 8 / 6.5",
         "cost": "0",
         "range": "400",
-        "numericDetail": "被动：泰达米尔嗜血成性，获得5/10/15/20/25攻击力，每损失1%生命值额外增加0.15/0.2/0.25/0.3/0.35攻击力。\n\n主动：泰达米尔消耗怒气，回复30/40/50/60/70(+30%法术强度)生命值，每1点怒气额外回复0.5/0.95/1.4/1.85/2.3(+120%法术强度)生命值。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "被动：泰达米尔嗜血成性，获得5/10/15/20/25攻击力，每损失1%生命值额外增加0.15/0.2/0.25/0.3/0.35攻击力。\n\n主动：泰达米尔消耗怒气，回复30/40/50/60/70(+30%法术强度)生命值，每1点怒气额外回复0.5/0.95/1.4/1.85/2.3(+120%法术强度)生命值。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为12。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "蔑视",
         "description": "泰达米尔嘲讽附近的英雄，讥笑他们的懦弱，从而降低他们的攻击力。那些转身逃离泰达米尔的的敌人还会被减速。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/48thslave_pacify.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/48thslave_pacify.project_jade_16_18.png",
         "cooldown": "14",
         "cost": "0",
         "range": "800",
@@ -2674,7 +2729,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "E",
         "name": "旋风斩",
         "description": "泰达米尔挥舞大剑冲向目标，对冲锋路线上所有敌人造成伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/tryndamere_slash.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/tryndamere_slash.project_jade_16_18.png",
         "cooldown": "9",
         "cost": "0",
         "range": "650",
@@ -2685,12 +2740,13 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "R",
         "name": "不灭怒火",
         "description": "泰达米尔对战斗的渴望极其强盛，承受再多的伤害也不会阵亡。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/tryndamere_endlessrage.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/tryndamere_endlessrage.project_jade_16_18.png",
         "cooldown": "130 / 115 / 100 / 85 / 70 / 55",
         "cost": "0",
         "range": "400",
-        "numericDetail": "泰达米尔在5秒内对死亡免疫，生命值最低为1，并瞬间获得50/75/100怒气。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "泰达米尔在5秒内对死亡免疫，生命值最低为1，并瞬间获得50/75/100怒气。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶冷却为110/100/90。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       }
     ]
   },
@@ -2699,8 +2755,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "费德提克",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/fiddlesticks",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60009.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_fiddlesticks/skins/skin301/images/jade_fiddlesticks_splash_centered_301.project_jade_16_16.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60009.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_fiddlesticks/skins/skin301/images/jade_fiddlesticks_splash_centered_301.project_jade_16_16.jpg",
     "classicSplashName": "经典 费德提克",
     "classicSplashId": "60009301",
     "classicSplashIsDefault": false,
@@ -2708,14 +2764,14 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60009301",
         "name": "经典 费德提克",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_fiddlesticks/skins/skin301/images/jade_fiddlesticks_splash_centered_301.project_jade_16_16.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_fiddlesticks/skins/skin301/images/jade_fiddlesticks_splash_centered_301.project_jade_16_16.jpg",
         "kind": "classic",
         "isDefault": false
       },
       {
         "id": "60009000",
         "name": "末日使者",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_fiddlesticks/skins/base/images/jade_fiddlesticks_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_fiddlesticks/skins/base/images/jade_fiddlesticks_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -2742,7 +2798,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "恐惧降临",
         "description": "附近敌人的魔法抗性降低。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/fiddlesticks_paranoia.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/fiddlesticks_paranoia.project_jade_16_18.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -2753,18 +2809,19 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "恐惧",
         "description": "恐惧目标，让目标陷入惊慌，在一定时间内逃离费德提克。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/fiddlesticks_terrify.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/fiddlesticks_terrify.project_jade_16_18.png",
         "cooldown": "15 / 14 / 13 / 12 / 11 / 10",
         "cost": "65 / 75 / 85 / 95 / 105 / 115",
         "range": "575",
-        "numericDetail": "恐惧目标1.25/1.5/1.75/2/2.25秒，使其只能在恐惧中漫无目的逃命。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "恐惧目标1.25/1.5/1.75/2/2.25秒，使其只能在恐惧中漫无目的逃命。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为15/14/13/12/11。不将原始字段直接套用为旧版逐级数值。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为65。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "吸取",
         "description": "费德提克偷取敌人的生命能量，造成持续伤害同时治疗自己。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/fiddlesticks_conjurescarecrow.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/fiddlesticks_conjurescarecrow.project_jade_16_18.png",
         "cooldown": "10 / 9 / 8 / 7 / 6",
         "cost": "80 / 90 / 100 / 110 / 120",
         "range": "650",
@@ -2775,18 +2832,19 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "E",
         "name": "黑暗之风",
         "description": "一阵黑暗之风袭向目标敌人，并在附近敌人之间弹射，对命中的敌人造成伤害并施加沉默效果。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/fiddlesticks_darkwind.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/fiddlesticks_darkwind.project_jade_16_18.png",
         "cooldown": "15 / 14 / 13 / 12 / 11 / 10",
         "cost": "50 / 70 / 90 / 110 / 130 / 150",
         "range": "750",
-        "numericDetail": "召唤乌鸦袭击目标，然后弹射附近敌人，每次弹射造成65/85/105/125/145(+45%法术强度)魔法伤害和1.2秒沉默效果。\n\n最多弹射5次，可以多次弹射同一个目标。对小兵和野怪会造成50%额外伤害。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "召唤乌鸦袭击目标，然后弹射附近敌人，每次弹射造成65/85/105/125/145(+45%法术强度)魔法伤害和1.2秒沉默效果。\n\n最多弹射5次，可以多次弹射同一个目标。对小兵和野怪会造成50%额外伤害。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为15/14/13/12/11。不将原始字段直接套用为旧版逐级数值。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为50/70/90/110/130。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "群鸦风暴",
         "description": "群鸦盘旋于费德提克身边，每秒对范围内的所有敌方单位造成伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/fiddlesticks_crowstorm.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/fiddlesticks_crowstorm.project_jade_16_18.png",
         "cooldown": "150 / 140 / 130",
         "cost": "150 / 200 / 250",
         "range": "800",
@@ -2800,8 +2858,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "阿利斯塔",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/alistar",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60012.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_alistar/skins/skin301/images/jade_alistar_splash_centered_301.project_jade_16_16.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60012.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_alistar/skins/skin301/images/jade_alistar_splash_centered_301.project_jade_16_16.jpg",
     "classicSplashName": "经典 阿利斯塔",
     "classicSplashId": "60012301",
     "classicSplashIsDefault": false,
@@ -2809,14 +2867,14 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60012301",
         "name": "经典 阿利斯塔",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_alistar/skins/skin301/images/jade_alistar_splash_centered_301.project_jade_16_16.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_alistar/skins/skin301/images/jade_alistar_splash_centered_301.project_jade_16_16.jpg",
         "kind": "classic",
         "isDefault": false
       },
       {
         "id": "60012000",
         "name": "牛头酋长",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_alistar/skins/base/images/jade_alistar_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_alistar/skins/base/images/jade_alistar_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -2843,7 +2901,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "践踏",
         "description": "每当阿利斯塔施放技能时，都会践踏周围单位和防御塔数秒，对他经过的单位造成伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/alistar_colossalstrength.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/alistar_colossalstrength.project_jade_16_18.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -2854,45 +2912,49 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "大地粉碎",
         "description": "阿利斯塔锤击地面，对附近所有敌人造成魔法伤害并将其击飞。落地时，敌人会被晕眩。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/alistar_pulverize.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/alistar_pulverize.project_jade_16_18.png",
         "cooldown": "17 / 16 / 15 / 14 / 13 / 12",
         "cost": "70 / 80 / 90 / 100 / 110 / 120",
         "range": "365",
-        "numericDetail": "阿利斯塔锤击地面，造成60/105/150/195/240(+50%法术强度)魔法伤害并将目标抛向空中，晕眩目标1.5秒。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "阿利斯塔锤击地面，造成60/105/150/195/240(+50%法术强度)魔法伤害并将目标抛向空中，晕眩目标1.5秒。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为17/16/15/14/13。不将原始字段直接套用为旧版逐级数值。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为70/80/90/100/110。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "野蛮冲撞",
         "description": "阿利斯塔冲撞目标，对其造成伤害和击退效果。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/alistar_headbutt.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/alistar_headbutt.project_jade_16_18.png",
         "cooldown": "14 / 13 / 12 / 11 / 10",
         "cost": "70 / 80 / 90 / 100 / 110 / 120",
         "range": "650",
-        "numericDetail": "阿利斯塔向一名敌人发出冲锋，用角将其撞退，造成55/110/165/220/275(+70%法术强度)魔法伤害，并在击退目标时晕眩他们。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "阿利斯塔向一名敌人发出冲锋，用角将其撞退，造成55/110/165/220/275(+70%法术强度)魔法伤害，并在击退目标时晕眩他们。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为70/80/90/100/110。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "E",
         "name": "凯旋怒吼",
         "description": "阿利斯塔发出战吼，为自己和附近友军回复生命值。附近有敌方单位阵亡时可减少冷却时间。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/alistar_triumphantroar.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/alistar_triumphantroar.project_jade_16_18.png",
         "cooldown": "12",
         "cost": "40 / 50 / 60 / 70 / 80 / 90",
         "range": "575",
-        "numericDetail": "回复自己60/90/120/150/180(+20%法术强度)生命值，并回复附近友军的生命值，但回复效果减半。附近每个敌方单位死亡都会减少2秒冷却时间。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "回复自己60/90/120/150/180(+20%法术强度)生命值，并回复附近友军的生命值，但回复效果减半。附近每个敌方单位死亡都会减少2秒冷却时间。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为40/50/60/70/80。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "坚定意志",
         "description": "阿利斯塔发出野性的咆哮，获得额外的攻击力，并移除身上所有控制效果，并且持续时间内所受的物理和魔法伤害将减少。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/alistar_ferocioushowl.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/alistar_ferocioushowl.project_jade_16_18.png",
         "cooldown": "120 / 100 / 80 / 120",
         "cost": "100",
         "range": "1",
-        "numericDetail": "阿利斯塔增加60/75/90物理攻击，移除身上所有的控制效果，受到的物理和魔法伤害减少50/60/70%，持续7秒。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "阿利斯塔增加60/75/90物理攻击，移除身上所有的控制效果，受到的物理和魔法伤害减少50/60/70%，持续7秒。\n来源边界：OP.GG Classic 原始冷却含4项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶冷却为120/100/80。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       }
     ]
   },
@@ -2901,8 +2963,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "拉莫斯",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/rammus",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60033.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_rammus/skins/base/images/jade_rammus_splash_centered_0.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60033.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_rammus/skins/base/images/jade_rammus_splash_centered_0.project_jade.jpg",
     "classicSplashName": "披甲龙龟",
     "classicSplashId": "60033000",
     "classicSplashIsDefault": true,
@@ -2910,7 +2972,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60033000",
         "name": "披甲龙龟",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_rammus/skins/base/images/jade_rammus_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_rammus/skins/base/images/jade_rammus_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -2937,7 +2999,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "锥刺甲壳",
         "description": "拉莫斯外壳强化后获得额外伤害，将自身一部分护甲转化为攻击力。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/rammus_scavengearmor.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/rammus_scavengearmor.project_jade_16_18.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -2948,7 +3010,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "动力冲刺",
         "description": "拉莫斯缩成球状，加速冲向敌人，对冲击的目标造成伤害和减速。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/rammus_powerball.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/rammus_powerball.project_jade_16_18.png",
         "cooldown": "10",
         "cost": "70 / 80 / 90 / 100 / 110",
         "range": "300",
@@ -2959,7 +3021,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "W",
         "name": "尖刺防御",
         "description": "拉莫斯进入防御状态，大幅提升护甲和魔法抗性，并反弹攻击者造成的伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/rammus_shellbash.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/rammus_shellbash.project_jade_16_18.png",
         "cooldown": "14",
         "cost": "40",
         "range": "300",
@@ -2970,7 +3032,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "E",
         "name": "破甲嘲讽",
         "description": "拉莫斯嘲讽一名敌方英雄或野怪，强制目标鲁莽地攻击自己，并暂时降低其护甲。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/rammus_scaledplating.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/rammus_scaledplating.project_jade_16_18.png",
         "cooldown": "12",
         "cost": "50 / 60 / 70 / 80 / 90",
         "range": "325",
@@ -2981,7 +3043,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "R",
         "name": "地动山摇",
         "description": "拉莫斯施放毁灭性的脉冲震荡波，对附近单位和建筑造成伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/rammus_recklesscharge.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/rammus_recklesscharge.project_jade_16_18.png",
         "cooldown": "60",
         "cost": "120",
         "range": "25000",
@@ -2995,8 +3057,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "悟空",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/wukong",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60062.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_wukong/skins/base/images/jade_wukong_splash_centered_0.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60062.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_wukong/skins/base/images/jade_wukong_splash_centered_0.project_jade.jpg",
     "classicSplashName": "齐天大圣",
     "classicSplashId": "60062000",
     "classicSplashIsDefault": true,
@@ -3004,7 +3066,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60062000",
         "name": "齐天大圣",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_wukong/skins/base/images/jade_wukong_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_wukong/skins/base/images/jade_wukong_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -3031,7 +3093,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "金刚不坏",
         "description": "孙悟空的护甲和魔法抗性会根据周围的敌方英雄数量而增加。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/wukongstoneskin.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/wukongstoneskin.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -3042,7 +3104,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "粉碎打击",
         "description": "孙悟空的下次攻击提升距离，造成额外伤害，并降低敌人的护甲。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/wukongcrushingblow.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/wukongcrushingblow.project_jade.png",
         "cooldown": "9 / 8 / 7 / 6 / 5",
         "cost": "40",
         "range": "250 / 275 / 300 / 325 / 350",
@@ -3053,18 +3115,19 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "W",
         "name": "真假猴王",
         "description": "孙悟空进入隐形状态并留下一具无法控制的分身，该分身会在一段较短延迟后对附近的敌人造成伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/wukongdecoy.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/wukongdecoy.project_jade.png",
         "cooldown": "18 / 16 / 14 / 12 / 10 / 8",
         "cost": "50 / 55 / 60 / 65 / 70",
         "range": "275",
-        "numericDetail": "孙悟空进入隐形状态，持续1.5秒，留下一个无法控制的替身。1.5秒后替身会对敌人造成70/115/160/205/250(+60%法术强度)魔法伤害。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "孙悟空进入隐形状态，持续1.5秒，留下一个无法控制的替身。1.5秒后替身会对敌人造成70/115/160/205/250(+60%法术强度)魔法伤害。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为18/16/14/12/10。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "E",
         "name": "腾云突击",
         "description": "孙悟空突进至一名目标敌人处，并变出最多2个分身，攻击附近目标。对每个击中的目标造成物理伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/wukongnimbusstrike.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/wukongnimbusstrike.project_jade.png",
         "cooldown": "8",
         "cost": "45 / 50 / 55 / 60 / 65",
         "range": "650",
@@ -3075,7 +3138,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "R",
         "name": "大闹天宫",
         "description": "孙悟空展开金箍棒，不停地旋转，对敌人造成伤害并将其击飞。在此期间，孙悟空的移动速度持续增加。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/wukongcyclone.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/wukongcyclone.project_jade.png",
         "cooldown": "120 / 105 / 90",
         "cost": "100",
         "range": "315",
@@ -3089,8 +3152,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "娑娜",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/sona",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60037.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_sona/skins/base/images/jade_sona_splash_centered_0.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60037.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_sona/skins/base/images/jade_sona_splash_centered_0.project_jade.jpg",
     "classicSplashName": "琴瑟仙女",
     "classicSplashId": "60037000",
     "classicSplashIsDefault": true,
@@ -3098,7 +3161,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60037000",
         "name": "琴瑟仙女",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_sona/skins/base/images/jade_sona_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_sona/skins/base/images/jade_sona_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -3125,7 +3188,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "能量和弦",
         "description": "每若干次技能，娑娜的下一次攻击造成额外魔法伤害并降低她的目标在若干秒内造成的伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/sona_powerchordcharged.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/sona_powerchordcharged.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -3136,45 +3199,49 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "英勇赞美诗",
         "description": "娑娜演奏英勇赞美诗，为附近的友方英雄提供额外伤害和法术强度。此外，施放该技能会射出音波，对相距最近的两名敌方英雄或野怪造成魔法伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/sona_hymnofvalor.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/sona_hymnofvalor.project_jade_16_18.png",
         "cooldown": "7",
         "cost": "65 / 70 / 75 / 80 / 85 / 90",
         "range": "825",
-        "numericDetail": "持续光环：增加附近友方英雄4/8/12/16/20攻击力和法术强度。\n\n激活：对最近的两个敌人（英雄优先）造成50/100/150/200/250(+50%法术强度)魔法伤害。\n\n能量和弦 - 断奏：造成双倍伤害。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "持续光环：增加附近友方英雄4/8/12/16/20攻击力和法术强度。\n\n激活：对最近的两个敌人（英雄优先）造成50/100/150/200/250(+50%法术强度)魔法伤害。\n\n能量和弦 - 断奏：造成双倍伤害。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为45/50/55/60/65。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "坚毅咏叹调",
         "description": "娑娜演奏坚毅咏叹调，为附近的友方英雄提供额外护甲和额外魔法抗性。此外，施放该技能会弹奏疗愈旋律，为娑娜和附近一位受伤的友军提供治疗。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/sona_ariaofperseverance.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/sona_ariaofperseverance.project_jade.png",
         "cooldown": "7",
         "cost": "65 / 70 / 75 / 80 / 85 / 90",
         "range": "1000",
-        "numericDetail": "持续光环：增加附近友军英雄6/7/8/9/10护甲和魔法抗性。\n\n激活：治疗自己和附近伤得最重的友方英雄40/55/70/85/100(+25%法术强度)点生命值，并提供额外的6/7/8/9/10护甲与魔法抗性加成，持续3秒。\n\n能量和弦 - 渐弱：减少目标20%的总伤害输出，持续3秒。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "持续光环：增加附近友军英雄6/7/8/9/10护甲和魔法抗性。\n\n激活：治疗自己和附近伤得最重的友方英雄40/55/70/85/100(+25%法术强度)点生命值，并提供额外的6/7/8/9/10护甲与魔法抗性加成，持续3秒。\n\n能量和弦 - 渐弱：减少目标20%的总伤害输出，持续3秒。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为60/65/70/75/80。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "E",
         "name": "迅捷奏鸣曲",
         "description": "娑娜弹奏迅捷奏鸣曲，为附近友军提供移动速度加成。此外，施放这个技能还会用一个爆发性的移速加成来激发附近的友军。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/sona_songofdiscord.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/sona_songofdiscord.project_jade_16_18.png",
         "cooldown": "7",
         "cost": "65 / 70 / 75 / 80 / 85 / 90",
         "range": "1000",
-        "numericDetail": "持续光环：提升附近友方英雄4/8/12/16/20的移动速度。\n\n激活：提升附近友方英雄4/6/8/10/12%(+每100法术强度增加4个百分点)的移动速度，持续1.5秒。\n\n能量和弦 - 节奏：减缓目标40%(+每100法术强度增加4个百分点)的移动速度，持续2秒。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "持续光环：提升附近友方英雄4/8/12/16/20的移动速度。\n\n激活：提升附近友方英雄4/6/8/10/12%(+每100法术强度增加4个百分点)的移动速度，持续1.5秒。\n\n能量和弦 - 节奏：减缓目标40%(+每100法术强度增加4个百分点)的移动速度，持续2秒。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为65。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "狂舞终乐章",
         "description": "娑娜弹奏终极和弦，迫使敌方英雄开始跳舞并对其造成魔法伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/sona_crescendo.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/sona_crescendo.project_jade.png",
         "cooldown": "170 / 150 / 130 / 110 / 90 / 70",
         "cost": "100",
         "range": "900",
-        "numericDetail": "用不可抵抗的音符迫使敌方英雄跳舞1.5秒，并造成150/250/350(+50%法术强度)魔法伤害。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "用不可抵抗的音符迫使敌方英雄跳舞1.5秒，并造成150/250/350(+50%法术强度)魔法伤害。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶冷却为140/120/100。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       }
     ]
   },
@@ -3183,8 +3250,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "墨菲特",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/malphite",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60054.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_malphite/skins/base/images/jade_malphite_splash_centered_0.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60054.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_malphite/skins/base/images/jade_malphite_splash_centered_0.project_jade.jpg",
     "classicSplashName": "熔岩巨兽",
     "classicSplashId": "60054000",
     "classicSplashIsDefault": true,
@@ -3192,7 +3259,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60054000",
         "name": "熔岩巨兽",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_malphite/skins/base/images/jade_malphite_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_malphite/skins/base/images/jade_malphite_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -3219,7 +3286,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "花岗岩护盾",
         "description": "墨菲特被一层可吸收伤害的岩石护盾保护。若墨菲特近期未受到攻击，这个效果将重置。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/malphite_graniteshield.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/malphite_graniteshield.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -3230,18 +3297,19 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "地震碎片",
         "description": "墨菲特使用原初元素魔法，将一块大地碎片从地下射向目标，命中时造成伤害并且偷取目标的移动速度。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/malphite_seismicshard.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/malphite_seismicshard.project_jade.png",
         "cooldown": "8",
         "cost": "70 / 75 / 80 / 85 / 90 / 95",
         "range": "625",
-        "numericDetail": "墨菲特将一块岩石碎片从地下射向目标，造成70/120/170/220/270(+60%法术强度)魔法伤害，并偷取目标14/17/20/23/26%移动速度，持续4秒。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "墨菲特将一块岩石碎片从地下射向目标，造成70/120/170/220/270(+60%法术强度)魔法伤害，并偷取目标14/17/20/23/26%移动速度，持续4秒。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为70/75/80/85/90。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "野蛮打击",
         "description": "墨菲特开始以巨大力量进行挥击，攻击对前方的所有敌人造成伤害。激活【野蛮打击】会使墨菲特的护甲和攻击力会在短时间内大幅提升。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/malphite_brutalstrikes.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/malphite_brutalstrikes.project_jade.png",
         "cooldown": "14",
         "cost": "50 / 55 / 60 / 65 / 70",
         "range": "400",
@@ -3252,7 +3320,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "E",
         "name": "大地震颤",
         "description": "墨菲特锤击地面，放射出冲击波对目标造成基础伤害，并根据墨菲特的护甲值附加额外伤害，同时暂时减低目标攻击速度。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/malphite_groundslam.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/malphite_groundslam.project_jade.png",
         "cooldown": "7",
         "cost": "50 / 55 / 60 / 65 / 70",
         "range": "400",
@@ -3263,12 +3331,13 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "R",
         "name": "势不可挡",
         "description": "墨菲特冲击目标区域，对所有敌人造成伤害和击飞。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/malphite_unstoppableforce.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/malphite_unstoppableforce.project_jade.png",
         "cooldown": "130 / 115 / 100 / 80",
         "cost": "100",
         "range": "1000",
-        "numericDetail": "墨菲特冲击目标区域，造成200/300/400(+100%法术强度)魔法伤害，并将所有敌人抛向空中1.5秒。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "墨菲特冲击目标区域，造成200/300/400(+100%法术强度)魔法伤害，并将所有敌人抛向空中1.5秒。\n来源边界：OP.GG Classic 原始冷却含4项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶冷却为130/115/100。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       }
     ]
   },
@@ -3277,8 +3346,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "内瑟斯",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/nasus",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60075.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_nasus/skins/skin301/images/jade_nasus_splash_centered_301.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60075.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_nasus/skins/skin301/images/jade_nasus_splash_centered_301.project_jade.jpg",
     "classicSplashName": "经典 内瑟斯",
     "classicSplashId": "60075301",
     "classicSplashIsDefault": false,
@@ -3286,14 +3355,14 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60075301",
         "name": "经典 内瑟斯",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_nasus/skins/skin301/images/jade_nasus_splash_centered_301.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_nasus/skins/skin301/images/jade_nasus_splash_centered_301.project_jade.jpg",
         "kind": "classic",
         "isDefault": false
       },
       {
         "id": "60075000",
         "name": "沙漠死神",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_nasus/skins/base/images/jade_nasus_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_nasus/skins/base/images/jade_nasus_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -3320,7 +3389,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "吞噬灵魂",
         "description": "内瑟会从敌人身上吸取灵魂能量，从而获得额外生命偷取。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/nasus_souleater.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/nasus_souleater.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -3331,7 +3400,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "汲魂痛击",
         "description": "内瑟斯打击他的敌人以造成伤害，并且如果敌人死于【汲魂痛击】，则永久增加下次【汲魂痛击】的伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/nasus_siphoningstrike.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/nasus_siphoningstrike.project_jade.png",
         "cooldown": "8 / 7 / 6 / 5 / 4",
         "cost": "20",
         "range": "255",
@@ -3342,7 +3411,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "W",
         "name": "枯萎",
         "description": "内瑟斯使目标陷入衰老，持续减少其移动速度和攻击速度。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/nasus_wither.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/nasus_wither.project_jade.png",
         "cooldown": "15 / 14 / 13 / 12 / 11",
         "cost": "100",
         "range": "700",
@@ -3353,18 +3422,19 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "E",
         "name": "灵魂烈焰",
         "description": "内瑟斯在目标区域施放灵魂烈焰，对范围内敌人造成伤害并削弱其护甲。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/nasus_spiritfire.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/nasus_spiritfire.project_jade.png",
         "cooldown": "12",
         "cost": "70 / 85 / 100 / 115 / 130 / 100",
         "range": "650",
-        "numericDetail": "内瑟斯在目标区域施放灵魂烈焰，造成初始55/95/135/175/215(+60%法术强度)魔法伤害。\n\n接下来的5秒，削弱区域内敌人20/25/30/35/40护甲并每秒造成11/19/27/35/43(+12%法术强度)魔法伤害。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "内瑟斯在目标区域施放灵魂烈焰，造成初始55/95/135/175/215(+60%法术强度)魔法伤害。\n\n接下来的5秒，削弱区域内敌人20/25/30/35/40护甲并每秒造成11/19/27/35/43(+12%法术强度)魔法伤害。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为70/85/100/115/130。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "死神降临",
         "description": "内瑟斯释放出强力的沙尘暴，席卷附近的敌人。风暴肆虐时，他会获得更高的生命值、攻击距离、施法距离，并汲取附近敌人的最大生命值，转化为持续时间内的额外伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/nasus_avatarofdeath.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/nasus_avatarofdeath.project_jade.png",
         "cooldown": "120",
         "cost": "100",
         "range": "400",
@@ -3378,8 +3448,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "阿木木",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/amumu",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60032.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_amumu/skins/base/images/jade_amumu_splash_centered_0.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60032.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_amumu/skins/base/images/jade_amumu_splash_centered_0.project_jade.jpg",
     "classicSplashName": "殇之木乃伊",
     "classicSplashId": "60032000",
     "classicSplashIsDefault": true,
@@ -3387,7 +3457,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60032000",
         "name": "殇之木乃伊",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_amumu/skins/base/images/jade_amumu_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_amumu/skins/base/images/jade_amumu_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -3414,7 +3484,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "诅咒之触",
         "description": "阿木木的普通攻击会减少目标的魔法抗性。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/dds/sadmummy_corpseexplosion.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/dds/sadmummy_corpseexplosion.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -3425,18 +3495,19 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "绷带牵引",
         "description": "阿木木向目标投掷粘稠的绷带，将自己拉向目标，并对目标造成伤害和眩晕效果。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/dds/sadmummy_bandageflinger.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/dds/sadmummy_bandageflinger.project_jade.png",
         "cooldown": "16 / 14 / 12 / 10 / 8",
         "cost": "80 / 90 / 100 / 110 / 120 / 130",
         "range": "1100",
-        "numericDetail": "向目标区域投掷粘稠的绷带，若击中敌人会将阿木木自己拉向目标，晕眩他们，造成80/130/180/230/280(+70%法术强度)魔法伤害。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "向目标区域投掷粘稠的绷带，若击中敌人会将阿木木自己拉向目标，晕眩他们，造成80/130/180/230/280(+70%法术强度)魔法伤害。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为80/90/100/110/120。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "绝望光环",
         "description": "附近的敌人陷入绝望，每秒损失一定百分比的最大生命值。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/dds/sadmummy_auraofdespair.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/dds/sadmummy_auraofdespair.project_jade.png",
         "cooldown": "1",
         "cost": "8",
         "range": "300",
@@ -3447,23 +3518,25 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "E",
         "name": "阿木木的愤怒",
         "description": "永久减少阿木木所受的物理伤害。主动施放时，阿木木可以发泄他的怒火，对周围的敌人造成伤害。阿木木每被攻击一次，该技能的冷却时间就会缩短。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/dds/sadmummy_tantrum.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/dds/sadmummy_tantrum.project_jade.png",
         "cooldown": "10 / 9 / 8 / 7 / 6 / 5",
         "cost": "35",
         "range": "350",
-        "numericDetail": "被动：减少阿木木受到的物理伤害2/4/6/8/10。\n\n主动：阿木木对周围的单位造成75/100/125/150/175(+50%法术强度)魔法伤害。每次阿木木被攻击，该技能的冷却时间减少0.5秒。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "被动：减少阿木木受到的物理伤害2/4/6/8/10。\n\n主动：阿木木对周围的单位造成75/100/125/150/175(+50%法术强度)魔法伤害。每次阿木木被攻击，该技能的冷却时间减少0.5秒。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为10/9/8/7/6。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "木乃伊之咒",
         "description": "阿木木用绷带将附近敌方单位通通缠住，对他们施加 诅咒 效果，并造成伤害和晕眩效果。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/dds/sadmummy_bandaidthingy.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/dds/sadmummy_bandaidthingy.project_jade.png",
         "cooldown": "150 / 130 / 110",
         "cost": "100 / 150 / 200 / 80",
         "range": "550",
-        "numericDetail": "阿木木用绷带将周围敌方单位通通缠住，造成 150/250/350(+80%法术强度)魔法伤害，并导致他们无法攻击或移动2秒。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "阿木木用绷带将周围敌方单位通通缠住，造成 150/250/350(+80%法术强度)魔法伤害，并导致他们无法攻击或移动2秒。\n来源边界：OP.GG Classic 原始消耗含4项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶消耗为100/150/200。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       }
     ]
   },
@@ -3472,8 +3545,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "厄运小姐",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/miss-fortune",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60021.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_missfortune/skins/skin301/images/jade_missfortune_splash_centered_0.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60021.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_missfortune/skins/skin301/images/jade_missfortune_splash_centered_0.project_jade.jpg",
     "classicSplashName": "经典 厄运小姐",
     "classicSplashId": "60021301",
     "classicSplashIsDefault": false,
@@ -3481,14 +3554,14 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60021301",
         "name": "经典 厄运小姐",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_missfortune/skins/skin301/images/jade_missfortune_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_missfortune/skins/skin301/images/jade_missfortune_splash_centered_0.project_jade.jpg",
         "kind": "classic",
         "isDefault": false
       },
       {
         "id": "60021000",
         "name": "赏金猎人",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_missfortune/skins/base/images/jade_missfortune_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_missfortune/skins/base/images/jade_missfortune_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -3515,7 +3588,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "大步流星",
         "description": "厄运小姐的移动速度得到提升，此效果一直持续到她在战斗中被击中。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/missfortune_strut.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/missfortune_strut.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -3526,18 +3599,19 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "一箭双雕",
         "description": "厄运小姐向一名敌人发射一颗子弹，对该敌人及其身后的一个目标造成伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/missfortune_doubleup.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/missfortune_doubleup.project_jade.png",
         "cooldown": "9 / 8 / 7 / 6 / 5 / 4",
         "cost": "70 / 75 / 80 / 85 / 90 / 95",
         "range": "650",
-        "numericDetail": "厄运小姐向敌方目标开枪，对目标造成25/60/95/130/165 (+75%总攻击力) 物理伤害，并对目标后面的另一名敌人造成120%的伤害，可触发攻击附带效果。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "厄运小姐向敌方目标开枪，对目标造成25/60/95/130/165 (+75%总攻击力) 物理伤害，并对目标后面的另一名敌人造成120%的伤害，可触发攻击附带效果。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为9/8/7/6/5。不将原始字段直接套用为旧版逐级数值。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为70/75/80/85/90。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "黑枪射击",
         "description": "厄运小姐攻击同一目标时，每次命中造成的伤害会被动提升。该技能可激活，提升厄运小姐的攻击速度，并使她的攻击降低目标受到的治疗效果。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/missfortune_impureshots.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/missfortune_impureshots.project_jade.png",
         "cooldown": "16",
         "cost": "50",
         "range": "600",
@@ -3548,23 +3622,25 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "E",
         "name": "枪林弹雨",
         "description": "厄运小姐向目标区域释放一阵弹雨，对敌人造成数波伤害并减缓其移动速度。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/missfortune_makeitrain.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/missfortune_makeitrain.project_jade.png",
         "cooldown": "15",
         "cost": "70 / 75 / 80 / 85 / 90 / 95",
         "range": "800",
-        "numericDetail": "厄运小姐朝空中发射出成百上千颗子弹，0.5秒后子弹如骤雨般击打到目的地，造成90/145/200/255/310(+80%法术强度)魔法伤害，持续2秒，减速击中敌人20/28/36/44/52%，持续1秒。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "厄运小姐朝空中发射出成百上千颗子弹，0.5秒后子弹如骤雨般击打到目的地，造成90/145/200/255/310(+80%法术强度)魔法伤害，持续2秒，减速击中敌人20/28/36/44/52%，持续1秒。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为80。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "弹幕时间",
         "description": "厄运小姐向面前的锥形范围内引导一阵子弹风暴，对敌人造成大量伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/missfortune_bullettime.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/missfortune_bullettime.project_jade.png",
         "cooldown": "120 / 110 / 100 / 90 / 80 / 70",
         "cost": "100",
         "range": "25000",
-        "numericDetail": "厄运小姐向前方锥形地带扫射出持续2秒的强力弹幕，每颗子弹造成65/95/125(+35%额外攻击力)(+20%法术强度)点物理伤害。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "厄运小姐向前方锥形地带扫射出持续2秒的强力弹幕，每颗子弹造成65/95/125(+35%额外攻击力)(+20%法术强度)点物理伤害。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶冷却为120/110/100。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       }
     ]
   },
@@ -3573,8 +3649,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "克格莫",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/kog-maw",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60096.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/kogmaw/skins/skin65/images/kogmaw_splash_centered_65.skins_kogmaw_skin65.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60096.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/kogmaw/skins/skin65/images/kogmaw_splash_centered_65.skins_kogmaw_skin65.jpg",
     "classicSplashName": "至臻 经典 克格莫男爵",
     "classicSplashId": "60096065",
     "classicSplashIsDefault": false,
@@ -3582,14 +3658,14 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60096065",
         "name": "至臻 经典 克格莫男爵",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/kogmaw/skins/skin65/images/kogmaw_splash_centered_65.skins_kogmaw_skin65.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/kogmaw/skins/skin65/images/kogmaw_splash_centered_65.skins_kogmaw_skin65.jpg",
         "kind": "classic",
         "isDefault": false
       },
       {
         "id": "60096000",
         "name": "深渊巨口",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_kogmaw/skins/base/images/jade_kogmaw_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_kogmaw/skins/base/images/jade_kogmaw_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -3616,7 +3692,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "来自艾卡西亚的惊喜",
         "description": "在死亡后，克格莫的身体将启动一种连锁反应，并于若干秒之后爆炸，从而对周围的敌人造成伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/kogmaw_icathiansurprise.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/kogmaw_icathiansurprise.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -3627,7 +3703,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "腐蚀唾液",
         "description": "克格莫发射一团腐蚀性物质，对目标造成魔法伤害，并腐蚀目标的护甲和魔法抗性。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/kogmaw_causticspittle.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/kogmaw_causticspittle.project_jade.png",
         "cooldown": "8",
         "cost": "60",
         "range": "625",
@@ -3638,7 +3714,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "W",
         "name": "生化弹幕",
         "description": "克格莫的攻击距离得到提升，并且能够对目标造成基于目标最大生命值的额外魔法伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/kogmaw_bioarcanebarrage.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/kogmaw_bioarcanebarrage.project_jade.png",
         "cooldown": "17",
         "cost": "50",
         "range": "530",
@@ -3649,7 +3725,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "E",
         "name": "虚空淤泥",
         "description": "克格莫抛射出一团特殊的分泌物，对经过或停留在分泌物上的敌人造成伤害和减速效果。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/kogmaw_voidooze.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/kogmaw_voidooze.project_jade.png",
         "cooldown": "12",
         "cost": "80 / 90 / 100 / 110 / 120",
         "range": "1200",
@@ -3660,12 +3736,13 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "R",
         "name": "活体大炮",
         "description": "克格莫向远处发射一枚活体炮弹，对命中的目标造成伤害并将其显形。此外，在一段时间内连续施放活体大炮技能会消耗更多的法力值。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/kogmaw_livingartillery.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/kogmaw_livingartillery.project_jade.png",
         "cooldown": "2 / 1.5 / 1 / 2",
         "cost": "40",
         "range": "1400 / 1700 / 2000",
-        "numericDetail": "克格'莫发射一枚射程极远的活体炮弹。在短暂的延迟后，炮弹将着陆，对命中的所有敌人造成 80/120/160(+50%额外攻击力)(+30%法术强度)魔法伤害，并将他们暴露4秒（对英雄造成 125% 的额外伤害）。\n\n在6秒内连续使用活体大炮的话，会消耗额外的 （数值未在旧版接口公开） 点法力值（最多额外消耗 400 点）。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "克格'莫发射一枚射程极远的活体炮弹。在短暂的延迟后，炮弹将着陆，对命中的所有敌人造成 80/120/160(+50%额外攻击力)(+30%法术强度)魔法伤害，并将他们暴露4秒（对英雄造成 125% 的额外伤害）。\n\n在6秒内连续使用活体大炮的话，会消耗额外的 （数值未在旧版接口公开） 点法力值（最多额外消耗 400 点）。\n来源边界：OP.GG Classic 原始冷却含4项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶冷却为2/1.5/1。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       }
     ]
   },
@@ -3674,8 +3751,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "凯尔",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/kayle",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60010.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_kayle/skins/skin302/images/jade_kayle_splash_centered_302.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60010.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_kayle/skins/skin302/images/jade_kayle_splash_centered_302.project_jade.jpg",
     "classicSplashName": "经典 2012 凯尔",
     "classicSplashId": "60010302",
     "classicSplashIsDefault": false,
@@ -3683,14 +3760,14 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60010302",
         "name": "经典 2012 凯尔",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_kayle/skins/skin302/images/jade_kayle_splash_centered_302.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_kayle/skins/skin302/images/jade_kayle_splash_centered_302.project_jade.jpg",
         "kind": "classic",
         "isDefault": false
       },
       {
         "id": "60010000",
         "name": "审判天使",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_kayle/skins/skin302/images/jade_kayle_splash_centered_302.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_kayle/skins/skin302/images/jade_kayle_splash_centered_302.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -3717,7 +3794,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "神圣狂热",
         "description": "凯尔获得相当于自身一定百分比法术强度的攻击力，并获得相当于自身一定百分比攻击力的法术强度。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/kayle_eyeforaneye.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/kayle_eyeforaneye.project_jade_16_18.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -3728,40 +3805,43 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "清算",
         "description": "凯尔轰击目标，造成伤害，降低其移动速度，并施加一层圣焰。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/kayle_reckoning.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/kayle_reckoning.project_jade_16_18.png",
         "cooldown": "8",
         "cost": "70 / 75 / 80 / 85 / 90 / 95",
         "range": "625",
-        "numericDetail": "引爆一个目标，造成60/110/160/210/260(+100%额外攻击力)(+100%法术强度)魔法伤害，减少目标35/40/45/50/55%的移动速度，持续4秒，并施加一层圣焰效果。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "引爆一个目标，造成60/110/160/210/260(+100%额外攻击力)(+100%法术强度)魔法伤害，减少目标35/40/45/50/55%的移动速度，持续4秒，并施加一层圣焰效果。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为70/75/80/85/90。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "神圣祝福",
         "description": "凯尔祝福一名友军英雄，提升其移动速度并为其回复生命值。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/kayle_angelicembrace.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/kayle_angelicembrace.project_jade_16_18.png",
         "cooldown": "10",
         "cost": "60 / 65 / 70 / 75 / 80 / 85",
         "range": "700",
-        "numericDetail": "祝福一名友军英雄，为目标恢复60/105/150/195/240(+35%法术强度)生命值，并让目标的移动速度提高18/21/24/27/30%，加速效果持续3秒。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "祝福一名友军英雄，为目标恢复60/105/150/195/240(+35%法术强度)生命值，并让目标的移动速度提高18/21/24/27/30%，加速效果持续3秒。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为60/70/80/90/100。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "E",
         "name": "正义之怒",
         "description": "凯尔的攻击距离提升，普通攻击会对目标及其附近的敌人造成额外伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/kayle_righteousfury.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/kayle_righteousfury.project_jade_16_18.png",
         "cooldown": "20 / 19 / 18 / 17 / 16 / 15",
         "cost": "65",
         "range": "400",
-        "numericDetail": "凯尔将射程提高400，持续10秒，并且每次普通攻击会造成额外的20/30/40/50/60(+40%法术强度)魔法伤害。属于攻击特效。\n\n目标周围的敌人会受到20/30/40/50/60(+（动态数值未在旧版接口公开）)(+40%法术强度) 魔法伤害。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "凯尔将射程提高400，持续10秒，并且每次普通攻击会造成额外的20/30/40/50/60(+40%法术强度)魔法伤害。属于攻击特效。\n\n目标周围的敌人会受到20/30/40/50/60(+（动态数值未在旧版接口公开）)(+40%法术强度) 魔法伤害。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为16。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "神圣庇护",
         "description": "让凯尔的目标沐浴在一道圣光之中，在短时间内免疫所有类型的伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/kayle_intervention.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/kayle_intervention.project_jade_16_18.png",
         "cooldown": "90 / 75 / 60",
         "cost": "100 / 75 / 50",
         "range": "1200",
@@ -3775,8 +3855,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "基兰",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/zilean",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60026.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_zilean/skins/base/images/jade_zilean_splash_centered_0.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60026.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_zilean/skins/base/images/jade_zilean_splash_centered_0.project_jade.jpg",
     "classicSplashName": "时光守护者",
     "classicSplashId": "60026000",
     "classicSplashIsDefault": true,
@@ -3784,7 +3864,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60026000",
         "name": "时光守护者",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_zilean/skins/base/images/jade_zilean_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_zilean/skins/base/images/jade_zilean_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -3811,7 +3891,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "强化学习",
         "description": "基兰和友军获得额外经验。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/zilean_slow.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/zilean_slow.project_jade_16_18.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -3822,18 +3902,19 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "定时炸弹",
         "description": "基兰在目标身上放置一枚炸弹，它在到期后对附近的敌人造成伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/zilean_chronoblast.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/zilean_chronoblast.project_jade_16_18.png",
         "cooldown": "10",
         "cost": "70 / 85 / 100 / 115 / 130 / 145",
         "range": "650",
-        "numericDetail": "基兰在目标单位上安置一个时间炸弹，4秒后爆炸，对附近敌人造成90/145/200/260/320(+90%法术强度)魔法伤害。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "基兰在目标单位上安置一个时间炸弹，4秒后爆炸，对附近敌人造成90/145/200/260/320(+90%法术强度)魔法伤害。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为70/85/100/115/130。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "穿梭未来",
         "description": "基兰缩短自己其他技能的冷却时间。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/zilean_recall.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/zilean_recall.project_jade_16_18.png",
         "cooldown": "18 / 15 / 12 / 9 / 6",
         "cost": "50",
         "range": "600",
@@ -3844,7 +3925,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "E",
         "name": "时光发条",
         "description": "基兰提升友方英雄的移动速度或减速敌方英雄。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/zilean_haste.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/zilean_haste.project_jade_16_18.png",
         "cooldown": "20",
         "cost": "80",
         "range": "650",
@@ -3855,7 +3936,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "R",
         "name": "时光倒流",
         "description": "基兰对自己或友方英雄施放一个可提供保护的时间符文。若目标受到致命伤害，则将目标时光倒流并进行治疗。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/zilean_timetwister.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/zilean_timetwister.project_jade_16_18.png",
         "cooldown": "180",
         "cost": "125 / 150 / 175",
         "range": "900",
@@ -3869,8 +3950,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "沃里克",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/warwick",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60019.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_warwick/skins/skin301/images/jade_warwick_splash_centered_301.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60019.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_warwick/skins/skin301/images/jade_warwick_splash_centered_301.project_jade.jpg",
     "classicSplashName": "经典 沃里克",
     "classicSplashId": "60019301",
     "classicSplashIsDefault": false,
@@ -3878,14 +3959,14 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60019301",
         "name": "经典 沃里克",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_warwick/skins/skin301/images/jade_warwick_splash_centered_301.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_warwick/skins/skin301/images/jade_warwick_splash_centered_301.project_jade.jpg",
         "kind": "classic",
         "isDefault": false
       },
       {
         "id": "60019000",
         "name": "嗜血猎手",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_warwick/skins/base/images/jade_warwick_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_warwick/skins/base/images/jade_warwick_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -3912,7 +3993,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "血之饥渴",
         "description": "沃里克的每次攻击都会为他恢复生命值。每次对同一目标连续发起攻击都会提高生命偷取的数值。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/warwick_innerhunger.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/warwick_innerhunger.project_jade_16_18.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -3923,29 +4004,31 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "嗜血攻击",
         "description": "沃里克撕咬一名敌方单位并恢复生命值。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/warwick_severarmor.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/warwick_severarmor.project_jade_16_18.png",
         "cooldown": "10 / 9 / 8 / 7 / 6 / 5",
         "cost": "70 / 80 / 90 / 100 / 110",
         "range": "400",
-        "numericDetail": "猛击敌人，造成75/125/175/225/275(+100%法术强度)和目标8/10/12/14/16%(+100%法术强度)最大生命值之间更大的魔法伤害（对怪物只能造成固定伤害），并治疗自己，治疗效果为他造成的伤害的80%。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "猛击敌人，造成75/125/175/225/275(+100%法术强度)和目标8/10/12/14/16%(+100%法术强度)最大生命值之间更大的魔法伤害（对怪物只能造成固定伤害），并治疗自己，治疗效果为他造成的伤害的80%。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为10/9/8/7/6。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "猎手怒吼",
         "description": "沃里克发出一阵咆哮，使所有友方英雄的攻击速度在短时间内提高。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/warwick_frenziedstrikes.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/warwick_frenziedstrikes.project_jade_16_18.png",
         "cooldown": "30 / 27 / 24 / 21 / 18 / 15",
         "cost": "35",
         "range": "1250",
-        "numericDetail": "沃里克发出刺耳怒吼，增加自己40/50/60/70/80%的攻击速度，同时对附近友方英雄带来一半的加速效果，持续10秒。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "沃里克发出刺耳怒吼，增加自己40/50/60/70/80%的攻击速度，同时对附近友方英雄带来一半的加速效果，持续10秒。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为24/22/20/18/16。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "E",
         "name": "血迹追踪",
         "description": "沃里克能够被动感知周围虚弱的敌方英雄。鲜血的气味会使他陷入狂怒，获得惊人的移动速度。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/warwick_bloodscent.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/warwick_bloodscent.project_jade_16_18.png",
         "cooldown": null,
         "cost": "0",
         "range": "1500 / 2300 / 3100 / 3900 / 4700",
@@ -3956,12 +4039,13 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "R",
         "name": "无尽束缚",
         "description": "沃里克扑向一名敌方英雄，在数秒内将其压制并造成魔法伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/warwick_infiniteduress.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/warwick_infiniteduress.project_jade_16_18.png",
         "cooldown": "90 / 80 / 70",
         "cost": "100 / 125 / 150 / 100",
         "range": "625",
-        "numericDetail": "沃里克扑向敌方英雄，并将目标压制1.8秒。在此期间，沃里克会向目标发起5次攻击，并造成总共250/335/420(+200%额外攻击力)点魔法伤害（触发5次攻击特效）。\n\n沃里克在持续时间内获得30%额外的生命偷取。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "沃里克扑向敌方英雄，并将目标压制1.8秒。在此期间，沃里克会向目标发起5次攻击，并造成总共250/335/420(+200%额外攻击力)点魔法伤害（触发5次攻击特效）。\n\n沃里克在持续时间内获得30%额外的生命偷取。\n来源边界：OP.GG Classic 原始消耗含4项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶消耗为100/125/150。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       }
     ]
   },
@@ -3970,8 +4054,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "蕾欧娜",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/leona",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60089.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_leona/skins/base/images/jade_leona_splash_centered_0.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60089.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_leona/skins/base/images/jade_leona_splash_centered_0.project_jade.jpg",
     "classicSplashName": "曙光女神",
     "classicSplashId": "60089000",
     "classicSplashIsDefault": true,
@@ -3979,7 +4063,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60089000",
         "name": "曙光女神",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_leona/skins/base/images/jade_leona_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_leona/skins/base/images/jade_leona_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -4006,7 +4090,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "日光",
         "description": "伤害类技能将对敌人施加日光效果。当友方英雄对这些目标造成伤害时，会消耗该日光减益以造成额外的伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/leonasunlight.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/leonasunlight.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -4017,7 +4101,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "破晓之盾",
         "description": "蕾欧娜用盾进行下次普通攻击，造成额外魔法伤害并晕眩目标。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/leonashieldofdaybreak.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/leonashieldofdaybreak.project_jade.png",
         "cooldown": "11 / 10 / 9 / 8 / 7",
         "cost": "45 / 50 / 55 / 60 / 65",
         "range": "100",
@@ -4028,7 +4112,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "W",
         "name": "日蚀",
         "description": "蕾欧娜举起盾牌，获得护甲和魔法抗性。第一段持续时间结束时，如果附近有敌人，则蕾欧娜对其造成魔法伤害，并延长此效果的持续时间。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/leonasolarbarrier.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/leonasolarbarrier.project_jade.png",
         "cooldown": "14",
         "cost": "60",
         "range": "450",
@@ -4039,7 +4123,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "E",
         "name": "天顶之刃",
         "description": "蕾欧娜投掷一束日光，对直线上的所有敌人造成魔法伤害。当效果消失时，最后一个被命中的敌方英雄将被短暂定身，同时蕾欧娜会冲向该英雄。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/leonazenithblade.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/leonazenithblade.project_jade.png",
         "cooldown": "13 / 12 / 11 / 10 / 9",
         "cost": "60",
         "range": "875",
@@ -4050,12 +4134,13 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "R",
         "name": "日炎耀斑",
         "description": "蕾欧娜召唤一道太阳光束，对区域内的敌人造成伤害。区域中心的敌人会被晕眩，外围的敌人会被减速。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/leonasolarflare.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/leonasolarflare.project_jade_16_18.png",
         "cooldown": "90 / 75 / 60 / 90 / 150",
         "cost": "100 / 150 / 200",
         "range": "1200",
-        "numericDetail": "召唤一道太阳光束，造成150/250/350(+80%法术强度)魔法伤害并减少敌人80%移动速度，持续1.5秒。处于区域正中的敌人会受到晕眩效果。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "召唤一道太阳光束，造成150/250/350(+80%法术强度)魔法伤害并减少敌人80%移动速度，持续1.5秒。处于区域正中的敌人会受到晕眩效果。\n来源边界：OP.GG Classic 原始冷却含5项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶冷却为90/75/60。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       }
     ]
   },
@@ -4064,8 +4149,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "斯卡纳",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/skarner",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60072.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_skarner/skins/base/images/jade_skarner_rework_splash_centered_0.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60072.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_skarner/skins/base/images/jade_skarner_rework_splash_centered_0.project_jade.jpg",
     "classicSplashName": "经典 斯卡纳",
     "classicSplashId": "60072301",
     "classicSplashIsDefault": false,
@@ -4073,14 +4158,14 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60072301",
         "name": "经典 斯卡纳",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_skarner/skins/base/images/jade_skarner_rework_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_skarner/skins/base/images/jade_skarner_rework_splash_centered_0.project_jade.jpg",
         "kind": "classic",
         "isDefault": false
       },
       {
         "id": "60072000",
         "name": "水晶先锋",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_skarner/skins/base/images/jade_skarner_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_skarner/skins/base/images/jade_skarner_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -4107,7 +4192,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "水晶能量",
         "description": "普通攻击使所有技能的冷却时间缩短。这个效果在对抗英雄时会更强。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/skarnerenergize.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/skarnerenergize.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -4118,18 +4203,19 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "水晶横扫",
         "description": "斯卡纳用爪子猛击周围敌军，对附近所有敌人造成物理伤害。如果斯卡纳击中了一个目标，身上就会暂时充盈水晶能量。充盈水晶能量期间，斯卡纳的【水晶横扫】将造成额外魔法伤害，并减速所有命中的目标。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/skarnervirulentslash.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/skarnervirulentslash.project_jade.png",
         "cooldown": "3.5",
         "cost": "20 / 22 / 24 / 26 / 28 / 30",
         "range": "325",
-        "numericDetail": "斯卡纳对附近所有敌人造成25/40/55/70/85(+80%额外攻击力)物理伤害，若击中一个目标，则斯卡纳可自我充能5秒，持续5秒。\n\n当斯卡纳充能时，下次水晶横扫将造成额外24/36/48/60/72(+40%法术强度)魔法伤害，并使敌人减速20/25/30/35/40%，持续2秒。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "斯卡纳对附近所有敌人造成25/40/55/70/85(+80%额外攻击力)物理伤害，若击中一个目标，则斯卡纳可自我充能5秒，持续5秒。\n\n当斯卡纳充能时，下次水晶横扫将造成额外24/36/48/60/72(+40%法术强度)魔法伤害，并使敌人减速20/25/30/35/40%，持续2秒。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为20/22/24/26/28。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "水晶蝎甲",
         "description": "斯卡纳获得护盾，在护盾存在期间，他的移动速度和攻击速度提高。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/skarnerexoskeleton.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/skarnerexoskeleton.project_jade.png",
         "cooldown": "14",
         "cost": "60",
         "range": "700",
@@ -4140,7 +4226,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "E",
         "name": "晶体破碎",
         "description": "斯卡纳召唤一股水晶能量，对命中的敌人造成伤害并将其标记。攻击敌人会消耗标记，为斯卡纳治疗生命值。直接击杀目标同样可触发该治疗效果。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/skarnerfracture.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/skarnerfracture.project_jade.png",
         "cooldown": "10",
         "cost": "50 / 55 / 60 / 65 / 70",
         "range": "800",
@@ -4151,12 +4237,13 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "R",
         "name": "晶状毒刺",
         "description": "斯卡纳压制一名敌方英雄并对其造成魔法伤害。在此期间，斯卡纳可以自由移动并拖拽目标。效果结束时，斯卡纳会对目标造成额外伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/skarnerimpale.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/skarnerimpale.project_jade.png",
         "cooldown": "130 / 120 / 110 / 100",
         "cost": "100 / 125 / 150",
         "range": "350",
-        "numericDetail": "斯卡纳压制敌人1.75秒，并造成100/150/200(+50%法术强度)魔法伤害。在此期间，斯卡纳能自由移动并拖拽敌人。此效果结束后，斯卡纳的目标将会受到额外100/150/200(+50%法术强度)魔法伤害。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "斯卡纳压制敌人1.75秒，并造成100/150/200(+50%法术强度)魔法伤害。在此期间，斯卡纳能自由移动并拖拽敌人。此效果结束后，斯卡纳的目标将会受到额外100/150/200(+50%法术强度)魔法伤害。\n来源边界：OP.GG Classic 原始冷却含4项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶冷却为130/120/110。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       }
     ]
   },
@@ -4165,8 +4252,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "卡尔萨斯",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/karthus",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60030.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_karthus/skins/skin301/images/jade_karthus_splash_centered_301.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60030.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_karthus/skins/skin301/images/jade_karthus_splash_centered_301.project_jade.jpg",
     "classicSplashName": "经典 卡尔萨斯",
     "classicSplashId": "60030301",
     "classicSplashIsDefault": false,
@@ -4174,14 +4261,14 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60030301",
         "name": "经典 卡尔萨斯",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_karthus/skins/skin301/images/jade_karthus_splash_centered_301.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_karthus/skins/skin301/images/jade_karthus_splash_centered_301.project_jade.jpg",
         "kind": "classic",
         "isDefault": false
       },
       {
         "id": "60030000",
         "name": "死亡颂唱者",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_karthus/skins/base/images/jade_karthus_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_karthus/skins/base/images/jade_karthus_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -4208,7 +4295,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "死亡契约",
         "description": "在死亡时，卡尔萨斯会化为一个灵体，能够在死亡状态下继续施放技能，持续一小段时间。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/karthus_defied.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/karthus_defied.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -4219,18 +4306,19 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "荒芜",
         "description": "卡尔萨斯在目标区域释放一次有延迟的爆炸魔法，对区域内的所有敌人造成伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/karthus_laywaste.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/karthus_laywaste.project_jade_16_18.png",
         "cooldown": "1",
         "cost": "20 / 26 / 32 / 38 / 44 / 50",
         "range": "875",
-        "numericDetail": "卡尔萨斯在指定地点施放一个印记，0.5秒后对该区域敌人造成40/60/80/100/120(+30%法术强度)魔法伤害，若只有一个敌人受伤害则造成双倍伤害。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "卡尔萨斯在指定地点施放一个印记，0.5秒后对该区域敌人造成40/60/80/100/120(+30%法术强度)魔法伤害，若只有一个敌人受伤害则造成双倍伤害。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为20/26/32/38/44。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "痛苦之墙",
         "description": "卡尔萨斯创造一道可通过的魔能之墙。所有穿过墙体的敌方单位都会被暂时降低移动速度和魔法抗性。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/karthus_wallofpain.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/karthus_wallofpain.project_jade_16_18.png",
         "cooldown": "18",
         "cost": "100",
         "range": "1000",
@@ -4241,23 +4329,25 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "E",
         "name": "亵渎",
         "description": "卡尔萨斯被动地从他的猎物那里窃取法力，每杀死一个敌人就会获得法力。卡尔萨斯也可以转化这种力量，用猎物的灵魂环绕自身，对附近的敌人造成伤害，但会急速消耗他自己的法力。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/karthus_defile.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/karthus_defile.project_jade_16_18.png",
         "cooldown": "0.5",
         "cost": "30 / 42 / 54 / 66 / 78 / 90",
         "range": "550",
-        "numericDetail": "关闭：卡尔萨斯杀死单位可以使他回复20/27/34/41/48法力值。\n\n开启：每秒消耗（数值未在旧版接口公开）法力值对周围敌人造成30/50/70/90/110(+20%法术强度)魔法伤害。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "关闭：卡尔萨斯杀死单位可以使他回复20/27/34/41/48法力值。\n\n开启：每秒消耗（数值未在旧版接口公开）法力值对周围敌人造成30/50/70/90/110(+20%法术强度)魔法伤害。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为30/42/54/66/78。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "挽歌",
         "description": "在引导之后，卡尔萨斯就会对所有敌方英雄造成伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/karthus_deathray.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/karthus_deathray.project_jade_16_18.png",
         "cooldown": "200 / 180 / 160 / 180 / 200",
         "cost": "150 / 175 / 200 / 100",
         "range": "10000",
-        "numericDetail": "3秒吟唱之后，卡尔萨斯对所有敌方英雄造成250/400/550(+60%法术强度)魔法伤害(无视距离)。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "3秒吟唱之后，卡尔萨斯对所有敌方英雄造成250/400/550(+60%法术强度)魔法伤害(无视距离)。\n来源边界：OP.GG Classic 原始冷却含5项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶冷却为200/180/160。不将原始字段直接套用为旧版逐级数值。\n来源边界：OP.GG Classic 原始消耗含4项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶消耗为150/175/200。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       }
     ]
   },
@@ -4266,8 +4356,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "伊泽瑞尔",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/ezreal",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60081.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_ezreal/skins/skin301/images/jade_ezreal_splash_centered_301.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60081.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_ezreal/skins/skin301/images/jade_ezreal_splash_centered_301.project_jade.jpg",
     "classicSplashName": "经典 伊泽瑞尔",
     "classicSplashId": "60081301",
     "classicSplashIsDefault": false,
@@ -4275,14 +4365,14 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60081301",
         "name": "经典 伊泽瑞尔",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_ezreal/skins/skin301/images/jade_ezreal_splash_centered_301.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_ezreal/skins/skin301/images/jade_ezreal_splash_centered_301.project_jade.jpg",
         "kind": "classic",
         "isDefault": false
       },
       {
         "id": "60081000",
         "name": "探险家",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_ezreal/skins/base/images/jade_ezreal_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_ezreal/skins/base/images/jade_ezreal_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -4309,7 +4399,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "咒能高涨",
         "description": "伊泽瑞尔的任何技能在击中目标后，都会提升他的攻击速度。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/ezreal_risingspellforce.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/ezreal_risingspellforce.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -4320,40 +4410,43 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "秘术射击",
         "description": "伊泽瑞尔发射一枚能量弹，如果它击中一个敌方单位，那么它将略微减少伊泽瑞尔所有技能的冷却时间。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/ezreal_mysticshot.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/ezreal_mysticshot.project_jade.png",
         "cooldown": "6 / 5.5 / 5 / 4.5 / 4 / 3.5",
         "cost": "30 / 35 / 40 / 45 / 50 / 55",
         "range": "1050",
-        "numericDetail": "伊泽瑞尔发射一枚能量弹，造成35/55/75/95/115(+100%总攻击力)(+20%法术强度)物理伤害（触发攻击附带效果）。\n\n如果它击中一个敌方单位，那么它将减少伊泽瑞尔所有技能1秒的冷却时间。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "伊泽瑞尔发射一枚能量弹，造成35/55/75/95/115(+100%总攻击力)(+20%法术强度)物理伤害（触发攻击附带效果）。\n\n如果它击中一个敌方单位，那么它将减少伊泽瑞尔所有技能1秒的冷却时间。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为6/5.5/5/4.5/4。不将原始字段直接套用为旧版逐级数值。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为28/31/34/37/40。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "精华跃动",
         "description": "伊泽瑞尔发射一道起伏的能量波，降低途经敌方英雄的攻击速度并对其造成魔法伤害，同时为途经友方英雄回复生命值并提升其攻击速度。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/ezreal_essenceflux.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/ezreal_essenceflux.project_jade.png",
         "cooldown": "10",
         "cost": "80 / 90 / 100 / 110 / 120 / 130",
         "range": "1050",
-        "numericDetail": "伊泽瑞尔发射一道能量波，对敌方英雄造成70/115/160/205/250(+80%法术强度)魔法伤害。这道能量波也能增加友方英雄20/25/30/35/40%的攻击速度，持续5秒。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "伊泽瑞尔发射一道能量波，对敌方英雄造成70/115/160/205/250(+80%法术强度)魔法伤害。这道能量波也能增加友方英雄20/25/30/35/40%的攻击速度，持续5秒。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为50/60/70/80/90。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "E",
         "name": "奥术跃迁",
         "description": "伊泽瑞尔传送到附近的目标区域，并向最近的敌人发射一束自动寻敌的魔法箭。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/ezreal_arcaneshift.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/ezreal_arcaneshift.project_jade.png",
         "cooldown": "17 / 15 / 13 / 11 / 9 / 7",
         "cost": "90",
         "range": "475",
-        "numericDetail": "伊泽瑞尔传送到临近的目标区域，并向最近的敌方单位发射自动追踪的魔法箭，造成75/125/175/225/275 (+75%法术强度)魔法伤害。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "伊泽瑞尔传送到临近的目标区域，并向最近的敌方单位发射自动追踪的魔法箭，造成75/125/175/225/275 (+75%法术强度)魔法伤害。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为19/17/15/13/11。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "精准弹幕",
         "description": "伊泽瑞尔发射一个强力的能量弹幕，弹幕将对沿途的每一个敌人造成高额伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/ezreal_trueshotbarrage.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/ezreal_trueshotbarrage.project_jade.png",
         "cooldown": "100",
         "cost": "150",
         "range": "25000",
@@ -4367,8 +4460,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "赛恩",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/sion",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60014.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_sion/skins/skin301/images/jade_sion_splash_centered_301.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60014.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_sion/skins/skin301/images/jade_sion_splash_centered_301.project_jade.jpg",
     "classicSplashName": "经典 赛恩",
     "classicSplashId": "60014301",
     "classicSplashIsDefault": false,
@@ -4376,14 +4469,14 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60014301",
         "name": "经典 赛恩",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_sion/skins/skin301/images/jade_sion_splash_centered_301.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_sion/skins/skin301/images/jade_sion_splash_centered_301.project_jade.jpg",
         "kind": "classic",
         "isDefault": false
       },
       {
         "id": "60014000",
         "name": "亡灵勇士",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_sion/skins/base/images/jade_sion_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_sion/skins/base/images/jade_sion_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -4410,7 +4503,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "硬化皮肤",
         "description": "赛恩在每次被攻击时，有一定几率无视一些伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/sion_feelnopain.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/sion_feelnopain.project_jade_16_18.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -4421,40 +4514,42 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "秘密凝视",
         "description": "赛恩以恐怖目光震慑一名敌人，对其造成伤害和晕眩。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/sion_crypticgaze.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/sion_crypticgaze.project_jade_16_18.png",
         "cooldown": "12 / 11 / 10 / 9 / 8 / 7",
         "cost": "100",
         "range": "550",
-        "numericDetail": "赛恩恐吓一个敌方单位，造成70/125/180/240/300(+90%法术强度)魔法伤害并晕眩1.5秒。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "赛恩恐吓一个敌方单位，造成70/125/180/240/300(+90%法术强度)魔法伤害并晕眩1.5秒。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为12/11/10/9/8。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "死亡拥抱",
         "description": "赛恩生成一道可吸收伤害的护盾环绕自身。如果该护盾未被摧毁，则触发爆炸，对身边的敌人造成伤害。赛恩可以再次施放以提前引爆护盾。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/sion_deathscaress.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/sion_deathscaress.project_jade_16_18.png",
         "cooldown": "8",
         "cost": "70 / 80 / 90 / 100 / 110 / 120",
         "range": "100",
-        "numericDetail": "赛恩在自己身边唤出一层能够吸收100/150/200/250/300(+90%法术强度)点伤害的护罩。如果护罩没有被摧毁，那么10秒后它将会爆炸，并对周围的敌人造成100/150/200/250/300(+90%法术强度)点魔法伤害。\n\n施放技能4秒后再次施放可手动引爆护罩。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "赛恩在自己身边唤出一层能够吸收100/150/200/250/300(+90%法术强度)点伤害的护罩。如果护罩没有被摧毁，那么10秒后它将会爆炸，并对周围的敌人造成100/150/200/250/300(+90%法术强度)点魔法伤害。\n\n施放技能4秒后再次施放可手动引爆护罩。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为70/80/90/100/110。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "E",
         "name": "暴怒",
         "description": "激活后，赛恩的攻击力提升，但每次普通攻击都会消耗生命值。此外，每当他击杀一名敌方单位时，还会永久提升最大生命值。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/sion_spiritrage.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/sion_spiritrage.project_jade_16_18.png",
         "cooldown": null,
         "cost": "0",
         "range": null,
-        "numericDetail": "激活：赛恩的攻击力提高了25/35/45/55/65点，并且每杀死一个单位将会永久增加1/1.5/2/2.5/3点最大生命值。这个加成会在对付英雄，大型小兵和大型野怪时翻倍。\n\n已增加的生命值：+1/1.5/2/2.5/3",
+        "numericDetail": "激活：赛恩的攻击力提高了25/35/45/55/65点，并且每杀死一个单位将会永久增加1/1.5/2/2.5/3点最大生命值。这个加成会在对付英雄，大型小兵和大型野怪时翻倍。\n\n已增加的生命值：+1/1.5/2/2.5/3\n来源边界：OP.GG Classic 原始消耗为0；Riot Data Dragon 3.15.5 的历史资源说明为“每次攻击消耗6/8/10/12/14生命值”。两者来源不同，不能将0解释为不消耗生命，也不将历史消耗视为已验证的当前 Classic 消耗。",
         "numericVersion": "3.15.5"
       },
       {
         "key": "R",
         "name": "死灵狂暴",
         "description": "赛恩每次攻击都会吸取敌人的部分生命力，为自己和附近友军回复生命值。鲜肉的气息也会激发赛恩的狂热，提升他的攻击速度。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/sion_cannibalism.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/sion_cannibalism.project_jade_16_18.png",
         "cooldown": "90",
         "cost": "100",
         "range": "100",
@@ -4468,8 +4563,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "图奇",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/twitch",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60029.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_twitch/skins/skin301/images/jade_twitch_splash_centered_301.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60029.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_twitch/skins/skin301/images/jade_twitch_splash_centered_301.project_jade.jpg",
     "classicSplashName": "经典 图奇",
     "classicSplashId": "60029301",
     "classicSplashIsDefault": false,
@@ -4477,14 +4572,14 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60029301",
         "name": "经典 图奇",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_twitch/skins/skin301/images/jade_twitch_splash_centered_301.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_twitch/skins/skin301/images/jade_twitch_splash_centered_301.project_jade.jpg",
         "kind": "classic",
         "isDefault": false
       },
       {
         "id": "60029000",
         "name": "瘟疫之源",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_twitch/skins/base/images/jade_twitch_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_twitch/skins/base/images/jade_twitch_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -4511,7 +4606,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "致命印记",
         "description": "图奇的普通攻击会使目标感染，每秒造成魔法伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/twitch_deadlyvenom_temp.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/twitch_deadlyvenom_temp.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -4522,7 +4617,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "隐秘伏击",
         "description": "图奇在短时间内隐身，隐身期间获得移动速度。脱离隐身状态时，图奇获得短时间内持续的攻击速度。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/twitch_alterego.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/twitch_alterego.project_jade_16_18.png",
         "cooldown": "16",
         "cost": "60",
         "range": "20",
@@ -4533,7 +4628,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "W",
         "name": "剧毒之桶",
         "description": "图奇扔出一个会爆炸的毒性之桶，从而对区域内的敌人施加死亡毒液并造成减速效果。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/twitch_venomcask.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/twitch_venomcask.project_jade.png",
         "cooldown": "13 / 12 / 11 / 10 / 9",
         "cost": "50",
         "range": "950",
@@ -4544,23 +4639,25 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "E",
         "name": "毁灭印记",
         "description": "附近所有敌人会将图奇的毒液从他们的身体中排出，每层可造成伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/twitch_expunge_old.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/twitch_expunge_old.project_jade_16_18.png",
         "cooldown": "12 / 11 / 10 / 9 / 8 / 7",
         "cost": "70 / 75 / 80 / 85 / 90 / 95",
         "range": "1200",
-        "numericDetail": "对周围感染了死亡毒液的敌人造成20/35/50/65/80物理伤害，每层死亡毒液会增加15/20/25/30/35(+20%法术强度)(+25%额外攻击力)伤害。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "对周围感染了死亡毒液的敌人造成20/35/50/65/80物理伤害，每层死亡毒液会增加15/20/25/30/35(+20%法术强度)(+25%额外攻击力)伤害。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为12/11/10/9/8。不将原始字段直接套用为旧版逐级数值。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为50/60/70/80/90。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "火力全开",
         "description": "图奇闭上双眼扣下扳机，快速向前方射出强力贯穿弩箭。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/twitch_clone.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/twitch_clone.project_jade_16_18.png",
         "cooldown": "120 / 110 / 100 / 90 / 80 / 70",
         "cost": "100 / 125 / 150 / 175 / 200 / 225",
         "range": "1200",
-        "numericDetail": "在7秒的持续时间里，图奇会获得300点额外的攻击距离，20/28/36的攻击力，并且他的普通攻击附带穿刺效果，对后续的目标所造成的伤害减少20%，伤害下限为40%。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "在7秒的持续时间里，图奇会获得300点额外的攻击距离，20/28/36的攻击力，并且他的普通攻击附带穿刺效果，对后续的目标所造成的伤害减少20%，伤害下限为40%。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶冷却为120/110/100。不将原始字段直接套用为旧版逐级数值。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶消耗为100/125/150。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       }
     ]
   },
@@ -4569,8 +4666,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "易",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/master-yi",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60011.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_masteryi/skins/skin301/images/jade_masteryi_splash_centered_301.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60011.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_masteryi/skins/skin301/images/jade_masteryi_splash_centered_301.project_jade.jpg",
     "classicSplashName": "经典 易",
     "classicSplashId": "60011301",
     "classicSplashIsDefault": false,
@@ -4578,14 +4675,14 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60011301",
         "name": "经典 易",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_masteryi/skins/skin301/images/jade_masteryi_splash_centered_301.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_masteryi/skins/skin301/images/jade_masteryi_splash_centered_301.project_jade.jpg",
         "kind": "classic",
         "isDefault": false
       },
       {
         "id": "60011000",
         "name": "无极剑圣",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_masteryi/skins/base/images/jade_masteryi_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_masteryi/skins/base/images/jade_masteryi_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -4612,7 +4709,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "双重打击",
         "description": "易有时会连续攻击两次。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/masteryi_doublestrike.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/masteryi_doublestrike.project_jade_16_18.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -4623,40 +4720,43 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "阿尔法突袭",
         "description": "易以肉眼难以发觉的速度穿梭于战场，对沿途多个敌人造成物理伤害。【阿尔法突袭】可触发暴击，对小兵和野怪造成额外物理伤害。普通攻击可缩短阿尔法突袭的冷却时间。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/masteryi_leapstrike.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/masteryi_leapstrike.project_jade_16_18.png",
         "cooldown": "18 / 16 / 14 / 12 / 10 / 8",
         "cost": "60 / 70 / 80 / 90 / 100 / 110",
         "range": "600",
-        "numericDetail": "易飞速穿越战场，对最多4个敌人各造成25/60/95/130/165(+100%总攻击力)物理伤害，并对小兵和野怪造成75/100/125/150/175额外伤害。\n\n阿尔法突袭能够暴击，暴击时造成额外的（动态数值未在旧版接口公开）物理伤害。每次普通攻击会减少此技能1秒冷却时间。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "易飞速穿越战场，对最多4个敌人各造成25/60/95/130/165(+100%总攻击力)物理伤害，并对小兵和野怪造成75/100/125/150/175额外伤害。\n\n阿尔法突袭能够暴击，暴击时造成额外的（动态数值未在旧版接口公开）物理伤害。每次普通攻击会减少此技能1秒冷却时间。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为18/17/16/15/14。不将原始字段直接套用为旧版逐级数值。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为70/80/90/100/110。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "冥想",
         "description": "易集中念力、活化身体，短时间内回复生命值并减少所受的伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/masteryi_innerfocus.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/masteryi_innerfocus.project_jade_16_18.png",
         "cooldown": "35",
         "cost": "50 / 65 / 80 / 95 / 110 / 125",
         "range": "20",
-        "numericDetail": "易大师开始念咒，在4秒的持续时间里每秒回复30/50/70/90/110(+30%法术强度)生命值。易大师每失去1%生命值，这个治疗效果就会提升1%。\n\n念咒时，易大师所受的伤害会降低50/55/60/65/70%。这个伤害减免在对抗防御塔时会减半。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "易大师开始念咒，在4秒的持续时间里每秒回复30/50/70/90/110(+30%法术强度)生命值。易大师每失去1%生命值，这个治疗效果就会提升1%。\n\n念咒时，易大师所受的伤害会降低50/55/60/65/70%。这个伤害减免在对抗防御塔时会减半。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为50。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "E",
         "name": "无极剑道",
         "description": "易的无极技艺变得更加熟练，被动提升攻击力。激活【无极剑道】会让易的普通攻击附带真实伤害，但技能冷却期间会失去被动效果的加成。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/masteryi_sunderingstrikes.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/masteryi_sunderingstrikes.project_jade_16_18.png",
         "cooldown": "25 / 23 / 21 / 19 / 17 / 15",
         "cost": "40",
         "range": "20",
-        "numericDetail": "被动：增加10%(（动态数值未在旧版接口公开）)攻击力。\n\n主动：普通攻击造成额外的10/15/20/25/30(+（动态数值未在旧版接口公开）)真实伤害，持续5秒。在主动效果结束后，直到该技能重新冷却期间，无极剑道的被动效果无效。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "被动：增加10%(（动态数值未在旧版接口公开）)攻击力。\n\n主动：普通攻击造成额外的10/15/20/25/30(+（动态数值未在旧版接口公开）)真实伤害，持续5秒。在主动效果结束后，直到该技能重新冷却期间，无极剑道的被动效果无效。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为18/17/16/15/14。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "高原血统",
         "description": "易以超乎想象的身法进行移动，短时间内提升移动速度和攻击速度，并免疫减速效果。技能持续期间，对英雄的击杀或助攻会延长该技能持续时间。完成对英雄的击杀或助攻时，被动效果会使其他技能的冷却时间缩短。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/masteryi_innerfocus2.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/masteryi_innerfocus2.project_jade_16_18.png",
         "cooldown": "75",
         "cost": "100",
         "range": "1",
@@ -4670,8 +4770,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "璐璐",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/lulu",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60117.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_lulu/skins/base/images/jade_lulu_splash_centered_0.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60117.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_lulu/skins/base/images/jade_lulu_splash_centered_0.project_jade.jpg",
     "classicSplashName": "仙灵女巫",
     "classicSplashId": "60117000",
     "classicSplashIsDefault": true,
@@ -4679,7 +4779,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60117000",
         "name": "仙灵女巫",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_lulu/skins/base/images/jade_lulu_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_lulu/skins/base/images/jade_lulu_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -4706,7 +4806,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "皮克斯，仙灵伙伴",
         "description": "每当皮克斯正在跟随的英雄进行攻击时，皮克斯就会发射魔法飞弹。这些飞弹会自动寻敌，但也会被其它单位所拦截。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_lulu/hud/icons2d/jade_lulu_pixfaeriecompanion.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_lulu/hud/icons2d/jade_lulu_pixfaeriecompanion.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -4717,7 +4817,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "闪耀长枪",
         "description": "璐璐和皮克斯各自发射一束穿刺飞弹，对命中的敌人造成重度减速效果。一个敌人只会受到一个飞弹的伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_lulu/hud/icons2d/jade_lulu_glitterbolt.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_lulu/hud/icons2d/jade_lulu_glitterbolt.project_jade.png",
         "cooldown": "7",
         "cost": "60 / 65 / 70 / 75 / 80",
         "range": "925",
@@ -4728,7 +4828,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "W",
         "name": "奇思妙想",
         "description": "如果对友军施放，会在短时间内增加目标友军的移动速度和法术强度。如果对敌人施放，则会将一名敌方英雄变成可爱的动物，使其无法攻击或施放技能。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_lulu/hud/icons2d/jade_lulu_whimsy.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_lulu/hud/icons2d/jade_lulu_whimsy.project_jade.png",
         "cooldown": "18 / 16.5 / 15 / 13.5 / 12",
         "cost": "65 / 70 / 75 / 80 / 85",
         "range": "650",
@@ -4739,7 +4839,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "E",
         "name": "帮忙，皮克斯！",
         "description": "如果对友军施放，会命令皮克斯跳到一名友军身上进行保护，之后会跟随并协助目标（而不是璐璐）进行攻击。如果对敌人施放，皮克斯会跳到敌人身上造成伤害，之后会跟随并提供目标的视野。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_lulu/hud/icons2d/jade_lulu_commandpix.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_lulu/hud/icons2d/jade_lulu_commandpix.project_jade.png",
         "cooldown": "10",
         "cost": "60 / 70 / 80 / 90 / 100",
         "range": "650",
@@ -4750,7 +4850,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "R",
         "name": "狂野生长",
         "description": "璐璐让她的友军变大，击飞目标附近的敌人，同时为目标友军提供大量生命值加成。接下来的几秒内，该友军会获得一个光环，减速附近的敌人。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_lulu/hud/icons2d/jade_lulu_giantgrowth.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_lulu/hud/icons2d/jade_lulu_giantgrowth.project_jade.png",
         "cooldown": "110 / 95 / 80",
         "cost": "150",
         "range": "900",
@@ -4764,8 +4864,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "维迦",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/veigar",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60045.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_veigar/skins/base/images/jade_veigar_splash_centered_0.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60045.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_veigar/skins/base/images/jade_veigar_splash_centered_0.project_jade.jpg",
     "classicSplashName": "邪恶小法师",
     "classicSplashId": "60045000",
     "classicSplashIsDefault": true,
@@ -4773,7 +4873,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60045000",
         "name": "邪恶小法师",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_veigar/skins/base/images/jade_veigar_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_veigar/skins/base/images/jade_veigar_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -4800,7 +4900,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "均衡",
         "description": "维迦的法力回复会基于他的已损失法力值得到提升。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_veigar/hud/icons2d/jade_veigar_entropy.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_veigar/hud/icons2d/jade_veigar_entropy.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -4811,18 +4911,19 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "黑暗祭祀",
         "description": "向目标敌人释放黑暗能量，造成魔法伤害。如果敌人被击败，维迦会永久获得一定的法术强度。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_veigar/hud/icons2d/jade_veigarbalefulstrike.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_veigar/hud/icons2d/jade_veigarbalefulstrike.project_jade.png",
         "cooldown": "8 / 7 / 6 / 5 / 4 / 3",
         "cost": "50 / 55 / 60 / 65 / 70 / 75",
         "range": "650",
-        "numericDetail": "主动效果：向目标释放黑暗能量，对其造成 80/125/170/215/260 (+60%法术强度)点的魔法伤害。 如果目标单位死于黑暗祭祀，维嘉获得1点法术强度。这个加成会在对付英雄，大型小兵和大型野怪时翻倍。\n\n被动效果：维迦现在每击杀一个英雄（无论是以哪种方式）就会获得 1/2/3/4/5 点法术强度。\n\n法术强度加成： +1",
-        "numericVersion": "3.15.5"
+        "numericDetail": "主动效果：向目标释放黑暗能量，对其造成 80/125/170/215/260 (+60%法术强度)点的魔法伤害。 如果目标单位死于黑暗祭祀，维嘉获得1点法术强度。这个加成会在对付英雄，大型小兵和大型野怪时翻倍。\n\n被动效果：维迦现在每击杀一个英雄（无论是以哪种方式）就会获得 1/2/3/4/5 点法术强度。\n\n法术强度加成： +1\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为8/7/6/5/4。不将原始字段直接套用为旧版逐级数值。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为60/65/70/75/80。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "黑暗物质",
         "description": "维迦召唤一大团黑暗物质轰击目标区域，落地造成魔法伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_veigar/hud/icons2d/jade_veigardarkmatter.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_veigar/hud/icons2d/jade_veigardarkmatter.project_jade.png",
         "cooldown": "10",
         "cost": "70 / 80 / 90 / 100 / 110",
         "range": "950",
@@ -4833,7 +4934,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "E",
         "name": "扭曲空间",
         "description": "维迦在目标区域创造一个能够维持3秒的扭曲空间，穿过此区域边界的敌人将会被短暂晕眩。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_veigar/hud/icons2d/jade_veigareventhorizon.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_veigar/hud/icons2d/jade_veigareventhorizon.project_jade.png",
         "cooldown": "20 / 19 / 18 / 17 / 16",
         "cost": "80 / 90 / 100 / 110 / 120",
         "range": "725",
@@ -4844,12 +4945,13 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "R",
         "name": "能量爆裂",
         "description": "引爆目标敌方英雄，造成大量基础魔法伤害，并额外造成目标80%法术强度的伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_veigar/hud/icons2d/jade_veigarprimordialburst.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_veigar/hud/icons2d/jade_veigarprimordialburst.project_jade.png",
         "cooldown": "130 / 110 / 90",
         "cost": "125 / 175 / 225 / 500",
         "range": "650",
-        "numericDetail": "引爆目标英雄，造成 250/375/500 (+120%法术强度)外加其目标法术强度 80% 的魔法伤害。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "引爆目标英雄，造成 250/375/500 (+120%法术强度)外加其目标法术强度 80% 的魔法伤害。\n来源边界：OP.GG Classic 原始消耗含4项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶消耗为125/175/225。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       }
     ]
   },
@@ -4858,8 +4960,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "科加斯",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/chogath",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60031.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_chogath/skins/base/images/jade_chogath_splash_centered_0.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60031.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_chogath/skins/base/images/jade_chogath_splash_centered_0.project_jade.jpg",
     "classicSplashName": "虚空恐惧",
     "classicSplashId": "60031000",
     "classicSplashIsDefault": true,
@@ -4867,7 +4969,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60031000",
         "name": "虚空恐惧",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_chogath/skins/base/images/jade_chogath_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_chogath/skins/base/images/jade_chogath_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -4894,7 +4996,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "肉食者",
         "description": "当科加斯击杀一个单位时，他会回复生命值和法力值。回复的数值会随科加斯的等级提升。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/chogath_tailspike.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/chogath_tailspike.project_jade_16_18.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -4905,7 +5007,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "碎裂",
         "description": "使目标地面破裂，将敌人抛向空中，造成伤害并减速。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/chogath_spikeslam.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/chogath_spikeslam.project_jade_16_18.png",
         "cooldown": "9",
         "cost": "90",
         "range": "950",
@@ -4916,7 +5018,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "W",
         "name": "野性尖叫",
         "description": "科加斯向面前锥形区域施放恐怖声波，造成魔法伤害并沉默敌人数秒。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/chogath_feralscream.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/chogath_feralscream.project_jade_16_18.png",
         "cooldown": "13",
         "cost": "70 / 80 / 90 / 100 / 110",
         "range": "300",
@@ -4927,7 +5029,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "E",
         "name": "恐惧之刺",
         "description": "科加斯的攻击会释放致命的尖刺，对面前所有的敌人造成伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/chogath_chitinousexoplates.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/chogath_chitinousexoplates.project_jade_16_18.png",
         "cooldown": "0.5",
         "cost": "0",
         "range": "40",
@@ -4938,12 +5040,13 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "R",
         "name": "盛宴",
         "description": "吞噬一个敌方单位，造成高额真实伤害。若目标被吞噬致死，科加斯就会变大，提高最大生命值（最多叠加6层）。科加斯死亡时会失去一半层数。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/chogath_feast.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/chogath_feast.project_jade_16_18.png",
         "cooldown": "60",
         "cost": "100 / 60",
         "range": "175",
-        "numericDetail": "饥饿地吞噬目标敌人，对英雄造成300/475/650(+70%法术强度)真实伤害，或对小兵和野怪造成1000(+70%法术强度)真实伤害。\n\n若目标被吞噬致死，科'加斯会长大，提高90/120/150最大生命值(最多叠加6层)。科'加斯死亡时减少一半的层数。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "饥饿地吞噬目标敌人，对英雄造成300/475/650(+70%法术强度)真实伤害，或对小兵和野怪造成1000(+70%法术强度)真实伤害。\n\n若目标被吞噬致死，科'加斯会长大，提高90/120/150最大生命值(最多叠加6层)。科'加斯死亡时减少一半的层数。\n来源边界：OP.GG Classic 原始消耗含2项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶消耗为100。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       }
     ]
   },
@@ -4952,8 +5055,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "玛尔扎哈",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/malzahar",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60090.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_malzahar/skins/base/images/jade_malzahar_splash_centered_0.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60090.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_malzahar/skins/base/images/jade_malzahar_splash_centered_0.project_jade.jpg",
     "classicSplashName": "虚空先知",
     "classicSplashId": "60090000",
     "classicSplashIsDefault": true,
@@ -4961,7 +5064,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60090000",
         "name": "虚空先知",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_malzahar/skins/base/images/jade_malzahar_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_malzahar/skins/base/images/jade_malzahar_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -4988,7 +5091,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "召唤虚灵",
         "description": "每隔几次施法，玛尔扎哈会召唤一只无法控制的虚灵主动攻击敌人。虚灵会随时间成长，获得护甲、伤害和攻击速度。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/malzahar_summonvoidling.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/malzahar_summonvoidling.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -4999,40 +5102,43 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "虚空召唤",
         "description": "玛尔扎哈开启两扇通向虚空的传送门。短暂延迟后，两扇门之间出现虚空能量对流，造成魔法伤害并沉默敌方英雄。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/malzahar_callofthevoid.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/malzahar_callofthevoid.project_jade.png",
         "cooldown": "9",
         "cost": "80 / 85 / 90 / 95 / 100 / 105",
         "range": "900",
-        "numericDetail": "玛尔扎哈开启两扇通往虚空的传送门，在短暂的延迟后，能量就会从虚空之中喷发，并且在两道传送门之间对流，对击中的敌人造成 80/135/190/245/300(+80%法术强度)点魔法伤害和 1.4/1.8/2.2/2.6/3 秒的沉默效果。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "玛尔扎哈开启两扇通往虚空的传送门，在短暂的延迟后，能量就会从虚空之中喷发，并且在两道传送门之间对流，对击中的敌人造成 80/135/190/245/300(+80%法术强度)点魔法伤害和 1.4/1.8/2.2/2.6/3 秒的沉默效果。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为80/85/90/95/100。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "虚无领域",
         "description": "玛尔扎哈制造一片负能量区域，每秒对附近的敌人造成伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/malzahar_nullzone.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/malzahar_nullzone.project_jade.png",
         "cooldown": "14",
         "cost": "90 / 95 / 100 / 105 / 110 / 115",
         "range": "800",
-        "numericDetail": "玛尔扎哈创造一个持续5秒的地带，每秒都将对目标造成相当于目标最大生命值4/5/6/7/8%(+每100法术强度增加1个百分点)的伤害（对野怪的每秒伤害封顶值为120）。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "玛尔扎哈创造一个持续5秒的地带，每秒都将对目标造成相当于目标最大生命值4/5/6/7/8%(+每100法术强度增加1个百分点)的伤害（对野怪的每秒伤害封顶值为120）。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为90/95/100/105/110。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "E",
         "name": "煞星幻象",
         "description": "玛尔扎哈侵蚀目标的心智，从而造成持续伤害。如果目标在此期间阵亡，则幻象转移到附近的敌人身上，且玛尔扎哈恢复法力值。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/malzahar_maleficvisions.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/malzahar_maleficvisions.project_jade.png",
         "cooldown": "15 / 13 / 11 / 9 / 7",
         "cost": "60 / 75 / 90 / 105 / 120 / 135",
         "range": "650",
-        "numericDetail": "玛尔扎哈感染目标的思想，在4秒的持续时间内造成 80/140/200/260/320(+80%法术强度)魔法伤害。\n\n如果目标死于幻象，那么幻象将传给附近的一个敌方单位，同时玛尔扎哈将获得 10/14/18/22/26 点法力值。\n\n玛尔扎哈的虚灵被吸引到受感染的单位。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "玛尔扎哈感染目标的思想，在4秒的持续时间内造成 80/140/200/260/320(+80%法术强度)魔法伤害。\n\n如果目标死于幻象，那么幻象将传给附近的一个敌方单位，同时玛尔扎哈将获得 10/14/18/22/26 点法力值。\n\n玛尔扎哈的虚灵被吸引到受感染的单位。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为60/75/90/105/120。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "冥府之握",
         "description": "玛尔扎哈引导虚空之力，以压制目标英雄并持续造成魔法伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/malzahar_nethergrasp.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/malzahar_nethergrasp.project_jade.png",
         "cooldown": "120 / 100 / 80",
         "cost": "150",
         "range": "700",
@@ -5046,8 +5152,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "卡萨丁",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/kassadin",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60038.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_kassadin/skins/skin301/images/jade_kassadin_splash_centered_301.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60038.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_kassadin/skins/skin301/images/jade_kassadin_splash_centered_301.project_jade.jpg",
     "classicSplashName": "经典 卡萨丁",
     "classicSplashId": "60038301",
     "classicSplashIsDefault": false,
@@ -5055,14 +5161,14 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60038301",
         "name": "经典 卡萨丁",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_kassadin/skins/skin301/images/jade_kassadin_splash_centered_301.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_kassadin/skins/skin301/images/jade_kassadin_splash_centered_301.project_jade.jpg",
         "kind": "classic",
         "isDefault": false
       },
       {
         "id": "60038000",
         "name": "虚空行者",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_kassadin/skins/base/images/jade_kassadin_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_kassadin/skins/base/images/jade_kassadin_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -5089,7 +5195,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "虚空之石",
         "description": "卡萨丁所受的 魔法伤害 减少，并将即将到来的魔法伤害转化为额外 攻击速度 。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/kassadin_netherburn.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/kassadin_netherburn.project_jade_16_18.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -5100,18 +5206,19 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "虚无法球",
         "description": "卡萨丁发射一道缥缈的虚空能量弹，对目标造成伤害并使其暂时沉默。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/averdrian_astralbeam.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/averdrian_astralbeam.project_jade_16_18.png",
         "cooldown": "9",
         "cost": "70 / 80 / 90 / 100 / 110 / 120",
         "range": "650",
-        "numericDetail": "卡萨丁向目标发射虚空能量法球，造成80/115/150/185/220(+70%法术强度)魔法伤害沉默目标1.5/1.75/2/2.25/2.5秒。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "卡萨丁向目标发射虚空能量法球，造成80/115/150/185/220(+70%法术强度)魔法伤害沉默目标1.5/1.75/2/2.25/2.5秒。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为70/75/80/85/90。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "虚空之刃",
         "description": "被动：卡萨丁的普攻回复法力值。主动：卡萨丁的普攻造成额外魔法伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/kassadin_nullblade.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/kassadin_nullblade.project_jade_16_18.png",
         "cooldown": "12",
         "cost": "25",
         "range": "1",
@@ -5122,7 +5229,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "E",
         "name": "能量脉冲",
         "description": "附近有单位施放法术技能时，卡萨丁将吸收能量。当充能完毕后，吸收的能量可转化为脉冲，对面前锥形区域内敌人造成伤害并减速。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/kassadin_forcepulse.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/kassadin_forcepulse.project_jade.png",
         "cooldown": "6",
         "cost": "80",
         "range": "400",
@@ -5133,12 +5240,13 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "R",
         "name": "虚空行走",
         "description": "卡萨丁传送到附近区域，对区域内的敌方单位造成魔法伤害。此外，在一段时间内连续施放虚空行走技能会消耗更多的法力值，并造成额外伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/kassadin_riftwalk.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/kassadin_riftwalk.project_jade_16_18.png",
         "cooldown": "7 / 6 / 5 / 2",
         "cost": "100",
         "range": "700",
-        "numericDetail": "卡萨丁传送到附近的目标区域，着陆时对身边的所有敌方单位造成80/100/120(+80%法术强度)魔法伤害。此外，每在8内连续施放一次虚空行走，就会多消耗（数值未在旧版接口公开）法力，并造成50/55/60(+10%法术强度)额外伤害，最多可叠加10次。\n\n如果卡萨丁用虚空行走命中了一名敌方英雄，就会返还此技能50%的法力消耗",
-        "numericVersion": "3.15.5"
+        "numericDetail": "卡萨丁传送到附近的目标区域，着陆时对身边的所有敌方单位造成80/100/120(+80%法术强度)魔法伤害。此外，每在8内连续施放一次虚空行走，就会多消耗（数值未在旧版接口公开）法力，并造成50/55/60(+10%法术强度)额外伤害，最多可叠加10次。\n\n如果卡萨丁用虚空行走命中了一名敌方英雄，就会返还此技能50%的法力消耗\n来源边界：OP.GG Classic 原始冷却含4项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶冷却为7/6/5。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       }
     ]
   },
@@ -5147,8 +5255,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "努努",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/nunu",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60020.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_nunu/skins/skin301/images/jade_nunu_splash_centered_301.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60020.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_nunu/skins/skin301/images/jade_nunu_splash_centered_301.project_jade.jpg",
     "classicSplashName": "经典 努努和威朗普",
     "classicSplashId": "60020301",
     "classicSplashIsDefault": false,
@@ -5156,14 +5264,14 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60020301",
         "name": "经典 努努和威朗普",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_nunu/skins/skin301/images/jade_nunu_splash_centered_301.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_nunu/skins/skin301/images/jade_nunu_splash_centered_301.project_jade.jpg",
         "kind": "classic",
         "isDefault": false
       },
       {
         "id": "60020000",
         "name": "雪人骑士",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_nunu/skins/base/images/jade_nunu_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_nunu/skins/base/images/jade_nunu_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -5190,7 +5298,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "法术幻想",
         "description": "努努可以在若干次攻击后免费施放一个技能。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/yeti_frostnova.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/yeti_frostnova.project_jade_16_18.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -5201,18 +5309,19 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "吞噬",
         "description": "努努命令威朗普撕咬小兵或野怪，造成巨量伤害，并回复自己的生命值。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/yeti_consume.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/yeti_consume.project_jade_16_18.png",
         "cooldown": "17 / 15 / 13 / 11 / 9 / 7",
         "cost": "60",
         "range": "125",
-        "numericDetail": "雪人吞噬一个小兵或野怪，造成 400/550/700/850/1000真实伤害，并回复自己 70/115/160/205/250(+75%法术强度)生命值。\n\n努努会获得持续 120/150/180/210/240 秒的吞噬奖励，奖励的类型基于吞噬野怪的种类。\n\n蜥蜴：你的攻击和技能会造成相当于你最大生命值的1%的魔法伤害。\n魔像：提升 10% 的体型和最大生命值。\n狼或者幽灵： 击杀一个单位的同时会获得 15% 移动速度加成，持续3秒。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "雪人吞噬一个小兵或野怪，造成 400/550/700/850/1000真实伤害，并回复自己 70/115/160/205/250(+75%法术强度)生命值。\n\n努努会获得持续 120/150/180/210/240 秒的吞噬奖励，奖励的类型基于吞噬野怪的种类。\n\n蜥蜴：你的攻击和技能会造成相当于你最大生命值的1%的魔法伤害。\n魔像：提升 10% 的体型和最大生命值。\n狼或者幽灵： 击杀一个单位的同时会获得 15% 移动速度加成，持续3秒。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为13/12/11/10/9。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "血之沸腾",
         "description": "努努使自己和一个友方单位热血沸腾，提升自身和目标的移动速度和攻击速度。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/yeti_yetismash.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/yeti_yetismash.project_jade_16_18.png",
         "cooldown": "15",
         "cost": "50",
         "range": "700",
@@ -5223,18 +5332,19 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "E",
         "name": "冰雹",
         "description": "努努向敌人掷出一个冰球，造成伤害并短暂降低其移动速度和攻击速度。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/yeti_iceblast.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/yeti_iceblast.project_jade_16_18.png",
         "cooldown": "6",
         "cost": "75 / 85 / 95 / 105 / 115 / 125",
         "range": "550",
-        "numericDetail": "努努向一名敌方单位投掷冰球，造成85/130/175/225/275(+100%法术强度)点魔法伤害，并且减少其20/30/40/50/60%的移动速度，25%的攻击速度，持续3秒。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "努努向一名敌方单位投掷冰球，造成85/130/175/225/275(+100%法术强度)点魔法伤害，并且减少其20/30/40/50/60%的移动速度，25%的攻击速度，持续3秒。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为75/85/95/105/115。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "绝对零度",
         "description": "努努开始吸收周围区域的热量，并使附近的敌人减速。该技能结束时，对范围内所有敌人造成巨量伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/yeti_shatter.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/yeti_shatter.project_jade_16_18.png",
         "cooldown": "110 / 100 / 90",
         "cost": "100",
         "range": "650",
@@ -5248,8 +5358,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "提莫",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/teemo",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60017.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_teemo/skins/skin301/images/jade_teemo_splash_centered_301.project_jade_16_16.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60017.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_teemo/skins/skin301/images/jade_teemo_splash_centered_301.project_jade_16_16.jpg",
     "classicSplashName": "经典 提莫",
     "classicSplashId": "60017301",
     "classicSplashIsDefault": false,
@@ -5257,14 +5367,14 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60017301",
         "name": "经典 提莫",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_teemo/skins/skin301/images/jade_teemo_splash_centered_301.project_jade_16_16.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_teemo/skins/skin301/images/jade_teemo_splash_centered_301.project_jade_16_16.jpg",
         "kind": "classic",
         "isDefault": false
       },
       {
         "id": "60017000",
         "name": "迅捷斥候",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_teemo/skins/base/images/jade_teemo_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_teemo/skins/base/images/jade_teemo_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -5291,7 +5401,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "伪装",
         "description": "如果提莫保持静止，并在短时间内未执行任何操作，他将进入无限期的隐形状态。提莫脱离隐形后获得【出奇制胜】效果，提升攻击速度，持续数秒。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/teemo_camouflage.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/teemo_camouflage.project_jade_16_18.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -5302,18 +5412,19 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "致盲吹箭",
         "description": "用强效毒液来侵蚀一名敌人的视力，对目标单位造成伤害，并使其致盲一段时间。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/teemo_tranquilizingshot.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/teemo_tranquilizingshot.project_jade_16_18.png",
         "cooldown": "8",
         "cost": "70 / 80 / 90 / 100 / 110 / 120",
         "range": "680",
-        "numericDetail": "对目标造成80/125/170/215/260(+80%法术强度)魔法伤害并使目标致盲1.5/1.75/2/2.25/2.5秒。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "对目标造成80/125/170/215/260(+80%法术强度)魔法伤害并使目标致盲1.5/1.75/2/2.25/2.5秒。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为70/80/90/100/110。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "小莫快跑",
         "description": "提莫动如脱兔，移动速度增加，直到被敌方英雄或防御塔击中为止。提莫可在短时间内疾跑，获得额外移动速度，且不会因被击中而中断。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/teemo_movequick.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/teemo_movequick.project_jade_16_18.png",
         "cooldown": "17",
         "cost": "40",
         "range": null,
@@ -5324,7 +5435,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "E",
         "name": "毒性射击",
         "description": "提莫每次攻击附带毒液伤害，造成命中伤害和持续伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/teemo_poisoneddart.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/teemo_poisoneddart.project_jade_16_18.png",
         "cooldown": null,
         "cost": "0",
         "range": "680",
@@ -5335,12 +5446,13 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "R",
         "name": "种蘑菇",
         "description": "提莫用背包里的蘑菇布置一个可爆炸的毒性陷阱。陷阱会在被敌方踩中时爆炸，释放出一团毒云，对附近的敌人造成减速效果和持续伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/ashe_archersmark.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/ashe_archersmark.project_jade_16_18.png",
         "cooldown": "1",
         "cost": "75 / 100 / 125 / 150 / 175 / 200",
         "range": "230",
-        "numericDetail": "使用一个储存的蘑菇来设置陷阱，如果被敌人踩到，陷阱会引爆，将毒散发到附近的敌人身上，减缓他们30/40/50%的移动速度，并造成200/325/450(+80%法术强度)魔法伤害，持续4秒。陷阱持续10分钟。\n\n提莫每35/31/27秒找到一个蘑菇，但他一次只能携带3个。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "使用一个储存的蘑菇来设置陷阱，如果被敌人踩到，陷阱会引爆，将毒散发到附近的敌人身上，减缓他们30/40/50%的移动速度，并造成200/325/450(+80%法术强度)魔法伤害，持续4秒。陷阱持续10分钟。\n\n提莫每35/31/27秒找到一个蘑菇，但他一次只能携带3个。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶消耗为75/100/125。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       }
     ]
   },
@@ -5349,8 +5461,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "库奇",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/corki",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60042.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_corki/skins/base/images/jade_corki_splash_centered_0.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60042.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_corki/skins/base/images/jade_corki_splash_centered_0.project_jade.jpg",
     "classicSplashName": "英勇投弹手",
     "classicSplashId": "60042000",
     "classicSplashIsDefault": true,
@@ -5358,7 +5470,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60042000",
         "name": "英勇投弹手",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_corki/skins/base/images/jade_corki_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_corki/skins/base/images/jade_corki_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -5385,7 +5497,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "海克斯科技榴弹",
         "description": "库奇的普攻对小兵、野怪和英雄造成额外真实伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/corki_rapidreload.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/corki_rapidreload.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -5396,40 +5508,43 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "磷光炸弹",
         "description": "库奇发射一颗炸弹，从而伤害并显形爆裂点周围的敌人们。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/corki_phosphorusbomb.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/corki_phosphorusbomb.project_jade.png",
         "cooldown": "8",
         "cost": "80 / 90 / 100 / 110 / 120 / 130",
         "range": "600",
-        "numericDetail": "库奇轰出一枚炸弹，对目标范围内敌人造成80/130/180/230/280(+50%法术强度)魔法伤害，并显示该区域，持续6秒（不显示隐身单位）。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "库奇轰出一枚炸弹，对目标范围内敌人造成80/130/180/230/280(+50%法术强度)魔法伤害，并显示该区域，持续6秒（不显示隐身单位）。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为60/70/80/90/100。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "瓦尔基里俯冲",
         "description": "库奇冲向目标位置，沿途投下炸弹，留下一道火焰路径，对停留其中的敌人造成伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/corki_valkyrie.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/corki_valkyrie.project_jade.png",
         "cooldown": "26 / 23 / 20 / 17 / 14 / 11",
         "cost": "50",
         "range": "600",
-        "numericDetail": "库奇俯冲突袭目标区域，留下一条毁灭与死亡之路，对其上目标造成每秒 60/90/120/150/180(+40%法术强度)伤害。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "库奇俯冲突袭目标区域，留下一条毁灭与死亡之路，对其上目标造成每秒 60/90/120/150/180(+40%法术强度)伤害。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为26/23/20/17/14。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "E",
         "name": "格林机枪",
         "description": "库奇使用格林机枪扫射他面前锥形范围内的敌人，造成伤害并削减敌人护甲。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/corki_gatlinggun.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/corki_gatlinggun.project_jade_16_18.png",
         "cooldown": "16",
         "cost": "60 / 65 / 70 / 75 / 80 / 85",
         "range": "600",
-        "numericDetail": "库奇使用格林机枪扫射前方敌人，持续4秒，每秒造成20/32/44/56/68(+40%额外攻击力)点物理伤害，并减少2/4/6/8/10点护甲。处于持续攻击下的敌人护甲值持续减少，持续时间2秒。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "库奇使用格林机枪扫射前方敌人，持续4秒，每秒造成20/32/44/56/68(+40%额外攻击力)点物理伤害，并减少2/4/6/8/10点护甲。处于持续攻击下的敌人护甲值持续减少，持续时间2秒。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为50。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "火箭轰击",
         "description": "库奇朝着他的目标地点发射一枚导弹。导弹会在命中第一个敌人后爆炸，并对目标周围单位造成伤害。有些导弹将是超级导弹，可造成额外伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/corki_missilebarrage.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/corki_missilebarrage.project_jade_16_18.png",
         "cooldown": "1.2",
         "cost": "20",
         "range": "1225",
@@ -5443,8 +5558,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "希维尔",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/sivir",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60015.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_sivir/skins/base/images/jade_sivir_splash_centered_0.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60015.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_sivir/skins/base/images/jade_sivir_splash_centered_0.project_jade.jpg",
     "classicSplashName": "战争女神",
     "classicSplashId": "60015000",
     "classicSplashIsDefault": true,
@@ -5452,7 +5567,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60015000",
         "name": "战争女神",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_sivir/skins/base/images/jade_sivir_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_sivir/skins/base/images/jade_sivir_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -5479,7 +5594,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "敏锐疾行",
         "description": "希维尔攻击敌方英雄时，会短暂获得移动速度提升。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/sivir_sprint.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/sivir_sprint.project_jade_16_18.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -5490,18 +5605,19 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "回旋之刃",
         "description": "希维尔将十字刃当作回力标挥出，利刃在往返时造成伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/sivir_spiralblade.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/sivir_spiralblade.project_jade_16_18.png",
         "cooldown": "9",
         "cost": "80 / 90 / 100 / 110 / 120 / 130",
         "range": "1200",
-        "numericDetail": "希维尔像挥舞回力标一样挥出她的十字刃，对命中的第一个敌人造成25/45/65/85/105(+70% / 80% / 90% / 100% / 110.0%总攻击力)(+50%法术强度)物理伤害，且对每个后续目标的伤害减少10%，减到40%为止。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "希维尔像挥舞回力标一样挥出她的十字刃，对命中的第一个敌人造成25/45/65/85/105(+70% / 80% / 90% / 100% / 110.0%总攻击力)(+50%法术强度)物理伤害，且对每个后续目标的伤害减少10%，减到40%为止。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为70/80/90/100/110。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "弹射",
         "description": "希维尔的下一次普通攻击将在目标之间弹射，每次后续命中时，造成的伤害衰减。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/sivir_ricochet.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/sivir_ricochet.project_jade_16_18.png",
         "cooldown": "0.5",
         "cost": "0",
         "range": "20",
@@ -5512,23 +5628,25 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "E",
         "name": "法术护盾",
         "description": "希维尔制造一层法术屏障，从而格挡一次对她施放的敌方单体技能。如果成功格挡技能，则希维尔回复法力值。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/sivir_spellblock.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/sivir_spellblock.project_jade_16_18.png",
         "cooldown": "22 / 19 / 16 / 13 / 10 / 7",
         "cost": "75",
         "range": "20",
-        "numericDetail": "希维尔制造一层持续1.5秒的法术屏障，来格挡一次即将到来的敌方技能。\n\n如果希维尔成功格挡了一次技能，那么就会回复60/75/90/105/120法力值。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "希维尔制造一层持续1.5秒的法术屏障，来格挡一次即将到来的敌方技能。\n\n如果希维尔成功格挡了一次技能，那么就会回复60/75/90/105/120法力值。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为22/19/16/13/10。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "狩猎",
         "description": "希维尔在战斗中引领友军，在一段时间内提高其移动速度和攻击速度。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/sivir_deadeye.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/sivir_deadeye.project_jade_16_18.png",
         "cooldown": "100 / 90 / 80 / 70 / 60 / 50",
         "cost": "100",
         "range": "1000",
-        "numericDetail": "被动：希维尔在弹射激活时，会获得40/60/80%攻击速度加成。\n\n主动：希维尔使友军振奋，持续8秒，为所有附近的友军提供60%的初始移动速度加成，该加成会在2/3/4秒后降低至20%。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "被动：希维尔在弹射激活时，会获得40/60/80%攻击速度加成。\n\n主动：希维尔使友军振奋，持续8秒，为所有附近的友军提供60%的初始移动速度加成，该加成会在2/3/4秒后降低至20%。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶冷却为120/100/80。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       }
     ]
   },
@@ -5537,8 +5655,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "潘森",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/pantheon",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60080.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_pantheon/skins/skin301/images/jade_pantheon_splash_centered_301.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60080.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_pantheon/skins/skin301/images/jade_pantheon_splash_centered_301.project_jade.jpg",
     "classicSplashName": "经典 潘森",
     "classicSplashId": "60080301",
     "classicSplashIsDefault": false,
@@ -5546,14 +5664,14 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60080301",
         "name": "经典 潘森",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_pantheon/skins/skin301/images/jade_pantheon_splash_centered_301.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_pantheon/skins/skin301/images/jade_pantheon_splash_centered_301.project_jade.jpg",
         "kind": "classic",
         "isDefault": false
       },
       {
         "id": "60080000",
         "name": "战争之王",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_pantheon/skins/base/images/jade_pantheon_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_pantheon/skins/base/images/jade_pantheon_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -5580,7 +5698,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "圣盾庇护",
         "description": "每攻击或施法4次后，潘森就可以格挡下一次攻击。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/pantheon_aoz.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/pantheon_aoz.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -5591,7 +5709,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "长矛飞掷",
         "description": "潘森向一个敌人猛掷长矛，从而造成伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/pantheon_spearshot.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/pantheon_spearshot.project_jade.png",
         "cooldown": "4",
         "cost": "45",
         "range": "600",
@@ -5602,7 +5720,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "W",
         "name": "圣盾打击",
         "description": "潘森跳向一名敌人并对目标敌人进行盾击，对其造成晕眩效果。在完成该次攻击后，潘森会准备好格挡下一次攻击。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/pantheon_leapbash.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/pantheon_leapbash.project_jade.png",
         "cooldown": "13 / 12 / 11 / 10 / 9",
         "cost": "55",
         "range": "600",
@@ -5613,18 +5731,19 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "E",
         "name": "穿心长矛",
         "description": "潘森使用长矛向前方锥形范围发动三连击，对英雄造成额外伤害。同时潘森也变得更了解敌人的弱点，从而让他总能对受伤的敌人进行暴击。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/pantheon_hss.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/pantheon_hss.project_jade.png",
         "cooldown": "10 / 9 / 8 / 7 / 6",
         "cost": "45 / 50 / 55 / 60 / 65 / 70",
         "range": "400",
-        "numericDetail": "被动效果：潘森的普通攻击和长矛飞掷，对生命值低于15%的敌人将100%暴击。普攻暴击伤害为200%，长矛飞掷的暴击伤害为150%。\n\n主动效果：潘森使用长矛向前方锥形范围发动3连击，每击造成13/23/33/43/53(+60%额外攻击力)物理伤害。对英雄造成双倍伤害。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "被动效果：潘森的普通攻击和长矛飞掷，对生命值低于15%的敌人将100%暴击。普攻暴击伤害为200%，长矛飞掷的暴击伤害为150%。\n\n主动效果：潘森使用长矛向前方锥形范围发动3连击，每击造成13/23/33/43/53(+60%额外攻击力)物理伤害。对英雄造成双倍伤害。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为45/50/55/60/65。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "堕天一击",
         "description": "潘森积蓄力量腾空而起，然后轰击目标区域，落地时对目标区域内的所有敌人造成伤害。离落点越近的敌人，受到的伤害越高。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/pantheon_grandskyfall.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/pantheon_grandskyfall.project_jade.png",
         "cooldown": "150 / 135 / 120",
         "cost": "100",
         "range": "5500",
@@ -5638,8 +5757,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "布里茨",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/blitzcrank",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60053.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_blitzcrank/skins/base/images/jade_blitzcrank_splash_centered_0.project_jade_16_16.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60053.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_blitzcrank/skins/base/images/jade_blitzcrank_splash_centered_0.project_jade_16_16.jpg",
     "classicSplashName": "蒸汽机器人",
     "classicSplashId": "60053000",
     "classicSplashIsDefault": true,
@@ -5647,7 +5766,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60053000",
         "name": "蒸汽机器人",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_blitzcrank/skins/base/images/jade_blitzcrank_splash_centered_0.project_jade_16_16.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_blitzcrank/skins/base/images/jade_blitzcrank_splash_centered_0.project_jade_16_16.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -5674,7 +5793,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "法力屏障",
         "description": "在低生命值状态受到伤害时，布里茨会先获得护盾，数额相当于它的一部分当前法力值。这个效果有一段冷却时间。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/blitzcrank_manabarrier.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/blitzcrank_manabarrier.project_jade_16_18.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -5685,18 +5804,19 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "机械飞爪",
         "description": "布里茨发射右手，对命中的第一个敌人造成伤害，并将其拉到自己面前。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/blitzcrank_rocketgrab.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/blitzcrank_rocketgrab.project_jade.png",
         "cooldown": "22 / 21 / 20 / 19 / 18 / 17",
         "cost": "140",
         "range": "1025",
-        "numericDetail": "布里茨对目标使用机械飞爪，若击中会眩晕目标并将其抓到面前，同时造成 80/135/190/245/300(+100%法术强度)魔法伤害。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "布里茨对目标使用机械飞爪，若击中会眩晕目标并将其抓到面前，同时造成 80/135/190/245/300(+100%法术强度)魔法伤害。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为20/19/18/17/16。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "过载运转",
         "description": "布里茨为自己进行超级充能，以大幅提升移动速度和攻击速度。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/blitzcrank_overdrive.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/blitzcrank_overdrive.project_jade_16_18.png",
         "cooldown": "20",
         "cost": "75",
         "range": "1",
@@ -5707,18 +5827,19 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "E",
         "name": "能量铁拳",
         "description": "布里茨为它的机械手臂充能，以使它的下次攻击造成额外伤害并击飞目标。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/blitzcrank_powerfist.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/blitzcrank_powerfist.project_jade_16_18.png",
         "cooldown": "9 / 8 / 7 / 6 / 5 / 4",
         "cost": "25",
         "range": "300",
-        "numericDetail": "布里茨为机械手臂充能，下一次攻击造成双倍伤害并将目标抛向空中。\n数值说明：OP.GG Classic 与 Riot 3.15.5 公开字段未提供独立固定数值；不使用其他版本或人工估值补写。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "布里茨为机械手臂充能，下一次攻击造成双倍伤害并将目标抛向空中。\n数值说明：OP.GG Classic 与 Riot 3.15.5 公开字段未提供独立固定数值；不使用其他版本或人工估值补写。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为9/8/7/6/5。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "静电力场",
         "description": "被动地引发闪电弹来伤害一个附近的敌人。此外，布里茨可以主动激活这个技能来对附近的敌人造成伤害和短暂的沉默效果。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/blitzcrank_staticfield.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/blitzcrank_staticfield.project_jade_16_18.png",
         "cooldown": "40",
         "cost": "150",
         "range": "600",
@@ -5732,8 +5853,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "索拉卡",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/soraka",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60016.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_soraka/skins/skin301/images/jade_soraka_splash_centered_301.project_jade_16_16.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60016.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_soraka/skins/skin301/images/jade_soraka_splash_centered_301.project_jade_16_16.jpg",
     "classicSplashName": "经典 索拉卡",
     "classicSplashId": "60016301",
     "classicSplashIsDefault": false,
@@ -5741,14 +5862,14 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60016301",
         "name": "经典 索拉卡",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_soraka/skins/skin301/images/jade_soraka_splash_centered_301.project_jade_16_16.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_soraka/skins/skin301/images/jade_soraka_splash_centered_301.project_jade_16_16.jpg",
         "kind": "classic",
         "isDefault": false
       },
       {
         "id": "60016000",
         "name": "众星之子",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_soraka/skins/base/images/jade_soraka_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_soraka/skins/base/images/jade_soraka_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -5775,7 +5896,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "奉献",
         "description": "提升身边友军们的魔法抗性。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/soraka_consecration.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/soraka_consecration.project_jade_16_18.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -5786,29 +5907,31 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "流星坠落",
         "description": "一阵流星雨从天而降，打击附近所有敌人，造成魔法伤害并暂时降低其魔法抗性。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/soraka_starcall.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/soraka_starcall.project_jade_16_18.png",
         "cooldown": "2.5",
         "cost": "20 / 35 / 50 / 65 / 80 / 95",
         "range": "625",
-        "numericDetail": "索拉卡召唤流星雨，对周围敌人造成60/95/130/165/200(+40%法术强度)点魔法伤害并减少他们6(+1%法术强度)点魔法抗性，持续5秒（最多可叠加10层）。\n\n如果群星坠落有命中一名敌方英雄，那么星之祝福的冷却时间会减少5/6.25/7.5/8.75/10%。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "索拉卡召唤流星雨，对周围敌人造成60/95/130/165/200(+40%法术强度)点魔法伤害并减少他们6(+1%法术强度)点魔法抗性，持续5秒（最多可叠加10层）。\n\n如果群星坠落有命中一名敌方英雄，那么星之祝福的冷却时间会减少5/6.25/7.5/8.75/10%。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为30/40/50/60/70。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "星之祝福",
         "description": "索拉卡为一名友方单位赐福，为其回复生命值并暂时提升护甲。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/soraka_bless.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/soraka_bless.project_jade_16_18.png",
         "cooldown": "20",
         "cost": "80 / 110 / 140 / 170 / 200 / 230",
         "range": "750",
-        "numericDetail": "为一名友军单位恢复70/120/170/220/270 (+35%法术强度)生命值，并暂时为目标增加50/65/80/95/110(+15%法术强度)护甲，护甲效果持续2秒。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "为一名友军单位恢复70/120/170/220/270 (+35%法术强度)生命值，并暂时为目标增加50/65/80/95/110(+15%法术强度)护甲，护甲效果持续2秒。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为80/100/120/140/160。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "E",
         "name": "灌注",
         "description": "为一名友军回复法力值，或对一名敌人造成伤害并使其短暂沉默。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/soraka_wish.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/soraka_wish.project_jade_16_18.png",
         "cooldown": "10",
         "cost": "0",
         "range": "725",
@@ -5819,12 +5942,13 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "R",
         "name": "祈愿",
         "description": "索拉卡让友军充满希望，立刻使她和所有友方英雄回复生命值。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/soraka_purify.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/soraka_purify.project_jade_16_18.png",
         "cooldown": "160 / 145 / 130 / 115 / 100 / 85",
         "cost": "100 / 175 / 250 / 325 / 400 / 475",
         "range": "25000",
-        "numericDetail": "索拉卡召唤圣洁的能量，瞬间恢复自己和所有友军150/250/350(+55.0%法术强度)生命值。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "索拉卡召唤圣洁的能量，瞬间恢复自己和所有友军150/250/350(+55.0%法术强度)生命值。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶冷却为160/145/130。不将原始字段直接套用为旧版逐级数值。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶消耗为100。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       }
     ]
   },
@@ -5833,8 +5957,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "蒙多医生",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/dr-mundo",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60036.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_drmundo/skins/skin301/images/jade_drmundo_splash_centered_301.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60036.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_drmundo/skins/skin301/images/jade_drmundo_splash_centered_301.project_jade.jpg",
     "classicSplashName": "经典 蒙多",
     "classicSplashId": "60036301",
     "classicSplashIsDefault": false,
@@ -5842,14 +5966,14 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60036301",
         "name": "经典 蒙多",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_drmundo/skins/skin301/images/jade_drmundo_splash_centered_301.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_drmundo/skins/skin301/images/jade_drmundo_splash_centered_301.project_jade.jpg",
         "kind": "classic",
         "isDefault": false
       },
       {
         "id": "60036000",
         "name": "祖安狂人",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_drmundo/skins/base/images/jade_drmundo_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_drmundo/skins/base/images/jade_drmundo_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -5876,7 +6000,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "肾上腺激素",
         "description": "蒙多医生每秒回复一部分最大生命值。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/drmundo_adrenalinerush.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/drmundo_adrenalinerush.project_jade_16_18.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -5887,44 +6011,44 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "病毒屠刀",
         "description": "蒙多医生掷出他的屠刀，对目标造成基于其最大生命值的伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/drmundo_infectedcleaver.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/drmundo_infectedcleaver.project_jade_16_18.png",
         "cooldown": "4",
         "cost": "0",
         "range": "975",
-        "numericDetail": "蒙多医生投掷病毒屠刀，对目标造成相当于他当前生命值的15/18/21/23/25%的魔法伤害（最少80/130/180/230/280伤害），并减速40%，持续2秒。\n\n如果屠刀击中目标，则回复一半的生命消耗值。",
+        "numericDetail": "蒙多医生投掷病毒屠刀，对目标造成相当于他当前生命值的15/18/21/23/25%的魔法伤害（最少80/130/180/230/280伤害），并减速40%，持续2秒。\n\n如果屠刀击中目标，则回复一半的生命消耗值。\n来源边界：OP.GG Classic 原始消耗为0；Riot Data Dragon 3.15.5 的历史资源说明为“消耗50/60/70/80/90 生命值”。两者来源不同，不能将0解释为不消耗生命，也不将历史消耗视为已验证的当前 Classic 消耗。",
         "numericVersion": "3.15.5"
       },
       {
         "key": "W",
         "name": "痛苦燃烧",
         "description": "通过消耗生命值，蒙多医生减少自身受到的控制效果持续时间，并持续对附近敌人造成伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/drmundo_burningagony.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/drmundo_burningagony.project_jade_16_18.png",
         "cooldown": "1",
         "cost": "0",
         "range": "325",
-        "numericDetail": "激活：蒙多医生对周围敌人造成每秒35/50/65/80/95(+20%法术强度)魔法伤害，并减少所受控制技能效果10/15/20/25/30%的持续时间。",
+        "numericDetail": "激活：蒙多医生对周围敌人造成每秒35/50/65/80/95(+20%法术强度)魔法伤害，并减少所受控制技能效果10/15/20/25/30%的持续时间。\n来源边界：OP.GG Classic 原始消耗为0；Riot Data Dragon 3.15.5 的历史资源说明为“每秒消耗10/15/20/25/30生命值”。两者来源不同，不能将0解释为不消耗生命，也不将历史消耗视为已验证的当前 Classic 消耗。",
         "numericVersion": "3.15.5"
       },
       {
         "key": "E",
         "name": "潜能激发",
         "description": "蒙多医生获得持续若干秒的攻击力，数额基于他的已损失生命值。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/drmundo_masochism.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/drmundo_masochism.project_jade_16_18.png",
         "cooldown": "7",
         "cost": "0",
         "range": null,
-        "numericDetail": "增加物理攻击40/55/70/85/100，持续5秒。此外每损失1%生命值会额外增加0.4/0.55/0.7/0.85/1物理攻击。",
+        "numericDetail": "增加物理攻击40/55/70/85/100，持续5秒。此外每损失1%生命值会额外增加0.4/0.55/0.7/0.85/1物理攻击。\n来源边界：OP.GG Classic 原始消耗为0；Riot Data Dragon 3.15.5 的历史资源说明为“消耗25/35/45/55/65生命值”。两者来源不同，不能将0解释为不消耗生命，也不将历史消耗视为已验证的当前 Classic 消耗。",
         "numericVersion": "3.15.5"
       },
       {
         "key": "R",
         "name": "背水一战",
         "description": "蒙多医生消耗部分生命值来提升移动速度，并巨幅提升生命回复速度。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/drmundo_sadism.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/drmundo_sadism.project_jade_16_18.png",
         "cooldown": "75",
         "cost": "0",
         "range": "20",
-        "numericDetail": "蒙多医生在12秒内回复40/50/60%最大生命值。此外，他还获得15/25/35%移动速度。",
+        "numericDetail": "蒙多医生在12秒内回复40/50/60%最大生命值。此外，他还获得15/25/35%移动速度。\n来源边界：OP.GG Classic 原始消耗为0；Riot Data Dragon 3.15.5 的历史资源说明为“消耗20%当前生命值”。两者来源不同，不能将0解释为不消耗生命，也不将历史消耗视为已验证的当前 Classic 消耗。",
         "numericVersion": "3.15.5"
       }
     ]
@@ -5934,8 +6058,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "阿卡丽",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/akali",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60084.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_akali/skins/skin301/images/jade_akali_splash_centered_301.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60084.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_akali/skins/skin301/images/jade_akali_splash_centered_301.project_jade.jpg",
     "classicSplashName": "经典 阿卡丽",
     "classicSplashId": "60084301",
     "classicSplashIsDefault": false,
@@ -5943,14 +6067,14 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60084301",
         "name": "经典 阿卡丽",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_akali/skins/skin301/images/jade_akali_splash_centered_301.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_akali/skins/skin301/images/jade_akali_splash_centered_301.project_jade.jpg",
         "kind": "classic",
         "isDefault": false
       },
       {
         "id": "60084000",
         "name": "暗影之拳",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_akali/skins/base/images/jade_akali_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_akali/skins/base/images/jade_akali_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -5977,7 +6101,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "忍法！苍绯印",
         "description": "获得基于法术强度的攻击附带伤害 获得基于攻击力的法术吸血",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/akalitwindisciplines.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/akalitwindisciplines.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -5988,40 +6112,43 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "奥义！绯叶",
         "description": "阿卡丽向目标投掷她的忍镰，造成魔法伤害，并在目标身上施加一个绯叶印。阿卡丽对被标记单位的下一个近战攻击将会触发并消耗掉绯叶印，来造成额外伤害并回复能量。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/akalimota.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/akalimota.project_jade.png",
         "cooldown": "6 / 5.5 / 5 / 4.5 / 4 / 6",
         "cost": "60",
         "range": "575",
-        "numericDetail": "阿卡丽向目标投掷十字镰，造成35/55/75/95/115(+40%法术强度)点魔法伤害，并为目标施加一个持续6秒的绯叶印。\n\n当阿卡丽对被附加了绯叶印的单位进行近战攻击时，印记会触发并消耗，以造成45/70/95/120/145(+40%法术强度)点额外的魔法伤害，并回复20/25/30/35/40点能量值。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "阿卡丽向目标投掷十字镰，造成35/55/75/95/115(+40%法术强度)点魔法伤害，并为目标施加一个持续6秒的绯叶印。\n\n当阿卡丽对被附加了绯叶印的单位进行近战攻击时，印记会触发并消耗，以造成45/70/95/120/145(+40%法术强度)点额外的魔法伤害，并回复20/25/30/35/40点能量值。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为6/5.5/5/4.5/4。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "我流奥义！霞阵",
         "description": "阿卡丽扔下一枚烟幕弹。当处于这个区域内时，阿卡丽获得护甲和魔法抗性并进入隐形状态。攻击或使用技能会短暂地使她显形。烟幕弹之中的敌人们会被降低移动速度。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/akalitwilightshroud.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/akalitwilightshroud.project_jade.png",
         "cooldown": "20",
         "cost": "80 / 75 / 70 / 65 / 60 / 55",
         "range": "700",
-        "numericDetail": "阿卡丽扔下一枚烟幕弹，烟幕将持续8秒。当阿卡丽处于烟幕弹的作用范围内的时候，她会进入隐形状态，并且护甲值和魔法抗性会提高10/20/30/40/50点。攻击或施法将使阿卡丽短暂地现身。\n\n被烟幕所笼罩的敌人，移动速度将会被减少14/18/22/26/30%。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "阿卡丽扔下一枚烟幕弹，烟幕将持续8秒。当阿卡丽处于烟幕弹的作用范围内的时候，她会进入隐形状态，并且护甲值和魔法抗性会提高10/20/30/40/50点。攻击或施法将使阿卡丽短暂地现身。\n\n被烟幕所笼罩的敌人，移动速度将会被减少14/18/22/26/30%。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为80/75/70/65/60。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "E",
         "name": "奥义！散华",
         "description": "阿卡丽挥舞她的忍镰，造成基于她的攻击力和法术强度的伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/akalicrescentslash.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/akalicrescentslash.project_jade.png",
         "cooldown": "5 / 4 / 3 / 2 / 1",
         "cost": "60 / 55 / 50 / 45 / 40 / 35",
         "range": "325",
-        "numericDetail": "阿卡丽舞动十字镰，对附近单位造成30/55/80/105/130(+60%总攻击力)(+30%法术强度)点物理伤害。\n\n可以触发目标身上的【Q奥义！绯叶】。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "阿卡丽舞动十字镰，对附近单位造成30/55/80/105/130(+60%总攻击力)(+30%法术强度)点物理伤害。\n\n可以触发目标身上的【Q奥义！绯叶】。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为60/55/50/45/40。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "秘奥义！幻樱杀缭乱",
         "description": "阿卡丽穿过影子来对目标发起快速突击，对目标造成伤害，同时消耗掉一层幻樱之华。阿卡丽会周期性地获得幻樱之华，击杀和助攻也会获得幻樱之华，幻樱之华最多储备3层。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/akalishadowdance.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/akalishadowdance.project_jade.png",
         "cooldown": "2 / 1.5 / 1",
         "cost": "0",
         "range": "775",
@@ -6035,8 +6162,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "凯南",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/kennen",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60085.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_kennen/skins/base/images/jade_kennen_splash_centered_0.project_jade_16_16.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60085.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_kennen/skins/base/images/jade_kennen_splash_centered_0.project_jade_16_16.jpg",
     "classicSplashName": "狂暴之心",
     "classicSplashId": "60085000",
     "classicSplashIsDefault": true,
@@ -6044,7 +6171,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60085000",
         "name": "狂暴之心",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_kennen/skins/base/images/jade_kennen_splash_centered_0.project_jade_16_16.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_kennen/skins/base/images/jade_kennen_splash_centered_0.project_jade_16_16.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -6071,7 +6198,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "忍法！雷缚印",
         "description": "凯南在用技能命中敌人时会将其标记。一旦对目标施加了3个标记，就会将其晕眩。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/kennen_markofstorm.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/kennen_markofstorm.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -6082,18 +6209,19 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "奥义！千鸟",
         "description": "凯南向目标区域投掷快速飞行的飞镖，给击中的任意敌人造成伤害和附加【忍法！雷缚印】。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/kennen_thunderingshuriken.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/kennen_thunderingshuriken.project_jade.png",
         "cooldown": "8 / 7 / 6 / 5 / 4 / 3",
         "cost": "65 / 60 / 55 / 50 / 45 / 40",
         "range": "1000",
-        "numericDetail": "凯南向目标区域投掷手里剑，对命中的第一个敌人造成75/115/155/195/235(+75%法术强度)魔法伤害。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "凯南向目标区域投掷手里剑，对命中的第一个敌人造成75/115/155/195/235(+75%法术强度)魔法伤害。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为8/7/6/5/4。不将原始字段直接套用为旧版逐级数值。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为65/60/55/50/45。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "奥义！电刃",
         "description": "凯南连续攻击附加额外伤害并对目标造成一层【忍法！雷缚印】，主动释放会对所有带有【忍法！雷缚印】的敌人造成闪电伤害，并额外附加一层【忍法！雷缚印】。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/kennen_electricalsurge.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/kennen_electricalsurge.project_jade.png",
         "cooldown": "14 / 12 / 10 / 8 / 6",
         "cost": "40",
         "range": "725",
@@ -6104,18 +6232,19 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "E",
         "name": "奥义！雷铠",
         "description": "凯南变身为一个闪电形态，高速移动并可以穿越单位。对碰到的所有敌人造成伤害并施加一层【忍法！雷缚印】。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/kennen_lightningrush.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/kennen_lightningrush.project_jade.png",
         "cooldown": "10 / 9 / 8 / 7 / 6",
         "cost": "100 / 95 / 90 / 85 / 80 / 75",
         "range": "170",
-        "numericDetail": "凯南快速移动，移动速度提升335，并可以穿越单位，对沿途的敌人造成 85/125/165/205/245(+60%法术强度)魔法伤害，持续2秒。此外,凯南将获得10/20/30/40/50护甲和魔法抗性加成，持续4秒。\n\n如果凯南穿过一个敌人，则会回复40点能量值，但该效果只能获得一次。【E奥义！雷铠】对小兵的伤害减半。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "凯南快速移动，移动速度提升335，并可以穿越单位，对沿途的敌人造成 85/125/165/205/245(+60%法术强度)魔法伤害，持续2秒。此外,凯南将获得10/20/30/40/50护甲和魔法抗性加成，持续4秒。\n\n如果凯南穿过一个敌人，则会回复40点能量值，但该效果只能获得一次。【E奥义！雷铠】对小兵的伤害减半。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为100/95/90/85/80。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "秘奥义！万雷天牢引",
         "description": "凯南召唤出一团风暴，会对附近的随机敌方英雄造成魔法伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/kennen_slicingmaelstrom.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/kennen_slicingmaelstrom.project_jade.png",
         "cooldown": "120",
         "cost": "0",
         "range": "550",
@@ -6129,8 +6258,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "慎",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/shen",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60098.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_shen/skins/skin301/images/jade_shen_splash_centered_301.project_jade_16_16.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60098.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_shen/skins/skin301/images/jade_shen_splash_centered_301.project_jade_16_16.jpg",
     "classicSplashName": "经典 慎",
     "classicSplashId": "60098301",
     "classicSplashIsDefault": false,
@@ -6138,14 +6267,14 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60098301",
         "name": "经典 慎",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_shen/skins/skin301/images/jade_shen_splash_centered_301.project_jade_16_16.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_shen/skins/skin301/images/jade_shen_splash_centered_301.project_jade_16_16.jpg",
         "kind": "classic",
         "isDefault": false
       },
       {
         "id": "60098000",
         "name": "暮光之眼",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_shen/skins/base/images/jade_shen_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_shen/skins/base/images/jade_shen_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -6172,7 +6301,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "忍法！诛邪斩",
         "description": "每过一段时间，慎的下一次攻击会造成额外伤害。慎对小兵、野怪或英雄的每次攻击都会缩短【忍法！诛邪斩】的冷却时间。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/shen_kistrike.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/shen_kistrike.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -6183,40 +6312,43 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "奥义！却邪",
         "description": "伤害目标单位并分流其生命力，从而治疗那些攻击该目标的友军。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/shen_vorpalblade.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/shen_vorpalblade.project_jade.png",
         "cooldown": "6 / 5.5 / 5 / 4.5 / 4 / 3.5",
         "cost": "60",
         "range": "475",
-        "numericDetail": "对目标单位造成60/100/140/180/220(+60%法术强度)点魔法伤害，并对目标施加一个持续5秒的却邪印。\n\n友军对该目标施放单体技能或进行攻击，会使该友军在3秒里持续回复6/10/14/18/22 (6/10/14/18/22+1.5%health[慎最大生命值的1.5%])点生命值。\n\n用【奥义！却邪】将敌人杀死，会使慎直接回复0点点生命值。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "对目标单位造成60/100/140/180/220(+60%法术强度)点魔法伤害，并对目标施加一个持续5秒的却邪印。\n\n友军对该目标施放单体技能或进行攻击，会使该友军在3秒里持续回复6/10/14/18/22 (6/10/14/18/22+1.5%health[慎最大生命值的1.5%])点生命值。\n\n用【奥义！却邪】将敌人杀死，会使慎直接回复0点点生命值。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为6/5.5/5/4.5/4。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "奥义！空我",
         "description": "慎为自己提供护盾，从而吸收即将到来的伤害，持续若干秒。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/shen_feint.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/shen_feint.project_jade.png",
         "cooldown": "9 / 8 / 7 / 6 / 5 / 10",
         "cost": "50",
         "range": "20",
-        "numericDetail": "慎进入防御姿态，用护盾来格挡接下来的60/100/140/180/220(+60%法术强度)点伤害。最多持续3秒。\n\n当【奥义！空我】持续时，慎的每次攻击会额外减少【忍法！诛邪斩】1秒冷却时间。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "慎进入防御姿态，用护盾来格挡接下来的60/100/140/180/220(+60%法术强度)点伤害。最多持续3秒。\n\n当【奥义！空我】持续时，慎的每次攻击会额外减少【忍法！诛邪斩】1秒冷却时间。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为9/8/7/6/5。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "E",
         "name": "奥义！影缚",
         "description": "慎快速冲刺至一个目标区域，从而嘲讽他遇到的敌方英雄们并造成少量伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/shen_shadowdash.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/shen_shadowdash.project_jade.png",
         "cooldown": "16 / 14 / 12 / 10 / 8 / 6",
         "cost": "120",
         "range": "575",
-        "numericDetail": "慎向目标区域猛冲，对敌方英雄造成50/85/120/155/190(+50%法术强度)魔法伤害，并对沿途的敌人们进行嘲讽，持续1.5秒。\n\n被嘲讽的敌人会被强制对慎发起攻击，并且他们的普通攻击的伤害会减少50%。\n\n每击中一个敌方英雄，慎就会恢复40点能量值。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "慎向目标区域猛冲，对敌方英雄造成50/85/120/155/190(+50%法术强度)魔法伤害，并对沿途的敌人们进行嘲讽，持续1.5秒。\n\n被嘲讽的敌人会被强制对慎发起攻击，并且他们的普通攻击的伤害会减少50%。\n\n每击中一个敌方英雄，慎就会恢复40点能量值。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为16/14/12/10/8。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "秘奥义！慈悲度魂落",
         "description": "慎为目标友方英雄提供一层吸收伤害的护盾，然后很快传送到目标身旁。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/shen_standunited.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/shen_standunited.project_jade.png",
         "cooldown": "200 / 180 / 160",
         "cost": "0",
         "range": "25000",
@@ -6230,8 +6362,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "加里奥",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/galio",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60003.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_galio/skins/skin301/images/jade_galio_splash_centered_301.project_jade_16_18.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60003.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_galio/skins/skin301/images/jade_galio_splash_centered_301.project_jade_16_18.jpg",
     "classicSplashName": "经典 加里奥",
     "classicSplashId": "60003301",
     "classicSplashIsDefault": false,
@@ -6239,14 +6371,14 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60003301",
         "name": "经典 加里奥",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_galio/skins/skin301/images/jade_galio_splash_centered_301.project_jade_16_18.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_galio/skins/skin301/images/jade_galio_splash_centered_301.project_jade_16_18.jpg",
         "kind": "classic",
         "isDefault": false
       },
       {
         "id": "60003000",
         "name": "哨兵之殇",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_galio/skins/base/images/jade_galio_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_galio/skins/base/images/jade_galio_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -6273,7 +6405,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "符文石肤",
         "description": "加里奥将魔法抗性转化为法术强度。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/galio_runicskin.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/galio_runicskin.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -6284,18 +6416,19 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "坚定重击",
         "description": "加里奥从他的双眼发射一道震荡爆裂，从而对冲击点附近的敌人们造成减速和伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/galio_resolutesmite.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/galio_resolutesmite.project_jade_16_18.png",
         "cooldown": "7",
         "cost": "60 / 65 / 70 / 75 / 80 / 85",
         "range": "900",
-        "numericDetail": "加里奥从他的眼睛发射出震荡冲击波，对冲击波落点附近的敌人造成80/135/190/245/300(+60%法术强度)魔法伤害，并减慢他们24/28/32/36/40%的移动速度，持续2.5秒。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "加里奥从他的眼睛发射出震荡冲击波，对冲击波落点附近的敌人造成80/135/190/245/300(+60%法术强度)魔法伤害，并减慢他们24/28/32/36/40%的移动速度，持续2.5秒。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为60/65/70/75/80。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "坚强壁垒",
         "description": "加里奥为一名友方英雄提供护盾，从而提升其护甲和魔法抗性，并在该英雄每次遭受伤害时回复加里奥的生命值。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/galio_bulwark.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/galio_bulwark.project_jade.png",
         "cooldown": "13",
         "cost": "60",
         "range": "800",
@@ -6306,23 +6439,25 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "E",
         "name": "正义罡风",
         "description": "加里奥扇动他的双翼，从而释放出一股震荡强风，来对敌人们造成伤害并留下一条指向气流来提升友军的移动速度。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/galio_righteousgust.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/galio_righteousgust.project_jade.png",
         "cooldown": "12",
         "cost": "70 / 75 / 80 / 85 / 90 / 95",
         "range": "1125",
-        "numericDetail": "加里奥释放出一股震荡强风，对强风途中的敌人造成 60/105/150/195/240(+50%法术强度)魔法伤害。  在此之后会有持续5秒的指向气流，所有友军沿气流方向的移动速度增加 20/28/36/44/52%。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "加里奥释放出一股震荡强风，对强风途中的敌人造成 60/105/150/195/240(+50%法术强度)魔法伤害。  在此之后会有持续5秒的指向气流，所有友军沿气流方向的移动速度增加 20/28/36/44/52%。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为70/75/80/85/90。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "杜朗石像",
         "description": "加里奥现出石像形态，从而嘲讽附近的敌人们并在他们攻击他时储存震荡能量。加里奥随后从他的石像甲壳中爆裂而出，从而释放已储存的能量来伤害周围的敌人们。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/galio_idolofdurand.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/galio_idolofdurand.project_jade_16_18.png",
         "cooldown": "150 / 135 / 120 / 140",
         "cost": "100",
         "range": "600",
-        "numericDetail": "加里奥引导2秒，嘲讽周围敌方单位并减低50%受到的伤害。\n\n引导完毕后，加里奥对周围敌方单位造成220/330/440(+60%法术强度)魔法伤害，他引导时每受到1次攻击增加5%额外伤害。最多40%的额外伤害。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "加里奥引导2秒，嘲讽周围敌方单位并减低50%受到的伤害。\n\n引导完毕后，加里奥对周围敌方单位造成220/330/440(+60%法术强度)魔法伤害，他引导时每受到1次攻击增加5%额外伤害。最多40%的额外伤害。\n来源边界：OP.GG Classic 原始冷却含4项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶冷却为150/135/120。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       }
     ]
   },
@@ -6331,8 +6466,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "赵信",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/xin-zhao",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60005.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_xinzhao/skins/skin301/images/jade_xinzhao_splash_centered_301.project_jade_16_18.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60005.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_xinzhao/skins/skin301/images/jade_xinzhao_splash_centered_301.project_jade_16_18.jpg",
     "classicSplashName": "经典 赵信",
     "classicSplashId": "60005301",
     "classicSplashIsDefault": false,
@@ -6340,14 +6475,14 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60005301",
         "name": "经典 赵信",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_xinzhao/skins/skin301/images/jade_xinzhao_splash_centered_301.project_jade_16_18.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_xinzhao/skins/skin301/images/jade_xinzhao_splash_centered_301.project_jade_16_18.jpg",
         "kind": "classic",
         "isDefault": false
       },
       {
         "id": "60005000",
         "name": "德邦总管",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_xinzhao/skins/base/images/jade_xinzhaorework_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_xinzhao/skins/base/images/jade_xinzhaorework_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -6374,7 +6509,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "挑战",
         "description": "赵信通过他的普攻和无畏冲锋来挑战他的目标，从而对其造成护甲削减。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/xinzhao_tirelesswarrior.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/xinzhao_tirelesswarrior.project_jade_16_18.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -6385,40 +6520,43 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "三重爪击",
         "description": "赵信的下3次普攻将造成额外伤害并缩短他其它技能的冷却时间，且第三次攻击将击飞一个目标。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/xinzhao_threetalon.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/xinzhao_threetalon.project_jade.png",
         "cooldown": "9 / 8 / 7 / 6 / 5 / 4",
         "cost": "30",
         "range": "375",
-        "numericDetail": "赵信的3次普通攻击能够对敌方目标造成15/30/45/60/75(+125%总攻击力)的物理伤害，减少其它技能1秒的冷却时间，并且第三次攻击将会把敌人打飞。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "赵信的3次普通攻击能够对敌方目标造成15/30/45/60/75(+125%总攻击力)的物理伤害，减少其它技能1秒的冷却时间，并且第三次攻击将会把敌人打飞。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为9/8/7/6/5。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "狂战怒吼",
         "description": "赵信被动地每3次攻击治疗自身并且能够主动施放这个技能来攻击得更快。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/xinzhao_battlecry.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/xinzhao_battlecry.project_jade.png",
         "cooldown": "16 / 15 / 14 / 13 / 12 / 11",
         "cost": "40",
         "range": "1000",
-        "numericDetail": "被动：赵信的每第三次攻击会为自己回复26/32/38/44/50(+70%法术强度)点生命值。\n\n主动：赵信发出令人振奋的战吼，提高自己40/50/60/70/80%的攻击速度，持续5秒。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "被动：赵信的每第三次攻击会为自己回复26/32/38/44/50(+70%法术强度)点生命值。\n\n主动：赵信发出令人振奋的战吼，提高自己40/50/60/70/80%的攻击速度，持续5秒。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为16/15/14/13/12。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "E",
         "name": "无畏冲锋",
         "description": "赵信对一名敌人发起冲锋，从而对区域内的所有敌人造成伤害和减速。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/xinzhao_charge.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/xinzhao_charge.project_jade.png",
         "cooldown": "14 / 13 / 12 / 11 / 10 / 9",
         "cost": "60",
         "range": "600",
-        "numericDetail": "赵信对一名敌人发起冲锋与挑战。冲锋会对目标及其周围的所有敌人造成70/105/140/175/210(+60%法术强度)魔法伤害，并他们的移动速度减少25/30/35/40/45%，减速持续2秒。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "赵信对一名敌人发起冲锋与挑战。冲锋会对目标及其周围的所有敌人造成70/105/140/175/210(+60%法术强度)魔法伤害，并他们的移动速度减少25/30/35/40/45%，减速持续2秒。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为14/13/12/11/10。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "新月横扫",
         "description": "赵信对附近的敌人造成基于目标当前生命值的伤害，并击退未被挑战的目标。赵信会基于命中的英雄数量获得额外护甲和魔法抗性。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/xinzhao_crescentsweep.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/xinzhao_crescentsweep.project_jade.png",
         "cooldown": "120 / 110 / 100",
         "cost": "100",
         "range": "465",
@@ -6432,8 +6570,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "波比",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/poppy",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60078.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_poppy/skins/skin301/images/jade_poppy_splash_centered_301.project_jade_16_18.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60078.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_poppy/skins/skin301/images/jade_poppy_splash_centered_301.project_jade_16_18.jpg",
     "classicSplashName": "经典 波比",
     "classicSplashId": "60078301",
     "classicSplashIsDefault": false,
@@ -6441,14 +6579,14 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60078301",
         "name": "经典 波比",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_poppy/skins/skin301/images/jade_poppy_splash_centered_301.project_jade_16_18.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_poppy/skins/skin301/images/jade_poppy_splash_centered_301.project_jade_16_18.jpg",
         "kind": "classic",
         "isDefault": false
       },
       {
         "id": "60078000",
         "name": "钢铁大使",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_poppy/skins/base/images/jade_poppy_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_poppy/skins/base/images/jade_poppy_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -6475,7 +6613,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "英勇战士",
         "description": "所有对波比造成的伤害，只要超过了她的一部分当前生命值，就会被削减。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/poppy_valiantfighter.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/poppy_valiantfighter.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -6486,45 +6624,49 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "毁灭重击",
         "description": "波比的下一次攻击会碾压她的对手，从而根据目标的最大生命值造成额外伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/poppydevastatingblow.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/poppydevastatingblow.project_jade.png",
         "cooldown": "8 / 7 / 6 / 5 / 4 / 3",
         "cost": "55",
         "range": "430",
-        "numericDetail": "波比猛砸她的敌人，造成 20/40/60/80/100(+100%总攻击力)(+60%法术强度)加上目标敌 8%最大生命值的魔法伤害。基础加上额外百分比生命值的伤害不能超过75/150/225/300/375。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "波比猛砸她的敌人，造成 20/40/60/80/100(+100%总攻击力)(+60%法术强度)加上目标敌 8%最大生命值的魔法伤害。基础加上额外百分比生命值的伤害不能超过75/150/225/300/375。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为8/7/6/5/4。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "德玛西亚光辉",
         "description": "被动：在每次受到或造成普攻伤害时，波比的护甲和伤害获得提升，这个效果可以叠加。主动：波比获得最大层数的【德玛西亚光辉】并且移动速度得到提升。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/poppydefenseofdemacia.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/poppydefenseofdemacia.project_jade.png",
         "cooldown": "12",
         "cost": "70 / 75 / 80 / 85 / 90 / 95",
         "range": "400",
-        "numericDetail": "被动特效：攻击敌人或被攻击时，波比的护甲和伤害增加 1.5/2/2.5/3/3.5点，持续 5 秒。该效果最多叠加 10 次。\n\n主动特效：波比获得德玛西亚光辉最大叠加次数，并且移动速度提升 17/19/21/23/25%，持续 5 秒。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "被动特效：攻击敌人或被攻击时，波比的护甲和伤害增加 1.5/2/2.5/3/3.5点，持续 5 秒。该效果最多叠加 10 次。\n\n主动特效：波比获得德玛西亚光辉最大叠加次数，并且移动速度提升 17/19/21/23/25%，持续 5 秒。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为70/75/80/85/90。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "E",
         "name": "英勇冲锋",
         "description": "波比对一个敌人进行冲锋并将其挟带至更远的地方。第一段冲击造成小额伤害，并且如果其与地形产生碰撞，那么她的目标将受到高额伤害并被晕眩。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/poppy_heroiccharge.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/poppy_heroiccharge.project_jade.png",
         "cooldown": "12 / 11 / 10 / 9 / 8 / 7",
         "cost": "60 / 65 / 70 / 75 / 80 / 85",
         "range": "525",
-        "numericDetail": "波比冲向敌人并携带他们继续冲锋一小段距离。初始的撞击造成 50/75/100/125/150 (+40%法术强度)点魔法伤害。如果他们后续撞击到障碍物，她的目标将承受75/125/175/225/275(+40%法术强度)点魔法伤害，并晕眩1.5秒。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "波比冲向敌人并携带他们继续冲锋一小段距离。初始的撞击造成 50/75/100/125/150 (+40%法术强度)点魔法伤害。如果他们后续撞击到障碍物，她的目标将承受75/125/175/225/275(+40%法术强度)点魔法伤害，并晕眩1.5秒。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为12/11/10/9/8。不将原始字段直接套用为旧版逐级数值。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为60/65/70/75/80。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "外交豁免",
         "description": "波比一心一意地专注于单个目标，从而对其造成额外伤害。波比免疫来自她的目标之外的敌人的任何伤害和技能。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/poppy_diplomaticimmunity.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/poppy_diplomaticimmunity.project_jade.png",
         "cooldown": "140 / 120 / 100 / 80 / 60 / 40",
         "cost": "100",
         "range": "900",
-        "numericDetail": "持续 6/7/8 秒，波比免疫除她的目标以外任何敌方的攻击伤害和技能。\n波比对被标记的敌人造成的伤害会提高20/30/40%。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "持续 6/7/8 秒，波比免疫除她的目标以外任何敌方的攻击伤害和技能。\n波比对被标记的敌人造成的伤害会提高20/30/40%。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶冷却为140/120/100。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       }
     ]
   },
@@ -6533,8 +6675,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "希瓦娜",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/shyvana",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60102.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_shyvana/skins/skin301/images/jade_shyvana_splash_centered_301.project_jade_16_18.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60102.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_shyvana/skins/skin301/images/jade_shyvana_splash_centered_301.project_jade_16_18.jpg",
     "classicSplashName": "经典 希瓦娜",
     "classicSplashId": "60102301",
     "classicSplashIsDefault": false,
@@ -6542,14 +6684,14 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60102301",
         "name": "经典 希瓦娜",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_shyvana/skins/skin301/images/jade_shyvana_splash_centered_301.project_jade_16_18.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_shyvana/skins/skin301/images/jade_shyvana_splash_centered_301.project_jade_16_18.jpg",
         "kind": "classic",
         "isDefault": false
       },
       {
         "id": "60102000",
         "name": "龙血武姬",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_shyvana/skins/base/images/jade_shyvana_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_shyvana/skins/base/images/jade_shyvana_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -6576,7 +6718,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "龙族之怒",
         "description": "希瓦娜的普攻会增强她的技能。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/shyvanareinforcedscales.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/shyvanareinforcedscales.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -6587,18 +6729,19 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "龙牙突刺",
         "description": "希瓦娜的下次攻击将进行两次打击。每次普通攻击会减少【龙牙突刺】的冷却时间。魔龙形态：【龙牙突刺】会顺劈希瓦娜面前的所有单位。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/shyvanatwinbite.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/shyvanatwinbite.project_jade.png",
         "cooldown": "10 / 9 / 8 / 7 / 6 / 5",
         "cost": "0",
         "range": "25000",
-        "numericDetail": "希瓦娜的下次攻击会进行两次打击，第二次打击造成(+80% / 85% / 90% / 95% / 100%CharTotalPhysical)点物理伤害。 伤害加成相当于希瓦娜攻击力的80/85/90/95/100%。普通攻击会减少龙牙突刺0.5秒冷却时间。\n\n魔龙形态： 龙牙突刺会撕裂希瓦娜面前的所有单位。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "希瓦娜的下次攻击会进行两次打击，第二次打击造成(+80% / 85% / 90% / 95% / 100%CharTotalPhysical)点物理伤害。 伤害加成相当于希瓦娜攻击力的80/85/90/95/100%。普通攻击会减少龙牙突刺0.5秒冷却时间。\n\n魔龙形态： 龙牙突刺会撕裂希瓦娜面前的所有单位。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为10/9/8/7/6。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "烈火燎原",
         "description": "希瓦娜将自己围在火焰之中，每秒对周围的敌人造成伤害，并在短时间内能移动得更快。这个移动速度会在该技能期间持续衰减。普攻会延长【烈火燎原】的持续时间。魔龙形态：【烈火燎原】会烧焦它下方的大地，站在烧焦大地上的敌人们会持续受到伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/shyvanascorchedearth.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/shyvanascorchedearth.project_jade.png",
         "cooldown": "12",
         "cost": "0",
         "range": "350",
@@ -6609,18 +6752,19 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "E",
         "name": "烈焰吐息",
         "description": "希瓦娜放出一枚火球，对它遇到的所有敌人造成伤害，并在目标身上留下燃渣，从而将其短暂标记。对被标记目标们的普攻会附带其百分比最大生命值的额外伤害。魔龙形态：烈焰吐息会席卷希瓦娜前方一个锥形范围内的所有敌人。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/shyvanaflamebreath.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/shyvanaflamebreath.project_jade.png",
         "cooldown": "12 / 11 / 10 / 9 / 8 / 7",
         "cost": "0",
         "range": "925",
-        "numericDetail": "希瓦娜放出一枚火球，对沿途的所有敌人造成80/115/150/185/220(+60%法术强度)魔法伤害，并给他们施加持续5秒的减益效果。普通攻击会对被施加减益效果的目标造成相当于目标最大生命值的2%的魔法伤害（对野怪的最大伤害值：100）。\n\n魔龙形态：烈焰吐息会席卷希瓦娜前方扇形范围内的所有敌人。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "希瓦娜放出一枚火球，对沿途的所有敌人造成80/115/150/185/220(+60%法术强度)魔法伤害，并给他们施加持续5秒的减益效果。普通攻击会对被施加减益效果的目标造成相当于目标最大生命值的2%的魔法伤害（对野怪的最大伤害值：100）。\n\n魔龙形态：烈焰吐息会席卷希瓦娜前方扇形范围内的所有敌人。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为12/11/10/9/8。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "魔龙降世",
         "description": "希瓦娜变成一条巨龙，并且飞向目标区域。她途经的敌人会受到魔法伤害，并被震向她的目标区域。希瓦娜被动地获得护甲和魔抗。这些防御加成会在魔龙形态下翻倍。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/shyvanadragonsdescent.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/shyvanadragonsdescent.project_jade.png",
         "cooldown": null,
         "cost": "0",
         "range": "950",
@@ -6634,8 +6778,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "格雷福斯",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/graves",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60104.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_graves/skins/base/images/jade_graves_splash_centered_0.project_jade_16_20.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60104.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_graves/skins/base/images/jade_graves_splash_centered_0.project_jade_16_20.jpg",
     "classicSplashName": "法外狂徒",
     "classicSplashId": "60104000",
     "classicSplashIsDefault": true,
@@ -6643,7 +6787,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60104000",
         "name": "法外狂徒",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_graves/skins/base/images/jade_graves_splash_centered_0.project_jade_16_20.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_graves/skins/base/images/jade_graves_splash_centered_0.project_jade_16_20.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -6670,7 +6814,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "纯爷们",
         "description": "格雷福斯在战斗状态逗留得越久，就会获得越多护甲与魔法抗性。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/gravestruegrit.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/gravestruegrit.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -6681,45 +6825,49 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "大号铅弹",
         "description": "格雷福斯对一个锥形范围射出3枚子弹，对它们途经的所有敌人造成伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/gravesbuckshot.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/gravesbuckshot.project_jade.png",
         "cooldown": "12 / 11 / 10 / 9 / 8 / 7",
         "cost": "60 / 70 / 80 / 90 / 100 / 110",
         "range": "925",
-        "numericDetail": "格雷福斯射出三发子弹，每一发都会对沿途的敌人造成60/95/130/165/200(+80%额外攻击力)点物理伤害。\n\n被多发子弹命中的敌人，将会从每一发额外的子弹上受到35%的伤害。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "格雷福斯射出三发子弹，每一发都会对沿途的敌人造成60/95/130/165/200(+80%额外攻击力)点物理伤害。\n\n被多发子弹命中的敌人，将会从每一发额外的子弹上受到35%的伤害。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为12/11/10/9/8。不将原始字段直接套用为旧版逐级数值。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为60/70/80/90/100。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "烟幕弹",
         "description": "格雷福斯朝目标区域掷出一颗烟幕弹。如果敌人处在烟幕之中，则其视野和移动速度会被降低。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/gravessmokegrenade.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/gravessmokegrenade.project_jade.png",
         "cooldown": "20 / 19 / 18 / 17 / 16 / 15",
         "cost": "70 / 75 / 80 / 85 / 90 / 95",
         "range": "950",
-        "numericDetail": "格雷福斯发射一枚烟雾弹，在撞击时造成60/110/160/210/260(+60%法术强度)点魔法伤害，并在指定区域产生一团烟雾，持续4秒。如果敌人持续处在烟幕之中，则他们的视野和移动速度都将被减少15/20/25/30/35%。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "格雷福斯发射一枚烟雾弹，在撞击时造成60/110/160/210/260(+60%法术强度)点魔法伤害，并在指定区域产生一团烟雾，持续4秒。如果敌人持续处在烟幕之中，则他们的视野和移动速度都将被减少15/20/25/30/35%。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为20/19/18/17/16。不将原始字段直接套用为旧版逐级数值。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为70/75/80/85/90。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "E",
         "name": "快速拔枪",
         "description": "格雷福斯向前冲刺，获得一层持续数秒的攻击速度加成。格雷福斯的每次未被闪避的普通攻击，都会缩短这个技能的冷却时间。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/gravesquickdraw.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/gravesquickdraw.project_jade.png",
         "cooldown": "22 / 20 / 18 / 16 / 14 / 12",
         "cost": "50",
         "range": "425",
-        "numericDetail": "格雷福斯向前冲刺，并获得30/40/50/60/70%的攻速加成，持续4秒。\n\n他的每次未被闪避的普通攻击，都将减少该技能1秒的冷却时间。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "格雷福斯向前冲刺，并获得30/40/50/60/70%的攻速加成，持续4秒。\n\n他的每次未被闪避的普通攻击，都将减少该技能1秒的冷却时间。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为22/20/18/16/14。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "终极爆弹",
         "description": "格雷福斯射出一枚爆弹，来对它命中和途经的敌人们造成大量伤害。在命中一名英雄或者达到它的最大射程之后，爆弹会爆炸，并对锥形范围内的敌人造成伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/graveshighnoon.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/graveshighnoon.project_jade.png",
         "cooldown": "100 / 90 / 80 / 70 / 60 / 50",
         "cost": "100",
         "range": "1000",
-        "numericDetail": "格雷福斯射出一枚爆破弹，对命中的第一个敌人造成250/350/450(+140%额外攻击力)点物理伤害。在命中一名敌方英雄，或者达到最大射程之后，终极爆弹将会对目标之后锥形范围内的敌人造成140/250/360(+120%额外攻击力)点物理伤害。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "格雷福斯射出一枚爆破弹，对命中的第一个敌人造成250/350/450(+140%额外攻击力)点物理伤害。在命中一名敌方英雄，或者达到最大射程之后，终极爆弹将会对目标之后锥形范围内的敌人造成140/250/360(+120%额外攻击力)点物理伤害。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶冷却为100/90/80。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       }
     ]
   },
@@ -6728,8 +6876,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "菲兹",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/fizz",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60105.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_fizz/skins/base/images/jade_fizz_splash_centered_0.project_jade_16_19.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60105.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_fizz/skins/base/images/jade_fizz_splash_centered_0.project_jade_16_19.jpg",
     "classicSplashName": "潮汐海灵",
     "classicSplashId": "60105000",
     "classicSplashIsDefault": true,
@@ -6737,7 +6885,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60105000",
         "name": "潮汐海灵",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_fizz/skins/base/images/jade_fizz_splash_centered_0.project_jade_16_19.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_fizz/skins/base/images/jade_fizz_splash_centered_0.project_jade_16_19.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -6764,7 +6912,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "伶俐斗士",
         "description": "菲兹的灵巧身手能使他在移动时忽略单位的碰撞体积，并且减免来自普通攻击的物理伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/fizzpassive.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/fizzpassive.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -6775,18 +6923,19 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "淘气打击",
         "description": "菲兹打击他的目标并穿过他的目标，从而造成魔法伤害，并施加攻击特效。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/fizzpiercingstrike.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/fizzpiercingstrike.project_jade.png",
         "cooldown": "10 / 9 / 8 / 7 / 6 / 5",
         "cost": "50 / 55 / 60 / 65 / 70 / 75",
         "range": "550",
-        "numericDetail": "菲兹径直冲向他的目标，造成普攻伤害加上 10/40/70/100/130(+60%法术强度)点魔法伤害。这个技能可以触发攻击特效。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "菲兹径直冲向他的目标，造成普攻伤害加上 10/40/70/100/130(+60%法术强度)点魔法伤害。这个技能可以触发攻击特效。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为10/9/8/7/6。不将原始字段直接套用为旧版逐级数值。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为50/55/60/65/70。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "海石三叉戟",
         "description": "菲兹的三叉戟会在他的对手们身上引发撕裂型伤口，从而对该目标造成基于其已损失生命值的魔法伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/fizzseastonepassive.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/fizzseastonepassive.project_jade.png",
         "cooldown": "10",
         "cost": "40",
         "range": "600",
@@ -6797,23 +6946,25 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "E",
         "name": "古灵/精怪",
         "description": "菲兹跳到空中，同时优雅地落在他的长矛上，变得不可被选取。在这个姿态下，菲兹可以选择原地着陆，也可以选择在着陆之前再跳一段距离。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/fizzjump.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/fizzjump.project_jade.png",
         "cooldown": "16 / 14 / 12 / 10 / 8 / 6",
         "cost": "90 / 100 / 110 / 120 / 130 / 140",
         "range": "400",
-        "numericDetail": "菲兹跳到长矛上，朝着你的指针方向进行移动，并且无法被选定，随后会猛击地面，对周围的敌人造成 70/120/170/220/270(+75%法术强度)点魔法伤害，并减少他们 40/45/50/55/60% 的速度，持续2秒。\n\n当菲兹在长矛上时，重新激活此技能会让菲兹再次朝着你的指针方向跳跃，并对小范围内的敌人造成 70/120/170/220/270(+75%法术强度)点魔法伤害，而不会猛击地面。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "菲兹跳到长矛上，朝着你的指针方向进行移动，并且无法被选定，随后会猛击地面，对周围的敌人造成 70/120/170/220/270(+75%法术强度)点魔法伤害，并减少他们 40/45/50/55/60% 的速度，持续2秒。\n\n当菲兹在长矛上时，重新激活此技能会让菲兹再次朝着你的指针方向跳跃，并对小范围内的敌人造成 70/120/170/220/270(+75%法术强度)点魔法伤害，而不会猛击地面。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为16/14/12/10/8。不将原始字段直接套用为旧版逐级数值。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为90/100/110/120/130。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "巨鲨强袭",
         "description": "菲兹释放一条魔法小鱼来缠附敌人或越过地形，从而在它缠附到英雄身上时对其造成减速。在一阵短暂的延迟后，一头巨鲨会破土而出，对小鱼周围的敌人们造成伤害并将他们震开。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/fizzmarinerdoom.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/fizzmarinerdoom.project_jade.png",
         "cooldown": "100 / 85 / 70 / 55 / 40 / 25",
         "cost": "100",
         "range": "1275",
-        "numericDetail": "菲兹朝着目标区域放出一条魔法小鱼，小鱼会缠住被它命中的敌方英雄，减少他 50/60/70% 的移动速度。如果小鱼没有命中敌人，则会在地上持续很短的时间，缠住从它身边走过的敌方英雄。\n\n在 1.5 秒之后，一条鲨鱼就会从大地之中钻出来，对大范围内的敌人造成 200/325/450(+100%法术强度)点魔法伤害，并击飞被小鱼所缠住的目标，将其它敌人击开，并减少所有被命中的敌人 50/60/70% 的移动速度，持续 1.5 秒。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "菲兹朝着目标区域放出一条魔法小鱼，小鱼会缠住被它命中的敌方英雄，减少他 50/60/70% 的移动速度。如果小鱼没有命中敌人，则会在地上持续很短的时间，缠住从它身边走过的敌方英雄。\n\n在 1.5 秒之后，一条鲨鱼就会从大地之中钻出来，对大范围内的敌人造成 200/325/450(+100%法术强度)点魔法伤害，并击飞被小鱼所缠住的目标，将其它敌人击开，并减少所有被命中的敌人 50/60/70% 的移动速度，持续 1.5 秒。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶冷却为100/85/70。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       }
     ]
   },
@@ -6822,8 +6973,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "诺提勒斯",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/nautilus",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60111.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_nautilus/skins/base/images/jade_nautilus_splash_centered_0.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60111.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_nautilus/skins/base/images/jade_nautilus_splash_centered_0.project_jade.jpg",
     "classicSplashName": "深海泰坦",
     "classicSplashId": "60111000",
     "classicSplashIsDefault": true,
@@ -6831,7 +6982,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60111000",
         "name": "深海泰坦",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_nautilus/skins/base/images/jade_nautilus_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_nautilus/skins/base/images/jade_nautilus_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -6858,7 +7009,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "排山倒海",
         "description": "诺提勒斯的普通攻击会对目标造成额外的物理伤害并令目标定身。这个效果只能在数秒内对相同目标生效一次。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/nautilus_staggeringblow.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/nautilus_staggeringblow.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -6869,45 +7020,49 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "疏通航道",
         "description": "诺提勒斯向前猛掷他的船锚。如果它击中了一名英雄，诺提勒斯就会将他自己和目标吸到一起。如果它击中了地形，诺提勒斯则会把自己拉拽到船锚处并缩短【疏通航道】的冷却时间。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/nautilus_anchorchain.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/nautilus_anchorchain.project_jade_16_18.png",
         "cooldown": "18 / 16 / 14 / 12 / 10 / 9",
         "cost": "60 / 70 / 80 / 90 / 100",
         "range": "1150",
-        "numericDetail": "诺提勒斯向前猛掷他的船锚。如果它击中了一个敌方单位，诺提勒斯就会将他自己和目标吸到一起，同时造成60/105/150/195/240(+75%法术强度)点魔法伤害，并将目标暂时晕眩。\n\n如果它击中了地形，诺提勒斯则会把自己拉到船锚处，同时该技能的冷却时间减少50%(50点)。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "诺提勒斯向前猛掷他的船锚。如果它击中了一个敌方单位，诺提勒斯就会将他自己和目标吸到一起，同时造成60/105/150/195/240(+75%法术强度)点魔法伤害，并将目标暂时晕眩。\n\n如果它击中了地形，诺提勒斯则会把自己拉到船锚处，同时该技能的冷却时间减少50%(50点)。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为18/16/14/12/10。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "泰坦之怒",
         "description": "诺提勒斯获得一个临时护盾。当护盾存在时，他的攻击会对目标及目标周围的敌人造成持续伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/nautilus_wrath.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/nautilus_wrath.project_jade.png",
         "cooldown": "22 / 21 / 20 / 19 / 18 / 17",
         "cost": "80",
         "range": "350",
-        "numericDetail": "诺提勒斯用黑暗的能量将自身环绕，同时获得一个能够吸收100/150/200/250/300加上他10%的额外生命值(+10%额外生命值)点伤害的护盾，护盾最多持续10秒。\n\n在护盾持续期间，诺提勒斯的普通攻击会对目标身边的所有敌人施加一个持续伤害效果。这个效果会在2秒里造成40/55/70/85/100(+40%法术强度)点魔法伤害。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "诺提勒斯用黑暗的能量将自身环绕，同时获得一个能够吸收100/150/200/250/300加上他10%的额外生命值(+10%额外生命值)点伤害的护盾，护盾最多持续10秒。\n\n在护盾持续期间，诺提勒斯的普通攻击会对目标身边的所有敌人施加一个持续伤害效果。这个效果会在2秒里造成40/55/70/85/100(+40%法术强度)点魔法伤害。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为22/21/20/19/18。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "E",
         "name": "暗流涌动",
         "description": "诺提勒斯猛击地面，使在他附近的土地爆炸三次。每次爆炸都会对敌人造成伤害和减速效果。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/nautilus_rippleeffect.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/nautilus_rippleeffect.project_jade.png",
         "cooldown": "10",
         "cost": "60 / 70 / 80 / 90 / 100 / 110",
         "range": "550",
-        "numericDetail": "诺提勒斯猛击地面，使在他附近的土地爆炸三次。每次爆炸都会对敌人造成60/100/140/180/220(+50%法术强度)点魔法伤害，并减少他们30/35/40/45/50%的移动速度，持续2秒。这个减速效果会逐渐衰减。\n\n一个单位可以被多个爆炸所击中，但额外的爆炸对他们的伤害会减少50%。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "诺提勒斯猛击地面，使在他附近的土地爆炸三次。每次爆炸都会对敌人造成60/100/140/180/220(+50%法术强度)点魔法伤害，并减少他们30/35/40/45/50%的移动速度，持续2秒。这个减速效果会逐渐衰减。\n\n一个单位可以被多个爆炸所击中，但额外的爆炸对他们的伤害会减少50%。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为60/70/80/90/100。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "深海冲击",
         "description": "诺提勒斯将一束冲击波打进土里，来追击敌方目标。这束冲击波会撕裂它上面的地表，将敌人震到半空中。当它命中目标时，冲击波会喷发，将他的目标震到半空中，并使目标晕眩。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/nautilus_grandline.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/nautilus_grandline.project_jade.png",
         "cooldown": "140 / 110 / 80 / 50 / 20 / -10",
         "cost": "100",
         "range": "825",
-        "numericDetail": "诺提勒斯将一束冲击波打进土里，来追击敌方英雄。这束冲击波会对被它穿过的敌人造成125/175/225(+40%法术强度)点魔法伤害，并将他们震到半空中。\n\n冲击波会在命中目标时爆炸，同时造成200/325/450(+80%法术强度)点魔法伤害，并使目标被震到半空中，随后使目标晕眩1/1.5/2秒。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "诺提勒斯将一束冲击波打进土里，来追击敌方英雄。这束冲击波会对被它穿过的敌人造成125/175/225(+40%法术强度)点魔法伤害，并将他们震到半空中。\n\n冲击波会在命中目标时爆炸，同时造成200/325/450(+80%法术强度)点魔法伤害，并使目标被震到半空中，随后使目标晕眩1/1.5/2秒。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶冷却为140/110/80。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       }
     ]
   },
@@ -6916,8 +7071,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "菲奥娜",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/fiora",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60114.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_fiora/skins/skin301/images/jade_fiora_splash_centered_301.project_jade_16_18.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60114.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_fiora/skins/skin301/images/jade_fiora_splash_centered_301.project_jade_16_18.jpg",
     "classicSplashName": "经典 菲奥娜",
     "classicSplashId": "60114301",
     "classicSplashIsDefault": false,
@@ -6925,14 +7080,14 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60114301",
         "name": "经典 菲奥娜",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_fiora/skins/skin301/images/jade_fiora_splash_centered_301.project_jade_16_18.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_fiora/skins/skin301/images/jade_fiora_splash_centered_301.project_jade_16_18.jpg",
         "kind": "classic",
         "isDefault": false
       },
       {
         "id": "60114000",
         "name": "无双剑姬",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_fiora/skins/base/images/jade_fiora_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_fiora/skins/base/images/jade_fiora_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -6959,7 +7114,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "决斗达人",
         "description": "菲奥娜在造成伤害时会持续回复生命值。击中英雄将使这个效果叠加多层。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/fiora_duelist.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/fiora_duelist.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -6970,7 +7125,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "破空斩",
         "description": "菲奥娜向前冲刺以打击她的目标，从而造成物理伤害。菲奥娜可以在若干秒内无法力消耗地进行第二次冲刺。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/fiora_lunge.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/fiora_lunge.project_jade_16_18.png",
         "cooldown": "16 / 14 / 12 / 10 / 8",
         "cost": "60",
         "range": "600",
@@ -6981,18 +7136,19 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "W",
         "name": "劳伦特心眼刀",
         "description": "菲奥娜的攻击力得到提升。在激活时，菲奥娜会招架下一次普攻并回敬魔法伤害给攻击者。可对英雄、野怪和大型小兵生效。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/fiora_parry.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/fiora_parry.project_jade.png",
         "cooldown": "10 / 9 / 8 / 7 / 6 / 5",
         "cost": "45",
         "range": "750",
-        "numericDetail": "被动：菲奥娜的攻击力提升15/20/25/30/35。\n\n主动：菲奥娜摆好架势，准备招架下一次普通攻击，持续1.5秒。被招架的敌人会受到60/110/160/210/260(+100%法术强度)的反弹伤害。对英雄，野怪，和大型小兵有效。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "被动：菲奥娜的攻击力提升15/20/25/30/35。\n\n主动：菲奥娜摆好架势，准备招架下一次普通攻击，持续1.5秒。被招架的敌人会受到60/110/160/210/260(+100%法术强度)的反弹伤害。对英雄，野怪，和大型小兵有效。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为10/9/8/7/6。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "E",
         "name": "前进喷泉",
         "description": "菲奥娜暂时获得额外的攻击速度。在此期间，她的每次攻击或【破空斩】在击中时都会提升她的移动速度。击杀一个英雄会刷新此技能的冷却时间。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/fiora_burstofspeed.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/fiora_burstofspeed.project_jade.png",
         "cooldown": "15 / 14 / 13 / 12 / 11",
         "cost": "55",
         "range": "500",
@@ -7003,12 +7159,13 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "R",
         "name": "利刃华尔兹",
         "description": "菲奥娜围绕战场进行冲刺，以对敌方英雄们造成物理伤害。对相同目标的后续打击会造成较少伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/fiora_danceofdeath.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/fiora_danceofdeath.project_jade.png",
         "cooldown": "150 / 130 / 110 / 90 / 70 / 50",
         "cost": "100",
         "range": "400",
-        "numericDetail": "菲奥娜围绕战场进行冲锋，随意对敌方英雄发起5次打击，造成160/330/500(+120%额外攻击力)点物理伤害。对相同目标的后续打击只会造成25%的伤害。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "菲奥娜围绕战场进行冲锋，随意对敌方英雄发起5次打击，造成160/330/500(+120%额外攻击力)点物理伤害。对相同目标的后续打击只会造成25%的伤害。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶冷却为130/120/110。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       }
     ]
   },
@@ -7017,8 +7174,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "娜美",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/nami",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60267.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_nami/skins/base/images/jade_nami_splash_centered_0.project_jade_16_19.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60267.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_nami/skins/base/images/jade_nami_splash_centered_0.project_jade_16_19.jpg",
     "classicSplashName": "唤潮鲛姬",
     "classicSplashId": "60267000",
     "classicSplashIsDefault": true,
@@ -7026,7 +7183,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60267000",
         "name": "唤潮鲛姬",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_nami/skins/base/images/jade_nami_splash_centered_0.project_jade_16_19.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_nami/skins/base/images/jade_nami_splash_centered_0.project_jade_16_19.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -7053,7 +7210,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "踏浪之行",
         "description": "每当娜美的技能命中友方英雄时，都会为其提供持续一段短时间的移动速度。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/namipassive.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/namipassive.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -7064,45 +7221,49 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "碧波之牢",
         "description": "朝着目标区域放出一个泡泡，对命中的所有敌人造成伤害和晕眩效果。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/namiq.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/namiq.project_jade.png",
         "cooldown": "14 / 13 / 12 / 11 / 10 / 9",
         "cost": "60",
         "range": "875",
-        "numericDetail": "将一个巨大的泡泡朝着目标区域施放，对敌人造成 75/130/185/240/295(+50%法术强度)魔法伤害，并将他们晕眩 1.5 秒。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "将一个巨大的泡泡朝着目标区域施放，对敌人造成 75/130/185/240/295(+50%法术强度)魔法伤害，并将他们晕眩 1.5 秒。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为14/13/12/11/10。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "冲击之潮",
         "description": "释放一股在友军和敌军之间交替流动的水流，从而治疗友军并伤害敌军。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/namiw.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/namiw.project_jade.png",
         "cooldown": "9",
         "cost": "70 / 85 / 100 / 115 / 130 / 145",
         "range": "725",
-        "numericDetail": "释放一股在友方英雄和敌方英雄之间交替流动的水流。\n\n朝友方施放：治疗 65/95/125/155/185(+30%法术强度)生命值，并且会弹向附近的一名敌方英雄。\n\n朝敌方施放：造成 70/110/150/190/230(+50%法术强度)魔法伤害，并且弹向附近的一名友方英雄。\n\n每个目标只会被弹到一次。最多可弹到 3 个目标。每弹一次，伤害值或者治疗值就会得到(（动态数值未在旧版接口公开）%)的修正。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "释放一股在友方英雄和敌方英雄之间交替流动的水流。\n\n朝友方施放：治疗 65/95/125/155/185(+30%法术强度)生命值，并且会弹向附近的一名敌方英雄。\n\n朝敌方施放：造成 70/110/150/190/230(+50%法术强度)魔法伤害，并且弹向附近的一名友方英雄。\n\n每个目标只会被弹到一次。最多可弹到 3 个目标。每弹一次，伤害值或者治疗值就会得到(（动态数值未在旧版接口公开）%)的修正。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为70/85/100/115/130。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "E",
         "name": "唤潮之佑",
         "description": "短时间里强化一个友军英雄。友军的普通攻击能够对其目标造成额外伤害和减速效果。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/namie.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/namie.project_jade.png",
         "cooldown": "11",
         "cost": "55 / 60 / 65 / 70 / 75 / 80",
         "range": "800",
-        "numericDetail": "强化一个英雄，使目标的普通攻击能够造成额外伤害和减速效果，持续 6 秒或目标进行了 3 次普通攻击为止。目标英雄的普通攻击会造成 25/40/55/70/85(+20%法术强度)的额外魔法伤害，并且会使被命中的目标减少 15/20/25/30/35%(+每100法术强度增加5个百分点) 的移动速度，持续 1 秒。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "强化一个英雄，使目标的普通攻击能够造成额外伤害和减速效果，持续 6 秒或目标进行了 3 次普通攻击为止。目标英雄的普通攻击会造成 25/40/55/70/85(+20%法术强度)的额外魔法伤害，并且会使被命中的目标减少 15/20/25/30/35%(+每100法术强度增加5个百分点) 的移动速度，持续 1 秒。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为55/60/65/70/75。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "怒涛之啸",
         "description": "召唤一阵巨大的怒涛，击飞、减速并伤害沿途的所有敌人。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/namir.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/namir.project_jade.png",
         "cooldown": "120 / 110 / 100 / 10",
         "cost": "100",
         "range": "2550",
-        "numericDetail": "从娜美的位置下召唤一阵怒涛。\n\n怒涛之啸会暂时击飞沿途的敌人，并将他们减速 50/60/70%，同时造成150/250/350(+60%法术强度)魔法伤害。这个减速效果的持续时间会根据怒涛行进距离的增加而增加，最少持续2秒，最多持续 4 秒。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "从娜美的位置下召唤一阵怒涛。\n\n怒涛之啸会暂时击飞沿途的敌人，并将他们减速 50/60/70%，同时造成150/250/350(+60%法术强度)魔法伤害。这个减速效果的持续时间会根据怒涛行进距离的增加而增加，最少持续2秒，最多持续 4 秒。\n来源边界：OP.GG Classic 原始冷却含4项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶冷却为120/110/100。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       }
     ]
   },
@@ -7111,8 +7272,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "艾瑞莉娅",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/irelia",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60039.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_irelia/skins/skin301/images/jade_irelia_splash_centered_301.project_jade.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60039.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_irelia/skins/skin301/images/jade_irelia_splash_centered_301.project_jade.jpg",
     "classicSplashName": "经典 艾瑞莉娅",
     "classicSplashId": "60039301",
     "classicSplashIsDefault": false,
@@ -7120,14 +7281,14 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60039301",
         "name": "经典 艾瑞莉娅",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_irelia/skins/skin301/images/jade_irelia_splash_centered_301.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_irelia/skins/skin301/images/jade_irelia_splash_centered_301.project_jade.jpg",
         "kind": "classic",
         "isDefault": false
       },
       {
         "id": "60039000",
         "name": "刀锋意志",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_irelia/skins/base/images/jade_irelia_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_irelia/skins/base/images/jade_irelia_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -7154,7 +7315,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "艾欧尼亚热诚",
         "description": "附近的每个敌方英雄都会为艾瑞莉娅提供韧性。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/irelia_ionianfervor.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/irelia_ionianfervor.project_jade_16_18.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -7165,18 +7326,19 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "利刃冲击",
         "description": "艾瑞莉娅冲刺以打击她的目标。如果这个技能击杀了目标，那么【利刃冲击】的冷却时间会刷新并返还一些法力值。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/irelia_bladesurge.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/irelia_bladesurge.project_jade_16_18.png",
         "cooldown": "14 / 12 / 10 / 8 / 6 / 5",
         "cost": "60 / 65 / 70 / 75 / 80 / 85",
         "range": "620",
-        "numericDetail": "艾瑞莉娅冲向目标并攻击目标，造成20/50/80/110/140(+100%总攻击力)物理伤害。\n\n如果目标被杀死，则刷新利刃冲击的冷却时间，并返还35点法力值。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "艾瑞莉娅冲向目标并攻击目标，造成20/50/80/110/140(+100%总攻击力)物理伤害。\n\n如果目标被杀死，则刷新利刃冲击的冷却时间，并返还35点法力值。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为14/12/10/8/6。不将原始字段直接套用为旧版逐级数值。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为60/65/70/75/80。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "飞天姿态",
         "description": "被动：艾瑞莉娅的攻击可以回复生命值。 主动：艾瑞莉娅的攻击会在若干秒内造成额外真实伤害并回复更多生命值。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/irelia_hitenstyle.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/irelia_hitenstyle.project_jade_16_18.png",
         "cooldown": "15",
         "cost": "40",
         "range": "825",
@@ -7187,23 +7349,25 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "E",
         "name": "均衡打击",
         "description": "艾瑞莉娅的攻击会使战斗的天平变得平衡，从而对她的目标造成伤害和减速。如果目标的生命值百分比高于她，则会转而晕眩该目标。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/irelia_equilibriumstrike.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/irelia_equilibriumstrike.project_jade.png",
         "cooldown": "8",
         "cost": "50 / 55 / 60 / 65 / 70 / 75",
         "range": "325",
-        "numericDetail": "艾瑞莉娅穿刺目标，造成 80/130/180/230/280(+50%法术强度)魔法伤害并减速目标 60%，持续 1/1.25/1.5/1.75/2 秒。\n\n如果目标的生命百分比高于艾瑞莉娅，艾瑞莉娅会晕眩目标。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "艾瑞莉娅穿刺目标，造成 80/130/180/230/280(+50%法术强度)魔法伤害并减速目标 60%，持续 1/1.25/1.5/1.75/2 秒。\n\n如果目标的生命百分比高于艾瑞莉娅，艾瑞莉娅会晕眩目标。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为50/55/60/65/70。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "至尊锋刃",
         "description": "艾瑞莉娅召唤4柄灵刃供她投掷，以造成伤害并从它们途经的敌人们身上虹吸生命力。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/irelia_transcendentblades.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/irelia_transcendentblades.project_jade_16_18.png",
         "cooldown": "70 / 60 / 50 / 40 / 30 / 20",
         "cost": "100",
         "range": "1200",
-        "numericDetail": "艾瑞莉娅召唤出4把灵魂之刃，之后每次按R都会将1把灵魂之刃掷向鼠标指示的方向。灵魂之刃对敌人造成魔法伤害，伤害值为80/120/160(+60%额外攻击力)(+50%法术强度)她会获得敌人所受伤害25%的治疗（小兵、野怪10%）。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "艾瑞莉娅召唤出4把灵魂之刃，之后每次按R都会将1把灵魂之刃掷向鼠标指示的方向。灵魂之刃对敌人造成魔法伤害，伤害值为80/120/160(+60%额外攻击力)(+50%法术强度)她会获得敌人所受伤害25%的治疗（小兵、野怪10%）。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶冷却为70/60/50。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       }
     ]
   },
@@ -7212,8 +7376,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "卡尔玛",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/karma",
     "numericSourceLabel": "Riot Data Dragon 0.154.3（对应重做前技能形态）",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60043.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_karma/skins/base/images/jade_karma_splash_centered_0.project_jade_16_20.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60043.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_karma/skins/skin301/images/jade_karma_splash_centered_0.project_jade_16_20.jpg",
     "classicSplashName": "经典 卡尔玛",
     "classicSplashId": "60043301",
     "classicSplashIsDefault": false,
@@ -7221,14 +7385,14 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60043301",
         "name": "经典 卡尔玛",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_karma/skins/base/images/jade_karma_splash_centered_0.project_jade_16_20.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_karma/skins/skin301/images/jade_karma_splash_centered_0.project_jade_16_20.jpg",
         "kind": "classic",
         "isDefault": false
       },
       {
         "id": "60043000",
         "name": "天启者",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_karma/skins/base/images/jade_karma_splash_centered_0.project_jade_16_20.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_karma/skins/base/images/jade_karma_splash_centered_0.project_jade_16_20.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -7255,7 +7419,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "心灵之火",
         "description": "卡尔玛基于她的已损失生命值获得法术强度。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/karmainnerflame_jade34.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/karmainnerflame_jade34.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -7266,7 +7430,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "天国之刃",
         "description": "卡尔玛从折扇中射出隐藏的刀锋，对她前方锥形范围内的敌人们造成伤害。 梵咒：【天国之刃】还会治疗锥形范围内的友方一部分已损失生命值。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/karmaheavenlywave_jade34.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/karmaheavenlywave_jade34.project_jade.png",
         "cooldown": "6",
         "cost": "70 / 75 / 80 / 85 / 90 / 95",
         "range": "400",
@@ -7277,7 +7441,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "W",
         "name": "灵魂连接",
         "description": "卡尔玛在她和另一个单位之间生成一道灵链。友方目标移动得更快并且敌方目标会被减速。该灵链会伤害敌人们，并对它途经的任何英雄施加相同的移速调整。 梵咒：卡尔玛加固该灵链以提升该移速调整效果。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/karmaspiritbond_jade34.project_jade_16_18.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/karmaspiritbond_jade34.project_jade_16_18.png",
         "cooldown": "15 / 14 / 13 / 12 / 11 / 10",
         "cost": "65 / 75 / 85 / 95 / 105 / 115",
         "range": "800",
@@ -7288,7 +7452,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "E",
         "name": "灵魂护盾",
         "description": "卡尔玛为一个友军召唤一个保护型护盾来吸收即将到来的伤害。 梵咒：除了施放该护盾之外，能量会从该护盾处四散，从而对她的目标周围的敌人造成伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/karmasoulshield_jade34.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/karmasoulshield_jade34.project_jade.png",
         "cooldown": "10",
         "cost": "70 / 80 / 90 / 100 / 110 / 120",
         "range": "625",
@@ -7299,7 +7463,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "R",
         "name": "梵咒",
         "description": "卡尔玛的下个技能会获得强化以造成一个额外效果。梵咒在1级时就可以使用，并且不需要投入技能点。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/karmamantra_jade34.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/karmamantra_jade34.project_jade.png",
         "cooldown": "0.25",
         "cost": "0",
         "range": "1100",
@@ -7313,8 +7477,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "凯特琳",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/caitlyn",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60051.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_caitlyn/skins/skin301/images/jade_caitlyn_splash_centered_301.project_jade_16_20.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60051.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_caitlyn/skins/skin301/images/jade_caitlyn_splash_centered_301.project_jade_16_20.jpg",
     "classicSplashName": "经典 凯特琳",
     "classicSplashId": "60051301",
     "classicSplashIsDefault": false,
@@ -7322,14 +7486,14 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60051301",
         "name": "经典 凯特琳",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_caitlyn/skins/skin301/images/jade_caitlyn_splash_centered_301.project_jade_16_20.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_caitlyn/skins/skin301/images/jade_caitlyn_splash_centered_301.project_jade_16_20.jpg",
         "kind": "classic",
         "isDefault": false
       },
       {
         "id": "60051000",
         "name": "皮城女警",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_caitlyn/skins/base/images/jade_caitlyn_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_caitlyn/skins/base/images/jade_caitlyn_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -7356,7 +7520,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "爆头",
         "description": "每若干次普攻，凯特琳的射击将进行一次爆头以造成额外伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/caitlyn_headshot.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/caitlyn_headshot.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -7367,45 +7531,49 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "和平使者",
         "description": "凯特琳释放一颗贯穿性的子弹以对一条直线上的所有敌人造成伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/caitlyn_piltoverpeacemaker.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/caitlyn_piltoverpeacemaker.project_jade.png",
         "cooldown": "10 / 9 / 8 / 7 / 6 / 5",
         "cost": "50 / 60 / 70 / 80 / 90 / 100",
         "range": "1250",
-        "numericDetail": "凯特琳加速转动步枪，1秒后进行穿透射击，对一个目标造成20/60/100/140/180(+130%总攻击力)物理伤害。对后续目标的伤害依次递减10%，最低为50%伤害。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "凯特琳加速转动步枪，1秒后进行穿透射击，对一个目标造成20/60/100/140/180(+130%总攻击力)物理伤害。对后续目标的伤害依次递减10%，最低为50%伤害。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为10/9/8/7/6。不将原始字段直接套用为旧版逐级数值。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为50/60/70/80/90。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "约德尔诱捕器",
         "description": "凯特琳设下一个陷阱，来让鬼鬼祟祟的约德尔人暴露无遗。当被一个英雄踩到时，该陷阱会将其禁锢、显形、并在一段短时间内持续造成魔法伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/caitlyn_yordlesnaptrap.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/caitlyn_yordlesnaptrap.project_jade.png",
         "cooldown": "20 / 17 / 14 / 11 / 8 / 5",
         "cost": "50",
         "range": "800",
-        "numericDetail": "凯特琳布置一个陷阱，陷阱可以在短时间里束缚并暴露踩中它的敌方英雄。陷阱会在1.5秒里造成80/130/180/230/280(+60%法术强度)魔法伤害，并可以持续4分钟。最多只能有3个陷阱同时存在。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "凯特琳布置一个陷阱，陷阱可以在短时间里束缚并暴露踩中它的敌方英雄。陷阱会在1.5秒里造成80/130/180/230/280(+60%法术强度)魔法伤害，并可以持续4分钟。最多只能有3个陷阱同时存在。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为20/17/14/11/8。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "E",
         "name": "90口径绳网",
         "description": "凯特琳朝目标放出一张网，对其减速。对凯特琳造成一定的反冲效果。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/caitlyn_90calibernet.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/caitlyn_90calibernet.project_jade.png",
         "cooldown": "18 / 16 / 14 / 12 / 10 / 8",
         "cost": "75",
         "range": "950",
-        "numericDetail": "凯特琳朝目标地点放出一张网，造成80/130/180/230/280(+80%法术强度)魔法伤害，并减少被击中的敌方目标50%的移动速度，持续1/1.25/1.5/1.75/2秒。此外，还会对凯特琳造成反冲效果。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "凯特琳朝目标地点放出一张网，造成80/130/180/230/280(+80%法术强度)魔法伤害，并减少被击中的敌方目标50%的移动速度，持续1/1.25/1.5/1.75/2秒。此外，还会对凯特琳造成反冲效果。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为18/16/14/12/10。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "让子弹飞",
         "description": "凯特琳精心准备完美一击，对超远距离内的一个敌方英雄造成巨大伤害。其他敌方英雄能为其友军拦截该子弹。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/caitlyn_aceinthehole.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/caitlyn_aceinthehole.project_jade.png",
         "cooldown": "90 / 75 / 60 / 45 / 30 / 15",
         "cost": "100",
         "range": "2000 / 2500 / 3000 / 3500",
-        "numericDetail": "凯特琳精心准备完美一击，对2000/2500/3000射程范围内目标英雄造成250/475/700(+200%额外攻击力)物理伤害。其它敌方英雄能为目标英雄拦截子弹。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "凯特琳精心准备完美一击，对2000/2500/3000射程范围内目标英雄造成250/475/700(+200%额外攻击力)物理伤害。其它敌方英雄能为目标英雄拦截子弹。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶冷却为90/75/60。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       }
     ]
   },
@@ -7414,8 +7582,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "奎因",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/quinn",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60133.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/quinn/skins/base/images/quinn_splash_centered_0.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60133.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/quinn/skins/base/images/quinn_splash_centered_0.jpg",
     "classicSplashName": "德玛西亚之翼",
     "classicSplashId": "60133000",
     "classicSplashIsDefault": true,
@@ -7423,7 +7591,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60133000",
         "name": "德玛西亚之翼",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/quinn/skins/base/images/quinn_splash_centered_0.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/quinn/skins/base/images/quinn_splash_centered_0.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -7450,7 +7618,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "侵扰",
         "description": "华洛周期性地标记敌人为易损状态，从而使奎因能够对其造成额外伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/quinn/hud/icons2d/quinn_passive.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/quinn/hud/icons2d/quinn_passive.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -7461,45 +7629,49 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "炫目攻势",
         "description": "华洛飞出去打击他途中的第一个敌人，从而对那个点附近的所有敌人造成伤害和致盲效果。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/quinn/hud/icons2d/quinn_q.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/quinn/hud/icons2d/quinn_q.png",
         "cooldown": "11 / 10 / 9 / 8 / 7 / 6",
         "cost": "50 / 55 / 60 / 65 / 70 / 75",
         "range": "1025",
-        "numericDetail": "华洛沿直线飞出，并且对途中的第一个敌人展开攻势。然后他会攻击周围的所有敌人，造成70/110/150/190/230(+65%额外攻击力)(+50%法术强度)物理伤害，并将他们致盲1.5秒。\n\n华洛登场时：在当前位置发动一次相同的攻势。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "华洛沿直线飞出，并且对途中的第一个敌人展开攻势。然后他会攻击周围的所有敌人，造成70/110/150/190/230(+65%额外攻击力)(+50%法术强度)物理伤害，并将他们致盲1.5秒。\n\n华洛登场时：在当前位置发动一次相同的攻势。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为11/10/9/8/7。不将原始字段直接套用为旧版逐级数值。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为50/55/60/65/70。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "敏锐感知",
         "description": "作为奎因的被动效果：在触发侵扰时获得持续若干秒的攻速和移速。 作为华洛的被动效果：获得攻击速度。 主动：显形奎因和华洛周围的一大片区域。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/quinn/hud/icons2d/quinn_w.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/quinn/hud/icons2d/quinn_w.png",
         "cooldown": "50 / 45 / 40 / 35 / 30 / 25",
         "cost": "0",
         "range": "2100",
-        "numericDetail": "被动：攻击一名易损的单位，将会使奎因的攻击速度提升20/25/30/35/40%，移动速度提升20/30/40/50/60，持续3秒。\n\n华洛登场时的被动：获得40/50/60/70/80%攻击速度加成。\n\n主动：华洛会使周围一大片区域的战争迷雾消散，持续2秒。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "被动：攻击一名易损的单位，将会使奎因的攻击速度提升20/25/30/35/40%，移动速度提升20/30/40/50/60，持续3秒。\n\n华洛登场时的被动：获得40/50/60/70/80%攻击速度加成。\n\n主动：华洛会使周围一大片区域的战争迷雾消散，持续2秒。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为50/45/40/35/30。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "E",
         "name": "旋翔掠杀",
         "description": "奎因或华洛冲刺至一个敌人身旁，从而对目标造成伤害、击退和减速。如果作为奎因施放，则她会后跳远离该目标，从而保持她与目标相隔的距离并让华洛给其打上【侵扰】标记。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/quinn/hud/icons2d/quinn_e.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/quinn/hud/icons2d/quinn_e.png",
         "cooldown": "12 / 11 / 10 / 9 / 8 / 7",
         "cost": "50",
         "range": "700",
-        "numericDetail": "奎因冲向一名敌人，造成40/70/100/130/160(+20%额外攻击力)物理伤害，并使目标的移动速度减少50%（这个效果会在2秒里持续衰减）。在接触到目标的同时，她会向后空翻，暂时打断目标的行动，并在接近她最大攻击距离的地方着陆。华洛将会立刻将这个敌人标记为易损状态。\n\n华洛登场时：发动一次相同的攻势，但不会标记目标，或从目标处跃开。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "奎因冲向一名敌人，造成40/70/100/130/160(+20%额外攻击力)物理伤害，并使目标的移动速度减少50%（这个效果会在2秒里持续衰减）。在接触到目标的同时，她会向后空翻，暂时打断目标的行动，并在接近她最大攻击距离的地方着陆。华洛将会立刻将这个敌人标记为易损状态。\n\n华洛登场时：发动一次相同的攻势，但不会标记目标，或从目标处跃开。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为12/11/10/9/8。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "王牌搭档",
         "description": "华洛代替奎因出现在战场上，定位为一个高机动普攻型近战，从而获得移动速度并修改她的技能。再次施放可以进行【鹰翼天翔】，从而对附近的所有敌人造成伤害。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/quinn/hud/icons2d/quinn_r1.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/quinn/hud/icons2d/quinn_r1.png",
         "cooldown": "140 / 110 / 80 / 50 / 20 / -10",
         "cost": "100",
         "range": "700",
-        "numericDetail": "首次施放：高机动的肉搏型战鹰“华洛”代替奎因进入战场，可持续20秒。华洛无视单位的碰撞体积，并会获得+80/90/100%的移动速度加成，在进入战斗时会逐步降低至+20/30/40%。\n\n再次施放：奎因再次登场，并进行鹰翅天翔，对大范围内的敌人造成100/150/200(+50%额外攻击力)到200/300/400(+100%额外攻击力)物理伤害，伤害值取决于敌人已损失的生命值。\n\n如果在这个技能结束之前没有手动施放鹰翅天翔的话，那么鹰翅天翔会在这个技能结束时自动施放。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "首次施放：高机动的肉搏型战鹰“华洛”代替奎因进入战场，可持续20秒。华洛无视单位的碰撞体积，并会获得+80/90/100%的移动速度加成，在进入战斗时会逐步降低至+20/30/40%。\n\n再次施放：奎因再次登场，并进行鹰翅天翔，对大范围内的敌人造成100/150/200(+50%额外攻击力)到200/300/400(+100%额外攻击力)物理伤害，伤害值取决于敌人已损失的生命值。\n\n如果在这个技能结束之前没有手动施放鹰翅天翔的话，那么鹰翅天翔会在这个技能结束时自动施放。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶冷却为140/110/80。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       }
     ]
   },
@@ -7508,8 +7680,8 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
     "championName": "亚托克斯",
     "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/aatrox",
     "numericSourceLabel": "Riot Data Dragon 3.15.5",
-    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/v1/champion-icons/60266.png",
-    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_aatrox/skins/skin301/images/jade_aatrox_splash_centered_301.project_jade_16_20.jpg",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60266.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_aatrox/skins/skin301/images/jade_aatrox_splash_centered_301.project_jade_16_20.jpg",
     "classicSplashName": "经典 亚托克斯",
     "classicSplashId": "60266301",
     "classicSplashIsDefault": false,
@@ -7517,14 +7689,14 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
       {
         "id": "60266301",
         "name": "经典 亚托克斯",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_aatrox/skins/skin301/images/jade_aatrox_splash_centered_301.project_jade_16_20.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_aatrox/skins/skin301/images/jade_aatrox_splash_centered_301.project_jade_16_20.jpg",
         "kind": "classic",
         "isDefault": false
       },
       {
         "id": "60266000",
         "name": "暗裔剑魔",
-        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/characters/jade_aatrox/skins/base/images/jade_aatrox_splash_centered_0.project_jade.jpg",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_aatrox/skins/base/images/jade_aatrox_splash_centered_0.project_jade.jpg",
         "kind": "default",
         "isDefault": true
       }
@@ -7551,7 +7723,7 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "P",
         "name": "鲜血魔井",
         "description": "当使用消耗血量的技能时，亚托克斯会将生命消耗储存进血池。在受到致命伤害后，亚托克斯从血池中提取鲜血并在短时间内将之作为生命值回复。此外，魔井中每有2%的鲜血，就会为亚托克斯提供1%攻击速度。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/aatrox_passive.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/aatrox_passive.project_jade.png",
         "cooldown": null,
         "cost": null,
         "range": null,
@@ -7562,18 +7734,19 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "Q",
         "name": "黑暗之跃",
         "description": "亚托克斯向目标位置纵身一跃并猛击，造成伤害并击飞落点中央的敌人。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/aatrox_q.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/aatrox_q.project_jade.png",
         "cooldown": "16 / 15 / 14 / 13 / 12 / 11",
         "cost": "0",
         "range": "650",
-        "numericDetail": "亚托克斯向目标位置纵身一跃并猛击，对落点附近的所有敌人造成70/115/160/205/250 (+60%额外攻击力)物理伤害，并击飞位于冲击中心的敌人，持续1秒。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "亚托克斯向目标位置纵身一跃并猛击，对落点附近的所有敌人造成70/115/160/205/250 (+60%额外攻击力)物理伤害，并击飞位于冲击中心的敌人，持续1秒。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为16/15/14/13/12。不将原始字段直接套用为旧版逐级数值。\n来源边界：OP.GG Classic 原始消耗为0；Riot Data Dragon 3.15.5 的历史资源说明为“消耗10%当前生命值”。两者来源不同，不能将0解释为不消耗生命，也不将历史消耗视为已验证的当前 Classic 消耗。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "W",
         "name": "血之渴望/血之报偿",
         "description": "在开启状态下，亚托克斯的每第三次攻击将以损失自己生命为代价对敌人造成额外伤害。在关闭状态下，亚托克斯的每第三次攻击将回复自己的生命值。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/aatrox_w2.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/aatrox_w2.project_jade.png",
         "cooldown": "0.5",
         "cost": "0",
         "range": null,
@@ -7584,23 +7757,412 @@ export const classicChampionSkills: ClassicChampionSkillSet[] = [
         "key": "E",
         "name": "痛苦利刃",
         "description": "亚托克斯释放剑气，对命中的所有敌人造成伤害和减速效果。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/aatrox_e.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/aatrox_e.project_jade.png",
         "cooldown": "12 / 11 / 10 / 9 / 8 / 7",
         "cost": "0",
         "range": "1000",
-        "numericDetail": "亚托克斯向前方释放剑气，对命中的所有敌人造成75/110/145/180/215(+60%法术强度)(+60%额外攻击力)魔法伤害并减少他们40%移动速度，持续1.75/2/2.25/2.5/2.75秒。",
-        "numericVersion": "3.15.5"
+        "numericDetail": "亚托克斯向前方释放剑气，对命中的所有敌人造成75/110/145/180/215(+60%法术强度)(+60%额外攻击力)魔法伤害并减少他们40%移动速度，持续1.75/2/2.25/2.5/2.75秒。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为12/11/10/9/8。不将原始字段直接套用为旧版逐级数值。\n来源边界：OP.GG Classic 原始消耗为0；Riot Data Dragon 3.15.5 的历史资源说明为“消耗5%当前生命值”。两者来源不同，不能将0解释为不消耗生命，也不将历史消耗视为已验证的当前 Classic 消耗。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       },
       {
         "key": "R",
         "name": "浴血屠戮",
         "description": "亚托克斯抽取敌人的血液，对他周围的所有敌方英雄造成伤害并获得持续一段短时间的额外攻击速度和攻击距离。",
-        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.20/classic/releases/be62c3ffb787ac89f1c6b3d81ffaafbd2332b39cad42a26739922c6a0fd84d52/assets/ux/jade/s3icons/samesized/aatrox_r.project_jade.png",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/aatrox_r.project_jade.png",
         "cooldown": "100 / 85 / 70 / 55 / 40 / 25",
         "cost": "0",
         "range": "25000",
-        "numericDetail": "亚托克斯从敌人身上抽取血液，对他身边的所有敌方英雄造成200/300/400(+100%法术强度)魔法伤害，同时亚托克斯的攻击速度会提升40/50/60%，并且他的攻击距离会提升175，持续12秒。",
+        "numericDetail": "亚托克斯从敌人身上抽取血液，对他身边的所有敌方英雄造成200/300/400(+100%法术强度)魔法伤害，同时亚托克斯的攻击速度会提升40/50/60%，并且他的攻击距离会提升175，持续12秒。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶冷却为100/85/70。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
+      }
+    ]
+  },
+  {
+    "championId": "60082",
+    "championName": "莫德凯撒",
+    "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/mordekaiser",
+    "numericSourceLabel": "Riot Data Dragon 3.15.5",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60082.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_mordekaiser/skins/base/images/jade_mordekaiser_splash_centered_0.project_jade_16_21.jpg",
+    "classicSplashName": "金属大师",
+    "classicSplashId": "60082000",
+    "classicSplashIsDefault": true,
+    "artworks": [
+      {
+        "id": "60082000",
+        "name": "金属大师",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_mordekaiser/skins/base/images/jade_mordekaiser_splash_centered_0.project_jade_16_21.jpg",
+        "kind": "default",
+        "isDefault": true
+      }
+    ],
+    "availableSkinCount": 3,
+    "stats": {
+      "hp": 421,
+      "hpPerLevel": 80,
+      "resource": 120,
+      "resourcePerLevel": 0,
+      "attackDamage": 51.7,
+      "attackDamagePerLevel": 3.5,
+      "attackSpeed": 0.69444,
+      "attackSpeedPerLevel": 3,
+      "armor": 15,
+      "armorPerLevel": 3.5,
+      "magicResist": 30,
+      "magicResistPerLevel": 1.25,
+      "moveSpeed": 340,
+      "attackRange": 125
+    },
+    "abilities": [
+      {
+        "key": "P",
+        "name": "铁人",
+        "description": "来自技能的一部分造成伤害将转化为一个临时护盾，吸收即将到来的伤害。",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/mordekaiser_ironman.project_jade.png",
+        "cooldown": null,
+        "cost": null,
+        "range": null,
+        "numericDetail": "技能文本：来自技能的一部分造成伤害将转化为一个临时护盾，吸收即将到来的伤害。\n数值说明：OP.GG Classic 与 Riot 3.15.5 公开字段未提供独立固定数值；不使用其他版本或人工估值补写。",
         "numericVersion": "3.15.5"
+      },
+      {
+        "key": "Q",
+        "name": "铲击之锤",
+        "description": "莫德凯撒的下一次攻击力道惊人，以至于它会向外回响，从而击中至多3个额外的附近目标，造成攻击伤害外加额外伤害。如果该目标孤身一人，那么这次攻击还会造成追加伤害。",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/mordekaisermaceofspades.project_jade.png",
+        "cooldown": "8 / 7 / 6 / 5 / 4",
+        "cost": "0",
+        "range": "25000",
+        "numericDetail": "下一次攻击时，莫德凯撒大力挥舞铁锤造成共振，最多对附近3个额外目标造成80/110/140/170/200(+100%额外攻击力)(+40%法术强度)魔法伤害。\n\n如果只有一个目标，则造成132/181.5/231/280.5/330(+165%额外攻击力)(+66%法术强度)伤害。\n来源边界：OP.GG Classic 原始消耗为0；Riot Data Dragon 3.15.5 的历史资源说明为“消耗25/32/39/46/53生命”。两者来源不同，不能将0解释为不消耗生命，也不将历史消耗视为已验证的当前 Classic 消耗。",
+        "numericVersion": "3.15.5"
+      },
+      {
+        "key": "W",
+        "name": "死亡蔓延",
+        "description": "释放一团由金属碎片组成的保护型云团来环绕一个友军，从而提升其护甲和魔法抗性，并且每秒对云团中的敌人们造成伤害。",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/mordekaisercreepingdeath.project_jade.png",
+        "cooldown": "20 / 18 / 16 / 14 / 12 / 10",
+        "cost": "0",
+        "range": "750",
+        "numericDetail": "莫德凯撒对友方目标施放金属风暴，持续 6 秒，增加目标友军 10/15/20/25/30 护甲和魔抗，并对目标附近敌军每秒造成 24/38/52/66/80(+20%法术强度)魔法伤害。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为20/18/16/14/12。不将原始字段直接套用为旧版逐级数值。\n来源边界：OP.GG Classic 原始消耗为0；Riot Data Dragon 3.15.5 的历史资源说明为“消耗26/32/38/44/50 生命值”。两者来源不同，不能将0解释为不消耗生命，也不将历史消耗视为已验证的当前 Classic 消耗。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
+      },
+      {
+        "key": "E",
+        "name": "毁灭虹吸",
+        "description": "莫德凯撒对面前的锥形范围内敌人造成伤害。",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/mordekaisersiphonofdestruction.project_jade.png",
+        "cooldown": "6",
+        "cost": "0",
+        "range": "700",
+        "numericDetail": "对面前的锥形范围内敌人造成70/115/160/205/250(+60%法术强度)魔法伤害。\n来源边界：OP.GG Classic 原始消耗为0；Riot Data Dragon 3.15.5 的历史资源说明为“消耗24/36/48/60/72生命值”。两者来源不同，不能将0解释为不消耗生命，也不将历史消耗视为已验证的当前 Classic 消耗。",
+        "numericVersion": "3.15.5"
+      },
+      {
+        "key": "R",
+        "name": "死亡之子",
+        "description": "莫德凯撒诅咒一个敌方英雄或巨龙，立即吸取目标一部分生命，并且在之后数秒内持续吸取生命值。若目标在诅咒期间死亡，其灵魂会被奴役并跟随莫德凯撒。",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/mordekaiser_cotg.project_jade.png",
+        "cooldown": "120 / 105 / 90 / 80 / 8",
+        "cost": "0",
+        "range": "850",
+        "numericDetail": "偷取目标英雄 24/29/34(+4%法术强度)% 的最大生命值（立即偷取一半，并在 10 秒内偷取另一半；造成魔法伤害）\n\n如果目标死于诅咒，那么他们的灵魂被奴役且会跟随莫德凯撒，持续 30 秒。莫德凯撒获得灵魂 20% 的法术强度和攻击力，且灵魂的属性会获得提高。\n\n你可以通过按住 ALT 键不放，然后点击鼠标右键的方式，或者重新激活此技能的方式来控制灵魂。\n来源边界：OP.GG Classic 原始冷却含5项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶冷却为120/105/90。不将原始字段直接套用为旧版逐级数值。\n来源边界：OP.GG Classic 概述提及巨龙；Riot Data Dragon 3.15.5 的公开效果与数值仅针对目标英雄。巨龙的具体效果和数值未在该历史数值源公开，不从英雄数值推算。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
+      }
+    ]
+  },
+  {
+    "championId": "60083",
+    "championName": "约里克",
+    "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/yorick",
+    "numericSourceLabel": "Riot Data Dragon 3.15.5",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60083.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_yorick/skins/base/images/jade_yorick_splash_centered_0.project_jade_16_21.jpg",
+    "classicSplashName": "掘墓者",
+    "classicSplashId": "60083000",
+    "classicSplashIsDefault": true,
+    "artworks": [
+      {
+        "id": "60083000",
+        "name": "掘墓者",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_yorick/skins/base/images/jade_yorick_splash_centered_0.project_jade_16_21.jpg",
+        "kind": "default",
+        "isDefault": true
+      }
+    ],
+    "availableSkinCount": 3,
+    "stats": {
+      "hp": 421,
+      "hpPerLevel": 85,
+      "resource": 235,
+      "resourcePerLevel": 35,
+      "attackDamage": 51.7,
+      "attackDamagePerLevel": 3.5,
+      "attackSpeed": 0.625,
+      "attackSpeedPerLevel": 3,
+      "armor": 15,
+      "armorPerLevel": 3.6,
+      "magicResist": 30,
+      "magicResistPerLevel": 1.25,
+      "moveSpeed": 345,
+      "attackRange": 125
+    },
+    "abilities": [
+      {
+        "key": "P",
+        "name": "邪恶契约",
+        "description": "每有一个召唤物处于激活状态，约里克就会获得伤害减免并且他的普攻造成更多伤害。与此同时，约里克的食尸鬼受益于约里克的攻击力和生命值。",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/yorickunholycovenant.project_jade.png",
+        "cooldown": null,
+        "cost": null,
+        "range": null,
+        "numericDetail": "技能文本：每有一个召唤物处于激活状态，约里克就会获得伤害减免并且他的普攻造成更多伤害。与此同时，约里克的食尸鬼受益于约里克的攻击力和生命值。\n数值说明：OP.GG Classic 与 Riot 3.15.5 公开字段未提供独立固定数值；不使用其他版本或人工估值补写。",
+        "numericVersion": "3.15.5"
+      },
+      {
+        "key": "Q",
+        "name": "战争预兆",
+        "description": "约里克的下次攻击将造成额外伤害并召唤一个幽影食尸鬼，它造成额外伤害并且比约里克的其它食尸鬼移动得更快。在该幽影食尸鬼还存活时，约里克会移动得更快。",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/yorickomenofwar.project_jade.png",
+        "cooldown": "9 / 8 / 7 / 6 / 5 / 4",
+        "cost": "40",
+        "range": null,
+        "numericDetail": "约里克的下次攻击额外造成30/60/90/120/150(+120%总攻击力)物理伤害，并召唤出幽灵食尸鬼，最多持续5秒。\n\n幽灵食尸鬼每次攻击造成8/16/24/32/40额外伤害，并加速15/20/25/30/35%。当幽灵食尸鬼存在时，约里克的速度提升15/20/25/30/35%。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为9/8/7/6/5。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
+      },
+      {
+        "key": "W",
+        "name": "瘟疫预兆",
+        "description": "约里克召唤一个衰朽食尸鬼，它会在现身时引发一次剧烈爆炸，从而对附近的敌人们造成伤害和减速。该衰朽食尸鬼会减速附近的敌人们。",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/yorickomenofpestilence.project_jade.png",
+        "cooldown": "12",
+        "cost": "55 / 60 / 65 / 70 / 75 / 80",
+        "range": "550",
+        "numericDetail": "约里克召唤一个腐烂食尸鬼，带来剧烈爆炸。食尸鬼存在时，对周围敌人造成60/95/130/165/200(+100%法术强度)魔法伤害并减速20/25/30/35/40%，持续1.5秒。若食尸鬼继续存在，周围敌人继续被减速10/12.5/15/17.5/20%，最多持续5秒。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为55/60/65/70/75。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
+      },
+      {
+        "key": "E",
+        "name": "饥荒预兆",
+        "description": "约里克从他的目标处窃取生命力，并且召唤一个贪欲食尸鬼，它在造成伤害时会治疗约里克。",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/yorickomenoffamine.project_jade.png",
+        "cooldown": "10 / 9 / 8 / 7 / 6 / 5",
+        "cost": "55 / 60 / 65 / 70 / 75 / 80",
+        "range": "550",
+        "numericDetail": "约里克造成55/85/115/145/175(+100%额外攻击力)魔法伤害并治疗自己，最高治疗效果为伤害值的40%。一头饥饿食尸鬼将在目标身后出现，最多持续5秒，它在造成伤害的同时治疗约里克。以小兵为目标时，此技能的治疗效果减半。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为10/9/8/7/6。不将原始字段直接套用为旧版逐级数值。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为55/60/65/70/75。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
+      },
+      {
+        "key": "R",
+        "name": "死亡预兆",
+        "description": "约里克召唤出一个复生亡魂，外表就跟他的其中一个友军一样。如果他的友军在其复生亡魂存活期间阵亡，那么该复生亡魂就会牺牲它自身来使该友军回光返照，并给该友军一些时间用于报仇。",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/ux/jade/s3icons/samesized/yorickomenofdeath.project_jade.png",
+        "cooldown": "120 / 105 / 90 / 75 / 60 / 45",
+        "cost": "100",
+        "range": "850",
+        "numericDetail": "约里克召唤出友军英雄的亡魂。此亡魂拥有目标友军45/60/75%的攻击力，可持续10秒。当亡魂存在时友军死亡，亡魂会牺牲自己，鼓舞友军继续作战一段时间，最多10秒。\n\n你可以通过按住ALT键不放，然后点击鼠标右键的方式，或者重新激活此技能的方式来控制亡魂。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶冷却为120/105/90。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
+      }
+    ]
+  },
+  {
+    "championId": "60120",
+    "championName": "赫卡里姆",
+    "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/hecarim",
+    "numericSourceLabel": "Riot Data Dragon 3.15.5",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60120.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_hecarim/skins/base/images/jade_hecarim_splash_centered_0.project_jade_16_21.jpg",
+    "classicSplashName": "战争之影",
+    "classicSplashId": "60120000",
+    "classicSplashIsDefault": true,
+    "artworks": [
+      {
+        "id": "60120000",
+        "name": "战争之影",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_hecarim/skins/base/images/jade_hecarim_splash_centered_0.project_jade_16_21.jpg",
+        "kind": "default",
+        "isDefault": true
+      }
+    ],
+    "availableSkinCount": 7,
+    "stats": {
+      "hp": 440,
+      "hpPerLevel": 95,
+      "resource": 210,
+      "resourcePerLevel": 40,
+      "attackDamage": 56,
+      "attackDamagePerLevel": 3.2,
+      "attackSpeed": 0.67003,
+      "attackSpeedPerLevel": 2.5,
+      "armor": 16,
+      "armorPerLevel": 4,
+      "magicResist": 30,
+      "magicResistPerLevel": 1.25,
+      "moveSpeed": 345,
+      "attackRange": 175
+    },
+    "abilities": [
+      {
+        "key": "P",
+        "name": "征战之路",
+        "description": "赫卡里姆会获得基于他额外移动速度的攻击力加成。",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_hecarim/hud/icons2d/jade_hecarim_passive.project_jade_16_21.png",
+        "cooldown": null,
+        "cost": null,
+        "range": null,
+        "numericDetail": "技能文本：赫卡里姆会获得基于他额外移动速度的攻击力加成。\n数值说明：OP.GG Classic 与 Riot 3.15.5 公开字段未提供独立固定数值；不使用其他版本或人工估值补写。",
+        "numericVersion": "3.15.5"
+      },
+      {
+        "key": "Q",
+        "name": "暴走",
+        "description": "赫卡里姆猛劈周围的敌人，从而造成物理伤害。",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_hecarim/hud/icons2d/jade_hecarim_rampage.project_jade_16_21.png",
+        "cooldown": "4",
+        "cost": "24 / 28 / 32 / 36 / 40",
+        "range": "350",
+        "numericDetail": "赫卡里姆猛劈周围的敌人，造成60/95/130/165/200(+60%额外攻击力)点物理伤害。(对小兵和野怪的伤害只有66%)\n\n如果赫卡里姆用这次攻击伤害了至少一名敌人，那么他会获得一层暴走效果，暂时减少此技能1秒的基础冷却时间。这个效果最多可叠加2层。",
+        "numericVersion": "3.15.5"
+      },
+      {
+        "key": "W",
+        "name": "恐惧之灵",
+        "description": "赫卡里姆在短时间内对敌人持续造成魔法伤害。赫卡里姆会基于附近敌人所受的任何伤害来恢复生命值。",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_hecarim/hud/icons2d/jade_hecarim_spiritofdread.project_jade_16_21.png",
+        "cooldown": "22 / 21 / 20 / 19 / 18 / 8",
+        "cost": "50 / 60 / 70 / 80 / 90",
+        "range": "525",
+        "numericDetail": "在4秒的持续时间里，赫卡里姆会对附近的所有敌人造成总共80/120/160/200/240(+80%法术强度)魔法伤害。同时，赫卡里姆会回复生命值，回复的生命值相当于这些敌人所受任何伤害的20%。\n\n赫卡里姆从小兵或野怪身上回复的生命值不能超过60/90/120/150/180。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为22/21/20/19/18。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
+      },
+      {
+        "key": "E",
+        "name": "毁灭冲锋",
+        "description": "赫卡里姆获得在短时间内不断提升的移动速度。他的下一次攻击将会击退目标，并且造成额外物理伤害，伤害值基于他在激活该技能后所移动的距离。",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_hecarim/hud/icons2d/jade_hecarim_devastingcharge.project_jade_16_21.png",
+        "cooldown": "24 / 22 / 20 / 18 / 16",
+        "cost": "60",
+        "range": "300",
+        "numericDetail": "赫卡里姆获得移动速度加成，持续4秒。他的下一次攻击将会击退目标，并且造成40/75/110/145/180(+50%额外攻击力)到80/150/220/290/360(+100%额外攻击力)物理伤害，伤害值基于赫卡里姆在激活该技能后所移动的距离。",
+        "numericVersion": "3.15.5"
+      },
+      {
+        "key": "R",
+        "name": "暗影冲击",
+        "description": "赫卡里姆召唤幽魂骑兵们向前冲锋，从而对一条直线上的敌人造成魔法伤害。赫卡里姆会在完成他的冲锋时发出一道冲击波，来使周围的敌人惊慌失措地逃命。",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_hecarim/hud/icons2d/jade_hecarim_onslaughtofshadows.project_jade_16_21.png",
+        "cooldown": "140 / 120 / 100",
+        "cost": "100",
+        "range": "50000",
+        "numericDetail": "赫卡里姆召唤幽魂骑兵向前冲锋，对被它们击中的敌人造成150/250/350(+100%法术强度)魔法伤害。\n\n赫卡里姆会在完成他的冲锋时发出一道冲击波，使周围的敌人恐惧地逃离赫卡里姆，恐惧效果持续1秒。\n\n赫卡里姆自己只会移动至目标区域。骑兵们则会跑完全程。",
+        "numericVersion": "3.15.5"
+      }
+    ]
+  },
+  {
+    "championId": "60236",
+    "championName": "卢锡安",
+    "sourceUrl": "https://op.gg/zh-cn/lol/classic/champions/lucian",
+    "numericSourceLabel": "Riot Data Dragon 3.15.5",
+    "portrait": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/v1/champion-icons/60236.png",
+    "classicSplash": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_lucian/skins/base/images/jade_lucian_splash_centered_0.project_jade_16_21.jpg",
+    "classicSplashName": "圣枪游侠",
+    "classicSplashId": "60236000",
+    "classicSplashIsDefault": true,
+    "artworks": [
+      {
+        "id": "60236000",
+        "name": "圣枪游侠",
+        "imageUrl": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_lucian/skins/base/images/jade_lucian_splash_centered_0.project_jade_16_21.jpg",
+        "kind": "default",
+        "isDefault": true
+      }
+    ],
+    "availableSkinCount": 7,
+    "stats": {
+      "hp": 390,
+      "hpPerLevel": 80,
+      "resource": 230,
+      "resourcePerLevel": 41,
+      "attackDamage": 46,
+      "attackDamagePerLevel": 3,
+      "attackSpeed": 0.63776,
+      "attackSpeedPerLevel": 3.3,
+      "armor": 15,
+      "armorPerLevel": 3,
+      "magicResist": 30,
+      "magicResistPerLevel": 0,
+      "moveSpeed": 330,
+      "attackRange": 550
+    },
+    "abilities": [
+      {
+        "key": "P",
+        "name": "圣光银弹",
+        "description": "每当卢锡安使用一个技能时，他的下次普通攻击都会连射2次。",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_lucian/hud/icons2d/jade_lucian_passive.project_jade_16_21.png",
+        "cooldown": null,
+        "cost": null,
+        "range": null,
+        "numericDetail": "技能文本：每当卢锡安使用一个技能时，他的下次普通攻击都会连射2次。",
+        "numericVersion": "3.15.5"
+      },
+      {
+        "key": "Q",
+        "name": "透体圣光",
+        "description": "卢锡安射出一束贯穿圣光穿过他的目标。",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_lucian/hud/icons2d/jade_lucian_q.project_jade_16_21.png",
+        "cooldown": "9 / 8 / 7 / 6 / 5 / 4",
+        "cost": "60 / 65 / 70 / 75 / 80 / 85",
+        "range": "550",
+        "numericDetail": "射出一束穿透性的圣光穿过一个目标单位，对一条线上的敌人造成80/110/140/170/200(+60% / 75% / 90% / 105% / 120%攻击力（口径未确认）)（额外攻击力的60/75/90/105/120%）物理伤害。对小兵造成75%伤害。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为9/8/7/6/5。不将原始字段直接套用为旧版逐级数值。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为60/65/70/75/80。不将原始字段直接套用为旧版逐级数值。\n来源边界：Riot Data Dragon 3.15.5 的参数字段标为 attackdamage，但同一技能提示正文写为额外攻击力；源内属性口径不一致，映射未确认，不据此断言当前 Classic 使用总攻击力或额外攻击力。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
+      },
+      {
+        "key": "W",
+        "name": "热诚烈弹",
+        "description": "卢锡安发射一个会呈星形爆炸的飞弹，从而标记敌人。卢锡安在攻击被标记的敌人时，会获得移动速度。",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_lucian/hud/icons2d/jade_lucian_w.project_jade_16_21.png",
+        "cooldown": "14 / 13 / 12 / 11 / 10 / 9",
+        "cost": "60",
+        "range": "1000",
+        "numericDetail": "卢锡安发射一枚飞弹，飞弹会在命中敌人时或者到达终点时呈星形爆炸。爆炸会造成60/100/140/180/220(+90%法术强度)(+60%额外攻击力)魔法伤害，并将敌人标记6秒。\n\n在对被标记的敌人造成伤害时，卢锡安会获得40移动速度加成，此加成持续2秒。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为14/13/12/11/10。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
+      },
+      {
+        "key": "E",
+        "name": "冷酷追击",
+        "description": "卢锡安冲刺一段短距离，同时移除所有减速效果。",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_lucian/hud/icons2d/jade_lucian_e.project_jade_16_21.png",
+        "cooldown": "18 / 16 / 14 / 12 / 10 / 8",
+        "cost": "60 / 45 / 30 / 15 / 0 / -15",
+        "range": "445",
+        "numericDetail": "卢锡安冲刺一小段距离。并移除所有减速效果\n\n如果卢锡安在圣枪洗礼激活期间击杀了一名敌方英雄，那么冷酷追击的冷却时间会重置。\n数值说明：OP.GG Classic 与 Riot 3.15.5 公开字段未提供独立固定数值；不使用其他版本或人工估值补写。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶冷却为18/16/14/12/10。不将原始字段直接套用为旧版逐级数值。\n来源边界：OP.GG Classic 原始消耗含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开5阶消耗为60/45/30/15/0。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
+      },
+      {
+        "key": "R",
+        "name": "圣枪洗礼",
+        "description": "卢锡安的武器释放出大量的子弹。",
+        "icon": "https://opgg-static.akamaized.net/meta/images/lol/16.21/classic/releases/13cb768536ab64c863dbdf547ceacfb2ec4d320cd95bebf6e837e56140bce596/assets/characters/jade_lucian/hud/icons2d/jade_lucian_r.project_jade_16_21.png",
+        "cooldown": "100 / 75 / 50 / 25 / 0 / -25",
+        "cost": "100",
+        "range": "1400",
+        "numericDetail": "卢锡安在自由移动的同时，朝着一个方向猛射3秒。这些子弹会与命中的第一个敌方英雄进行碰撞，每一发能造成40/50/60(+10%法术强度)(+25%额外攻击力)物理伤害。射击次数会随着攻击速度的提高而增加。（动态数值未在旧版接口公开）次射击的总伤害：（动态数值未在旧版接口公开）。圣枪洗礼对小兵造成400%伤害。\n\n卢锡安可以在圣枪洗礼期间使用冷酷追击。\n\n再次激活可以早点将圣枪洗礼取消掉。\n来源边界：OP.GG Classic 原始冷却含6项，等级对应未确认；Riot Data Dragon 3.15.5 公开3阶冷却为100/75/50。不将原始字段直接套用为旧版逐级数值。",
+        "numericVersion": "3.15.5",
+        "rankValuesUnconfirmed": true
       }
     ]
   }

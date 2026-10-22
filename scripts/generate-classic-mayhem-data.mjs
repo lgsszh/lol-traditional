@@ -1048,7 +1048,8 @@ async function loadCommunityDragonSnapshot(patch) {
     fetchJson(arenaSourceUrl, `CommunityDragon ${patch} augment descriptions`),
     fetchJson(regularBinUrl, `CommunityDragon ${patch} KIWI bin`),
     fetchJson(classicBinUrl, `CommunityDragon ${patch} KIWI_JADE bin`),
-    fetchJson(stringTableUrl, `CommunityDragon ${patch} zh_CN string table`),
+    // The ~33 MB localized table can exceed the normal 30-second body budget.
+    fetchJson(stringTableUrl, `CommunityDragon ${patch} zh_CN string table`, { requestTimeoutMs: 60_000 }),
   ]);
   return {
     patch,
