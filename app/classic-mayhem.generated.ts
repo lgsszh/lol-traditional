@@ -870,7 +870,7 @@ export const liveClassicChampions: LiveClassicChampion[] = [
         "cooldown": "16/15/14/13/12",
         "cost": "40",
         "range": "610",
-        "numericDetail": "技能文本：塔里克投射一束星光，在1秒后爆裂，以造成90/130/170/210/250 + 0.5 × 法术强度 + 0.5 × 额外护甲魔法伤害并使敌人们晕眩1.5秒。\n等级成长：伤害=90/130/170/210/250",
+        "numericDetail": "技能文本：塔里克投射一束星光，在1秒后爆裂，以造成90/130/170/210/250 + 0.5 × 法术强度 + 0.5 × 额外护甲魔法伤害并使敌人们晕眩1.5秒。\n补充数值：如果友军在施放技能期间消失，则该技能无法由其施放。\n等级成长：伤害=90/130/170/210/250",
         "numericVersion": "Riot Data Dragon 16.21.1 / CommunityDragon 16.21",
         "sourceUrl": "https://raw.communitydragon.org/16.21/game/data/characters/taric/taric.bin.json",
         "dataDragonSourceUrl": "https://ddragon.leagueoflegends.com/cdn/16.21.1/data/zh_CN/champion/Taric.json",
@@ -13186,14 +13186,15 @@ export const regularMayhemAugments: MayhemAugment[] = [
     "name": "音之屏障",
     "rarity": "silver",
     "icon": "https://raw.communitydragon.org/16.21/game/assets/ux/kiwi/augments/icons/swiftandsafe_small.png",
-    "description": "数据状态：unavailable（同版本客户端公开数据未提供可稳定展示的说明文本）。",
+    "description": "为一名友军提供护盾时，会在1.5秒内提供持续衰减的移动速度和幽灵状态。",
     "tags": [
-      "adaptive"
+      "tank",
+      "utility"
     ],
     "classicExclusive": false,
-    "hasPublicDescription": false,
-    "descriptionStatus": "unavailable",
-    "unavailableReason": "同版本客户端公开数据未提供可稳定展示的说明文本",
+    "hasPublicDescription": true,
+    "descriptionStatus": "available",
+    "unavailableReason": null,
     "unresolvedTokens": [],
     "descriptionSourceUrl": "https://raw.communitydragon.org/16.21/game/maps/modespecificdata/kiwi.bin.json"
   },
@@ -13203,14 +13204,16 @@ export const regularMayhemAugments: MayhemAugment[] = [
     "name": "拯救",
     "rarity": "gold",
     "icon": "https://raw.communitydragon.org/16.21/game/assets/ux/kiwi/augments/icons/salvation_small.png",
-    "description": "数据状态：unavailable（同版本客户端公开数据未提供可稳定展示的说明文本）。",
+    "description": "受到伤害导致你的生命值低于按对局状态实时计算%时，会释放一道冲击波，对敌方英雄造成100–500（1–18级） + 1.25 × 额外攻击力 + 0.75 × 法术强度魔法伤害并将其击退，同时为所有被命中的友方英雄回复200–550（1–18级） + 2 × 额外攻击力 + 1.2 × 法术强度生命值。",
     "tags": [
-      "adaptive"
+      "attack",
+      "spell",
+      "tank"
     ],
     "classicExclusive": false,
-    "hasPublicDescription": false,
-    "descriptionStatus": "unavailable",
-    "unavailableReason": "同版本客户端公开数据未提供可稳定展示的说明文本",
+    "hasPublicDescription": true,
+    "descriptionStatus": "partial",
+    "unavailableReason": null,
     "unresolvedTokens": [],
     "descriptionSourceUrl": "https://raw.communitydragon.org/16.21/game/maps/modespecificdata/kiwi.bin.json"
   },
@@ -13220,14 +13223,15 @@ export const regularMayhemAugments: MayhemAugment[] = [
     "name": "黄铜爆音",
     "rarity": "gold",
     "icon": "https://raw.communitydragon.org/16.21/game/assets/ux/kiwi/augments/icons/camo_large.png",
-    "description": "数据状态：unavailable（同版本客户端公开数据未提供可稳定展示的说明文本）。",
+    "description": "将一个召唤师技能替换为黄铜爆音。 黄铜爆音：蓄力吹响大喇叭，击退并对敌人造成魔法伤害。",
     "tags": [
-      "adaptive"
+      "spell",
+      "utility"
     ],
     "classicExclusive": false,
-    "hasPublicDescription": false,
-    "descriptionStatus": "unavailable",
-    "unavailableReason": "同版本客户端公开数据未提供可稳定展示的说明文本",
+    "hasPublicDescription": true,
+    "descriptionStatus": "available",
+    "unavailableReason": null,
     "unresolvedTokens": [],
     "descriptionSourceUrl": "https://raw.communitydragon.org/16.21/game/maps/modespecificdata/kiwi.bin.json"
   },
@@ -13237,14 +13241,15 @@ export const regularMayhemAugments: MayhemAugment[] = [
     "name": "热舞怪兽",
     "rarity": "prismatic",
     "icon": "https://raw.communitydragon.org/16.21/game/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_prismatic.png",
-    "description": "数据状态：unavailable（同版本客户端公开数据未提供可稳定展示的说明文本）。",
+    "description": "施放【所选技能】技能会获得按对局状态实时计算额外生命值，并在所选技能 持续期间使附近敌人减速(0.5) × 100% 参与击杀会永久提升由按对局状态实时计算获得的生命值，并扩大减速地带的范围。 使用【所选技能】技能时的参与击杀数算作三倍。",
     "tags": [
-      "adaptive"
+      "spell",
+      "tank"
     ],
     "classicExclusive": false,
-    "hasPublicDescription": false,
-    "descriptionStatus": "unavailable",
-    "unavailableReason": "同版本客户端公开数据未提供可稳定展示的说明文本",
+    "hasPublicDescription": true,
+    "descriptionStatus": "partial",
+    "unavailableReason": null,
     "unresolvedTokens": [],
     "descriptionSourceUrl": "https://raw.communitydragon.org/16.21/game/maps/modespecificdata/kiwi.bin.json"
   },
@@ -13254,14 +13259,14 @@ export const regularMayhemAugments: MayhemAugment[] = [
     "name": "反冲",
     "rarity": "gold",
     "icon": "https://raw.communitydragon.org/16.21/game/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_gold.png",
-    "description": "数据状态：unavailable（同版本客户端公开数据未提供可稳定展示的说明文本）。",
+    "description": "【所选技能】技能造成(0.25) × 100%额外伤害并且你因反冲力而后退。",
     "tags": [
-      "adaptive"
+      "spell"
     ],
     "classicExclusive": false,
-    "hasPublicDescription": false,
-    "descriptionStatus": "unavailable",
-    "unavailableReason": "同版本客户端公开数据未提供可稳定展示的说明文本",
+    "hasPublicDescription": true,
+    "descriptionStatus": "available",
+    "unavailableReason": null,
     "unresolvedTokens": [],
     "descriptionSourceUrl": "https://raw.communitydragon.org/16.21/game/maps/modespecificdata/kiwi.bin.json"
   },
@@ -13271,14 +13276,15 @@ export const regularMayhemAugments: MayhemAugment[] = [
     "name": "死之舞",
     "rarity": "prismatic",
     "icon": "https://raw.communitydragon.org/16.21/game/assets/ux/kiwi/augments/icons/totentanz_small.png",
-    "description": "数据状态：unavailable（同版本客户端公开数据未提供可稳定展示的说明文本）。",
+    "description": "将一个召唤师技能替换为与死亡共舞一曲。 与死亡共舞一曲：向前闪烁并进入不可被击杀状态。在5秒内参与击杀一个英雄，否则 你会直接阵亡。",
     "tags": [
-      "adaptive"
+      "spell",
+      "utility"
     ],
     "classicExclusive": false,
-    "hasPublicDescription": false,
-    "descriptionStatus": "unavailable",
-    "unavailableReason": "同版本客户端公开数据未提供可稳定展示的说明文本",
+    "hasPublicDescription": true,
+    "descriptionStatus": "available",
+    "unavailableReason": null,
     "unresolvedTokens": [],
     "descriptionSourceUrl": "https://raw.communitydragon.org/16.21/game/maps/modespecificdata/kiwi.bin.json"
   },
@@ -13305,14 +13311,15 @@ export const regularMayhemAugments: MayhemAugment[] = [
     "name": "嗡嗡怪兽",
     "rarity": "gold",
     "icon": "https://raw.communitydragon.org/16.21/game/assets/ux/kiwi/augments/icons/ticklemonster_small.png",
-    "description": "数据状态：unavailable（同版本客户端公开数据未提供可稳定展示的说明文本）。",
+    "description": "攻击力转化 为攻击速度。 普攻附带额外魔法伤害攻击特效。",
     "tags": [
-      "adaptive"
+      "attack",
+      "spell"
     ],
     "classicExclusive": false,
-    "hasPublicDescription": false,
-    "descriptionStatus": "unavailable",
-    "unavailableReason": "同版本客户端公开数据未提供可稳定展示的说明文本",
+    "hasPublicDescription": true,
+    "descriptionStatus": "available",
+    "unavailableReason": null,
     "unresolvedTokens": [],
     "descriptionSourceUrl": "https://raw.communitydragon.org/16.21/game/maps/modespecificdata/kiwi.bin.json"
   },
@@ -13322,14 +13329,14 @@ export const regularMayhemAugments: MayhemAugment[] = [
     "name": "没法力，没问题",
     "rarity": "silver",
     "icon": "https://raw.communitydragon.org/16.21/game/assets/ux/kiwi/augments/icons/nomananoproblem_small.png",
-    "description": "数据状态：unavailable（同版本客户端公开数据未提供可稳定展示的说明文本）。",
+    "description": "来自你的装备的法力值转化 为法术强度。 使你的总法术强度提升15%。",
     "tags": [
-      "adaptive"
+      "spell"
     ],
     "classicExclusive": false,
-    "hasPublicDescription": false,
-    "descriptionStatus": "unavailable",
-    "unavailableReason": "同版本客户端公开数据未提供可稳定展示的说明文本",
+    "hasPublicDescription": true,
+    "descriptionStatus": "available",
+    "unavailableReason": null,
     "unresolvedTokens": [],
     "descriptionSourceUrl": "https://raw.communitydragon.org/16.21/game/maps/modespecificdata/kiwi.bin.json"
   },
@@ -13339,14 +13346,15 @@ export const regularMayhemAugments: MayhemAugment[] = [
     "name": "溺水之赠礼",
     "rarity": "silver",
     "icon": "https://raw.communitydragon.org/16.21/game/assets/ux/kiwi/augments/icons/giftofthedrowned_small.png",
-    "description": "数据状态：unavailable（同版本客户端公开数据未提供可稳定展示的说明文本）。",
+    "description": "额外生命值转化为穿甲。 (每按对局状态实时计算生命值转为按对局状态实时计算穿甲) 获得按对局状态实时计算穿甲。 额外穿甲：按对局实时属性计算",
     "tags": [
-      "adaptive"
+      "attack",
+      "tank"
     ],
     "classicExclusive": false,
-    "hasPublicDescription": false,
-    "descriptionStatus": "unavailable",
-    "unavailableReason": "同版本客户端公开数据未提供可稳定展示的说明文本",
+    "hasPublicDescription": true,
+    "descriptionStatus": "partial",
+    "unavailableReason": null,
     "unresolvedTokens": [],
     "descriptionSourceUrl": "https://raw.communitydragon.org/16.21/game/maps/modespecificdata/kiwi.bin.json"
   },
@@ -13356,14 +13364,14 @@ export const regularMayhemAugments: MayhemAugment[] = [
     "name": "巫妖大脑",
     "rarity": "silver",
     "icon": "https://raw.communitydragon.org/16.21/game/assets/ux/kiwi/augments/icons/lichbrain_small.png",
-    "description": "数据状态：unavailable（同版本客户端公开数据未提供可稳定展示的说明文本）。",
+    "description": "获得按对局状态实时计算法术强度。",
     "tags": [
-      "adaptive"
+      "spell"
     ],
     "classicExclusive": false,
-    "hasPublicDescription": false,
-    "descriptionStatus": "unavailable",
-    "unavailableReason": "同版本客户端公开数据未提供可稳定展示的说明文本",
+    "hasPublicDescription": true,
+    "descriptionStatus": "partial",
+    "unavailableReason": null,
     "unresolvedTokens": [],
     "descriptionSourceUrl": "https://raw.communitydragon.org/16.21/game/maps/modespecificdata/kiwi.bin.json"
   },
@@ -13373,14 +13381,14 @@ export const regularMayhemAugments: MayhemAugment[] = [
     "name": "大腕",
     "rarity": "prismatic",
     "icon": "https://raw.communitydragon.org/16.21/game/assets/ux/kiwi/augments/icons/bigshot_small.png",
-    "description": "数据状态：unavailable（同版本客户端公开数据未提供可稳定展示的说明文本）。",
+    "description": "获得按对局状态实时计算暴击伤害和按对局状态实时计算额外攻击力。 你的按对局状态实时计算攻击速度转化为暴击伤害。 (每按对局状态实时计算攻击速度转为按对局状态实时计算暴击伤害) 当前暴击伤害：按对局实时属性计算%",
     "tags": [
-      "adaptive"
+      "attack"
     ],
     "classicExclusive": false,
-    "hasPublicDescription": false,
-    "descriptionStatus": "unavailable",
-    "unavailableReason": "同版本客户端公开数据未提供可稳定展示的说明文本",
+    "hasPublicDescription": true,
+    "descriptionStatus": "partial",
+    "unavailableReason": null,
     "unresolvedTokens": [],
     "descriptionSourceUrl": "https://raw.communitydragon.org/16.21/game/maps/modespecificdata/kiwi.bin.json"
   },
@@ -13390,14 +13398,15 @@ export const regularMayhemAugments: MayhemAugment[] = [
     "name": "弹跳蜜蜂",
     "rarity": "prismatic",
     "icon": "https://raw.communitydragon.org/16.21/game/assets/ux/kiwi/augments/icons/kingme_large.png",
-    "description": "数据状态：unavailable（同版本客户端公开数据未提供可稳定展示的说明文本）。",
+    "description": "施放技能后，你的下一次普攻会弹跳至相距最近的那个敌人 任务：将普攻弹跳至敌方英雄 奖励：每任务等级获得+30攻击力和额外一次弹跳",
     "tags": [
-      "adaptive"
+      "attack",
+      "spell"
     ],
     "classicExclusive": false,
-    "hasPublicDescription": false,
-    "descriptionStatus": "unavailable",
-    "unavailableReason": "同版本客户端公开数据未提供可稳定展示的说明文本",
+    "hasPublicDescription": true,
+    "descriptionStatus": "available",
+    "unavailableReason": null,
     "unresolvedTokens": [],
     "descriptionSourceUrl": "https://raw.communitydragon.org/16.21/game/maps/modespecificdata/kiwi.bin.json"
   },
@@ -13407,14 +13416,14 @@ export const regularMayhemAugments: MayhemAugment[] = [
     "name": "翻倍时间",
     "rarity": "gold",
     "icon": "https://raw.communitydragon.org/16.21/game/assets/ux/kiwi/augments/icons/aram_phenomenalevil_large.png",
-    "description": "数据状态：unavailable（同版本客户端公开数据未提供可稳定展示的说明文本）。",
+    "description": "在短时间内用2种不同技能对一名敌方英雄造成伤害时，会造成魔法伤害并提供最大法力值。",
     "tags": [
-      "adaptive"
+      "spell"
     ],
     "classicExclusive": false,
-    "hasPublicDescription": false,
-    "descriptionStatus": "unavailable",
-    "unavailableReason": "同版本客户端公开数据未提供可稳定展示的说明文本",
+    "hasPublicDescription": true,
+    "descriptionStatus": "available",
+    "unavailableReason": null,
     "unresolvedTokens": [],
     "descriptionSourceUrl": "https://raw.communitydragon.org/16.21/game/maps/modespecificdata/kiwi.bin.json"
   },
@@ -13424,14 +13433,15 @@ export const regularMayhemAugments: MayhemAugment[] = [
     "name": "伤不过三",
     "rarity": "prismatic",
     "icon": "https://raw.communitydragon.org/16.21/game/assets/ux/kiwi/augments/icons/silverbeats_small.png",
-    "description": "数据状态：unavailable（同版本客户端公开数据未提供可稳定展示的说明文本）。",
+    "description": "对一个敌方英雄的每第三次连续攻击会造成真实伤害并永久提升由这个技能造成的伤害。",
     "tags": [
-      "adaptive"
+      "attack",
+      "spell"
     ],
     "classicExclusive": false,
-    "hasPublicDescription": false,
-    "descriptionStatus": "unavailable",
-    "unavailableReason": "同版本客户端公开数据未提供可稳定展示的说明文本",
+    "hasPublicDescription": true,
+    "descriptionStatus": "available",
+    "unavailableReason": null,
     "unresolvedTokens": [],
     "descriptionSourceUrl": "https://raw.communitydragon.org/16.21/game/maps/modespecificdata/kiwi.bin.json"
   },
@@ -13459,14 +13469,15 @@ export const regularMayhemAugments: MayhemAugment[] = [
     "name": "小蜜蜂！！！",
     "rarity": "gold",
     "icon": "https://raw.communitydragon.org/16.21/game/assets/ux/kiwi/augments/icons/bees_small.png",
-    "description": "数据状态：unavailable（同版本客户端公开数据未提供可稳定展示的说明文本）。",
+    "description": "每过一段时间，你的下一个命中敌方英雄的技能会发射一个会爆炸的小蜜蜂巢穴，在一段短时间里造成魔法伤害和减速。 小蜜蜂附带攻击特效。",
     "tags": [
-      "adaptive"
+      "attack",
+      "spell"
     ],
     "classicExclusive": false,
-    "hasPublicDescription": false,
-    "descriptionStatus": "unavailable",
-    "unavailableReason": "同版本客户端公开数据未提供可稳定展示的说明文本",
+    "hasPublicDescription": true,
+    "descriptionStatus": "available",
+    "unavailableReason": null,
     "unresolvedTokens": [],
     "descriptionSourceUrl": "https://raw.communitydragon.org/16.21/game/maps/modespecificdata/kiwi.bin.json"
   },
@@ -13496,14 +13507,16 @@ export const regularMayhemAugments: MayhemAugment[] = [
     "name": "鼓声暴起 低音轰鸣",
     "rarity": "gold",
     "icon": "https://raw.communitydragon.org/16.21/game/assets/ux/kiwi/augments/icons/theboomandthebass_small.png",
-    "description": "数据状态：unavailable（同版本客户端公开数据未提供可稳定展示的说明文本）。",
+    "description": "施放技能后，你的下一次攻击变得更快，造成额外魔法伤害并为你提供持续衰减的移动速度。",
     "tags": [
-      "adaptive"
+      "attack",
+      "spell",
+      "utility"
     ],
     "classicExclusive": false,
-    "hasPublicDescription": false,
-    "descriptionStatus": "unavailable",
-    "unavailableReason": "同版本客户端公开数据未提供可稳定展示的说明文本",
+    "hasPublicDescription": true,
+    "descriptionStatus": "available",
+    "unavailableReason": null,
     "unresolvedTokens": [],
     "descriptionSourceUrl": "https://raw.communitydragon.org/16.21/game/maps/modespecificdata/kiwi.bin.json"
   },
@@ -13513,14 +13526,16 @@ export const regularMayhemAugments: MayhemAugment[] = [
     "name": "将他们放倒倒倒",
     "rarity": "gold",
     "icon": "https://raw.communitydragon.org/16.21/game/assets/ux/kiwi/augments/icons/takeemdowndowndown_small.png",
-    "description": "数据状态：unavailable（同版本客户端公开数据未提供可稳定展示的说明文本）。",
+    "description": "普攻和技能在命中时造成额外魔法伤害并对敌方英雄施加层数。 在满层时，消耗所有层数，基于已损失生命值造成魔法伤害，并基于造成的伤害回复生命值。",
     "tags": [
-      "adaptive"
+      "attack",
+      "spell",
+      "tank"
     ],
     "classicExclusive": false,
-    "hasPublicDescription": false,
-    "descriptionStatus": "unavailable",
-    "unavailableReason": "同版本客户端公开数据未提供可稳定展示的说明文本",
+    "hasPublicDescription": true,
+    "descriptionStatus": "available",
+    "unavailableReason": null,
     "unresolvedTokens": [],
     "descriptionSourceUrl": "https://raw.communitydragon.org/16.21/game/maps/modespecificdata/kiwi.bin.json"
   },
@@ -13530,14 +13545,16 @@ export const regularMayhemAugments: MayhemAugment[] = [
     "name": "装甲冲击",
     "rarity": "gold",
     "icon": "https://raw.communitydragon.org/16.21/game/assets/ux/kiwi/augments/icons/armoredimpact_small.png",
-    "description": "数据状态：unavailable（同版本客户端公开数据未提供可稳定展示的说明文本）。",
+    "description": "施放技能后，你的下一次普通攻击会对附近敌人造成2.5 × 护甲 + 50–125（1–18级）额外物理伤害。",
     "tags": [
-      "adaptive"
+      "attack",
+      "spell",
+      "tank"
     ],
     "classicExclusive": false,
-    "hasPublicDescription": false,
-    "descriptionStatus": "unavailable",
-    "unavailableReason": "同版本客户端公开数据未提供可稳定展示的说明文本",
+    "hasPublicDescription": true,
+    "descriptionStatus": "available",
+    "unavailableReason": null,
     "unresolvedTokens": [],
     "descriptionSourceUrl": "https://raw.communitydragon.org/16.21/game/maps/modespecificdata/kiwi.bin.json"
   },
@@ -13547,14 +13564,14 @@ export const regularMayhemAugments: MayhemAugment[] = [
     "name": "水果化",
     "rarity": "silver",
     "icon": "https://raw.communitydragon.org/16.21/game/assets/ux/kiwi/augments/icons/fruitseason_small.png",
-    "description": "数据状态：unavailable（同版本客户端公开数据未提供可稳定展示的说明文本）。",
+    "description": "参与击杀会引发水果爆炸。 水果可回复生命值和法力值。",
     "tags": [
-      "adaptive"
+      "tank"
     ],
     "classicExclusive": false,
-    "hasPublicDescription": false,
-    "descriptionStatus": "unavailable",
-    "unavailableReason": "同版本客户端公开数据未提供可稳定展示的说明文本",
+    "hasPublicDescription": true,
+    "descriptionStatus": "available",
+    "unavailableReason": null,
     "unresolvedTokens": [],
     "descriptionSourceUrl": "https://raw.communitydragon.org/16.21/game/maps/modespecificdata/kiwi.bin.json"
   },
@@ -13564,14 +13581,15 @@ export const regularMayhemAugments: MayhemAugment[] = [
     "name": "珠光手镯",
     "rarity": "gold",
     "icon": "https://raw.communitydragon.org/16.21/game/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_gold.png",
-    "description": "数据状态：unavailable（同版本客户端公开数据未提供可稳定展示的说明文本）。",
+    "description": "【所选技能】技能可以暴击。 获得(0.25) × 100%暴击几率。",
     "tags": [
-      "adaptive"
+      "attack",
+      "spell"
     ],
     "classicExclusive": false,
-    "hasPublicDescription": false,
-    "descriptionStatus": "unavailable",
-    "unavailableReason": "同版本客户端公开数据未提供可稳定展示的说明文本",
+    "hasPublicDescription": true,
+    "descriptionStatus": "available",
+    "unavailableReason": null,
     "unresolvedTokens": [],
     "descriptionSourceUrl": "https://raw.communitydragon.org/16.21/game/maps/modespecificdata/kiwi.bin.json"
   },
@@ -13581,14 +13599,15 @@ export const regularMayhemAugments: MayhemAugment[] = [
     "name": "罪恶快感！",
     "rarity": "gold",
     "icon": "https://raw.communitydragon.org/16.21/game/assets/ux/kiwi/augments/icons/overextender_small.png",
-    "description": "数据状态：unavailable（同版本客户端公开数据未提供可稳定展示的说明文本）。",
+    "description": "将一个召唤师技能替换为罪恶快感！ 罪恶快感！驾驭一枚飞弹，它会在命中敌方英雄、建筑物或墙体后爆炸。爆炸半径内的敌人会受到物理伤害。",
     "tags": [
-      "adaptive"
+      "spell",
+      "utility"
     ],
     "classicExclusive": false,
-    "hasPublicDescription": false,
-    "descriptionStatus": "unavailable",
-    "unavailableReason": "同版本客户端公开数据未提供可稳定展示的说明文本",
+    "hasPublicDescription": true,
+    "descriptionStatus": "available",
+    "unavailableReason": null,
     "unresolvedTokens": [],
     "descriptionSourceUrl": "https://raw.communitydragon.org/16.21/game/maps/modespecificdata/kiwi.bin.json"
   },
@@ -13598,14 +13617,15 @@ export const regularMayhemAugments: MayhemAugment[] = [
     "name": "屹立不倒",
     "rarity": "gold",
     "icon": "https://raw.communitydragon.org/16.21/game/assets/ux/kiwi/augments/icons/stillhere_small.png",
-    "description": "数据状态：unavailable（同版本客户端公开数据未提供可稳定展示的说明文本）。",
+    "description": "每损失1%生命值，获得2%攻击速度和0.35%生命偷取。",
     "tags": [
-      "adaptive"
+      "attack",
+      "tank"
     ],
     "classicExclusive": false,
-    "hasPublicDescription": false,
-    "descriptionStatus": "unavailable",
-    "unavailableReason": "同版本客户端公开数据未提供可稳定展示的说明文本",
+    "hasPublicDescription": true,
+    "descriptionStatus": "available",
+    "unavailableReason": null,
     "unresolvedTokens": [],
     "descriptionSourceUrl": "https://raw.communitydragon.org/16.21/game/maps/modespecificdata/kiwi.bin.json"
   },
@@ -13615,14 +13635,16 @@ export const regularMayhemAugments: MayhemAugment[] = [
     "name": "吸元秘术",
     "rarity": "gold",
     "icon": "https://raw.communitydragon.org/16.21/game/assets/ux/kiwi/augments/icons/mercysstrike_small.png",
-    "description": "数据状态：unavailable（同版本客户端公开数据未提供可稳定展示的说明文本）。",
+    "description": "每按对局状态实时计算秒，你的下次攻击额外造成按对局状态实时计算物理伤害，并为你回复按对局状态实时计算生命值攻击特效。 每次施放技能，会使该效果的冷却时间缩减按对局状态实时计算秒。 生命值回复：按对局实时属性计算",
     "tags": [
-      "spell"
+      "attack",
+      "spell",
+      "tank"
     ],
     "classicExclusive": false,
-    "hasPublicDescription": false,
-    "descriptionStatus": "unavailable",
-    "unavailableReason": "同版本客户端公开数据未提供可稳定展示的说明文本",
+    "hasPublicDescription": true,
+    "descriptionStatus": "partial",
+    "unavailableReason": null,
     "unresolvedTokens": [],
     "descriptionSourceUrl": "https://raw.communitydragon.org/16.21/game/maps/modespecificdata/kiwi.bin.json"
   },
@@ -13632,14 +13654,16 @@ export const regularMayhemAugments: MayhemAugment[] = [
     "name": "王冠之重",
     "rarity": "gold",
     "icon": "https://raw.communitydragon.org/16.21/game/assets/ux/kiwi/augments/icons/heavyisthecrown_small.png",
-    "description": "数据状态：unavailable（同版本客户端公开数据未提供可稳定展示的说明文本）。",
+    "description": "获得攻击力、法术强度和攻击速度，但移动速度降低。 每次参与击杀都会获得一层【背负】以提升该效果。阵亡时失去一半层数",
     "tags": [
-      "adaptive"
+      "attack",
+      "spell",
+      "utility"
     ],
     "classicExclusive": false,
-    "hasPublicDescription": false,
-    "descriptionStatus": "unavailable",
-    "unavailableReason": "同版本客户端公开数据未提供可稳定展示的说明文本",
+    "hasPublicDescription": true,
+    "descriptionStatus": "available",
+    "unavailableReason": null,
     "unresolvedTokens": [],
     "descriptionSourceUrl": "https://raw.communitydragon.org/16.21/game/maps/modespecificdata/kiwi.bin.json"
   },
@@ -13649,14 +13673,14 @@ export const regularMayhemAugments: MayhemAugment[] = [
     "name": "蓝色屏障",
     "rarity": "silver",
     "icon": "https://raw.communitydragon.org/16.21/game/assets/ux/kiwi/augments/icons/bluenote_small.png",
-    "description": "数据状态：unavailable（同版本客户端公开数据未提供可稳定展示的说明文本）。",
+    "description": "获得持续1.5秒的护盾，数额相当于你花费的按对局状态实时计算法力值。 护盾值至多为300–800（1–18级）",
     "tags": [
-      "adaptive"
+      "tank"
     ],
     "classicExclusive": false,
-    "hasPublicDescription": false,
-    "descriptionStatus": "unavailable",
-    "unavailableReason": "同版本客户端公开数据未提供可稳定展示的说明文本",
+    "hasPublicDescription": true,
+    "descriptionStatus": "partial",
+    "unavailableReason": null,
     "unresolvedTokens": [],
     "descriptionSourceUrl": "https://raw.communitydragon.org/16.21/game/maps/modespecificdata/kiwi.bin.json"
   },
@@ -13666,14 +13690,15 @@ export const regularMayhemAugments: MayhemAugment[] = [
     "name": "深红钴蓝闪光",
     "rarity": "gold",
     "icon": "https://raw.communitydragon.org/16.21/game/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_gold.png",
-    "description": "数据状态：unavailable（同版本客户端公开数据未提供可稳定展示的说明文本）。",
+    "description": "被【所选技能】技能伤害过的敌方英雄会被标记。攻击带标记的敌人会造成额外魔法伤害并缩减【所选技能】技能的冷却时间。",
     "tags": [
-      "adaptive"
+      "attack",
+      "spell"
     ],
     "classicExclusive": false,
-    "hasPublicDescription": false,
-    "descriptionStatus": "unavailable",
-    "unavailableReason": "同版本客户端公开数据未提供可稳定展示的说明文本",
+    "hasPublicDescription": true,
+    "descriptionStatus": "available",
+    "unavailableReason": null,
     "unresolvedTokens": [],
     "descriptionSourceUrl": "https://raw.communitydragon.org/16.21/game/maps/modespecificdata/kiwi.bin.json"
   },
@@ -13683,14 +13708,14 @@ export const regularMayhemAugments: MayhemAugment[] = [
     "name": "命运之武器",
     "rarity": "gold",
     "icon": "https://raw.communitydragon.org/16.21/game/assets/ux/kiwi/augments/icons/protagonistssignatureweapon_small.png",
-    "description": "数据状态：unavailable（同版本客户端公开数据未提供可稳定展示的说明文本）。",
+    "description": "你的第一件传说级装备成为命运之武器，属性基于参与击杀英雄数提升。",
     "tags": [
       "adaptive"
     ],
     "classicExclusive": false,
-    "hasPublicDescription": false,
-    "descriptionStatus": "unavailable",
-    "unavailableReason": "同版本客户端公开数据未提供可稳定展示的说明文本",
+    "hasPublicDescription": true,
+    "descriptionStatus": "available",
+    "unavailableReason": null,
     "unresolvedTokens": [],
     "descriptionSourceUrl": "https://raw.communitydragon.org/16.21/game/maps/modespecificdata/kiwi.bin.json"
   },
@@ -13700,14 +13725,15 @@ export const regularMayhemAugments: MayhemAugment[] = [
     "name": "灵魂乐流",
     "rarity": "silver",
     "icon": "https://raw.communitydragon.org/16.21/game/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_gold.png",
-    "description": "数据状态：unavailable（同版本客户端公开数据未提供可稳定展示的说明文本）。",
+    "description": "施放【所选技能】技能会为你提供持续一段时间的攻击速度。",
     "tags": [
-      "adaptive"
+      "attack",
+      "spell"
     ],
     "classicExclusive": false,
-    "hasPublicDescription": false,
-    "descriptionStatus": "unavailable",
-    "unavailableReason": "同版本客户端公开数据未提供可稳定展示的说明文本",
+    "hasPublicDescription": true,
+    "descriptionStatus": "available",
+    "unavailableReason": null,
     "unresolvedTokens": [],
     "descriptionSourceUrl": "https://raw.communitydragon.org/16.21/game/maps/modespecificdata/kiwi.bin.json"
   },
@@ -13717,14 +13743,15 @@ export const regularMayhemAugments: MayhemAugment[] = [
     "name": "一起抱抱",
     "rarity": "prismatic",
     "icon": "https://raw.communitydragon.org/16.21/game/assets/ux/kiwi/augments/icons/empyreampromise_small.png",
-    "description": "数据状态：unavailable（同版本客户端公开数据未提供可稳定展示的说明文本）。",
+    "description": "用【所选技能】技能 为友方英雄提供治疗或护盾时，会对2名其他附近友方英雄再次施放该技能。",
     "tags": [
-      "adaptive"
+      "spell",
+      "tank"
     ],
     "classicExclusive": false,
-    "hasPublicDescription": false,
-    "descriptionStatus": "unavailable",
-    "unavailableReason": "同版本客户端公开数据未提供可稳定展示的说明文本",
+    "hasPublicDescription": true,
+    "descriptionStatus": "available",
+    "unavailableReason": null,
     "unresolvedTokens": [],
     "descriptionSourceUrl": "https://raw.communitydragon.org/16.21/game/maps/modespecificdata/kiwi.bin.json"
   },
@@ -13734,14 +13761,15 @@ export const regularMayhemAugments: MayhemAugment[] = [
     "name": "迷人蝴蝶",
     "rarity": "gold",
     "icon": "https://raw.communitydragon.org/16.21/game/assets/ux/kiwi/augments/icons/enchantedbuttery_small.png",
-    "description": "数据状态：unavailable（同版本客户端公开数据未提供可稳定展示的说明文本）。",
+    "description": "为友方英雄提供治疗或护盾时，会在你周围聚集蝴蝶。 收集按对局状态实时计算只蝴蝶后，对一个敌方英雄造成伤害时将它们全部发射出去，以造成按对局状态实时计算魔法伤害，后续命中造成(0.75) × 100%伤害。 已造成的伤害：按对局实时属性计算",
     "tags": [
-      "adaptive"
+      "spell",
+      "tank"
     ],
     "classicExclusive": false,
-    "hasPublicDescription": false,
-    "descriptionStatus": "unavailable",
-    "unavailableReason": "同版本客户端公开数据未提供可稳定展示的说明文本",
+    "hasPublicDescription": true,
+    "descriptionStatus": "partial",
+    "unavailableReason": null,
     "unresolvedTokens": [],
     "descriptionSourceUrl": "https://raw.communitydragon.org/16.21/game/maps/modespecificdata/kiwi.bin.json"
   },
@@ -13751,14 +13779,14 @@ export const regularMayhemAugments: MayhemAugment[] = [
     "name": "终极循环往复",
     "rarity": "silver",
     "icon": "https://raw.communitydragon.org/16.21/game/assets/ux/kiwi/augments/icons/zealot_large.png",
-    "description": "数据状态：unavailable（同版本客户端公开数据未提供可稳定展示的说明文本）。",
+    "description": "获得按对局状态实时计算终极技能急速。",
     "tags": [
-      "adaptive"
+      "spell"
     ],
     "classicExclusive": false,
-    "hasPublicDescription": false,
-    "descriptionStatus": "unavailable",
-    "unavailableReason": "同版本客户端公开数据未提供可稳定展示的说明文本",
+    "hasPublicDescription": true,
+    "descriptionStatus": "partial",
+    "unavailableReason": null,
     "unresolvedTokens": [],
     "descriptionSourceUrl": "https://raw.communitydragon.org/16.21/game/maps/modespecificdata/kiwi.bin.json"
   },
@@ -13768,14 +13796,14 @@ export const regularMayhemAugments: MayhemAugment[] = [
     "name": "远射天资",
     "rarity": "silver",
     "icon": "https://raw.communitydragon.org/16.21/game/assets/ux/kiwi/augments/icons/bonk_large.png",
-    "description": "数据状态：unavailable（同版本客户端公开数据未提供可稳定展示的说明文本）。",
+    "description": "在接近最大攻击距离处打出的攻击会附带额外物理伤害攻击特效。",
     "tags": [
-      "adaptive"
+      "attack"
     ],
     "classicExclusive": false,
-    "hasPublicDescription": false,
-    "descriptionStatus": "unavailable",
-    "unavailableReason": "同版本客户端公开数据未提供可稳定展示的说明文本",
+    "hasPublicDescription": true,
+    "descriptionStatus": "available",
+    "unavailableReason": null,
     "unresolvedTokens": [],
     "descriptionSourceUrl": "https://raw.communitydragon.org/16.21/game/maps/modespecificdata/kiwi.bin.json"
   },
@@ -13785,14 +13813,16 @@ export const regularMayhemAugments: MayhemAugment[] = [
     "name": "孤勇者",
     "rarity": "silver",
     "icon": "https://raw.communitydragon.org/16.21/game/assets/ux/kiwi/augments/icons/adamant_small.png",
-    "description": "数据状态：unavailable（同版本客户端公开数据未提供可稳定展示的说明文本）。",
+    "description": "附近每有一个敌方英雄，你就会获得攻击速度、护甲和魔法抗性。",
     "tags": [
-      "adaptive"
+      "attack",
+      "spell",
+      "tank"
     ],
     "classicExclusive": false,
-    "hasPublicDescription": false,
-    "descriptionStatus": "unavailable",
-    "unavailableReason": "同版本客户端公开数据未提供可稳定展示的说明文本",
+    "hasPublicDescription": true,
+    "descriptionStatus": "available",
+    "unavailableReason": null,
     "unresolvedTokens": [],
     "descriptionSourceUrl": "https://raw.communitydragon.org/16.21/game/maps/modespecificdata/kiwi.bin.json"
   },
@@ -13802,14 +13832,15 @@ export const regularMayhemAugments: MayhemAugment[] = [
     "name": "重型",
     "rarity": "gold",
     "icon": "https://raw.communitydragon.org/16.21/game/assets/ux/kiwi/augments/icons/pentakill_small.png",
-    "description": "数据状态：unavailable（同版本客户端公开数据未提供可稳定展示的说明文本）。",
+    "description": "强化【所选技能】技能! 强化版技能获得所选技能20技能急速、10%额外伤害、以及10%治疗和护盾效果。",
     "tags": [
-      "adaptive"
+      "spell",
+      "tank"
     ],
     "classicExclusive": false,
-    "hasPublicDescription": false,
-    "descriptionStatus": "unavailable",
-    "unavailableReason": "同版本客户端公开数据未提供可稳定展示的说明文本",
+    "hasPublicDescription": true,
+    "descriptionStatus": "available",
+    "unavailableReason": null,
     "unresolvedTokens": [],
     "descriptionSourceUrl": "https://raw.communitydragon.org/16.21/game/maps/modespecificdata/kiwi.bin.json"
   },
@@ -13819,14 +13850,15 @@ export const regularMayhemAugments: MayhemAugment[] = [
     "name": "力量",
     "rarity": "gold",
     "icon": "https://raw.communitydragon.org/16.21/game/assets/ux/kiwi/augments/icons/pentakill_small.png",
-    "description": "数据状态：unavailable（同版本客户端公开数据未提供可稳定展示的说明文本）。",
+    "description": "强化【所选技能】技能! 强化版技能获得所选技能20技能急速、10%额外伤害、以及10%治疗和护盾效果。",
     "tags": [
-      "adaptive"
+      "spell",
+      "tank"
     ],
     "classicExclusive": false,
-    "hasPublicDescription": false,
-    "descriptionStatus": "unavailable",
-    "unavailableReason": "同版本客户端公开数据未提供可稳定展示的说明文本",
+    "hasPublicDescription": true,
+    "descriptionStatus": "available",
+    "unavailableReason": null,
     "unresolvedTokens": [],
     "descriptionSourceUrl": "https://raw.communitydragon.org/16.21/game/maps/modespecificdata/kiwi.bin.json"
   },
@@ -13836,14 +13868,15 @@ export const regularMayhemAugments: MayhemAugment[] = [
     "name": "鞭挞",
     "rarity": "gold",
     "icon": "https://raw.communitydragon.org/16.21/game/assets/ux/kiwi/augments/icons/pentakill_small.png",
-    "description": "数据状态：unavailable（同版本客户端公开数据未提供可稳定展示的说明文本）。",
+    "description": "强化【所选技能】技能! 强化版技能获得所选技能20技能急速、10%额外伤害、以及10%治疗和护盾效果。",
     "tags": [
-      "adaptive"
+      "spell",
+      "tank"
     ],
     "classicExclusive": false,
-    "hasPublicDescription": false,
-    "descriptionStatus": "unavailable",
-    "unavailableReason": "同版本客户端公开数据未提供可稳定展示的说明文本",
+    "hasPublicDescription": true,
+    "descriptionStatus": "available",
+    "unavailableReason": null,
     "unresolvedTokens": [],
     "descriptionSourceUrl": "https://raw.communitydragon.org/16.21/game/maps/modespecificdata/kiwi.bin.json"
   },
@@ -13853,14 +13886,15 @@ export const regularMayhemAugments: MayhemAugment[] = [
     "name": "厄运",
     "rarity": "gold",
     "icon": "https://raw.communitydragon.org/16.21/game/assets/ux/kiwi/augments/icons/pentakill_small.png",
-    "description": "数据状态：unavailable（同版本客户端公开数据未提供可稳定展示的说明文本）。",
+    "description": "强化【所选技能】技能! 强化版技能获得所选技能20技能急速、10%额外伤害、以及10%治疗和护盾效果。",
     "tags": [
-      "adaptive"
+      "spell",
+      "tank"
     ],
     "classicExclusive": false,
-    "hasPublicDescription": false,
-    "descriptionStatus": "unavailable",
-    "unavailableReason": "同版本客户端公开数据未提供可稳定展示的说明文本",
+    "hasPublicDescription": true,
+    "descriptionStatus": "available",
+    "unavailableReason": null,
     "unresolvedTokens": [],
     "descriptionSourceUrl": "https://raw.communitydragon.org/16.21/game/maps/modespecificdata/kiwi.bin.json"
   },
@@ -13870,14 +13904,14 @@ export const regularMayhemAugments: MayhemAugment[] = [
     "name": "奥术公理",
     "rarity": "gold",
     "icon": "https://raw.communitydragon.org/16.21/game/assets/ux/kiwi/augments/icons/arcaneaxiom_small.png",
-    "description": "数据状态：unavailable（同版本客户端公开数据未提供可稳定展示的说明文本）。",
+    "description": "在你对一名敌方英雄造成伤害后，如果该英雄在3秒内阵亡，则会返还你终极技能的(0.15–0.3（1–18级）) × 100%总冷却时间。",
     "tags": [
-      "adaptive"
+      "spell"
     ],
     "classicExclusive": false,
-    "hasPublicDescription": false,
-    "descriptionStatus": "unavailable",
-    "unavailableReason": "同版本客户端公开数据未提供可稳定展示的说明文本",
+    "hasPublicDescription": true,
+    "descriptionStatus": "available",
+    "unavailableReason": null,
     "unresolvedTokens": [],
     "descriptionSourceUrl": "https://raw.communitydragon.org/16.21/game/maps/modespecificdata/kiwi.bin.json"
   },
@@ -13887,14 +13921,15 @@ export const regularMayhemAugments: MayhemAugment[] = [
     "name": "GoH_PentakillAug_Generic_BlankName",
     "rarity": "gold",
     "icon": "https://raw.communitydragon.org/16.21/game/assets/ux/kiwi/augments/icons/pentakill_small.png",
-    "description": "数据状态：unavailable（同版本客户端公开数据未提供可稳定展示的说明文本）。",
+    "description": "强化【所选技能】技能! 强化版技能获得所选技能20技能急速、10%额外伤害、以及10%治疗和护盾效果。",
     "tags": [
-      "adaptive"
+      "spell",
+      "tank"
     ],
     "classicExclusive": false,
-    "hasPublicDescription": false,
-    "descriptionStatus": "unavailable",
-    "unavailableReason": "同版本客户端公开数据未提供可稳定展示的说明文本",
+    "hasPublicDescription": true,
+    "descriptionStatus": "available",
+    "unavailableReason": null,
     "unresolvedTokens": [],
     "descriptionSourceUrl": "https://raw.communitydragon.org/16.21/game/maps/modespecificdata/kiwi.bin.json"
   },
@@ -13904,14 +13939,15 @@ export const regularMayhemAugments: MayhemAugment[] = [
     "name": "升级：风暴狂涌",
     "rarity": "gold",
     "icon": "https://raw.communitydragon.org/16.21/game/assets/ux/kiwi/augments/icons/upgradehubris_small.png",
-    "description": "数据状态：unavailable（同版本客户端公开数据未提供可稳定展示的说明文本）。",
+    "description": "风暴狂涌 - 风啸现在总会在一个区域内引爆，基于最大生命值造成魔法伤害。 被初段引爆命中的敌方英雄会被风啸标记。 获得500金币。",
     "tags": [
-      "adaptive"
+      "spell",
+      "tank"
     ],
     "classicExclusive": false,
-    "hasPublicDescription": false,
-    "descriptionStatus": "unavailable",
-    "unavailableReason": "同版本客户端公开数据未提供可稳定展示的说明文本",
+    "hasPublicDescription": true,
+    "descriptionStatus": "available",
+    "unavailableReason": null,
     "unresolvedTokens": [],
     "descriptionSourceUrl": "https://raw.communitydragon.org/16.21/game/maps/modespecificdata/kiwi.bin.json"
   }
