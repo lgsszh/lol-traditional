@@ -39,3 +39,11 @@
 ## 线上待验收
 
 本地实施与验收完成，尚待提交推送、手动同步及其Pages部署成功、v0.7.10 Release、`network:pages-verify`和关闭Issue13。线上结果以Release及对应Actions运行记录为准，不能将本地通过表述为已上线。
+
+## 云端复测发现的部署取消冲突
+
+首次修复提交a421ef2的手动同步42260152444通过名单、生成和73项测试，却在等待Pages42260567529时失败。最初push部署42260151045被`cancel-in-progress: true`取消，Pages日志显示相同SHA部署ID；旧取消为17:19:28Z，新发布创建为17:20:42Z，随后报告`Deployment cancelled`。日志证明旧取消后同提交后续发布也报告取消；两者的内部状态关联仅为推断，不能声称已证实平台如何复用状态，不归类网络异常。
+
+采用[GitHub官方Next.js Pages模板](https://github.com/actions/starter-workflows/blob/main/pages/nextjs.yml)的同组串行、`cancel-in-progress: false`，不取消在途生产发布；不改同步触发、权限、数据或构建门禁。新增回归在旧配置先失败，再验证修复配置；重新完整本地测试和独立复核后追加提交，仍属尚未发布的v0.7.10，随后重跑云端完整同步和部署。
+
+部署配置修复后已再次完整运行`npm test`：74项单测、构建、1项SSR及1,622镜像校验全过，`git diff --check`通过。TypeScript和页面／数据未改，复用此前通过的类型与浏览器证据。串行配置只保证不取消正在运行的部署；GitHub仍可替换多次触发时排队的中间运行，不承诺任意队列永不取消。

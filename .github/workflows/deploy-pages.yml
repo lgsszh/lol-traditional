@@ -12,7 +12,8 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  # push 与每日同步可发布同一提交；让在途生产部署完成，避免取消状态冲突。
+  cancel-in-progress: false
 
 jobs:
   build:

@@ -71,6 +71,7 @@ status labels:
 `.github/workflows/` 有两个工作流：
 
 **1. deploy-pages.yml —— 部署（push 到 main 即触发）**
+Pages使用同组串行且`cancel-in-progress: false`；push和每日同步可能发布同一提交，不得通过取消在途生产部署切换，否则可能污染同提交的后续发布状态。测试会拦截恢复为true。
 流程：checkout → Node 22 + npm 缓存 → `npm ci` → **`npm test`（部署门禁，任何测试失败都不会发布）** → `npm run build:pages`（静态导出，env：`RIFT_STATIC_EXPORT=1`、`NEXT_PUBLIC_BASE_PATH=/lol-traditional`、`NEXT_PUBLIC_SITE_URL=https://lgsszh.github.io/lol-traditional/`）→ 冒烟检查（out/index.html 必须包含 `/lol-traditional/_next/` 和 `/lol-traditional/classic-cache/`）→ configure-pages（enablement:true）→ deploy-pages。
 
 铁律：

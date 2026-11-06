@@ -354,6 +354,12 @@ test("OP.GG 怀旧海斗快照仅覆盖当前有排名统计的英雄", () => {
   }
 });
 
+test("Pages 发布串行等待，不取消 push 与每日同步调度的在途部署", async () => {
+  const workflow = await readFile(new URL("../.github/workflows/deploy-pages.yml", import.meta.url), "utf8");
+  assert.match(workflow, /^concurrency:\r?\n\s+group: pages\r?\n(?:\s*#[^\r\n]*\r?\n)*\s+cancel-in-progress: false/m);
+  assert.match(workflow, /uses: actions\/deploy-pages@/);
+});
+
 test("怀旧海斗页面不再复用峡谷方案或启发式推荐，并纳入每日同步", async () => {
   const [pageSource, componentSource, styleSource, generatorSource, parserSource, workflowSource, packageSource] = await Promise.all([
     readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
