@@ -41,8 +41,8 @@ function assertAbilitySet(label, champions, { requireStatus = false } = {}) {
 }
 
 test("03 与 04 的全部技能均有来源、说明和独立数值明细", () => {
-  assert.equal(classicChampionSkills.flatMap(champion => champion.abilities).length, 405);
-  assert.equal(liveClassicChampions.flatMap(champion => champion.abilities).length, 405);
+  assert.equal(classicChampionSkills.flatMap(champion => champion.abilities).length, 420);
+  assert.equal(liveClassicChampions.flatMap(champion => champion.abilities).length, 420);
   assert.ok(liveClassicChampions.every(champion => champion.abilities.every(ability => !ability.rankValuesUnconfirmed)), "经典历史来源边界不得污染现代技能数据");
   assertAbilitySet("03", classicChampionSkills);
   assertAbilitySet("04", liveClassicChampions, { requireStatus: true });

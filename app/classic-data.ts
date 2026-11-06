@@ -236,6 +236,9 @@ export const classicChampions: ClassicChampion[] = [
   champion("60083", "Yorick", "约里克", "掘墓者", "上路", "战士", "fighter", "#8c9965", ["E", "W", "Q"]),
   champion("60120", "Hecarim", "赫卡里姆", "战争之影", "打野", "战士", "jungler", "#52afa9", ["Q", "E", "W"]),
   champion("60236", "Lucian", "卢锡安", "圣枪游侠", "下路", "射手", "marksman", "#c5a778", ["Q", "E", "W"]),
+  champion("60050", "Swain", "斯维因", "策士统领", "中路", "法师", "mage", "#a36478", ["E", "Q", "W"]),
+  champion("60060", "Elise", "伊莉丝", "蜘蛛女皇", "中路", "法师", "mage", "#b7586b", ["Q", "W", "E"]),
+  champion("60106", "Volibear", "沃利贝尔", "雷霆咆哮", "上路", "战士", "tank", "#80aabe", ["W", "Q", "E"]),
 ];
 
 export const championIcon = (champion: ClassicChampion) =>

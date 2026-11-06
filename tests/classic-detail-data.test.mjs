@@ -60,7 +60,49 @@ test("16.21 新增四英雄使用真实 Classic 身份并覆盖经典方案", ()
     Hecarim: ["60120", "赫卡里姆", "战争之影"],
     Lucian: ["60236", "卢锡安", "圣枪游侠"],
   };
-  assert.equal(classicChampions.length, 81);
+  assert.ok(classicChampions.length >= 81);
+  for (const [key, [id, name, title]] of Object.entries(additions)) {
+    const champion = classicChampions.find(entry => entry.key === key);
+    assert.deepEqual([champion?.classicId, champion?.name, champion?.title], [id, name, title]);
+    assert.equal(classicChampionSkills.find(entry => entry.championId === id)?.abilities.length, 5);
+    assert.ok(classicBuildGuides[id]?.length >= 3, `${key} 缺少三套合法方案`);
+    assert.ok(classicBuildGuides[id].some(guide => guide.sourceUrls.some(url => url.includes("mobafire.com"))), `${key} 缺少历史社区来源`);
+  }
+});
+
+test("伊莉丝编辑默认为有历史来源的中路 AP，不落入 AD 打野模板", () => {
+  const elise = classicChampions.find(champion => champion.key === "Elise");
+  assert.equal(elise?.lane, "中路");
+  assert.equal(elise?.archetype, "mage");
+  const primary = classicBuildGuides["60060"][0];
+  assert.equal(primary.lane, "中路");
+  assert.equal(primary.runeArchetype, "mage");
+  assert.ok(primary.runeSummary.includes("法术强度精华"));
+  assert.ok(primary.spellIds.includes("714"));
+  assert.ok(!primary.spellIds.includes("711"));
+  assert.ok(!primary.coreItems.includes("773006"), "AP默认不应使用狂战士胫甲");
+  assert.ok(primary.coreItems.includes("773020"), "AP默认应使用法师之靴");
+  assert.ok(primary.coreItems.includes("773089"), "AP默认应保留法术强度核心");
+});
+
+test("沃利贝尔编辑默认为上路坦克，不将盾药开局描述成标准打野", () => {
+  const volibear = classicChampions.find(champion => champion.key === "Volibear");
+  assert.equal(volibear?.lane, "上路");
+  assert.equal(volibear?.archetype, "tank");
+  for (const guide of classicBuildGuides["60106"]) {
+    assert.equal(guide.lane, "上路");
+    assert.ok(!guide.spellIds.includes("711"));
+    assert.doesNotMatch(guide.summary, /标准打野开局/);
+  }
+});
+
+test("16.22 新增三英雄身份、完整技能与有来源的三套方案齐全", () => {
+  const additions = {
+    Swain: ["60050", "斯维因", "策士统领"],
+    Elise: ["60060", "伊莉丝", "蜘蛛女皇"],
+    Volibear: ["60106", "沃利贝尔", "雷霆咆哮"],
+  };
+  assert.equal(classicChampions.length, 84);
   for (const [key, [id, name, title]] of Object.entries(additions)) {
     const champion = classicChampions.find(entry => entry.key === key);
     assert.deepEqual([champion?.classicId, champion?.name, champion?.title], [id, name, title]);
@@ -99,7 +141,10 @@ test("全部英雄优先使用名称含经典的皮肤，并保留 OP.GG 默认�
   assert.equal(janna.classicSplashName, "风暴之怒");
   assert.equal(vayne.classicSplashName, "暗夜猎手");
   assert.deepEqual(mundo.artworks.map((artwork) => compactName(artwork.name)), ["经典蒙多", "祖安狂人"]);
-  assert.equal(compactName(kayle.classicSplashName), "经典2012凯尔");
+  // 16.22 lists Classic 2009 before Classic 2012; the default art remains 2012.
+  assert.equal(compactName(kayle.classicSplashName), "经典2009凯尔");
+  assert.equal(kayle.classicSplashId, "60010301");
+  assert.match(kayle.classicSplash, /\/skins\/skin301\/images\//);
   assert.match(kayle.artworks.find((artwork) => artwork.isDefault)?.imageUrl ?? "", /\/skins\/skin302\/images\//);
 });
 

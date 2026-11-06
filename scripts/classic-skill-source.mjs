@@ -31,6 +31,25 @@ const historicalForms = {
     maxRanks: [5, 5, 5, 3],
     iconStem: "jade_lucian_q.project_jade",
   },
+  Swain: {
+    version: "3.15.5",
+    spellIds: ["SwainDecrepify", "SwainShadowGrasp", "SwainTorment", "SwainMetamorphism"],
+    maxRanks: [5, 5, 5, 3],
+    iconStems: ["swaincarrionrenewal.project_jade", "swaindecrepify.project_jade", "swainnevermove.project_jade", "swaintorment.project_jade", "swainravenousflock.project_jade"],
+  },
+  Elise: {
+    version: "3.15.5",
+    spellIds: ["EliseHumanQ", "EliseHumanW", "EliseHumanE", "EliseR"],
+    // Spider Form starts with one innate rank; the plan spends points at 6/11/16.
+    maxRanks: [5, 5, 5, 4],
+    iconStems: ["jade_elisepassive.project_jade", "jade_elisehumanq.project_jade", "jade_elisehumanw.project_jade", "jade_elisehumane.project_jade", "jade_eliser.project_jade"],
+  },
+  Volibear: {
+    version: "3.15.5",
+    spellIds: ["VolibearQ", "VolibearW", "VolibearE", "VolibearR"],
+    maxRanks: [5, 5, 5, 3],
+    iconStems: ["volibearpassive.project_jade", "volibearq.project_jade", "volibearw.project_jade", "volibeare.project_jade", "volibearr.project_jade"],
+  },
 };
 
 export function classicNumericVersion(key) {
@@ -40,7 +59,12 @@ export function classicNumericVersion(key) {
 export function validateHistoricalForm(key, detail, historicalChampion) {
   const form = historicalForms[key];
   if (!form) return;
-  if (!detail.abilities?.find(ability => ability.key === "Q")?.imageUrl?.includes(form.iconStem)
+  const iconsMatch = form.iconStems
+    ? detail.abilities?.length === 5 && form.iconStems.every((stem, index) =>
+      detail.abilities[index]?.key === ["P", "Q", "W", "E", "R"][index]
+      && detail.abilities[index]?.imageUrl?.includes(stem))
+    : detail.abilities?.find(ability => ability.key === "Q")?.imageUrl?.includes(form.iconStem);
+  if (!iconsMatch
     || historicalChampion.spells?.some((spell, index) => spell.id !== form.spellIds[index] || spell.maxrank !== form.maxRanks[index])
     || historicalChampion.spells?.length !== form.spellIds.length) {
     throw new Error(`${key}: Classic historical form differs from Riot ${form.version}; review source before publishing`);
@@ -65,6 +89,9 @@ export function classicSourceBoundary(key, ability, spell, resourceText = "") {
   }
   if (key === "Mordekaiser" && ability.key === "R") {
     notes.push(`来源边界：OP.GG Classic 概述提及巨龙；Riot Data Dragon ${version} 的公开效果与数值仅针对目标英雄。巨龙的具体效果和数值未在该历史数值源公开，不从英雄数值推算。`);
+  }
+  if (key === "Elise" && ability.key === "R") {
+    notes.push(`形态与加点说明：Riot Data Dragon ${version} 的蜘蛛形态公开4阶数值。S3 原始攻略说明开局即拥有该技能；本站18级加点表只记录18次技能点投入，R 在6/11/16级各投入1点，不把初始获得的一阶计作额外花点。历史说明来源：https://www.mobafire.com/league-of-legends/build/elise-ranked-jungle-hybrid-guide-276366 。`);
   }
   if (ability.cost === "0" && /生命/.test(resourceText)) {
     notes.push(`来源边界：OP.GG Classic 原始消耗为0；Riot Data Dragon ${version} 的历史资源说明为“${resourceText}”。两者来源不同，不能将0解释为不消耗生命，也不将历史消耗视为已验证的当前 Classic 消耗。`);

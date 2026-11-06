@@ -58,6 +58,48 @@ test("16.21 新英雄的旧版技能身份不得被现代重做技能替代", ()
   }
 });
 
+test("16.22 新增三英雄逐项校验旧版技能 ID、阶数和全部图标", () => {
+  for (const [key, spellIds, maxRanks, iconStems] of [
+    ["Swain", ["SwainDecrepify", "SwainShadowGrasp", "SwainTorment", "SwainMetamorphism"], [5, 5, 5, 3], ["swaincarrionrenewal.project_jade", "swaindecrepify.project_jade", "swainnevermove.project_jade", "swaintorment.project_jade", "swainravenousflock.project_jade"]],
+    ["Elise", ["EliseHumanQ", "EliseHumanW", "EliseHumanE", "EliseR"], [5, 5, 5, 4], ["jade_elisepassive.project_jade", "jade_elisehumanq.project_jade", "jade_elisehumanw.project_jade", "jade_elisehumane.project_jade", "jade_eliser.project_jade"]],
+    ["Volibear", ["VolibearQ", "VolibearW", "VolibearE", "VolibearR"], [5, 5, 5, 3], ["volibearpassive.project_jade", "volibearq.project_jade", "volibearw.project_jade", "volibeare.project_jade", "volibearr.project_jade"]],
+  ]) {
+    assert.equal(classicNumericVersion(key), "3.15.5");
+    const detail = { abilities: iconStems.map((stem, index) => ({ key: ["P", "Q", "W", "E", "R"][index], imageUrl: `/${stem}.png` })) };
+    const historical = { spells: spellIds.map((id, index) => ({ id, maxrank: maxRanks[index] })) };
+    assert.doesNotThrow(() => validateHistoricalForm(key, detail, historical));
+    for (let index = 0; index < 4; index += 1) {
+      const modern = structuredClone(historical);
+      modern.spells[index].id = "ModernRework";
+      assert.throws(() => validateHistoricalForm(key, detail, modern), /historical form differs/, `${key} 技能 ${index} 的 ID 必须被校验`);
+      const wrongRank = structuredClone(historical);
+      wrongRank.spells[index].maxrank += 1;
+      assert.throws(() => validateHistoricalForm(key, detail, wrongRank), /historical form differs/, `${key} 技能 ${index} 的阶数必须被校验`);
+    }
+    for (let index = 0; index < 5; index += 1) {
+      const wrongIcon = structuredClone(detail);
+      wrongIcon.abilities[index].imageUrl = "/modern.png";
+      assert.throws(() => validateHistoricalForm(key, wrongIcon, historical), /historical form differs/, `${key} 技能 ${index} 的图标必须被校验`);
+      const missing = structuredClone(detail);
+      missing.abilities.splice(index, 1);
+      assert.throws(() => validateHistoricalForm(key, missing, historical), /historical form differs/);
+    }
+  }
+});
+
+test("伊莉丝四阶形态的初始等级不占18次花点，R仅在6/11/16升级", () => {
+  const elise = classicChampions.find(champion => champion.key === "Elise");
+  assert.ok(elise);
+  const plan = skillPlanFor(elise.spellOrder, elise);
+  assert.equal(plan.length, 18);
+  assert.equal(isValidSkillPlan(plan, elise), true);
+  assert.deepEqual(["Q", "W", "E", "R"].map(key => plan.filter(skill => skill === key).length), [5, 5, 5, 3]);
+  assert.deepEqual(plan.flatMap((key, index) => key === "R" ? [index + 1] : []), [6, 11, 16]);
+  const firstLevelR = [...plan]; firstLevelR[0] = "R";
+  assert.equal(isValidSkillPlan(firstLevelR, elise), false);
+  assert.equal(isValidSkillPlan(["R", ...plan], elise), false);
+});
+
 test("OP.GG 未确认等级与巨龙概述不伪装成旧版英雄逐级数值", () => {
   const boundary = classicSourceBoundary("Mordekaiser", { key: "R", cooldown: "120 / 105 / 90 / 80 / 8", cost: "0" }, { maxrank: 3, cooldownBurn: "120/105/90", costBurn: "0" });
   assert.equal(boundary.rankValuesUnconfirmed, true);
@@ -85,6 +127,27 @@ test("新增经典英雄保留旧形态与可见来源边界", () => {
   assert.match(get("60236")?.abilities[1].numericDetail || "", /攻击力（口径未确认）/);
   assert.match(get("60236")?.abilities[1].numericDetail || "", /源内属性口径不一致，映射未确认/);
   assert.doesNotMatch(get("60236")?.abilities[1].numericDetail || "", /总攻击力（额外攻击力/);
+});
+
+test("16.22 三英雄的经典技能保留历史机制、四阶形态和未确认来源边界", () => {
+  const get = id => classicChampionSkills.find(champion => champion.championId === id);
+  const swain = get("60050");
+  assert.deepEqual(swain?.abilities.slice(1).map(ability => ability.name), ["恶鸦来袭", "鸦爪之缚", "苦难折磨", "狂食鸦群"]);
+  assert.match(swain.abilities[4].numericDetail, /维持邪鸦附体的法力消耗每秒增加/);
+  assert.equal(swain.abilities[1].rankValuesUnconfirmed, true);
+  const elise = get("60060");
+  assert.deepEqual(elise?.abilities.slice(1).map(ability => ability.name), ["神经毒素 / 剧毒之蜇", "自爆蜘蛛 / 掠行狂暴", "结茧 / 盘丝", "蜘蛛形态"]);
+  assert.match(elise.abilities[4].numericDetail, /最多可存在2\/3\/4\/5只小蜘蛛/);
+  assert.match(elise.abilities[4].numericDetail, /公开4阶数值.*开局即拥有.*只记录18次技能点投入.*6\/11\/16级.*不把初始获得的一阶计作额外花点/);
+  assert.equal(elise.abilities[1].rankValuesUnconfirmed, true);
+  const volibear = get("60106");
+  assert.match(volibear?.abilities[1].numericDetail || "", /将目标摔到沃利贝尔的身后/);
+  assert.match(volibear?.abilities[4].numericDetail || "", /连锁伤害/);
+  assert.equal(volibear.abilities[4].rankValuesUnconfirmed, true);
+  for (const entry of [swain, elise, volibear]) {
+    assert.ok(entry.abilities.every(ability => ability.numericVersion === "3.15.5"));
+    assert.ok(entry.abilities.filter(ability => ability.rankValuesUnconfirmed).every(ability => /来源边界：.*等级对应未确认/.test(ability.numericDetail)));
+  }
 });
 
 test("新增经典技能保持历史形态，未知动态消耗不伪装为零", () => {
