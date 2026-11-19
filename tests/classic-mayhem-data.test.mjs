@@ -152,9 +152,16 @@ test("现代技能快照覆盖完整经典目录，但怀旧海斗只展示 OP.G
   const annie = liveClassicChampions.find((champion) => champion.key === "Annie");
   const annieR = annie?.abilities.find((ability) => ability.key === "R");
   assert.equal(annieR?.numericStatus, "available");
-  assert.match(annieR?.numericDetail ?? "", /提伯斯拥有/);
-  assert.match(annieR?.numericDetail ?? "", /1150/);
-  assert.match(annieR?.numericDetail ?? "", /30\/45\/60/);
+  // Balance patches can change the values; the rendered pet stats must still
+  // retain health scaling and a numeric attack-damage formula for all ranks.
+  const tibbersStats = annieR.numericDetail.split("\n").find((line) => line.startsWith("补充数值：提伯斯拥有：")) ?? "";
+  const health = tibbersStats.match(/^补充数值：提伯斯拥有：\s*\(?(\d+(?:\/\d+)+)（英雄等级(\d+(?:\/\d+)+)）(?: × \d+(?:\.\d+)?)?\)? \+ \d+(?:\.\d+)? × 法术强度( \+ \d+(?:\.\d+)? × 额外最大生命值)?生命值\s/);
+  assert.ok(health, "提伯斯缺少按英雄等级与法强展开的生命值公式");
+  assert.equal(health[1].split("/").length, health[2].split("/").length, "生命值与等级断点必须逐项对应");
+  // Riot 26.23 patch notes confirm bonus health scaling was added in this snapshot.
+  if (CLASSIC_MAYHEM_PATCH === "16.23") assert.ok(health[3], "16.23 提伯斯生命值缺少额外生命值加成");
+  assert.match(tibbersStats, /\s\d+\/\d+\/\d+ \+ \d+(?:\.\d+)? × 法术强度攻击力$/);
+  assert.match(annieR.numericDetail, /光环伤害=\d+\/\d+\/\d+(?:；|$)/);
 
   const garen = liveClassicChampions.find((champion) => champion.key === "Garen");
   const garenP = garen?.abilities.find((ability) => ability.key === "P");

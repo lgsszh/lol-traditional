@@ -1,9 +1,11 @@
 import assert from "node:assert/strict";
 import { readFile, readdir, stat } from "node:fs/promises";
 import test from "node:test";
+import { liveClassicChampions } from "../app/classic-mayhem.generated.ts";
 import { opggMayhemChampionBuilds } from "../app/classic-mayhem-opgg.generated.ts";
 
 const runtimeDirectory = new URL("../public/classic-data/mayhem/", import.meta.url);
+const liveChampionById = new Map(liveClassicChampions.map((champion) => [champion.classicId, champion]));
 
 async function readJson(name) {
   return JSON.parse(await readFile(new URL(name, runtimeDirectory), "utf8"));
@@ -25,6 +27,11 @@ test("怀旧海斗运行时数据按英雄拆分并保持 OP.GG 完整结构", a
     assert.equal(payload.meta.hasJungleRole, false);
     assert.equal(payload.champion.classicId, name.replace(".json", ""));
     assert.equal(payload.build.classicId, payload.champion.classicId);
+    assert.deepEqual(
+      payload.champion.abilities,
+      liveChampionById.get(payload.champion.classicId)?.abilities,
+      `${payload.build.name} 运行时技能必须与本批生成的技能快照一致`,
+    );
     assert.ok(Array.isArray(payload.items), `${payload.build.name} 缺少模式专属装备表`);
     for (const item of payload.items) {
       assert.match(item.id, /^\d+$/);
@@ -116,12 +123,6 @@ test("运行时快照保留已核对的技能数值，防止每日同步退化",
   const teemoR = teemo.champion.abilities.find((ability) => ability.key === "R");
   assert.match(teemoR.numericDetail, /3\/4\/5层充能/);
   assert.match(teemoR.numericDetail, /35\/30\/25秒充能时间/);
-
-  const annie = await readJson("60001.json");
-  const annieR = annie.champion.abilities.find((ability) => ability.key === "R");
-  assert.match(annieR.numericDetail, /提伯斯拥有/);
-  assert.match(annieR.numericDetail, /1150/);
-  assert.match(annieR.numericDetail, /30\/45\/60/);
 
   const lulu = await readJson("60117.json");
   const luluW = lulu.champion.abilities.find((ability) => ability.key === "W");

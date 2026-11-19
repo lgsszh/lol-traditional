@@ -4,524 +4,515 @@ export const classicAssetManifest = {
   "https://c-lol-web.op.gg/app-router/assets/images/classic-builds/masteries/mastery_offense_bg.jpg": "/classic-cache/5e8d10d7560f3f48f0ef100c.jpg",
   "https://c-lol-web.op.gg/app-router/assets/images/classic-builds/masteries/mastery_util_bg.jpg": "/classic-cache/e11d1268e242d2a0658ee652.jpg",
   "https://c-lol-web.op.gg/app-router/assets/images/classic-builds/runes/rune_panel.png": "/classic-cache/230455ee8f8cced7032ad5fc.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Aatrox.png": "/classic-cache/b3f52a316d472b9c99d551c3.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Ahri.png": "/classic-cache/035008eea6f676240ca85491.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Akali.png": "/classic-cache/0c84dcdeb2493df49d701d6d.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Alistar.png": "/classic-cache/d6ba9509b78a85b6523836be.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Amumu.png": "/classic-cache/71b735a5cb9bfe9929694e4b.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Anivia.png": "/classic-cache/614bc4bc121c0a26a07f193d.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Annie.png": "/classic-cache/1653ac6ac45e7446cb8588c3.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Ashe.png": "/classic-cache/ed9021b0b0b5ffd82e87d4bb.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Blitzcrank.png": "/classic-cache/3cbbea72e8ed4b430ded906e.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Brand.png": "/classic-cache/e36dd741ddfb7b8a8ebe16fe.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Caitlyn.png": "/classic-cache/df900f3ebd27437e9e185951.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Chogath.png": "/classic-cache/dd57408b5243b4c5ff873914.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Corki.png": "/classic-cache/ea871a7bd33183b76384a245.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/DrMundo.png": "/classic-cache/28b5bcbacaefe63c9952e203.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Elise.png": "/classic-cache/880c4947c338eb142d74d25a.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Evelynn.png": "/classic-cache/e520b12d2a4d863a4f89f180.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Ezreal.png": "/classic-cache/88378f3adc11a21119b321df.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Fiddlesticks.png": "/classic-cache/6e903126d51b25b15df89a85.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Fiora.png": "/classic-cache/73196ccb8adc413a298decc6.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Fizz.png": "/classic-cache/93a187470c1771fb923d7358.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Galio.png": "/classic-cache/031864017df235b599b860a5.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Gangplank.png": "/classic-cache/77fcc39b13a593c9a142a29b.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Garen.png": "/classic-cache/db07c049e9d618fe5d0dd1e6.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Gragas.png": "/classic-cache/2457fe70d8f893cd515e56dc.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Graves.png": "/classic-cache/03431d862b00219ba60afa67.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Hecarim.png": "/classic-cache/42e3c76e3eeb42b4fcb2bb76.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Heimerdinger.png": "/classic-cache/2a796324c76784a27128d428.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Irelia.png": "/classic-cache/763e4097d819acc3f4fe25e1.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Janna.png": "/classic-cache/9ab69ded6e40fa6f6c746352.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/JarvanIV.png": "/classic-cache/75e59ce2986b30b881294fd5.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Jax.png": "/classic-cache/4e9fb75a5f96c6e073323c70.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Karma.png": "/classic-cache/1acbdfbbf0eee67dbed51433.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Karthus.png": "/classic-cache/bc8d11e1f0f9cc93bafa8a8b.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Kassadin.png": "/classic-cache/766d2e7fdd82eb3787527ca6.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Katarina.png": "/classic-cache/9c97c77a916049284da9f641.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Kayle.png": "/classic-cache/5ad4c9ca23d8d1dea0fd3c84.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Kennen.png": "/classic-cache/365c9a7d71a4a500c5fa64b0.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/KogMaw.png": "/classic-cache/4cf6d988e33ee0fd93a1c7c5.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/LeeSin.png": "/classic-cache/699548166fd3ae5e243fe49f.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Leona.png": "/classic-cache/c34f5bc7da7176e136f29e50.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Lucian.png": "/classic-cache/7d84a8fe5b941347fe5ddda4.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Lulu.png": "/classic-cache/632f8c8d33e91ea85a3266b8.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Lux.png": "/classic-cache/dd2ffa27af966bb93b926763.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Malphite.png": "/classic-cache/9dea79298a96a054782e3db4.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Malzahar.png": "/classic-cache/b41f13c8e38b9f5623fc39ea.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/MasterYi.png": "/classic-cache/7337f467057983b1120994b8.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/MissFortune.png": "/classic-cache/c0d1d5f5541288dae8b4f21f.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/MonkeyKing.png": "/classic-cache/d3b775d6899906596a35b21d.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Mordekaiser.png": "/classic-cache/86c7f8031da6a59f36082d3f.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Morgana.png": "/classic-cache/1db83b2b8f1e600a20873a46.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Nami.png": "/classic-cache/c88d3dac95ce1f39b7672590.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Nasus.png": "/classic-cache/22fa98268a3191579da839e0.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Nautilus.png": "/classic-cache/23d34389794cc9b3307c1b04.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Nidalee.png": "/classic-cache/73fe5845d2e1faf3d78a6878.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Nunu.png": "/classic-cache/b8aea5e884f255cf0eb295ee.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Olaf.png": "/classic-cache/8f9fb2c3bbc769a8ec126c9d.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Pantheon.png": "/classic-cache/bc3d0a4cee0b094a781958f0.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Poppy.png": "/classic-cache/aec0714d5c21a4171f70b46d.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Quinn.png": "/classic-cache/f73d05b0e43a17de05ef4e7e.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Rammus.png": "/classic-cache/c71ef012526b79c61c0cc5e3.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Ryze.png": "/classic-cache/9ab6d7f0f00fc4ff7a168f1d.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Shaco.png": "/classic-cache/0af5a5509f69d220df1dcb59.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Shen.png": "/classic-cache/c176bb5eaf626a8e162f95a3.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Shyvana.png": "/classic-cache/aa8fac66312695ac0792c9f7.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Singed.png": "/classic-cache/880c9e6639b38dbba4ad0d02.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Sion.png": "/classic-cache/83b9fa7fbfe1979c1f88d158.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Sivir.png": "/classic-cache/59b65d3152d293ae6a3eb16e.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Skarner.png": "/classic-cache/93ff5756802e4cc55b00052a.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Sona.png": "/classic-cache/9e6113a77a2656c45a9d1494.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Soraka.png": "/classic-cache/d02a790a01dcc184a5ce37af.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Swain.png": "/classic-cache/4fa04eefc008c0bdfe177095.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Taric.png": "/classic-cache/bfc99d15823305a5ca488741.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Teemo.png": "/classic-cache/552e6d6a5706b67753b6a7f7.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Tristana.png": "/classic-cache/fb56610430f63136123721fd.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Tryndamere.png": "/classic-cache/6ab721b08e8396dbdd275c75.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/TwistedFate.png": "/classic-cache/95d4517395a491cdd04dfd4a.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Twitch.png": "/classic-cache/4709d5c3eca0fecce62ebbe8.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Vayne.png": "/classic-cache/70dc04b0ee5981a40edc3e4b.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Veigar.png": "/classic-cache/7217f7dfbdbff9bcd91c0283.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Volibear.png": "/classic-cache/fb97ed9c02c321f8ba2f47cd.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Warwick.png": "/classic-cache/ef1faae2d8e9781a827f31a1.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/XinZhao.png": "/classic-cache/1459508553f99dbc80d3a803.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Yorick.png": "/classic-cache/7a5b3f5165cc7adcbe7ed282.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Zilean.png": "/classic-cache/da5a634f9455d40831e047bd.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Aatrox_Passive.png": "/classic-cache/eb7c3c5e177ba3ab34ef8947.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Ahri_SoulEater2.png": "/classic-cache/0bf103f53157bfe22a2fa897.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Akali_P.png": "/classic-cache/86c086762b34faf89c79122f.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Alistar_E.png": "/classic-cache/c6c01b156366af5c07b224d3.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Amumu_Passive.png": "/classic-cache/2c6b081a80c9894de15355c2.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Anivia_P.png": "/classic-cache/7961115781e191b53b7bb66f.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Annie_Passive.png": "/classic-cache/845442195f950b043b5ff757.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Armordillo_ScavengeArmor.png": "/classic-cache/800c8df44e5d2b8665b45f4a.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Armsmaster_MasterOfArms.png": "/classic-cache/ae2ca5832affbc18091cae46.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Ashe_P.png": "/classic-cache/77065ac5f795f9f746d32eb8.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Blitzcrank_ManaBarrier.png": "/classic-cache/4091d6336d60369c09907463.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/BrandP.png": "/classic-cache/8bfe7d045beeddb3941628fe.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Caitlyn_Headshot.png": "/classic-cache/b7b41dd1b9a6fbaf19a160a9.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Cardmaster_SealFate.png": "/classic-cache/2eafb23fe45c2c81a60a108b.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Corki_RapidReload.png": "/classic-cache/7f541601dbff0aecf36b5c8c.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/DrMundo_P.png": "/classic-cache/755ce612a4c80936c426d30b.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/ElisePassive.png": "/classic-cache/c350a1d2efabb9c6ec91c601.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Evelynn_Passive.png": "/classic-cache/3c12f9f6ca345455a9cd2073.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Ezreal_RisingSpellForce.png": "/classic-cache/9722bf0ab9e2e6af3b9de06f.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/FallenAngel_Empathize.png": "/classic-cache/16ee3b38a5797ef32b362210.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/FiddlesticksP.png": "/classic-cache/272e3b3de16f1630428e9121.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Fiora_P.png": "/classic-cache/fd071d8c7b0801f691d29bef.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Fizz_P.png": "/classic-cache/765b714930f8c1b248ef9308.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Galio_Passive.png": "/classic-cache/87a6c417cd01edbf1e8a79ae.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Gangplank_Passive.png": "/classic-cache/0c8c96cb71db6717757b86b4.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Garen_Passive.png": "/classic-cache/3b7f4f791aef2473c4955e57.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/GragasPassiveHeal.png": "/classic-cache/77888b358dbc7447567c8e58.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/GravesTrueGrit.png": "/classic-cache/c3e910e5fafa26afa682bb98.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/GreenTerror_TailSpike.png": "/classic-cache/3fd3f7f37f0beb652c78d2eb.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Hecarim_Passive.png": "/classic-cache/2cde287eadbece4ed0fe3c19.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Heimerdinger_Passive.png": "/classic-cache/d997fe35e74f8360f871f85e.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Irelia_Passive.png": "/classic-cache/4ab49b216b8028ecbd3762aa.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/JannaP.png": "/classic-cache/164d36a6fd008423cd8c03e7.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/JarvanIVP.png": "/classic-cache/55dc03754d2571fc7e6af551.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Jester_CarefulStrikes.png": "/classic-cache/893fb73e693141ba6011b139.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Karma_Passive.png": "/classic-cache/4a05bdd80c56fc5fd1c969bd.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Karthus_Passive.png": "/classic-cache/1fc5fb0cef35db4d64aef77c.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Kassadin_Passive.png": "/classic-cache/0a79f3a4152603014e124957.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Katarina_Passive.png": "/classic-cache/cb23b6a87f24823195a04722.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Kayle_P.png": "/classic-cache/40e1beced43aff67c96062f7.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Kennen_Passive.png": "/classic-cache/2bd1b5415b2038c7ed91201e.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/KogMaw_IcathianSurprise.png": "/classic-cache/3dcd575187e50079cacaaec0.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/LeeSinPassive.png": "/classic-cache/b695a176021d888df530567a.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/LeonaSunlight.png": "/classic-cache/ba80db44ac0ae168cc5ab98f.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Lucian_Passive.png": "/classic-cache/cbf80c4b772eed6e4c3e451a.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Lulu_PixFaerieCompanion.png": "/classic-cache/107b2db9ea6f5a54a6f459fb.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/LuxIlluminatingFraulein.png": "/classic-cache/ff5db8dea4c861db2298d57b.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Malphite_GraniteShield.png": "/classic-cache/8ddd164edafb6a07d4d9d89c.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Malzahar_Passive.png": "/classic-cache/417eca385f3214bec753cc89.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/MasterYi_Passive1.png": "/classic-cache/1d5d8309556c9909fa2acbae.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/MissFortune_W.png": "/classic-cache/5b64aa35758899269936fc1f.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/MonkeyKingStoneSkin.png": "/classic-cache/c47dd0c24f14651266df39bc.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/MordekaiserPassive.png": "/classic-cache/88e4da3e9b6c1bd9c60c5414.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/NamiPassive.png": "/classic-cache/6571f8deae932508f9a86517.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Nasus_Passive.png": "/classic-cache/64489819b5396d71e894880a.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Nautilus_StaggeringBlow.png": "/classic-cache/5af0751f4441bb35682ec363.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Nidalee_Passive.png": "/classic-cache/d1b2ac612dca619b59359c6a.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/NunuPassive.png": "/classic-cache/17d1450b72e4c85d1175213d.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Olaf_Passive.png": "/classic-cache/21a784ff0eef7f4cf32fb8cf.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Pantheon_Passive.png": "/classic-cache/c2c4f733e3ea5fe0ffa8465d.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Poppy_Passive.png": "/classic-cache/3e2acdcacb793e5d691eab15.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Quinn_Passive.png": "/classic-cache/f072ca3648ae871bb4da9374.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Ryze_P.png": "/classic-cache/1c61a80f2675e9aa5aa299c8.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Shen_Passive.png": "/classic-cache/f5218abb9e85f97311e5fbdc.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Shyvana_Passive.png": "/classic-cache/779d4faddd853d8adacf1a70.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Singed_Passive.png": "/classic-cache/facd33cb816201f6f24955b7.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Sion_Passive1.png": "/classic-cache/2a549e7cdc48ca327d5b8be9.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Sivir_Passive.png": "/classic-cache/4a9a84a4a19ef66f548d3624.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Skarner_Passive.png": "/classic-cache/2f28bc201fc4872f3b076595.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Sona_Passive_Charged.png": "/classic-cache/01448886ec1829ee3da95e7a.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Soraka_Passive.png": "/classic-cache/40f6f994fef5fdfadfd5d79b.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Swain_P.png": "/classic-cache/9f998ecd7677a79e1821cc40.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Taric_Passive.png": "/classic-cache/9ffa38b2038d224aa7118aba.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/TeemoPassive.png": "/classic-cache/fa79790fc6c222af6b9911d7.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Tristana_Passive.png": "/classic-cache/ada7cb0eddbb1e50ed8c942c.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Tryndamere_Passive.png": "/classic-cache/c56a393d9324940eab69d268.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Twitch_Passive.png": "/classic-cache/1605fea9ddd6b7fd6174733a.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Vayne_NightHunter.png": "/classic-cache/c8fd7117becb764db572b309.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/VeigarEntropy.png": "/classic-cache/e85a44d7aad4d876c63ddfb9.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Volibear_Icon_P.png": "/classic-cache/b42dce3cfb9aec1a8e362633.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/WarwickP.png": "/classic-cache/9ef655f7a7c186d930dec0c2.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/XinZhaoReworkP.png": "/classic-cache/085a9f2174a9ea5eefc83d1b.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Yorick_P.png": "/classic-cache/186037582505e706b4fc4930.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Zilean_Passive.png": "/classic-cache/81bb58d9e66c41079d32bab9.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/AatroxE.png": "/classic-cache/1a44f45eabf21ece4809eaea.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/AatroxQ.png": "/classic-cache/6f398c9dddf5e0835459c121.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/AatroxR.png": "/classic-cache/d968e185f46013269219ce3a.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/AatroxW.png": "/classic-cache/446227bcb93d8efec2fb9c2f.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/AhriE.png": "/classic-cache/dbe4b155196d6e8e33a9efae.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/AhriQ.png": "/classic-cache/9a922685abe51c9edb1968d1.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/AhriR.png": "/classic-cache/a949ab72d6cb3cbf9a08908b.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/AhriW.png": "/classic-cache/f707c4647d5ba1f6cc261d41.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/AkaliE.png": "/classic-cache/9cb5a25839635a6a6f0c66a1.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/AkaliQ.png": "/classic-cache/efa4894a6a14d88802baaeb6.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/AkaliR.png": "/classic-cache/56346288b399e3950c4bd106.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/AkaliW.png": "/classic-cache/7c3e08a488157b00ce09cb36.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/AlistarE.png": "/classic-cache/094db89f9cf109b819f2f6f7.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/AlphaStrike.png": "/classic-cache/5556cc1b17c199b532df599a.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/AnnieE.png": "/classic-cache/93e157e03a0179ed65a6e6cf.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/AnnieQ.png": "/classic-cache/0392706930749bc72670b558.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/AnnieR.png": "/classic-cache/5ee86649522f833a640f9327.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/AnnieW.png": "/classic-cache/6db9177b96fb51490478b13f.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/AsheQ.png": "/classic-cache/bc6848e8dcb53790da50a8f0.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/AsheSpiritOfTheHawk.png": "/classic-cache/b4336abef88e74a630979970.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/AspectOfTheCougar.png": "/classic-cache/cff1afc9da07e94bdf80e614.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/AuraofDespair.png": "/classic-cache/0c622645bd4c8fd2c9b94e24.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/BandageToss.png": "/classic-cache/350df8377024de20668520ea.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/BrandE.png": "/classic-cache/3dac2dc0a7ce4ef6a518ac6f.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/BrandQ.png": "/classic-cache/33ea78bd849f33f6fec2f916.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/BrandR.png": "/classic-cache/6e1f3b1b696d94c51de85c4b.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/BrandW.png": "/classic-cache/642fd386644cfeffb2f28814.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/Bushwhack.png": "/classic-cache/87e104a7d8cb551eb9ac0dcb.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/CaitlynE.png": "/classic-cache/340d0fa213d909ad5c5e8d5e.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/CaitlynQ.png": "/classic-cache/6306c0eab77f0f77f9d0d431.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/CaitlynR.png": "/classic-cache/54c7f31f657193fb6bd81e49.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/CaitlynW.png": "/classic-cache/7550e08372e74d4ce5949c08.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/CardmasterStack.png": "/classic-cache/ee91d5c752b86b6482fd4323.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/CarpetBomb.png": "/classic-cache/477fca3a2602249959b3d8ad.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/ChronoShift.png": "/classic-cache/d0c5cae8b23ff4336e6acf81.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/Crystallize.png": "/classic-cache/381111577f0ae35d57f0cf5a.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/CurseoftheSadMummy.png": "/classic-cache/7866c638f2abbe5a4afa5fa9.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/Deceive.png": "/classic-cache/1acf00e2c3192d378269b908.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/DefensiveBallCurl.png": "/classic-cache/41aaba23d1610db551ea50b7.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/Destiny.png": "/classic-cache/16d31a70f720dbf602461d42.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/DrMundoE.png": "/classic-cache/2137c11062fa28f941985abd.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/DrMundoQ.png": "/classic-cache/f0dd3b36e2e9d88935bf2b5d.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/DrMundoR.png": "/classic-cache/46eb74c65fa2e463ed35321d.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/DrMundoW.png": "/classic-cache/25bf1da5f04f5543bc0d0bcc.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/EliseHumanE.png": "/classic-cache/9cb77cb671cda83672be466c.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/EliseHumanQ.png": "/classic-cache/59c7e0143dd569222ea913af.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/EliseHumanW.png": "/classic-cache/664801c80d1db3cebb12e581.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/EliseR.png": "/classic-cache/750d2278ef435f1c6e0c3662.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/EnchantedCrystalArrow.png": "/classic-cache/299a912349185147465fd514.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/EvelynnE.png": "/classic-cache/727a7f3ec7de9cd8f5eabea2.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/EvelynnQ.png": "/classic-cache/9a402956f9b37b270c30de03.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/EvelynnR.png": "/classic-cache/aed053397e8ddf760d1a802b.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/EvelynnW.png": "/classic-cache/91029c867598d1fdced81a8d.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/EyeOfTheStorm.png": "/classic-cache/7a1770e1dda904875bd22e28.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/EzrealE.png": "/classic-cache/0cf49c0a8949448ebfbb0f55.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/EzrealQ.png": "/classic-cache/8e9d9b018c4f4a06a1ddcf37.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/EzrealR.png": "/classic-cache/f397729491c0f78e79ab65c4.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/EzrealW.png": "/classic-cache/ef75d217cc036b343ffa64e7.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/Feast.png": "/classic-cache/dc65a1a451986ac9fd03c8f6.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/FeralScream.png": "/classic-cache/83bff65ae7c7656367c2d49c.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/FerociousHowl.png": "/classic-cache/7269acc3e4d37f56c2cf75e4.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/FiddleSticksE.png": "/classic-cache/9d2706f536fe2e413f718c73.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/FiddleSticksQ.png": "/classic-cache/d75b156202d7918461ab8fa5.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/FiddleSticksR.png": "/classic-cache/467a1c13d340d4ee7e5f711a.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/FiddleSticksW.png": "/classic-cache/46153de366ac29b9c3db15d3.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/FioraE.png": "/classic-cache/13be3a24bb73d7df90048548.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/FioraQ.png": "/classic-cache/facb1daf7ccfa65795bfedf2.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/FioraR.png": "/classic-cache/fbe2119234de2977106844d8.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/FioraW.png": "/classic-cache/650d982553f23fbf368d1979.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/FizzE.png": "/classic-cache/b82c205fdf5a3359c82d49e4.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/FizzQ.png": "/classic-cache/929ace00b0f9d678cb79975d.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/FizzR.png": "/classic-cache/7efeab22721d1d84630fe7cc.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/FizzW.png": "/classic-cache/1fb828e123732f0e94c9d6af.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/FlashFrost.png": "/classic-cache/fe23f95ed11f1ccbf908f7bd.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/Fling.png": "/classic-cache/3e2b8aeefa54c275bf39cbb2.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/ForcePulse.png": "/classic-cache/99be58a1a962b8e5118ac259.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/Frostbite.png": "/classic-cache/0a5fff28a9b39ca360d69846.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/GalioE.png": "/classic-cache/54e99336e3c23c37a095fbae.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/GalioQ.png": "/classic-cache/2ef7c85583a532dccd920643.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/GalioR.png": "/classic-cache/8f59d319ad967d8aa502f680.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/GalioW.png": "/classic-cache/aae46e7fabc9e21867a83a19.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/GangplankE.png": "/classic-cache/0175b239abe3104a8215c59c.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/GangplankQWrapper.png": "/classic-cache/852d6f1436d33f089bebb900.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/GangplankR.png": "/classic-cache/7cf8925eb9667410f6eee3f4.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/GangplankW.png": "/classic-cache/fe06ebe6a9a29fefaa4df676.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/GarenE.png": "/classic-cache/20f45257a312ad87e82fcdc4.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/GarenQ.png": "/classic-cache/69f45c4436adab2fe51ad1b3.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/GarenR.png": "/classic-cache/7a8478a869f3f93093f491e2.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/GarenW.png": "/classic-cache/2bf781e49258c4673b4ffa4e.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/GGun.png": "/classic-cache/b2500d03bad4397ce55f05b0.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/GlacialStorm.png": "/classic-cache/c681d7937fd465241cca152d.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/GragasE.png": "/classic-cache/59144832160d9dde82033f8a.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/GragasQ.png": "/classic-cache/c4bd67826ccc8c990a4973f2.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/GragasR.png": "/classic-cache/9283635be1fecb219e474b4f.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/GragasW.png": "/classic-cache/1114a1b7dc4dacc1d5db204d.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/GravesChargeShot.png": "/classic-cache/4df6811508c18f2236540913.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/GravesMove.png": "/classic-cache/c659729a49193eaa45baca65.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/GravesQLineSpell.png": "/classic-cache/d7efa5e82d08501c3bea5308.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/GravesSmokeGrenade.png": "/classic-cache/39992b883fcc33a9b624bbcf.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/HallucinateFull.png": "/classic-cache/616194cd27c4989acd4330dc.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/Headbutt.png": "/classic-cache/ad56127b6a585b6b9d0465b7.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/HecarimRamp.png": "/classic-cache/0503a375da0839f07eaefe8b.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/HecarimRapidSlash.png": "/classic-cache/44820dc0ba90ac93643b2fc6.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/HecarimUlt.png": "/classic-cache/95c8134bc7f5c0c426a07373.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/HecarimW.png": "/classic-cache/f07910bcbba3dfc6feae5893.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/HeimerdingerE.png": "/classic-cache/776e16b50c03d1abe21fedb8.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/HeimerdingerQ.png": "/classic-cache/c416b25d4ccb6d27b68b8dd6.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/HeimerdingerR.png": "/classic-cache/a55b71039930c7c4149538ac.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/HeimerdingerW.png": "/classic-cache/1510c57f072f9f52972117df.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/Highlander.png": "/classic-cache/3c50ec8943db7f82859ba4d5.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/HowlingGale.png": "/classic-cache/7836cca7b6bf0e06463e172a.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/InsanityPotion.png": "/classic-cache/1a5d4994acec4377acdfa41b.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/IreliaE.png": "/classic-cache/c42dd5529458d0b1beefc431.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/IreliaQ.png": "/classic-cache/a483bb443f22b33e644a835f.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/IreliaR.png": "/classic-cache/90133eba5795656e65603ba3.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/IreliaW.png": "/classic-cache/87085d931dc12abb95a0ae0c.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/JackInTheBox.png": "/classic-cache/930c9020859a17aef04fbb16.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/JarvanIVCataclysm.png": "/classic-cache/0821c50295526f1702394124.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/JarvanIVDemacianStandard.png": "/classic-cache/29affb4b4a4d8c0fa3944867.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/JarvanIVDragonStrike.png": "/classic-cache/444dd73790f8eadbb28d27af.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/JarvanIVGoldenAegis.png": "/classic-cache/7ceace491d03c03a4ef7a636.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/JavelinToss.png": "/classic-cache/96caadd49e607055762cc265.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/JaxE.png": "/classic-cache/4beb9d301f50c5b7a43e55ee.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/JaxQ.png": "/classic-cache/63ee286533f30e6f95c33b20.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/JaxR.png": "/classic-cache/42d20ff69b4a3ff94e676767.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/JaxW.png": "/classic-cache/070c7bbce6fee083e1374e30.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KarmaMantra.png": "/classic-cache/05128f1a55e5f52a109a2ed1.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KarmaQ.png": "/classic-cache/42dcd55a0d73a90b82dc132a.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KarmaSolKimShield.png": "/classic-cache/5c32577d342f67f257e97dcd.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KarmaSpiritBind.png": "/classic-cache/2d52797e4fd03ec1b4f06409.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KarthusDefile.png": "/classic-cache/d0fe4061bbf3e76c8b724109.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KarthusFallenOne.png": "/classic-cache/f684c63eec7e2b4d4f242757.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KarthusLayWasteA1.png": "/classic-cache/f3ec2d59c345a70727910400.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KarthusWallOfPain.png": "/classic-cache/f2112c0dff9fdee5b4fd9472.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KatarinaEWrapper.png": "/classic-cache/b6de18bd2dc54d2a03f0ca46.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KatarinaQ.png": "/classic-cache/01fdfed4e9923d14188d1b2f.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KatarinaR.png": "/classic-cache/203310b734b39210d640c345.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KatarinaW.png": "/classic-cache/f63478d714714f4375ae60e0.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KayleE.png": "/classic-cache/968c0437f0ab325d65a9bea6.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KayleQ.png": "/classic-cache/17bda381375655de6d22cb4b.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KayleR.png": "/classic-cache/e72a5ffd1d96bdf85132da31.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KayleW.png": "/classic-cache/2cf20ee2c0b2c27120730120.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KennenBringTheLight.png": "/classic-cache/0fe607fbaa0aeca30858d8a1.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KennenLightningRush.png": "/classic-cache/0a4f4ec12495021a338bcc29.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KennenShurikenHurlMissile1.png": "/classic-cache/8531f827187421d579b33674.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KennenShurikenStorm.png": "/classic-cache/fc4f7b15e0197a082c70874a.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KogMawBioArcaneBarrage.png": "/classic-cache/2c23cfa7dd4eb7e60097ad5f.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KogMawLivingArtillery.png": "/classic-cache/ae3bcdd59223064e1f0dccde.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KogMawQ.png": "/classic-cache/0bbabec3fa1f91ab919f30ab.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KogMawVoidOoze.png": "/classic-cache/e8fc87fb724973fe34e8c296.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/Landslide.png": "/classic-cache/61a0670f365773963deeb204.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/LeeSinEOne.png": "/classic-cache/443ada92b35c49dc9b50aec9.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/LeeSinQOne.png": "/classic-cache/3abac02437638d223196ac6d.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/LeeSinR.png": "/classic-cache/7a4ede7b02f55e2e5f1ce2ce.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/LeeSinWOne.png": "/classic-cache/51ca285c6c3b13f4ce34ab16.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/LeonaShieldOfDaybreak.png": "/classic-cache/4a8ce52a54dc10a8a0684f9f.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/LeonaSolarBarrier.png": "/classic-cache/3c7684e6c95a20c0b83c0c1e.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/LeonaSolarFlare.png": "/classic-cache/327c1c7e7deef98e067cfe58.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/LeonaZenithBlade.png": "/classic-cache/7129426bf83fee88bcb0c04a.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/LucianE.png": "/classic-cache/6c7aa8d7d72ef2f951a10765.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/LucianQ.png": "/classic-cache/df62a2bec7ee593257db104d.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/LucianR.png": "/classic-cache/483cf8fa20b58b06f612bcfe.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/LucianW.png": "/classic-cache/7c62cd6dda7be1e68f296d48.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/LuluE.png": "/classic-cache/05729edaf23ec21be898a2e5.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/LuluQ.png": "/classic-cache/d0b8747d7699786030101f98.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/LuluR.png": "/classic-cache/7df670e7d434769bb3227943.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/LuluW.png": "/classic-cache/3dd32963afaea3569cbbcd3a.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/LuxLightBinding.png": "/classic-cache/edd7df56c0f3a2f42b47cde3.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/LuxLightStrikeKugel.png": "/classic-cache/d2e5a1c0732961e371848025.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/LuxPrismaticWave.png": "/classic-cache/b407039339d4fd5b61ff354e.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/LuxR.png": "/classic-cache/0abb2b4ff546f63f790ed4ba.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/MalzaharE.png": "/classic-cache/733387b507fa1c1229714527.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/MalzaharQ.png": "/classic-cache/0be869246e71773a33168cb0.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/MalzaharR.png": "/classic-cache/9e96fa5c310ac1204f5f830c.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/MalzaharW.png": "/classic-cache/61036c2828d6237f87ca77e4.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/Meditate.png": "/classic-cache/ce5c1062ccf58a7a7d2be2bd.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/MegaAdhesive.png": "/classic-cache/bc9dff5bf730797fcbd603e2.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/MissFortuneBulletTime.png": "/classic-cache/7400815ef1626ac092b86b57.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/MissFortuneRicochetShot.png": "/classic-cache/5fd548ea8cfbf76ac452d974.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/MissFortuneScattershot.png": "/classic-cache/7aa7b675ecc9b76cd9897fcc.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/MissFortuneViciousStrikes.png": "/classic-cache/8402aa93addbc2d5279e3f03.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/MissileBarrage.png": "/classic-cache/5ad4fd405e97da818e8ccca7.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/MonkeyKingDecoy.png": "/classic-cache/7a993f1b45023135cf28a0f2.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/MonkeyKingDoubleAttack.png": "/classic-cache/f1f129bbb022ef498900413d.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/MonkeyKingNimbus.png": "/classic-cache/74ed8dc8bec86b00e18f5160.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/MonkeyKingSpinToWin.png": "/classic-cache/1d843bdef8ef492659693e92.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/MordekaiserE.png": "/classic-cache/fc01488a1138ec017d63a3f1.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/MordekaiserQ.png": "/classic-cache/aa4dc2e9f5a3901343d4b25c.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/MordekaiserR.png": "/classic-cache/6ee431b8a3eba8aa72d9e185.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/MordekaiserW.png": "/classic-cache/8dfa627f6bd8f61b4202e7d9.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/MorganaE.png": "/classic-cache/cf1b31213a614c6b3d3dbe3a.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/MorganaQ.png": "/classic-cache/ea44a2dc20fd09743a3798a8.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/MorganaR.png": "/classic-cache/eeb713341e90d9fa1bb93891.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/MorganaW.png": "/classic-cache/ab4d6b05f1778e8f42258cbd.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/NamiE.png": "/classic-cache/617a9bcc65f4f9ad0ae51d2d.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/NamiQ.png": "/classic-cache/ac853d5ed7b460aae2b3db00.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/NamiR.png": "/classic-cache/87e35cce158cafb1a9eb9f0d.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/NamiW.png": "/classic-cache/78deba5aead27c3dc857a5d9.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/NasusE.png": "/classic-cache/5c3d778f6bbf68e246d8cd39.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/NasusQ.png": "/classic-cache/d445e5ea577dc7522a400739.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/NasusR.png": "/classic-cache/fd0a66a9f10b99ed74834226.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/NasusW.png": "/classic-cache/7bfe782f7600eaec05c387c7.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/NautilusAnchorDrag.png": "/classic-cache/2a90ae4ecdb3a774a40590a5.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/NautilusGrandLine.png": "/classic-cache/f0b5dfed5e03929a26b67f5d.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/NautilusPiercingGaze.png": "/classic-cache/4fd11469502e6a2f0195fb18.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/NautilusSplashZone.png": "/classic-cache/157a181258da15de25069513.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/NetherBlade.png": "/classic-cache/e6aeef1857dfaccbf69938e9.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/NullLance.png": "/classic-cache/540b1ee02a70328f2d15309a.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/NunuE.png": "/classic-cache/43c0994876660a43edfd7d64.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/NunuQ.png": "/classic-cache/38267e15cbd00ff9a0391d36.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/NunuR.png": "/classic-cache/727eb398ade881e63e7bc528.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/NunuW.png": "/classic-cache/78483770f111a10e9d1b5c4b.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/Obduracy.png": "/classic-cache/4abbb842610d64ac90dab37d.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/OlafAxeThrowCast.png": "/classic-cache/428ee793b102bb55d816a688.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/OlafFrenziedStrikes.png": "/classic-cache/ca59e9e6f4b5551fce5d8876.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/OlafRagnarok.png": "/classic-cache/c35e54aa673177ded037ffa5.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/OlafRecklessStrike.png": "/classic-cache/970462e22d2f4e15dc68c4de.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/Overdrive.png": "/classic-cache/5249ecb40e198da6bf734b9d.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/PantheonE.png": "/classic-cache/b18cb42d0af4b66a5bc613cd.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/PantheonQ.png": "/classic-cache/65524cd01be524b3294bc744.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/PantheonR.png": "/classic-cache/d7c7061c44a827a85ab9b33c.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/PantheonW.png": "/classic-cache/c991cfa5ebe3c0a13bf1650a.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/PhosphorusBomb.png": "/classic-cache/793da15a7e6ef6dc5b14b2a6.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/PickACard.png": "/classic-cache/4b0e96ae19a5e2cacafc376f.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/PoisonTrail.png": "/classic-cache/5db6e391d29425f8c185120d.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/PoppyE.png": "/classic-cache/4f9d0b3147b3001684df66d9.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/PoppyQ.png": "/classic-cache/db0f047397db9033861857c9.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/PoppyR.png": "/classic-cache/777365808ffb93909e68ce12.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/PoppyW.png": "/classic-cache/702bba0d4ae023b3c445d976.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/PowerBall.png": "/classic-cache/a74dac0e372f0ba64717b16a.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/PowerFist.png": "/classic-cache/3519f852460c83c501e343e6.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/PrimalSurge.png": "/classic-cache/08dade1df00017c46f9a4a42.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/Pulverize.png": "/classic-cache/b1026fa0e72d4fd90071b3c8.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/PuncturingTaunt.png": "/classic-cache/99af49f5031944fe2bf0aed1.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/QuinnE.png": "/classic-cache/bacb4a53965c411451366f6d.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/QuinnQ.png": "/classic-cache/5fc8b06e90f1d3dc9b41f982.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/QuinnR.png": "/classic-cache/dd1208edf592d1e0a1248810.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/QuinnW.png": "/classic-cache/ad9c83875d90f64f491dfa5a.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/ReapTheWhirlwind.png": "/classic-cache/821153ade11e4d6b0070527f.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/RiftWalk.png": "/classic-cache/7bda5e4ffa9b1178756dc598.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/RocketGrab.png": "/classic-cache/07e242f6f96fd5d68c493d23.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/Rupture.png": "/classic-cache/557197c1a9b9b82e94db95e9.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/RyzeE.png": "/classic-cache/ee909fabe9b040b5fda068d5.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/RyzeQWrapper.png": "/classic-cache/8c1eb212e5de9ac2d765e4b9.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/RyzeR.png": "/classic-cache/09850876e3fce1f9bd7d7ade.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/RyzeW.png": "/classic-cache/6829739a908efb3e104cb2c1.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SeismicShard.png": "/classic-cache/e09dd9c16e4927ca18712fcc.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/ShenE.png": "/classic-cache/2483c1a65e41b77208bc8bfb.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/ShenQ.png": "/classic-cache/c193152f56fc5ed066abe7d0.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/ShenR.png": "/classic-cache/b65a6abb2bb0d6d506bb48b5.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/ShenW.png": "/classic-cache/472e64bf90df0dcad1d91c2c.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/ShyvanaE.png": "/classic-cache/e2f0fc6e084277c89be84732.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/ShyvanaQ.png": "/classic-cache/b1a221c3c6649834a8e0b33b.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/ShyvanaR.png": "/classic-cache/61491ced5e4a989092d3b7b1.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/ShyvanaW.png": "/classic-cache/afc3e0152d692c86ec16ce10.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SionE.png": "/classic-cache/d3199c2c63ea5b7e43da1c39.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SionQ.png": "/classic-cache/96930a427ad6503a989d32d2.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SionR.png": "/classic-cache/8357e70e498c5435f454b5b3.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SionW.png": "/classic-cache/c9f01bd0db57689ece064a68.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SivirE.png": "/classic-cache/933e9a640c73a8e57f68f57a.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SivirQ.png": "/classic-cache/0d377c6e822a5049059e0ecd.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SivirR.png": "/classic-cache/db8d60a019f23596a41d7bc4.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SivirW.png": "/classic-cache/5a4da9972b37d3fc695fc73e.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SkarnerE.png": "/classic-cache/80c580e6b402c82b711f2c3d.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SkarnerQ.png": "/classic-cache/16929564592dabb3e057d1ee.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SkarnerR.png": "/classic-cache/6cd565bab2050485a653c737.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SkarnerW.png": "/classic-cache/baf61c4ddad2c952003ed163.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SonaE.png": "/classic-cache/1160922fbcf1815eaa57270f.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SonaQ.png": "/classic-cache/91459c517181e02e67a1d902.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SonaR.png": "/classic-cache/623c1224eb2b30ee17ad857a.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SonaW.png": "/classic-cache/981ce9019cc27b20ba1402e7.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SorakaE.png": "/classic-cache/6794d9eb6737906b68e37cf0.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SorakaQ.png": "/classic-cache/d7bff75722d5f221273fdda3.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SorakaR.png": "/classic-cache/05c574294b37b285179dd1d6.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SorakaW.png": "/classic-cache/3b0b2e7f2574e0d97004d9b0.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SowTheWind.png": "/classic-cache/b2bbe1a171728356bcf360fb.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/StaticField.png": "/classic-cache/75a61d3194014e789e628dfd.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SwainE.png": "/classic-cache/23a6ed2c0b40e52a3605a20a.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SwainQ.png": "/classic-cache/615388a58ac7fde4405d5ec4.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SwainR.png": "/classic-cache/48d912b15ac3f03bfc8a421d.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SwainW.png": "/classic-cache/50e0e1019315c5f0ab9e8992.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/Tantrum.png": "/classic-cache/406b7134fedfcf52c5333fc1.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/TaricE.png": "/classic-cache/7150be5d3764bae6a2a4ce4b.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/TaricQ.png": "/classic-cache/1dc575cd029d253340b37c38.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/TaricR.png": "/classic-cache/9e1c3f9cd307c2540cc8e61c.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/TaricW.png": "/classic-cache/869ac6c76634ba7fe3b312e1.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/TeemoE.png": "/classic-cache/4b45c84231b719acf67083db.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/TeemoQ.png": "/classic-cache/eed2aa246227ce6a548d17f1.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/TeemoR.png": "/classic-cache/a2fb3b64a7e6d0739e33e49f.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/TeemoW.png": "/classic-cache/0411df57c79ada94a4817d22.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/TimeWarp.png": "/classic-cache/08b39c138d3f370cc402f476.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/Tremors2.png": "/classic-cache/0c48a9e8c6ba0f3e671c3e2a.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/TristanaE.png": "/classic-cache/74d8628578b56abeeb5b1151.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/TristanaQ.png": "/classic-cache/c6f6e828e17c8dc101ae0348.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/TristanaR.png": "/classic-cache/892bb5d3f4053311e1d61307.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/TristanaW.png": "/classic-cache/93b44694589553901047c3c8.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/TryndamereE.png": "/classic-cache/ba824f9b59086ff8c98ecb62.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/TryndamereQ.png": "/classic-cache/22d6c0ebdb284d210820aadc.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/TryndamereW.png": "/classic-cache/03474046d59a0f4fb18a2963.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/TwitchExpunge.png": "/classic-cache/e119d6f35539731b2e383db9.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/TwitchFullAutomatic.png": "/classic-cache/5ce7cc459daa1a64f0392795.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/TwitchHideInShadows.png": "/classic-cache/4c3d60c52646e1f59f604fdc.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/TwitchVenomCask.png": "/classic-cache/969599a2f72c7084f3213d86.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/TwoShivPoison.png": "/classic-cache/fff367457cc21498acc9a1c3.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/UFSlash.png": "/classic-cache/24f831040299a97825a5721d.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/UndyingRage.png": "/classic-cache/8a4bd264be3b6d11a79595d1.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/VayneCondemn.png": "/classic-cache/d6640dcbc8e722d3bcbf7d3f.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/VayneInquisition.png": "/classic-cache/10ffc509812440e46017461c.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/VayneSilveredBolts.png": "/classic-cache/ee09bcaec88f8fcf1312fc15.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/VayneTumble.png": "/classic-cache/2b978b5431844d0fa6e89442.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/VeigarBalefulStrike.png": "/classic-cache/1fa24602bb9e843b2e3f2f16.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/VeigarDarkMatter.png": "/classic-cache/fe52ba6d19f0752ce7167bce.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/VeigarEventHorizon.png": "/classic-cache/7360fec453dd51675a98ec2b.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/VeigarR.png": "/classic-cache/e0ca730f1c37b04dcf59bad8.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/VolibearE.png": "/classic-cache/20ae805b999496076615df55.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/VolibearQ.png": "/classic-cache/c09b1b50862b2c4ac4b65a3b.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/VolibearR.png": "/classic-cache/5619e5fae938d8a36fe588cd.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/VolibearW.png": "/classic-cache/0366bbf278da9a51e2594f9a.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/Volley.png": "/classic-cache/8507da0b065b8f2eaac3e6ef.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/VorpalSpikes.png": "/classic-cache/e3c4ab4017b9846997dc1bdf.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/WarwickE.png": "/classic-cache/a15b8cac6ee3de73a860af08.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/WarwickQ.png": "/classic-cache/ee785862d31e275c388f99dd.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/WarwickR.png": "/classic-cache/2a001e64af346bb784463d5c.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/WarwickW.png": "/classic-cache/053c0cc0fc6f468585eef744.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/WildCards.png": "/classic-cache/aa0245c915c7b50391954aff.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/WujuStyle.png": "/classic-cache/e9332b3b117876a3aadd7b85.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/XinZhaoE.png": "/classic-cache/d0bd3295783b75c9e897d1ed.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/XinZhaoQ.png": "/classic-cache/15cadf5c70157704a95d9c5b.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/XinZhaoR.png": "/classic-cache/ad9027a82341283668d5f1a7.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/XinZhaoW.png": "/classic-cache/9e9440247ff847dae30081b7.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/YorickE.png": "/classic-cache/eed77f67aa6ffc230a160bcd.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/YorickQ.png": "/classic-cache/81e41f45900d56897ebb259c.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/YorickR.png": "/classic-cache/5664e4072f446f1eeb20127a.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/YorickW.png": "/classic-cache/d04ea2bfe1c6bbfb8b6f82c1.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/ZileanQ.png": "/classic-cache/68315d326b904e4184656368.png",
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/ZileanW.png": "/classic-cache/5a459677fc6345a342dc6022.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Aatrox.png": "/classic-cache/8da301338b151c277144dfcc.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Ahri.png": "/classic-cache/84f008926c34c6cbea34aa41.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Akali.png": "/classic-cache/cdd3bd63bf01cfc40eb85236.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Alistar.png": "/classic-cache/051ec7bac6914495e52feba4.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Amumu.png": "/classic-cache/451ccf2bca571ecd7e579bf8.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Anivia.png": "/classic-cache/29cf26fe53d349321ddbeae3.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Annie.png": "/classic-cache/6bc87b929dd63c432f52ad5b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Ashe.png": "/classic-cache/0dddaf4d18e57ae7bbbcf963.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Blitzcrank.png": "/classic-cache/09cd9d9ac25b7d886ac20f72.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Brand.png": "/classic-cache/e8a415caaa1a57d2750c6a6e.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Caitlyn.png": "/classic-cache/adfc068a2f37597f0cfbfbff.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Chogath.png": "/classic-cache/dc83f8dbd180c032270e7a97.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Corki.png": "/classic-cache/22662bb20ad1177e18d62cba.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/DrMundo.png": "/classic-cache/6ac6d5cc85821e5b860550dc.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Elise.png": "/classic-cache/dc90dcc39aeeef8b01239bb6.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Evelynn.png": "/classic-cache/6019bf60e1dcc9b14430b6c9.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Ezreal.png": "/classic-cache/0466944b7a300c0a13da41fe.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Fiddlesticks.png": "/classic-cache/2bf5651512f5f82f011efbdd.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Fiora.png": "/classic-cache/6b84970f5b7304b82ebb0154.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Fizz.png": "/classic-cache/3aa46ab4316336f9f87ddc0a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Galio.png": "/classic-cache/fb80f268600b37088c1b08e5.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Gangplank.png": "/classic-cache/1e47e203066d3a1f56625cbf.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Garen.png": "/classic-cache/8685b839eb3a7ea2b2e5a431.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Gragas.png": "/classic-cache/c69e8e859561e0c1ada7761c.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Graves.png": "/classic-cache/08e32f267f54ddbfc832feea.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Hecarim.png": "/classic-cache/879c6bf14ce584c60da2da22.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Heimerdinger.png": "/classic-cache/50a3e5ac7ba41a90233a2ca6.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Irelia.png": "/classic-cache/a1dfb38b807e9423d75a6a7a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Janna.png": "/classic-cache/f5fd305c84830ab138be07fa.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/JarvanIV.png": "/classic-cache/22dd3e4c7926352b63adb468.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Jax.png": "/classic-cache/2420b5598927302d7bad947c.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Karma.png": "/classic-cache/7bad04bf51452b646d389d31.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Karthus.png": "/classic-cache/2397a1fcb4b79d769513e99a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Kassadin.png": "/classic-cache/035f9a4df112fbe9003f2f9b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Katarina.png": "/classic-cache/f8917e3deecc0b20ba103cc9.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Kayle.png": "/classic-cache/a7176dc2458622477d1adeab.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Kennen.png": "/classic-cache/2e814e03583864a6519a28ff.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/KogMaw.png": "/classic-cache/863ee5f1f4c298dd48d0c667.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/LeeSin.png": "/classic-cache/448054bf34f7e43ad25177d6.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Leona.png": "/classic-cache/2243b33c74a3e97adeb0b806.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Lucian.png": "/classic-cache/4628410c2d77fbaea360e551.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Lulu.png": "/classic-cache/862160f4827eb3eb86ff8a6f.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Lux.png": "/classic-cache/0a7e0d39893f5a058e55c4b4.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Malphite.png": "/classic-cache/69224b1fef3eaee6a94c0a7b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Malzahar.png": "/classic-cache/9dc97ae15fe98a2dbb955edd.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/MasterYi.png": "/classic-cache/6ec7a86f95554b67a464a3b9.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/MissFortune.png": "/classic-cache/cd83315c4529a9e8f5972f43.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/MonkeyKing.png": "/classic-cache/6fdd738b623c4a4e71004ae4.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Mordekaiser.png": "/classic-cache/a0f9bc54f10d4d3efca5b1f3.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Morgana.png": "/classic-cache/c0d5edccc1748bf9cb81141f.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Nami.png": "/classic-cache/c476d56e8cbd519b88e08ea0.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Nasus.png": "/classic-cache/24708a36730700921803868d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Nautilus.png": "/classic-cache/e7492a3ecef911e5b96e432b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Nidalee.png": "/classic-cache/ac74da5e4828848b545298ac.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Nunu.png": "/classic-cache/71ef985167d55f130bd8085a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Olaf.png": "/classic-cache/89e2ab5a0880b815ea981ad5.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Pantheon.png": "/classic-cache/d27e45bf6dd5771957167f06.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Poppy.png": "/classic-cache/a79ab7b258ba640ea3fbe64e.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Quinn.png": "/classic-cache/24095861cd3ed09d7e1106f1.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Rammus.png": "/classic-cache/52a3637b02f41f3128cf6e20.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Ryze.png": "/classic-cache/64612d7b0dae1c183d3319ff.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Shaco.png": "/classic-cache/72238b36de023cbda708837d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Shen.png": "/classic-cache/4566f87aa5f55a51372aac77.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Shyvana.png": "/classic-cache/e5f2101def0fb9784655a2ca.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Singed.png": "/classic-cache/d8062d523c4ca0705204d244.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Sion.png": "/classic-cache/f7360c5289c837b138d46127.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Sivir.png": "/classic-cache/1e3f0c5babeae6dd0357309f.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Skarner.png": "/classic-cache/58c8d4fef412c1e56e81dbd1.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Sona.png": "/classic-cache/7abb89ba429944ca2b92ebee.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Soraka.png": "/classic-cache/bf8f7bc775657c12cebbe482.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Swain.png": "/classic-cache/6869f71aa17695309607022b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Taric.png": "/classic-cache/a825b5d3d76b6fadfabca30a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Teemo.png": "/classic-cache/46fdf7079a1a308dabe861e8.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Tristana.png": "/classic-cache/2a9f29ddae2659cad1ad1dbd.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Tryndamere.png": "/classic-cache/f0d2f4b0f4d38125c68d2b2e.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/TwistedFate.png": "/classic-cache/a3e3ae98579de755bf87f4a0.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Twitch.png": "/classic-cache/2aa27670371670e4b113b479.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Vayne.png": "/classic-cache/3ac18a94ec61514cd131c24b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Veigar.png": "/classic-cache/141175a6b4f7989de805b8b5.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Volibear.png": "/classic-cache/81fa8be9fb53d5d1dcf2b45e.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Warwick.png": "/classic-cache/411b0b004aa6e97ab926c5af.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/XinZhao.png": "/classic-cache/b9317457d13d659771d7bf21.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Yorick.png": "/classic-cache/17d569e2913d2d45e352d76e.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Zilean.png": "/classic-cache/22cafad103c365e83449e1a9.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Aatrox_Passive.png": "/classic-cache/fe45bc049054ab2daab2374d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Ahri_SoulEater2.png": "/classic-cache/d95d4bd52d484c5fe4d5c613.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Akali_P.png": "/classic-cache/ac1e729b31d797dff8f5dde9.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Alistar_E.png": "/classic-cache/e8e7e025a0accb25591b1051.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Amumu_Passive.png": "/classic-cache/c8b1317515bc45735af1fd46.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Anivia_P.png": "/classic-cache/fd44ccd973f0b15e9705d93f.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Annie_Passive.png": "/classic-cache/f27e963338bdccdbe31321fc.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Armordillo_ScavengeArmor.png": "/classic-cache/25bf62558eaaf126eac7516a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Armsmaster_MasterOfArms.png": "/classic-cache/d9fc6ea50a6136f5a00b7b8b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Ashe_P.png": "/classic-cache/bd31a9ed04bdb1f00101d5ba.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Blitzcrank_ManaBarrier.png": "/classic-cache/ebab375ae73b75362f8e8b33.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/BrandP.png": "/classic-cache/7584b17bd1fcc69df440799b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Caitlyn_Headshot.png": "/classic-cache/785a53e1cf2eec74186f6cb5.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Cardmaster_SealFate.png": "/classic-cache/b5c297060cd2e6902c2f8ade.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Corki_RapidReload.png": "/classic-cache/b8a62e27bfa97e6a40893460.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/DrMundo_P.png": "/classic-cache/d4240d291f066f5b3c48dc08.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/ElisePassive.png": "/classic-cache/78be0010d79438f1b7521e7c.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Evelynn_Passive.png": "/classic-cache/00d5e9c497617c1f41c0d779.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Ezreal_RisingSpellForce.png": "/classic-cache/307b3c19aaa4597f9b4afa22.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/FallenAngel_Empathize.png": "/classic-cache/9da7b628d67874d6dacf76e0.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/FiddlesticksP.png": "/classic-cache/6373f1bf30b9a044c8d7c755.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Fiora_P.png": "/classic-cache/ad4de745fc123869caa01b35.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Fizz_P.png": "/classic-cache/f899ffd0101a0eec3e702533.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Galio_Passive.png": "/classic-cache/38ff88d5ea8c7415e3d290ea.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Gangplank_Passive.png": "/classic-cache/22ca0b3b05f49d58a3daa424.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Garen_Passive.png": "/classic-cache/c18d3eba1eb5ddc3a6988ce1.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/GragasPassiveHeal.png": "/classic-cache/f5234b9ebdcfbd0fb8a51014.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/GravesTrueGrit.png": "/classic-cache/28db25f6afd9bee8d1549389.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/GreenTerror_TailSpike.png": "/classic-cache/c09cae66c5400dd9d370fd56.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Hecarim_Passive.png": "/classic-cache/3e1ed9b437dab5099de6e84b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Heimerdinger_Passive.png": "/classic-cache/ea1ae1b4c17bba63f0d66fae.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Irelia_Passive.png": "/classic-cache/1ba033598466d2718e3dd3ba.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/JannaP.png": "/classic-cache/6078d6a3227845e635b7b5fc.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/JarvanIVP.png": "/classic-cache/8da393e3fa59fd11300235ef.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Jester_CarefulStrikes.png": "/classic-cache/5bb53fd4d328e4742dff060b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Karma_Passive.png": "/classic-cache/8e1c23e50f925ab32bf01a5c.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Karthus_Passive.png": "/classic-cache/dd39c2d8194589cf74345c79.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Kassadin_Passive.png": "/classic-cache/fe81aa678bab0243f5622845.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Katarina_Passive.png": "/classic-cache/719febb73dd21d647a13e54f.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Kayle_P.png": "/classic-cache/d3d60b887400c1e4fad33047.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Kennen_Passive.png": "/classic-cache/1951dc5a0ecbf81f2270bbd8.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/KogMaw_IcathianSurprise.png": "/classic-cache/2200a1c532bf2f486ec8c1d6.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/LeeSinPassive.png": "/classic-cache/e34d47fcd492b81e8cf75e36.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/LeonaSunlight.png": "/classic-cache/74bc7c8786277dfe3ed96a02.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Lucian_Passive.png": "/classic-cache/36159bad511b2fcb59c8a478.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Lulu_PixFaerieCompanion.png": "/classic-cache/822d10473dd4557eb632dcfb.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/LuxIlluminatingFraulein.png": "/classic-cache/da876eaaf9cb106e14962729.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Malphite_GraniteShield.png": "/classic-cache/1840de179a43392e140b0ada.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Malzahar_Passive.png": "/classic-cache/326705845f90f79f2ede3aec.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/MasterYi_Passive1.png": "/classic-cache/4df947713dd322b9a9f6ef1e.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/MissFortune_W.png": "/classic-cache/583f944d60dd1a13561e5e17.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/MonkeyKingStoneSkin.png": "/classic-cache/0f3e38fc005566f6d900a23d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/MordekaiserPassive.png": "/classic-cache/f6eb8a8b7dcc2ee54bda1fa3.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/NamiPassive.png": "/classic-cache/c8cc4cf5df2571b2b795c8cc.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Nasus_Passive.png": "/classic-cache/c90b6bc3d2a49408fb99fcd1.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Nautilus_StaggeringBlow.png": "/classic-cache/e1e9d615961810cffa153786.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Nidalee_Passive.png": "/classic-cache/936921666366e8f37305f19f.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/NunuPassive.png": "/classic-cache/c5e41633b736e9352eb333c7.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Olaf_Passive.png": "/classic-cache/b830811b5fb09bad468dfbfb.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Pantheon_Passive.png": "/classic-cache/e9a7e2bbadd669bc3b85826a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Poppy_Passive.png": "/classic-cache/ba554052faec13e2182f78d7.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Quinn_Passive.png": "/classic-cache/a08661f9afd67722fd90410e.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Ryze_P.png": "/classic-cache/a890d2a5eb5a2c41f3444f1c.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Shen_Passive.png": "/classic-cache/e8960f7b2744fe457e8369c9.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Shyvana_Passive.png": "/classic-cache/5ad1f0e93ed088ef832ae0f1.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Singed_Passive.png": "/classic-cache/0966adfb450334ea70a87af5.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Sion_Passive1.png": "/classic-cache/67761bb12803c38ca883b110.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Sivir_Passive.png": "/classic-cache/4b035d8efe67df9f34575081.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Skarner_Passive.png": "/classic-cache/f1cf0ef0f39011ec9ccbe73f.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Sona_Passive_Charged.png": "/classic-cache/9cb3d3ac0ac30b0fcc6b2504.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Soraka_Passive.png": "/classic-cache/33990068110add5612a2cac1.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Swain_P.png": "/classic-cache/599649486311478e45fcd708.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Taric_Passive.png": "/classic-cache/5d70519a0251c0feba0c8282.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/TeemoPassive.png": "/classic-cache/cd679f8553bba84b47d475fb.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Tristana_Passive.png": "/classic-cache/573b66d6ee08a7d7a1670df0.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Tryndamere_Passive.png": "/classic-cache/7bf567011c6e14ada73e96a3.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Twitch_Passive.png": "/classic-cache/305f9e739452b1b827cc6511.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Vayne_NightHunter.png": "/classic-cache/8b3bec94e14a85f6fd6b4493.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/VeigarEntropy.png": "/classic-cache/f2d1f618d8a7ec4bb959480e.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Volibear_Icon_P.png": "/classic-cache/9543b344b92be5223ec0e7d0.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/WarwickP.png": "/classic-cache/149c65a90a331bd102d55309.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/XinZhaoReworkP.png": "/classic-cache/04611878063630e4727e8098.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Yorick_P.png": "/classic-cache/dd413971e50f8c1fd5f9468c.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Zilean_Passive.png": "/classic-cache/c10053fdbea51117cfa75cdc.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/AatroxE.png": "/classic-cache/a55b28f9a1d8632655326c7f.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/AatroxQ.png": "/classic-cache/90e2734c8bc7430e20a92ff6.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/AatroxR.png": "/classic-cache/890fd42821540fae5e23de8e.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/AatroxW.png": "/classic-cache/884905e2c96c694fa91cf98d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/AhriE.png": "/classic-cache/084ca3c1759084bfa85f3ec6.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/AhriQ.png": "/classic-cache/529b1acfb64c81213c496196.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/AhriR.png": "/classic-cache/0670635a0a86391f2601e63a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/AhriW.png": "/classic-cache/5cfc31502f9da1d4941e8317.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/AkaliE.png": "/classic-cache/41df256a0d8293de3d3d49ab.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/AkaliQ.png": "/classic-cache/065b755ada7fd328f6c8f727.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/AkaliR.png": "/classic-cache/60496bd6b29297e883de0861.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/AkaliW.png": "/classic-cache/6d3b146aeb9e0e482891ab21.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/AlistarE.png": "/classic-cache/aaaac8af9d352c04bcc7e88e.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/AlphaStrike.png": "/classic-cache/4d284e77bd076943f33416b8.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/AnnieE.png": "/classic-cache/b97e3373046ec2f8398eca9e.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/AnnieQ.png": "/classic-cache/301f836100c0e2bbd5e5260b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/AnnieR.png": "/classic-cache/19a8c0b453d793c7384b9415.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/AnnieW.png": "/classic-cache/23759c71e1af5a689bef5a87.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/AsheQ.png": "/classic-cache/af2732b8dff1b916bb8c3603.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/AsheSpiritOfTheHawk.png": "/classic-cache/8a6dc8eb0cf60c1a89c0d671.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/AspectOfTheCougar.png": "/classic-cache/8fd73cd77045ee9fbb4c61cf.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/AuraofDespair.png": "/classic-cache/6662b307bdf002e594039904.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/BandageToss.png": "/classic-cache/608eaccae3af18fc6b8eb727.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/BrandE.png": "/classic-cache/6adc1e7d3e4951fe9d88cb20.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/BrandQ.png": "/classic-cache/6e462d30a486c781b2c87f4b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/BrandR.png": "/classic-cache/7aaad9f39fc7d9a942d52f8f.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/BrandW.png": "/classic-cache/133859f798825c6369c8cecf.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/Bushwhack.png": "/classic-cache/14ff9de20140ffbb39b5059e.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/CaitlynE.png": "/classic-cache/93c436a2e41d58290dae075a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/CaitlynQ.png": "/classic-cache/bc257cdfb04a4dbdbb54d0c3.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/CaitlynR.png": "/classic-cache/dfc2d906f102a118fd3a822a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/CaitlynW.png": "/classic-cache/b4f67de260afa473c5adc95f.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/CardmasterStack.png": "/classic-cache/2cbae7528563995a2c76dcbc.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/CarpetBomb.png": "/classic-cache/a5140113b29430f5e6b2a14e.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/ChronoShift.png": "/classic-cache/3b0babc84aa6fcb131b2dad3.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/Crystallize.png": "/classic-cache/41c9e0e60faf6ab3595b3472.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/CurseoftheSadMummy.png": "/classic-cache/ecbba52635a19051f6f039cb.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/Deceive.png": "/classic-cache/8d28dfbe821e6fe7c90a8cb9.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/DefensiveBallCurl.png": "/classic-cache/8da70815038a546e5769f123.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/Destiny.png": "/classic-cache/f946e53f546a281fd6c6a37a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/DrMundoE.png": "/classic-cache/b9b6dc3ca025c691b0be2adb.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/DrMundoQ.png": "/classic-cache/b9582c14c9ccc5792ad68f84.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/DrMundoR.png": "/classic-cache/600daaacbe6b726c6c7a3e10.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/DrMundoW.png": "/classic-cache/90ac4171e35cb9f77fb2c9b4.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/EliseHumanE.png": "/classic-cache/81e9a3f2f5033c2dba8536a0.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/EliseHumanQ.png": "/classic-cache/0241601ba64bdba2c03d3380.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/EliseHumanW.png": "/classic-cache/a885cf2c7b6920196925248a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/EliseR.png": "/classic-cache/7442c2bbf140ca446eef7e5d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/EnchantedCrystalArrow.png": "/classic-cache/7f6ba70181e25661166d7c8b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/EvelynnE.png": "/classic-cache/4fdaf27534ddcaff6af1fa0e.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/EvelynnQ.png": "/classic-cache/26d46680d3591cbaa871d9f4.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/EvelynnR.png": "/classic-cache/3fbe13e807e20b8eb78aa5e6.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/EvelynnW.png": "/classic-cache/1d4e7cc0754b9e6f11976cb8.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/EyeOfTheStorm.png": "/classic-cache/f7b18b57d5dc6b657d997a30.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/EzrealE.png": "/classic-cache/ed656a86eb84847df88911e1.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/EzrealQ.png": "/classic-cache/9b327136dc152dc127670988.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/EzrealR.png": "/classic-cache/c31d7dd09f6e246a72628fee.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/EzrealW.png": "/classic-cache/726ff023db3d2c48010afc1f.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/Feast.png": "/classic-cache/7b3adbd8fbd50290ec2e7e05.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/FeralScream.png": "/classic-cache/a447a63b8f7cdcd3b7eb8052.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/FerociousHowl.png": "/classic-cache/5e94060cfc3d6d92e63eaa20.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/FiddleSticksE.png": "/classic-cache/6f45c0c18667c40bf1c2658c.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/FiddleSticksQ.png": "/classic-cache/1f4bc36632984680e30a9f68.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/FiddleSticksR.png": "/classic-cache/b51e2b35e6ed05824b516f77.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/FiddleSticksW.png": "/classic-cache/3d6413a2d66f18fc016dedf6.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/FioraE.png": "/classic-cache/41d8e72a390007fa2b57e983.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/FioraQ.png": "/classic-cache/6c0305846ca4c09cd440580c.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/FioraR.png": "/classic-cache/b0f3dd39ab6b26b2f4d81202.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/FioraW.png": "/classic-cache/0eecce1d669d75e40b7750af.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/FizzE.png": "/classic-cache/cf95ab208115be64c3e76b21.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/FizzQ.png": "/classic-cache/21eb83fd488525c56c06368e.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/FizzR.png": "/classic-cache/f898c54e427e44b2b9030b59.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/FizzW.png": "/classic-cache/65f2fdd101b36d5181115f44.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/FlashFrost.png": "/classic-cache/fade4cce64412f9c209e1193.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/Fling.png": "/classic-cache/7b52209a76ed19796a193a38.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/ForcePulse.png": "/classic-cache/7a677da78609acaeddcd35fb.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/Frostbite.png": "/classic-cache/249fc407eeaa7009bbe8d18e.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/GalioE.png": "/classic-cache/de893cd0519e30946fa6650a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/GalioQ.png": "/classic-cache/edfb57808073e6787e61f398.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/GalioR.png": "/classic-cache/6e2a72c199330f586980603a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/GalioW.png": "/classic-cache/60c6988c937f8766c0db1156.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/GangplankE.png": "/classic-cache/0a4939809e87705a891c146d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/GangplankQWrapper.png": "/classic-cache/8090c049a18f56a98a5f44cc.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/GangplankR.png": "/classic-cache/7edb76f559f9db97801e6480.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/GangplankW.png": "/classic-cache/b81595fcb48953742fa2f67b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/GarenE.png": "/classic-cache/4c17ce332447926b378efa15.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/GarenQ.png": "/classic-cache/4b0e6d50c7195df60dba78de.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/GarenR.png": "/classic-cache/61f143061d3fe52e8c9d0d9f.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/GarenW.png": "/classic-cache/eb7d1ac828a96fb22cf1286b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/GGun.png": "/classic-cache/a0bbd885fed1f73fb4e063cc.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/GlacialStorm.png": "/classic-cache/92a276f8d545cce268db4456.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/GragasE.png": "/classic-cache/cd0b2f0d90967e2d4f563e48.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/GragasQ.png": "/classic-cache/f9dfaf122a230346b3165316.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/GragasR.png": "/classic-cache/56208b936e65c6062ab3a6f6.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/GragasW.png": "/classic-cache/ecf78e02de40a822677aa416.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/GravesChargeShot.png": "/classic-cache/c8fac21bcef109745eb4c518.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/GravesMove.png": "/classic-cache/cb9ad389f21ead416cbb77a0.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/GravesQLineSpell.png": "/classic-cache/d20bdaa5f0626b5540e06053.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/GravesSmokeGrenade.png": "/classic-cache/f49f3712633751bac3a421db.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/HallucinateFull.png": "/classic-cache/d6893f13d293e36653f60f71.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/Headbutt.png": "/classic-cache/2b88b5be7ce98ccb201b8b72.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/HecarimRamp.png": "/classic-cache/d4196ec30ab5cc3b92d4432c.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/HecarimRapidSlash.png": "/classic-cache/9e541dc30f4eef7702a54b47.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/HecarimUlt.png": "/classic-cache/a636727ce02909fcdb19b1f1.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/HecarimW.png": "/classic-cache/b26cb6f4601e705fcb2efcf5.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/HeimerdingerE.png": "/classic-cache/43df23db49fd94eded0d51a4.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/HeimerdingerQ.png": "/classic-cache/67b823c1df8b50d948fe0752.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/HeimerdingerR.png": "/classic-cache/c861b7dfaf67a5705ef5a41e.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/HeimerdingerW.png": "/classic-cache/7c3cdf4d77cfca49441639da.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/Highlander.png": "/classic-cache/714b66bdd0ccf554678e1f8e.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/HowlingGale.png": "/classic-cache/0fab99dd022bea90258ad927.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/InsanityPotion.png": "/classic-cache/90e915f7540c7a6612583268.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/IreliaE.png": "/classic-cache/7d6505975756b057d20fd72f.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/IreliaQ.png": "/classic-cache/44022355930d5b1912df9206.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/IreliaR.png": "/classic-cache/ec4ad235ffd8010fef18e776.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/IreliaW.png": "/classic-cache/a860a458ef4df870196d478a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/JackInTheBox.png": "/classic-cache/d83632f1c4c59b42f3023776.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/JarvanIVCataclysm.png": "/classic-cache/ed02208d17dcf62e6dbcfdb5.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/JarvanIVDemacianStandard.png": "/classic-cache/4172c4288376164eb3d129d1.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/JarvanIVDragonStrike.png": "/classic-cache/4b8076a2d4bdab0b90b06077.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/JarvanIVGoldenAegis.png": "/classic-cache/783f48dba918f7e7e4c6462f.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/JavelinToss.png": "/classic-cache/609074318451c5b3db6e3432.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/JaxE.png": "/classic-cache/672a89104ad56f74aafd72cb.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/JaxQ.png": "/classic-cache/1f813c448f7bc51951ffe0e0.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/JaxR.png": "/classic-cache/65453b281cfb3033d1b921c3.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/JaxW.png": "/classic-cache/3c80d218c6b56244656cdb42.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KarmaMantra.png": "/classic-cache/a93f77d522787f36fb497619.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KarmaQ.png": "/classic-cache/64120b58b0aa4e76f023228d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KarmaSolKimShield.png": "/classic-cache/882428ab0565de14c3f8898d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KarmaSpiritBind.png": "/classic-cache/dc296c6b68422aa57ad5c0f0.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KarthusDefile.png": "/classic-cache/f744b4e3bc435944ce1cf7e5.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KarthusFallenOne.png": "/classic-cache/79b8d62b7c9a4a8ef3a1f856.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KarthusLayWasteA1.png": "/classic-cache/90a40d0b1508bc1dd0fb4256.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KarthusWallOfPain.png": "/classic-cache/d3dfdcaa0540171eff909ffd.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KatarinaEWrapper.png": "/classic-cache/ff7c2d736a0387403f9d22e2.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KatarinaQ.png": "/classic-cache/c0f38b1af3e6c2952245bbc4.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KatarinaR.png": "/classic-cache/0822bf1bc5f2e5fbed6f090b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KatarinaW.png": "/classic-cache/8845e8ec840920dd0b522e1a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KayleE.png": "/classic-cache/844190d783daba15538b569e.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KayleQ.png": "/classic-cache/e4687af4ef5b6c1d722ae61f.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KayleR.png": "/classic-cache/7802e4d9554ed28c3e1c687a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KayleW.png": "/classic-cache/f2d4f85adaa8c3b5af29875a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KennenBringTheLight.png": "/classic-cache/1a72654d866a92eb0cf0eaa7.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KennenLightningRush.png": "/classic-cache/4eb3e9be6352bc144e759ffd.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KennenShurikenHurlMissile1.png": "/classic-cache/533ebd7309401274402bbd4e.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KennenShurikenStorm.png": "/classic-cache/e6c241fad51d4b779562da75.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KogMawBioArcaneBarrage.png": "/classic-cache/b5022dd55ee5fa537f8b173f.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KogMawLivingArtillery.png": "/classic-cache/8abbbf4cea4e158abeb8f88b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KogMawQ.png": "/classic-cache/f89d886764fcbcf122cbf54a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KogMawVoidOoze.png": "/classic-cache/e1739868ff8a51e89dd30c34.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/Landslide.png": "/classic-cache/28d52667bce14b05c3902b5e.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/LeeSinEOne.png": "/classic-cache/731e67c5f3086a0e12867572.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/LeeSinQOne.png": "/classic-cache/5909ec6154cc6f1f94d5f399.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/LeeSinR.png": "/classic-cache/340c1d4f93e34535490c63e4.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/LeeSinWOne.png": "/classic-cache/8984c80f5f1e0b781301be3c.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/LeonaShieldOfDaybreak.png": "/classic-cache/603c6212e8eb9c0439efa122.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/LeonaSolarBarrier.png": "/classic-cache/d0056ab6c6e889662a7ec707.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/LeonaSolarFlare.png": "/classic-cache/98d55890ff4bef978ecc4425.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/LeonaZenithBlade.png": "/classic-cache/c15d7e28f57d19524cb882a0.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/LucianE.png": "/classic-cache/0e8cb3e1b27c32f6182bbc87.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/LucianQ.png": "/classic-cache/0fada8bb858b467e827629b5.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/LucianR.png": "/classic-cache/77cbfbf941256d840a6c0d91.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/LucianW.png": "/classic-cache/fcc87363daa7f1a3f12141e9.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/LuluE.png": "/classic-cache/ac71873371aa1f85f836f34a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/LuluQ.png": "/classic-cache/74f388acace723c3b53551ce.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/LuluR.png": "/classic-cache/7c0320ccd433eaf498a66acc.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/LuluW.png": "/classic-cache/76a53b5555fdbf545d2af875.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/LuxLightBinding.png": "/classic-cache/7815d6524994367104d25a46.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/LuxLightStrikeKugel.png": "/classic-cache/5520eef5be061ed1b19b71ad.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/LuxPrismaticWave.png": "/classic-cache/d9b5f2b744d350ed0695aa30.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/LuxR.png": "/classic-cache/f9c30054e36a85a96eabf6c8.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/MalzaharE.png": "/classic-cache/f601762622d734be29b49f8d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/MalzaharQ.png": "/classic-cache/654c4a76100d6d46fa2c34c3.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/MalzaharR.png": "/classic-cache/01200cb6f03605baedaaf3ae.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/MalzaharW.png": "/classic-cache/ff8ade5318c1d4c9090bdf39.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/Meditate.png": "/classic-cache/e04e2394f8f7c9d3d6f3e477.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/MegaAdhesive.png": "/classic-cache/4b30389f25b3137079bcf47d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/MissFortuneBulletTime.png": "/classic-cache/667a3e5d15540e892a076191.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/MissFortuneRicochetShot.png": "/classic-cache/41b334dbf0ed9b3637949701.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/MissFortuneScattershot.png": "/classic-cache/7b67a60258cb1b6e1df65a77.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/MissFortuneViciousStrikes.png": "/classic-cache/ec629cefd83deaf9973e131a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/MissileBarrage.png": "/classic-cache/fe924a1a3657f3e048943a0d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/MonkeyKingDecoy.png": "/classic-cache/715d170bbbb49657446ec244.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/MonkeyKingDoubleAttack.png": "/classic-cache/d9c6e7df796a71fe9e0f910f.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/MonkeyKingNimbus.png": "/classic-cache/86ea94d8a48375a930e9c0b2.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/MonkeyKingSpinToWin.png": "/classic-cache/a19a44444282ce5d7fe1634d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/MordekaiserE.png": "/classic-cache/500c05a895d36a77f6c6c40a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/MordekaiserQ.png": "/classic-cache/be1aec7d96c2ad62f75b2b89.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/MordekaiserR.png": "/classic-cache/508f290f94fcdfed00c7078c.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/MordekaiserW.png": "/classic-cache/98345418e85e3ca2e7e486d0.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/MorganaE.png": "/classic-cache/66f07793b6066404c9ae5ad9.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/MorganaQ.png": "/classic-cache/a1b16e115eb5b0e0151c1618.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/MorganaR.png": "/classic-cache/4e5592595ae9d42ce34dcc46.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/MorganaW.png": "/classic-cache/f3d9255b58a4d14b95fc8496.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/NamiE.png": "/classic-cache/292241d654b1fd04f9315a92.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/NamiQ.png": "/classic-cache/84137c436f847d8c1cdc9320.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/NamiR.png": "/classic-cache/656123cbb223538464064a06.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/NamiW.png": "/classic-cache/565cc27206ed6b07fee578a8.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/NasusE.png": "/classic-cache/05dbf2acdb9e3dc27649881d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/NasusQ.png": "/classic-cache/b08301d6c70e501288c96bc5.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/NasusR.png": "/classic-cache/8e738bf1faaa2bb064cc83bd.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/NasusW.png": "/classic-cache/5707d295547a7f96464a6f3c.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/NautilusAnchorDrag.png": "/classic-cache/7789bccbe52c852e2e3400d5.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/NautilusGrandLine.png": "/classic-cache/d02d6818e3c35c5af0a88b94.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/NautilusPiercingGaze.png": "/classic-cache/818888049753edc859758c1f.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/NautilusSplashZone.png": "/classic-cache/a1ed90918246674e207b3e14.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/NetherBlade.png": "/classic-cache/1f959f61dd833ca6325ca489.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/NullLance.png": "/classic-cache/eae7e8026b0763753b0e49c3.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/NunuE.png": "/classic-cache/b3259318b014f2bce85fd939.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/NunuQ.png": "/classic-cache/d392d6a69bc56531b6bb1b27.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/NunuR.png": "/classic-cache/3e6d533d8ba3b2ed3693b145.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/NunuW.png": "/classic-cache/53887c25cea383b2c70475d6.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/Obduracy.png": "/classic-cache/d4db02481eab370ade29bb2d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/OlafAxeThrowCast.png": "/classic-cache/d9068e3b1139730d11d4b81f.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/OlafFrenziedStrikes.png": "/classic-cache/dabde0ba9a6a795e8df34024.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/OlafRagnarok.png": "/classic-cache/2c3ca5a62ab10c0fed46e972.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/OlafRecklessStrike.png": "/classic-cache/07aac39d39d8bd0222e2f5c8.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/Overdrive.png": "/classic-cache/3ce699b6e05e9e477363a059.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/PantheonE.png": "/classic-cache/d7118167d3656c0d2f40e504.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/PantheonQ.png": "/classic-cache/9a926a19d42ec28a02ec4dcc.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/PantheonR.png": "/classic-cache/9b8b20764a03d541a8f80713.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/PantheonW.png": "/classic-cache/9031a74362b30167d6d967ce.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/PhosphorusBomb.png": "/classic-cache/fdfebc5a932b9cda38600d45.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/PickACard.png": "/classic-cache/4f128c5ce752efe867929687.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/PoisonTrail.png": "/classic-cache/9afdf278cebd72f4ddb11dcc.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/PoppyE.png": "/classic-cache/659dfebfb38d14096e594f49.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/PoppyQ.png": "/classic-cache/033ce128c62c5892ae26459d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/PoppyR.png": "/classic-cache/34578af5c50c614862ff49e8.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/PoppyW.png": "/classic-cache/7ba8969f2b9a00671527e43c.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/PowerBall.png": "/classic-cache/7a60c0621783eb240d449dfa.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/PowerFist.png": "/classic-cache/95f06fe529388221e1b93b40.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/PrimalSurge.png": "/classic-cache/2f5f1b20d8e0d7476981d952.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/Pulverize.png": "/classic-cache/ada4e801714d236962a5d6cd.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/PuncturingTaunt.png": "/classic-cache/23f9d331dd7507dfd50dec1c.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/QuinnE.png": "/classic-cache/a6ea483c81508e60e822d0f8.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/QuinnQ.png": "/classic-cache/e2e9de9a8717361878fcaf0d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/QuinnR.png": "/classic-cache/64d169c08d19625e56d6b838.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/QuinnW.png": "/classic-cache/12de73bf73185be87e45494c.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/ReapTheWhirlwind.png": "/classic-cache/16f891e8ddd2c728a7f88356.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/RiftWalk.png": "/classic-cache/7210e815b0a99928b888283a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/RocketGrab.png": "/classic-cache/4db96f510bc1ad16fae7b0a8.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/Rupture.png": "/classic-cache/df1ab01edd9991a56db1f1e1.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/RyzeE.png": "/classic-cache/43d75a3ca5aaa749a4b684da.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/RyzeQWrapper.png": "/classic-cache/de2c768bffcde6144e35ae47.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/RyzeR.png": "/classic-cache/ad3d55ddff1f09b36a4951b6.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/RyzeW.png": "/classic-cache/246eb4d739594880e601a9ba.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SeismicShard.png": "/classic-cache/403f6f64980c835a4ea58185.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/ShenE.png": "/classic-cache/c794fbd6bfc20bc21ba4591d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/ShenQ.png": "/classic-cache/d37c0973131bab852e36bc02.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/ShenR.png": "/classic-cache/61b86d4be99fd846260f017a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/ShenW.png": "/classic-cache/df6523baccd947532417dce8.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/ShyvanaE.png": "/classic-cache/001ae2294873e8a839518f3a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/ShyvanaQ.png": "/classic-cache/ac2bf0db15c000658848c972.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/ShyvanaR.png": "/classic-cache/99b7140ed5bd8bd7558c197d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/ShyvanaW.png": "/classic-cache/f1aced7d58177fdae1e93343.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SionE.png": "/classic-cache/d875c7f8f61c433496f02208.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SionQ.png": "/classic-cache/ed8aa48e46a93a50df68da9b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SionR.png": "/classic-cache/adeb5473decc552d7d9bda5b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SionW.png": "/classic-cache/9e8ef9181f24e14b5f959237.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SivirE.png": "/classic-cache/be839362302fd86bed80f2ab.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SivirQ.png": "/classic-cache/1abbfb05f9d30db578c03c9e.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SivirR.png": "/classic-cache/4dae27cdc1c1af3e542f0f3b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SivirW.png": "/classic-cache/6ef9d12fb7b44aa88e3ecd6e.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SkarnerE.png": "/classic-cache/06f4c11f338c0fb9ae459a12.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SkarnerQ.png": "/classic-cache/616bcd86d97ac419a9d13831.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SkarnerR.png": "/classic-cache/cea6bab58284593bf06e4cdf.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SkarnerW.png": "/classic-cache/70dfe20e0d44ee0d6283f89d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SonaE.png": "/classic-cache/f5679f82d779bc76fead8238.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SonaQ.png": "/classic-cache/de3cf4b6d25215960aa3c14a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SonaR.png": "/classic-cache/f8ef31da975a65973ed73b1b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SonaW.png": "/classic-cache/663d5a06b6d45af5f832a6c3.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SorakaE.png": "/classic-cache/7ce81a1d36dbf4e5c9d6fcac.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SorakaQ.png": "/classic-cache/8abcb08eb68dd07768b8d430.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SorakaR.png": "/classic-cache/83f118d2efe902d8c9460159.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SorakaW.png": "/classic-cache/3927c703b693e077356732d8.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SowTheWind.png": "/classic-cache/94a1906974f1861d60dce5e3.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/StaticField.png": "/classic-cache/12b29fdbff35d54d43c32929.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SwainE.png": "/classic-cache/470f7cb1d700045af63d3d26.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SwainQ.png": "/classic-cache/984d05d4f78b728e468f2586.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SwainR.png": "/classic-cache/b90d21a9b328ebc3c8b45cd9.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SwainW.png": "/classic-cache/932777d7a5b28156f84b445a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/Tantrum.png": "/classic-cache/85abfcf926eb1a8d2bcdfebf.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/TaricE.png": "/classic-cache/d64f4d2b62f809098422ddb6.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/TaricQ.png": "/classic-cache/246e209baeaa3ddfb2668cc4.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/TaricR.png": "/classic-cache/a63999dac7aad35785e2bb1c.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/TaricW.png": "/classic-cache/2fe3e2b8739b15d09cc9f1a8.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/TeemoE.png": "/classic-cache/ae079d1fea48b76024e94989.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/TeemoQ.png": "/classic-cache/e3a5cd2f9c954aad842448c6.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/TeemoR.png": "/classic-cache/2f6e64aa6b7b64500cb202f3.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/TeemoW.png": "/classic-cache/66f672cded4bb42b5aba86c1.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/TimeWarp.png": "/classic-cache/0975d7c7e7fbb96e3ed025ba.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/Tremors2.png": "/classic-cache/7b4a797c8d9d4172c9ceaa61.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/TristanaE.png": "/classic-cache/d210462551e213ffe52db663.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/TristanaQ.png": "/classic-cache/ed87ff71143ac88c86f33669.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/TristanaR.png": "/classic-cache/c58441b08d8bcb1fa9a50e79.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/TristanaW.png": "/classic-cache/74c5c53e002bf5f9b9ee107b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/TryndamereE.png": "/classic-cache/24b195520b15e5dfd81e9ca2.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/TryndamereQ.png": "/classic-cache/b4f30140624ddc3e635da018.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/TryndamereW.png": "/classic-cache/b1eec53fb4bd4510d31e08fc.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/TwitchExpunge.png": "/classic-cache/163e8f3c5121b9d4992d4aed.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/TwitchFullAutomatic.png": "/classic-cache/05a06204fa390b5685e4f561.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/TwitchHideInShadows.png": "/classic-cache/f95f83e2590c01b374b27b7e.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/TwitchVenomCask.png": "/classic-cache/5288ed550a3fe5a5ba1dfb34.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/TwoShivPoison.png": "/classic-cache/cc2b6e6713941394aec010ee.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/UFSlash.png": "/classic-cache/1776e412bea06d3a4bbeb10b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/UndyingRage.png": "/classic-cache/7ab7f65dbd9ac2881211f088.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/VayneCondemn.png": "/classic-cache/c176ff150314617f42783d6d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/VayneInquisition.png": "/classic-cache/e50865a703a5e8e2cc709a46.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/VayneSilveredBolts.png": "/classic-cache/a2a8697e10e57dde1fab8ed8.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/VayneTumble.png": "/classic-cache/6c81a79474c64a5daf0df619.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/VeigarBalefulStrike.png": "/classic-cache/9b0119a8be1471d04218c01e.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/VeigarDarkMatter.png": "/classic-cache/3faab0c605394b75c96a2cfc.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/VeigarEventHorizon.png": "/classic-cache/af1cda1aad34f4e5175b286b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/VeigarR.png": "/classic-cache/ec461dce77dc1b6b42c6549c.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/VolibearE.png": "/classic-cache/7c8d8050fc5825d068dfbe46.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/VolibearQ.png": "/classic-cache/3b7cc84d55f79ff3b306b524.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/VolibearR.png": "/classic-cache/a5f26ac83b55e94b4e32f9e9.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/VolibearW.png": "/classic-cache/3e16bc545116cc8872a4bcbc.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/Volley.png": "/classic-cache/12ad3d00ea6816cb190b85d0.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/VorpalSpikes.png": "/classic-cache/9b1b1fbc1ebdf685806c75bf.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/WarwickE.png": "/classic-cache/1e57dbbaa04bc1f8336ddf5a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/WarwickQ.png": "/classic-cache/32416d97f2baf08a2528050c.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/WarwickR.png": "/classic-cache/81571b4b587501970b6b823c.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/WarwickW.png": "/classic-cache/7c57e3174a498e5cac76e212.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/WildCards.png": "/classic-cache/82b4ed0e2f0a019aa87361d3.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/WujuStyle.png": "/classic-cache/d65c515f39f7ac9e8a31ffba.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/XinZhaoE.png": "/classic-cache/eadfdb1c058a8c4c0f7289e9.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/XinZhaoQ.png": "/classic-cache/9b097d79a91bd57c6434a399.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/XinZhaoR.png": "/classic-cache/9122db72acf3b430a89804d6.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/XinZhaoW.png": "/classic-cache/be684b72b400d7a3cce03739.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/YorickE.png": "/classic-cache/d311bc5a9962bb4a41de9d56.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/YorickQ.png": "/classic-cache/c216b66be6f27e32c9698c7d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/YorickR.png": "/classic-cache/9949d574f8763f4146a50b7d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/YorickW.png": "/classic-cache/bce96073c91d465a5a04efaf.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/ZileanQ.png": "/classic-cache/611f716b6dcbfcf1459284b8.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/ZileanW.png": "/classic-cache/05784c88ba099f2d926c5e57.png",
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jaderunes/b_1_3.project_jade.png": "/classic-cache/831feb32dd9ecd1ba1c42a5b.png",
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jaderunes/bl_1_3.project_jade.png": "/classic-cache/cef508cde6436d470c53eac3.png",
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jaderunes/bl_3_3.project_jade.png": "/classic-cache/6a6e273cee835b2cfcbac5e1.png",
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jaderunes/r_3_3.project_jade.png": "/classic-cache/b3780cd6f6d39d1fcececa08.png",
   "https://opgg-static.akamaized.net/meta/images/lol/16.15/classic/assets/loadouts/jaderunes/y_1_3.project_jade.png": "/classic-cache/7c28bb5d1beae16994120b1a.png",
-  "https://opgg-static.akamaized.net/meta/images/lol/16.22.1/item/773040.png": "/classic-cache/120ee6586ddee7fba0eca965.png",
-  "https://opgg-static.akamaized.net/meta/images/lol/16.22.1/item/773042.png": "/classic-cache/7d60b840048119f24066e4f9.png",
-  "https://opgg-static.akamaized.net/meta/images/lol/16.22.1/spell/SummonerBarrier.png": "/classic-cache/92bf60171100e3e8d636c6e7.png",
-  "https://opgg-static.akamaized.net/meta/images/lol/16.22.1/spell/SummonerDot.png": "/classic-cache/c2de0093ec302b21f70ad76f.png",
-  "https://opgg-static.akamaized.net/meta/images/lol/16.22.1/spell/SummonerFlash.png": "/classic-cache/8799f50b2942757653f720a1.png",
-  "https://opgg-static.akamaized.net/meta/images/lol/16.22.1/spell/SummonerHaste.png": "/classic-cache/b753cf1e9676a2c1fee93e7f.png",
-  "https://opgg-static.akamaized.net/meta/images/lol/16.22.1/spell/SummonerHeal.png": "/classic-cache/c57a9832af9287ed960e6ced.png",
-  "https://opgg-static.akamaized.net/meta/images/lol/16.22.1/spell/SummonerMana.png": "/classic-cache/77d827446d08f12d277a895b.png",
-  "https://opgg-static.akamaized.net/meta/images/lol/16.22.1/spell/SummonerSnowball.png": "/classic-cache/f123031370e8b2a8f19a1f66.png",
   "https://opgg-static.akamaized.net/meta/images/lol/16.22/classic/releases/466616d64a15a82262faac302ad392713ebe4fa8020491957545ecb67f48ce17/assets/characters/jade_aatrox/skins/base/images/jade_aatrox_splash_centered_0.project_jade.jpg": "/classic-cache/e87d3574837057f6859de15c.jpg",
   "https://opgg-static.akamaized.net/meta/images/lol/16.22/classic/releases/466616d64a15a82262faac302ad392713ebe4fa8020491957545ecb67f48ce17/assets/characters/jade_aatrox/skins/skin301/images/jade_aatrox_splash_centered_301.project_jade_16_20.jpg": "/classic-cache/bfc5d6236d10a7f746a09670.jpg",
   "https://opgg-static.akamaized.net/meta/images/lol/16.22/classic/releases/466616d64a15a82262faac302ad392713ebe4fa8020491957545ecb67f48ce17/assets/characters/jade_ahri/skins/base/images/jade_ahri_splash_centered_0.project_jade.jpg": "/classic-cache/7915fc92431e1a94458c3f2f.jpg",
@@ -1459,169 +1450,178 @@ export const classicAssetManifest = {
   "https://opgg-static.akamaized.net/meta/images/lol/16.22/classic/releases/466616d64a15a82262faac302ad392713ebe4fa8020491957545ecb67f48ce17/v1/champion-icons/60236.png": "/classic-cache/1ac44788f4275c17bdb50474.png",
   "https://opgg-static.akamaized.net/meta/images/lol/16.22/classic/releases/466616d64a15a82262faac302ad392713ebe4fa8020491957545ecb67f48ce17/v1/champion-icons/60266.png": "/classic-cache/1a2f9a023e8c1eb65ef7cb73.png",
   "https://opgg-static.akamaized.net/meta/images/lol/16.22/classic/releases/466616d64a15a82262faac302ad392713ebe4fa8020491957545ecb67f48ce17/v1/champion-icons/60267.png": "/classic-cache/1e8ea5b0e9aabf9c6fc04be4.png",
-  "https://raw.communitydragon.org/16.22/game/assets/maps/particles/kiwi/magicmissile_small.png": "/classic-cache/4fee18eaf7b089fd7ecda00a.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/adapt_small.png": "/classic-cache/1d6e9ee674718975f11451b5.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/allforyou_small.png": "/classic-cache/f8b31320cd714161983ed35d.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/bigbrain_small.png": "/classic-cache/0ee4f0e92db9832e122af0e8.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/bladewaltz_small.png": "/classic-cache/838c65e16d971d9e7431139f.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/bluntforce_small.png": "/classic-cache/9f277f32f673322ad73f6b26.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/canttouchthis_small.png": "/classic-cache/1975ed83a2ca24744506e53f.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/celestialbody_small.png": "/classic-cache/d9c1f0942a600c374de6c19f.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/circleofdeath_small.png": "/classic-cache/29579d839d185dbfbd17673c.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/clowncollege_small.png": "/classic-cache/bb7e79b711cf644cefa67125.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/courageofthecolossus_small.png": "/classic-cache/61a37f48f99198b4ea573cac.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/criticalhealing_small.png": "/classic-cache/cccd28e560b6173713098062.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/dashing_small.png": "/classic-cache/368befeb229978364822cfa6.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/dawnbringersresolve_small.png": "/classic-cache/ffb724f129c0666d20d22b0a.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/deft_small.png": "/classic-cache/505d1ee828eb379e4cd4d911.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/desecrator_large.png": "/classic-cache/c3ed539520aac1d2f1fd37f7.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/divebomber_small.png": "/classic-cache/eb5d1f54103664259b4f4ced.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/dontblink_small.png": "/classic-cache/e81002f96fa93ca6ae35980e.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/drawyoursword_small.png": "/classic-cache/4ea610e9a704bb7b36f31c6a.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/drop_bear_small.png": "/classic-cache/786de4e7502522e5344d5c1c.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/dualwield_small.png": "/classic-cache/8c1fdba31527cf2ccf55ad06.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/earthwake_small.png": "/classic-cache/cca727373853d6856daac592.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/endlessdecimate_small.png": "/classic-cache/9e62013125afd71bead32f8e.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/erosion_small.png": "/classic-cache/666e707314cf513d7abefd70.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/escapade_small.png": "/classic-cache/26da351fa3cb043ed2ffb13a.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/etherealweapon_small.png": "/classic-cache/ff1d1f95e495d2f50189b3e9.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/eureka_small.png": "/classic-cache/caeea6d5997aaae328451894.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/fanthehammer_small.png": "/classic-cache/d2547816a94baf589dd991a5.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/feymagic_small.png": "/classic-cache/6e878be75a733c41d129402b.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/firebrand_small.png": "/classic-cache/7fba6b487fcb245ada1bb13c.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/firfox_small.png": "/classic-cache/a98ffb7d190a75282b7d0534.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/firstaidkit_small.png": "/classic-cache/96d74934a7cb5ccab82d5e75.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/flashbang_small.png": "/classic-cache/76aa551c71515c1f526e2529.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/flashy_small.png": "/classic-cache/4a3d6a01068fa128c7b3dd4f.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/giantslayer_small.png": "/classic-cache/02d82cf4dc185934500234de.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/goliath_small.png": "/classic-cache/9cc5de99cd61523af5aeeab5.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/goredrink_small.png": "/classic-cache/b6b41c02e0c6bd517d0f9fd9.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/heavyhitter_small.png": "/classic-cache/c494d93a2fb96fff71421e76.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/icecold_small.png": "/classic-cache/6b3bb24510771ab6f79426e8.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/infernalconduit_small.png": "/classic-cache/f5f77bfbbd44eab880afa812.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/itscritical_small.png": "/classic-cache/bd20fc9aa56e2bb5590c56ad.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/itskillingtime_small.png": "/classic-cache/677af71ace42276dd3a4082e.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/jeweledgauntlet_small.png": "/classic-cache/94b0bddafc260e01568eeae7.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/legday_small.png": "/classic-cache/2d8e00339e865671cad42d87.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/lightemup_small.png": "/classic-cache/90433943c23f0b2135324da5.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/lightningstrikes_small.png": "/classic-cache/63e3ca32987824b14789c4f9.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/madscientist_small.png": "/classic-cache/df10fd1a134dadafc39a2891.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/marksmage_small.png": "/classic-cache/8eaa251758fffe706b53fba7.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/masterofduality_small.png": "/classic-cache/f009da58d34a82a717fa6b8f.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/mindtomatter_small.png": "/classic-cache/97ea7201185c3db83fcf5a58.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/minionmancer_small.png": "/classic-cache/bae0417cc79e789f9407fada.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/mysticpunch_small.png": "/classic-cache/b1791285903e47cc6a817f09.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/okboomerang_small.png": "/classic-cache/b9ce6560c804d554f61f1270.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/orbitallaser_small.png": "/classic-cache/22c786378f20837d4cbac306.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/outlawsgrit_small.png": "/classic-cache/ec1c8a4555d000a22f17f907.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/overflow_small.png": "/classic-cache/5a67432b69241f5873e3d16f.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/perseverance_small.png": "/classic-cache/062cfc4f7e775c4cf3bcb271.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/quantumcomputing_small.png": "/classic-cache/14b664d21420c5e5406bbb5b.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/rabblerousing_small.png": "/classic-cache/9605a5f7ca5c4514d226ea79.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/scopedweapons_small.png": "/classic-cache/bd686b7db37e890db413c85d.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/scopierweapons_small.png": "/classic-cache/4898f148cbec1f9f2a16882c.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/scopiestweapons_small.png": "/classic-cache/5c47781baac14a00a14d4215.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/searingdawn_small.png": "/classic-cache/3bd5ae12189b31ee2bca0a23.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/shadowrunner_small.png": "/classic-cache/2291b05deeca8d808aa196da.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/shrinkray_small.png": "/classic-cache/af4b807cd62b31f47f88c928.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/skilledsniper_small.png": "/classic-cache/87cfad320e1f24d1f0197d30.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/slaparound_small.png": "/classic-cache/6ad98b82a1ff8370da333b08.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/slowactingpainkillers_small.png": "/classic-cache/ca7ca0077872870598042c27.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/sonicboom_small.png": "/classic-cache/1c3637fc716960915acea8a5.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/soulsiphon_small.png": "/classic-cache/06684b9074a1de991805bbc2.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/stackosaurusrex_small.png": "/classic-cache/eba4d98e4c9309ce896427bc.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/symphonyofwar_small.png": "/classic-cache/6b53f0127d27b152c92cb154.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/tank_engine_small.png": "/classic-cache/899191406f83c903477772c8.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/tankitorleaveit_small.png": "/classic-cache/a944111ac12b2abc16857ac2.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/tapdancer_small.png": "/classic-cache/4effe7b21e11cac8e55f4826.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/threadtheneedle_small.png": "/classic-cache/7a0fb09e1e9b0413862b698e.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/transmutechaos_small.png": "/classic-cache/217a7af58888d9ad9dfdb7ae.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/transmutegold_small.png": "/classic-cache/df693c9e7d45f58150660f3c.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/transmuteprismatic_small.png": "/classic-cache/f5388e595611c0a63f07211c.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/typhoon_small.png": "/classic-cache/46af816b14b86f534ffd3b7e.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/ultimaterevolution_small.png": "/classic-cache/5aa74eca26af29d05cc4d4f3.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/ultimateunstoppable_small.png": "/classic-cache/82b927cbeed5c204c0c77e4e.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/vulnerability_small.png": "/classic-cache/01fa32fcd2e7d53cdda59ef7.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/windspeakersblessing_small.png": "/classic-cache/9cbb93c890363490e2189c8e.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/wisdomofages_small.png": "/classic-cache/f8b59f7422dbca732a9011b4.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/witchfulthinking_small.png": "/classic-cache/2fae2c5b2c93b1b18691b77d.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/adamant_small.png": "/classic-cache/1d79b8d7afa3ce78069bf1de.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/aram_phenomenalevil_small.png": "/classic-cache/889cdb1c8741631e34258e05.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/babykitty_small.png": "/classic-cache/dcffca403d95aad4a7a8e818.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/biggestsnowballever_small.png": "/classic-cache/7ef8b7bc2d6fae8fd9016135.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/bloodmoney2_small.png": "/classic-cache/6aca827785b5d41bedcae1f2.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/bonk_large.png": "/classic-cache/2d98b44ca96f01757c054ce6.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/brushpower_small.png": "/classic-cache/1fe19941c78b15332abb462c.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/criticalmissile_small.png": "/classic-cache/9ec33acc6f86c634489d6eaa.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/criticalrhythm_small.png": "/classic-cache/9673f7480096e2861ae87a1a.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/cruelty_small.png": "/classic-cache/40343fbbb8cfd1863df7ae91.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/do_or_die_small.png": "/classic-cache/76f14e868f34e2637c18bb12.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/donation_small.png": "/classic-cache/19c490174037527d64a1e82d.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/dont_stop_cleaving_small.png": "/classic-cache/e0f4b03eb0424b5c044d4fb9.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/dontchangethechannel_small.png": "/classic-cache/7f0883b61eac24216e458457.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/dorans_fan_small.png": "/classic-cache/06f445d7f64935d5acb2886e.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/drink_up_small.png": "/classic-cache/c2459c393968124342be4d68.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/dropkick_small.png": "/classic-cache/d9bf4cb59b8882f524a0492e.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/empyreampromise_small.png": "/classic-cache/bb84c8d9d96976f08da516d6.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/equillibrium_small.png": "/classic-cache/0c6e403546ac153d49c4239c.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/escapeplan_small.png": "/classic-cache/bd7b18a171762e1562b60f19.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/finalform_small.png": "/classic-cache/1288adec2422550768ae8b5a.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/fishbait_small.png": "/classic-cache/a562654ce182ffda45a235f2.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/flash2_small.png": "/classic-cache/698d1f21c838c1c91fcb9607.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/fs_heart_steal_small.png": "/classic-cache/83ce0c4509cd8e45c9e16e95.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_gold.png": "/classic-cache/a8a83d233917bdf879e9e968.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_prismatic.png": "/classic-cache/f91be1003f59d2b1fbc8f6df.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_silver.png": "/classic-cache/31d5f5df27e0b70a13c344f6.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/getexcited_small.png": "/classic-cache/80a119b445aeda6c792c2b2a.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/glasscannon_small.png": "/classic-cache/09811e8edfac934a1538741c.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/goldensnowball_small.png": "/classic-cache/7034b5239b07a5fa18218d51.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/goldrend_small.png": "/classic-cache/1fc9f4d0a1b8d76740bd32c4.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/grandmaschilioil_small.png": "/classic-cache/6cafe1a62a77cb3273e8609b.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/growthspurt_small.png": "/classic-cache/3f535ce6f7b0db9195e6b02a.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/haste_makes_waste_small.png": "/classic-cache/2aaef031721bb026660a7d89.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/hellbent_small.png": "/classic-cache/a0bed0e4548e89fe9fa5d509.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/iamthejuggernaut_small.png": "/classic-cache/c4c89b6d7bbc38f5b57729e5.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/juiced_small.png": "/classic-cache/09121e89db306fc38e83c025.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/killsecure_small.png": "/classic-cache/c0d6a3e6c367e1f349a944e7.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/laseheal_small.png": "/classic-cache/1aa3902ff603675881d39c33.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/littledevil_small.png": "/classic-cache/6afd58d4dfec0ce755a7c6fb.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/mightyshield_small.png": "/classic-cache/3a0e1801eeab5ac21915022b.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/missingping_small.png": "/classic-cache/336569f6ff2e22f79a063562.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/natureishealing_small.png": "/classic-cache/b9a70bbb9c97ec284fcbad35.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/nightstalking_small.png": "/classic-cache/05d703bcafcffb59a2f3ae4b.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/patontheback_small.png": "/classic-cache/d570d00e0c6ab36b665a9069.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/pinballsnowball_small.png": "/classic-cache/a4a747379d9fcd9d45d0e2bb.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/pincushion_small.png": "/classic-cache/76ce53f0d7628ae31add701e.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/poltergeist_small.png": "/classic-cache/75548194acb177aaee1f02c9.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/poroblast_small.png": "/classic-cache/3f8d9681d375f449c50fd5b4.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/poroking_small.png": "/classic-cache/357f936708a1f897176d0708.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/promqueen_small.png": "/classic-cache/f66588d7305705e657141720.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/proteinshake_small.png": "/classic-cache/d6388867d364c7e4986391df.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/questbangbang_small.png": "/classic-cache/46a899dcda519d297451ea5d.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/questburstingteeth_small.png": "/classic-cache/d9b10ccb77e5756ca558601c.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/questpressurecooker_small.png": "/classic-cache/bc1dc453611f8a94aa896c18.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/sharktempest_small.png": "/classic-cache/265cd804c8599f6ed6c182a7.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/snowballupgrade_small.png": "/classic-cache/b2b5a69959273a0d25cd667e.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/snowbomb_small.png": "/classic-cache/df16441eb737e613e2da7237.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/snowday_small.png": "/classic-cache/880e8283e2188a2ec60b0a22.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/sonata_small.png": "/classic-cache/37c3daba2ce9f46c98474a89.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/souleater_small.png": "/classic-cache/17e9e7637bf1f179dc012b8e.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/spiritbomb_small.png": "/classic-cache/3a5d275c6e658d07f8a691f9.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/spiritualpurification_small.png": "/classic-cache/f794918f2d4a3d03218f5d8c.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/squishyslappygrab_small.png": "/classic-cache/f5c8e6b64f401cb2e0d26f83.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/stabby_stabby_small.png": "/classic-cache/1fa0e7e626cf6dac68e6bc86.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/swiftandsafe_small.png": "/classic-cache/66434f792219b3638628ec54.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/twinfire_small.png": "/classic-cache/2f39d9c33a32ba108fe5772c.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/upgrade_deathfire_small.png": "/classic-cache/90004f7f1136ba3c675f61c7.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/upgrade_innervating_small.png": "/classic-cache/a4e085f195a3c8ec9c7d8537.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/upgrade_zzrotportal_small.png": "/classic-cache/c4bb11038c99b36292b6e5af.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/upgradehubris_small.png": "/classic-cache/16bb51fa1daeb2b206a29824.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/vampired_small.png": "/classic-cache/192308a9c27a873de8e70b1e.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/warlockjuicebox_small.png": "/classic-cache/3e227f8189079a11cbe62a16.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/weewooweewoo_small.png": "/classic-cache/05c8d86a482402604584245e.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/whenthedarknesscomes_small.png": "/classic-cache/7edcdf78d660f65193016e4d.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/youchmycoins_small.png": "/classic-cache/d09b0e5b6af198250320f6f8.png",
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/zealot_small.png": "/classic-cache/7f5e5404d77cb9892bcf0f05.png"
+  "https://opgg-static.akamaized.net/meta/images/lol/16.23.1/item/773040.png": "/classic-cache/a25f8c31c7fa61bb45a05ca3.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.23.1/item/773042.png": "/classic-cache/b7fe08561f580391fee23f7e.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.23.1/spell/SummonerBarrier.png": "/classic-cache/f3a9cb24f98d9aedfe8f7066.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.23.1/spell/SummonerDot.png": "/classic-cache/557a99045a98e6b2d526a7e2.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.23.1/spell/SummonerFlash.png": "/classic-cache/08b724075b97ffc7c90d9010.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.23.1/spell/SummonerHaste.png": "/classic-cache/e4d1b7772fe1cb9188b69a5c.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.23.1/spell/SummonerHeal.png": "/classic-cache/9312833481cd326e64dfe36d.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.23.1/spell/SummonerMana.png": "/classic-cache/9d0aa65f03b689124fbeb59b.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.23.1/spell/SummonerSnowball.png": "/classic-cache/d14f9d4cbb272b9fcf319ce0.png",
+  "https://raw.communitydragon.org/16.23/game/assets/maps/particles/kiwi/magicmissile_small.png": "/classic-cache/44c1208c95a974013f5ef8f9.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/adapt_small.png": "/classic-cache/9f6fa5e62c1f4a108f9a97dc.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/allforyou_small.png": "/classic-cache/6cc893d0b7df40f4b255ea0a.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/bigbrain_small.png": "/classic-cache/b53ec56e42d2bf8fd0c1aafe.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/bladewaltz_small.png": "/classic-cache/efbfde122d3fe3bdcd7193ac.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/bluntforce_small.png": "/classic-cache/512b48c9939a3e1a1ef25b07.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/canttouchthis_small.png": "/classic-cache/fa7e00b84ef7ab4096734979.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/celestialbody_small.png": "/classic-cache/e54e6e10b8f4e36d1611268b.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/circleofdeath_small.png": "/classic-cache/bc345f350a9eb9d3845f02a7.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/clowncollege_small.png": "/classic-cache/539a7320ddab5dd9e8510c14.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/courageofthecolossus_small.png": "/classic-cache/479eb53131a8adaa22b6b8bd.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/criticalhealing_small.png": "/classic-cache/ac4a242997ed05fd13804960.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/dashing_small.png": "/classic-cache/0783bbb72032fa9efe836124.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/dawnbringersresolve_small.png": "/classic-cache/49b3150f1ea016079a71ccf2.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/deft_small.png": "/classic-cache/e8083aa5fd68425a3af066ca.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/desecrator_large.png": "/classic-cache/62a2d79203db9ab5de535b68.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/divebomber_small.png": "/classic-cache/f207ac652a39a6aa9f8b20c6.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/dontblink_small.png": "/classic-cache/d011069e9f964fde6aceaf2c.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/drawyoursword_small.png": "/classic-cache/d07cd1e484615ee6c819c510.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/drop_bear_small.png": "/classic-cache/f400a96b80baba27eb3168d1.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/dualwield_small.png": "/classic-cache/587a8d418d0d1d7e82ed0b4b.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/earthwake_small.png": "/classic-cache/aec3707f45898d043216633d.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/endlessdecimate_small.png": "/classic-cache/a7bd781c8ced3c4396ef8a87.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/erosion_small.png": "/classic-cache/0b1da7f77ddd5ff0c24d511c.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/escapade_small.png": "/classic-cache/472e29fdea04115988d2d1f1.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/etherealweapon_small.png": "/classic-cache/bad096a2e898d85ef0d457e4.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/eureka_small.png": "/classic-cache/df18947a359dcd4f1c2abe45.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/fanthehammer_small.png": "/classic-cache/bb6080b2dea767e62575586c.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/feymagic_small.png": "/classic-cache/3f5852385554355f335fcbb4.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/firebrand_small.png": "/classic-cache/258e2806ca0312f3e926fb15.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/firfox_small.png": "/classic-cache/8428d8b34ce38a9304924c4d.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/firstaidkit_small.png": "/classic-cache/05bd1acc8bc1381caf29498d.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/flashbang_small.png": "/classic-cache/0799e48d03a8c7aab9e8c1ae.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/flashy_small.png": "/classic-cache/49966bec0fa364969ab97861.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/giantslayer_small.png": "/classic-cache/f7d890559dd4fd380d19739c.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/goliath_small.png": "/classic-cache/049de17a7713fdcda6785186.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/goredrink_small.png": "/classic-cache/b467b7f717e036b5a3518dde.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/heavyhitter_small.png": "/classic-cache/b2d70bc0c02ed05b0a356b9a.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/icecold_small.png": "/classic-cache/d49f1aa3f8e8c49d2d326184.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/infernalconduit_small.png": "/classic-cache/413ff9c30bd90c76cd9f389e.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/itscritical_small.png": "/classic-cache/828d2d4d5820950b0dbab7b2.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/itskillingtime_small.png": "/classic-cache/d769969dc0da3679a6160e19.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/jeweledgauntlet_small.png": "/classic-cache/1ae98c1a9d49e6e96aaa04c0.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/legday_small.png": "/classic-cache/f5bf7b9dcd99869b5cd253f8.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/lightemup_small.png": "/classic-cache/00cd29383afdd948b137f3b3.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/lightningstrikes_small.png": "/classic-cache/ae8ce3356094c58cdc7a7a2f.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/madscientist_small.png": "/classic-cache/41fdb015ead8ab26c409b13f.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/marksmage_small.png": "/classic-cache/13735fb1002aebb411eebee8.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/masterofduality_small.png": "/classic-cache/2e27273a6e12629b323e4f5a.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/mindtomatter_small.png": "/classic-cache/4a8c42a85bf6e5e7e56f8948.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/minionmancer_small.png": "/classic-cache/b7ea73517a147f9ece354870.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/mysticpunch_small.png": "/classic-cache/e83a8dea440398dfc86f44f7.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/okboomerang_small.png": "/classic-cache/f2fdbe2ec5d0c32ef42a482d.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/orbitallaser_small.png": "/classic-cache/6705d68b498b8b8a664c058f.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/outlawsgrit_small.png": "/classic-cache/158c5867c298d876c643427b.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/overflow_small.png": "/classic-cache/0f21ed2642b95a35a3f29840.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/perseverance_small.png": "/classic-cache/bda153fa3dee115dda8847cb.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/quantumcomputing_small.png": "/classic-cache/1d5fa8682d06865786712c4f.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/rabblerousing_small.png": "/classic-cache/a5bda012458c1e79d028bbd9.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/scopedweapons_small.png": "/classic-cache/4f327090e5dc13b290822b39.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/scopierweapons_small.png": "/classic-cache/2d0eb8b32fcacb0f07aff358.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/scopiestweapons_small.png": "/classic-cache/decfbddc98303b954643c1d9.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/searingdawn_small.png": "/classic-cache/c16b5f7578c6113107dce813.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/shadowrunner_small.png": "/classic-cache/e105ecdf15b67e41f7349b01.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/shrinkray_small.png": "/classic-cache/6b83b1b1fd818219a9a149fe.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/skilledsniper_small.png": "/classic-cache/ed8379ada08fc675d886e172.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/slaparound_small.png": "/classic-cache/abfca58776ba3f5d83443476.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/slowactingpainkillers_small.png": "/classic-cache/f24a805ed245461c180d329b.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/sonicboom_small.png": "/classic-cache/cf24f657f5addecba27db769.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/soulsiphon_small.png": "/classic-cache/c33a0f16c69cff01b967a7e2.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/stackosaurusrex_small.png": "/classic-cache/996e224a46e43b6367f98f9a.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/symphonyofwar_small.png": "/classic-cache/651b1232721b6b26e6d9a81f.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/tank_engine_small.png": "/classic-cache/c91e59239db93bb44cb43f0e.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/tankitorleaveit_small.png": "/classic-cache/1ca9768ce5430dd2e2fd2b75.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/tapdancer_small.png": "/classic-cache/d6683ebd489f58c7c8b0afb8.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/threadtheneedle_small.png": "/classic-cache/bf2767eaeca8438bcbda1496.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/transmutechaos_small.png": "/classic-cache/0dc4a16fa1a4c30c6dc4da6a.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/transmutegold_small.png": "/classic-cache/95ef7c049b7027bc034032b9.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/transmuteprismatic_small.png": "/classic-cache/146e268b8017c989c408bebb.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/typhoon_small.png": "/classic-cache/ad6dc138a16b91dfb1e1459e.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/ultimaterevolution_small.png": "/classic-cache/11879b888fe7ead02527d69f.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/ultimateunstoppable_small.png": "/classic-cache/3fef36dde5e58ff4b790f5a8.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/vulnerability_small.png": "/classic-cache/1d050f69236c789db67f86d7.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/windspeakersblessing_small.png": "/classic-cache/6b836ecbbdd2a21302c57fbd.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/wisdomofages_small.png": "/classic-cache/5d74479cf02e28ab5eca9d1e.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/witchfulthinking_small.png": "/classic-cache/56b9eec0a77967330f5e36b5.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/adamant_small.png": "/classic-cache/d4ffae88cc5325a42cb24abb.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/aram_phenomenalevil_small.png": "/classic-cache/c49663f1ed9655a60f9b18e0.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/babykitty_small.png": "/classic-cache/27d25c98dbd75057ea7f3dcb.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/biggestsnowballever_small.png": "/classic-cache/01e722150492a0a284b3545a.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/bloodmoney2_small.png": "/classic-cache/baf622979473ac9b824f198c.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/bonk_large.png": "/classic-cache/4a9ac922d87fb600f0208784.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/brushpower_small.png": "/classic-cache/067946ab86919dfdd20cfff0.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/criticalmissile_small.png": "/classic-cache/68e9a0274d064604c3657b96.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/criticalrhythm_small.png": "/classic-cache/4200ac70c28d453e0a1bc4e1.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/cruelty_small.png": "/classic-cache/74f776a99a88284de1541d22.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/do_or_die_small.png": "/classic-cache/36e75af8d9a92c33c6d5c8c6.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/donation_small.png": "/classic-cache/b0014bec5b238a8a1abf3827.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/dont_stop_cleaving_small.png": "/classic-cache/ee82d445d4e49221a7d5395b.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/dontchangethechannel_small.png": "/classic-cache/55e9fce574e71f04967f5769.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/dorans_fan_small.png": "/classic-cache/3bf5b55f41c59949530ad042.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/drink_up_small.png": "/classic-cache/4392aa663f2c8896fcc7ef08.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/dropkick_small.png": "/classic-cache/8701cccb7dfcff634b8a4331.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/empyreampromise_small.png": "/classic-cache/708c7e3b313f560b05739654.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/equillibrium_small.png": "/classic-cache/4b02bc157de481ca1c66503f.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/escapeplan_small.png": "/classic-cache/e9d21da69846090907de3b51.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/finalform_small.png": "/classic-cache/1722099557a6419ccfc43482.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/fishbait_small.png": "/classic-cache/2e0fbcc865121dd6748b5bdb.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/flash2_small.png": "/classic-cache/9ffb8fd53ec7cc88c7773164.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/fs_heart_steal_small.png": "/classic-cache/6f3b9df190e7a692e022dc5b.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_gold.png": "/classic-cache/3b872e96f441e8f225aed49c.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_prismatic.png": "/classic-cache/1355bbbc7060a3d56e62bf40.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_silver.png": "/classic-cache/de573fbb57f6eba7ed145e93.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/getexcited_small.png": "/classic-cache/bbf17fbce186668ab0639456.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/glasscannon_small.png": "/classic-cache/1b561f540774528a6ad69bdb.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/goldensnowball_small.png": "/classic-cache/e000ce120d800b94d15ef052.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/goldrend_small.png": "/classic-cache/e3293e4de20348b2799fbd8f.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/grandmaschilioil_small.png": "/classic-cache/e7707fe9d4b638bd595dad89.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/growthspurt_small.png": "/classic-cache/4674096013d2d5996f042d54.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/haste_makes_waste_small.png": "/classic-cache/e7ec64f3d32648c07128fd79.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/hellbent_small.png": "/classic-cache/25ce2f4e5c41c9f49b2ca770.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/iamthejuggernaut_small.png": "/classic-cache/0487547d836c06e5d2cc025b.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/juiced_small.png": "/classic-cache/9bb2fc01fe30e69a12e578ec.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/killsecure_small.png": "/classic-cache/e0b877a2ef6e667b43a88a5f.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/laseheal_small.png": "/classic-cache/787d81976a9e4c3a03fa051e.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/littledevil_small.png": "/classic-cache/92b97ebdccf573219acbe861.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/mightyshield_small.png": "/classic-cache/c4483bc8086f9a26ad79ee8b.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/missingping_small.png": "/classic-cache/8b79198bfae05aeb7b9c55a4.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/natureishealing_small.png": "/classic-cache/e850336d97b11a651bf7d2a0.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/nightstalking_small.png": "/classic-cache/0e14e8e67f7719967203332d.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/patontheback_small.png": "/classic-cache/f3ad8f3c97fefba6218e0162.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/pinballsnowball_small.png": "/classic-cache/76983dfc516fe102437efd7c.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/pincushion_small.png": "/classic-cache/55471b1f27a42e46beafd1f7.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/poltergeist_small.png": "/classic-cache/aef1bcb453515342f8d0662a.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/poroblast_small.png": "/classic-cache/6c2d3c3bc49929626032222f.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/poroking_small.png": "/classic-cache/4969b06488f5715e2ce742f7.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/promqueen_small.png": "/classic-cache/b4d424991d0962666e826f49.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/proteinshake_small.png": "/classic-cache/b5522cacd1541c9d5e0d9d03.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/questbangbang_small.png": "/classic-cache/78f4b73f8993fa6f42914ee2.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/questburstingteeth_small.png": "/classic-cache/040b68d855e04e704d5e72d3.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/questpressurecooker_small.png": "/classic-cache/b2b3c068821c6d0eaaaf3536.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/sharktempest_small.png": "/classic-cache/11ffdb32f7988042e3cbe2fe.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/snowballupgrade_small.png": "/classic-cache/bd641961d77b22e81e0c3b40.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/snowbomb_small.png": "/classic-cache/8131280345f770601e454387.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/snowday_small.png": "/classic-cache/b76e031e339e2e78fefefac6.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/sonata_small.png": "/classic-cache/4869a6fc72eaf553adca4a63.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/souleater_small.png": "/classic-cache/14a438d496b698795b918260.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/spiritbomb_small.png": "/classic-cache/0c20b74afb04b71de45c2047.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/spiritualpurification_small.png": "/classic-cache/ccc2db930b5636d81c82e87b.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/squishyslappygrab_small.png": "/classic-cache/e147966f8552a2a1a874808e.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/stabby_stabby_small.png": "/classic-cache/5cbb86e5d73cfa492944480d.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/swiftandsafe_small.png": "/classic-cache/7c2a012aabe1e784cd5f79f3.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/twinfire_small.png": "/classic-cache/822797f2dc9a4fe8e44a3aaa.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/upgrade_deathfire_small.png": "/classic-cache/bf4da5f364b904c9aba6fb90.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/upgrade_innervating_small.png": "/classic-cache/11d263ba628bb753a791215f.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/upgrade_zzrotportal_small.png": "/classic-cache/eeafaf537ddf1502cfa8108c.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/upgradehubris_small.png": "/classic-cache/b2675824bbad4aae4567be45.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/vampired_small.png": "/classic-cache/98517e3dac06ef9afd704150.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/warlockjuicebox_small.png": "/classic-cache/74f2aabf1914ce2e56584304.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/weewooweewoo_small.png": "/classic-cache/458174007d9a7389cb4f60c4.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/whenthedarknesscomes_small.png": "/classic-cache/8e388b582d2f440236a057da.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/youchmycoins_small.png": "/classic-cache/fdd5af6a8fedf8aceab5fcdd.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/zealot_small.png": "/classic-cache/3d65200569df210cefa7af3a.png"
 } as const;
 
 export const classicAssetAudit = {
@@ -1657,4032 +1657,4032 @@ export const classicAssetAudit = {
       "符文面板"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Aatrox.png": {
-    "path": "/classic-cache/b3f52a316d472b9c99d551c3.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Aatrox.png": {
+    "path": "/classic-cache/8da301338b151c277144dfcc.png",
     "bytes": 25644,
     "sha256": "852d739fb696684549064266851df91ecd03729e06b1a192dc14af01549b7f3f",
     "labels": [
       "暗裔剑魔现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Ahri.png": {
-    "path": "/classic-cache/035008eea6f676240ca85491.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Ahri.png": {
+    "path": "/classic-cache/84f008926c34c6cbea34aa41.png",
     "bytes": 28511,
     "sha256": "8e93368d97e3d302463c4e83ac5980d1f0a3a0aaf92ac44435730fecbd55b565",
     "labels": [
       "九尾妖狐现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Akali.png": {
-    "path": "/classic-cache/0c84dcdeb2493df49d701d6d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Akali.png": {
+    "path": "/classic-cache/cdd3bd63bf01cfc40eb85236.png",
     "bytes": 27191,
     "sha256": "a62acc32c454b5cc39cebd0769f940b34f3d39ddaf157b95acb176027f81e17a",
     "labels": [
       "离群之刺现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Alistar.png": {
-    "path": "/classic-cache/d6ba9509b78a85b6523836be.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Alistar.png": {
+    "path": "/classic-cache/051ec7bac6914495e52feba4.png",
     "bytes": 28116,
     "sha256": "a1b9e0dc85d186fea8b7eccb91b7dc770ea6d3c5d5b53d9698cdf33524879259",
     "labels": [
       "牛头酋长现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Amumu.png": {
-    "path": "/classic-cache/71b735a5cb9bfe9929694e4b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Amumu.png": {
+    "path": "/classic-cache/451ccf2bca571ecd7e579bf8.png",
     "bytes": 24683,
     "sha256": "bb20e52d6f4808d3c3cb5038397fdbff174544ee7c9cf9271deee9240a4b1204",
     "labels": [
       "殇之木乃伊现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Anivia.png": {
-    "path": "/classic-cache/614bc4bc121c0a26a07f193d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Anivia.png": {
+    "path": "/classic-cache/29cf26fe53d349321ddbeae3.png",
     "bytes": 27008,
     "sha256": "f10e316692a616d9f27ff5548a52aa128e794ce736b8daa3e1a2b86217a406d5",
     "labels": [
       "冰晶凤凰现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Annie.png": {
-    "path": "/classic-cache/1653ac6ac45e7446cb8588c3.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Annie.png": {
+    "path": "/classic-cache/6bc87b929dd63c432f52ad5b.png",
     "bytes": 30267,
     "sha256": "97720fcc698033b18382e7475800d4aac6c436712d997d99df4a0ae99f6829e2",
     "labels": [
       "黑暗之女现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Ashe.png": {
-    "path": "/classic-cache/ed9021b0b0b5ffd82e87d4bb.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Ashe.png": {
+    "path": "/classic-cache/0dddaf4d18e57ae7bbbcf963.png",
     "bytes": 32121,
     "sha256": "423666bdb0685355be4576f78eb6406fd49469b4f6e9f780f1c5eb4349fed91f",
     "labels": [
       "寒冰射手现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Blitzcrank.png": {
-    "path": "/classic-cache/3cbbea72e8ed4b430ded906e.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Blitzcrank.png": {
+    "path": "/classic-cache/09cd9d9ac25b7d886ac20f72.png",
     "bytes": 29858,
     "sha256": "753db19576c52ab7af43bd5ec2631023654567ecb2e0d83389d016927610d74c",
     "labels": [
       "蒸汽机器人现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Brand.png": {
-    "path": "/classic-cache/e36dd741ddfb7b8a8ebe16fe.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Brand.png": {
+    "path": "/classic-cache/e8a415caaa1a57d2750c6a6e.png",
     "bytes": 30626,
     "sha256": "c50bbafb3ed2beea470479b28cd9b2e233a9f88760e61a76cd413d68bafbac52",
     "labels": [
       "复仇焰魂现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Caitlyn.png": {
-    "path": "/classic-cache/df900f3ebd27437e9e185951.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Caitlyn.png": {
+    "path": "/classic-cache/adfc068a2f37597f0cfbfbff.png",
     "bytes": 25976,
     "sha256": "f7a515360f30f33dfe5ab4e8886ce59a70c2d333f924252f48f5f9a2fbc6edf4",
     "labels": [
       "皮城女警现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Chogath.png": {
-    "path": "/classic-cache/dd57408b5243b4c5ff873914.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Chogath.png": {
+    "path": "/classic-cache/dc83f8dbd180c032270e7a97.png",
     "bytes": 32006,
     "sha256": "f5381fea0255a8a903381728fec79862dc5c426e25774c5e18def583fb3b1dfb",
     "labels": [
       "虚空恐惧现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Corki.png": {
-    "path": "/classic-cache/ea871a7bd33183b76384a245.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Corki.png": {
+    "path": "/classic-cache/22662bb20ad1177e18d62cba.png",
     "bytes": 28457,
     "sha256": "db997e48b9a4cda57b6e934c131d4718aca559f2b5bdaacc8e81a19d3c2953bb",
     "labels": [
       "英勇投弹手现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/DrMundo.png": {
-    "path": "/classic-cache/28b5bcbacaefe63c9952e203.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/DrMundo.png": {
+    "path": "/classic-cache/6ac6d5cc85821e5b860550dc.png",
     "bytes": 30630,
     "sha256": "496b97ef027d5f90b583329269714623701ad12d013c610ee4c7465916ecb8e0",
     "labels": [
       "祖安狂人现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Elise.png": {
-    "path": "/classic-cache/880c4947c338eb142d74d25a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Elise.png": {
+    "path": "/classic-cache/dc90dcc39aeeef8b01239bb6.png",
     "bytes": 27566,
     "sha256": "cb7e3ec0658c4e8cf86f2829b12203af68cfc9ab95b98579957427134d00c6e0",
     "labels": [
       "蜘蛛女皇现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Evelynn.png": {
-    "path": "/classic-cache/e520b12d2a4d863a4f89f180.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Evelynn.png": {
+    "path": "/classic-cache/6019bf60e1dcc9b14430b6c9.png",
     "bytes": 27174,
     "sha256": "7b09f45c7350fe57217f6833fb97427ea6cc8312b902f7fb8bbbf2a6d5c2f506",
     "labels": [
       "痛苦之拥现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Ezreal.png": {
-    "path": "/classic-cache/88378f3adc11a21119b321df.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Ezreal.png": {
+    "path": "/classic-cache/0466944b7a300c0a13da41fe.png",
     "bytes": 31064,
     "sha256": "676467c4362b8745a27db93a44619179820add83be95583d7b2adcfcb4eb7e35",
     "labels": [
       "探险家现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Fiddlesticks.png": {
-    "path": "/classic-cache/6e903126d51b25b15df89a85.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Fiddlesticks.png": {
+    "path": "/classic-cache/2bf5651512f5f82f011efbdd.png",
     "bytes": 27884,
     "sha256": "681544df2412f89a96052e835abe3327cfdd73801868aad20d07576a8157cc32",
     "labels": [
       "远古恐惧现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Fiora.png": {
-    "path": "/classic-cache/73196ccb8adc413a298decc6.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Fiora.png": {
+    "path": "/classic-cache/6b84970f5b7304b82ebb0154.png",
     "bytes": 28094,
     "sha256": "b76387ea62f007ece3e06e589ac15bc9bf5452472b70a0d847d096b06f6785b7",
     "labels": [
       "无双剑姬现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Fizz.png": {
-    "path": "/classic-cache/93a187470c1771fb923d7358.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Fizz.png": {
+    "path": "/classic-cache/3aa46ab4316336f9f87ddc0a.png",
     "bytes": 27947,
     "sha256": "447fa01c18cc5bdcd0e014825f7825a93f05d32bde8226bb69fdf58fd6412999",
     "labels": [
       "潮汐海灵现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Galio.png": {
-    "path": "/classic-cache/031864017df235b599b860a5.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Galio.png": {
+    "path": "/classic-cache/fb80f268600b37088c1b08e5.png",
     "bytes": 24739,
     "sha256": "25b4acea5a0d8d2b4de819e62fbf7e7bb4afdb94e0d18e8896cb28112a13dc3f",
     "labels": [
       "正义巨像现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Gangplank.png": {
-    "path": "/classic-cache/77fcc39b13a593c9a142a29b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Gangplank.png": {
+    "path": "/classic-cache/1e47e203066d3a1f56625cbf.png",
     "bytes": 28742,
     "sha256": "f2bed51abb3d68897a161e152f03e9c9e0bc13039e6b709f551397a52e5aeb39",
     "labels": [
       "海洋之灾现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Garen.png": {
-    "path": "/classic-cache/db07c049e9d618fe5d0dd1e6.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Garen.png": {
+    "path": "/classic-cache/8685b839eb3a7ea2b2e5a431.png",
     "bytes": 30705,
     "sha256": "53018603962e1867b391071f159bb4c60d57919422585c33bfd36551e97f3752",
     "labels": [
       "德玛西亚之力现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Gragas.png": {
-    "path": "/classic-cache/2457fe70d8f893cd515e56dc.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Gragas.png": {
+    "path": "/classic-cache/c69e8e859561e0c1ada7761c.png",
     "bytes": 28755,
     "sha256": "06599cb8a6b083a3250c3bcd701b1bab1c8f9dab6ea52c7709ac2c895431f4f6",
     "labels": [
       "酒桶现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Graves.png": {
-    "path": "/classic-cache/03431d862b00219ba60afa67.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Graves.png": {
+    "path": "/classic-cache/08e32f267f54ddbfc832feea.png",
     "bytes": 28267,
     "sha256": "6f171c830d729e9b8b23c6a4d772f2bd44f90304101f1e6a299920b4ecda67d9",
     "labels": [
       "法外狂徒现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Hecarim.png": {
-    "path": "/classic-cache/42e3c76e3eeb42b4fcb2bb76.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Hecarim.png": {
+    "path": "/classic-cache/879c6bf14ce584c60da2da22.png",
     "bytes": 28985,
     "sha256": "ba5b2d3fd406fdd81e52e359231024ef4877009bdcf61c9d7ca389916fe61509",
     "labels": [
       "战争之影现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Heimerdinger.png": {
-    "path": "/classic-cache/2a796324c76784a27128d428.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Heimerdinger.png": {
+    "path": "/classic-cache/50a3e5ac7ba41a90233a2ca6.png",
     "bytes": 32532,
     "sha256": "3e54bea65546474fa1154f9ac25c73bd51aff36db5c808377553b1e9f252c56d",
     "labels": [
       "大发明家现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Irelia.png": {
-    "path": "/classic-cache/763e4097d819acc3f4fe25e1.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Irelia.png": {
+    "path": "/classic-cache/a1dfb38b807e9423d75a6a7a.png",
     "bytes": 29037,
     "sha256": "a8cd7e83c7b327516869d67eb9cd96499bcf720d799b814830373cb200a98c9c",
     "labels": [
       "刀锋舞者现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Janna.png": {
-    "path": "/classic-cache/9ab69ded6e40fa6f6c746352.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Janna.png": {
+    "path": "/classic-cache/f5fd305c84830ab138be07fa.png",
     "bytes": 28129,
     "sha256": "d0a7b79a9d7673b429fc94bb2718a27bff8cdbbbafe9fac294f1cf0cc1982d83",
     "labels": [
       "风暴之怒现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/JarvanIV.png": {
-    "path": "/classic-cache/75e59ce2986b30b881294fd5.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/JarvanIV.png": {
+    "path": "/classic-cache/22dd3e4c7926352b63adb468.png",
     "bytes": 28504,
     "sha256": "9da74ae808585eff7f130f47ce4c6c3ddab0b302b1d39902e273ae0253592764",
     "labels": [
       "德玛西亚皇子现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Jax.png": {
-    "path": "/classic-cache/4e9fb75a5f96c6e073323c70.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Jax.png": {
+    "path": "/classic-cache/2420b5598927302d7bad947c.png",
     "bytes": 27107,
     "sha256": "441e8d865d461bc338a2d2d5a2a09f6151bbfdb4795ec8b59e66ee8654eebcca",
     "labels": [
       "武器大师现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Karma.png": {
-    "path": "/classic-cache/1acbdfbbf0eee67dbed51433.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Karma.png": {
+    "path": "/classic-cache/7bad04bf51452b646d389d31.png",
     "bytes": 30154,
     "sha256": "e1df55d95c9a90445b59615db2984c3a8a9d8df3578faf968872bbe2e0075bc0",
     "labels": [
       "天启者现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Karthus.png": {
-    "path": "/classic-cache/bc8d11e1f0f9cc93bafa8a8b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Karthus.png": {
+    "path": "/classic-cache/2397a1fcb4b79d769513e99a.png",
     "bytes": 28743,
     "sha256": "2b7015e102317b52900f9c69adfe462426301ac0f62c54502fdeae518d30392e",
     "labels": [
       "死亡颂唱者现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Kassadin.png": {
-    "path": "/classic-cache/766d2e7fdd82eb3787527ca6.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Kassadin.png": {
+    "path": "/classic-cache/035f9a4df112fbe9003f2f9b.png",
     "bytes": 29874,
     "sha256": "a7616e721346eef6a2af65470f98757e4ad184a53685d412edec583dd5989a15",
     "labels": [
       "虚空行者现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Katarina.png": {
-    "path": "/classic-cache/9c97c77a916049284da9f641.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Katarina.png": {
+    "path": "/classic-cache/f8917e3deecc0b20ba103cc9.png",
     "bytes": 26732,
     "sha256": "998f3a479b5441f86f4031aace49bbd70bb83a76c05d39b0697288fe50ba029e",
     "labels": [
       "不祥之刃现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Kayle.png": {
-    "path": "/classic-cache/5ad4c9ca23d8d1dea0fd3c84.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Kayle.png": {
+    "path": "/classic-cache/a7176dc2458622477d1adeab.png",
     "bytes": 24103,
     "sha256": "63dd90ebddcf8fcda57aa20f6f6b490ceea0958a45f9411946d4b9bd0d1293c6",
     "labels": [
       "正义天使现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Kennen.png": {
-    "path": "/classic-cache/365c9a7d71a4a500c5fa64b0.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Kennen.png": {
+    "path": "/classic-cache/2e814e03583864a6519a28ff.png",
     "bytes": 26105,
     "sha256": "71239ebd9236d5d0fdbccfb8741727e6f13dd007a4d6905e5aa82f6b36aceebd",
     "labels": [
       "狂暴之心现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/KogMaw.png": {
-    "path": "/classic-cache/4cf6d988e33ee0fd93a1c7c5.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/KogMaw.png": {
+    "path": "/classic-cache/863ee5f1f4c298dd48d0c667.png",
     "bytes": 29237,
     "sha256": "a5836dd40801e9f6275c1b74de8ba6de2de09ab2d24ec2e9695f958917348f1a",
     "labels": [
       "深渊巨口现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/LeeSin.png": {
-    "path": "/classic-cache/699548166fd3ae5e243fe49f.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/LeeSin.png": {
+    "path": "/classic-cache/448054bf34f7e43ad25177d6.png",
     "bytes": 24979,
     "sha256": "890f439dd16bfa686b3c6f06f9749eb5477e5b706a8ff85cb8161f91adcff9a8",
     "labels": [
       "盲僧现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Leona.png": {
-    "path": "/classic-cache/c34f5bc7da7176e136f29e50.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Leona.png": {
+    "path": "/classic-cache/2243b33c74a3e97adeb0b806.png",
     "bytes": 31573,
     "sha256": "d7e170e1d5c37b243663e03d480a4befe727d86d0733e3e411b90297cb192461",
     "labels": [
       "曙光女神现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Lucian.png": {
-    "path": "/classic-cache/7d84a8fe5b941347fe5ddda4.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Lucian.png": {
+    "path": "/classic-cache/4628410c2d77fbaea360e551.png",
     "bytes": 27998,
     "sha256": "75e3de3e43f732f815293472167e0022118a0be55a627f10794bc8043e2602cb",
     "labels": [
       "圣枪游侠现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Lulu.png": {
-    "path": "/classic-cache/632f8c8d33e91ea85a3266b8.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Lulu.png": {
+    "path": "/classic-cache/862160f4827eb3eb86ff8a6f.png",
     "bytes": 29539,
     "sha256": "ca22c4a042d66085ef7794c8b351b57880739be454aa4128fbdd7506c02d1a50",
     "labels": [
       "仙灵女巫现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Lux.png": {
-    "path": "/classic-cache/dd2ffa27af966bb93b926763.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Lux.png": {
+    "path": "/classic-cache/0a7e0d39893f5a058e55c4b4.png",
     "bytes": 29188,
     "sha256": "64639bea2aa7d622dd07287de7a7820950e567f0993c7dcc422e1e699fd743fd",
     "labels": [
       "光辉女郎现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Malphite.png": {
-    "path": "/classic-cache/9dea79298a96a054782e3db4.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Malphite.png": {
+    "path": "/classic-cache/69224b1fef3eaee6a94c0a7b.png",
     "bytes": 26063,
     "sha256": "233005b989ae25fc6e5e22d1325291bce2d64e49767ebb83413c0f91e1b157c6",
     "labels": [
       "熔岩巨兽现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Malzahar.png": {
-    "path": "/classic-cache/b41f13c8e38b9f5623fc39ea.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Malzahar.png": {
+    "path": "/classic-cache/9dc97ae15fe98a2dbb955edd.png",
     "bytes": 27604,
     "sha256": "c0f9eb031b22805d1bbed0cd0ee2a7f148541076c1655271665325e2dbf06911",
     "labels": [
       "虚空先知现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/MasterYi.png": {
-    "path": "/classic-cache/7337f467057983b1120994b8.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/MasterYi.png": {
+    "path": "/classic-cache/6ec7a86f95554b67a464a3b9.png",
     "bytes": 29421,
     "sha256": "1c23534926a7956a260591fb3cee8f38cb6de3d9d4f064fe93fb88c8f76b1b66",
     "labels": [
       "无极剑圣现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/MissFortune.png": {
-    "path": "/classic-cache/c0d1d5f5541288dae8b4f21f.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/MissFortune.png": {
+    "path": "/classic-cache/cd83315c4529a9e8f5972f43.png",
     "bytes": 25963,
     "sha256": "a8c3048bfb76b4e8b34e00193ed2febe69669918055ffda835ddb24905588733",
     "labels": [
       "赏金猎人现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/MonkeyKing.png": {
-    "path": "/classic-cache/d3b775d6899906596a35b21d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/MonkeyKing.png": {
+    "path": "/classic-cache/6fdd738b623c4a4e71004ae4.png",
     "bytes": 29161,
     "sha256": "2264db1ffde08659aee3380c8ac5643771d872d95a9c9090951d7f2849e61353",
     "labels": [
       "齐天大圣现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Mordekaiser.png": {
-    "path": "/classic-cache/86c7f8031da6a59f36082d3f.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Mordekaiser.png": {
+    "path": "/classic-cache/a0f9bc54f10d4d3efca5b1f3.png",
     "bytes": 26259,
     "sha256": "3d3521dedf02d446ae2a506b8b5395a9fba690567dbf6be3cf4523e8c439d9b8",
     "labels": [
       "铁铠冥魂现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Morgana.png": {
-    "path": "/classic-cache/1db83b2b8f1e600a20873a46.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Morgana.png": {
+    "path": "/classic-cache/c0d5edccc1748bf9cb81141f.png",
     "bytes": 26025,
     "sha256": "bd170027904c2e5a354e53dca0f5d50516a4f3d60a4fbb0c286c9eb32d8d8954",
     "labels": [
       "堕落天使现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Nami.png": {
-    "path": "/classic-cache/c88d3dac95ce1f39b7672590.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Nami.png": {
+    "path": "/classic-cache/c476d56e8cbd519b88e08ea0.png",
     "bytes": 28176,
     "sha256": "f43e652c61cd4998274e966a1e91e00fb3d51cc6202f7e53a5f2c7da160ddd23",
     "labels": [
       "唤潮鲛姬现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Nasus.png": {
-    "path": "/classic-cache/22fa98268a3191579da839e0.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Nasus.png": {
+    "path": "/classic-cache/24708a36730700921803868d.png",
     "bytes": 29763,
     "sha256": "80b838812e5f14b1e37900d1c14c54835b535d5bd36af6ace19fd23344989be3",
     "labels": [
       "沙漠死神现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Nautilus.png": {
-    "path": "/classic-cache/23d34389794cc9b3307c1b04.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Nautilus.png": {
+    "path": "/classic-cache/e7492a3ecef911e5b96e432b.png",
     "bytes": 28532,
     "sha256": "6e8dfa2e6ba3d4564745fe69ace7c796898aa023a2af2727b0be127316712c2c",
     "labels": [
       "深海泰坦现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Nidalee.png": {
-    "path": "/classic-cache/73fe5845d2e1faf3d78a6878.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Nidalee.png": {
+    "path": "/classic-cache/ac74da5e4828848b545298ac.png",
     "bytes": 26077,
     "sha256": "f6291b72f4ea9ea1fa272f61443bc3580e3f61b870be31c0743824a1c25abf33",
     "labels": [
       "狂野女猎手现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Nunu.png": {
-    "path": "/classic-cache/b8aea5e884f255cf0eb295ee.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Nunu.png": {
+    "path": "/classic-cache/71ef985167d55f130bd8085a.png",
     "bytes": 27502,
     "sha256": "dab4f686598e93d0d430db32d824a98f34b5a0055331a654c84ea3759fe6ed6a",
     "labels": [
       "雪原双子现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Olaf.png": {
-    "path": "/classic-cache/8f9fb2c3bbc769a8ec126c9d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Olaf.png": {
+    "path": "/classic-cache/89e2ab5a0880b815ea981ad5.png",
     "bytes": 30509,
     "sha256": "17d439590f461a2d4d5bdacd33d4d2c31009ea8f57b46a6a427b0db96f6bd0ab",
     "labels": [
       "狂战士现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Pantheon.png": {
-    "path": "/classic-cache/bc3d0a4cee0b094a781958f0.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Pantheon.png": {
+    "path": "/classic-cache/d27e45bf6dd5771957167f06.png",
     "bytes": 28793,
     "sha256": "0ab8b436d5d7dd0a4163ec105a4977fc77abfd16757d46a9e958242f2d6858c1",
     "labels": [
       "不屈之枪现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Poppy.png": {
-    "path": "/classic-cache/aec0714d5c21a4171f70b46d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Poppy.png": {
+    "path": "/classic-cache/a79ab7b258ba640ea3fbe64e.png",
     "bytes": 31447,
     "sha256": "c2cdd3a868b4b9ac5f1f3fef5ca77e930f32b0c98a5c3b83bcb099f75a4b6b7c",
     "labels": [
       "圣锤之毅现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Quinn.png": {
-    "path": "/classic-cache/f73d05b0e43a17de05ef4e7e.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Quinn.png": {
+    "path": "/classic-cache/24095861cd3ed09d7e1106f1.png",
     "bytes": 30154,
     "sha256": "69ac72c21c771fe80492a7a6316dbe7053c0f20f0bb35ecb59d43f6d916d90e4",
     "labels": [
       "德玛西亚之翼现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Rammus.png": {
-    "path": "/classic-cache/c71ef012526b79c61c0cc5e3.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Rammus.png": {
+    "path": "/classic-cache/52a3637b02f41f3128cf6e20.png",
     "bytes": 27369,
     "sha256": "911faa8b6e8a2b5e018fa1c5f36617488036782e163faa8029d1475885cef6ab",
     "labels": [
       "披甲龙龟现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Ryze.png": {
-    "path": "/classic-cache/9ab6d7f0f00fc4ff7a168f1d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Ryze.png": {
+    "path": "/classic-cache/64612d7b0dae1c183d3319ff.png",
     "bytes": 25185,
     "sha256": "abb747c8b8402625d4cc6b5b3c48950b192823216532c74f26d4b5ccf8851290",
     "labels": [
       "符文法师现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Shaco.png": {
-    "path": "/classic-cache/0af5a5509f69d220df1dcb59.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Shaco.png": {
+    "path": "/classic-cache/72238b36de023cbda708837d.png",
     "bytes": 28951,
     "sha256": "83ad990c0196b9b33c06b6cdf672db2d1ab3025cde131961ba767ddfff9c7a8a",
     "labels": [
       "恶魔小丑现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Shen.png": {
-    "path": "/classic-cache/c176bb5eaf626a8e162f95a3.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Shen.png": {
+    "path": "/classic-cache/4566f87aa5f55a51372aac77.png",
     "bytes": 25298,
     "sha256": "6570a91fb958ef079805dadd8c7a628da569d9601883b6b24610f0858bda8239",
     "labels": [
       "暮光之眼现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Shyvana.png": {
-    "path": "/classic-cache/aa8fac66312695ac0792c9f7.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Shyvana.png": {
+    "path": "/classic-cache/e5f2101def0fb9784655a2ca.png",
     "bytes": 39720,
     "sha256": "f65317e9ded51d97ea2e53293984b7a5c640242a7099df7fb3de0aad356594b0",
     "labels": [
       "龙血武姬现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Singed.png": {
-    "path": "/classic-cache/880c9e6639b38dbba4ad0d02.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Singed.png": {
+    "path": "/classic-cache/d8062d523c4ca0705204d244.png",
     "bytes": 27610,
     "sha256": "0429cad926e909454d99f3286b091a143780b87f67f867b54ab4ee152bdbec99",
     "labels": [
       "炼金术士现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Sion.png": {
-    "path": "/classic-cache/83b9fa7fbfe1979c1f88d158.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Sion.png": {
+    "path": "/classic-cache/f7360c5289c837b138d46127.png",
     "bytes": 26066,
     "sha256": "4908e30a48ec3cbdb080de1667833e2d018ea03fb296e9760066a46793adb528",
     "labels": [
       "亡灵战神现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Sivir.png": {
-    "path": "/classic-cache/59b65d3152d293ae6a3eb16e.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Sivir.png": {
+    "path": "/classic-cache/1e3f0c5babeae6dd0357309f.png",
     "bytes": 28166,
     "sha256": "dd8642cd3fb6df0d85d1837dc94c7128e4292554a93451081a5537d0b888172b",
     "labels": [
       "战争女神现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Skarner.png": {
-    "path": "/classic-cache/93ff5756802e4cc55b00052a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Skarner.png": {
+    "path": "/classic-cache/58c8d4fef412c1e56e81dbd1.png",
     "bytes": 29500,
     "sha256": "cefd97204e9634f6d46216b736279b988f5e0f3ce1ca49ed43a519effd6f05c9",
     "labels": [
       "上古领主现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Sona.png": {
-    "path": "/classic-cache/9e6113a77a2656c45a9d1494.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Sona.png": {
+    "path": "/classic-cache/7abb89ba429944ca2b92ebee.png",
     "bytes": 26340,
     "sha256": "e77557069fdc32b412190e8218d2df235d89265100758f0fd8a3399e7b585548",
     "labels": [
       "琴瑟仙女现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Soraka.png": {
-    "path": "/classic-cache/d02a790a01dcc184a5ce37af.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Soraka.png": {
+    "path": "/classic-cache/bf8f7bc775657c12cebbe482.png",
     "bytes": 31969,
     "sha256": "ca2774023350198da7025b950c85be65e3506e2f40947ca4151f0e8df4a8be15",
     "labels": [
       "众星之子现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Swain.png": {
-    "path": "/classic-cache/4fa04eefc008c0bdfe177095.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Swain.png": {
+    "path": "/classic-cache/6869f71aa17695309607022b.png",
     "bytes": 24066,
     "sha256": "9f4550dd903cf19ee587bd0870f630ce90d6f62fac2a2d07fe46bda153db8f9b",
     "labels": [
       "诺克萨斯统领现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Taric.png": {
-    "path": "/classic-cache/bfc99d15823305a5ca488741.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Taric.png": {
+    "path": "/classic-cache/a825b5d3d76b6fadfabca30a.png",
     "bytes": 27875,
     "sha256": "3a91b21a88d562717fb78ada18c95a0b7a077e0c3b941d34829ba5e4d7eceaed",
     "labels": [
       "瓦洛兰之盾现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Teemo.png": {
-    "path": "/classic-cache/552e6d6a5706b67753b6a7f7.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Teemo.png": {
+    "path": "/classic-cache/46fdf7079a1a308dabe861e8.png",
     "bytes": 21456,
     "sha256": "bbf4b7238b1f62dc02b39208db764588d18a712a7ea96205f5932730c08a62ee",
     "labels": [
       "迅捷斥候现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Tristana.png": {
-    "path": "/classic-cache/fb56610430f63136123721fd.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Tristana.png": {
+    "path": "/classic-cache/2a9f29ddae2659cad1ad1dbd.png",
     "bytes": 30313,
     "sha256": "9f46e6dd9d49bf8fd2c6dc7397fa4badb35bf0f355334301782c7f9e13f00aa5",
     "labels": [
       "麦林炮手现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Tryndamere.png": {
-    "path": "/classic-cache/6ab721b08e8396dbdd275c75.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Tryndamere.png": {
+    "path": "/classic-cache/f0d2f4b0f4d38125c68d2b2e.png",
     "bytes": 31840,
     "sha256": "e715ed3a7eb5f3a0dcfb6da2a9c8ae05d9c197ef514f959d5a94bff38d4dff48",
     "labels": [
       "蛮族之王现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/TwistedFate.png": {
-    "path": "/classic-cache/95d4517395a491cdd04dfd4a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/TwistedFate.png": {
+    "path": "/classic-cache/a3e3ae98579de755bf87f4a0.png",
     "bytes": 24949,
     "sha256": "5f5944763b0d7c8fc68edad413a908799e2cfcae8a850a6ff746a16afc553670",
     "labels": [
       "卡牌大师现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Twitch.png": {
-    "path": "/classic-cache/4709d5c3eca0fecce62ebbe8.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Twitch.png": {
+    "path": "/classic-cache/2aa27670371670e4b113b479.png",
     "bytes": 28474,
     "sha256": "823c7394b6cdc9fcc0b70f0e71578d8fbe1f06533e1010aa7785ebae4d1209ad",
     "labels": [
       "瘟疫之源现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Vayne.png": {
-    "path": "/classic-cache/70dc04b0ee5981a40edc3e4b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Vayne.png": {
+    "path": "/classic-cache/3ac18a94ec61514cd131c24b.png",
     "bytes": 28367,
     "sha256": "d9ea091b8d2eddbf7d08001866d7a0798f2649a7067c61dce15ac92fbc3cb723",
     "labels": [
       "暗夜猎手现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Veigar.png": {
-    "path": "/classic-cache/7217f7dfbdbff9bcd91c0283.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Veigar.png": {
+    "path": "/classic-cache/141175a6b4f7989de805b8b5.png",
     "bytes": 26807,
     "sha256": "ace2c32c06d8a96b4de943228b01812f220adf3a4dfaa396e922f7c696221024",
     "labels": [
       "邪恶小法师现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Volibear.png": {
-    "path": "/classic-cache/fb97ed9c02c321f8ba2f47cd.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Volibear.png": {
+    "path": "/classic-cache/81fa8be9fb53d5d1dcf2b45e.png",
     "bytes": 29127,
     "sha256": "36ab730707d6835a6a6fefe216ae3d8bf9d416970fc3223c857f109f404ee5ab",
     "labels": [
       "不灭狂雷现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Warwick.png": {
-    "path": "/classic-cache/ef1faae2d8e9781a827f31a1.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Warwick.png": {
+    "path": "/classic-cache/411b0b004aa6e97ab926c5af.png",
     "bytes": 24895,
     "sha256": "f5df0cb82ea9fba63308254d04d68307c09d1b17b1a28426d1550da39d9c79b8",
     "labels": [
       "祖安怒兽现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/XinZhao.png": {
-    "path": "/classic-cache/1459508553f99dbc80d3a803.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/XinZhao.png": {
+    "path": "/classic-cache/b9317457d13d659771d7bf21.png",
     "bytes": 35410,
     "sha256": "f70e9570c60a33328b4e0c0437bcb33cc2320056ba0724e0279e553436da5667",
     "labels": [
       "德邦总管现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Yorick.png": {
-    "path": "/classic-cache/7a5b3f5165cc7adcbe7ed282.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Yorick.png": {
+    "path": "/classic-cache/17d569e2913d2d45e352d76e.png",
     "bytes": 26344,
     "sha256": "151b64e886222db394d6397734f5297862ddc4216fcc1db4a6ad5d33d5dc241a",
     "labels": [
       "牧魂人现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/champion/Zilean.png": {
-    "path": "/classic-cache/da5a634f9455d40831e047bd.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/champion/Zilean.png": {
+    "path": "/classic-cache/22cafad103c365e83449e1a9.png",
     "bytes": 32671,
     "sha256": "07c45f7285e5d741f17ebdc07889971c46c67f09846fdb9a3f0f0123aedd8850",
     "labels": [
       "时光守护者现代头像"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Aatrox_Passive.png": {
-    "path": "/classic-cache/eb7c3c5e177ba3ab34ef8947.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Aatrox_Passive.png": {
+    "path": "/classic-cache/fe45bc049054ab2daab2374d.png",
     "bytes": 5698,
     "sha256": "98680d347a31b398f1146955043802582d7f3b3a4c89d9f7b1e802a1e6898f4a",
     "labels": [
       "暗裔剑魔现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Ahri_SoulEater2.png": {
-    "path": "/classic-cache/0bf103f53157bfe22a2fa897.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Ahri_SoulEater2.png": {
+    "path": "/classic-cache/d95d4bd52d484c5fe4d5c613.png",
     "bytes": 6119,
     "sha256": "5f23ebc71c6812a02c601525a25e426ff14920eeb22763b0f9b1abc9e4a5a2d9",
     "labels": [
       "九尾妖狐现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Akali_P.png": {
-    "path": "/classic-cache/86c086762b34faf89c79122f.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Akali_P.png": {
+    "path": "/classic-cache/ac1e729b31d797dff8f5dde9.png",
     "bytes": 5069,
     "sha256": "5d339e9097d0685523374b0a97cdfa56cad0e94367de84bcd1aef9b704d8924f",
     "labels": [
       "离群之刺现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Alistar_E.png": {
-    "path": "/classic-cache/c6c01b156366af5c07b224d3.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Alistar_E.png": {
+    "path": "/classic-cache/e8e7e025a0accb25591b1051.png",
     "bytes": 6323,
     "sha256": "7a56bcd2ca9566ee57904e8ede225379dc8e2058a1b93b35a1157b7b07410d3f",
     "labels": [
       "牛头酋长现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Amumu_Passive.png": {
-    "path": "/classic-cache/2c6b081a80c9894de15355c2.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Amumu_Passive.png": {
+    "path": "/classic-cache/c8b1317515bc45735af1fd46.png",
     "bytes": 6943,
     "sha256": "11e272017648a2eb2a885c14c0d9a59b017e7bdd06426bc72276be99b6f93994",
     "labels": [
       "殇之木乃伊现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Anivia_P.png": {
-    "path": "/classic-cache/7961115781e191b53b7bb66f.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Anivia_P.png": {
+    "path": "/classic-cache/fd44ccd973f0b15e9705d93f.png",
     "bytes": 5150,
     "sha256": "82b7bbfdde2c3bb605f8c4788b63260b8ee415547d0c499a0f254f9e09ce211f",
     "labels": [
       "冰晶凤凰现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Annie_Passive.png": {
-    "path": "/classic-cache/845442195f950b043b5ff757.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Annie_Passive.png": {
+    "path": "/classic-cache/f27e963338bdccdbe31321fc.png",
     "bytes": 5744,
     "sha256": "f0bd60db5fbcade387268538626bbc21f185714e707f19eaf44334195e99bcc1",
     "labels": [
       "黑暗之女现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Armordillo_ScavengeArmor.png": {
-    "path": "/classic-cache/800c8df44e5d2b8665b45f4a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Armordillo_ScavengeArmor.png": {
+    "path": "/classic-cache/25bf62558eaaf126eac7516a.png",
     "bytes": 6839,
     "sha256": "ec062f37f18b4897e1668e278d614d406adb9c5a659559c337d6bc6378ddae43",
     "labels": [
       "披甲龙龟现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Armsmaster_MasterOfArms.png": {
-    "path": "/classic-cache/ae2ca5832affbc18091cae46.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Armsmaster_MasterOfArms.png": {
+    "path": "/classic-cache/d9fc6ea50a6136f5a00b7b8b.png",
     "bytes": 5547,
     "sha256": "59fa8e6026ad95046bc2df07961118917faf0e59b07ff487a169f759857aa768",
     "labels": [
       "武器大师现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Ashe_P.png": {
-    "path": "/classic-cache/77065ac5f795f9f746d32eb8.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Ashe_P.png": {
+    "path": "/classic-cache/bd31a9ed04bdb1f00101d5ba.png",
     "bytes": 6172,
     "sha256": "a7f3fb4c9750c5ea46330d16394a2001290e56b6d709f8bd033d4e8b59713bb3",
     "labels": [
       "寒冰射手现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Blitzcrank_ManaBarrier.png": {
-    "path": "/classic-cache/4091d6336d60369c09907463.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Blitzcrank_ManaBarrier.png": {
+    "path": "/classic-cache/ebab375ae73b75362f8e8b33.png",
     "bytes": 5199,
     "sha256": "af0a4c09a459c29123e77fe877bf48a32226ff65bb87393085fb354cdefba3c8",
     "labels": [
       "蒸汽机器人现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/BrandP.png": {
-    "path": "/classic-cache/8bfe7d045beeddb3941628fe.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/BrandP.png": {
+    "path": "/classic-cache/7584b17bd1fcc69df440799b.png",
     "bytes": 4743,
     "sha256": "3f689d427e92dce65a510f6ee451a46156e74361686636fb3b5c606c4655c6a8",
     "labels": [
       "复仇焰魂现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Caitlyn_Headshot.png": {
-    "path": "/classic-cache/b7b41dd1b9a6fbaf19a160a9.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Caitlyn_Headshot.png": {
+    "path": "/classic-cache/785a53e1cf2eec74186f6cb5.png",
     "bytes": 6084,
     "sha256": "a2d7a6a2d69d504f3e437c681ab64766742bec95d25f26267c0a4dca9bd8e30d",
     "labels": [
       "皮城女警现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Cardmaster_SealFate.png": {
-    "path": "/classic-cache/2eafb23fe45c2c81a60a108b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Cardmaster_SealFate.png": {
+    "path": "/classic-cache/b5c297060cd2e6902c2f8ade.png",
     "bytes": 5653,
     "sha256": "d248777c38b401f108aeafe82ed3dd91829c56a19bf0e3a70a55bb7eaeae1064",
     "labels": [
       "卡牌大师现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Corki_RapidReload.png": {
-    "path": "/classic-cache/7f541601dbff0aecf36b5c8c.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Corki_RapidReload.png": {
+    "path": "/classic-cache/b8a62e27bfa97e6a40893460.png",
     "bytes": 5625,
     "sha256": "123769eec1c2174b1d46941dcfbb48d8a42dd3c327e33aa21e56360e29764b8d",
     "labels": [
       "英勇投弹手现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/DrMundo_P.png": {
-    "path": "/classic-cache/755ce612a4c80936c426d30b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/DrMundo_P.png": {
+    "path": "/classic-cache/d4240d291f066f5b3c48dc08.png",
     "bytes": 6462,
     "sha256": "d0d1146f4cf8e06b603ad6c3be6ad6c04235815527a57f2537c2ebdc2fdbefe9",
     "labels": [
       "祖安狂人现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/ElisePassive.png": {
-    "path": "/classic-cache/c350a1d2efabb9c6ec91c601.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/ElisePassive.png": {
+    "path": "/classic-cache/78be0010d79438f1b7521e7c.png",
     "bytes": 6598,
     "sha256": "9b12117e8754dbd2f9ff38a8411c4d42126b29b879dd049536efe8849aa3de91",
     "labels": [
       "蜘蛛女皇现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Evelynn_Passive.png": {
-    "path": "/classic-cache/3c12f9f6ca345455a9cd2073.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Evelynn_Passive.png": {
+    "path": "/classic-cache/00d5e9c497617c1f41c0d779.png",
     "bytes": 5990,
     "sha256": "3249bb92778281c76a04017e5470223cdb84cc6192dad005c249325049eb9fd7",
     "labels": [
       "痛苦之拥现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Ezreal_RisingSpellForce.png": {
-    "path": "/classic-cache/9722bf0ab9e2e6af3b9de06f.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Ezreal_RisingSpellForce.png": {
+    "path": "/classic-cache/307b3c19aaa4597f9b4afa22.png",
     "bytes": 6820,
     "sha256": "0440e0476807381c9f32407e92c1c686d346972da4d7f5a132ecea2854c26360",
     "labels": [
       "探险家现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/FallenAngel_Empathize.png": {
-    "path": "/classic-cache/16ee3b38a5797ef32b362210.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/FallenAngel_Empathize.png": {
+    "path": "/classic-cache/9da7b628d67874d6dacf76e0.png",
     "bytes": 5841,
     "sha256": "e18290599d085b3fb3ab0620bdb230501725acb249cfe9f69472de167ecee5f7",
     "labels": [
       "堕落天使现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/FiddlesticksP.png": {
-    "path": "/classic-cache/272e3b3de16f1630428e9121.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/FiddlesticksP.png": {
+    "path": "/classic-cache/6373f1bf30b9a044c8d7c755.png",
     "bytes": 6080,
     "sha256": "6e08bc5c3421b94e8ee2db0dc94c4d3fed48315c95b1fbdb3be7a89c220ed14e",
     "labels": [
       "远古恐惧现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Fiora_P.png": {
-    "path": "/classic-cache/fd071d8c7b0801f691d29bef.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Fiora_P.png": {
+    "path": "/classic-cache/ad4de745fc123869caa01b35.png",
     "bytes": 5284,
     "sha256": "8f23f668e3dc92066b6c4b94922fc2e41b95cc42bba9e4e77054eea92040742c",
     "labels": [
       "无双剑姬现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Fizz_P.png": {
-    "path": "/classic-cache/765b714930f8c1b248ef9308.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Fizz_P.png": {
+    "path": "/classic-cache/f899ffd0101a0eec3e702533.png",
     "bytes": 6408,
     "sha256": "47fa7c54aa3c1fbaee25c7f3a235342e71f4e5b9d5751ea8a801c192f9cb81da",
     "labels": [
       "潮汐海灵现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Galio_Passive.png": {
-    "path": "/classic-cache/87a6c417cd01edbf1e8a79ae.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Galio_Passive.png": {
+    "path": "/classic-cache/38ff88d5ea8c7415e3d290ea.png",
     "bytes": 6434,
     "sha256": "5a42c1fbc345e637d13f1d2f2c4dc92bf7e18e9c61b23ade10ec96006c25474d",
     "labels": [
       "正义巨像现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Gangplank_Passive.png": {
-    "path": "/classic-cache/0c8c96cb71db6717757b86b4.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Gangplank_Passive.png": {
+    "path": "/classic-cache/22ca0b3b05f49d58a3daa424.png",
     "bytes": 5977,
     "sha256": "1706cb9323155d8a534f4ec13a467762f713d76704b7b854db2d9dac495576ba",
     "labels": [
       "海洋之灾现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Garen_Passive.png": {
-    "path": "/classic-cache/3b7f4f791aef2473c4955e57.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Garen_Passive.png": {
+    "path": "/classic-cache/c18d3eba1eb5ddc3a6988ce1.png",
     "bytes": 6098,
     "sha256": "17eba35927ea5085b35fa3b359eb36b85aeb71db59d4d0bc96333f697a5b6d7e",
     "labels": [
       "德玛西亚之力现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/GragasPassiveHeal.png": {
-    "path": "/classic-cache/77888b358dbc7447567c8e58.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/GragasPassiveHeal.png": {
+    "path": "/classic-cache/f5234b9ebdcfbd0fb8a51014.png",
     "bytes": 6020,
     "sha256": "9c7bca304f840832bbb93c1e3bd38fd1c99d85a7e6132e9fe1df5abe32e97979",
     "labels": [
       "酒桶现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/GravesTrueGrit.png": {
-    "path": "/classic-cache/c3e910e5fafa26afa682bb98.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/GravesTrueGrit.png": {
+    "path": "/classic-cache/28db25f6afd9bee8d1549389.png",
     "bytes": 5607,
     "sha256": "31a75993b4974350b3cf3b752a13bb956751a5f7227dfd66c82e32c525177913",
     "labels": [
       "法外狂徒现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/GreenTerror_TailSpike.png": {
-    "path": "/classic-cache/3fd3f7f37f0beb652c78d2eb.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/GreenTerror_TailSpike.png": {
+    "path": "/classic-cache/c09cae66c5400dd9d370fd56.png",
     "bytes": 6679,
     "sha256": "51bb31118cfe492b7f6bb4182767202219239a9c30549b87830cf4b66b1fdb3b",
     "labels": [
       "虚空恐惧现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Hecarim_Passive.png": {
-    "path": "/classic-cache/2cde287eadbece4ed0fe3c19.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Hecarim_Passive.png": {
+    "path": "/classic-cache/3e1ed9b437dab5099de6e84b.png",
     "bytes": 6488,
     "sha256": "f5838fb61e2fe7d229c55e002aedbfd7e30cb5c10b95c3c310f56b3ac12c4785",
     "labels": [
       "战争之影现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Heimerdinger_Passive.png": {
-    "path": "/classic-cache/d997fe35e74f8360f871f85e.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Heimerdinger_Passive.png": {
+    "path": "/classic-cache/ea1ae1b4c17bba63f0d66fae.png",
     "bytes": 6236,
     "sha256": "326edf9ac6c9e8773df4897f8de1bcc75cfa010f55c59dbae245b6e01375f346",
     "labels": [
       "大发明家现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Irelia_Passive.png": {
-    "path": "/classic-cache/4ab49b216b8028ecbd3762aa.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Irelia_Passive.png": {
+    "path": "/classic-cache/1ba033598466d2718e3dd3ba.png",
     "bytes": 5732,
     "sha256": "036c8468deb679d380edd37070681ea7992cac07101b385048941c332cdb5cdf",
     "labels": [
       "刀锋舞者现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/JannaP.png": {
-    "path": "/classic-cache/164d36a6fd008423cd8c03e7.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/JannaP.png": {
+    "path": "/classic-cache/6078d6a3227845e635b7b5fc.png",
     "bytes": 7070,
     "sha256": "e0d42edae4f3e760b1334b12b2129854467158c29c896a53988fabd5368e9ec4",
     "labels": [
       "风暴之怒现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/JarvanIVP.png": {
-    "path": "/classic-cache/55dc03754d2571fc7e6af551.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/JarvanIVP.png": {
+    "path": "/classic-cache/8da393e3fa59fd11300235ef.png",
     "bytes": 6078,
     "sha256": "b88c4779f05ade7279686a5d6b99a8904d25b75dd6dc347171538b7384d0b3f4",
     "labels": [
       "德玛西亚皇子现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Jester_CarefulStrikes.png": {
-    "path": "/classic-cache/893fb73e693141ba6011b139.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Jester_CarefulStrikes.png": {
+    "path": "/classic-cache/5bb53fd4d328e4742dff060b.png",
     "bytes": 6090,
     "sha256": "606b774a95f0647e6a416e152daed585fdda3448b11ae113af9f7009f8accf8c",
     "labels": [
       "恶魔小丑现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Karma_Passive.png": {
-    "path": "/classic-cache/4a05bdd80c56fc5fd1c969bd.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Karma_Passive.png": {
+    "path": "/classic-cache/8e1c23e50f925ab32bf01a5c.png",
     "bytes": 5228,
     "sha256": "138593083ea40265dcef9a72a7540e536d700e8b0501cfb88dd89de31838ca03",
     "labels": [
       "天启者现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Karthus_Passive.png": {
-    "path": "/classic-cache/1fc5fb0cef35db4d64aef77c.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Karthus_Passive.png": {
+    "path": "/classic-cache/dd39c2d8194589cf74345c79.png",
     "bytes": 7582,
     "sha256": "3024f4dd326da4ff070555522734a1087d14435be3ede7a3977538dd5b8cd2e7",
     "labels": [
       "死亡颂唱者现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Kassadin_Passive.png": {
-    "path": "/classic-cache/0a79f3a4152603014e124957.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Kassadin_Passive.png": {
+    "path": "/classic-cache/fe81aa678bab0243f5622845.png",
     "bytes": 6025,
     "sha256": "f0c8a472eec25714356ed47a1989333e5d3f0dd52eb1cdb2d2b8cbaea2f5d0a1",
     "labels": [
       "虚空行者现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Katarina_Passive.png": {
-    "path": "/classic-cache/cb23b6a87f24823195a04722.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Katarina_Passive.png": {
+    "path": "/classic-cache/719febb73dd21d647a13e54f.png",
     "bytes": 7147,
     "sha256": "8c8b3b3b499ef35e9a8b7aeb32e1fa162d0826c6288c0fd7ad3197c0e12e6551",
     "labels": [
       "不祥之刃现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Kayle_P.png": {
-    "path": "/classic-cache/40e1beced43aff67c96062f7.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Kayle_P.png": {
+    "path": "/classic-cache/d3d60b887400c1e4fad33047.png",
     "bytes": 5860,
     "sha256": "a43802539ae8aadfe82350f0dc3ab5e110177af7b8f3e918b5d8a7768b8d34ad",
     "labels": [
       "正义天使现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Kennen_Passive.png": {
-    "path": "/classic-cache/2bd1b5415b2038c7ed91201e.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Kennen_Passive.png": {
+    "path": "/classic-cache/1951dc5a0ecbf81f2270bbd8.png",
     "bytes": 6161,
     "sha256": "7cf5f1561058cb673f77afe8d7d90b4034ce2346a2feb4968cc89996ea1e6c87",
     "labels": [
       "狂暴之心现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/KogMaw_IcathianSurprise.png": {
-    "path": "/classic-cache/3dcd575187e50079cacaaec0.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/KogMaw_IcathianSurprise.png": {
+    "path": "/classic-cache/2200a1c532bf2f486ec8c1d6.png",
     "bytes": 6945,
     "sha256": "e3b1092dcd4b1dd65b8b2df0917d03a1bea67b56e6d52b1ac418d457b8c34957",
     "labels": [
       "深渊巨口现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/LeeSinPassive.png": {
-    "path": "/classic-cache/b695a176021d888df530567a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/LeeSinPassive.png": {
+    "path": "/classic-cache/e34d47fcd492b81e8cf75e36.png",
     "bytes": 7106,
     "sha256": "797817c635d38e7f05aa24cce142a2c4f173547aeb060951a860f40ef2565a52",
     "labels": [
       "盲僧现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/LeonaSunlight.png": {
-    "path": "/classic-cache/ba80db44ac0ae168cc5ab98f.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/LeonaSunlight.png": {
+    "path": "/classic-cache/74bc7c8786277dfe3ed96a02.png",
     "bytes": 5740,
     "sha256": "2cbf4696f251d9969bb419c1182bc5a5570e6eefad48d248adfde18a65cbbb01",
     "labels": [
       "曙光女神现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Lucian_Passive.png": {
-    "path": "/classic-cache/cbf80c4b772eed6e4c3e451a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Lucian_Passive.png": {
+    "path": "/classic-cache/36159bad511b2fcb59c8a478.png",
     "bytes": 5743,
     "sha256": "3f27cfaea555d4e74c33afba6b80bed6ef1d7dc4524ee00ba9f1ceaf999eb42f",
     "labels": [
       "圣枪游侠现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Lulu_PixFaerieCompanion.png": {
-    "path": "/classic-cache/107b2db9ea6f5a54a6f459fb.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Lulu_PixFaerieCompanion.png": {
+    "path": "/classic-cache/822d10473dd4557eb632dcfb.png",
     "bytes": 7225,
     "sha256": "5c38560230b7754ce95e61f9d3bf644095ed491a3bf10a95b6d5840f29107ed9",
     "labels": [
       "仙灵女巫现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/LuxIlluminatingFraulein.png": {
-    "path": "/classic-cache/ff5db8dea4c861db2298d57b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/LuxIlluminatingFraulein.png": {
+    "path": "/classic-cache/da876eaaf9cb106e14962729.png",
     "bytes": 5815,
     "sha256": "2b4f421b424450afeca3757d86fbceed1c15a67960c5ccdddbf3341d71042b68",
     "labels": [
       "光辉女郎现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Malphite_GraniteShield.png": {
-    "path": "/classic-cache/8ddd164edafb6a07d4d9d89c.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Malphite_GraniteShield.png": {
+    "path": "/classic-cache/1840de179a43392e140b0ada.png",
     "bytes": 6952,
     "sha256": "6f1a68683f3df3b4c77222a32a1b75b7bd45b76fcac9f8dcc12e874da082244b",
     "labels": [
       "熔岩巨兽现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Malzahar_Passive.png": {
-    "path": "/classic-cache/417eca385f3214bec753cc89.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Malzahar_Passive.png": {
+    "path": "/classic-cache/326705845f90f79f2ede3aec.png",
     "bytes": 5925,
     "sha256": "a94ad58e4b31974eaefed1efed007b62cd5accd710ced031297df6ce251e3dab",
     "labels": [
       "虚空先知现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/MasterYi_Passive1.png": {
-    "path": "/classic-cache/1d5d8309556c9909fa2acbae.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/MasterYi_Passive1.png": {
+    "path": "/classic-cache/4df947713dd322b9a9f6ef1e.png",
     "bytes": 4477,
     "sha256": "e2fec7b43f9e2bc724baa0cee0b036c5ba684443513616b7373ff303b425d611",
     "labels": [
       "无极剑圣现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/MissFortune_W.png": {
-    "path": "/classic-cache/5b64aa35758899269936fc1f.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/MissFortune_W.png": {
+    "path": "/classic-cache/583f944d60dd1a13561e5e17.png",
     "bytes": 5212,
     "sha256": "b7b736fa15fe258c62b608d7b8339259cca1843aafaefb27f5a911920a78abb4",
     "labels": [
       "赏金猎人现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/MonkeyKingStoneSkin.png": {
-    "path": "/classic-cache/c47dd0c24f14651266df39bc.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/MonkeyKingStoneSkin.png": {
+    "path": "/classic-cache/0f3e38fc005566f6d900a23d.png",
     "bytes": 6821,
     "sha256": "6c4040f43a9dcd61b6c6ffaba67de8071804fe73122eec01158b5504c3d0d59c",
     "labels": [
       "齐天大圣现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/MordekaiserPassive.png": {
-    "path": "/classic-cache/88e4da3e9b6c1bd9c60c5414.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/MordekaiserPassive.png": {
+    "path": "/classic-cache/f6eb8a8b7dcc2ee54bda1fa3.png",
     "bytes": 5816,
     "sha256": "bab9152d56bffe9a47aa8b8f467fd689aef674833b50971905c4e9ead18fc3b9",
     "labels": [
       "铁铠冥魂现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/NamiPassive.png": {
-    "path": "/classic-cache/6571f8deae932508f9a86517.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/NamiPassive.png": {
+    "path": "/classic-cache/c8cc4cf5df2571b2b795c8cc.png",
     "bytes": 6392,
     "sha256": "29d2f22f65f188c6f251d49a7f4596dac276f7c2a29d8113a189a94d4f8ee00d",
     "labels": [
       "唤潮鲛姬现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Nasus_Passive.png": {
-    "path": "/classic-cache/64489819b5396d71e894880a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Nasus_Passive.png": {
+    "path": "/classic-cache/c90b6bc3d2a49408fb99fcd1.png",
     "bytes": 6250,
     "sha256": "2ec73bcd02734d93924a360f0330c8a73bfd3b8e49897c7f68a4eb406f9ee9d0",
     "labels": [
       "沙漠死神现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Nautilus_StaggeringBlow.png": {
-    "path": "/classic-cache/5af0751f4441bb35682ec363.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Nautilus_StaggeringBlow.png": {
+    "path": "/classic-cache/e1e9d615961810cffa153786.png",
     "bytes": 5388,
     "sha256": "7ccf6c3ac3969936e2204e04b61c5ec8203d10d2b36e00ca5f6e0f18fa85fa38",
     "labels": [
       "深海泰坦现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Nidalee_Passive.png": {
-    "path": "/classic-cache/d1b2ac612dca619b59359c6a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Nidalee_Passive.png": {
+    "path": "/classic-cache/936921666366e8f37305f19f.png",
     "bytes": 5636,
     "sha256": "fbc90825a66a62cd29e5f994b58cfaeee678abbdaf0eeb4a60251f4c8efa91fc",
     "labels": [
       "狂野女猎手现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/NunuPassive.png": {
-    "path": "/classic-cache/17d1450b72e4c85d1175213d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/NunuPassive.png": {
+    "path": "/classic-cache/c5e41633b736e9352eb333c7.png",
     "bytes": 6134,
     "sha256": "9f5da924dce635dc21a805f98ffed80244c7d0a16b17f02b2ccdb22803b6ff83",
     "labels": [
       "雪原双子现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Olaf_Passive.png": {
-    "path": "/classic-cache/21a784ff0eef7f4cf32fb8cf.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Olaf_Passive.png": {
+    "path": "/classic-cache/b830811b5fb09bad468dfbfb.png",
     "bytes": 6547,
     "sha256": "f888ca0dc6a2f0ae06e452507c797ca2b5510be0b81dd50cab69e29a51adc9ad",
     "labels": [
       "狂战士现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Pantheon_Passive.png": {
-    "path": "/classic-cache/c2c4f733e3ea5fe0ffa8465d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Pantheon_Passive.png": {
+    "path": "/classic-cache/e9a7e2bbadd669bc3b85826a.png",
     "bytes": 6453,
     "sha256": "b0fcbf294b1458ffbc2c5496064a5b8f1842657dbbd902a2c1e38b8b2f113993",
     "labels": [
       "不屈之枪现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Poppy_Passive.png": {
-    "path": "/classic-cache/3e2acdcacb793e5d691eab15.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Poppy_Passive.png": {
+    "path": "/classic-cache/ba554052faec13e2182f78d7.png",
     "bytes": 5975,
     "sha256": "25b9baca272746053826072276daf5f42480066172410f8cdeaa9b16e3216b8e",
     "labels": [
       "圣锤之毅现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Quinn_Passive.png": {
-    "path": "/classic-cache/f072ca3648ae871bb4da9374.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Quinn_Passive.png": {
+    "path": "/classic-cache/a08661f9afd67722fd90410e.png",
     "bytes": 5807,
     "sha256": "c4fc19cfbbee542ed49a42e90e5a4d2688f00e1f8066e8f73aa320b8f181b056",
     "labels": [
       "德玛西亚之翼现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Ryze_P.png": {
-    "path": "/classic-cache/1c61a80f2675e9aa5aa299c8.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Ryze_P.png": {
+    "path": "/classic-cache/a890d2a5eb5a2c41f3444f1c.png",
     "bytes": 6884,
     "sha256": "6ede4edd6df532c978a0a0db5009838f9990244aa9e4c47ac10b19cf4d0050f1",
     "labels": [
       "符文法师现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Shen_Passive.png": {
-    "path": "/classic-cache/f5218abb9e85f97311e5fbdc.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Shen_Passive.png": {
+    "path": "/classic-cache/e8960f7b2744fe457e8369c9.png",
     "bytes": 6855,
     "sha256": "230744f21b25c7b6c3fecef4031f53f61e9fe300f3a41b9dbe57284e556ac58a",
     "labels": [
       "暮光之眼现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Shyvana_Passive.png": {
-    "path": "/classic-cache/779d4faddd853d8adacf1a70.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Shyvana_Passive.png": {
+    "path": "/classic-cache/5ad1f0e93ed088ef832ae0f1.png",
     "bytes": 5209,
     "sha256": "236e8947a845c9f1e3312211cf35e06fe738ea1e294a48234b3c127e81978e5e",
     "labels": [
       "龙血武姬现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Singed_Passive.png": {
-    "path": "/classic-cache/facd33cb816201f6f24955b7.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Singed_Passive.png": {
+    "path": "/classic-cache/0966adfb450334ea70a87af5.png",
     "bytes": 6307,
     "sha256": "fc25832f5f4c5b429483564ac8747a85a86ec795df1785c4eccf9b3dc01970f8",
     "labels": [
       "炼金术士现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Sion_Passive1.png": {
-    "path": "/classic-cache/2a549e7cdc48ca327d5b8be9.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Sion_Passive1.png": {
+    "path": "/classic-cache/67761bb12803c38ca883b110.png",
     "bytes": 6204,
     "sha256": "81daf3fb267ab2869d27166aa7799f7e81846589dc2de3ae730f1e1fe19f3b34",
     "labels": [
       "亡灵战神现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Sivir_Passive.png": {
-    "path": "/classic-cache/4a9a84a4a19ef66f548d3624.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Sivir_Passive.png": {
+    "path": "/classic-cache/4b035d8efe67df9f34575081.png",
     "bytes": 6328,
     "sha256": "e77fb6fa5f3da55cdb494a16963ed04457941d79a005768748ea8e65e41129f4",
     "labels": [
       "战争女神现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Skarner_Passive.png": {
-    "path": "/classic-cache/2f28bc201fc4872f3b076595.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Skarner_Passive.png": {
+    "path": "/classic-cache/f1cf0ef0f39011ec9ccbe73f.png",
     "bytes": 6675,
     "sha256": "34dc560135335018749bc461002bd5014b5a338a53b2a9822fc434b20ca03b6f",
     "labels": [
       "上古领主现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Sona_Passive_Charged.png": {
-    "path": "/classic-cache/01448886ec1829ee3da95e7a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Sona_Passive_Charged.png": {
+    "path": "/classic-cache/9cb3d3ac0ac30b0fcc6b2504.png",
     "bytes": 6471,
     "sha256": "972b89e22a4389467ca3270429446a1537a698c78f4ca09ab6a0ceb863b5852d",
     "labels": [
       "琴瑟仙女现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Soraka_Passive.png": {
-    "path": "/classic-cache/40f6f994fef5fdfadfd5d79b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Soraka_Passive.png": {
+    "path": "/classic-cache/33990068110add5612a2cac1.png",
     "bytes": 6239,
     "sha256": "3fe1e466aa8861e70b38d02a668c5bf5f6ae55fd1d367e55ce017132d1c2c9fe",
     "labels": [
       "众星之子现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Swain_P.png": {
-    "path": "/classic-cache/9f998ecd7677a79e1821cc40.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Swain_P.png": {
+    "path": "/classic-cache/599649486311478e45fcd708.png",
     "bytes": 5295,
     "sha256": "85ef0f72c851fe818a92b0f465e4089e5699f49ed4f63efce761ca172b38155f",
     "labels": [
       "诺克萨斯统领现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Taric_Passive.png": {
-    "path": "/classic-cache/9ffa38b2038d224aa7118aba.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Taric_Passive.png": {
+    "path": "/classic-cache/5d70519a0251c0feba0c8282.png",
     "bytes": 6778,
     "sha256": "57d101882600139a20728289f03777b17f941b5faee52c725d48eace82d0ca64",
     "labels": [
       "瓦洛兰之盾现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/TeemoPassive.png": {
-    "path": "/classic-cache/fa79790fc6c222af6b9911d7.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/TeemoPassive.png": {
+    "path": "/classic-cache/cd679f8553bba84b47d475fb.png",
     "bytes": 5616,
     "sha256": "0346a71f03f0f949bc50dcda60d6b56345c4c7eb4b07e6efbb49e6b31102582f",
     "labels": [
       "迅捷斥候现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Tristana_Passive.png": {
-    "path": "/classic-cache/ada7cb0eddbb1e50ed8c942c.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Tristana_Passive.png": {
+    "path": "/classic-cache/573b66d6ee08a7d7a1670df0.png",
     "bytes": 5640,
     "sha256": "1288c462a14866acec7933842b278cb12f22bbb025538e97503f4d79b349dac6",
     "labels": [
       "麦林炮手现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Tryndamere_Passive.png": {
-    "path": "/classic-cache/c56a393d9324940eab69d268.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Tryndamere_Passive.png": {
+    "path": "/classic-cache/7bf567011c6e14ada73e96a3.png",
     "bytes": 7138,
     "sha256": "fb684b8e8f20115955f91d92c9061ca483b795c12c52fcbd75eb20fd132dfc8e",
     "labels": [
       "蛮族之王现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Twitch_Passive.png": {
-    "path": "/classic-cache/1605fea9ddd6b7fd6174733a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Twitch_Passive.png": {
+    "path": "/classic-cache/305f9e739452b1b827cc6511.png",
     "bytes": 5091,
     "sha256": "f5bc7802c20b15205fdb53fe57b211194c4dc20b1ecc12c1d659365bc32a02b2",
     "labels": [
       "瘟疫之源现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Vayne_NightHunter.png": {
-    "path": "/classic-cache/c8fd7117becb764db572b309.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Vayne_NightHunter.png": {
+    "path": "/classic-cache/8b3bec94e14a85f6fd6b4493.png",
     "bytes": 4997,
     "sha256": "3e9782e4c486da981786df921409252b2f5b84d059c6825b2a791d009d410460",
     "labels": [
       "暗夜猎手现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/VeigarEntropy.png": {
-    "path": "/classic-cache/e85a44d7aad4d876c63ddfb9.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/VeigarEntropy.png": {
+    "path": "/classic-cache/f2d1f618d8a7ec4bb959480e.png",
     "bytes": 6709,
     "sha256": "8623ac8b04f29d07891a300a80b53921c59ba8453ce368e48b2d0716f042113b",
     "labels": [
       "邪恶小法师现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Volibear_Icon_P.png": {
-    "path": "/classic-cache/b42dce3cfb9aec1a8e362633.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Volibear_Icon_P.png": {
+    "path": "/classic-cache/9543b344b92be5223ec0e7d0.png",
     "bytes": 6373,
     "sha256": "38b82d9f4f5843bb88f9901aba389b7709be3549439102f04f3a97341ad05c99",
     "labels": [
       "不灭狂雷现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/WarwickP.png": {
-    "path": "/classic-cache/9ef655f7a7c186d930dec0c2.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/WarwickP.png": {
+    "path": "/classic-cache/149c65a90a331bd102d55309.png",
     "bytes": 6084,
     "sha256": "eb61147bb90ca47d9ee51fe6fa69f17ceda6347148d3c8fe5e5a4c6e293ac0ce",
     "labels": [
       "祖安怒兽现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/XinZhaoReworkP.png": {
-    "path": "/classic-cache/085a9f2174a9ea5eefc83d1b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/XinZhaoReworkP.png": {
+    "path": "/classic-cache/04611878063630e4727e8098.png",
     "bytes": 6328,
     "sha256": "dd70ab61672fa5f956df839e47dd6891d43f7f43ae3179cd82d5073c241e51e9",
     "labels": [
       "德邦总管现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Yorick_P.png": {
-    "path": "/classic-cache/186037582505e706b4fc4930.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Yorick_P.png": {
+    "path": "/classic-cache/dd413971e50f8c1fd5f9468c.png",
     "bytes": 6400,
     "sha256": "3af346346934221c332a41f437d722ead4ec2d9ba67ec5de7f37d6e3daa93bec",
     "labels": [
       "牧魂人现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/passive/Zilean_Passive.png": {
-    "path": "/classic-cache/81bb58d9e66c41079d32bab9.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/passive/Zilean_Passive.png": {
+    "path": "/classic-cache/c10053fdbea51117cfa75cdc.png",
     "bytes": 6890,
     "sha256": "ddb46e7c1031895e4a3d99c1a77d85d528ab6c51f44f2f7d1a37c0aad5918a08",
     "labels": [
       "时光守护者现代P"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/AatroxE.png": {
-    "path": "/classic-cache/1a44f45eabf21ece4809eaea.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/AatroxE.png": {
+    "path": "/classic-cache/a55b28f9a1d8632655326c7f.png",
     "bytes": 6244,
     "sha256": "250eaaf8eb95aeb9516030e44d9c2c458f7c3e3f8621a58020bf502c2d450e19",
     "labels": [
       "暗裔剑魔现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/AatroxQ.png": {
-    "path": "/classic-cache/6f398c9dddf5e0835459c121.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/AatroxQ.png": {
+    "path": "/classic-cache/90e2734c8bc7430e20a92ff6.png",
     "bytes": 5016,
     "sha256": "d0efac2aa7264ffa63ef44b22e32d023e52abe2b7ad3131b52d60af3f7df0216",
     "labels": [
       "暗裔剑魔现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/AatroxR.png": {
-    "path": "/classic-cache/d968e185f46013269219ce3a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/AatroxR.png": {
+    "path": "/classic-cache/890fd42821540fae5e23de8e.png",
     "bytes": 5116,
     "sha256": "3088fff798f8055d48b456741ec9291bc7deb35a75ac2820aaa898a1f5ced99a",
     "labels": [
       "暗裔剑魔现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/AatroxW.png": {
-    "path": "/classic-cache/446227bcb93d8efec2fb9c2f.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/AatroxW.png": {
+    "path": "/classic-cache/884905e2c96c694fa91cf98d.png",
     "bytes": 5379,
     "sha256": "9bf4d228cd23093f13845dac1883b6bac2de02fae7b03f3a5ff1eae4cdaf723a",
     "labels": [
       "暗裔剑魔现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/AhriE.png": {
-    "path": "/classic-cache/dbe4b155196d6e8e33a9efae.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/AhriE.png": {
+    "path": "/classic-cache/084ca3c1759084bfa85f3ec6.png",
     "bytes": 6464,
     "sha256": "f17a5c92b47e07664b9248428e4ff577b4ece3ebc24cd166b0710457497788f5",
     "labels": [
       "九尾妖狐现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/AhriQ.png": {
-    "path": "/classic-cache/9a922685abe51c9edb1968d1.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/AhriQ.png": {
+    "path": "/classic-cache/529b1acfb64c81213c496196.png",
     "bytes": 5817,
     "sha256": "d4007421a453486e00709d533c7777d7ea68a31f6c32cfe0a9704be4009fea40",
     "labels": [
       "九尾妖狐现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/AhriR.png": {
-    "path": "/classic-cache/a949ab72d6cb3cbf9a08908b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/AhriR.png": {
+    "path": "/classic-cache/0670635a0a86391f2601e63a.png",
     "bytes": 6639,
     "sha256": "5c1095c39353b5f7af61b8c66d818b82bcdfcfbbddd3cadedc526e47fa8b42fe",
     "labels": [
       "九尾妖狐现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/AhriW.png": {
-    "path": "/classic-cache/f707c4647d5ba1f6cc261d41.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/AhriW.png": {
+    "path": "/classic-cache/5cfc31502f9da1d4941e8317.png",
     "bytes": 5854,
     "sha256": "fb77f1efec029da75c3718399558cd8432507a08d5e264ea63827c8186139abf",
     "labels": [
       "九尾妖狐现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/AkaliE.png": {
-    "path": "/classic-cache/9cb5a25839635a6a6f0c66a1.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/AkaliE.png": {
+    "path": "/classic-cache/41df256a0d8293de3d3d49ab.png",
     "bytes": 5989,
     "sha256": "60e23d4e1178cc40fc4bc7b2dd7854c6ec4767019c3bcb5566d6c5b11ad77889",
     "labels": [
       "离群之刺现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/AkaliQ.png": {
-    "path": "/classic-cache/efa4894a6a14d88802baaeb6.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/AkaliQ.png": {
+    "path": "/classic-cache/065b755ada7fd328f6c8f727.png",
     "bytes": 6047,
     "sha256": "d4e65ccfb0c90287c34d89dc315ad50a8bbcd4ec8dd918e1d5d3c9df55bd4773",
     "labels": [
       "离群之刺现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/AkaliR.png": {
-    "path": "/classic-cache/56346288b399e3950c4bd106.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/AkaliR.png": {
+    "path": "/classic-cache/60496bd6b29297e883de0861.png",
     "bytes": 5876,
     "sha256": "3ce3f8b5ee431f194b11b15da5682377637515caae9beb2ca822fdc438fa37d9",
     "labels": [
       "离群之刺现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/AkaliW.png": {
-    "path": "/classic-cache/7c3e08a488157b00ce09cb36.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/AkaliW.png": {
+    "path": "/classic-cache/6d3b146aeb9e0e482891ab21.png",
     "bytes": 5158,
     "sha256": "06958c550206cb2b5ef428b73234bf55653852590a9327d875c72014db357140",
     "labels": [
       "离群之刺现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/AlistarE.png": {
-    "path": "/classic-cache/094db89f9cf109b819f2f6f7.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/AlistarE.png": {
+    "path": "/classic-cache/aaaac8af9d352c04bcc7e88e.png",
     "bytes": 6493,
     "sha256": "3f8f76f96d4493a07aec5981416c0684781c8351121b86fee169af71a7c99bfd",
     "labels": [
       "牛头酋长现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/AlphaStrike.png": {
-    "path": "/classic-cache/5556cc1b17c199b532df599a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/AlphaStrike.png": {
+    "path": "/classic-cache/4d284e77bd076943f33416b8.png",
     "bytes": 4893,
     "sha256": "dd7d81c33bd1d35781a1f28813f649fa94b9d99fe099f512bf156c40dc22e7cf",
     "labels": [
       "无极剑圣现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/AnnieE.png": {
-    "path": "/classic-cache/93e157e03a0179ed65a6e6cf.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/AnnieE.png": {
+    "path": "/classic-cache/b97e3373046ec2f8398eca9e.png",
     "bytes": 6674,
     "sha256": "cf59314df90fee0237dd006f2a89b811b36acbce93de40466382b287d455def3",
     "labels": [
       "黑暗之女现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/AnnieQ.png": {
-    "path": "/classic-cache/0392706930749bc72670b558.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/AnnieQ.png": {
+    "path": "/classic-cache/301f836100c0e2bbd5e5260b.png",
     "bytes": 5062,
     "sha256": "f45bc34137ab2bee08ca0362b21bf665c09aae0614741c4cb6f40c89e1668d9a",
     "labels": [
       "黑暗之女现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/AnnieR.png": {
-    "path": "/classic-cache/5ee86649522f833a640f9327.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/AnnieR.png": {
+    "path": "/classic-cache/19a8c0b453d793c7384b9415.png",
     "bytes": 6140,
     "sha256": "609820533a2135f12f2038a31a66df4eff9fdb861ce06e2b25b8d92fa72df63e",
     "labels": [
       "黑暗之女现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/AnnieW.png": {
-    "path": "/classic-cache/6db9177b96fb51490478b13f.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/AnnieW.png": {
+    "path": "/classic-cache/23759c71e1af5a689bef5a87.png",
     "bytes": 5291,
     "sha256": "0ffedf98f614496b2d609829a8ea09cd6e4a70d343907b0bdfcd366e17e82451",
     "labels": [
       "黑暗之女现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/AsheQ.png": {
-    "path": "/classic-cache/bc6848e8dcb53790da50a8f0.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/AsheQ.png": {
+    "path": "/classic-cache/af2732b8dff1b916bb8c3603.png",
     "bytes": 6683,
     "sha256": "ceb72f8ca8ef01c5ea8249599f956c5f5fa7eb5a41e69b9bfb3b994ba1abd6b4",
     "labels": [
       "寒冰射手现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/AsheSpiritOfTheHawk.png": {
-    "path": "/classic-cache/b4336abef88e74a630979970.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/AsheSpiritOfTheHawk.png": {
+    "path": "/classic-cache/8a6dc8eb0cf60c1a89c0d671.png",
     "bytes": 5806,
     "sha256": "94e8e9dd059f9d8615d02da2d6d3430fa20afc938a4baba66a6cfc91d9646506",
     "labels": [
       "寒冰射手现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/AspectOfTheCougar.png": {
-    "path": "/classic-cache/cff1afc9da07e94bdf80e614.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/AspectOfTheCougar.png": {
+    "path": "/classic-cache/8fd73cd77045ee9fbb4c61cf.png",
     "bytes": 6251,
     "sha256": "589812440855538d3a14d3cfb5e9e414d14f4e3f44c559ac4f5a1cb8bdf53cc6",
     "labels": [
       "狂野女猎手现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/AuraofDespair.png": {
-    "path": "/classic-cache/0c622645bd4c8fd2c9b94e24.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/AuraofDespair.png": {
+    "path": "/classic-cache/6662b307bdf002e594039904.png",
     "bytes": 6134,
     "sha256": "f16080db5d13ab4a016a12152de28f5436b2f1cdd7e3fa14e935893767788f65",
     "labels": [
       "殇之木乃伊现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/BandageToss.png": {
-    "path": "/classic-cache/350df8377024de20668520ea.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/BandageToss.png": {
+    "path": "/classic-cache/608eaccae3af18fc6b8eb727.png",
     "bytes": 6393,
     "sha256": "50cd677f15377edc612f70f3c5cf31a9d02a103e60a3dbb0e70128c17b3a72c1",
     "labels": [
       "殇之木乃伊现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/BrandE.png": {
-    "path": "/classic-cache/3dac2dc0a7ce4ef6a518ac6f.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/BrandE.png": {
+    "path": "/classic-cache/6adc1e7d3e4951fe9d88cb20.png",
     "bytes": 6289,
     "sha256": "d4d553b33e3f3f9e9dc843c6814e3b63a38197a2a23c7af1a18164aeeb10e24d",
     "labels": [
       "复仇焰魂现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/BrandQ.png": {
-    "path": "/classic-cache/33ea78bd849f33f6fec2f916.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/BrandQ.png": {
+    "path": "/classic-cache/6e462d30a486c781b2c87f4b.png",
     "bytes": 5260,
     "sha256": "194772ba02cf4c8d2dbd0bf3a99d11b8849d3214523b2bf55aa8a0e8159735c3",
     "labels": [
       "复仇焰魂现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/BrandR.png": {
-    "path": "/classic-cache/6e1f3b1b696d94c51de85c4b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/BrandR.png": {
+    "path": "/classic-cache/7aaad9f39fc7d9a942d52f8f.png",
     "bytes": 5882,
     "sha256": "86531cadc99389621e6517f6b11ea89cfae7539a29338e9d114cb454d014df71",
     "labels": [
       "复仇焰魂现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/BrandW.png": {
-    "path": "/classic-cache/642fd386644cfeffb2f28814.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/BrandW.png": {
+    "path": "/classic-cache/133859f798825c6369c8cecf.png",
     "bytes": 4813,
     "sha256": "7d3f58ae1aaabdc89daa286a15ac942f2f748ca3bff59bcf669156c914dbfa66",
     "labels": [
       "复仇焰魂现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/Bushwhack.png": {
-    "path": "/classic-cache/87e104a7d8cb551eb9ac0dcb.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/Bushwhack.png": {
+    "path": "/classic-cache/14ff9de20140ffbb39b5059e.png",
     "bytes": 6494,
     "sha256": "53c243d5d6ea44f0f5b25565e1211feb95660a031e53dd22e395a2e16731873b",
     "labels": [
       "狂野女猎手现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/CaitlynE.png": {
-    "path": "/classic-cache/340d0fa213d909ad5c5e8d5e.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/CaitlynE.png": {
+    "path": "/classic-cache/93c436a2e41d58290dae075a.png",
     "bytes": 6246,
     "sha256": "55c19ff9a6f43506398af9b12a10b2d208838e63ee55479d8a4880cb6f04ac9c",
     "labels": [
       "皮城女警现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/CaitlynQ.png": {
-    "path": "/classic-cache/6306c0eab77f0f77f9d0d431.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/CaitlynQ.png": {
+    "path": "/classic-cache/bc257cdfb04a4dbdbb54d0c3.png",
     "bytes": 6402,
     "sha256": "73da31bff40a466ac1c4c509cb73423409198363232b8e03a3b4ada6eef7137e",
     "labels": [
       "皮城女警现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/CaitlynR.png": {
-    "path": "/classic-cache/54c7f31f657193fb6bd81e49.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/CaitlynR.png": {
+    "path": "/classic-cache/dfc2d906f102a118fd3a822a.png",
     "bytes": 5882,
     "sha256": "e1d7ce1c3581c46a828507e74624661b6d8ecaf7bceb112f02102e1273864a89",
     "labels": [
       "皮城女警现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/CaitlynW.png": {
-    "path": "/classic-cache/7550e08372e74d4ce5949c08.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/CaitlynW.png": {
+    "path": "/classic-cache/b4f67de260afa473c5adc95f.png",
     "bytes": 6680,
     "sha256": "b10f1c40d626530df0e037955be03bfd11091c3a184f6b8a5a9c15cf8267bf64",
     "labels": [
       "皮城女警现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/CardmasterStack.png": {
-    "path": "/classic-cache/ee91d5c752b86b6482fd4323.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/CardmasterStack.png": {
+    "path": "/classic-cache/2cbae7528563995a2c76dcbc.png",
     "bytes": 5319,
     "sha256": "048554040360126acc379300c482c2b8f5e65bde682c282d9b13c9b732922b28",
     "labels": [
       "卡牌大师现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/CarpetBomb.png": {
-    "path": "/classic-cache/477fca3a2602249959b3d8ad.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/CarpetBomb.png": {
+    "path": "/classic-cache/a5140113b29430f5e6b2a14e.png",
     "bytes": 5344,
     "sha256": "279c632412bfe29609e200a92e47cbcf8ff44e6ac63445b242db908acd6a313d",
     "labels": [
       "英勇投弹手现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/ChronoShift.png": {
-    "path": "/classic-cache/d0c5cae8b23ff4336e6acf81.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/ChronoShift.png": {
+    "path": "/classic-cache/3b0babc84aa6fcb131b2dad3.png",
     "bytes": 6245,
     "sha256": "95879eebb92c640a07f7f2c5dc0af31098069cbee315393186b4f9f61993d97f",
     "labels": [
       "时光守护者现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/Crystallize.png": {
-    "path": "/classic-cache/381111577f0ae35d57f0cf5a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/Crystallize.png": {
+    "path": "/classic-cache/41c9e0e60faf6ab3595b3472.png",
     "bytes": 5955,
     "sha256": "7c721a7ff03c199ae97b055d2370511edcefd57b2b05e12ced38af946bdd2d07",
     "labels": [
       "冰晶凤凰现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/CurseoftheSadMummy.png": {
-    "path": "/classic-cache/7866c638f2abbe5a4afa5fa9.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/CurseoftheSadMummy.png": {
+    "path": "/classic-cache/ecbba52635a19051f6f039cb.png",
     "bytes": 6294,
     "sha256": "65c8c830957d4dffa260c613de5bb3369138e142e600367b88c9c46858355a63",
     "labels": [
       "殇之木乃伊现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/Deceive.png": {
-    "path": "/classic-cache/1acf00e2c3192d378269b908.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/Deceive.png": {
+    "path": "/classic-cache/8d28dfbe821e6fe7c90a8cb9.png",
     "bytes": 6464,
     "sha256": "667054b69f3eafbaae0d2f7f19e651083797243eae79f7e8904b5cae60671086",
     "labels": [
       "恶魔小丑现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/DefensiveBallCurl.png": {
-    "path": "/classic-cache/41aaba23d1610db551ea50b7.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/DefensiveBallCurl.png": {
+    "path": "/classic-cache/8da70815038a546e5769f123.png",
     "bytes": 6257,
     "sha256": "6b41c27cd30b236169f52d23440b0b04e0845dc37a3a4df8c36a604e62f3edb4",
     "labels": [
       "披甲龙龟现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/Destiny.png": {
-    "path": "/classic-cache/16d31a70f720dbf602461d42.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/Destiny.png": {
+    "path": "/classic-cache/f946e53f546a281fd6c6a37a.png",
     "bytes": 5742,
     "sha256": "ddbb772a8de324de3166df81381096e70a3b51763450fa0c648319f0d637239f",
     "labels": [
       "卡牌大师现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/DrMundoE.png": {
-    "path": "/classic-cache/2137c11062fa28f941985abd.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/DrMundoE.png": {
+    "path": "/classic-cache/b9b6dc3ca025c691b0be2adb.png",
     "bytes": 6473,
     "sha256": "85fef07b5746446390f194082f5df4396f2e4e4454207186c27d97796f9b46a7",
     "labels": [
       "祖安狂人现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/DrMundoQ.png": {
-    "path": "/classic-cache/f0dd3b36e2e9d88935bf2b5d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/DrMundoQ.png": {
+    "path": "/classic-cache/b9582c14c9ccc5792ad68f84.png",
     "bytes": 7432,
     "sha256": "7e52c5f0b667d28d0c66f256998478be099f16311e2f748788aa9d860998bbee",
     "labels": [
       "祖安狂人现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/DrMundoR.png": {
-    "path": "/classic-cache/46eb74c65fa2e463ed35321d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/DrMundoR.png": {
+    "path": "/classic-cache/600daaacbe6b726c6c7a3e10.png",
     "bytes": 6403,
     "sha256": "a0551796aca6a823499e77b3bf3e1f30fe1ed561577271495440221753c85618",
     "labels": [
       "祖安狂人现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/DrMundoW.png": {
-    "path": "/classic-cache/25bf1da5f04f5543bc0d0bcc.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/DrMundoW.png": {
+    "path": "/classic-cache/90ac4171e35cb9f77fb2c9b4.png",
     "bytes": 7228,
     "sha256": "8fe1108657339fd4f569484c951a724efc4eba8da1e08d942ac8cbe71ace7588",
     "labels": [
       "祖安狂人现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/EliseHumanE.png": {
-    "path": "/classic-cache/9cb77cb671cda83672be466c.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/EliseHumanE.png": {
+    "path": "/classic-cache/81e9a3f2f5033c2dba8536a0.png",
     "bytes": 7240,
     "sha256": "90648cb5c81af971f770861ac0c40eb4be39f39d17f6f7267a6ea0d88f015b9e",
     "labels": [
       "蜘蛛女皇现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/EliseHumanQ.png": {
-    "path": "/classic-cache/59c7e0143dd569222ea913af.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/EliseHumanQ.png": {
+    "path": "/classic-cache/0241601ba64bdba2c03d3380.png",
     "bytes": 7042,
     "sha256": "c8f4b3ad93fba1492d341d5ec5c4b60e43d3e43335d80d5fa3b8869b431217d7",
     "labels": [
       "蜘蛛女皇现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/EliseHumanW.png": {
-    "path": "/classic-cache/664801c80d1db3cebb12e581.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/EliseHumanW.png": {
+    "path": "/classic-cache/a885cf2c7b6920196925248a.png",
     "bytes": 7190,
     "sha256": "9e3b534fc176dbf7c21e33a9bb39db6a2f5847f5bf247da9b8e4ca6757320d82",
     "labels": [
       "蜘蛛女皇现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/EliseR.png": {
-    "path": "/classic-cache/750d2278ef435f1c6e0c3662.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/EliseR.png": {
+    "path": "/classic-cache/7442c2bbf140ca446eef7e5d.png",
     "bytes": 6860,
     "sha256": "e8b7d85d7dcf3ff7072924606b0967240e471dd8168dbe222611f52eba80276c",
     "labels": [
       "蜘蛛女皇现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/EnchantedCrystalArrow.png": {
-    "path": "/classic-cache/299a912349185147465fd514.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/EnchantedCrystalArrow.png": {
+    "path": "/classic-cache/7f6ba70181e25661166d7c8b.png",
     "bytes": 6449,
     "sha256": "c26d0583a45c36b3a18b118d92ae1ae3534dae529a052d7c1fa41a9ea613f038",
     "labels": [
       "寒冰射手现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/EvelynnE.png": {
-    "path": "/classic-cache/727a7f3ec7de9cd8f5eabea2.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/EvelynnE.png": {
+    "path": "/classic-cache/4fdaf27534ddcaff6af1fa0e.png",
     "bytes": 6095,
     "sha256": "1f1b95f8b1f8009763b77ce2f54ddaebc6df3a9e43188264c809b1bb41a4f68f",
     "labels": [
       "痛苦之拥现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/EvelynnQ.png": {
-    "path": "/classic-cache/9a402956f9b37b270c30de03.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/EvelynnQ.png": {
+    "path": "/classic-cache/26d46680d3591cbaa871d9f4.png",
     "bytes": 5336,
     "sha256": "62a52dbb937228f5c9224016f344c626ccefca82efc88fd890687afe1d60e3bc",
     "labels": [
       "痛苦之拥现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/EvelynnR.png": {
-    "path": "/classic-cache/aed053397e8ddf760d1a802b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/EvelynnR.png": {
+    "path": "/classic-cache/3fbe13e807e20b8eb78aa5e6.png",
     "bytes": 6753,
     "sha256": "35d6413642274e1cb0ee93b88b17529025be6818c225270b1e3c4c87da034609",
     "labels": [
       "痛苦之拥现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/EvelynnW.png": {
-    "path": "/classic-cache/91029c867598d1fdced81a8d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/EvelynnW.png": {
+    "path": "/classic-cache/1d4e7cc0754b9e6f11976cb8.png",
     "bytes": 5891,
     "sha256": "e0aa077a1105a33f3a6bf86ebfaa3b497564531259534e7249acbaba6df0a78e",
     "labels": [
       "痛苦之拥现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/EyeOfTheStorm.png": {
-    "path": "/classic-cache/7a1770e1dda904875bd22e28.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/EyeOfTheStorm.png": {
+    "path": "/classic-cache/f7b18b57d5dc6b657d997a30.png",
     "bytes": 6581,
     "sha256": "56e8efac560b887f1986c8578c5ee2afa6dc9d1ebb0409622518df523fd3c9fc",
     "labels": [
       "风暴之怒现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/EzrealE.png": {
-    "path": "/classic-cache/0cf49c0a8949448ebfbb0f55.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/EzrealE.png": {
+    "path": "/classic-cache/ed656a86eb84847df88911e1.png",
     "bytes": 4567,
     "sha256": "92ffec3b78b4b17ba242d8e37794c380ed88f915c436efea7006ccecada1a282",
     "labels": [
       "探险家现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/EzrealQ.png": {
-    "path": "/classic-cache/8e9d9b018c4f4a06a1ddcf37.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/EzrealQ.png": {
+    "path": "/classic-cache/9b327136dc152dc127670988.png",
     "bytes": 4590,
     "sha256": "4b0d2182e9c55013bf4009d1a783f91be1fae8f8d829e78bd8c3e904df793845",
     "labels": [
       "探险家现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/EzrealR.png": {
-    "path": "/classic-cache/f397729491c0f78e79ab65c4.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/EzrealR.png": {
+    "path": "/classic-cache/c31d7dd09f6e246a72628fee.png",
     "bytes": 5719,
     "sha256": "0f146ada0ddc769cea8950bfd2a2b180e20c525f8405067b01e7a3b2a129eb0c",
     "labels": [
       "探险家现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/EzrealW.png": {
-    "path": "/classic-cache/ef75d217cc036b343ffa64e7.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/EzrealW.png": {
+    "path": "/classic-cache/726ff023db3d2c48010afc1f.png",
     "bytes": 5102,
     "sha256": "aa62b7de10212caa196ab8c7176f3e023b6a9be8be8b0649d69f0662d1f76875",
     "labels": [
       "探险家现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/Feast.png": {
-    "path": "/classic-cache/dc65a1a451986ac9fd03c8f6.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/Feast.png": {
+    "path": "/classic-cache/7b3adbd8fbd50290ec2e7e05.png",
     "bytes": 6159,
     "sha256": "5b1b242202c3e79f43cb95150c9c3ae2947b076f59e3e842226c480e92388d69",
     "labels": [
       "虚空恐惧现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/FeralScream.png": {
-    "path": "/classic-cache/83bff65ae7c7656367c2d49c.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/FeralScream.png": {
+    "path": "/classic-cache/a447a63b8f7cdcd3b7eb8052.png",
     "bytes": 6455,
     "sha256": "b1b99c07f57b91cedd4e8ad3cdb4c4f3909235e1102b5a00c993715bcdea27a6",
     "labels": [
       "虚空恐惧现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/FerociousHowl.png": {
-    "path": "/classic-cache/7269acc3e4d37f56c2cf75e4.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/FerociousHowl.png": {
+    "path": "/classic-cache/5e94060cfc3d6d92e63eaa20.png",
     "bytes": 6876,
     "sha256": "c6735761b8f99be2ce5aae1e4bb47a6151d7c5df88f2d462c8b7ed39a5cbe622",
     "labels": [
       "牛头酋长现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/FiddleSticksE.png": {
-    "path": "/classic-cache/9d2706f536fe2e413f718c73.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/FiddleSticksE.png": {
+    "path": "/classic-cache/6f45c0c18667c40bf1c2658c.png",
     "bytes": 5694,
     "sha256": "661eefc92019eba58389723de2ee0ff0dd03d5faca7b05466efd2440197dbcdf",
     "labels": [
       "远古恐惧现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/FiddleSticksQ.png": {
-    "path": "/classic-cache/d75b156202d7918461ab8fa5.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/FiddleSticksQ.png": {
+    "path": "/classic-cache/1f4bc36632984680e30a9f68.png",
     "bytes": 6145,
     "sha256": "4e0175a944bd6a8f38ef1767b568483de18da294a1173c0bc0cc259ed5050326",
     "labels": [
       "远古恐惧现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/FiddleSticksR.png": {
-    "path": "/classic-cache/467a1c13d340d4ee7e5f711a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/FiddleSticksR.png": {
+    "path": "/classic-cache/b51e2b35e6ed05824b516f77.png",
     "bytes": 6227,
     "sha256": "7158f520c8c0eb90bd41fa65167f9882320c12fc31914d17774c23b4d6505936",
     "labels": [
       "远古恐惧现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/FiddleSticksW.png": {
-    "path": "/classic-cache/46153de366ac29b9c3db15d3.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/FiddleSticksW.png": {
+    "path": "/classic-cache/3d6413a2d66f18fc016dedf6.png",
     "bytes": 6176,
     "sha256": "ee5fbb0d65a048dbaac90cd7ecd5db932cfda3b001e846fe64c2fea858a85e14",
     "labels": [
       "远古恐惧现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/FioraE.png": {
-    "path": "/classic-cache/13be3a24bb73d7df90048548.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/FioraE.png": {
+    "path": "/classic-cache/41d8e72a390007fa2b57e983.png",
     "bytes": 5678,
     "sha256": "226adbaf6c4e413583dc6f2d145fda4f417bfb097c486ac456e0f668b0a26dd3",
     "labels": [
       "无双剑姬现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/FioraQ.png": {
-    "path": "/classic-cache/facb1daf7ccfa65795bfedf2.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/FioraQ.png": {
+    "path": "/classic-cache/6c0305846ca4c09cd440580c.png",
     "bytes": 6800,
     "sha256": "93db103bd600935520e00eee82b2b75d99c27e361f5b49f42002e1a754472944",
     "labels": [
       "无双剑姬现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/FioraR.png": {
-    "path": "/classic-cache/fbe2119234de2977106844d8.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/FioraR.png": {
+    "path": "/classic-cache/b0f3dd39ab6b26b2f4d81202.png",
     "bytes": 6112,
     "sha256": "ce7dd245aad9ad359e7ae90731b45d6dccce538691bd9794e72f49340d04256c",
     "labels": [
       "无双剑姬现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/FioraW.png": {
-    "path": "/classic-cache/650d982553f23fbf368d1979.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/FioraW.png": {
+    "path": "/classic-cache/0eecce1d669d75e40b7750af.png",
     "bytes": 6415,
     "sha256": "6cc2301b99c136dc7a343809feceacdd78056b6993772691a2738768861859c8",
     "labels": [
       "无双剑姬现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/FizzE.png": {
-    "path": "/classic-cache/b82c205fdf5a3359c82d49e4.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/FizzE.png": {
+    "path": "/classic-cache/cf95ab208115be64c3e76b21.png",
     "bytes": 6713,
     "sha256": "848d67851446c4048c346e40e371055488e5d53581acc3066f41800bc77ae625",
     "labels": [
       "潮汐海灵现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/FizzQ.png": {
-    "path": "/classic-cache/929ace00b0f9d678cb79975d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/FizzQ.png": {
+    "path": "/classic-cache/21eb83fd488525c56c06368e.png",
     "bytes": 6448,
     "sha256": "a56936bfe3ff0b22800620af4a7d85bbe14e7900a295a1f3ba39aad9c4e3a6e7",
     "labels": [
       "潮汐海灵现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/FizzR.png": {
-    "path": "/classic-cache/7efeab22721d1d84630fe7cc.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/FizzR.png": {
+    "path": "/classic-cache/f898c54e427e44b2b9030b59.png",
     "bytes": 6667,
     "sha256": "5d80eb2119bb73a21d66fcf49bd7ea71d2d919e273a57c9ce0f6986e1fa09acc",
     "labels": [
       "潮汐海灵现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/FizzW.png": {
-    "path": "/classic-cache/1fb828e123732f0e94c9d6af.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/FizzW.png": {
+    "path": "/classic-cache/65f2fdd101b36d5181115f44.png",
     "bytes": 6551,
     "sha256": "f6a8322a2566d97c9c335b969c35aca59a0fb44b662f662f445e8b2d626f3d69",
     "labels": [
       "潮汐海灵现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/FlashFrost.png": {
-    "path": "/classic-cache/fe23f95ed11f1ccbf908f7bd.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/FlashFrost.png": {
+    "path": "/classic-cache/fade4cce64412f9c209e1193.png",
     "bytes": 6055,
     "sha256": "ccfc22e79cc8530876ef8437f35619c0a2131481ad94851f114d967c7409490a",
     "labels": [
       "冰晶凤凰现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/Fling.png": {
-    "path": "/classic-cache/3e2b8aeefa54c275bf39cbb2.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/Fling.png": {
+    "path": "/classic-cache/7b52209a76ed19796a193a38.png",
     "bytes": 5643,
     "sha256": "25cef6e69742dfefc9ec5de45e820383943ee7cb0eaa022e27f65ab806fe1cdf",
     "labels": [
       "炼金术士现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/ForcePulse.png": {
-    "path": "/classic-cache/99be58a1a962b8e5118ac259.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/ForcePulse.png": {
+    "path": "/classic-cache/7a677da78609acaeddcd35fb.png",
     "bytes": 5321,
     "sha256": "b8733f9b2ba33985c02602e802997441deb729a4666276addbdf6e9e6e0c65fe",
     "labels": [
       "虚空行者现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/Frostbite.png": {
-    "path": "/classic-cache/0a5fff28a9b39ca360d69846.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/Frostbite.png": {
+    "path": "/classic-cache/249fc407eeaa7009bbe8d18e.png",
     "bytes": 5102,
     "sha256": "2a00f1084e64a91f8238f003b9345f2b47c38e5ca53705edf09761cab0010c2e",
     "labels": [
       "冰晶凤凰现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/GalioE.png": {
-    "path": "/classic-cache/54e99336e3c23c37a095fbae.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/GalioE.png": {
+    "path": "/classic-cache/de893cd0519e30946fa6650a.png",
     "bytes": 6389,
     "sha256": "5756c2ecc581403cdbc86a32d89c415cfa185f0ff086d996d39a493f4187e8cd",
     "labels": [
       "正义巨像现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/GalioQ.png": {
-    "path": "/classic-cache/2ef7c85583a532dccd920643.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/GalioQ.png": {
+    "path": "/classic-cache/edfb57808073e6787e61f398.png",
     "bytes": 6735,
     "sha256": "563eb98a89a7201e26e757c5cbd03ab167f8ef02e528b193e3ca5a5fa10f4c2c",
     "labels": [
       "正义巨像现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/GalioR.png": {
-    "path": "/classic-cache/8f59d319ad967d8aa502f680.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/GalioR.png": {
+    "path": "/classic-cache/6e2a72c199330f586980603a.png",
     "bytes": 7257,
     "sha256": "bf97d9824a5c15e88da0a4ae5457163e04bef5f16195577e3ff6103d7324c52f",
     "labels": [
       "正义巨像现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/GalioW.png": {
-    "path": "/classic-cache/aae46e7fabc9e21867a83a19.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/GalioW.png": {
+    "path": "/classic-cache/60c6988c937f8766c0db1156.png",
     "bytes": 7001,
     "sha256": "7f6c1b652859b7e93d16a2a7a4895d5d6ec3753e7dc03f55a6771e2af8186b26",
     "labels": [
       "正义巨像现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/GangplankE.png": {
-    "path": "/classic-cache/0175b239abe3104a8215c59c.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/GangplankE.png": {
+    "path": "/classic-cache/0a4939809e87705a891c146d.png",
     "bytes": 6201,
     "sha256": "e59175b01768fbac036a9ad30f92e966efc26601d914a7c7b6c3fd31507a06f8",
     "labels": [
       "海洋之灾现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/GangplankQWrapper.png": {
-    "path": "/classic-cache/852d6f1436d33f089bebb900.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/GangplankQWrapper.png": {
+    "path": "/classic-cache/8090c049a18f56a98a5f44cc.png",
     "bytes": 6094,
     "sha256": "e60419408d2ea9fd4f50be090c7f2849f7ec05a46ed8ba5b1bc4bce22d09e1cd",
     "labels": [
       "海洋之灾现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/GangplankR.png": {
-    "path": "/classic-cache/7cf8925eb9667410f6eee3f4.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/GangplankR.png": {
+    "path": "/classic-cache/7edb76f559f9db97801e6480.png",
     "bytes": 6337,
     "sha256": "9c4a1937ae3cd374bd10ceacab582f68a1c2854594d85e99eaa3c1749b6380ce",
     "labels": [
       "海洋之灾现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/GangplankW.png": {
-    "path": "/classic-cache/fe06ebe6a9a29fefaa4df676.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/GangplankW.png": {
+    "path": "/classic-cache/b81595fcb48953742fa2f67b.png",
     "bytes": 4966,
     "sha256": "5a3c092392fde5d871fcd1327299d8a1aee73322a163c326731e60713d675f98",
     "labels": [
       "海洋之灾现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/GarenE.png": {
-    "path": "/classic-cache/20f45257a312ad87e82fcdc4.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/GarenE.png": {
+    "path": "/classic-cache/4c17ce332447926b378efa15.png",
     "bytes": 6473,
     "sha256": "87526f9005c608b7b776128fc4526b28f615b782c3429c3d6bc200209c25f2da",
     "labels": [
       "德玛西亚之力现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/GarenQ.png": {
-    "path": "/classic-cache/69f45c4436adab2fe51ad1b3.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/GarenQ.png": {
+    "path": "/classic-cache/4b0e6d50c7195df60dba78de.png",
     "bytes": 6105,
     "sha256": "5ba32b3c14ed850b447a6cb54cf243144823e1ac61cf071ed9920cd26700ff8d",
     "labels": [
       "德玛西亚之力现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/GarenR.png": {
-    "path": "/classic-cache/7a8478a869f3f93093f491e2.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/GarenR.png": {
+    "path": "/classic-cache/61f143061d3fe52e8c9d0d9f.png",
     "bytes": 5230,
     "sha256": "82031c7b445c6bced255fcc91b9a8570a8215f96092c766cb1a0e519cac5e949",
     "labels": [
       "德玛西亚之力现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/GarenW.png": {
-    "path": "/classic-cache/2bf781e49258c4673b4ffa4e.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/GarenW.png": {
+    "path": "/classic-cache/eb7d1ac828a96fb22cf1286b.png",
     "bytes": 5947,
     "sha256": "4b653d35ceedddc2fc715e934307114c567c92aebd5b34708bdc5c077ce410eb",
     "labels": [
       "德玛西亚之力现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/GGun.png": {
-    "path": "/classic-cache/b2500d03bad4397ce55f05b0.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/GGun.png": {
+    "path": "/classic-cache/a0bbd885fed1f73fb4e063cc.png",
     "bytes": 5931,
     "sha256": "496c407f26b9356196309f33e2119cde07a86ea16f0b4f0dca41d3458ddf3267",
     "labels": [
       "英勇投弹手现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/GlacialStorm.png": {
-    "path": "/classic-cache/c681d7937fd465241cca152d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/GlacialStorm.png": {
+    "path": "/classic-cache/92a276f8d545cce268db4456.png",
     "bytes": 6999,
     "sha256": "b2a7d3005742e94b2c451986bd19b793224ed25c41b4c4b95929d9f9f9f06b89",
     "labels": [
       "冰晶凤凰现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/GragasE.png": {
-    "path": "/classic-cache/59144832160d9dde82033f8a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/GragasE.png": {
+    "path": "/classic-cache/cd0b2f0d90967e2d4f563e48.png",
     "bytes": 6535,
     "sha256": "4ad432f24c489a31c87625deb6e015d14d5222765595209e35f995dd36c7e038",
     "labels": [
       "酒桶现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/GragasQ.png": {
-    "path": "/classic-cache/c4bd67826ccc8c990a4973f2.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/GragasQ.png": {
+    "path": "/classic-cache/f9dfaf122a230346b3165316.png",
     "bytes": 7418,
     "sha256": "a7cc436266043274346429585e4b68e7bdb5c9fbb1a58c843ab3ff1498fc25c8",
     "labels": [
       "酒桶现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/GragasR.png": {
-    "path": "/classic-cache/9283635be1fecb219e474b4f.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/GragasR.png": {
+    "path": "/classic-cache/56208b936e65c6062ab3a6f6.png",
     "bytes": 6932,
     "sha256": "edf1d9f96dc875b172b73dbba838e333a4e5b34a1b939284f9038e269d89989f",
     "labels": [
       "酒桶现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/GragasW.png": {
-    "path": "/classic-cache/1114a1b7dc4dacc1d5db204d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/GragasW.png": {
+    "path": "/classic-cache/ecf78e02de40a822677aa416.png",
     "bytes": 6318,
     "sha256": "91aa2d74128ef08cb3b65ddd178df6c9c059914ec46e26375c40b7d20cae99d6",
     "labels": [
       "酒桶现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/GravesChargeShot.png": {
-    "path": "/classic-cache/4df6811508c18f2236540913.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/GravesChargeShot.png": {
+    "path": "/classic-cache/c8fac21bcef109745eb4c518.png",
     "bytes": 6558,
     "sha256": "59837a887bda30f92601d265c8a9023e6899d6a863f7c58095e9c1d2ac417380",
     "labels": [
       "法外狂徒现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/GravesMove.png": {
-    "path": "/classic-cache/c659729a49193eaa45baca65.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/GravesMove.png": {
+    "path": "/classic-cache/cb9ad389f21ead416cbb77a0.png",
     "bytes": 6339,
     "sha256": "45da6323091784efd7d93fdda68a84577c60c73a53db42978c778c3f70e98677",
     "labels": [
       "法外狂徒现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/GravesQLineSpell.png": {
-    "path": "/classic-cache/d7efa5e82d08501c3bea5308.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/GravesQLineSpell.png": {
+    "path": "/classic-cache/d20bdaa5f0626b5540e06053.png",
     "bytes": 5932,
     "sha256": "a06a9e8b3ac3fa0c97cf9d940475b2f7700c41a52dd7eb0c6dd9f2d8e32b988b",
     "labels": [
       "法外狂徒现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/GravesSmokeGrenade.png": {
-    "path": "/classic-cache/39992b883fcc33a9b624bbcf.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/GravesSmokeGrenade.png": {
+    "path": "/classic-cache/f49f3712633751bac3a421db.png",
     "bytes": 6297,
     "sha256": "c3ba13c71f5e7bde11838edab18d2d47713a336218cd0d5e9d3d6fa9f1dbb269",
     "labels": [
       "法外狂徒现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/HallucinateFull.png": {
-    "path": "/classic-cache/616194cd27c4989acd4330dc.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/HallucinateFull.png": {
+    "path": "/classic-cache/d6893f13d293e36653f60f71.png",
     "bytes": 5853,
     "sha256": "a803194c3bb17f6c180c4770c7df6abddbacc660dceea5a804e11be43b488602",
     "labels": [
       "恶魔小丑现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/Headbutt.png": {
-    "path": "/classic-cache/ad56127b6a585b6b9d0465b7.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/Headbutt.png": {
+    "path": "/classic-cache/2b88b5be7ce98ccb201b8b72.png",
     "bytes": 6006,
     "sha256": "39d1909f638d0001b687b3e65b7e630eaf598e4232b7aa588bdf37a64041dd34",
     "labels": [
       "牛头酋长现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/HecarimRamp.png": {
-    "path": "/classic-cache/0503a375da0839f07eaefe8b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/HecarimRamp.png": {
+    "path": "/classic-cache/d4196ec30ab5cc3b92d4432c.png",
     "bytes": 6037,
     "sha256": "4ce92aa63549e2522abb4772985f23d8c4eef778b2613c8d9f42eaecd6de6b1e",
     "labels": [
       "战争之影现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/HecarimRapidSlash.png": {
-    "path": "/classic-cache/44820dc0ba90ac93643b2fc6.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/HecarimRapidSlash.png": {
+    "path": "/classic-cache/9e541dc30f4eef7702a54b47.png",
     "bytes": 6555,
     "sha256": "2e3b542e3ee0f41d9c7e6e92e61acf2a7b27a3a7ad0e57e1cf4fbe0da7deb2bc",
     "labels": [
       "战争之影现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/HecarimUlt.png": {
-    "path": "/classic-cache/95c8134bc7f5c0c426a07373.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/HecarimUlt.png": {
+    "path": "/classic-cache/a636727ce02909fcdb19b1f1.png",
     "bytes": 6439,
     "sha256": "076749c3395baca3823dfe00bc7259fe80ab81838a98c0cafe41abd0fb6c1c35",
     "labels": [
       "战争之影现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/HecarimW.png": {
-    "path": "/classic-cache/f07910bcbba3dfc6feae5893.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/HecarimW.png": {
+    "path": "/classic-cache/b26cb6f4601e705fcb2efcf5.png",
     "bytes": 6477,
     "sha256": "d3b3946a2778f7170311714df7753268b1419df49c29f7b41089386ee56cf368",
     "labels": [
       "战争之影现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/HeimerdingerE.png": {
-    "path": "/classic-cache/776e16b50c03d1abe21fedb8.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/HeimerdingerE.png": {
+    "path": "/classic-cache/43df23db49fd94eded0d51a4.png",
     "bytes": 6516,
     "sha256": "79a8cb1fdebe1075800cb472d08db5081f08821baec5ec341e2a01305c7414e4",
     "labels": [
       "大发明家现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/HeimerdingerQ.png": {
-    "path": "/classic-cache/c416b25d4ccb6d27b68b8dd6.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/HeimerdingerQ.png": {
+    "path": "/classic-cache/67b823c1df8b50d948fe0752.png",
     "bytes": 6490,
     "sha256": "1c3e18afa0b9c0d8294f1610d584ca8faed8d4c87102b14b32bb0bbff9711a78",
     "labels": [
       "大发明家现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/HeimerdingerR.png": {
-    "path": "/classic-cache/a55b71039930c7c4149538ac.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/HeimerdingerR.png": {
+    "path": "/classic-cache/c861b7dfaf67a5705ef5a41e.png",
     "bytes": 6559,
     "sha256": "fa502341a051d3d68f297971b548f547adda4fd87858240f786548f950d29949",
     "labels": [
       "大发明家现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/HeimerdingerW.png": {
-    "path": "/classic-cache/1510c57f072f9f52972117df.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/HeimerdingerW.png": {
+    "path": "/classic-cache/7c3cdf4d77cfca49441639da.png",
     "bytes": 6510,
     "sha256": "2eec062cc8d270713f8e200b2fd1955c9ca6fc087542641c7e6ee7b53eb1331a",
     "labels": [
       "大发明家现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/Highlander.png": {
-    "path": "/classic-cache/3c50ec8943db7f82859ba4d5.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/Highlander.png": {
+    "path": "/classic-cache/714b66bdd0ccf554678e1f8e.png",
     "bytes": 6238,
     "sha256": "0e56c7df1cc9ad719c4c1004ce7307567d428b7746bbb5b6c79076fc49696a88",
     "labels": [
       "无极剑圣现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/HowlingGale.png": {
-    "path": "/classic-cache/7836cca7b6bf0e06463e172a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/HowlingGale.png": {
+    "path": "/classic-cache/0fab99dd022bea90258ad927.png",
     "bytes": 7279,
     "sha256": "5c4a0971f005bc924033b07f6e3f35378541187ae846ef26592be279c0aba664",
     "labels": [
       "风暴之怒现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/InsanityPotion.png": {
-    "path": "/classic-cache/1a5d4994acec4377acdfa41b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/InsanityPotion.png": {
+    "path": "/classic-cache/90e915f7540c7a6612583268.png",
     "bytes": 6651,
     "sha256": "bef5b68fa608471e0e71639a65fa0bea683d25a2a61790bb184a76f0f4c74003",
     "labels": [
       "炼金术士现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/IreliaE.png": {
-    "path": "/classic-cache/c42dd5529458d0b1beefc431.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/IreliaE.png": {
+    "path": "/classic-cache/7d6505975756b057d20fd72f.png",
     "bytes": 5487,
     "sha256": "81a9bdc067d5c4d1411e09838aed93ef01ff865db37168910a7c56fb365afd9b",
     "labels": [
       "刀锋舞者现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/IreliaQ.png": {
-    "path": "/classic-cache/a483bb443f22b33e644a835f.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/IreliaQ.png": {
+    "path": "/classic-cache/44022355930d5b1912df9206.png",
     "bytes": 6067,
     "sha256": "460b56435d22f2165bad6ce235779d3d56e5acb35a69a661d6588d3b112d02ae",
     "labels": [
       "刀锋舞者现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/IreliaR.png": {
-    "path": "/classic-cache/90133eba5795656e65603ba3.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/IreliaR.png": {
+    "path": "/classic-cache/ec4ad235ffd8010fef18e776.png",
     "bytes": 5398,
     "sha256": "cc13c8f18bc8dc26de93bb2af8172d607db9de43c04e515a50ddb7c914d819f3",
     "labels": [
       "刀锋舞者现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/IreliaW.png": {
-    "path": "/classic-cache/87085d931dc12abb95a0ae0c.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/IreliaW.png": {
+    "path": "/classic-cache/a860a458ef4df870196d478a.png",
     "bytes": 5610,
     "sha256": "babdd1dc16bf72685826b443773dc65842a015135ad32c147074381eee74f0cb",
     "labels": [
       "刀锋舞者现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/JackInTheBox.png": {
-    "path": "/classic-cache/930c9020859a17aef04fbb16.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/JackInTheBox.png": {
+    "path": "/classic-cache/d83632f1c4c59b42f3023776.png",
     "bytes": 6263,
     "sha256": "35bfcdaa97c7bda465efa188018f880b32be7cfebf5f8655e321df7bd6075265",
     "labels": [
       "恶魔小丑现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/JarvanIVCataclysm.png": {
-    "path": "/classic-cache/0821c50295526f1702394124.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/JarvanIVCataclysm.png": {
+    "path": "/classic-cache/ed02208d17dcf62e6dbcfdb5.png",
     "bytes": 6745,
     "sha256": "3be3fa7562ba126cac02df3902b65816e385ef483b4214c83b12e79ff9c21245",
     "labels": [
       "德玛西亚皇子现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/JarvanIVDemacianStandard.png": {
-    "path": "/classic-cache/29affb4b4a4d8c0fa3944867.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/JarvanIVDemacianStandard.png": {
+    "path": "/classic-cache/4172c4288376164eb3d129d1.png",
     "bytes": 6775,
     "sha256": "a596304763991af3929af3e99c01e63ae8c07e807dfe994c4de6fd341c933147",
     "labels": [
       "德玛西亚皇子现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/JarvanIVDragonStrike.png": {
-    "path": "/classic-cache/444dd73790f8eadbb28d27af.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/JarvanIVDragonStrike.png": {
+    "path": "/classic-cache/4b8076a2d4bdab0b90b06077.png",
     "bytes": 6006,
     "sha256": "81ec0578badf236230a6f30276be0b2ebcbd4393e3695e7f58c905a38f27daaf",
     "labels": [
       "德玛西亚皇子现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/JarvanIVGoldenAegis.png": {
-    "path": "/classic-cache/7ceace491d03c03a4ef7a636.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/JarvanIVGoldenAegis.png": {
+    "path": "/classic-cache/783f48dba918f7e7e4c6462f.png",
     "bytes": 6939,
     "sha256": "9c08e7643434a491148bd797bd5324fe415e230b2b9eb3cca0c8a5e4fcb7728d",
     "labels": [
       "德玛西亚皇子现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/JavelinToss.png": {
-    "path": "/classic-cache/96caadd49e607055762cc265.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/JavelinToss.png": {
+    "path": "/classic-cache/609074318451c5b3db6e3432.png",
     "bytes": 7107,
     "sha256": "7a5224eb12d154819d1d67de27e827e1d1066ec904197358c1c414b55ea230f2",
     "labels": [
       "狂野女猎手现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/JaxE.png": {
-    "path": "/classic-cache/4beb9d301f50c5b7a43e55ee.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/JaxE.png": {
+    "path": "/classic-cache/672a89104ad56f74aafd72cb.png",
     "bytes": 6377,
     "sha256": "d919995aa43741df00566d0d381ed403b43dbff01d1acf0b4188e995f9f2e532",
     "labels": [
       "武器大师现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/JaxQ.png": {
-    "path": "/classic-cache/63ee286533f30e6f95c33b20.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/JaxQ.png": {
+    "path": "/classic-cache/1f813c448f7bc51951ffe0e0.png",
     "bytes": 6392,
     "sha256": "d6f5087353351607ae69f2380894f6dda124c14093105bca85b1cfa64f94667d",
     "labels": [
       "武器大师现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/JaxR.png": {
-    "path": "/classic-cache/42d20ff69b4a3ff94e676767.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/JaxR.png": {
+    "path": "/classic-cache/65453b281cfb3033d1b921c3.png",
     "bytes": 6706,
     "sha256": "70a7737e3846f39c472a326fad0780cebaea8f740415ebd5e47294d9cfaeb0f7",
     "labels": [
       "武器大师现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/JaxW.png": {
-    "path": "/classic-cache/070c7bbce6fee083e1374e30.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/JaxW.png": {
+    "path": "/classic-cache/3c80d218c6b56244656cdb42.png",
     "bytes": 6466,
     "sha256": "c967cdb40904be77c54053274ab3d60a611b339dd5b2eacad86d23be1403f7b1",
     "labels": [
       "武器大师现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KarmaMantra.png": {
-    "path": "/classic-cache/05128f1a55e5f52a109a2ed1.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KarmaMantra.png": {
+    "path": "/classic-cache/a93f77d522787f36fb497619.png",
     "bytes": 6957,
     "sha256": "c444d52fb694861fb4da627a729de3965917d6ea584fedb7ce4f76faa632e332",
     "labels": [
       "天启者现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KarmaQ.png": {
-    "path": "/classic-cache/42dcd55a0d73a90b82dc132a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KarmaQ.png": {
+    "path": "/classic-cache/64120b58b0aa4e76f023228d.png",
     "bytes": 5041,
     "sha256": "2eb43d55f5e9987b975bd52b6bfd06d6250670e20ebed5d647a05cc82183c8a8",
     "labels": [
       "天启者现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KarmaSolKimShield.png": {
-    "path": "/classic-cache/5c32577d342f67f257e97dcd.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KarmaSolKimShield.png": {
+    "path": "/classic-cache/882428ab0565de14c3f8898d.png",
     "bytes": 6146,
     "sha256": "55abf9b74c415447376bbcd99ca1f51e56ff6a92838725243ae73586e872d3a3",
     "labels": [
       "天启者现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KarmaSpiritBind.png": {
-    "path": "/classic-cache/2d52797e4fd03ec1b4f06409.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KarmaSpiritBind.png": {
+    "path": "/classic-cache/dc296c6b68422aa57ad5c0f0.png",
     "bytes": 4572,
     "sha256": "a132a48347bdaf067022bac979139c842b11887e349bf58e23a8c585bc892263",
     "labels": [
       "天启者现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KarthusDefile.png": {
-    "path": "/classic-cache/d0fe4061bbf3e76c8b724109.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KarthusDefile.png": {
+    "path": "/classic-cache/f744b4e3bc435944ce1cf7e5.png",
     "bytes": 5461,
     "sha256": "496d48d4731b3e45bad81bc4c4dfb840ab31de9e7d58b37a7c3863a51aee4543",
     "labels": [
       "死亡颂唱者现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KarthusFallenOne.png": {
-    "path": "/classic-cache/f684c63eec7e2b4d4f242757.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KarthusFallenOne.png": {
+    "path": "/classic-cache/79b8d62b7c9a4a8ef3a1f856.png",
     "bytes": 6223,
     "sha256": "d8444de1b47e702038c5b82be4d226fd2fab80b2c3bc4bd82e293454ecf85f44",
     "labels": [
       "死亡颂唱者现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KarthusLayWasteA1.png": {
-    "path": "/classic-cache/f3ec2d59c345a70727910400.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KarthusLayWasteA1.png": {
+    "path": "/classic-cache/90a40d0b1508bc1dd0fb4256.png",
     "bytes": 5449,
     "sha256": "da90cd0563af8560e5792a1c8490f05f41b29c12484b966630facbf18503c10d",
     "labels": [
       "死亡颂唱者现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KarthusWallOfPain.png": {
-    "path": "/classic-cache/f2112c0dff9fdee5b4fd9472.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KarthusWallOfPain.png": {
+    "path": "/classic-cache/d3dfdcaa0540171eff909ffd.png",
     "bytes": 6256,
     "sha256": "900431b535e4f0cef0b4c17c5d20f84490bc4a6d84c1027446a45fbdd6c2c841",
     "labels": [
       "死亡颂唱者现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KatarinaEWrapper.png": {
-    "path": "/classic-cache/b6de18bd2dc54d2a03f0ca46.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KatarinaEWrapper.png": {
+    "path": "/classic-cache/ff7c2d736a0387403f9d22e2.png",
     "bytes": 6111,
     "sha256": "dece747a28e9d61bce1affbef26063d31a6298bb20700b5b64c5d7a43cc8da06",
     "labels": [
       "不祥之刃现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KatarinaQ.png": {
-    "path": "/classic-cache/01fdfed4e9923d14188d1b2f.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KatarinaQ.png": {
+    "path": "/classic-cache/c0f38b1af3e6c2952245bbc4.png",
     "bytes": 5074,
     "sha256": "1c662209354235db30b3bcb6c4ce670c67ce90c448009f248d0242157bf25ea1",
     "labels": [
       "不祥之刃现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KatarinaR.png": {
-    "path": "/classic-cache/203310b734b39210d640c345.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KatarinaR.png": {
+    "path": "/classic-cache/0822bf1bc5f2e5fbed6f090b.png",
     "bytes": 6215,
     "sha256": "e236b60a2bd8895977361a8b9c510d5e4a1a8cc536c15118e3fa3dee28ee5659",
     "labels": [
       "不祥之刃现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KatarinaW.png": {
-    "path": "/classic-cache/f63478d714714f4375ae60e0.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KatarinaW.png": {
+    "path": "/classic-cache/8845e8ec840920dd0b522e1a.png",
     "bytes": 6391,
     "sha256": "2a094645d9b918dafd9204b11edf73fa53c9e776e01625c6eb5500c07fa88b3b",
     "labels": [
       "不祥之刃现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KayleE.png": {
-    "path": "/classic-cache/968c0437f0ab325d65a9bea6.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KayleE.png": {
+    "path": "/classic-cache/844190d783daba15538b569e.png",
     "bytes": 4392,
     "sha256": "a16454872aa2ee6b1897362bc006fd599de0a5f3984e2e2eefb79617bda65583",
     "labels": [
       "正义天使现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KayleQ.png": {
-    "path": "/classic-cache/17bda381375655de6d22cb4b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KayleQ.png": {
+    "path": "/classic-cache/e4687af4ef5b6c1d722ae61f.png",
     "bytes": 5947,
     "sha256": "2cfa9ffdd45791afc5d83b08676c3d25cdbba7cbbfda229cd524af67e81cc258",
     "labels": [
       "正义天使现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KayleR.png": {
-    "path": "/classic-cache/e72a5ffd1d96bdf85132da31.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KayleR.png": {
+    "path": "/classic-cache/7802e4d9554ed28c3e1c687a.png",
     "bytes": 6270,
     "sha256": "e09e0e0a25ef0930a53cfb722035b71476ad99a9060ae5a4b21157702effa314",
     "labels": [
       "正义天使现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KayleW.png": {
-    "path": "/classic-cache/2cf20ee2c0b2c27120730120.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KayleW.png": {
+    "path": "/classic-cache/f2d4f85adaa8c3b5af29875a.png",
     "bytes": 6352,
     "sha256": "34673d9dc691dd63cbe81945dfa05a14a7bed5cbc093e2d2b8c79509e97bf675",
     "labels": [
       "正义天使现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KennenBringTheLight.png": {
-    "path": "/classic-cache/0fe607fbaa0aeca30858d8a1.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KennenBringTheLight.png": {
+    "path": "/classic-cache/1a72654d866a92eb0cf0eaa7.png",
     "bytes": 5762,
     "sha256": "ecdebce73c3f829cb948a83faa2e05d6ae0ea068b75038d2f7c591736ca08b18",
     "labels": [
       "狂暴之心现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KennenLightningRush.png": {
-    "path": "/classic-cache/0a4f4ec12495021a338bcc29.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KennenLightningRush.png": {
+    "path": "/classic-cache/4eb3e9be6352bc144e759ffd.png",
     "bytes": 5917,
     "sha256": "87804d53b16a082715d031bf15c26a264db96488d5d225f45bbfd309f7634c54",
     "labels": [
       "狂暴之心现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KennenShurikenHurlMissile1.png": {
-    "path": "/classic-cache/8531f827187421d579b33674.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KennenShurikenHurlMissile1.png": {
+    "path": "/classic-cache/533ebd7309401274402bbd4e.png",
     "bytes": 5323,
     "sha256": "2b2d78f41615e1d078ae50d1d1afb3c944fee642324adfb11c14af10e1326ade",
     "labels": [
       "狂暴之心现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KennenShurikenStorm.png": {
-    "path": "/classic-cache/fc4f7b15e0197a082c70874a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KennenShurikenStorm.png": {
+    "path": "/classic-cache/e6c241fad51d4b779562da75.png",
     "bytes": 6320,
     "sha256": "a5a6535c9338cf84e794aec4e3635e6a42c8e692746b885fef9eae0896b315e7",
     "labels": [
       "狂暴之心现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KogMawBioArcaneBarrage.png": {
-    "path": "/classic-cache/2c23cfa7dd4eb7e60097ad5f.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KogMawBioArcaneBarrage.png": {
+    "path": "/classic-cache/b5022dd55ee5fa537f8b173f.png",
     "bytes": 6041,
     "sha256": "a056d4fd23b45622a3324ef959b12fae59a4289cf71f4083008faa60fcbaf032",
     "labels": [
       "深渊巨口现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KogMawLivingArtillery.png": {
-    "path": "/classic-cache/ae3bcdd59223064e1f0dccde.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KogMawLivingArtillery.png": {
+    "path": "/classic-cache/8abbbf4cea4e158abeb8f88b.png",
     "bytes": 4282,
     "sha256": "934ba515de58a3cd99d23a1a5548370f46333cda4e93c4cc3ddb6245b2d36244",
     "labels": [
       "深渊巨口现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KogMawQ.png": {
-    "path": "/classic-cache/0bbabec3fa1f91ab919f30ab.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KogMawQ.png": {
+    "path": "/classic-cache/f89d886764fcbcf122cbf54a.png",
     "bytes": 5015,
     "sha256": "d63f97e34feb23c2c638968d7961c9f1b51633090064a16196ac40de885420ac",
     "labels": [
       "深渊巨口现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/KogMawVoidOoze.png": {
-    "path": "/classic-cache/e8fc87fb724973fe34e8c296.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/KogMawVoidOoze.png": {
+    "path": "/classic-cache/e1739868ff8a51e89dd30c34.png",
     "bytes": 5956,
     "sha256": "fdad9c9948e489afec5519445108e4deb267a4ad19be2c7f12474ebecfd0c402",
     "labels": [
       "深渊巨口现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/Landslide.png": {
-    "path": "/classic-cache/61a0670f365773963deeb204.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/Landslide.png": {
+    "path": "/classic-cache/28d52667bce14b05c3902b5e.png",
     "bytes": 5760,
     "sha256": "64555698f546abbabde11a4ea64664851100031b60c0b5dbf7d1da46efe35ccb",
     "labels": [
       "熔岩巨兽现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/LeeSinEOne.png": {
-    "path": "/classic-cache/443ada92b35c49dc9b50aec9.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/LeeSinEOne.png": {
+    "path": "/classic-cache/731e67c5f3086a0e12867572.png",
     "bytes": 5534,
     "sha256": "6f9ecda36566ec35d6ac7cec8688cbd9635baeb3db408a4c8e1414c6fb4dcb48",
     "labels": [
       "盲僧现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/LeeSinQOne.png": {
-    "path": "/classic-cache/3abac02437638d223196ac6d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/LeeSinQOne.png": {
+    "path": "/classic-cache/5909ec6154cc6f1f94d5f399.png",
     "bytes": 5463,
     "sha256": "f64a7454914e2eb71149e293eafb2fa3aefd1a8ac75b14b349da00deb3bbab46",
     "labels": [
       "盲僧现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/LeeSinR.png": {
-    "path": "/classic-cache/7a4ede7b02f55e2e5f1ce2ce.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/LeeSinR.png": {
+    "path": "/classic-cache/340c1d4f93e34535490c63e4.png",
     "bytes": 6683,
     "sha256": "219ec6eb20e5cbe0be73205eb11675a0ceefe387f187940a94cd3744c5490129",
     "labels": [
       "盲僧现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/LeeSinWOne.png": {
-    "path": "/classic-cache/51ca285c6c3b13f4ce34ab16.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/LeeSinWOne.png": {
+    "path": "/classic-cache/8984c80f5f1e0b781301be3c.png",
     "bytes": 6535,
     "sha256": "0628b1d34554b7ce45480a60287734489dfbec68943ef9c75ee76fef4e6c3bce",
     "labels": [
       "盲僧现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/LeonaShieldOfDaybreak.png": {
-    "path": "/classic-cache/4a8ce52a54dc10a8a0684f9f.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/LeonaShieldOfDaybreak.png": {
+    "path": "/classic-cache/603c6212e8eb9c0439efa122.png",
     "bytes": 6757,
     "sha256": "dc39d88ef6a0c80c06f8e727e1f87aee7e94b13f750561e99d99c3dfce9299a9",
     "labels": [
       "曙光女神现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/LeonaSolarBarrier.png": {
-    "path": "/classic-cache/3c7684e6c95a20c0b83c0c1e.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/LeonaSolarBarrier.png": {
+    "path": "/classic-cache/d0056ab6c6e889662a7ec707.png",
     "bytes": 5347,
     "sha256": "342088c1c6037c7d11c92c551df577b0d738cd7f2de26c4ee6fb8d42ea58a108",
     "labels": [
       "曙光女神现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/LeonaSolarFlare.png": {
-    "path": "/classic-cache/327c1c7e7deef98e067cfe58.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/LeonaSolarFlare.png": {
+    "path": "/classic-cache/98d55890ff4bef978ecc4425.png",
     "bytes": 6500,
     "sha256": "4e59954a37f3c33deeee1eba614f8bdab05c86812cfbab7c7913db11a6da2306",
     "labels": [
       "曙光女神现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/LeonaZenithBlade.png": {
-    "path": "/classic-cache/7129426bf83fee88bcb0c04a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/LeonaZenithBlade.png": {
+    "path": "/classic-cache/c15d7e28f57d19524cb882a0.png",
     "bytes": 5848,
     "sha256": "bea4553abbd6bfaa065881c96294cc5519420e0531027e989e5a7309596bbaca",
     "labels": [
       "曙光女神现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/LucianE.png": {
-    "path": "/classic-cache/6c7aa8d7d72ef2f951a10765.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/LucianE.png": {
+    "path": "/classic-cache/0e8cb3e1b27c32f6182bbc87.png",
     "bytes": 5263,
     "sha256": "5f9e5082b15285295f7d5d61b090c71ac8e18f6dd74678e8c2af32db235efdbe",
     "labels": [
       "圣枪游侠现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/LucianQ.png": {
-    "path": "/classic-cache/df62a2bec7ee593257db104d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/LucianQ.png": {
+    "path": "/classic-cache/0fada8bb858b467e827629b5.png",
     "bytes": 5630,
     "sha256": "9ed0f87e0e81e1932069639eb68c4df8df25d8d818552a03feae1ffe9a414a57",
     "labels": [
       "圣枪游侠现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/LucianR.png": {
-    "path": "/classic-cache/483cf8fa20b58b06f612bcfe.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/LucianR.png": {
+    "path": "/classic-cache/77cbfbf941256d840a6c0d91.png",
     "bytes": 5483,
     "sha256": "0ff63156fa8759ba854750c5e864ff84efe345233752bd617a6828f6f45bfb58",
     "labels": [
       "圣枪游侠现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/LucianW.png": {
-    "path": "/classic-cache/7c62cd6dda7be1e68f296d48.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/LucianW.png": {
+    "path": "/classic-cache/fcc87363daa7f1a3f12141e9.png",
     "bytes": 5670,
     "sha256": "bce3be6be4b03abe7176523ef741650950c63fd575ab9bfa7dad5b562abf8e70",
     "labels": [
       "圣枪游侠现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/LuluE.png": {
-    "path": "/classic-cache/05729edaf23ec21be898a2e5.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/LuluE.png": {
+    "path": "/classic-cache/ac71873371aa1f85f836f34a.png",
     "bytes": 6489,
     "sha256": "2fad5b154dee29ac833671b58edbd0c53a0b275307ce38d6876ea53b3831bba0",
     "labels": [
       "仙灵女巫现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/LuluQ.png": {
-    "path": "/classic-cache/d0b8747d7699786030101f98.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/LuluQ.png": {
+    "path": "/classic-cache/74f388acace723c3b53551ce.png",
     "bytes": 5902,
     "sha256": "ce140390d253ceed8248c5197eda9deccf3cd2572003624d63be228418c59348",
     "labels": [
       "仙灵女巫现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/LuluR.png": {
-    "path": "/classic-cache/7df670e7d434769bb3227943.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/LuluR.png": {
+    "path": "/classic-cache/7c0320ccd433eaf498a66acc.png",
     "bytes": 6889,
     "sha256": "95a1ce619e32883e6ab1f686521c38f2df3299dde3a9ae554c45a20942c08e9d",
     "labels": [
       "仙灵女巫现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/LuluW.png": {
-    "path": "/classic-cache/3dd32963afaea3569cbbcd3a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/LuluW.png": {
+    "path": "/classic-cache/76a53b5555fdbf545d2af875.png",
     "bytes": 6755,
     "sha256": "828b6dbb10270832acac1ce702af1cd362291e0f2141a177a0dd3c460c919e8f",
     "labels": [
       "仙灵女巫现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/LuxLightBinding.png": {
-    "path": "/classic-cache/edd7df56c0f3a2f42b47cde3.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/LuxLightBinding.png": {
+    "path": "/classic-cache/7815d6524994367104d25a46.png",
     "bytes": 6820,
     "sha256": "06abdcb3edede637b6fd076e69381f2ff538a30c788c3ec857d4834742c2b424",
     "labels": [
       "光辉女郎现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/LuxLightStrikeKugel.png": {
-    "path": "/classic-cache/d2e5a1c0732961e371848025.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/LuxLightStrikeKugel.png": {
+    "path": "/classic-cache/5520eef5be061ed1b19b71ad.png",
     "bytes": 6567,
     "sha256": "c5900b892f0065d9b19ce4d584b7633c23235dbfd0bf55cb7444fe0162fa0138",
     "labels": [
       "光辉女郎现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/LuxPrismaticWave.png": {
-    "path": "/classic-cache/b407039339d4fd5b61ff354e.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/LuxPrismaticWave.png": {
+    "path": "/classic-cache/d9b5f2b744d350ed0695aa30.png",
     "bytes": 6679,
     "sha256": "9eec398494b60cb908ca2a5635463ad3ee63bce31521a7a3ce657dbc2c6627e2",
     "labels": [
       "光辉女郎现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/LuxR.png": {
-    "path": "/classic-cache/0abb2b4ff546f63f790ed4ba.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/LuxR.png": {
+    "path": "/classic-cache/f9c30054e36a85a96eabf6c8.png",
     "bytes": 5520,
     "sha256": "392a1ed2da41f165ae79c2c3e00b8796ff017f6ce9d55e37d401d63606cb2a86",
     "labels": [
       "光辉女郎现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/MalzaharE.png": {
-    "path": "/classic-cache/733387b507fa1c1229714527.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/MalzaharE.png": {
+    "path": "/classic-cache/f601762622d734be29b49f8d.png",
     "bytes": 4740,
     "sha256": "45bbb902686e420b85b74f53b2cd6fcb5103129d13fe73ae6ef03e5f7c4f2625",
     "labels": [
       "虚空先知现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/MalzaharQ.png": {
-    "path": "/classic-cache/0be869246e71773a33168cb0.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/MalzaharQ.png": {
+    "path": "/classic-cache/654c4a76100d6d46fa2c34c3.png",
     "bytes": 6558,
     "sha256": "ac4f1bcc96cc60ea2b9d848ca9d19e663b23bc83390ff7e929ca36c3871e035c",
     "labels": [
       "虚空先知现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/MalzaharR.png": {
-    "path": "/classic-cache/9e96fa5c310ac1204f5f830c.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/MalzaharR.png": {
+    "path": "/classic-cache/01200cb6f03605baedaaf3ae.png",
     "bytes": 5392,
     "sha256": "94f0362bba65761332feb0c139ba602c2ac2e147f7267d8a7ed5003010414f1a",
     "labels": [
       "虚空先知现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/MalzaharW.png": {
-    "path": "/classic-cache/61036c2828d6237f87ca77e4.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/MalzaharW.png": {
+    "path": "/classic-cache/ff8ade5318c1d4c9090bdf39.png",
     "bytes": 5718,
     "sha256": "3283c7070ca7dad8aadb7261b4b6a8fffd109607dc3556fbd5718f474a02e7a1",
     "labels": [
       "虚空先知现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/Meditate.png": {
-    "path": "/classic-cache/ce5c1062ccf58a7a7d2be2bd.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/Meditate.png": {
+    "path": "/classic-cache/e04e2394f8f7c9d3d6f3e477.png",
     "bytes": 6124,
     "sha256": "b7464d80adfefdbf9002ee0d97c4210299f97757e8df1910aa394f0b5ee39056",
     "labels": [
       "无极剑圣现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/MegaAdhesive.png": {
-    "path": "/classic-cache/bc9dff5bf730797fcbd603e2.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/MegaAdhesive.png": {
+    "path": "/classic-cache/4b30389f25b3137079bcf47d.png",
     "bytes": 6913,
     "sha256": "9ba00328847773c4b09da4c15b765fa768f7a0aefe102f2605a6e09e91cec99f",
     "labels": [
       "炼金术士现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/MissFortuneBulletTime.png": {
-    "path": "/classic-cache/7400815ef1626ac092b86b57.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/MissFortuneBulletTime.png": {
+    "path": "/classic-cache/667a3e5d15540e892a076191.png",
     "bytes": 6292,
     "sha256": "93c8cf3510b2ee1b9f8e19354e878296b7b867d5123ec752f13bfc22af5c8c50",
     "labels": [
       "赏金猎人现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/MissFortuneRicochetShot.png": {
-    "path": "/classic-cache/5fd548ea8cfbf76ac452d974.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/MissFortuneRicochetShot.png": {
+    "path": "/classic-cache/41b334dbf0ed9b3637949701.png",
     "bytes": 5753,
     "sha256": "b1e149e640377699078b2a28225df4a12dadc89f9e0922f8e088dff264cd5e4d",
     "labels": [
       "赏金猎人现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/MissFortuneScattershot.png": {
-    "path": "/classic-cache/7aa7b675ecc9b76cd9897fcc.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/MissFortuneScattershot.png": {
+    "path": "/classic-cache/7b67a60258cb1b6e1df65a77.png",
     "bytes": 4347,
     "sha256": "f0d5e50289d85dbe6458a0c263499e6f19bd205dc16255dc370ac95da2a353cc",
     "labels": [
       "赏金猎人现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/MissFortuneViciousStrikes.png": {
-    "path": "/classic-cache/8402aa93addbc2d5279e3f03.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/MissFortuneViciousStrikes.png": {
+    "path": "/classic-cache/ec629cefd83deaf9973e131a.png",
     "bytes": 5906,
     "sha256": "f45fd253a554cbbe355f1389ef85bb47a9477b3a0761f5a73e12e165a52f9b4a",
     "labels": [
       "赏金猎人现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/MissileBarrage.png": {
-    "path": "/classic-cache/5ad4fd405e97da818e8ccca7.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/MissileBarrage.png": {
+    "path": "/classic-cache/fe924a1a3657f3e048943a0d.png",
     "bytes": 6111,
     "sha256": "458dea24c1dceb7392bf318c2c4f7306623745975d3a3bbf5926a7acb66f647c",
     "labels": [
       "英勇投弹手现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/MonkeyKingDecoy.png": {
-    "path": "/classic-cache/7a993f1b45023135cf28a0f2.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/MonkeyKingDecoy.png": {
+    "path": "/classic-cache/715d170bbbb49657446ec244.png",
     "bytes": 7145,
     "sha256": "fd43feaf2002fd015c98aa9ed66935a83c5b100e58d5d291748e0d61b6100e22",
     "labels": [
       "齐天大圣现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/MonkeyKingDoubleAttack.png": {
-    "path": "/classic-cache/f1f129bbb022ef498900413d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/MonkeyKingDoubleAttack.png": {
+    "path": "/classic-cache/d9c6e7df796a71fe9e0f910f.png",
     "bytes": 6076,
     "sha256": "70cd83f9ace58c6d3ce8f3acde4ba807e76691fa40c315422c8a8c9176e63756",
     "labels": [
       "齐天大圣现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/MonkeyKingNimbus.png": {
-    "path": "/classic-cache/74ed8dc8bec86b00e18f5160.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/MonkeyKingNimbus.png": {
+    "path": "/classic-cache/86ea94d8a48375a930e9c0b2.png",
     "bytes": 5890,
     "sha256": "cb414b49cd2f1a6a365d5e0210bd3623872aaa593ac28c6d7e19b31bbc4c7dfe",
     "labels": [
       "齐天大圣现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/MonkeyKingSpinToWin.png": {
-    "path": "/classic-cache/1d843bdef8ef492659693e92.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/MonkeyKingSpinToWin.png": {
+    "path": "/classic-cache/a19a44444282ce5d7fe1634d.png",
     "bytes": 5407,
     "sha256": "f877e304fb08a531d8f232697774b32cbdba6624845d1c9f0ae74ccf73c5a70a",
     "labels": [
       "齐天大圣现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/MordekaiserE.png": {
-    "path": "/classic-cache/fc01488a1138ec017d63a3f1.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/MordekaiserE.png": {
+    "path": "/classic-cache/500c05a895d36a77f6c6c40a.png",
     "bytes": 6309,
     "sha256": "2580caa0ba6cab12e94252b13469365677720a181b264db57166e2d3be74bf2a",
     "labels": [
       "铁铠冥魂现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/MordekaiserQ.png": {
-    "path": "/classic-cache/aa4dc2e9f5a3901343d4b25c.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/MordekaiserQ.png": {
+    "path": "/classic-cache/be1aec7d96c2ad62f75b2b89.png",
     "bytes": 6652,
     "sha256": "6c5f231aab1fb3411dc6dc83d843f0d986d61e7bd87b879668016b973ad877d4",
     "labels": [
       "铁铠冥魂现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/MordekaiserR.png": {
-    "path": "/classic-cache/6ee431b8a3eba8aa72d9e185.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/MordekaiserR.png": {
+    "path": "/classic-cache/508f290f94fcdfed00c7078c.png",
     "bytes": 6407,
     "sha256": "d93c3c19aa591e3ae01539723bece21097fbe5224023a5016748bd795127933a",
     "labels": [
       "铁铠冥魂现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/MordekaiserW.png": {
-    "path": "/classic-cache/8dfa627f6bd8f61b4202e7d9.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/MordekaiserW.png": {
+    "path": "/classic-cache/98345418e85e3ca2e7e486d0.png",
     "bytes": 7076,
     "sha256": "a9b7f6dd8b76aac42f1ab0aa6a2ac376dae4e783f5081b46b4474e50a50bf5ea",
     "labels": [
       "铁铠冥魂现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/MorganaE.png": {
-    "path": "/classic-cache/cf1b31213a614c6b3d3dbe3a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/MorganaE.png": {
+    "path": "/classic-cache/66f07793b6066404c9ae5ad9.png",
     "bytes": 4924,
     "sha256": "92e80ca3f16d0bc85948167f41528f4bb2fba47bb79131fddd0b873237161bbc",
     "labels": [
       "堕落天使现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/MorganaQ.png": {
-    "path": "/classic-cache/ea44a2dc20fd09743a3798a8.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/MorganaQ.png": {
+    "path": "/classic-cache/a1b16e115eb5b0e0151c1618.png",
     "bytes": 6387,
     "sha256": "69160b268d435c77c5999a58c7b062c702019635e544288c7fa229d698d37061",
     "labels": [
       "堕落天使现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/MorganaR.png": {
-    "path": "/classic-cache/eeb713341e90d9fa1bb93891.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/MorganaR.png": {
+    "path": "/classic-cache/4e5592595ae9d42ce34dcc46.png",
     "bytes": 6789,
     "sha256": "1d5c0ae0dbc60fa3dd958c8d7c3f596ffeb68494e6f60acfd2ce94e865755eea",
     "labels": [
       "堕落天使现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/MorganaW.png": {
-    "path": "/classic-cache/ab4d6b05f1778e8f42258cbd.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/MorganaW.png": {
+    "path": "/classic-cache/f3d9255b58a4d14b95fc8496.png",
     "bytes": 5390,
     "sha256": "59696d65b82ccde47c250360e202c5a7a569681b876e3be032a38a6d5056abe3",
     "labels": [
       "堕落天使现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/NamiE.png": {
-    "path": "/classic-cache/617a9bcc65f4f9ad0ae51d2d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/NamiE.png": {
+    "path": "/classic-cache/292241d654b1fd04f9315a92.png",
     "bytes": 6357,
     "sha256": "d76cfe1e1bac9338a7c63f5e5bde4d35a787c21fecdbc1ccef429f67b38884d2",
     "labels": [
       "唤潮鲛姬现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/NamiQ.png": {
-    "path": "/classic-cache/ac853d5ed7b460aae2b3db00.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/NamiQ.png": {
+    "path": "/classic-cache/84137c436f847d8c1cdc9320.png",
     "bytes": 5866,
     "sha256": "b3da56db9e10663725ac5d31ca38522905216a647bc4351b262fb5754f6e26b0",
     "labels": [
       "唤潮鲛姬现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/NamiR.png": {
-    "path": "/classic-cache/87e35cce158cafb1a9eb9f0d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/NamiR.png": {
+    "path": "/classic-cache/656123cbb223538464064a06.png",
     "bytes": 6317,
     "sha256": "d30128ab3c3aa0e3469bb9b94c1a377e3245a24dd83e4ced3edac0d8fed674d1",
     "labels": [
       "唤潮鲛姬现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/NamiW.png": {
-    "path": "/classic-cache/78deba5aead27c3dc857a5d9.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/NamiW.png": {
+    "path": "/classic-cache/565cc27206ed6b07fee578a8.png",
     "bytes": 6494,
     "sha256": "bfde28a53ebd8e3e4f2e4835ed40757a4728b28d30555a07feca8a936f0f1511",
     "labels": [
       "唤潮鲛姬现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/NasusE.png": {
-    "path": "/classic-cache/5c3d778f6bbf68e246d8cd39.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/NasusE.png": {
+    "path": "/classic-cache/05dbf2acdb9e3dc27649881d.png",
     "bytes": 6277,
     "sha256": "af9960eb76511a7e6f19fdfba17b0d230fac62ce38914aee8e13276853d61837",
     "labels": [
       "沙漠死神现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/NasusQ.png": {
-    "path": "/classic-cache/d445e5ea577dc7522a400739.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/NasusQ.png": {
+    "path": "/classic-cache/b08301d6c70e501288c96bc5.png",
     "bytes": 6619,
     "sha256": "89449d4078c6bdef6788e964fde9f867f9e0a94ea8dd41a7c52a9622c97ac900",
     "labels": [
       "沙漠死神现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/NasusR.png": {
-    "path": "/classic-cache/fd0a66a9f10b99ed74834226.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/NasusR.png": {
+    "path": "/classic-cache/8e738bf1faaa2bb064cc83bd.png",
     "bytes": 6595,
     "sha256": "a1b689d08f57c7b24b02af2e665cbfc5d812f66a3513b0b32f2392cbf5b34cff",
     "labels": [
       "沙漠死神现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/NasusW.png": {
-    "path": "/classic-cache/7bfe782f7600eaec05c387c7.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/NasusW.png": {
+    "path": "/classic-cache/5707d295547a7f96464a6f3c.png",
     "bytes": 6399,
     "sha256": "0dc2c3903c6960026449074c997cddd6f64ede2369b796aff0dd8c73384a0ca6",
     "labels": [
       "沙漠死神现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/NautilusAnchorDrag.png": {
-    "path": "/classic-cache/2a90ae4ecdb3a774a40590a5.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/NautilusAnchorDrag.png": {
+    "path": "/classic-cache/7789bccbe52c852e2e3400d5.png",
     "bytes": 4789,
     "sha256": "ccd2e9bc3b4ea71cc6846c34b08f86630a0481845369103e4533e0c57bd82b93",
     "labels": [
       "深海泰坦现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/NautilusGrandLine.png": {
-    "path": "/classic-cache/f0b5dfed5e03929a26b67f5d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/NautilusGrandLine.png": {
+    "path": "/classic-cache/d02d6818e3c35c5af0a88b94.png",
     "bytes": 6201,
     "sha256": "788d79428c5a08027d858c8607c8de33913a6b500b0bbd6ea672fda229a93d91",
     "labels": [
       "深海泰坦现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/NautilusPiercingGaze.png": {
-    "path": "/classic-cache/4fd11469502e6a2f0195fb18.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/NautilusPiercingGaze.png": {
+    "path": "/classic-cache/818888049753edc859758c1f.png",
     "bytes": 5345,
     "sha256": "09401d62aae89fd7b607444cf71e19c25beb5ead87b0f82b57377c9ed62c5787",
     "labels": [
       "深海泰坦现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/NautilusSplashZone.png": {
-    "path": "/classic-cache/157a181258da15de25069513.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/NautilusSplashZone.png": {
+    "path": "/classic-cache/a1ed90918246674e207b3e14.png",
     "bytes": 4784,
     "sha256": "f05cd2e588331b285e41cf76c556a31a45f0d6518c41860516336fd36c29de76",
     "labels": [
       "深海泰坦现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/NetherBlade.png": {
-    "path": "/classic-cache/e6aeef1857dfaccbf69938e9.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/NetherBlade.png": {
+    "path": "/classic-cache/1f959f61dd833ca6325ca489.png",
     "bytes": 5666,
     "sha256": "f3f4f41d74a0212144e80052a6c8256f474583effd5c90bd4917bf9fb68272db",
     "labels": [
       "虚空行者现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/NullLance.png": {
-    "path": "/classic-cache/540b1ee02a70328f2d15309a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/NullLance.png": {
+    "path": "/classic-cache/eae7e8026b0763753b0e49c3.png",
     "bytes": 5948,
     "sha256": "4864e561932f18a966e1b9b067f1e2c9625900ce22b359de102b12dd6f6bb2f2",
     "labels": [
       "虚空行者现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/NunuE.png": {
-    "path": "/classic-cache/43c0994876660a43edfd7d64.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/NunuE.png": {
+    "path": "/classic-cache/b3259318b014f2bce85fd939.png",
     "bytes": 5612,
     "sha256": "873fafdb0b0f52d8d747d0a388c36320b9ec1b34c96dd1c5516cb5eacf5afdae",
     "labels": [
       "雪原双子现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/NunuQ.png": {
-    "path": "/classic-cache/38267e15cbd00ff9a0391d36.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/NunuQ.png": {
+    "path": "/classic-cache/d392d6a69bc56531b6bb1b27.png",
     "bytes": 6105,
     "sha256": "f7e1944b03dda865102a710db13beef284d5d16ba51ca0056892577c8ddd5a33",
     "labels": [
       "雪原双子现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/NunuR.png": {
-    "path": "/classic-cache/727eb398ade881e63e7bc528.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/NunuR.png": {
+    "path": "/classic-cache/3e6d533d8ba3b2ed3693b145.png",
     "bytes": 5867,
     "sha256": "c24f935963ad1b9fb461253bdbb7ed2af0ad752f04fdda5b7ef4f8d2a9741a2b",
     "labels": [
       "雪原双子现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/NunuW.png": {
-    "path": "/classic-cache/78483770f111a10e9d1b5c4b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/NunuW.png": {
+    "path": "/classic-cache/53887c25cea383b2c70475d6.png",
     "bytes": 6104,
     "sha256": "72dba592870234897874ad86e43521ed10653720de09abf6fbf509d4fc585dbc",
     "labels": [
       "雪原双子现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/Obduracy.png": {
-    "path": "/classic-cache/4abbb842610d64ac90dab37d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/Obduracy.png": {
+    "path": "/classic-cache/d4db02481eab370ade29bb2d.png",
     "bytes": 6803,
     "sha256": "a04edaa0d7e535f82a16d3569801e3c51667711d9353f344991b7de1856f0529",
     "labels": [
       "熔岩巨兽现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/OlafAxeThrowCast.png": {
-    "path": "/classic-cache/428ee793b102bb55d816a688.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/OlafAxeThrowCast.png": {
+    "path": "/classic-cache/d9068e3b1139730d11d4b81f.png",
     "bytes": 6651,
     "sha256": "004eb267a95370178c71b838cfad947e710ba7e71b526b64432842a4b6def338",
     "labels": [
       "狂战士现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/OlafFrenziedStrikes.png": {
-    "path": "/classic-cache/ca59e9e6f4b5551fce5d8876.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/OlafFrenziedStrikes.png": {
+    "path": "/classic-cache/dabde0ba9a6a795e8df34024.png",
     "bytes": 6870,
     "sha256": "6115264992628c6c079f0f95dcafc7bd53779c1918436ad55a43fb64b4b220da",
     "labels": [
       "狂战士现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/OlafRagnarok.png": {
-    "path": "/classic-cache/c35e54aa673177ded037ffa5.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/OlafRagnarok.png": {
+    "path": "/classic-cache/2c3ca5a62ab10c0fed46e972.png",
     "bytes": 6936,
     "sha256": "abf1a05244a8e1576de49597a51a8c210829f9eeaa7009033816b6d413c61e11",
     "labels": [
       "狂战士现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/OlafRecklessStrike.png": {
-    "path": "/classic-cache/970462e22d2f4e15dc68c4de.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/OlafRecklessStrike.png": {
+    "path": "/classic-cache/07aac39d39d8bd0222e2f5c8.png",
     "bytes": 6328,
     "sha256": "8ab7f44813742c96c272c151f861298e1ba29abb5b1b757aec45a904fa33ee4b",
     "labels": [
       "狂战士现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/Overdrive.png": {
-    "path": "/classic-cache/5249ecb40e198da6bf734b9d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/Overdrive.png": {
+    "path": "/classic-cache/3ce699b6e05e9e477363a059.png",
     "bytes": 6418,
     "sha256": "a06a21b15fa10354e3ae7b503dc018b4fa3bdfe1417c072a3cadad651e815fb8",
     "labels": [
       "蒸汽机器人现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/PantheonE.png": {
-    "path": "/classic-cache/b18cb42d0af4b66a5bc613cd.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/PantheonE.png": {
+    "path": "/classic-cache/d7118167d3656c0d2f40e504.png",
     "bytes": 7578,
     "sha256": "797e16188cc794ff6df19254e7c1bf6caa8392fdb86f7e7ca7b996cdeb7b7f6a",
     "labels": [
       "不屈之枪现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/PantheonQ.png": {
-    "path": "/classic-cache/65524cd01be524b3294bc744.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/PantheonQ.png": {
+    "path": "/classic-cache/9a926a19d42ec28a02ec4dcc.png",
     "bytes": 5403,
     "sha256": "196b3bc0be145a7e9867cf363f36974ad5c9bea630a2a2dd9789e2cf3f752c1b",
     "labels": [
       "不屈之枪现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/PantheonR.png": {
-    "path": "/classic-cache/d7c7061c44a827a85ab9b33c.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/PantheonR.png": {
+    "path": "/classic-cache/9b8b20764a03d541a8f80713.png",
     "bytes": 6578,
     "sha256": "ed6c4482fe4e547085c0eb48f0ac59542e801806c54752a38ac40d5f5cf6113a",
     "labels": [
       "不屈之枪现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/PantheonW.png": {
-    "path": "/classic-cache/c991cfa5ebe3c0a13bf1650a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/PantheonW.png": {
+    "path": "/classic-cache/9031a74362b30167d6d967ce.png",
     "bytes": 7149,
     "sha256": "fc2338ab1f8ac2ebd8d992aae1e5d6404856da727ed058dec7318dc8675347fc",
     "labels": [
       "不屈之枪现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/PhosphorusBomb.png": {
-    "path": "/classic-cache/793da15a7e6ef6dc5b14b2a6.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/PhosphorusBomb.png": {
+    "path": "/classic-cache/fdfebc5a932b9cda38600d45.png",
     "bytes": 5500,
     "sha256": "a1e9bd0a53a9fdcf7defdaefc2e15fff4e6a220f312f66ccaad931b000e14033",
     "labels": [
       "英勇投弹手现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/PickACard.png": {
-    "path": "/classic-cache/4b0e96ae19a5e2cacafc376f.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/PickACard.png": {
+    "path": "/classic-cache/4f128c5ce752efe867929687.png",
     "bytes": 6171,
     "sha256": "f589fc6fcdf5d98c51b76aa3c56917e42764a3b98713fd928f847381340f8fdd",
     "labels": [
       "卡牌大师现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/PoisonTrail.png": {
-    "path": "/classic-cache/5db6e391d29425f8c185120d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/PoisonTrail.png": {
+    "path": "/classic-cache/9afdf278cebd72f4ddb11dcc.png",
     "bytes": 5905,
     "sha256": "9e3462a10a676a71276dc1da733a5360f57e917b0430df61b35677da260b7861",
     "labels": [
       "炼金术士现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/PoppyE.png": {
-    "path": "/classic-cache/4f9d0b3147b3001684df66d9.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/PoppyE.png": {
+    "path": "/classic-cache/659dfebfb38d14096e594f49.png",
     "bytes": 6137,
     "sha256": "49edcb6e595dca0d0cc5c600e1809c55f73a6071a9a7479a18678e0f09bddad4",
     "labels": [
       "圣锤之毅现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/PoppyQ.png": {
-    "path": "/classic-cache/db0f047397db9033861857c9.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/PoppyQ.png": {
+    "path": "/classic-cache/033ce128c62c5892ae26459d.png",
     "bytes": 6427,
     "sha256": "4ffc85029169bf52d54fc23ff64bf191357963fee5f94c04996305f7972ee8a5",
     "labels": [
       "圣锤之毅现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/PoppyR.png": {
-    "path": "/classic-cache/777365808ffb93909e68ce12.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/PoppyR.png": {
+    "path": "/classic-cache/34578af5c50c614862ff49e8.png",
     "bytes": 5882,
     "sha256": "0cbed6395e622d9d8b66657dc6cf928f1baccb3afa77861527e773ef1765ea01",
     "labels": [
       "圣锤之毅现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/PoppyW.png": {
-    "path": "/classic-cache/702bba0d4ae023b3c445d976.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/PoppyW.png": {
+    "path": "/classic-cache/7ba8969f2b9a00671527e43c.png",
     "bytes": 6263,
     "sha256": "c276ca86a98561390145b85d6559d283d4b601d542cce74d80842f5baf902918",
     "labels": [
       "圣锤之毅现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/PowerBall.png": {
-    "path": "/classic-cache/a74dac0e372f0ba64717b16a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/PowerBall.png": {
+    "path": "/classic-cache/7a60c0621783eb240d449dfa.png",
     "bytes": 7093,
     "sha256": "cb98e0d963ebe491e725544bbdf6285765ffaa7c84917350cda11831f4bb8398",
     "labels": [
       "披甲龙龟现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/PowerFist.png": {
-    "path": "/classic-cache/3519f852460c83c501e343e6.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/PowerFist.png": {
+    "path": "/classic-cache/95f06fe529388221e1b93b40.png",
     "bytes": 6991,
     "sha256": "6eb11045077a19560ced4a7b8936434fe4fc1999228ef621dc7df0a5878821f2",
     "labels": [
       "蒸汽机器人现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/PrimalSurge.png": {
-    "path": "/classic-cache/08dade1df00017c46f9a4a42.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/PrimalSurge.png": {
+    "path": "/classic-cache/2f5f1b20d8e0d7476981d952.png",
     "bytes": 5957,
     "sha256": "fb79c4214d08c589c3892214643a52959359e151ab4168ab38b2ab9c4e593a33",
     "labels": [
       "狂野女猎手现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/Pulverize.png": {
-    "path": "/classic-cache/b1026fa0e72d4fd90071b3c8.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/Pulverize.png": {
+    "path": "/classic-cache/ada4e801714d236962a5d6cd.png",
     "bytes": 6032,
     "sha256": "019c0971ab32747433cc8a81759c7d48ce34cc8e6ccfae20f71352a556dd076b",
     "labels": [
       "牛头酋长现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/PuncturingTaunt.png": {
-    "path": "/classic-cache/99af49f5031944fe2bf0aed1.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/PuncturingTaunt.png": {
+    "path": "/classic-cache/23f9d331dd7507dfd50dec1c.png",
     "bytes": 6637,
     "sha256": "2c9e8dd393c7830e9d2c9730169e3b6c26fff37bb596c57702fef6f1a7406bc9",
     "labels": [
       "披甲龙龟现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/QuinnE.png": {
-    "path": "/classic-cache/bacb4a53965c411451366f6d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/QuinnE.png": {
+    "path": "/classic-cache/a6ea483c81508e60e822d0f8.png",
     "bytes": 4733,
     "sha256": "3d6b6ab3b95d31589524f53ef5a4d45e28aefadf656d8aab2f4ab6169bd73056",
     "labels": [
       "德玛西亚之翼现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/QuinnQ.png": {
-    "path": "/classic-cache/5fc8b06e90f1d3dc9b41f982.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/QuinnQ.png": {
+    "path": "/classic-cache/e2e9de9a8717361878fcaf0d.png",
     "bytes": 6597,
     "sha256": "2642113a415e016c27b5fd78cb94d230c0dc00d06ebca27ee8b81662669a93d0",
     "labels": [
       "德玛西亚之翼现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/QuinnR.png": {
-    "path": "/classic-cache/dd1208edf592d1e0a1248810.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/QuinnR.png": {
+    "path": "/classic-cache/64d169c08d19625e56d6b838.png",
     "bytes": 6070,
     "sha256": "bb1fc4eddb73000b795dee10ae2703a94d5227afaf48eec97f847c06434b7319",
     "labels": [
       "德玛西亚之翼现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/QuinnW.png": {
-    "path": "/classic-cache/ad9c83875d90f64f491dfa5a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/QuinnW.png": {
+    "path": "/classic-cache/12de73bf73185be87e45494c.png",
     "bytes": 5323,
     "sha256": "0011a71c32f94f9f41d34093f6740d86e2a25348f8c1d482a66c3ed153aeef7f",
     "labels": [
       "德玛西亚之翼现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/ReapTheWhirlwind.png": {
-    "path": "/classic-cache/821153ade11e4d6b0070527f.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/ReapTheWhirlwind.png": {
+    "path": "/classic-cache/16f891e8ddd2c728a7f88356.png",
     "bytes": 6199,
     "sha256": "b3083ac3e359ed15610ab23a8488e96aacff3f04b0f68a00ed6442d2ee4f25b0",
     "labels": [
       "风暴之怒现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/RiftWalk.png": {
-    "path": "/classic-cache/7bda5e4ffa9b1178756dc598.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/RiftWalk.png": {
+    "path": "/classic-cache/7210e815b0a99928b888283a.png",
     "bytes": 6935,
     "sha256": "1ae0b449a81fe7c4801e480536c86c74f0a89e3f30f78d8718fc836d776c0135",
     "labels": [
       "虚空行者现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/RocketGrab.png": {
-    "path": "/classic-cache/07e242f6f96fd5d68c493d23.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/RocketGrab.png": {
+    "path": "/classic-cache/4db96f510bc1ad16fae7b0a8.png",
     "bytes": 6470,
     "sha256": "f549da0caa5531f3b235772763a21a455938c0216025faaf0cc04c9649112654",
     "labels": [
       "蒸汽机器人现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/Rupture.png": {
-    "path": "/classic-cache/557197c1a9b9b82e94db95e9.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/Rupture.png": {
+    "path": "/classic-cache/df1ab01edd9991a56db1f1e1.png",
     "bytes": 6647,
     "sha256": "2a7c03435d2d7a7dd000f57137649b26219f6f9a5d2662a80091d048a66a9cc2",
     "labels": [
       "虚空恐惧现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/RyzeE.png": {
-    "path": "/classic-cache/ee909fabe9b040b5fda068d5.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/RyzeE.png": {
+    "path": "/classic-cache/43d75a3ca5aaa749a4b684da.png",
     "bytes": 6325,
     "sha256": "35470637e378154b1b305c356d90483bb750163e65feb29171456007ddbd9e0c",
     "labels": [
       "符文法师现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/RyzeQWrapper.png": {
-    "path": "/classic-cache/8c1eb212e5de9ac2d765e4b9.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/RyzeQWrapper.png": {
+    "path": "/classic-cache/de2c768bffcde6144e35ae47.png",
     "bytes": 6120,
     "sha256": "e31557cc5afb5aca469b51168f006250407f8e2c2313f09c792f384af158fdf6",
     "labels": [
       "符文法师现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/RyzeR.png": {
-    "path": "/classic-cache/09850876e3fce1f9bd7d7ade.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/RyzeR.png": {
+    "path": "/classic-cache/ad3d55ddff1f09b36a4951b6.png",
     "bytes": 5165,
     "sha256": "f49922abb6c1b4c400fe96dabb3fc77993841b3f6e1294039c035431976216d6",
     "labels": [
       "符文法师现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/RyzeW.png": {
-    "path": "/classic-cache/6829739a908efb3e104cb2c1.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/RyzeW.png": {
+    "path": "/classic-cache/246eb4d739594880e601a9ba.png",
     "bytes": 6349,
     "sha256": "b7c1187b5eb69d151e2b5f7014df1a6b1787247bff8cca8b25ffb8e74bedf40e",
     "labels": [
       "符文法师现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SeismicShard.png": {
-    "path": "/classic-cache/e09dd9c16e4927ca18712fcc.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SeismicShard.png": {
+    "path": "/classic-cache/403f6f64980c835a4ea58185.png",
     "bytes": 6172,
     "sha256": "e6d43659b0b239ef3e010fff04e198f401449289432f0b81b1125dc592596d33",
     "labels": [
       "熔岩巨兽现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/ShenE.png": {
-    "path": "/classic-cache/2483c1a65e41b77208bc8bfb.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/ShenE.png": {
+    "path": "/classic-cache/c794fbd6bfc20bc21ba4591d.png",
     "bytes": 6487,
     "sha256": "b2a5d7febc4ae4d85e8e3155f2c027204adbf3a28901a5e92a6aaec8ee141823",
     "labels": [
       "暮光之眼现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/ShenQ.png": {
-    "path": "/classic-cache/c193152f56fc5ed066abe7d0.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/ShenQ.png": {
+    "path": "/classic-cache/d37c0973131bab852e36bc02.png",
     "bytes": 5617,
     "sha256": "9b013827cf5c747b5f90f44e738f9ba2881a8fa1b1a3c121b6a5d24dbe5609fb",
     "labels": [
       "暮光之眼现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/ShenR.png": {
-    "path": "/classic-cache/b65a6abb2bb0d6d506bb48b5.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/ShenR.png": {
+    "path": "/classic-cache/61b86d4be99fd846260f017a.png",
     "bytes": 5871,
     "sha256": "0bcb6fbb25a804dc41f6fdfcee82a306ff92aa31d6c0a9df635ce8448f21b9ed",
     "labels": [
       "暮光之眼现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/ShenW.png": {
-    "path": "/classic-cache/472e64bf90df0dcad1d91c2c.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/ShenW.png": {
+    "path": "/classic-cache/df6523baccd947532417dce8.png",
     "bytes": 6602,
     "sha256": "962b5d9a53c55716b07a118e72dabd3408f8fafda2daebff424547e6270a1028",
     "labels": [
       "暮光之眼现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/ShyvanaE.png": {
-    "path": "/classic-cache/e2f0fc6e084277c89be84732.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/ShyvanaE.png": {
+    "path": "/classic-cache/001ae2294873e8a839518f3a.png",
     "bytes": 5178,
     "sha256": "1cfca401f2d59f496a7b53538c135684b768d58c70081a530c39fe139bdb43dd",
     "labels": [
       "龙血武姬现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/ShyvanaQ.png": {
-    "path": "/classic-cache/b1a221c3c6649834a8e0b33b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/ShyvanaQ.png": {
+    "path": "/classic-cache/ac2bf0db15c000658848c972.png",
     "bytes": 5634,
     "sha256": "8f28d31062323352673aa4f0530033ef2a06fdeab9a63abe81f54630dee2dd04",
     "labels": [
       "龙血武姬现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/ShyvanaR.png": {
-    "path": "/classic-cache/61491ced5e4a989092d3b7b1.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/ShyvanaR.png": {
+    "path": "/classic-cache/99b7140ed5bd8bd7558c197d.png",
     "bytes": 5445,
     "sha256": "f6119ba8f9a3e050a291c38b0a42664785ea9ae15bed735b2c62dc6f91f75a43",
     "labels": [
       "龙血武姬现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/ShyvanaW.png": {
-    "path": "/classic-cache/afc3e0152d692c86ec16ce10.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/ShyvanaW.png": {
+    "path": "/classic-cache/f1aced7d58177fdae1e93343.png",
     "bytes": 5939,
     "sha256": "41b4e1fadfa41bec636f6fcd21302d0782e66f478a3da4df5a752cf75c17cc46",
     "labels": [
       "龙血武姬现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SionE.png": {
-    "path": "/classic-cache/d3199c2c63ea5b7e43da1c39.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SionE.png": {
+    "path": "/classic-cache/d875c7f8f61c433496f02208.png",
     "bytes": 6496,
     "sha256": "fab725854fe7c93644097413c023ebad34bcd617246496ec565c70b2c6bb8b7a",
     "labels": [
       "亡灵战神现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SionQ.png": {
-    "path": "/classic-cache/96930a427ad6503a989d32d2.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SionQ.png": {
+    "path": "/classic-cache/ed8aa48e46a93a50df68da9b.png",
     "bytes": 6722,
     "sha256": "483992973d08fd8ecb2a9e5a1748a8ef5fd8b7d62bb087be8be68f2ef9b01e9d",
     "labels": [
       "亡灵战神现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SionR.png": {
-    "path": "/classic-cache/8357e70e498c5435f454b5b3.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SionR.png": {
+    "path": "/classic-cache/adeb5473decc552d7d9bda5b.png",
     "bytes": 6964,
     "sha256": "72291412608ea2622aa662de33e8a0677cb734d4285fc3d404d47cbf38142bcc",
     "labels": [
       "亡灵战神现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SionW.png": {
-    "path": "/classic-cache/c9f01bd0db57689ece064a68.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SionW.png": {
+    "path": "/classic-cache/9e8ef9181f24e14b5f959237.png",
     "bytes": 5968,
     "sha256": "e41f97e2d7ce7e37e3ac59ded1f12be0d63c21d93e29aaaf8f0a9aeec2ae584a",
     "labels": [
       "亡灵战神现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SivirE.png": {
-    "path": "/classic-cache/933e9a640c73a8e57f68f57a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SivirE.png": {
+    "path": "/classic-cache/be839362302fd86bed80f2ab.png",
     "bytes": 5532,
     "sha256": "494d780afe65a3d6c4349a389a6d50765b781171a88a1d42db30997a90b4b506",
     "labels": [
       "战争女神现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SivirQ.png": {
-    "path": "/classic-cache/0d377c6e822a5049059e0ecd.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SivirQ.png": {
+    "path": "/classic-cache/1abbfb05f9d30db578c03c9e.png",
     "bytes": 6766,
     "sha256": "7795998599b564b93e37cb112fe39980dd3f93c96753d2b360dd06275c2142c5",
     "labels": [
       "战争女神现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SivirR.png": {
-    "path": "/classic-cache/db8d60a019f23596a41d7bc4.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SivirR.png": {
+    "path": "/classic-cache/4dae27cdc1c1af3e542f0f3b.png",
     "bytes": 6411,
     "sha256": "00eeaf524ebb9170b6d51ce1e01b793997ab672c5203535568f67f80c7d1053c",
     "labels": [
       "战争女神现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SivirW.png": {
-    "path": "/classic-cache/5a4da9972b37d3fc695fc73e.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SivirW.png": {
+    "path": "/classic-cache/6ef9d12fb7b44aa88e3ecd6e.png",
     "bytes": 5392,
     "sha256": "34f964b4d94cc781c3e332f214a21afdf9edccc1c78ddd8dc5e4e3b37372d9e1",
     "labels": [
       "战争女神现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SkarnerE.png": {
-    "path": "/classic-cache/80c580e6b402c82b711f2c3d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SkarnerE.png": {
+    "path": "/classic-cache/06f4c11f338c0fb9ae459a12.png",
     "bytes": 6005,
     "sha256": "91c40123ada7263fc949dc4d33768111c38a2dfb731361afb7c81f5062fc39c2",
     "labels": [
       "上古领主现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SkarnerQ.png": {
-    "path": "/classic-cache/16929564592dabb3e057d1ee.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SkarnerQ.png": {
+    "path": "/classic-cache/616bcd86d97ac419a9d13831.png",
     "bytes": 6376,
     "sha256": "2a523f56860aadee71ea9daf7709f1639906e64814fcf50675be7ceaaf57ef2d",
     "labels": [
       "上古领主现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SkarnerR.png": {
-    "path": "/classic-cache/6cd565bab2050485a653c737.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SkarnerR.png": {
+    "path": "/classic-cache/cea6bab58284593bf06e4cdf.png",
     "bytes": 6305,
     "sha256": "f15a58add8e21dd9b734e0b74e7fec6546af0e3d8c33c8ba71065073153d085f",
     "labels": [
       "上古领主现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SkarnerW.png": {
-    "path": "/classic-cache/baf61c4ddad2c952003ed163.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SkarnerW.png": {
+    "path": "/classic-cache/70dfe20e0d44ee0d6283f89d.png",
     "bytes": 6321,
     "sha256": "20977ae5c2b50394ea46888d16eaf4bb7426f9ed0c4877f543abe6f69fde44ab",
     "labels": [
       "上古领主现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SonaE.png": {
-    "path": "/classic-cache/1160922fbcf1815eaa57270f.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SonaE.png": {
+    "path": "/classic-cache/f5679f82d779bc76fead8238.png",
     "bytes": 6613,
     "sha256": "f1d05f5069f9afda4ae9c7246958bcf554880c87827215a44f7462782eecf752",
     "labels": [
       "琴瑟仙女现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SonaQ.png": {
-    "path": "/classic-cache/91459c517181e02e67a1d902.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SonaQ.png": {
+    "path": "/classic-cache/de3cf4b6d25215960aa3c14a.png",
     "bytes": 5291,
     "sha256": "4b26539deac1c0754b7990de48f0e7bf151dddd9487fbbd7f352d10671de2321",
     "labels": [
       "琴瑟仙女现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SonaR.png": {
-    "path": "/classic-cache/623c1224eb2b30ee17ad857a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SonaR.png": {
+    "path": "/classic-cache/f8ef31da975a65973ed73b1b.png",
     "bytes": 6256,
     "sha256": "20ddbe72258e8785fb72ba8c378669974e3c98d09e6f68982e50f8438dda6361",
     "labels": [
       "琴瑟仙女现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SonaW.png": {
-    "path": "/classic-cache/981ce9019cc27b20ba1402e7.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SonaW.png": {
+    "path": "/classic-cache/663d5a06b6d45af5f832a6c3.png",
     "bytes": 6008,
     "sha256": "309752cf698b07959f420dd36320252f37b0c9aa830aaa04fd4ba50a3470c696",
     "labels": [
       "琴瑟仙女现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SorakaE.png": {
-    "path": "/classic-cache/6794d9eb6737906b68e37cf0.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SorakaE.png": {
+    "path": "/classic-cache/7ce81a1d36dbf4e5c9d6fcac.png",
     "bytes": 5417,
     "sha256": "51551d03817c545a6eb53f65e7e6f14ebcb31fb8ed1f1af36af27e8ade40be6e",
     "labels": [
       "众星之子现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SorakaQ.png": {
-    "path": "/classic-cache/d7bff75722d5f221273fdda3.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SorakaQ.png": {
+    "path": "/classic-cache/8abcb08eb68dd07768b8d430.png",
     "bytes": 5642,
     "sha256": "e00b483922a1becea90460dbdaa14194431455d4f73eb6fac3aa2ad0baed03d1",
     "labels": [
       "众星之子现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SorakaR.png": {
-    "path": "/classic-cache/05c574294b37b285179dd1d6.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SorakaR.png": {
+    "path": "/classic-cache/83f118d2efe902d8c9460159.png",
     "bytes": 6257,
     "sha256": "08662fa6c7a6ed5b5751aa798a0acfb38caace782fc533f80693980861a89200",
     "labels": [
       "众星之子现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SorakaW.png": {
-    "path": "/classic-cache/3b0b2e7f2574e0d97004d9b0.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SorakaW.png": {
+    "path": "/classic-cache/3927c703b693e077356732d8.png",
     "bytes": 5465,
     "sha256": "7e085559e442aa8a470e3fcdff32f7b66ceff5387a59c8e73810ab72b104463d",
     "labels": [
       "众星之子现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SowTheWind.png": {
-    "path": "/classic-cache/b2bbe1a171728356bcf360fb.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SowTheWind.png": {
+    "path": "/classic-cache/94a1906974f1861d60dce5e3.png",
     "bytes": 5614,
     "sha256": "11a50489849828449870955c7e15ca3b7e61e5ce5144aaed9d09536fc5f8e584",
     "labels": [
       "风暴之怒现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/StaticField.png": {
-    "path": "/classic-cache/75a61d3194014e789e628dfd.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/StaticField.png": {
+    "path": "/classic-cache/12b29fdbff35d54d43c32929.png",
     "bytes": 7096,
     "sha256": "8d607e943e9ee6ad990c2064e498cc33f21d8911511bb82e9cbd8a1cc3e6df3f",
     "labels": [
       "蒸汽机器人现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SwainE.png": {
-    "path": "/classic-cache/23a6ed2c0b40e52a3605a20a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SwainE.png": {
+    "path": "/classic-cache/470f7cb1d700045af63d3d26.png",
     "bytes": 5746,
     "sha256": "a4a44f81ba647e88c01633596f2e8ac667056236c1d633415e04cc3846eef031",
     "labels": [
       "诺克萨斯统领现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SwainQ.png": {
-    "path": "/classic-cache/615388a58ac7fde4405d5ec4.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SwainQ.png": {
+    "path": "/classic-cache/984d05d4f78b728e468f2586.png",
     "bytes": 5368,
     "sha256": "98cf0d4344f0ec0e2f8ae519259759028e4d2882c735e3410b569a8c4721d6b4",
     "labels": [
       "诺克萨斯统领现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SwainR.png": {
-    "path": "/classic-cache/48d912b15ac3f03bfc8a421d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SwainR.png": {
+    "path": "/classic-cache/b90d21a9b328ebc3c8b45cd9.png",
     "bytes": 6288,
     "sha256": "1a9bf54b060c483ab9758fd67511f3b890d6720aee6a87deccda2c9e72013778",
     "labels": [
       "诺克萨斯统领现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/SwainW.png": {
-    "path": "/classic-cache/50e0e1019315c5f0ab9e8992.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SwainW.png": {
+    "path": "/classic-cache/932777d7a5b28156f84b445a.png",
     "bytes": 4778,
     "sha256": "920faa52bc3681f1ee5b11cf5eb696d3f49b02c78785fae7cb6534f4945eafb4",
     "labels": [
       "诺克萨斯统领现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/Tantrum.png": {
-    "path": "/classic-cache/406b7134fedfcf52c5333fc1.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/Tantrum.png": {
+    "path": "/classic-cache/85abfcf926eb1a8d2bcdfebf.png",
     "bytes": 6821,
     "sha256": "e741925f0f42933d71ed8abe1e1e618831402c04194d3225694a7871c2acf8cd",
     "labels": [
       "殇之木乃伊现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/TaricE.png": {
-    "path": "/classic-cache/7150be5d3764bae6a2a4ce4b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/TaricE.png": {
+    "path": "/classic-cache/d64f4d2b62f809098422ddb6.png",
     "bytes": 6058,
     "sha256": "bfd99e4d98ae8e2671ff9fa27c373672ceefd9b632982c20f7acf2718b1d42c3",
     "labels": [
       "瓦洛兰之盾现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/TaricQ.png": {
-    "path": "/classic-cache/1dc575cd029d253340b37c38.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/TaricQ.png": {
+    "path": "/classic-cache/246e209baeaa3ddfb2668cc4.png",
     "bytes": 6514,
     "sha256": "932bf8852348d0110572bf1516cf58ea23d600b232e8e8b1aae8547824f8d0a7",
     "labels": [
       "瓦洛兰之盾现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/TaricR.png": {
-    "path": "/classic-cache/9e1c3f9cd307c2540cc8e61c.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/TaricR.png": {
+    "path": "/classic-cache/a63999dac7aad35785e2bb1c.png",
     "bytes": 5630,
     "sha256": "0c4b07b9b6c5addd20f0aa9b01dce186d031bd0b91e917fb2dd2436dd2f5aa61",
     "labels": [
       "瓦洛兰之盾现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/TaricW.png": {
-    "path": "/classic-cache/869ac6c76634ba7fe3b312e1.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/TaricW.png": {
+    "path": "/classic-cache/2fe3e2b8739b15d09cc9f1a8.png",
     "bytes": 5936,
     "sha256": "2a98bef2084ae704b1d6672607c992bbaf81b83eb06521ce93d51bf65f74fa8a",
     "labels": [
       "瓦洛兰之盾现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/TeemoE.png": {
-    "path": "/classic-cache/4b45c84231b719acf67083db.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/TeemoE.png": {
+    "path": "/classic-cache/ae079d1fea48b76024e94989.png",
     "bytes": 5073,
     "sha256": "14e37aa006d167154ff0ddf286ab22a999e0314a0c3f7246b9722d06779a86fd",
     "labels": [
       "迅捷斥候现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/TeemoQ.png": {
-    "path": "/classic-cache/eed2aa246227ce6a548d17f1.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/TeemoQ.png": {
+    "path": "/classic-cache/e3a5cd2f9c954aad842448c6.png",
     "bytes": 5671,
     "sha256": "691e47a8bb356888dfebd82533b94531978f1ef09023c901b1e87b2b3fa23dbc",
     "labels": [
       "迅捷斥候现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/TeemoR.png": {
-    "path": "/classic-cache/a2fb3b64a7e6d0739e33e49f.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/TeemoR.png": {
+    "path": "/classic-cache/2f6e64aa6b7b64500cb202f3.png",
     "bytes": 5501,
     "sha256": "ed5c97d4159b6afe871c39de27bab41c6c9823e37195e652f35e63d18eb2e6d0",
     "labels": [
       "迅捷斥候现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/TeemoW.png": {
-    "path": "/classic-cache/0411df57c79ada94a4817d22.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/TeemoW.png": {
+    "path": "/classic-cache/66f672cded4bb42b5aba86c1.png",
     "bytes": 5716,
     "sha256": "2bcf05123d894b1130f6181b045a4efcaf0e795d4253f1c0ed4d9c96649fb43a",
     "labels": [
       "迅捷斥候现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/TimeWarp.png": {
-    "path": "/classic-cache/08b39c138d3f370cc402f476.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/TimeWarp.png": {
+    "path": "/classic-cache/0975d7c7e7fbb96e3ed025ba.png",
     "bytes": 5532,
     "sha256": "247d9d887d2f0267d4af3c61f32b6723232f7d4c788d2c111f3205e17a8e84ec",
     "labels": [
       "时光守护者现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/Tremors2.png": {
-    "path": "/classic-cache/0c48a9e8c6ba0f3e671c3e2a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/Tremors2.png": {
+    "path": "/classic-cache/7b4a797c8d9d4172c9ceaa61.png",
     "bytes": 5865,
     "sha256": "768e232e86abee63d885cd74dd9d0e94f83435aae1d7a8c7a65d0910552c609e",
     "labels": [
       "披甲龙龟现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/TristanaE.png": {
-    "path": "/classic-cache/74d8628578b56abeeb5b1151.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/TristanaE.png": {
+    "path": "/classic-cache/d210462551e213ffe52db663.png",
     "bytes": 6552,
     "sha256": "6d09650fba904e7dde69eb8e5d271457cbe38350fc225c0918138b5b9f12349f",
     "labels": [
       "麦林炮手现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/TristanaQ.png": {
-    "path": "/classic-cache/c6f6e828e17c8dc101ae0348.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/TristanaQ.png": {
+    "path": "/classic-cache/ed87ff71143ac88c86f33669.png",
     "bytes": 6480,
     "sha256": "54592e36af4b19f8fced1adaa56f3277f963801a3fa41a7ee9b065d650bea47d",
     "labels": [
       "麦林炮手现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/TristanaR.png": {
-    "path": "/classic-cache/892bb5d3f4053311e1d61307.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/TristanaR.png": {
+    "path": "/classic-cache/c58441b08d8bcb1fa9a50e79.png",
     "bytes": 5664,
     "sha256": "fd08e48dbb858c9dfca22bb4d7ba8be48a0e64e484526de02b8bd2a2728ff9d8",
     "labels": [
       "麦林炮手现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/TristanaW.png": {
-    "path": "/classic-cache/93b44694589553901047c3c8.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/TristanaW.png": {
+    "path": "/classic-cache/74c5c53e002bf5f9b9ee107b.png",
     "bytes": 6000,
     "sha256": "ec42c67a1f339784be1207b2cf141834b25ed14832fa8504663c37f08fc3378d",
     "labels": [
       "麦林炮手现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/TryndamereE.png": {
-    "path": "/classic-cache/ba824f9b59086ff8c98ecb62.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/TryndamereE.png": {
+    "path": "/classic-cache/24b195520b15e5dfd81e9ca2.png",
     "bytes": 5562,
     "sha256": "af1b301ca95c23b9fb0d3225db7ab8bb71e01521281d83bd60541f6eacd2f061",
     "labels": [
       "蛮族之王现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/TryndamereQ.png": {
-    "path": "/classic-cache/22d6c0ebdb284d210820aadc.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/TryndamereQ.png": {
+    "path": "/classic-cache/b4f30140624ddc3e635da018.png",
     "bytes": 6849,
     "sha256": "d66f5dc1362733f19b45176b1a126f20e9f9b23529610c3d7f4c5be1dbaad311",
     "labels": [
       "蛮族之王现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/TryndamereW.png": {
-    "path": "/classic-cache/03474046d59a0f4fb18a2963.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/TryndamereW.png": {
+    "path": "/classic-cache/b1eec53fb4bd4510d31e08fc.png",
     "bytes": 6586,
     "sha256": "7cf05a1d39a984b6ea56abf602379fa7a6af3b77b5e696e2955dd5083314988f",
     "labels": [
       "蛮族之王现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/TwitchExpunge.png": {
-    "path": "/classic-cache/e119d6f35539731b2e383db9.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/TwitchExpunge.png": {
+    "path": "/classic-cache/163e8f3c5121b9d4992d4aed.png",
     "bytes": 6284,
     "sha256": "82a15b05cb3a73c0d9bb222487fcd47c46279ab365bbba71be526480898e670b",
     "labels": [
       "瘟疫之源现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/TwitchFullAutomatic.png": {
-    "path": "/classic-cache/5ce7cc459daa1a64f0392795.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/TwitchFullAutomatic.png": {
+    "path": "/classic-cache/05a06204fa390b5685e4f561.png",
     "bytes": 6385,
     "sha256": "d5df8870ea1b21c15720a977fb085ff2e7430ec6073a289ff1f4cbbe618b0733",
     "labels": [
       "瘟疫之源现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/TwitchHideInShadows.png": {
-    "path": "/classic-cache/4c3d60c52646e1f59f604fdc.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/TwitchHideInShadows.png": {
+    "path": "/classic-cache/f95f83e2590c01b374b27b7e.png",
     "bytes": 6169,
     "sha256": "908dc15c5dc16b4ac68cdce0483c3fcf38240620dd62281c6a909132a681f4a3",
     "labels": [
       "瘟疫之源现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/TwitchVenomCask.png": {
-    "path": "/classic-cache/969599a2f72c7084f3213d86.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/TwitchVenomCask.png": {
+    "path": "/classic-cache/5288ed550a3fe5a5ba1dfb34.png",
     "bytes": 6313,
     "sha256": "f13e898f5bb0e0fe6ed70553599640146dd81dd4305168428bf58fcfd68329e0",
     "labels": [
       "瘟疫之源现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/TwoShivPoison.png": {
-    "path": "/classic-cache/fff367457cc21498acc9a1c3.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/TwoShivPoison.png": {
+    "path": "/classic-cache/cc2b6e6713941394aec010ee.png",
     "bytes": 5478,
     "sha256": "db858e2ba984883cb2fcc4424e446fca81fa5cc282cdd969f866bfcee2fec8a7",
     "labels": [
       "恶魔小丑现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/UFSlash.png": {
-    "path": "/classic-cache/24f831040299a97825a5721d.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/UFSlash.png": {
+    "path": "/classic-cache/1776e412bea06d3a4bbeb10b.png",
     "bytes": 7235,
     "sha256": "376a84bdde4b45f1e15921b4c30df8c13007a21b7ee6c3e62dc9937b9916105d",
     "labels": [
       "熔岩巨兽现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/UndyingRage.png": {
-    "path": "/classic-cache/8a4bd264be3b6d11a79595d1.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/UndyingRage.png": {
+    "path": "/classic-cache/7ab7f65dbd9ac2881211f088.png",
     "bytes": 7346,
     "sha256": "8401b2433ba6a11a78be3be26fb5412fe991e366e6bedc45358265a2fbe30b56",
     "labels": [
       "蛮族之王现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/VayneCondemn.png": {
-    "path": "/classic-cache/d6640dcbc8e722d3bcbf7d3f.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/VayneCondemn.png": {
+    "path": "/classic-cache/c176ff150314617f42783d6d.png",
     "bytes": 6655,
     "sha256": "b7abf8856687dbecc44604e77d5db2a0c950bb816d3b4e0105f8070ef5529911",
     "labels": [
       "暗夜猎手现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/VayneInquisition.png": {
-    "path": "/classic-cache/10ffc509812440e46017461c.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/VayneInquisition.png": {
+    "path": "/classic-cache/e50865a703a5e8e2cc709a46.png",
     "bytes": 6269,
     "sha256": "c1aebf6c303f04630d41281574cc86047580381fa8f90c6864367663de9e7f7c",
     "labels": [
       "暗夜猎手现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/VayneSilveredBolts.png": {
-    "path": "/classic-cache/ee09bcaec88f8fcf1312fc15.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/VayneSilveredBolts.png": {
+    "path": "/classic-cache/a2a8697e10e57dde1fab8ed8.png",
     "bytes": 5619,
     "sha256": "163e5a48c783a174c84e10999814b92382e46a6b2535f382b122869d1b911b6c",
     "labels": [
       "暗夜猎手现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/VayneTumble.png": {
-    "path": "/classic-cache/2b978b5431844d0fa6e89442.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/VayneTumble.png": {
+    "path": "/classic-cache/6c81a79474c64a5daf0df619.png",
     "bytes": 6340,
     "sha256": "b3a3aa9ab1535f4c992121754d10d7e3e0c8c651abac40d92c78850febe0daa8",
     "labels": [
       "暗夜猎手现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/VeigarBalefulStrike.png": {
-    "path": "/classic-cache/1fa24602bb9e843b2e3f2f16.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/VeigarBalefulStrike.png": {
+    "path": "/classic-cache/9b0119a8be1471d04218c01e.png",
     "bytes": 5740,
     "sha256": "1298edf57583a83f656532444ead7a4286bfe79e799d1c17e0894461ef071948",
     "labels": [
       "邪恶小法师现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/VeigarDarkMatter.png": {
-    "path": "/classic-cache/fe52ba6d19f0752ce7167bce.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/VeigarDarkMatter.png": {
+    "path": "/classic-cache/3faab0c605394b75c96a2cfc.png",
     "bytes": 4827,
     "sha256": "e7db23b742a19073d130ead27515aa9bdccdbdb330ee5caf0faa60f73a626d35",
     "labels": [
       "邪恶小法师现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/VeigarEventHorizon.png": {
-    "path": "/classic-cache/7360fec453dd51675a98ec2b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/VeigarEventHorizon.png": {
+    "path": "/classic-cache/af1cda1aad34f4e5175b286b.png",
     "bytes": 6350,
     "sha256": "2a1ef699ac906e9cff9a8d264ad3faaf97d8c702cc7c34bd97840fdd7450682e",
     "labels": [
       "邪恶小法师现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/VeigarR.png": {
-    "path": "/classic-cache/e0ca730f1c37b04dcf59bad8.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/VeigarR.png": {
+    "path": "/classic-cache/ec461dce77dc1b6b42c6549c.png",
     "bytes": 5210,
     "sha256": "5ad85859ef07f09b96be2c768aaf91a5d50c864b2ed3b5b59f47ea3c89b94b2b",
     "labels": [
       "邪恶小法师现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/VolibearE.png": {
-    "path": "/classic-cache/20ae805b999496076615df55.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/VolibearE.png": {
+    "path": "/classic-cache/7c8d8050fc5825d068dfbe46.png",
     "bytes": 6711,
     "sha256": "2380fe518a3cae0d07cf1212361c8b7d044d2be7723d7853bf078d62102bf6a9",
     "labels": [
       "不灭狂雷现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/VolibearQ.png": {
-    "path": "/classic-cache/c09b1b50862b2c4ac4b65a3b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/VolibearQ.png": {
+    "path": "/classic-cache/3b7cc84d55f79ff3b306b524.png",
     "bytes": 6329,
     "sha256": "109fb0209a25c24be9045d36b283fab54740bb9c0d3e8bc0da80d8045ddc4e89",
     "labels": [
       "不灭狂雷现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/VolibearR.png": {
-    "path": "/classic-cache/5619e5fae938d8a36fe588cd.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/VolibearR.png": {
+    "path": "/classic-cache/a5f26ac83b55e94b4e32f9e9.png",
     "bytes": 6655,
     "sha256": "fe66c33b1b1d24a79fddc67757da7beb15c1761aaa1cf02d02fd3514dfef68c8",
     "labels": [
       "不灭狂雷现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/VolibearW.png": {
-    "path": "/classic-cache/0366bbf278da9a51e2594f9a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/VolibearW.png": {
+    "path": "/classic-cache/3e16bc545116cc8872a4bcbc.png",
     "bytes": 5902,
     "sha256": "ef0e7043b12894d06ad421bec1e275c822516e91844c38af150fe54267632c6c",
     "labels": [
       "不灭狂雷现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/Volley.png": {
-    "path": "/classic-cache/8507da0b065b8f2eaac3e6ef.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/Volley.png": {
+    "path": "/classic-cache/12ad3d00ea6816cb190b85d0.png",
     "bytes": 6241,
     "sha256": "30e0daa99574f031aec984ac0bf27c0283e24b59d923276af8e9cb0e30c59a95",
     "labels": [
       "寒冰射手现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/VorpalSpikes.png": {
-    "path": "/classic-cache/e3c4ab4017b9846997dc1bdf.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/VorpalSpikes.png": {
+    "path": "/classic-cache/9b1b1fbc1ebdf685806c75bf.png",
     "bytes": 6057,
     "sha256": "af12f3b93a187999e39ad30b1a29c4158ac2e0ec00db36bb9c633e0118d0aed9",
     "labels": [
       "虚空恐惧现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/WarwickE.png": {
-    "path": "/classic-cache/a15b8cac6ee3de73a860af08.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/WarwickE.png": {
+    "path": "/classic-cache/1e57dbbaa04bc1f8336ddf5a.png",
     "bytes": 6443,
     "sha256": "94503fcade25b2f1b44720b82189abb97e10d01569a3049e461b7bf871bf0a79",
     "labels": [
       "祖安怒兽现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/WarwickQ.png": {
-    "path": "/classic-cache/ee785862d31e275c388f99dd.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/WarwickQ.png": {
+    "path": "/classic-cache/32416d97f2baf08a2528050c.png",
     "bytes": 6669,
     "sha256": "402afe7ac301d8579c5dbef5bed1b2d52a0e993ad319e1ea0bf29e4d2e631aa9",
     "labels": [
       "祖安怒兽现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/WarwickR.png": {
-    "path": "/classic-cache/2a001e64af346bb784463d5c.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/WarwickR.png": {
+    "path": "/classic-cache/81571b4b587501970b6b823c.png",
     "bytes": 5369,
     "sha256": "646555a5a23d0d2c1d93c591dda1ef917305842f17c0c8ec2f06c7847cbb5ec9",
     "labels": [
       "祖安怒兽现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/WarwickW.png": {
-    "path": "/classic-cache/053c0cc0fc6f468585eef744.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/WarwickW.png": {
+    "path": "/classic-cache/7c57e3174a498e5cac76e212.png",
     "bytes": 6201,
     "sha256": "0ecb7653740f8ed62220b4186377743df24868ee963f8cb18d75d28c6fc1411f",
     "labels": [
       "祖安怒兽现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/WildCards.png": {
-    "path": "/classic-cache/aa0245c915c7b50391954aff.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/WildCards.png": {
+    "path": "/classic-cache/82b4ed0e2f0a019aa87361d3.png",
     "bytes": 5664,
     "sha256": "9e97d65bc3b9488d16f71b437eea3b23272288f342e45ed0ee2064b36a273cc9",
     "labels": [
       "卡牌大师现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/WujuStyle.png": {
-    "path": "/classic-cache/e9332b3b117876a3aadd7b85.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/WujuStyle.png": {
+    "path": "/classic-cache/d65c515f39f7ac9e8a31ffba.png",
     "bytes": 5924,
     "sha256": "927c1152295f5e7731a89eef0784f20633dd35523d07c0592e122c265aac39c7",
     "labels": [
       "无极剑圣现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/XinZhaoE.png": {
-    "path": "/classic-cache/d0bd3295783b75c9e897d1ed.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/XinZhaoE.png": {
+    "path": "/classic-cache/eadfdb1c058a8c4c0f7289e9.png",
     "bytes": 6399,
     "sha256": "6700f16580dc23942e497faaa8481372ec9f30ca60df3416805f79bd542ed43f",
     "labels": [
       "德邦总管现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/XinZhaoQ.png": {
-    "path": "/classic-cache/15cadf5c70157704a95d9c5b.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/XinZhaoQ.png": {
+    "path": "/classic-cache/9b097d79a91bd57c6434a399.png",
     "bytes": 6172,
     "sha256": "3e79d9520964dc015fa7e7653196c2fa0e5eb53899451c573e7f5292da9f6c57",
     "labels": [
       "德邦总管现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/XinZhaoR.png": {
-    "path": "/classic-cache/ad9027a82341283668d5f1a7.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/XinZhaoR.png": {
+    "path": "/classic-cache/9122db72acf3b430a89804d6.png",
     "bytes": 6424,
     "sha256": "69fcf65ddb59e0fb5f9c0cf11939433af611045b421195e5cc5155c228d22606",
     "labels": [
       "德邦总管现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/XinZhaoW.png": {
-    "path": "/classic-cache/9e9440247ff847dae30081b7.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/XinZhaoW.png": {
+    "path": "/classic-cache/be684b72b400d7a3cce03739.png",
     "bytes": 5825,
     "sha256": "994325b37a6b7cebaa5b557672bd149912dae186a48b4318559eb1136e279622",
     "labels": [
       "德邦总管现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/YorickE.png": {
-    "path": "/classic-cache/eed77f67aa6ffc230a160bcd.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/YorickE.png": {
+    "path": "/classic-cache/d311bc5a9962bb4a41de9d56.png",
     "bytes": 6208,
     "sha256": "5378f7ec875bd7e070c2af0f2494df012df5ade99f3ba3a781121043a775122f",
     "labels": [
       "牧魂人现代E"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/YorickQ.png": {
-    "path": "/classic-cache/81e41f45900d56897ebb259c.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/YorickQ.png": {
+    "path": "/classic-cache/c216b66be6f27e32c9698c7d.png",
     "bytes": 6598,
     "sha256": "e43f39784052b98c021d1c385fc028dd2b494c89c81490ec884d72282c6dab44",
     "labels": [
       "牧魂人现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/YorickR.png": {
-    "path": "/classic-cache/5664e4072f446f1eeb20127a.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/YorickR.png": {
+    "path": "/classic-cache/9949d574f8763f4146a50b7d.png",
     "bytes": 6425,
     "sha256": "c55937c0be4c594491fe99275915c48957bbc39e12f9a7ac50f698848439893f",
     "labels": [
       "牧魂人现代R"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/YorickW.png": {
-    "path": "/classic-cache/d04ea2bfe1c6bbfb8b6f82c1.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/YorickW.png": {
+    "path": "/classic-cache/bce96073c91d465a5a04efaf.png",
     "bytes": 6096,
     "sha256": "06a851f9a6312380600369f52dbce2396b71babf06b2995a29f125ff0fe95050",
     "labels": [
       "牧魂人现代W"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/ZileanQ.png": {
-    "path": "/classic-cache/68315d326b904e4184656368.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/ZileanQ.png": {
+    "path": "/classic-cache/611f716b6dcbfcf1459284b8.png",
     "bytes": 6627,
     "sha256": "17c8f1cad9bac9bb9f006f9a33dd0fef3ba2dd7f1b979ea54f93a689d1833a19",
     "labels": [
       "时光守护者现代Q"
     ]
   },
-  "https://ddragon.leagueoflegends.com/cdn/16.22.1/img/spell/ZileanW.png": {
-    "path": "/classic-cache/5a459677fc6345a342dc6022.png",
+  "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/ZileanW.png": {
+    "path": "/classic-cache/05784c88ba099f2d926c5e57.png",
     "bytes": 4883,
     "sha256": "cd991fc15cffd9c4914c19aacf57551893d3f4291e8b8b355ee28adda08a94f4",
     "labels": [
@@ -5728,78 +5728,6 @@ export const classicAssetAudit = {
     "sha256": "a4aa277ef44abcc3f98b568b3925bac57638ec2b5d1e194f6ec07fb5af7d981f",
     "labels": [
       "次级护甲符印"
-    ]
-  },
-  "https://opgg-static.akamaized.net/meta/images/lol/16.22.1/item/773040.png": {
-    "path": "/classic-cache/120ee6586ddee7fba0eca965.png",
-    "bytes": 6586,
-    "sha256": "80bbf4e486d5c8e7996677dc9975666bade69ac942d8ba1eada1a4508baac231",
-    "labels": [
-      "炽天使之拥"
-    ]
-  },
-  "https://opgg-static.akamaized.net/meta/images/lol/16.22.1/item/773042.png": {
-    "path": "/classic-cache/7d60b840048119f24066e4f9.png",
-    "bytes": 6457,
-    "sha256": "476b131d1c1b47bac1aa4fed3e6d0b3948244cc5fd80b71395ee129d2d32af71",
-    "labels": [
-      "魔切"
-    ]
-  },
-  "https://opgg-static.akamaized.net/meta/images/lol/16.22.1/spell/SummonerBarrier.png": {
-    "path": "/classic-cache/92bf60171100e3e8d636c6e7.png",
-    "bytes": 6401,
-    "sha256": "a0cf7b08cdd6d852d325bc9124e05f0e2c55aac340e50665c385755dfa86fbc0",
-    "labels": [
-      "屏障怀旧海斗召唤师技能"
-    ]
-  },
-  "https://opgg-static.akamaized.net/meta/images/lol/16.22.1/spell/SummonerDot.png": {
-    "path": "/classic-cache/c2de0093ec302b21f70ad76f.png",
-    "bytes": 5799,
-    "sha256": "958db3407c83a9499a5e464c2e37df59c6544590dcd3d822965a83740303b9af",
-    "labels": [
-      "引燃怀旧海斗召唤师技能"
-    ]
-  },
-  "https://opgg-static.akamaized.net/meta/images/lol/16.22.1/spell/SummonerFlash.png": {
-    "path": "/classic-cache/8799f50b2942757653f720a1.png",
-    "bytes": 6403,
-    "sha256": "1272fe7b3275c0afc872a6aaa6b65e27d41572d57f9ce19b9ed81b79aa5eb2aa",
-    "labels": [
-      "闪现怀旧海斗召唤师技能"
-    ]
-  },
-  "https://opgg-static.akamaized.net/meta/images/lol/16.22.1/spell/SummonerHaste.png": {
-    "path": "/classic-cache/b753cf1e9676a2c1fee93e7f.png",
-    "bytes": 5066,
-    "sha256": "9ce3605a1480f16453ff8230fa61e87cedca91e8a5c6217445c82eaf53884484",
-    "labels": [
-      "幽灵疾步怀旧海斗召唤师技能"
-    ]
-  },
-  "https://opgg-static.akamaized.net/meta/images/lol/16.22.1/spell/SummonerHeal.png": {
-    "path": "/classic-cache/c57a9832af9287ed960e6ced.png",
-    "bytes": 5673,
-    "sha256": "ccebc4b0554572a041b2b5014f25a84d7265c371e97448a516765aaad651dc55",
-    "labels": [
-      "治疗术怀旧海斗召唤师技能"
-    ]
-  },
-  "https://opgg-static.akamaized.net/meta/images/lol/16.22.1/spell/SummonerMana.png": {
-    "path": "/classic-cache/77d827446d08f12d277a895b.png",
-    "bytes": 5860,
-    "sha256": "b312643034bb3855d1211884b31f254f00281b71afa39df94dae3c20e51b0d1e",
-    "labels": [
-      "清晰术怀旧海斗召唤师技能"
-    ]
-  },
-  "https://opgg-static.akamaized.net/meta/images/lol/16.22.1/spell/SummonerSnowball.png": {
-    "path": "/classic-cache/f123031370e8b2a8f19a1f66.png",
-    "bytes": 4799,
-    "sha256": "0e2deaacd7cba5e9aee37e35aa91ac6ea69731d60689ed83c8e87fefb0115dbb",
-    "labels": [
-      "标记怀旧海斗召唤师技能"
     ]
   },
   "https://opgg-static.akamaized.net/meta/images/lol/16.22/classic/releases/466616d64a15a82262faac302ad392713ebe4fa8020491957545ecb67f48ce17/assets/characters/jade_aatrox/skins/base/images/jade_aatrox_splash_centered_0.project_jade.jpg": {
@@ -13333,779 +13261,851 @@ export const classicAssetAudit = {
       "娜美头像"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/maps/particles/kiwi/magicmissile_small.png": {
-    "path": "/classic-cache/4fee18eaf7b089fd7ecda00a.png",
+  "https://opgg-static.akamaized.net/meta/images/lol/16.23.1/item/773040.png": {
+    "path": "/classic-cache/a25f8c31c7fa61bb45a05ca3.png",
+    "bytes": 6586,
+    "sha256": "80bbf4e486d5c8e7996677dc9975666bade69ac942d8ba1eada1a4508baac231",
+    "labels": [
+      "炽天使之拥"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.23.1/item/773042.png": {
+    "path": "/classic-cache/b7fe08561f580391fee23f7e.png",
+    "bytes": 6457,
+    "sha256": "476b131d1c1b47bac1aa4fed3e6d0b3948244cc5fd80b71395ee129d2d32af71",
+    "labels": [
+      "魔切"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.23.1/spell/SummonerBarrier.png": {
+    "path": "/classic-cache/f3a9cb24f98d9aedfe8f7066.png",
+    "bytes": 6401,
+    "sha256": "a0cf7b08cdd6d852d325bc9124e05f0e2c55aac340e50665c385755dfa86fbc0",
+    "labels": [
+      "屏障怀旧海斗召唤师技能"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.23.1/spell/SummonerDot.png": {
+    "path": "/classic-cache/557a99045a98e6b2d526a7e2.png",
+    "bytes": 5799,
+    "sha256": "958db3407c83a9499a5e464c2e37df59c6544590dcd3d822965a83740303b9af",
+    "labels": [
+      "引燃怀旧海斗召唤师技能"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.23.1/spell/SummonerFlash.png": {
+    "path": "/classic-cache/08b724075b97ffc7c90d9010.png",
+    "bytes": 6403,
+    "sha256": "1272fe7b3275c0afc872a6aaa6b65e27d41572d57f9ce19b9ed81b79aa5eb2aa",
+    "labels": [
+      "闪现怀旧海斗召唤师技能"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.23.1/spell/SummonerHaste.png": {
+    "path": "/classic-cache/e4d1b7772fe1cb9188b69a5c.png",
+    "bytes": 5066,
+    "sha256": "9ce3605a1480f16453ff8230fa61e87cedca91e8a5c6217445c82eaf53884484",
+    "labels": [
+      "幽灵疾步怀旧海斗召唤师技能"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.23.1/spell/SummonerHeal.png": {
+    "path": "/classic-cache/9312833481cd326e64dfe36d.png",
+    "bytes": 5673,
+    "sha256": "ccebc4b0554572a041b2b5014f25a84d7265c371e97448a516765aaad651dc55",
+    "labels": [
+      "治疗术怀旧海斗召唤师技能"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.23.1/spell/SummonerMana.png": {
+    "path": "/classic-cache/9d0aa65f03b689124fbeb59b.png",
+    "bytes": 5860,
+    "sha256": "b312643034bb3855d1211884b31f254f00281b71afa39df94dae3c20e51b0d1e",
+    "labels": [
+      "清晰术怀旧海斗召唤师技能"
+    ]
+  },
+  "https://opgg-static.akamaized.net/meta/images/lol/16.23.1/spell/SummonerSnowball.png": {
+    "path": "/classic-cache/d14f9d4cbb272b9fcf319ce0.png",
+    "bytes": 4799,
+    "sha256": "0e2deaacd7cba5e9aee37e35aa91ac6ea69731d60689ed83c8e87fefb0115dbb",
+    "labels": [
+      "标记怀旧海斗召唤师技能"
+    ]
+  },
+  "https://raw.communitydragon.org/16.23/game/assets/maps/particles/kiwi/magicmissile_small.png": {
+    "path": "/classic-cache/44c1208c95a974013f5ef8f9.png",
     "bytes": 860,
     "sha256": "3dec129cf901f0d3b36aa440200e74b2298c287254cefd2c3e319670ff2b14e4",
     "labels": [
       "魔法飞弹强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/adapt_small.png": {
-    "path": "/classic-cache/1d6e9ee674718975f11451b5.png",
-    "bytes": 937,
-    "sha256": "3bb9b2067281f2676253ba22cb8c2d909e894ef4d4c2d49dc051a6a5d3b063de",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/adapt_small.png": {
+    "path": "/classic-cache/9f6fa5e62c1f4a108f9a97dc.png",
+    "bytes": 1748,
+    "sha256": "474f21c07defded5689c239daff35314b17f26671abb3b54f4d04e960874b0aa",
     "labels": [
       "物理转魔法强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/allforyou_small.png": {
-    "path": "/classic-cache/f8b31320cd714161983ed35d.png",
-    "bytes": 809,
-    "sha256": "8a1ed564511e793dc654ab5ac2e553a32773d099850b8627bf569990e0fb5e90",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/allforyou_small.png": {
+    "path": "/classic-cache/6cc893d0b7df40f4b255ea0a.png",
+    "bytes": 1438,
+    "sha256": "8221784d2a53fe75e4a5d72ec6a2d86945b075ac15a64db806cc64dbd6005ee1",
     "labels": [
       "全心为你强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/bigbrain_small.png": {
-    "path": "/classic-cache/0ee4f0e92db9832e122af0e8.png",
-    "bytes": 1020,
-    "sha256": "44464f9936a3bf7cb2e175902dc88285436b74e2230987711484b9516ae2d463",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/bigbrain_small.png": {
+    "path": "/classic-cache/b53ec56e42d2bf8fd0c1aafe.png",
+    "bytes": 1855,
+    "sha256": "846783498de4327c19f12ce6c8fbf6285f49ecd732bc6924700b5ef8d0102f7b",
     "labels": [
       "超强大脑强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/bladewaltz_small.png": {
-    "path": "/classic-cache/838c65e16d971d9e7431139f.png",
-    "bytes": 1140,
-    "sha256": "9968302ae3840b13df8c60e8e378dec840118824c07337ef16699718522962cc",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/bladewaltz_small.png": {
+    "path": "/classic-cache/efbfde122d3fe3bdcd7193ac.png",
+    "bytes": 2087,
+    "sha256": "bbf6d7da1e0cada2f3d914ac7eaa09be2e07a1af0b68e05e5568c541e860ae51",
     "labels": [
       "利刃华尔兹强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/bluntforce_small.png": {
-    "path": "/classic-cache/9f277f32f673322ad73f6b26.png",
-    "bytes": 1140,
-    "sha256": "9968302ae3840b13df8c60e8e378dec840118824c07337ef16699718522962cc",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/bluntforce_small.png": {
+    "path": "/classic-cache/512b48c9939a3e1a1ef25b07.png",
+    "bytes": 2087,
+    "sha256": "bbf6d7da1e0cada2f3d914ac7eaa09be2e07a1af0b68e05e5568c541e860ae51",
     "labels": [
       "大力强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/canttouchthis_small.png": {
-    "path": "/classic-cache/1975ed83a2ca24744506e53f.png",
-    "bytes": 1108,
-    "sha256": "bec49a23f8e673db0fe7110612d7d1005ba9003a8cf1ed65cfbbef95c2c3eb48",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/canttouchthis_small.png": {
+    "path": "/classic-cache/fa7e00b84ef7ab4096734979.png",
+    "bytes": 2092,
+    "sha256": "e433f24dc0813054d16cbc5278a4473a50a1b5982e7f80639517d4ddfde4a358",
     "labels": [
       "你摸不到强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/celestialbody_small.png": {
-    "path": "/classic-cache/d9c1f0942a600c374de6c19f.png",
-    "bytes": 909,
-    "sha256": "d0e59a5589a04921e7329bad19a27436e19a93a4d166a8e2ae008c6e1f2db035",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/celestialbody_small.png": {
+    "path": "/classic-cache/e54e6e10b8f4e36d1611268b.png",
+    "bytes": 1680,
+    "sha256": "d793c077cc2b79559dd199a3e7b176de66c8aff3cd774baa000772dfa7895ce2",
     "labels": [
       "星界躯体强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/circleofdeath_small.png": {
-    "path": "/classic-cache/29579d839d185dbfbd17673c.png",
-    "bytes": 816,
-    "sha256": "5dedffc952d8775ba6ae480de5a8a5030312e5d990c7247a8247ad63f8ed4b1f",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/circleofdeath_small.png": {
+    "path": "/classic-cache/bc345f350a9eb9d3845f02a7.png",
+    "bytes": 1543,
+    "sha256": "848f644bb35de12f465c2bd8b89dac7b3468f0cc624d43626096b47562d9ca20",
     "labels": [
       "死亡之环强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/clowncollege_small.png": {
-    "path": "/classic-cache/bb7e79b711cf644cefa67125.png",
-    "bytes": 1196,
-    "sha256": "c26a6b539eb11e0e4c9ae168e79812a4ee356fbf8e720934cbe1d7157570f7ec",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/clowncollege_small.png": {
+    "path": "/classic-cache/539a7320ddab5dd9e8510c14.png",
+    "bytes": 2361,
+    "sha256": "db8fb79061e31aa153c55208b5ab6e96b4e60bdb5bd98770c6f49905eb87d4c9",
     "labels": [
       "小丑学院强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/courageofthecolossus_small.png": {
-    "path": "/classic-cache/61a37f48f99198b4ea573cac.png",
-    "bytes": 976,
-    "sha256": "cabd75059baf47c749444216ed29edd1bda02939de4ad74cd12e5ef4d652d957",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/courageofthecolossus_small.png": {
+    "path": "/classic-cache/479eb53131a8adaa22b6b8bd.png",
+    "bytes": 1866,
+    "sha256": "30f4ceb562d454f7b2b597ddb9e9726377f7d710c4234ab341a03fe7817d8337",
     "labels": [
       "巨像的勇气强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/criticalhealing_small.png": {
-    "path": "/classic-cache/cccd28e560b6173713098062.png",
-    "bytes": 889,
-    "sha256": "058bc2354aa2f2a1283ed0c3351a259a5df2a136c946a468a706c3694a06e9da",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/criticalhealing_small.png": {
+    "path": "/classic-cache/ac4a242997ed05fd13804960.png",
+    "bytes": 1680,
+    "sha256": "45d8260159058441b5f36a0eba86d76a2117d3217475c5da575a0ca866331f71",
     "labels": [
       "会心治疗强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/dashing_small.png": {
-    "path": "/classic-cache/368befeb229978364822cfa6.png",
-    "bytes": 932,
-    "sha256": "3ac0fb9e464c38d4e867df820ed79626c49e6b4d2f1c02a040989efa59ad36da",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/dashing_small.png": {
+    "path": "/classic-cache/0783bbb72032fa9efe836124.png",
+    "bytes": 1855,
+    "sha256": "420b770613c1a9757ccf5edf51a24a25ad759378bb44570c2bcfca7a898cb336",
     "labels": [
       "吃过路兵强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/dawnbringersresolve_small.png": {
-    "path": "/classic-cache/ffb724f129c0666d20d22b0a.png",
-    "bytes": 896,
-    "sha256": "239c74a209e8e48003dda4b5d0ca9055ff3375ba787291c9e570201ffec75003",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/dawnbringersresolve_small.png": {
+    "path": "/classic-cache/49b3150f1ea016079a71ccf2.png",
+    "bytes": 1722,
+    "sha256": "7a2fd94531a9b03bdf8e44e5f81e620783a4ee6bed3dfa02f558554ff8ce9124",
     "labels": [
       "黎明使者的坚决强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/deft_small.png": {
-    "path": "/classic-cache/505d1ee828eb379e4cd4d911.png",
-    "bytes": 950,
-    "sha256": "44eefc9ece6e249dae48f2a955abb7cbd48ea213eb8ecd2023aef41027ac8a18",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/deft_small.png": {
+    "path": "/classic-cache/e8083aa5fd68425a3af066ca.png",
+    "bytes": 1781,
+    "sha256": "5af131b93419922039b3325334bcc7807f9681c9b495776d4307590a0bf9fee3",
     "labels": [
       "灵巧强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/desecrator_large.png": {
-    "path": "/classic-cache/c3ed539520aac1d2f1fd37f7.png",
-    "bytes": 12488,
-    "sha256": "1c50f2d06649742c791a022a7a56eedbc65026718a80fda69c06a84775902226",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/desecrator_large.png": {
+    "path": "/classic-cache/62a2d79203db9ab5de535b68.png",
+    "bytes": 19503,
+    "sha256": "85ccc32f9376624203626dd93b08952dfe15281c7cbaad8a05cb5d3253c4447e",
     "labels": [
       "惊惧强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/divebomber_small.png": {
-    "path": "/classic-cache/eb5d1f54103664259b4f4ced.png",
-    "bytes": 890,
-    "sha256": "c8f427b69dc82add40e7287bc871a20efc1050989d4544f93d9b432ec82867fd",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/divebomber_small.png": {
+    "path": "/classic-cache/f207ac652a39a6aa9f8b20c6.png",
+    "bytes": 1686,
+    "sha256": "63742e309b7b375b4a7c6896caf5b8447ab92ec0867495a14d4fe80902594308",
     "labels": [
       "俯冲轰炸强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/dontblink_small.png": {
-    "path": "/classic-cache/e81002f96fa93ca6ae35980e.png",
-    "bytes": 921,
-    "sha256": "beb687d5d40570afcf1642e79c8bcbe2b82dc04385529cf3b3470ab778a97225",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/dontblink_small.png": {
+    "path": "/classic-cache/d011069e9f964fde6aceaf2c.png",
+    "bytes": 1746,
+    "sha256": "524f94a8502e700e17126a984548aa561200f99f41f23302fc88f52ffbf679d5",
     "labels": [
       "唯快不破强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/drawyoursword_small.png": {
-    "path": "/classic-cache/4ea610e9a704bb7b36f31c6a.png",
-    "bytes": 1012,
-    "sha256": "f181280a1029e65f3c25e8f0601dfa9f2ab72492c7455a935b2bf25b24a5f593",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/drawyoursword_small.png": {
+    "path": "/classic-cache/d07cd1e484615ee6c819c510.png",
+    "bytes": 1960,
+    "sha256": "44fcaf6145f1ae0110059f3b4234e3e4fcc055f28cb5f299fefa6a22f329e138",
     "labels": [
       "亮出你的剑强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/drop_bear_small.png": {
-    "path": "/classic-cache/786de4e7502522e5344d5c1c.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/drop_bear_small.png": {
+    "path": "/classic-cache/f400a96b80baba27eb3168d1.png",
     "bytes": 1581,
     "sha256": "7923f23b1e16398314441f56282371706522a7d75f479a6420c86e01adcfc1ef",
     "labels": [
       "空投熊强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/dualwield_small.png": {
-    "path": "/classic-cache/8c1fdba31527cf2ccf55ad06.png",
-    "bytes": 891,
-    "sha256": "58fb85ed018fa2f17d4808a57c242c3636ac95c21352622b1014d2e0da90470d",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/dualwield_small.png": {
+    "path": "/classic-cache/587a8d418d0d1d7e82ed0b4b.png",
+    "bytes": 1772,
+    "sha256": "bcc6e798f4e8f4fec39ea914829f97aa13a3b0cdcd59db5185c9ebb0d5e2e56a",
     "labels": [
       "双刀流强化符文",
       "双发快射强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/earthwake_small.png": {
-    "path": "/classic-cache/cca727373853d6856daac592.png",
-    "bytes": 895,
-    "sha256": "757e34427be5607bb052855e43b453418e7687d726fe51003cd5bc45ca3bfa4d",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/earthwake_small.png": {
+    "path": "/classic-cache/aec3707f45898d043216633d.png",
+    "bytes": 1667,
+    "sha256": "f18823a6dddc02523f74383aa97f3459d78221efe9ce4d46023d71e8504a6c7e",
     "labels": [
       "大地苏醒强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/endlessdecimate_small.png": {
-    "path": "/classic-cache/9e62013125afd71bead32f8e.png",
-    "bytes": 877,
-    "sha256": "6ad9e485e29469383f5db84c1ca6305b998a5688222deee70bcc6ef6a9500e77",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/endlessdecimate_small.png": {
+    "path": "/classic-cache/a7bd781c8ced3c4396ef8a87.png",
+    "bytes": 1672,
+    "sha256": "04113d59655131193f8f5395e9737fed8ab44d210a95de864355d56d09f68f10",
     "labels": [
       "无尽大杀四方强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/erosion_small.png": {
-    "path": "/classic-cache/666e707314cf513d7abefd70.png",
-    "bytes": 1068,
-    "sha256": "02a89195dc5ca4bec5dc5a0c40c65cbabb38379c7a17481b55cdb195af03a479",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/erosion_small.png": {
+    "path": "/classic-cache/0b1da7f77ddd5ff0c24d511c.png",
+    "bytes": 1916,
+    "sha256": "357b11d3687dd3e9567679b5e97e896b6404a908b592c75844fdc5ef52a2beb0",
     "labels": [
       "侵蚀强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/escapade_small.png": {
-    "path": "/classic-cache/26da351fa3cb043ed2ffb13a.png",
-    "bytes": 937,
-    "sha256": "3bb9b2067281f2676253ba22cb8c2d909e894ef4d4c2d49dc051a6a5d3b063de",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/escapade_small.png": {
+    "path": "/classic-cache/472e29fdea04115988d2d1f1.png",
+    "bytes": 1748,
+    "sha256": "474f21c07defded5689c239daff35314b17f26671abb3b54f4d04e960874b0aa",
     "labels": [
       "魔法转物理强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/etherealweapon_small.png": {
-    "path": "/classic-cache/ff1d1f95e495d2f50189b3e9.png",
-    "bytes": 1014,
-    "sha256": "d417320e88f82d6f7a26c4d5d4deeb8b1bc8c7dd20a1b82c294a6403fc4f9770",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/etherealweapon_small.png": {
+    "path": "/classic-cache/bad096a2e898d85ef0d457e4.png",
+    "bytes": 1876,
+    "sha256": "6a0cfaed9bac214912e8407155f6e5bee860298ef6a5d0c719b9068e61ce7222",
     "labels": [
       "虚幻武器强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/eureka_small.png": {
-    "path": "/classic-cache/caeea6d5997aaae328451894.png",
-    "bytes": 901,
-    "sha256": "51ea2fe84c3ba780d0c514c82fed692936f6f7cbdbf119d19f42e05ec74ff2cf",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/eureka_small.png": {
+    "path": "/classic-cache/df18947a359dcd4f1c2abe45.png",
+    "bytes": 1662,
+    "sha256": "5d700ea303c558201e616057e9d60595a2f0b42cf9f2625234d12a64c1040fff",
     "labels": [
       "大法师强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/fanthehammer_small.png": {
-    "path": "/classic-cache/d2547816a94baf589dd991a5.png",
-    "bytes": 837,
-    "sha256": "7b4ea3f2de972543869f0b31f6eb6c0a1c2f8a1c2aae53f9f5eb8c20644bdbb1",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/fanthehammer_small.png": {
+    "path": "/classic-cache/bb6080b2dea767e62575586c.png",
+    "bytes": 1548,
+    "sha256": "fd75d9b70d3e686493ecb5cba01f4f848fe1c2e441311c66eb3b72deac35eea3",
     "labels": [
       "连拨击锤强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/feymagic_small.png": {
-    "path": "/classic-cache/6e878be75a733c41d129402b.png",
-    "bytes": 1310,
-    "sha256": "7d9dc16df747d0c968d466e4972004ab66c8cfd371c0328e6aa3e9ce54acda78",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/feymagic_small.png": {
+    "path": "/classic-cache/3f5852385554355f335fcbb4.png",
+    "bytes": 2518,
+    "sha256": "0af95f97b892d9c0806d43a7647486558da381cc784036bb919ec7d971c4abc6",
     "labels": [
       "精怪魔法强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/firebrand_small.png": {
-    "path": "/classic-cache/7fba6b487fcb245ada1bb13c.png",
-    "bytes": 1042,
-    "sha256": "2f4f19069f603c6df34769810114fa15b0052bed4852e4990eb48aa99532b6cf",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/firebrand_small.png": {
+    "path": "/classic-cache/258e2806ca0312f3e926fb15.png",
+    "bytes": 1864,
+    "sha256": "937568883bb424aea56a3c5ee0c7aee2e59eb0365b6542010d1712261c9c7c5d",
     "labels": [
       "火上浇油强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/firfox_small.png": {
-    "path": "/classic-cache/a98ffb7d190a75282b7d0534.png",
-    "bytes": 743,
-    "sha256": "cf4932a55471d2d9b1f543c476c7fa90462d70faa5b98e9e2972df20ec9f7b05",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/firfox_small.png": {
+    "path": "/classic-cache/8428d8b34ce38a9304924c4d.png",
+    "bytes": 1434,
+    "sha256": "c9cb72c9cec971974d9788771129c8ff92571581e41186802c16cf587ebdc251",
     "labels": [
       "火狐强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/firstaidkit_small.png": {
-    "path": "/classic-cache/96d74934a7cb5ccab82d5e75.png",
-    "bytes": 913,
-    "sha256": "1b08fa3fa52d7c0020a2a267ed2578a8c6c63b353bc857a6ac55ef49edff7597",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/firstaidkit_small.png": {
+    "path": "/classic-cache/05bd1acc8bc1381caf29498d.png",
+    "bytes": 1607,
+    "sha256": "189806c1d1867b852f4ba40ef63e6fad907aada99c58bb7972af52e323e311be",
     "labels": [
       "急救用具强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/flashbang_small.png": {
-    "path": "/classic-cache/76aa551c71515c1f526e2529.png",
-    "bytes": 895,
-    "sha256": "757e34427be5607bb052855e43b453418e7687d726fe51003cd5bc45ca3bfa4d",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/flashbang_small.png": {
+    "path": "/classic-cache/0799e48d03a8c7aab9e8c1ae.png",
+    "bytes": 1667,
+    "sha256": "f18823a6dddc02523f74383aa97f3459d78221efe9ce4d46023d71e8504a6c7e",
     "labels": [
       "闪光弹强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/flashy_small.png": {
-    "path": "/classic-cache/4a3d6a01068fa128c7b3dd4f.png",
-    "bytes": 932,
-    "sha256": "3ac0fb9e464c38d4e867df820ed79626c49e6b4d2f1c02a040989efa59ad36da",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/flashy_small.png": {
+    "path": "/classic-cache/49966bec0fa364969ab97861.png",
+    "bytes": 1855,
+    "sha256": "420b770613c1a9757ccf5edf51a24a25ad759378bb44570c2bcfca7a898cb336",
     "labels": [
       "闪现向前强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/giantslayer_small.png": {
-    "path": "/classic-cache/02d82cf4dc185934500234de.png",
-    "bytes": 922,
-    "sha256": "9153183d6c776dd020d0d310b6647b3cfcb88b0e02131d03b7d836f8f1e7f69e",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/giantslayer_small.png": {
+    "path": "/classic-cache/f7d890559dd4fd380d19739c.png",
+    "bytes": 1736,
+    "sha256": "bc2fe6785e8b6ca1741df7735f6508b0fe2da8d9b908bc8a60afdb6b5e66d682",
     "labels": [
       "巨人杀手强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/goliath_small.png": {
-    "path": "/classic-cache/9cc5de99cd61523af5aeeab5.png",
-    "bytes": 1117,
-    "sha256": "64d019aa7ae8f9d168d7ec1d187baeb86d0474b48037e1ed3e1302c701a70600",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/goliath_small.png": {
+    "path": "/classic-cache/049de17a7713fdcda6785186.png",
+    "bytes": 2145,
+    "sha256": "f2d29314bcd4182050bf5acfbd249bafa12c8c75041d8da8f2636d8f6d9f7453",
     "labels": [
       "歌利亚巨人强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/goredrink_small.png": {
-    "path": "/classic-cache/b6b41c02e0c6bd517d0f9fd9.png",
-    "bytes": 831,
-    "sha256": "5f68faa232a8114d2c3fa514d1012161c3d33ef74f4625b80c46041a9b3b8517",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/goredrink_small.png": {
+    "path": "/classic-cache/b467b7f717e036b5a3518dde.png",
+    "bytes": 1590,
+    "sha256": "bca608d875c2df57c5c1ec7c3af5f52033ade13d4f35b2211947bac3422f05f0",
     "labels": [
       "渴血强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/heavyhitter_small.png": {
-    "path": "/classic-cache/c494d93a2fb96fff71421e76.png",
-    "bytes": 837,
-    "sha256": "7b4ea3f2de972543869f0b31f6eb6c0a1c2f8a1c2aae53f9f5eb8c20644bdbb1",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/heavyhitter_small.png": {
+    "path": "/classic-cache/b2d70bc0c02ed05b0a356b9a.png",
+    "bytes": 1548,
+    "sha256": "fd75d9b70d3e686493ecb5cba01f4f848fe1c2e441311c66eb3b72deac35eea3",
     "labels": [
       "重量级打击手强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/icecold_small.png": {
-    "path": "/classic-cache/6b3bb24510771ab6f79426e8.png",
-    "bytes": 1171,
-    "sha256": "39d7d1fc0bc73b0d7b84da03aa37dc97e564c9e0488510190a96f5a1a5c8ed9e",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/icecold_small.png": {
+    "path": "/classic-cache/d49f1aa3f8e8c49d2d326184.png",
+    "bytes": 2256,
+    "sha256": "9522e19893fab967f71ec91865005fb37702511510f827fd530b400290f83713",
     "labels": [
       "冰寒强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/infernalconduit_small.png": {
-    "path": "/classic-cache/f5f77bfbbd44eab880afa812.png",
-    "bytes": 873,
-    "sha256": "432298df2b7842498089f00411703a12922326e3189ead93bd083ec2b9e5aa58",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/infernalconduit_small.png": {
+    "path": "/classic-cache/413ff9c30bd90c76cd9f389e.png",
+    "bytes": 1777,
+    "sha256": "30e726617ed3fbfacf2f14a1dc25e936538bab0bea8c19f8c0ba9fe04872dd48",
     "labels": [
       "炼狱导管强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/itscritical_small.png": {
-    "path": "/classic-cache/bd20fc9aa56e2bb5590c56ad.png",
-    "bytes": 911,
-    "sha256": "861b5a0a0bb460b0a0298ac96c28ead892987b3943e7493079a5bdac2d6b3c6d",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/itscritical_small.png": {
+    "path": "/classic-cache/828d2d4d5820950b0dbab7b2.png",
+    "bytes": 1711,
+    "sha256": "3954907dc5f4b8fb7ad146322c492bc3354a172aaea17b9716ce751ae537fb11",
     "labels": [
       "关键暴击强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/itskillingtime_small.png": {
-    "path": "/classic-cache/677af71ace42276dd3a4082e.png",
-    "bytes": 941,
-    "sha256": "5598c00a61262d459b8f2a78faf8a4db430a018ec54b359b4359ec2ab65f16dd",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/itskillingtime_small.png": {
+    "path": "/classic-cache/d769969dc0da3679a6160e19.png",
+    "bytes": 1682,
+    "sha256": "2b5d8f6931128acdb95a82c81db838825b5d0fae2152c32ca7036d5c3ff8edc3",
     "labels": [
       "杀戮时间到了强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/jeweledgauntlet_small.png": {
-    "path": "/classic-cache/94b0bddafc260e01568eeae7.png",
-    "bytes": 957,
-    "sha256": "c4753b8f04bb7f5cd8e6ba4cbc9fc78d61a978355fc50f6e3f129def7e25e5e1",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/jeweledgauntlet_small.png": {
+    "path": "/classic-cache/1ae98c1a9d49e6e96aaa04c0.png",
+    "bytes": 1795,
+    "sha256": "4c6f8c87f5a759e77e031b0c782e29fe83645310c13475634f76079a37a96705",
     "labels": [
       "珠光护手强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/legday_small.png": {
-    "path": "/classic-cache/2d8e00339e865671cad42d87.png",
-    "bytes": 779,
-    "sha256": "436bf96cdc22fe2f121aca0e0fc69ad03d3d589ec449d71adf1bbe7736662f6b",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/legday_small.png": {
+    "path": "/classic-cache/f5bf7b9dcd99869b5cd253f8.png",
+    "bytes": 1472,
+    "sha256": "359e19cae63819f4acb31c15d86eebec771d7c83bd987a375fae01deee2e2924",
     "labels": [
       "练腿日强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/lightemup_small.png": {
-    "path": "/classic-cache/90433943c23f0b2135324da5.png",
-    "bytes": 837,
-    "sha256": "7b4ea3f2de972543869f0b31f6eb6c0a1c2f8a1c2aae53f9f5eb8c20644bdbb1",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/lightemup_small.png": {
+    "path": "/classic-cache/00cd29383afdd948b137f3b3.png",
+    "bytes": 1548,
+    "sha256": "fd75d9b70d3e686493ecb5cba01f4f848fe1c2e441311c66eb3b72deac35eea3",
     "labels": [
       "点亮他们！强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/lightningstrikes_small.png": {
-    "path": "/classic-cache/63e3ca32987824b14789c4f9.png",
-    "bytes": 950,
-    "sha256": "44eefc9ece6e249dae48f2a955abb7cbd48ea213eb8ecd2023aef41027ac8a18",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/lightningstrikes_small.png": {
+    "path": "/classic-cache/ae8ce3356094c58cdc7a7a2f.png",
+    "bytes": 1781,
+    "sha256": "5af131b93419922039b3325334bcc7807f9681c9b495776d4307590a0bf9fee3",
     "labels": [
       "装填强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/madscientist_small.png": {
-    "path": "/classic-cache/df10fd1a134dadafc39a2891.png",
-    "bytes": 1082,
-    "sha256": "3ec204708e9be88d2dc2d506aeb37581c1b05932a172282af39684352a29f723",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/madscientist_small.png": {
+    "path": "/classic-cache/41fdb015ead8ab26c409b13f.png",
+    "bytes": 2109,
+    "sha256": "b61493f5bd23b5adb515120514abd6e9eeaa0d6cf43872201278533d5e632d86",
     "labels": [
       "扳机炼狱强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/marksmage_small.png": {
-    "path": "/classic-cache/8eaa251758fffe706b53fba7.png",
-    "bytes": 837,
-    "sha256": "7b4ea3f2de972543869f0b31f6eb6c0a1c2f8a1c2aae53f9f5eb8c20644bdbb1",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/marksmage_small.png": {
+    "path": "/classic-cache/13735fb1002aebb411eebee8.png",
+    "bytes": 1548,
+    "sha256": "fd75d9b70d3e686493ecb5cba01f4f848fe1c2e441311c66eb3b72deac35eea3",
     "labels": [
       "神射法师强化符文",
       "威能之追求强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/masterofduality_small.png": {
-    "path": "/classic-cache/f009da58d34a82a717fa6b8f.png",
-    "bytes": 870,
-    "sha256": "b31a669620f298504694942a5b24fed35aef7c10f4cd9cc0ca6f928c3a8f7f12",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/masterofduality_small.png": {
+    "path": "/classic-cache/2e27273a6e12629b323e4f5a.png",
+    "bytes": 1662,
+    "sha256": "e32f314b2b7095c6356217ed3c1195835da380f9066635849ab7cafc75b0edc5",
     "labels": [
       "物法皆修强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/mindtomatter_small.png": {
-    "path": "/classic-cache/97ea7201185c3db83fcf5a58.png",
-    "bytes": 1020,
-    "sha256": "44464f9936a3bf7cb2e175902dc88285436b74e2230987711484b9516ae2d463",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/mindtomatter_small.png": {
+    "path": "/classic-cache/4a8c42a85bf6e5e7e56f8948.png",
+    "bytes": 1855,
+    "sha256": "846783498de4327c19f12ce6c8fbf6285f49ecd732bc6924700b5ef8d0102f7b",
     "labels": [
       "由心及物强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/minionmancer_small.png": {
-    "path": "/classic-cache/bae0417cc79e789f9407fada.png",
-    "bytes": 809,
-    "sha256": "59b4975d970e907a756d537aa35408ddffce74d6a787b2acd0c934c73a524d61",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/minionmancer_small.png": {
+    "path": "/classic-cache/b7ea73517a147f9ece354870.png",
+    "bytes": 1490,
+    "sha256": "44bf258e81d1666edd27e2d363422c8c219ff2125022e8a86772cdaed49441b6",
     "labels": [
       "仆从大师强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/mysticpunch_small.png": {
-    "path": "/classic-cache/b1791285903e47cc6a817f09.png",
-    "bytes": 865,
-    "sha256": "26256c688ac079b21ce9fbcb49dc8b4e53b01b1d0a9060ff609698195bd94b82",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/mysticpunch_small.png": {
+    "path": "/classic-cache/e83a8dea440398dfc86f44f7.png",
+    "bytes": 1762,
+    "sha256": "8ba07b2a00c1c35fea875bbbe0ddca8ce3709fc9f06080b33c8bc987fa01aee5",
     "labels": [
       "秘术冲拳强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/okboomerang_small.png": {
-    "path": "/classic-cache/b9ce6560c804d554f61f1270.png",
-    "bytes": 877,
-    "sha256": "6ad9e485e29469383f5db84c1ca6305b998a5688222deee70bcc6ef6a9500e77",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/okboomerang_small.png": {
+    "path": "/classic-cache/f2fdbe2ec5d0c32ef42a482d.png",
+    "bytes": 1672,
+    "sha256": "04113d59655131193f8f5395e9737fed8ab44d210a95de864355d56d09f68f10",
     "labels": [
       "回力OK镖强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/orbitallaser_small.png": {
-    "path": "/classic-cache/22c786378f20837d4cbac306.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/orbitallaser_small.png": {
+    "path": "/classic-cache/6705d68b498b8b8a664c058f.png",
     "bytes": 1781,
     "sha256": "5af131b93419922039b3325334bcc7807f9681c9b495776d4307590a0bf9fee3",
     "labels": [
       "卡皮巴拉空投强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/outlawsgrit_small.png": {
-    "path": "/classic-cache/ec1c8a4555d000a22f17f907.png",
-    "bytes": 864,
-    "sha256": "ed68809f0c28cd5d2bf1f271ce8b100463a3a27ef7d48ea9346a4a5882726d49",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/outlawsgrit_small.png": {
+    "path": "/classic-cache/158c5867c298d876c643427b.png",
+    "bytes": 1665,
+    "sha256": "270df3d3a807fe8390db47e29ca660590aea4d21fb1314fd295e7fe224e958aa",
     "labels": [
       "狂徒豪气强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/overflow_small.png": {
-    "path": "/classic-cache/5a67432b69241f5873e3d16f.png",
-    "bytes": 1014,
-    "sha256": "d417320e88f82d6f7a26c4d5d4deeb8b1bc8c7dd20a1b82c294a6403fc4f9770",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/overflow_small.png": {
+    "path": "/classic-cache/0f21ed2642b95a35a3f29840.png",
+    "bytes": 1876,
+    "sha256": "6a0cfaed9bac214912e8407155f6e5bee860298ef6a5d0c719b9068e61ce7222",
     "labels": [
       "溢流强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/perseverance_small.png": {
-    "path": "/classic-cache/062cfc4f7e775c4cf3bcb271.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/perseverance_small.png": {
+    "path": "/classic-cache/bda153fa3dee115dda8847cb.png",
     "bytes": 1722,
     "sha256": "7a2fd94531a9b03bdf8e44e5f81e620783a4ee6bed3dfa02f558554ff8ce9124",
     "labels": [
       "坚韧强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/quantumcomputing_small.png": {
-    "path": "/classic-cache/14b664d21420c5e5406bbb5b.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/quantumcomputing_small.png": {
+    "path": "/classic-cache/1d5fa8682d06865786712c4f.png",
     "bytes": 1672,
     "sha256": "04113d59655131193f8f5395e9737fed8ab44d210a95de864355d56d09f68f10",
     "labels": [
       "量子计算强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/rabblerousing_small.png": {
-    "path": "/classic-cache/9605a5f7ca5c4514d226ea79.png",
-    "bytes": 905,
-    "sha256": "fdd4f0e0c936bef3082e5018ae1c75ec53004e8d67c9e286d393896daf600afa",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/rabblerousing_small.png": {
+    "path": "/classic-cache/a5bda012458c1e79d028bbd9.png",
+    "bytes": 1686,
+    "sha256": "194bef60a9b8d387391828bcc19efa41909aa6b0c8285ec6a14a90c458c93946",
     "labels": [
       "活力焕发强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/scopedweapons_small.png": {
-    "path": "/classic-cache/bd686b7db37e890db413c85d.png",
-    "bytes": 1017,
-    "sha256": "fc75c385d8f1d57ab8dec086f468a30e7330f12caeda9c77c49950d04e838719",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/scopedweapons_small.png": {
+    "path": "/classic-cache/4f327090e5dc13b290822b39.png",
+    "bytes": 1857,
+    "sha256": "61b6ed01d862b271fb3c2fb57b20c9b84c4f1892dfd4637cd228a19efead59f4",
     "labels": [
       "万用瞄准镜强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/scopierweapons_small.png": {
-    "path": "/classic-cache/4898f148cbec1f9f2a16882c.png",
-    "bytes": 1017,
-    "sha256": "fc75c385d8f1d57ab8dec086f468a30e7330f12caeda9c77c49950d04e838719",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/scopierweapons_small.png": {
+    "path": "/classic-cache/2d0eb8b32fcacb0f07aff358.png",
+    "bytes": 1857,
+    "sha256": "61b6ed01d862b271fb3c2fb57b20c9b84c4f1892dfd4637cd228a19efead59f4",
     "labels": [
       "更万用的瞄准镜强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/scopiestweapons_small.png": {
-    "path": "/classic-cache/5c47781baac14a00a14d4215.png",
-    "bytes": 1017,
-    "sha256": "fc75c385d8f1d57ab8dec086f468a30e7330f12caeda9c77c49950d04e838719",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/scopiestweapons_small.png": {
+    "path": "/classic-cache/decfbddc98303b954643c1d9.png",
+    "bytes": 1857,
+    "sha256": "61b6ed01d862b271fb3c2fb57b20c9b84c4f1892dfd4637cd228a19efead59f4",
     "labels": [
       "最万用的瞄准镜强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/searingdawn_small.png": {
-    "path": "/classic-cache/3bd5ae12189b31ee2bca0a23.png",
-    "bytes": 946,
-    "sha256": "dfbf307bbdb53a5a54c7125085c9c4b0dc0f07125018086b368ad8d3833d0ec7",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/searingdawn_small.png": {
+    "path": "/classic-cache/c16b5f7578c6113107dce813.png",
+    "bytes": 1840,
+    "sha256": "7a6f8c68d31f7426ebae1da5f7d5dd8f694be81e1f82810abb5c9ba0923d42f1",
     "labels": [
       "炽烈黎明强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/shadowrunner_small.png": {
-    "path": "/classic-cache/2291b05deeca8d808aa196da.png",
-    "bytes": 899,
-    "sha256": "0d63e32ee0aee5ec0a26e0df84dae2aefd4730a45b2a7baeff65fd7fa9f38ff4",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/shadowrunner_small.png": {
+    "path": "/classic-cache/e105ecdf15b67e41f7349b01.png",
+    "bytes": 1651,
+    "sha256": "c5d3599eaf358078a67a0ddc31204056a98edecb3354a5b47231eede19b2008b",
     "labels": [
       "暗影疾奔强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/shrinkray_small.png": {
-    "path": "/classic-cache/af4b807cd62b31f47f88c928.png",
-    "bytes": 1024,
-    "sha256": "8b0d469f3bfcd1ef1c9de50491720b9de4702b437f6095cbd41327cf0decaac2",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/shrinkray_small.png": {
+    "path": "/classic-cache/6b83b1b1fd818219a9a149fe.png",
+    "bytes": 1889,
+    "sha256": "7d0a86c3e312e7d18f826cebfcbe5940f01388f0fc313b613206241188a7bbae",
     "labels": [
       "缩小射线强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/skilledsniper_small.png": {
-    "path": "/classic-cache/87cfad320e1f24d1f0197d30.png",
-    "bytes": 868,
-    "sha256": "df33840a9db3fab0db1755ff20f5eb4eae0aebf54a874a8df0135b276248c534",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/skilledsniper_small.png": {
+    "path": "/classic-cache/ed8379ada08fc675d886e172.png",
+    "bytes": 1771,
+    "sha256": "b86d7a34b1341e5dec1c678da20fdac0eb5881b9263bc3366a8a349de5f63985",
     "labels": [
       "老练狙神强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/slaparound_small.png": {
-    "path": "/classic-cache/6ad98b82a1ff8370da333b08.png",
-    "bytes": 763,
-    "sha256": "625c7adb1901591085e5c05c38282a6c4d0cc6a245ee0e70b4e75c1e2176537c",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/slaparound_small.png": {
+    "path": "/classic-cache/abfca58776ba3f5d83443476.png",
+    "bytes": 1547,
+    "sha256": "7c50f71cc1c581f12d3884599e22e44650deb3b4a683465c2a853289d78bdad5",
     "labels": [
       "扇巴掌强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/slowactingpainkillers_small.png": {
-    "path": "/classic-cache/ca7ca0077872870598042c27.png",
-    "bytes": 1048,
-    "sha256": "b28a8f6f549e661fad888c2ed6872c589c9dd87dc6c70f8ba49c59bc9bc015ee",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/slowactingpainkillers_small.png": {
+    "path": "/classic-cache/f24a805ed245461c180d329b.png",
+    "bytes": 2006,
+    "sha256": "6a6125f0821ad59e822e1601cdc19373e36a24bc843a6163eb109e3399500183",
     "labels": [
       "神圣干预强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/sonicboom_small.png": {
-    "path": "/classic-cache/1c3637fc716960915acea8a5.png",
-    "bytes": 816,
-    "sha256": "5dedffc952d8775ba6ae480de5a8a5030312e5d990c7247a8247ad63f8ed4b1f",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/sonicboom_small.png": {
+    "path": "/classic-cache/cf24f657f5addecba27db769.png",
+    "bytes": 1543,
+    "sha256": "848f644bb35de12f465c2bd8b89dac7b3468f0cc624d43626096b47562d9ca20",
     "labels": [
       "天音爆强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/soulsiphon_small.png": {
-    "path": "/classic-cache/06684b9074a1de991805bbc2.png",
-    "bytes": 952,
-    "sha256": "ee27c6df9ae4f69c23fa6f2b5604190d9c10ea266bd99ac2b018a20e1f0eee96",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/soulsiphon_small.png": {
+    "path": "/classic-cache/c33a0f16c69cff01b967a7e2.png",
+    "bytes": 1761,
+    "sha256": "10f4ce475221c7d8e7f136476aedc43ee50b8b4b5a31e834d792946578b46b1c",
     "labels": [
       "灵魂虹吸强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/stackosaurusrex_small.png": {
-    "path": "/classic-cache/eba4d98e4c9309ce896427bc.png",
-    "bytes": 716,
-    "sha256": "a9876db24c181e29c336391aebb6bacda39a873222511f39d68913462e93a817",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/stackosaurusrex_small.png": {
+    "path": "/classic-cache/996e224a46e43b6367f98f9a.png",
+    "bytes": 1408,
+    "sha256": "165add231d6db361da2b93dadadea61a19756c9004b133ffd8f91b71920b35f2",
     "labels": [
       "叠角龙强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/symphonyofwar_small.png": {
-    "path": "/classic-cache/6b53f0127d27b152c92cb154.png",
-    "bytes": 786,
-    "sha256": "8223340f4ef54319a73b93102773669df9f5549da4c3a8d7c899170e49fb997f",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/symphonyofwar_small.png": {
+    "path": "/classic-cache/651b1232721b6b26e6d9a81f.png",
+    "bytes": 1576,
+    "sha256": "1353bdd7228c9e25a196219086d57a22db06ca873f4dfba0da15e1bb5ce26497",
     "labels": [
       "针插垫强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/tank_engine_small.png": {
-    "path": "/classic-cache/899191406f83c903477772c8.png",
-    "bytes": 814,
-    "sha256": "82382319a2c4104f7d00b16517dc4a6d039e62c7f68b6049cc011284ff27d694",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/tank_engine_small.png": {
+    "path": "/classic-cache/c91e59239db93bb44cb43f0e.png",
+    "bytes": 1592,
+    "sha256": "581ff2672d8304be15ef6508ca1186deddbaa5d9d0740702f59832469820cb12",
     "labels": [
       "坦克引擎强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/tankitorleaveit_small.png": {
-    "path": "/classic-cache/a944111ac12b2abc16857ac2.png",
-    "bytes": 941,
-    "sha256": "c0ee5d20a02e096c88a0f4b445763462d31e7a4114aeac71ec3fef3ab8422d9d",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/tankitorleaveit_small.png": {
+    "path": "/classic-cache/1ca9768ce5430dd2e2fd2b75.png",
+    "bytes": 1754,
+    "sha256": "c60efd3a63fdb8c1b8f214789c4fe29e7a54c3ead2ee25a61e03028a965794c7",
     "labels": [
       "会心防御强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/tapdancer_small.png": {
-    "path": "/classic-cache/4effe7b21e11cac8e55f4826.png",
-    "bytes": 742,
-    "sha256": "030e699f545d3f50a2565b9274faa53ed4c8dd6bcd3b043b2852c5d5517a84e4",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/tapdancer_small.png": {
+    "path": "/classic-cache/d6683ebd489f58c7c8b0afb8.png",
+    "bytes": 1492,
+    "sha256": "48fd4ce8667d8ddb6bc79de5bf68377011ad1a13cb1496f92131d228d1903b99",
     "labels": [
       "踢踏舞强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/threadtheneedle_small.png": {
-    "path": "/classic-cache/7a0fb09e1e9b0413862b698e.png",
-    "bytes": 950,
-    "sha256": "44eefc9ece6e249dae48f2a955abb7cbd48ea213eb8ecd2023aef41027ac8a18",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/threadtheneedle_small.png": {
+    "path": "/classic-cache/bf2767eaeca8438bcbda1496.png",
+    "bytes": 1781,
+    "sha256": "5af131b93419922039b3325334bcc7807f9681c9b495776d4307590a0bf9fee3",
     "labels": [
       "穿针引线强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/transmutechaos_small.png": {
-    "path": "/classic-cache/217a7af58888d9ad9dfdb7ae.png",
-    "bytes": 1005,
-    "sha256": "6a255f4908f04fde9e94c6a9b7cde743c8499bb7aa4e61ec695af54b41839fed",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/transmutechaos_small.png": {
+    "path": "/classic-cache/0dc4a16fa1a4c30c6dc4da6a.png",
+    "bytes": 1984,
+    "sha256": "5131f5628118e8907137c98b501a025686734a1e0c8ad509c93534e8f40a1760",
     "labels": [
       "质变：混沌强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/transmutegold_small.png": {
-    "path": "/classic-cache/df693c9e7d45f58150660f3c.png",
-    "bytes": 1005,
-    "sha256": "6a255f4908f04fde9e94c6a9b7cde743c8499bb7aa4e61ec695af54b41839fed",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/transmutegold_small.png": {
+    "path": "/classic-cache/95ef7c049b7027bc034032b9.png",
+    "bytes": 1984,
+    "sha256": "5131f5628118e8907137c98b501a025686734a1e0c8ad509c93534e8f40a1760",
     "labels": [
       "质变：黄金阶强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/transmuteprismatic_small.png": {
-    "path": "/classic-cache/f5388e595611c0a63f07211c.png",
-    "bytes": 1005,
-    "sha256": "6a255f4908f04fde9e94c6a9b7cde743c8499bb7aa4e61ec695af54b41839fed",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/transmuteprismatic_small.png": {
+    "path": "/classic-cache/146e268b8017c989c408bebb.png",
+    "bytes": 1984,
+    "sha256": "5131f5628118e8907137c98b501a025686734a1e0c8ad509c93534e8f40a1760",
     "labels": [
       "质变：棱彩阶强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/typhoon_small.png": {
-    "path": "/classic-cache/46af816b14b86f534ffd3b7e.png",
-    "bytes": 1029,
-    "sha256": "091dd92f8e2dcbc3e8b1a19547bf86af168d632792a3ce14bb4b254563f4a03d",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/typhoon_small.png": {
+    "path": "/classic-cache/ad6dc138a16b91dfb1e1459e.png",
+    "bytes": 1910,
+    "sha256": "998a6517f229525318eb29dc6a0eddc402072b0c3e2891813e1738b773bff651",
     "labels": [
       "台风强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/ultimaterevolution_small.png": {
-    "path": "/classic-cache/5aa74eca26af29d05cc4d4f3.png",
-    "bytes": 990,
-    "sha256": "fbda1cabfd6b970e744eea60fefd49f34ab5e9699a4052e561ed1425a6c37abd",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/ultimaterevolution_small.png": {
+    "path": "/classic-cache/11879b888fe7ead02527d69f.png",
+    "bytes": 2013,
+    "sha256": "1e962007ad3c7291fcc35d5afe90a3898edb508da6107af6e184df17704e935a",
     "labels": [
       "终极刷新强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/ultimateunstoppable_small.png": {
-    "path": "/classic-cache/82b927cbeed5c204c0c77e4e.png",
-    "bytes": 821,
-    "sha256": "b77b246770525110bc43b384e64899c3e52753d23c7d83bd76437f26d5f56d57",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/ultimateunstoppable_small.png": {
+    "path": "/classic-cache/3fef36dde5e58ff4b790f5a8.png",
+    "bytes": 1662,
+    "sha256": "f12a65b4931066041bf9ca13d619bd42958bbb21d2183ba0ca86e88b0d0b78c2",
     "labels": [
       "终极不可阻挡强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/vulnerability_small.png": {
-    "path": "/classic-cache/01fa32fcd2e7d53cdda59ef7.png",
-    "bytes": 971,
-    "sha256": "94b6d563d2fe0401ce071b3157b8ddfe9028d23cc586e7e7a82451fd9c0aa214",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/vulnerability_small.png": {
+    "path": "/classic-cache/1d050f69236c789db67f86d7.png",
+    "bytes": 1836,
+    "sha256": "b47faa19d07bf0d855eb0d8eb0e3755287e09c9a4688819505e5c7703f81751d",
     "labels": [
       "易损强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/windspeakersblessing_small.png": {
-    "path": "/classic-cache/9cbb93c890363490e2189c8e.png",
-    "bytes": 980,
-    "sha256": "a8d08dac20c1145b91ca6ebc4234c3baeedc4b5bc01ba116246a88733e061092",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/windspeakersblessing_small.png": {
+    "path": "/classic-cache/6b836ecbbdd2a21302c57fbd.png",
+    "bytes": 1800,
+    "sha256": "7a7b6b50335bc7f6b16f43944e43338a3df596744ebc54df0c2a31c5838f6834",
     "labels": [
       "风语者的祝福强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/wisdomofages_small.png": {
-    "path": "/classic-cache/f8b59f7422dbca732a9011b4.png",
-    "bytes": 639,
-    "sha256": "0b99d439e12eb54a9096ea94d3bfdfbabe81b8ff8a2c323bdaa9d1f6fb45a1ed",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/wisdomofages_small.png": {
+    "path": "/classic-cache/5d74479cf02e28ab5eca9d1e.png",
+    "bytes": 1263,
+    "sha256": "3c844d8a493e729a5912e19ee2115254bef48df8694efc14cb788fd1b8af5db1",
     "labels": [
       "不祥契约强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/cherry/augments/icons/witchfulthinking_small.png": {
-    "path": "/classic-cache/2fae2c5b2c93b1b18691b77d.png",
-    "bytes": 830,
-    "sha256": "fd05288c98ed6db843e1f900844b8fccf61a7610df11f4298bc7e4d2223ae3ea",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/cherry/augments/icons/witchfulthinking_small.png": {
+    "path": "/classic-cache/56b9eec0a77967330f5e36b5.png",
+    "bytes": 1727,
+    "sha256": "98e1200ee4cc9c720736f97a833e4af5469fe66116baa2f2124bc8468562b279",
     "labels": [
       "巫师式思考强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/adamant_small.png": {
-    "path": "/classic-cache/1d79b8d7afa3ce78069bf1de.png",
-    "bytes": 976,
-    "sha256": "8a44d56629cd641921c6988af1e6b894b53804a7eae4543a8509a85fed6b40eb",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/adamant_small.png": {
+    "path": "/classic-cache/d4ffae88cc5325a42cb24abb.png",
+    "bytes": 1867,
+    "sha256": "9ff6da6cbdd773352dafe23de0daaf4391578a7875830537f0b3ec255c542e1d",
     "labels": [
       "坚若磐石强化符文",
       "双重打击强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/aram_phenomenalevil_small.png": {
-    "path": "/classic-cache/889cdb1c8741631e34258e05.png",
-    "bytes": 763,
-    "sha256": "e5986aaa26fcc0438774878d4796b5c5b43e4fbb90dc3eefed1f660cf1d75761",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/aram_phenomenalevil_small.png": {
+    "path": "/classic-cache/c49663f1ed9655a60f9b18e0.png",
+    "bytes": 1476,
+    "sha256": "34e7ba1e3c10a91118d4b40d950b9ce37685cd01c4165ce8408c3fef583042ed",
     "labels": [
       "超凡邪恶强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/babykitty_small.png": {
-    "path": "/classic-cache/dcffca403d95aad4a7a8e818.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/babykitty_small.png": {
+    "path": "/classic-cache/27d25c98dbd75057ea7f3dcb.png",
     "bytes": 1713,
     "sha256": "bce57e6bfd2d4c3af580ce035ae95f18c36511b9cccd7065760469c13fb79296",
     "labels": [
       "小猫咪找妈妈强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/biggestsnowballever_small.png": {
-    "path": "/classic-cache/7ef8b7bc2d6fae8fd9016135.png",
-    "bytes": 865,
-    "sha256": "c2b43447cc47e82823c0206d323a60825b2b3953625f2aac3eceeea80206518b",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/biggestsnowballever_small.png": {
+    "path": "/classic-cache/01e722150492a0a284b3545a.png",
+    "bytes": 1689,
+    "sha256": "a880002277a74fdfa09bfda42be14f2450b482db5b43f5dd93bb39c3b5c8646d",
     "labels": [
       "史上最大雪球强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/bloodmoney2_small.png": {
-    "path": "/classic-cache/6aca827785b5d41bedcae1f2.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/bloodmoney2_small.png": {
+    "path": "/classic-cache/baf622979473ac9b824f198c.png",
     "bytes": 1667,
     "sha256": "556b3a7cafc2d1bd1bdbab72dd412b5e0e531bf29bdf286b44bffbe731536a11",
     "labels": [
       "炽燃利息强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/bonk_large.png": {
-    "path": "/classic-cache/2d98b44ca96f01757c054ce6.png",
-    "bytes": 10032,
-    "sha256": "d8010ff60f83798c92b0eecf9f7541784b4523d69c46ad16a5a19bb317aa68b6",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/bonk_large.png": {
+    "path": "/classic-cache/4a9ac922d87fb600f0208784.png",
+    "bytes": 14850,
+    "sha256": "48c93be90aa3fd9f9c6d220bbd0358f83344f5a567289fe924d9e37733ac6e51",
     "labels": [
       "邦！强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/brushpower_small.png": {
-    "path": "/classic-cache/1fe19941c78b15332abb462c.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/brushpower_small.png": {
+    "path": "/classic-cache/067946ab86919dfdd20cfff0.png",
     "bytes": 1459,
     "sha256": "14ea4990ae8ad13393ab105b131894f892adadecf92d967db8ae70608366926b",
     "labels": [
       "藏身草丛强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/criticalmissile_small.png": {
-    "path": "/classic-cache/9ec33acc6f86c634489d6eaa.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/criticalmissile_small.png": {
+    "path": "/classic-cache/68e9a0274d064604c3657b96.png",
     "bytes": 1545,
     "sha256": "d7c724da4bb00fba7040ea0e2513e159ea0b8ce21844bbf7b8ef169972b4e4e7",
     "labels": [
       "暴击飞弹强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/criticalrhythm_small.png": {
-    "path": "/classic-cache/9673f7480096e2861ae87a1a.png",
-    "bytes": 837,
-    "sha256": "e816acfbecb1d255620841786d02d4195bebddbf4b340f8858254a106436fb9f",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/criticalrhythm_small.png": {
+    "path": "/classic-cache/4200ac70c28d453e0a1bc4e1.png",
+    "bytes": 1556,
+    "sha256": "1abe333e80654c0879eb20269b2a00c3f1eb7a9ab8b2457f2c20e2805a170bd5",
     "labels": [
       "暴击律动强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/cruelty_small.png": {
-    "path": "/classic-cache/40343fbbb8cfd1863df7ae91.png",
-    "bytes": 1334,
-    "sha256": "2482733c72f11afd1482f7754cebb8284997def6265acecf4c1da74cb53c6216",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/cruelty_small.png": {
+    "path": "/classic-cache/74f776a99a88284de1541d22.png",
+    "bytes": 2486,
+    "sha256": "38db7bf7f269cba64694334cb361c5a007b1881e3210dff701e9bdbb2c69c29b",
     "labels": [
       "残忍强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/do_or_die_small.png": {
-    "path": "/classic-cache/76f14e868f34e2637c18bb12.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/do_or_die_small.png": {
+    "path": "/classic-cache/36e75af8d9a92c33c6d5c8c6.png",
     "bytes": 1794,
     "sha256": "2a2d4c6be0e09f6a5b16ae63b109975d9c171967205f251e5bd3732bd00fc57d",
     "labels": [
@@ -14113,16 +14113,16 @@ export const classicAssetAudit = {
       "真正的永恒强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/donation_small.png": {
-    "path": "/classic-cache/19c490174037527d64a1e82d.png",
-    "bytes": 948,
-    "sha256": "58e7d5cf2626baf930c0d50289dd3d67adfe5f2968b3099271d21f60232c3a29",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/donation_small.png": {
+    "path": "/classic-cache/b0014bec5b238a8a1abf3827.png",
+    "bytes": 1847,
+    "sha256": "fb02bf908ef53dfcc8283d31256bf8b743b647cb858f6a12484205c59fbde58d",
     "labels": [
       "捐赠强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/dont_stop_cleaving_small.png": {
-    "path": "/classic-cache/e0f4b03eb0424b5c044d4fb9.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/dont_stop_cleaving_small.png": {
+    "path": "/classic-cache/ee82d445d4e49221a7d5395b.png",
     "bytes": 1794,
     "sha256": "2a2d4c6be0e09f6a5b16ae63b109975d9c171967205f251e5bd3732bd00fc57d",
     "labels": [
@@ -14130,98 +14130,98 @@ export const classicAssetAudit = {
       "海克斯核心强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/dontchangethechannel_small.png": {
-    "path": "/classic-cache/7f0883b61eac24216e458457.png",
-    "bytes": 1014,
-    "sha256": "d417320e88f82d6f7a26c4d5d4deeb8b1bc8c7dd20a1b82c294a6403fc4f9770",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/dontchangethechannel_small.png": {
+    "path": "/classic-cache/55e9fce574e71f04967f5769.png",
+    "bytes": 1876,
+    "sha256": "6a0cfaed9bac214912e8407155f6e5bee860298ef6a5d0c719b9068e61ce7222",
     "labels": [
       "别停止引导强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/dorans_fan_small.png": {
-    "path": "/classic-cache/06f445d7f64935d5acb2886e.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/dorans_fan_small.png": {
+    "path": "/classic-cache/3bf5b55f41c59949530ad042.png",
     "bytes": 1863,
     "sha256": "e5bde00837d470336bba68be3d7bed93c500083a4826eb7ca386ce579c070050",
     "labels": [
       "多兰的最铁粉丝强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/drink_up_small.png": {
-    "path": "/classic-cache/c2459c393968124342be4d68.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/drink_up_small.png": {
+    "path": "/classic-cache/4392aa663f2c8896fcc7ef08.png",
     "bytes": 1863,
     "sha256": "e5bde00837d470336bba68be3d7bed93c500083a4826eb7ca386ce579c070050",
     "labels": [
       "一饮而尽强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/dropkick_small.png": {
-    "path": "/classic-cache/d9bf4cb59b8882f524a0492e.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/dropkick_small.png": {
+    "path": "/classic-cache/8701cccb7dfcff634b8a4331.png",
     "bytes": 1635,
     "sha256": "e3ba21eab4c97ce907da988d570207121335be05abf7cf0be187e319c693c809",
     "labels": [
       "飞身踢强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/empyreampromise_small.png": {
-    "path": "/classic-cache/bb84c8d9d96976f08da516d6.png",
-    "bytes": 899,
-    "sha256": "8ed1f81f074804256afbcbf84b8568a42e843f870699797326c253b451cf8d1e",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/empyreampromise_small.png": {
+    "path": "/classic-cache/708c7e3b313f560b05739654.png",
+    "bytes": 1624,
+    "sha256": "e4c498adff308fd8ed3fae86a3d98efbf19af4d21d73a785406ff4d0a775c386",
     "labels": [
       "至高天诺言强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/equillibrium_small.png": {
-    "path": "/classic-cache/0c6e403546ac153d49c4239c.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/equillibrium_small.png": {
+    "path": "/classic-cache/4b02bc157de481ca1c66503f.png",
     "bytes": 1937,
     "sha256": "8866b19ac5a8ef651d106441d6821f43a2187faddab8f62bdaa3cdf6007c1d16",
     "labels": [
       "我们的治疗强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/escapeplan_small.png": {
-    "path": "/classic-cache/bd7b18a171762e1562b60f19.png",
-    "bytes": 774,
-    "sha256": "1bc7909e5a6e9aaf253335a092c37aa27425480ed36add4360dcdebfaf5b8608",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/escapeplan_small.png": {
+    "path": "/classic-cache/e9d21da69846090907de3b51.png",
+    "bytes": 1566,
+    "sha256": "fab42f81112e2de8c63f67936dc2771bbdc459eaec949b17e1917887ffd8532d",
     "labels": [
       "逃跑计划强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/finalform_small.png": {
-    "path": "/classic-cache/1288adec2422550768ae8b5a.png",
-    "bytes": 940,
-    "sha256": "e76ac68869eebe7256f9733ab9d4d9dc02ae07c50da7344a3587a75837a52388",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/finalform_small.png": {
+    "path": "/classic-cache/1722099557a6419ccfc43482.png",
+    "bytes": 1695,
+    "sha256": "adec2170c57442e08df8928d5dc392d8e229a98d6f637a35ede2829b9b1448e5",
     "labels": [
       "最终形态强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/fishbait_small.png": {
-    "path": "/classic-cache/a562654ce182ffda45a235f2.png",
-    "bytes": 828,
-    "sha256": "6261472e703aafb71fcf88e7340ef2994af459fcd4847b4d0b2b6ebec5864699",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/fishbait_small.png": {
+    "path": "/classic-cache/2e0fbcc865121dd6748b5bdb.png",
+    "bytes": 1582,
+    "sha256": "be51a5ca8047f6fabe328b237aad15c36c4d3176749c7dbae02476332c5f2ce9",
     "labels": [
       "鲨鱼诱饵强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/flash2_small.png": {
-    "path": "/classic-cache/698d1f21c838c1c91fcb9607.png",
-    "bytes": 710,
-    "sha256": "e9259de8242931420f1ddd0f1e075f86ed342c4cf658e9e4798fe2e7b32254b4",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/flash2_small.png": {
+    "path": "/classic-cache/9ffb8fd53ec7cc88c7773164.png",
+    "bytes": 1390,
+    "sha256": "eaf29645fd9eee4f261614641c15e9b90234693a712f6913ef556755598bc3d7",
     "labels": [
       "闪闪现现强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/fs_heart_steal_small.png": {
-    "path": "/classic-cache/83ce0c4509cd8e45c9e16e95.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/fs_heart_steal_small.png": {
+    "path": "/classic-cache/6f3b9df190e7a692e022dc5b.png",
     "bytes": 1794,
     "sha256": "2a2d4c6be0e09f6a5b16ae63b109975d9c171967205f251e5bd3732bd00fc57d",
     "labels": [
       "时光发条：心之钢强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_gold.png": {
-    "path": "/classic-cache/a8a83d233917bdf879e9e968.png",
-    "bytes": 821,
-    "sha256": "d6c7afd80787177641a2788be74f90f42d9abef0f8481ee8d02366fcde8cb54f",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_gold.png": {
+    "path": "/classic-cache/3b872e96f441e8f225aed49c.png",
+    "bytes": 1300,
+    "sha256": "55c1d54b8a5385832d464b58fdcc1c14c61095d631aeef31da5797961abe933a",
     "labels": [
       "快步强化符文",
       "连锁反应强化符文",
@@ -14230,10 +14230,10 @@ export const classicAssetAudit = {
       "复位强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_prismatic.png": {
-    "path": "/classic-cache/f91be1003f59d2b1fbc8f6df.png",
-    "bytes": 917,
-    "sha256": "55d7bba1bac45271761b97841bac5092959d6ddb383f395e5747cb5758e05f01",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_prismatic.png": {
+    "path": "/classic-cache/1355bbbc7060a3d56e62bf40.png",
+    "bytes": 1386,
+    "sha256": "618f2352dd46a4da41c763c85da566771cb2e1519ec420adfcbe341286e3115e",
     "labels": [
       "三重射击强化符文",
       "多重射击强化符文",
@@ -14242,10 +14242,10 @@ export const classicAssetAudit = {
       "超负荷强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_silver.png": {
-    "path": "/classic-cache/31d5f5df27e0b70a13c344f6.png",
-    "bytes": 785,
-    "sha256": "de4f3bbb60979852f65a6f5eebcc049ed5c9b03fb57635be9418230ddbef18e5",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/genericabilityaugmenticon_silver.png": {
+    "path": "/classic-cache/de573fbb57f6eba7ed145e93.png",
+    "bytes": 1214,
+    "sha256": "48fe628ae2b36e40a63fc5fe6096bac9961c463467e020c9e07075ff34a6ebb2",
     "labels": [
       "虹吸强化符文",
       "保持坚定强化符文",
@@ -14255,243 +14255,243 @@ export const classicAssetAudit = {
       "自适应防护强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/getexcited_small.png": {
-    "path": "/classic-cache/80a119b445aeda6c792c2b2a.png",
-    "bytes": 837,
-    "sha256": "e816acfbecb1d255620841786d02d4195bebddbf4b340f8858254a106436fb9f",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/getexcited_small.png": {
+    "path": "/classic-cache/bbf17fbce186668ab0639456.png",
+    "bytes": 1556,
+    "sha256": "1abe333e80654c0879eb20269b2a00c3f1eb7a9ab8b2457f2c20e2805a170bd5",
     "labels": [
       "罪恶快感强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/glasscannon_small.png": {
-    "path": "/classic-cache/09811e8edfac934a1538741c.png",
-    "bytes": 1138,
-    "sha256": "b206a06425a60e00bd6cdbdf3714a9af51bdbe47f52daea433e0d4e122530cad",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/glasscannon_small.png": {
+    "path": "/classic-cache/1b561f540774528a6ad69bdb.png",
+    "bytes": 2086,
+    "sha256": "4ff9f0af63f22e73f1fe9a689b7bdb0aa6bfbee008fec112750a02d993a784a6",
     "labels": [
       "玻璃大炮强化符文",
       "飞升仪式强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/goldensnowball_small.png": {
-    "path": "/classic-cache/7034b5239b07a5fa18218d51.png",
-    "bytes": 1206,
-    "sha256": "7b5460ffbadc57c8511ce4bd696e488f78e84e51cc65d72cac3c8d09032af807",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/goldensnowball_small.png": {
+    "path": "/classic-cache/e000ce120d800b94d15ef052.png",
+    "bytes": 2236,
+    "sha256": "e9c3b7810cb35d9f2ee9d306cb25b585a149c6afb65f29be1528dcdc466b235a",
     "labels": [
       "神圣雪球强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/goldrend_small.png": {
-    "path": "/classic-cache/1fc9f4d0a1b8d76740bd32c4.png",
-    "bytes": 802,
-    "sha256": "d065ea1fe0373b3641d551643df9323001240637883d4c85a1c55a0c44518c0d",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/goldrend_small.png": {
+    "path": "/classic-cache/e3293e4de20348b2799fbd8f.png",
+    "bytes": 1534,
+    "sha256": "10caea248e5d6ad729419545fe8aaf19bcdb73f3034c080c1182eb777dba307d",
     "labels": [
       "夺金强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/grandmaschilioil_small.png": {
-    "path": "/classic-cache/6cafe1a62a77cb3273e8609b.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/grandmaschilioil_small.png": {
+    "path": "/classic-cache/e7707fe9d4b638bd595dad89.png",
     "bytes": 1688,
     "sha256": "f71b8630bdd8b4bd18deeb0bde3783fad5af14d17f61abe5ac5f71bcbaa40dae",
     "labels": [
       "祖母的辣椒油强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/growthspurt_small.png": {
-    "path": "/classic-cache/3f535ce6f7b0db9195e6b02a.png",
-    "bytes": 715,
-    "sha256": "9ff1d4113d50916a3750aa18a5c651ffeba124e1e104d6591ec336bbba675fee",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/growthspurt_small.png": {
+    "path": "/classic-cache/4674096013d2d5996f042d54.png",
+    "bytes": 1410,
+    "sha256": "3ab26943da88d855c223f75ee0c1aca92b8f3229749a81aa61a83e1d2eaa280e",
     "labels": [
       "生机迸发强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/haste_makes_waste_small.png": {
-    "path": "/classic-cache/2aaef031721bb026660a7d89.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/haste_makes_waste_small.png": {
+    "path": "/classic-cache/e7ec64f3d32648c07128fd79.png",
     "bytes": 1678,
     "sha256": "5bcf01e76c31ddb4c4b9c53dd76745bc7824c9c4849ca5e2c4f8f793134dd48d",
     "labels": [
       "欲速则不达强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/hellbent_small.png": {
-    "path": "/classic-cache/a0bed0e4548e89fe9fa5d509.png",
-    "bytes": 998,
-    "sha256": "c348d24e12fe5c4b34cc16aa96dad90d02b0242e6e03920bf095b801442bbe9f",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/hellbent_small.png": {
+    "path": "/classic-cache/25ce2f4e5c41c9f49b2ca770.png",
+    "bytes": 2012,
+    "sha256": "7567826c30b83e115320e2a8a4ccc3ba7e3fc5e6daf07498c1087b408257bbfc",
     "labels": [
       "濒死悟道强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/iamthejuggernaut_small.png": {
-    "path": "/classic-cache/c4c89b6d7bbc38f5b57729e5.png",
-    "bytes": 1025,
-    "sha256": "23e42f1945d6d2c686fbecd2851246535a1e2f5fdf8785183fc5f7bf790d0b36",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/iamthejuggernaut_small.png": {
+    "path": "/classic-cache/0487547d836c06e5d2cc025b.png",
+    "bytes": 1889,
+    "sha256": "e404080d58bf1871b8124d38fe3ccf21af7caeebde57402ea35bde8a151c3129",
     "labels": [
       "泰坦的坚决强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/juiced_small.png": {
-    "path": "/classic-cache/09121e89db306fc38e83c025.png",
-    "bytes": 1014,
-    "sha256": "b4c8271ff3cd48150dc6fa8dfe298c502990138e8d2fe10fc515a80f1ed0da9e",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/juiced_small.png": {
+    "path": "/classic-cache/9bb2fc01fe30e69a12e578ec.png",
+    "bytes": 1879,
+    "sha256": "dd933abfde34633924f93def22cbffa625445b4d68650731a3bc5f90f8f4ee7d",
     "labels": [
       "注魔强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/killsecure_small.png": {
-    "path": "/classic-cache/c0d6a3e6c367e1f349a944e7.png",
-    "bytes": 776,
-    "sha256": "6e5891c37b784263f590a154a2559561202eb52318b769cda4d10ee5b27c2859",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/killsecure_small.png": {
+    "path": "/classic-cache/e0b877a2ef6e667b43a88a5f.png",
+    "bytes": 1466,
+    "sha256": "a7e13e056de20c1d43868375801ddecc52a7b3baae94d31393ab05db5b1beb7e",
     "labels": [
       "杀意翻涌强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/laseheal_small.png": {
-    "path": "/classic-cache/1aa3902ff603675881d39c33.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/laseheal_small.png": {
+    "path": "/classic-cache/787d81976a9e4c3a03fa051e.png",
     "bytes": 1605,
     "sha256": "0d4ef642fff0492a17997b04489c84f0b0fa1c2e74dd8aeedac9c3b0c0e4ee4f",
     "labels": [
       "激光治疗强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/littledevil_small.png": {
-    "path": "/classic-cache/6afd58d4dfec0ce755a7c6fb.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/littledevil_small.png": {
+    "path": "/classic-cache/92b97ebdccf573219acbe861.png",
     "bytes": 2102,
     "sha256": "545a1a37dfdd8055f196613856feb1034ad74f521f57bd85d6e2750eb36c2469",
     "labels": [
       "你肩上的恶魔强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/mightyshield_small.png": {
-    "path": "/classic-cache/3a0e1801eeab5ac21915022b.png",
-    "bytes": 1031,
-    "sha256": "4223cdb8df8baabbcf909fe16d9def7cb6b7401b7996b4a30d0752e9d771afc8",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/mightyshield_small.png": {
+    "path": "/classic-cache/c4483bc8086f9a26ad79ee8b.png",
+    "bytes": 1957,
+    "sha256": "03833724c7d4b45339ce57e8e182948ad8b10ddc264c34e7d8cc09f605d3597d",
     "labels": [
       "强力护盾强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/missingping_small.png": {
-    "path": "/classic-cache/336569f6ff2e22f79a063562.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/missingping_small.png": {
+    "path": "/classic-cache/8b79198bfae05aeb7b9c55a4.png",
     "bytes": 1843,
     "sha256": "9853b34f2224797160932b6f5634df4fd0187fca2ac96a423260339574eb182b",
     "labels": [
       "？？？强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/natureishealing_small.png": {
-    "path": "/classic-cache/b9a70bbb9c97ec284fcbad35.png",
-    "bytes": 753,
-    "sha256": "da6d4fa78c223c55cc7c920b576912c96810cd7ec25527f061f4a3212e845258",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/natureishealing_small.png": {
+    "path": "/classic-cache/e850336d97b11a651bf7d2a0.png",
+    "bytes": 1532,
+    "sha256": "1d91c59eceeaa35a6240d283429622102ccedde1881b2068d839d338c9def50e",
     "labels": [
       "自然即是治愈强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/nightstalking_small.png": {
-    "path": "/classic-cache/05d703bcafcffb59a2f3ae4b.png",
-    "bytes": 1138,
-    "sha256": "b206a06425a60e00bd6cdbdf3714a9af51bdbe47f52daea433e0d4e122530cad",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/nightstalking_small.png": {
+    "path": "/classic-cache/0e14e8e67f7719967203332d.png",
+    "bytes": 2086,
+    "sha256": "4ff9f0af63f22e73f1fe9a689b7bdb0aa6bfbee008fec112750a02d993a784a6",
     "labels": [
       "夜狩强化符文",
       "最终都市列车强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/patontheback_small.png": {
-    "path": "/classic-cache/d570d00e0c6ab36b665a9069.png",
-    "bytes": 917,
-    "sha256": "80be1e2d3b446fce0f94690801565b8a45f9ce02cf63c596e66270b13a73502f",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/patontheback_small.png": {
+    "path": "/classic-cache/f3ad8f3c97fefba6218e0162.png",
+    "bytes": 1745,
+    "sha256": "60d7a7b3307452f16eeccf20b7da9de01086663529c503db1aac5241a81c690f",
     "labels": [
       "轻拍背部强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/pinballsnowball_small.png": {
-    "path": "/classic-cache/a4a747379d9fcd9d45d0e2bb.png",
-    "bytes": 865,
-    "sha256": "c2b43447cc47e82823c0206d323a60825b2b3953625f2aac3eceeea80206518b",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/pinballsnowball_small.png": {
+    "path": "/classic-cache/76983dfc516fe102437efd7c.png",
+    "bytes": 1689,
+    "sha256": "a880002277a74fdfa09bfda42be14f2450b482db5b43f5dd93bb39c3b5c8646d",
     "labels": [
       "弹球强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/pincushion_small.png": {
-    "path": "/classic-cache/76ce53f0d7628ae31add701e.png",
-    "bytes": 847,
-    "sha256": "013ee53501bdd03f23a24c8985a2571b51df153565c4b1b6729ab4388654f91f",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/pincushion_small.png": {
+    "path": "/classic-cache/55471b1f27a42e46beafd1f7.png",
+    "bytes": 1635,
+    "sha256": "e3ba21eab4c97ce907da988d570207121335be05abf7cf0be187e319c693c809",
     "labels": [
       "豪猪强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/poltergeist_small.png": {
-    "path": "/classic-cache/75548194acb177aaee1f02c9.png",
-    "bytes": 719,
-    "sha256": "02ba124ebc46f84308c465ffda9efbdeb7961225eeb06b116e4a1b8223a25f6e",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/poltergeist_small.png": {
+    "path": "/classic-cache/aef1bcb453515342f8d0662a.png",
+    "bytes": 1241,
+    "sha256": "cf3278460e97342fcbe912c720bf76d58f2352985434258e4fd3c2ee9bf5bf54",
     "labels": [
       "防护面纱强化符文",
       "吵闹鬼强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/poroblast_small.png": {
-    "path": "/classic-cache/3f8d9681d375f449c50fd5b4.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/poroblast_small.png": {
+    "path": "/classic-cache/6c2d3c3bc49929626032222f.png",
     "bytes": 2493,
     "sha256": "8dcdf9b9740ab7b3eab84f1976f5569619572c5204f1ff60f76e03f10fe904fe",
     "labels": [
       "魄罗爆破手强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/poroking_small.png": {
-    "path": "/classic-cache/357f936708a1f897176d0708.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/poroking_small.png": {
+    "path": "/classic-cache/4969b06488f5715e2ce742f7.png",
     "bytes": 2318,
     "sha256": "609f869487d238d2cfd7b79fb26f3d8360ad79b258757848c1e793899a320823",
     "labels": [
       "魄罗之王的弹跳强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/promqueen_small.png": {
-    "path": "/classic-cache/f66588d7305705e657141720.png",
-    "bytes": 848,
-    "sha256": "508f330bda147f6f01970f407ef07c90fbe7c987062b5fea371e3064b93d9355",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/promqueen_small.png": {
+    "path": "/classic-cache/b4d424991d0962666e826f49.png",
+    "bytes": 1784,
+    "sha256": "fb3611c964be0096a99c9032a7e057760d490b9e8d82d8fb9b6a8c91d893c4a1",
     "labels": [
       "舞会女王强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/proteinshake_small.png": {
-    "path": "/classic-cache/d6388867d364c7e4986391df.png",
-    "bytes": 980,
-    "sha256": "a8d08dac20c1145b91ca6ebc4234c3baeedc4b5bc01ba116246a88733e061092",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/proteinshake_small.png": {
+    "path": "/classic-cache/b5522cacd1541c9d5e0d9d03.png",
+    "bytes": 1800,
+    "sha256": "7a7b6b50335bc7f6b16f43944e43338a3df596744ebc54df0c2a31c5838f6834",
     "labels": [
       "蛋白粉奶昔强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/questbangbang_small.png": {
-    "path": "/classic-cache/46a899dcda519d297451ea5d.png",
-    "bytes": 823,
-    "sha256": "d4571a1e597869b60bd78f3b76b308b8ac457a7ea5910a636e9166ab4b6bc952",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/questbangbang_small.png": {
+    "path": "/classic-cache/78f4b73f8993fa6f42914ee2.png",
+    "bytes": 1579,
+    "sha256": "d0bb4a7c092e05656b80bd11a736b92acf161d5853e123fb394b511c4b7887ee",
     "labels": [
       "狙神飞星强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/questburstingteeth_small.png": {
-    "path": "/classic-cache/d9b10ccb77e5756ca558601c.png",
-    "bytes": 892,
-    "sha256": "0d63ee699516a8304a2c9676f9696223f8c23f4a2e2921b008e0c72dc581acb9",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/questburstingteeth_small.png": {
+    "path": "/classic-cache/040b68d855e04e704d5e72d3.png",
+    "bytes": 1762,
+    "sha256": "596007d533e4b9458e970fbccb3af4b4ac84568e5523c984275f270812d39026",
     "labels": [
       "牙仙子强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/questpressurecooker_small.png": {
-    "path": "/classic-cache/bc1dc453611f8a94aa896c18.png",
-    "bytes": 793,
-    "sha256": "19ea4e86b6c8adbe64616ba458045d6bfa9ad41df5833ad6b642e4c416c75bea",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/questpressurecooker_small.png": {
+    "path": "/classic-cache/b2b3c068821c6d0eaaaf3536.png",
+    "bytes": 1568,
+    "sha256": "d115fad6cf1e7019cb12b51aa7dcdfd90f4456e4ce879199c88a6b316caf8e2f",
     "labels": [
       "高压锅强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/sharktempest_small.png": {
-    "path": "/classic-cache/265cd804c8599f6ed6c182a7.png",
-    "bytes": 830,
-    "sha256": "9d4050b8c88bdf09e51cc084afcf72c6f26692a81631b8229e7dd90559900422",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/sharktempest_small.png": {
+    "path": "/classic-cache/11ffdb32f7988042e3cbe2fe.png",
+    "bytes": 1725,
+    "sha256": "c1eede8ef18fc0270f99698a93ce40ef742222bbc8e002263df1fe69ebda50ab",
     "labels": [
       "鲨鱼暴风强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/snowballupgrade_small.png": {
-    "path": "/classic-cache/b2b5a69959273a0d25cd667e.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/snowballupgrade_small.png": {
+    "path": "/classic-cache/bd641961d77b22e81e0c3b40.png",
     "bytes": 1495,
     "sha256": "96419517c3e16112b8c7a4809b063a85b36ae13677a292490aba92fdddda5e42",
     "labels": [
@@ -14499,48 +14499,48 @@ export const classicAssetAudit = {
       "雪球扭蛋机强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/snowbomb_small.png": {
-    "path": "/classic-cache/df16441eb737e613e2da7237.png",
-    "bytes": 808,
-    "sha256": "78dff20b81aa3019f0e84b9c98f6d606f20b3e409fe77af1f7c2d0a95eef6fc9",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/snowbomb_small.png": {
+    "path": "/classic-cache/8131280345f770601e454387.png",
+    "bytes": 1495,
+    "sha256": "96419517c3e16112b8c7a4809b063a85b36ae13677a292490aba92fdddda5e42",
     "labels": [
       "冰雪爆裂强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/snowday_small.png": {
-    "path": "/classic-cache/880e8283e2188a2ec60b0a22.png",
-    "bytes": 808,
-    "sha256": "78dff20b81aa3019f0e84b9c98f6d606f20b3e409fe77af1f7c2d0a95eef6fc9",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/snowday_small.png": {
+    "path": "/classic-cache/b76e031e339e2e78fefefac6.png",
+    "bytes": 1495,
+    "sha256": "96419517c3e16112b8c7a4809b063a85b36ae13677a292490aba92fdddda5e42",
     "labels": [
       "下雪天强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/sonata_small.png": {
-    "path": "/classic-cache/37c3daba2ce9f46c98474a89.png",
-    "bytes": 929,
-    "sha256": "09afe45869f91cbc252ab2b9f475628451813678b6353a101fe469369adbd74f",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/sonata_small.png": {
+    "path": "/classic-cache/4869a6fc72eaf553adca4a63.png",
+    "bytes": 1712,
+    "sha256": "00bb05cacdeeb40447c904489e315ff1dbf7f0aeec1716adb97bca5eb032b0dd",
     "labels": [
       "咏叹奏鸣强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/souleater_small.png": {
-    "path": "/classic-cache/17e9e7637bf1f179dc012b8e.png",
-    "bytes": 808,
-    "sha256": "fc706b329d1adc51fb26a6a587ee5ca8b8bcf461af5e10fce801b60be051891d",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/souleater_small.png": {
+    "path": "/classic-cache/14a438d496b698795b918260.png",
+    "bytes": 1592,
+    "sha256": "54454137a6c357f66836d20259daadc6d4a157138a5418aeb99743e84bc52aa5",
     "labels": [
       "吞噬灵魂强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/spiritbomb_small.png": {
-    "path": "/classic-cache/3a5d275c6e658d07f8a691f9.png",
-    "bytes": 934,
-    "sha256": "ea8093efc3318dc452df8899ed4b1068e5ac60131df365e058ef86db9a7943ae",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/spiritbomb_small.png": {
+    "path": "/classic-cache/0c20b74afb04b71de45c2047.png",
+    "bytes": 1776,
+    "sha256": "5c2892e24ccfe667fb6b397955b78866c52413d686406e342b6170a6bc70c812",
     "labels": [
       "灵魄炸弹强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/spiritualpurification_small.png": {
-    "path": "/classic-cache/f794918f2d4a3d03218f5d8c.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/spiritualpurification_small.png": {
+    "path": "/classic-cache/ccc2db930b5636d81c82e87b.png",
     "bytes": 2211,
     "sha256": "ee3c06b6c11fc41b95d8ab8b175f2ca325384d9f05224997079469757b79b5b8",
     "labels": [
@@ -14548,16 +14548,16 @@ export const classicAssetAudit = {
       "主玩打野之精魄强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/squishyslappygrab_small.png": {
-    "path": "/classic-cache/f5c8e6b64f401cb2e0d26f83.png",
-    "bytes": 806,
-    "sha256": "0681a37b3cce778d49ad6647dd2ec62915198b078fc0f78f14eba2fa38218a9c",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/squishyslappygrab_small.png": {
+    "path": "/classic-cache/e147966f8552a2a1a874808e.png",
+    "bytes": 1576,
+    "sha256": "172d4bcec308609b5712aca5855b97f14bf526b83f2e66aa523e338bb665bbe8",
     "labels": [
       "软弹啪叽抓强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/stabby_stabby_small.png": {
-    "path": "/classic-cache/1fa0e7e626cf6dac68e6bc86.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/stabby_stabby_small.png": {
+    "path": "/classic-cache/5cbb86e5d73cfa492944480d.png",
     "bytes": 1678,
     "sha256": "5bcf01e76c31ddb4c4b9c53dd76745bc7824c9c4849ca5e2c4f8f793134dd48d",
     "labels": [
@@ -14566,98 +14566,98 @@ export const classicAssetAudit = {
       "召唤师的游猎强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/swiftandsafe_small.png": {
-    "path": "/classic-cache/66434f792219b3638628ec54.png",
-    "bytes": 655,
-    "sha256": "6053413dbe3bb1e286f2e56e69172d585e363bd525459118caa088e41b216617",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/swiftandsafe_small.png": {
+    "path": "/classic-cache/7c2a012aabe1e784cd5f79f3.png",
+    "bytes": 1193,
+    "sha256": "5ff8db8013f5889a79ee1c46e1c4e4ce34e6dd78111a3fabde81ac9de27194a2",
     "labels": [
       "快中求稳强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/twinfire_small.png": {
-    "path": "/classic-cache/2f39d9c33a32ba108fe5772c.png",
-    "bytes": 956,
-    "sha256": "355e9c24c72f8ca94a60815f1d6f6daf577cb82ecef201de47f3d5047e3b3c5d",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/twinfire_small.png": {
+    "path": "/classic-cache/822797f2dc9a4fe8e44a3aaa.png",
+    "bytes": 1766,
+    "sha256": "1a48aed46411048ab837f498996189c4156acdc355f2cdafa0c27293a689929f",
     "labels": [
       "双生火焰强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/upgrade_deathfire_small.png": {
-    "path": "/classic-cache/90004f7f1136ba3c675f61c7.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/upgrade_deathfire_small.png": {
+    "path": "/classic-cache/bf4da5f364b904c9aba6fb90.png",
     "bytes": 1790,
     "sha256": "239fb14df64f2918a974cf9188b4e23b0ec86becd4db867441a831ffbcc2737e",
     "labels": [
       "升级：冥火之拥强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/upgrade_innervating_small.png": {
-    "path": "/classic-cache/a4e085f195a3c8ec9c7d8537.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/upgrade_innervating_small.png": {
+    "path": "/classic-cache/11d263ba628bb753a791215f.png",
     "bytes": 1736,
     "sha256": "d1cbf6be4c0a85f308cc01659d5a3f06487358a0e1d777cab2563bb0405c43a8",
     "labels": [
       "升级：激发之匣强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/upgrade_zzrotportal_small.png": {
-    "path": "/classic-cache/c4bb11038c99b36292b6e5af.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/upgrade_zzrotportal_small.png": {
+    "path": "/classic-cache/eeafaf537ddf1502cfa8108c.png",
     "bytes": 1863,
     "sha256": "e5bde00837d470336bba68be3d7bed93c500083a4826eb7ca386ce579c070050",
     "labels": [
       "升级：兹若特传送门强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/upgradehubris_small.png": {
-    "path": "/classic-cache/16bb51fa1daeb2b206a29824.png",
-    "bytes": 802,
-    "sha256": "d065ea1fe0373b3641d551643df9323001240637883d4c85a1c55a0c44518c0d",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/upgradehubris_small.png": {
+    "path": "/classic-cache/b2675824bbad4aae4567be45.png",
+    "bytes": 1534,
+    "sha256": "10caea248e5d6ad729419545fe8aaf19bcdb73f3034c080c1182eb777dba307d",
     "labels": [
       "贪欲束缚强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/vampired_small.png": {
-    "path": "/classic-cache/192308a9c27a873de8e70b1e.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/vampired_small.png": {
+    "path": "/classic-cache/98517e3dac06ef9afd704150.png",
     "bytes": 1696,
     "sha256": "bac001fb691d071e0236e662684fbb8105eae296d9e3730087ce798113f9c8b6",
     "labels": [
       "吸血习性强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/warlockjuicebox_small.png": {
-    "path": "/classic-cache/3e227f8189079a11cbe62a16.png",
-    "bytes": 832,
-    "sha256": "785aa7673a6296038ca44ae9919fa17ff86ae96f1f08af2e9e70e38ddde50342",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/warlockjuicebox_small.png": {
+    "path": "/classic-cache/74f2aabf1914ce2e56584304.png",
+    "bytes": 1605,
+    "sha256": "0d4ef642fff0492a17997b04489c84f0b0fa1c2e74dd8aeedac9c3b0c0e4ee4f",
     "labels": [
       "术士果汁盒强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/weewooweewoo_small.png": {
-    "path": "/classic-cache/05c8d86a482402604584245e.png",
-    "bytes": 727,
-    "sha256": "236714815964fccaf01a443f3f9f5a8f1dae79960f37478264a40ab54ed071be",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/weewooweewoo_small.png": {
+    "path": "/classic-cache/458174007d9a7389cb4f60c4.png",
+    "bytes": 1369,
+    "sha256": "47ba26b96a7856920268e509301a4de5c0e0d0610aeb19f29a676dee87d838ae",
     "labels": [
       "喂呜喂呜强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/whenthedarknesscomes_small.png": {
-    "path": "/classic-cache/7edcdf78d660f65193016e4d.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/whenthedarknesscomes_small.png": {
+    "path": "/classic-cache/8e388b582d2f440236a057da.png",
     "bytes": 1710,
     "sha256": "4b9fcd4786915bf6789c1fbfb75ae7e2104cfb5c3c0e81ee084aa49d647a77f0",
     "labels": [
       "位面转移强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/youchmycoins_small.png": {
-    "path": "/classic-cache/d09b0e5b6af198250320f6f8.png",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/youchmycoins_small.png": {
+    "path": "/classic-cache/fdd5af6a8fedf8aceab5fcdd.png",
     "bytes": 2049,
     "sha256": "178003500da3a8c4f4d2b292ef2984d5c1de679999fdc65c03690f583f99c3d9",
     "labels": [
       "哎哟，我的硬币！强化符文"
     ]
   },
-  "https://raw.communitydragon.org/16.22/game/assets/ux/kiwi/augments/icons/zealot_small.png": {
-    "path": "/classic-cache/7f5e5404d77cb9892bcf0f05.png",
-    "bytes": 956,
-    "sha256": "355e9c24c72f8ca94a60815f1d6f6daf577cb82ecef201de47f3d5047e3b3c5d",
+  "https://raw.communitydragon.org/16.23/game/assets/ux/kiwi/augments/icons/zealot_small.png": {
+    "path": "/classic-cache/3d65200569df210cefa7af3a.png",
+    "bytes": 1766,
+    "sha256": "1a48aed46411048ab837f498996189c4156acdc355f2cdafa0c27293a689929f",
     "labels": [
       "狂热者强化符文"
     ]
