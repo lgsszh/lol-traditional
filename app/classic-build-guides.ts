@@ -461,6 +461,20 @@ const specialProfiles: Partial<Record<ClassicChampion["key"], GuideProfile[]>> =
 
 function safeProfile(champion: ClassicChampion): GuideProfile {
   const archetype = champion.archetype;
+  if (["Urgot", "Udyr", "Talon", "Xerath"].includes(champion.key)) {
+    const reviewed = researchedProfiles[champion.key]![0];
+    const defensiveLastItem = { Urgot: "773026", Udyr: "773083", Talon: "773156", Xerath: "773026" }[champion.key as "Urgot" | "Udyr" | "Talon" | "Xerath"];
+    return {
+      ...reviewed,
+      id: "sustain",
+      name: "历史核心／防御容错",
+      style: "历史路线／防御适配",
+      summary: "保留已核对的历史核心，末格改为针对性生存装备；这是本站容错适配，不代表原攻略的完整六格。",
+      opening: champion.lane === "打野" ? openingByArchetype.jungler : sustainOpeningByArchetype[archetype],
+      coreItems: [...reviewed.coreItems.slice(0, 5), defensiveLastItem],
+      sourceNote: `${reviewed.sourceNote} 本容错方案的续航开局与末格防装为本站独立适配，不冒充原文推荐。`,
+    };
+  }
   return {
     id: "sustain",
     name: champion.lane === "打野" ? "稳健发育" : "续航抗压",
@@ -556,6 +570,41 @@ function createVariant(
 }
 
 const primaryOverrides: Partial<Record<ClassicChampion["key"], Partial<GuideProfile>>> = {
+  Urgot: {
+    ...researchedProfiles.Urgot![0],
+    id: "primary",
+    name: "下路技能穿甲",
+    style: "技能AD／穿甲",
+    opening: openingByArchetype.fighter,
+    spells: laneSpells.下路,
+    sourceNote: `${researchedProfiles.Urgot![0].sourceNote} 本默认方案改用多兰之刃开局与治疗术，属于站内对线适配。`,
+  },
+  Udyr: {
+    ...researchedProfiles.Udyr![0],
+    id: "primary",
+    name: "凤凰前排打野",
+    style: "火凤／团队承伤",
+    coreItems: [...researchedProfiles.Udyr![0].coreItems.slice(0, 5), "773065"],
+    sourceNote: `${researchedProfiles.Udyr![0].sourceNote} 本默认方案末格改振奋盔甲，为站内针对魔法伤害的承伤适配。`,
+  },
+  Talon: {
+    ...researchedProfiles.Talon![0],
+    id: "primary",
+    name: "中路穿甲续航",
+    style: "物理刺客／续航开局",
+    opening: sustainOpeningByArchetype.fighter,
+    masteryPreset: "攻击 21 / 防御 9",
+    sourceNote: `${researchedProfiles.Talon![0].sourceNote} 本默认方案采用水晶瓶续航与防御副系，为站内对线适配。`,
+  },
+  Xerath: {
+    ...researchedProfiles.Xerath![0],
+    id: "primary",
+    name: "中路法强炮台",
+    style: "AP炮台／多兰开局",
+    opening: openingByArchetype.mage,
+    spells: laneSpells.中路,
+    sourceNote: `${researchedProfiles.Xerath![0].sourceNote} 本默认方案采用多兰戒开局与点燃，为站内对线适配。`,
+  },
   Karma: {
     name: "折扇团队保护",
     style: "护盾／团队主动装",

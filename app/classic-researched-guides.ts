@@ -78,6 +78,67 @@ function adaptedClassicProfile(
 }
 
 export const researchedProfiles: Partial<Record<ClassicChampion["key"], ResearchedProfile[]>> = {
+  Urgot: [{
+    ...adaptedClassicProfile(
+      "魔宗黑切酸蚀压制", "下路", "fighter",
+      ["773158", "773004", "773071", "773110", "773156", "773035"], ["Q", "E", "W"],
+      "unstoppable-urgot-quick-guide-to-urgot-329263",
+      ["诺克萨斯腐蚀电荷命中后，用酸蚀猎手锁定消耗；优先补女神之泪，保留法力和退路，不按普通暴击射手持续站桩。", "残暴之力转黑切，冰川护甲过渡冰心，利用恐怖电容护盾与减速维持追击距离；没有腐蚀标记时避免盲追。", "团战前远程消耗，位置转换器只换落单或队友能接住的目标；先检查自己和敌人的换位落点，不把敌方开团者送进己方后排。"],
+    ),
+    opening: [g("771036"), g("772003", 2)],
+    early: [g("773070"), g("771001"), g("773134"), g("773024")],
+    situationalItems: ["773047", "773111", "773102", "773143"],
+    spells: ["74", "714"],
+    sourceNote: "TROLLing1999 的 UNSTOPPABLE URGOt 原页标明更新于 2013-10-25；正文明确这是下路技能型反核心，而非攻速暴击射手。完整示例为明朗鞋、黑切、魔切、冰心、玛莫与轻语，并说明 E 标记接锁定 Q、护盾减速和大招换位。当前 Classic 目录只有魔宗，本站以 773004 承接原文叠层前路线，不声称提供魔切及其效果；其余装备按目录映射。符文、合法 30 点天赋、475 金内出门、四档回城、完整加点及召唤师为站内适配，非原文逐格复刻或 OP.GG 统计；顶部现代技能卡与旧文数值不作为当前数值来源。",
+  }],
+  Udyr: [{
+    ...adaptedClassicProfile(
+      "凤凰魔像冰拳打野", "打野", "tank",
+      ["773009", "773207", "773190", "773025", "773068", "773091"], ["R", "W", "E", "Q"],
+      "s3-udyr-flight-of-the-phoenix-jungle-208007",
+      ["清野前开灵龟护盾，再切火凤用普攻触发范围伤害；巨熊姿态接近并晕住目标，留意姿态共用冷却。", "魔像、烈阳与冰拳提供承伤和团队作用，智慧末刃支持火凤普攻触发；切入前先确认队友距离，不把凤凰路线当纯攻击力打野。", "用巨熊限制不同目标，火凤持续输出、灵龟承伤续航；经典四姿态均需花点，不使用现代觉醒或冰霜风暴机制。"],
+    ),
+    runePreset: { mark: "mark-as", seal: "seal-armor", glyph: "glyph-mr-scaling", quint: "quint-move" },
+    runeSummary: "攻击速度印记×9／护甲符印×9／成长魔法抗性雕纹×9／移动速度精华×3",
+    masteryPreset: "防御 21 / 通用 9",
+    early: [g("771080"), g("771001"), g("773105")],
+    situationalItems: ["773065", "773143", "773110", "773083"],
+    sourceUrls: [
+      "https://www.mobafire.com/league-of-legends/build/s3-udyr-flight-of-the-phoenix-jungle-208007",
+      "https://www.mobafire.com/classic",
+    ],
+    sourceNote: "jacksonecac 的 Flight of the Phoenix 在 Mobafire Classic 目录记录更新于 2013-10-02，原文亦保留 9/1/13 的复核记录。S3 Standard 明列轻灵鞋、远古魔像、烈阳、冰拳、日炎、智慧末刃六格，附魔不另占格；正文明确四个普通姿态共享 18 个技能点、火凤一级可点并优先升满，且以灵龟／火凤轮换清野、巨熊抓人。本站采用该凤凰路线，不混入另一套猛虎出装；装备与攻速／护甲／成长魔抗／移速符文映射到当前目录。合法 30 点天赋、出门预算、回城分档、完整四姿态加点及召唤师为站内适配，非原文逐级复刻或 OP.GG 统计；动态现代卡片与旧数值不作当前数值来源。",
+  }],
+  Talon: [{
+    ...adaptedClassicProfile(
+      "黑切饮血沉默刺杀", "中路", "fighter",
+      ["773111", "773071", "773072", "773078", "773035", "773026"], ["W", "Q", "E"],
+      "pubstomping-with-talon-updated-for-s3-266143",
+      ["斩草除根兼顾补刀和消耗，控制法力；割喉之战瞬移沉默后穿插普攻，再用刺客诡道重置普攻，不把 E 当翻墙技能。", "残暴转黑切并补饮血，确认敌方位置后推线游走；按护甲选择轻语，技能冷却期间不要停在敌人阵型内。", "等待敌方关键控制交出再接近脆弱目标，暗影突袭兼顾往返刀刃与隐身撤离；守护天使不能替代进场时机。"],
+    ),
+    opening: [g("771036"), g("772003", 2)],
+    early: [g("773134"), g("771001"), g("771053")],
+    masteryPreset: "攻击 21 / 通用 9",
+    situationalItems: ["773158", "773156", "773143"],
+    sourceUrls: [
+      "https://www.mobafire.com/league-of-legends/build/pubstomping-with-talon-updated-for-s3-266143",
+      "https://www.mobafire.com/league-of-legends/champion/talon-82?page=38",
+    ],
+    sourceNote: "Halfwaycroox 的 Pubstomping with Talon 在 Mobafire 英雄目录记录更新于 2013-07-03。原文装备序列及正文支持水银鞋、饮血、黑切、轻语、守护天使与后期三相，本站去掉被合成的残暴／耀光及附魔后组成六格；正文明确主 W 副 Q、E 瞬移沉默和 Q 重置普攻、R 隐身。装备 ID 按当前 Classic 目录映射；符文、合法 30 点天赋、出门预算、四档回城、完整加点及召唤师为站内适配，不代表原文逐项配置或 OP.GG 统计；顶部现代翻墙卡片和旧数值不作当前数值来源。",
+  }],
+  Xerath: [{
+    ...adaptedClassicProfile(
+      "圣杯冰杖定身炮台", "中路", "mage",
+      ["773158", "773089", "773116", "773174", "773157", "773135"], ["Q", "W", "E"],
+      "enigmatic-annihilation-a-comprehensive-xerath-guide-199469",
+      ["用奥能脉冲补刀和消耗，开启能量之座前先确认侧翼安全；法师锁链标记后需再接伤害技能触发眩晕。", "圣杯维持蓝量，帽子与冰杖提高炮台作用；在队友保护范围内架设能量之座，危险接近时及时解除定身撤退。", "利用旧版奥术弹幕的连续三次范围轰击压制目标，沙漏应对突进；这不是现代充能 Q、W 范围减速或远距多发引导大招。"],
+    ),
+    early: [g("771001"), g("773028"), g("771058")],
+    masteryPreset: "攻击 21 / 通用 9",
+    spells: ["74", "71"],
+    situationalItems: ["773020", "773111", "773102"],
+    sourceNote: "CasterMaster 的 Enigmatic Annihilation 正文标明最后更新于 2013-10-29，并保留 2013-01-06 的 S3 与 07-12 的装备修订日志。Final Build 明列明朗鞋、帽子、冰杖、Athene's Unholy Grail、沙漏与虚空；历史圣杯按当前 Classic 映射为 773174（Shushei的法力壶）。正文保留 W 能量之座自我定身增射程、E 标记接技能眩晕、R 三次奥术弹幕，并主 Q 副 W。符文、合法 30 点天赋、出门预算、四档回城、完整加点与召唤师为站内适配，非原文逐格复刻或 OP.GG 统计；顶部现代技能卡及旧数值不作当前数值来源。",
+  }],
   Swain: [{
     ...adaptedClassicProfile(
       "时光沙漏群鸦法坦", "中路", "mage",

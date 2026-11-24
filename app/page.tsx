@@ -811,14 +811,16 @@ export default function Home() {
       showToast("经典卡尔玛的梵咒在 1 级自动获得，不消耗技能点");
       return;
     }
-    if (skill === "R" && ![6, 11, 16].includes(level)) {
+    if (skill === "R" && rules.ultimate === "standard" && ![6, 11, 16].includes(level)) {
       showToast("经典规则：终极技能只能在 6、11、16 级学习");
       return;
     }
     setSkillPlan((current) => {
       const next = current.map((entry, index) => index === levelIndex ? skill : entry);
       if (!isValidSkillPlan(next, selectedChampion)) {
-        showToast(`加点须满足等级限制：Q/W/E 最多 ${rules.basicMaxRank} 点${rules.ultimate === "innate" ? "，R 自动获得" : "，R 在 6/11/16 级学习"}`);
+        showToast(rules.ultimate === "stance"
+          ? `四姿态均可从1级学习，每姿态最多 ${rules.basicMaxRank} 点，每两级解锁下一阶；总共18次加点`
+          : `加点须满足等级限制：Q/W/E 最多 ${rules.basicMaxRank} 点${rules.ultimate === "innate" ? "，R 自动获得" : "，R 在 6/11/16 级学习"}`);
         return current;
       }
       return next;
@@ -1423,7 +1425,7 @@ export default function Home() {
                       <span><b>符文</b>{selectedGuide.runeSummary}</span>
                       <span><b>天赋</b>{selectedGuide.masteryPreset}</span>
                       <span><b>召唤师技能</b>{selectedGuide.spellIds.map((id) => classicSpells.find((spell) => spell.id === id)?.name).join(" + ")}</span>
-                      <span><b>加点</b>{selectedGuide.skillOrder[0]} → {selectedGuide.skillOrder[1]} → {selectedGuide.skillOrder[2]}（{classicSkillRulesFor(selectedChampion).ultimate === "innate" ? "Q/W/E 各六级，R 自动获得" : "R 优先"}）</span>
+                      <span><b>加点</b>{selectedGuide.skillOrder.join(" → ")}（{classicSkillRulesFor(selectedChampion).ultimate === "stance" ? "四姿态普通技能，各最多五级" : classicSkillRulesFor(selectedChampion).ultimate === "innate" ? "Q/W/E 各六级，R 自动获得" : "R 优先"}）</span>
                     </div>
                   </div>
                   <div className="opening-groups">
@@ -1571,6 +1573,7 @@ export default function Home() {
                   ))}
                 </div>
                 {classicSkillRulesFor(selectedChampion).ultimate === "innate" && <p className="selector-hint">经典卡尔玛：Q/W/E 各可升至 6 级；R 在 1 级自动获得，不消耗技能点。此规则不用于现代怀旧海斗。</p>}
+                {classicSkillRulesFor(selectedChampion).ultimate === "stance" && <p className="selector-hint">经典乌迪尔：Q/W/E/R 都是普通姿态，可从 1 级学习，每姿态最多 5 级，共投入 18 点；R 不受 6/11/16 级限制。此为 S3 历史加点规则，不用于现代怀旧海斗。</p>}
               </section>
 
               <section className="build-section">

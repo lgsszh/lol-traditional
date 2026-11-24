@@ -10,6 +10,7 @@ export const CLASSIC_PATCH = catalogAsset[2];
 export const CLASSIC_ASSET_BASE = catalogAsset[1];
 
 export type ChampionArchetype = "mage" | "fighter" | "jungler" | "marksman" | "tank" | "support";
+export type ClassicSkillKey = "Q" | "W" | "E" | "R";
 
 export type ClassicChampion = {
   classicId: string;
@@ -21,8 +22,8 @@ export type ClassicChampion = {
   role: string;
   archetype: ChampionArchetype;
   accent: string;
-  spellOrder: ["Q" | "W" | "E", "Q" | "W" | "E", "Q" | "W" | "E"];
-  skillRules?: { basicMaxRank: 5 | 6; ultimate: "standard" | "innate" };
+  spellOrder: ["Q" | "W" | "E", "Q" | "W" | "E", "Q" | "W" | "E"] | [ClassicSkillKey, ClassicSkillKey, ClassicSkillKey, ClassicSkillKey];
+  skillRules?: { basicMaxRank: 5 | 6; ultimate: "standard" | "innate" | "stance" };
 };
 
 export const championAliases: Record<string, string[]> = {
@@ -239,6 +240,10 @@ export const classicChampions: ClassicChampion[] = [
   champion("60050", "Swain", "斯维因", "策士统领", "中路", "法师", "mage", "#a36478", ["E", "Q", "W"]),
   champion("60060", "Elise", "伊莉丝", "蜘蛛女皇", "中路", "法师", "mage", "#b7586b", ["Q", "W", "E"]),
   champion("60106", "Volibear", "沃利贝尔", "雷霆咆哮", "上路", "战士", "tank", "#80aabe", ["W", "Q", "E"]),
+  champion("60006", "Urgot", "厄加特", "首领之傲", "下路", "射手", "fighter", "#8d9f72", ["Q", "E", "W"]),
+  { ...champion("60077", "Udyr", "乌迪尔", "野兽之灵", "打野", "战士", "tank", "#c39458", ["R", "W", "E", "Q"]), skillRules: { basicMaxRank: 5, ultimate: "stance" } },
+  champion("60091", "Talon", "泰隆", "刀锋之影", "中路", "刺客", "fighter", "#8298ba", ["W", "Q", "E"]),
+  champion("60101", "Xerath", "泽拉斯", "远古巫灵", "中路", "法师", "mage", "#65b8d4", ["Q", "W", "E"]),
 ];
 
 export const championIcon = (champion: ClassicChampion) =>
@@ -575,6 +580,10 @@ export const classicSkillRulesFor = (champion?: ClassicChampion) =>
 
 export const skillPlanFor = (order: ClassicChampion["spellOrder"], champion?: ClassicChampion) => {
   const rules = classicSkillRulesFor(champion);
+  const expectedKeys = rules.ultimate === "stance" ? ["Q", "W", "E", "R"] : ["Q", "W", "E"];
+  if (order.length !== expectedKeys.length || new Set(order).size !== expectedKeys.length || expectedKeys.some(key => !order.some(candidate => candidate === key))) {
+    throw new Error("技能优先级必须包含该英雄可加点的全部技能且不能重复");
+  }
   const counts: Record<string, number> = { Q: 0, W: 0, E: 0, R: 0 };
   return Array.from({ length: 18 }, (_, index) => {
     const level = index + 1;
@@ -592,7 +601,7 @@ export function isValidSkillPlan(value: unknown, champion?: ClassicChampion): va
   const counts: Record<string, number> = { Q: 0, W: 0, E: 0, R: 0 };
   return value.every((skill, index) => {
     counts[skill] += 1;
-    if (skill === "R") return rules.ultimate === "standard" && [6, 11, 16].includes(index + 1) && counts.R <= 3;
+    if (skill === "R" && rules.ultimate !== "stance") return rules.ultimate === "standard" && [6, 11, 16].includes(index + 1) && counts.R <= 3;
     return counts[skill] <= Math.min(rules.basicMaxRank, Math.ceil((index + 1) / 2));
   });
 }

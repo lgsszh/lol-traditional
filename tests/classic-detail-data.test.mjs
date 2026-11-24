@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
-import { classicChampions, classicRuneGroups, masteryPresets } from "../app/classic-data.ts";
+import { classicChampions, classicRuneGroups, masteryPresets, skillPlanFor, isValidSkillPlan } from "../app/classic-data.ts";
 import { classicItems } from "../app/classic-items.generated.ts";
 import { classicItemRecipes } from "../app/classic-item-recipes.generated.ts";
 import { classicChampionSkills } from "../app/classic-skills.generated.ts";
@@ -102,13 +102,54 @@ test("16.22 新增三英雄身份、完整技能与有来源的三套方案齐�
     Elise: ["60060", "伊莉丝", "蜘蛛女皇"],
     Volibear: ["60106", "沃利贝尔", "雷霆咆哮"],
   };
-  assert.equal(classicChampions.length, 84);
+  assert.ok(classicChampions.length >= 84);
   for (const [key, [id, name, title]] of Object.entries(additions)) {
     const champion = classicChampions.find(entry => entry.key === key);
     assert.deepEqual([champion?.classicId, champion?.name, champion?.title], [id, name, title]);
     assert.equal(classicChampionSkills.find(entry => entry.championId === id)?.abilities.length, 5);
     assert.ok(classicBuildGuides[id]?.length >= 3, `${key} 缺少三套合法方案`);
     assert.ok(classicBuildGuides[id].some(guide => guide.sourceUrls.some(url => url.includes("mobafire.com"))), `${key} 缺少历史社区来源`);
+  }
+});
+
+test("16.23 新增四英雄身份、历史方案与编辑默认均避免不适用模板", () => {
+  const additions = {
+    Urgot: ["60006", "厄加特", "首领之傲", "下路", "fighter"],
+    Udyr: ["60077", "乌迪尔", "野兽之灵", "打野", "tank"],
+    Talon: ["60091", "泰隆", "刀锋之影", "中路", "fighter"],
+    Xerath: ["60101", "泽拉斯", "远古巫灵", "中路", "mage"],
+  };
+  assert.equal(classicChampions.length, 88);
+  for (const [key, [id, name, title, lane, archetype]] of Object.entries(additions)) {
+    const champion = classicChampions.find(entry => entry.key === key);
+    assert.deepEqual([champion?.classicId, champion?.name, champion?.title, champion?.lane, champion?.archetype], [id, name, title, lane, archetype]);
+    const guides = classicBuildGuides[id];
+    assert.equal(guides.length, 3);
+    assert.equal(classicChampionSkills.find(entry => entry.championId === id)?.abilities.length, 5);
+    assert.equal(new Set(guides.map(guide => JSON.stringify([guide.coreItems, guide.startingItems, guide.spellIds, guide.masteryPreset]))).size, 3, `${key} 不能只是改名复制方案`);
+    for (const guide of guides) {
+      assert.equal(guide.lane, lane);
+      assert.equal(guide.runeArchetype, archetype);
+      assert.ok(guide.sourceUrls.some(url => url.includes("mobafire.com")));
+      assert.match(guide.sourceNote, /站内适配|本站.*适配/);
+      assert.equal(isValidSkillPlan(skillPlanFor(guide.skillOrder, champion), champion), true);
+      if (key === "Udyr") {
+        assert.ok(guide.startingItems.some(item => item.itemId === "771039"));
+        assert.ok(guide.coreItems.includes("773207"));
+        assert.ok(guide.spellIds.includes("711"));
+        assert.deepEqual(guide.skillOrder, ["R", "W", "E", "Q"]);
+        assert.equal(skillPlanFor(guide.skillOrder, champion).filter(skill => skill === "R").length, 5);
+        assert.ok(!guide.coreItems.includes("773209"), "凤凰不应使用蜥蜴长老AD模板");
+      } else if (key === "Urgot") {
+        assert.ok(["773004", "773071", "773110"].every(itemId => guide.coreItems.includes(itemId)));
+        assert.ok(!guide.coreItems.includes("773031"), "技能型厄加特不能套无尽暴击模板");
+      } else if (key === "Talon") {
+        assert.ok(["773071", "773072"].every(itemId => guide.coreItems.includes(itemId)));
+        assert.ok(!guide.coreItems.includes("773089"), "泰隆不得套AP模板");
+      } else {
+        assert.ok(["773089", "773174", "773157"].every(itemId => guide.coreItems.includes(itemId)));
+      }
+    }
   }
 });
 
@@ -179,6 +220,7 @@ test("全部英雄均提供至少三套完整经典玩法、回城路线和合�
       assert.equal(guide.buildPhases.length, 3, `${champion.name} ${guide.name}缺少前中后期出装阶段`);
       assert.equal(guide.gamePlan.length, 3, `${champion.name} ${guide.name}缺少前中后期玩法说明`);
       assert.ok(guide.runeSummary.trim(), `${champion.name} ${guide.name}缺少具体符文说明`);
+      assert.equal(isValidSkillPlan(skillPlanFor(guide.skillOrder, champion), champion), true, `${champion.name} ${guide.name}的完整加点不合法`);
       const masteryRanks = masteryPresets[guide.masteryPreset];
       assert.ok(masteryRanks, `${champion.name} ${guide.name}引用未知天赋预设 ${guide.masteryPreset}`);
       assert.equal(
